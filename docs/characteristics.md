@@ -1,0 +1,29 @@
+---
+sidebar_position: 2
+---
+
+# Characteristics
+For checks, you now need to be equal to or greater than your stat to pass. So lower stats are better (besides Attacks, Wounds, and Piercing) and higher rolls are always better.
+
+In Speedheim, each unit has the following characteristics:
+| Characteristic | Description                                                                                                                                                                     |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Movement       | How far a unit can move in inches under normal conditions.                                                                                                                      |
+| Melee          | Roll equal to or higher in order to successfully attack in melee.                                                                                                               |
+| Ranged         | Roll equal to or higher in order to successfully attack from ranged.                                                                                                            |
+| Defence        | Roll equal to or higher in order to successfully prevent a unit from taking a wound.                                                                                            |
+| Wounds         | Number of hits a unit can take before they are injured.                                                                                                                         |
+| Agility        | Roll equal to or higher in order to successfully jump, climb and prevent falling damage. Agility also determines who can attack first in melee after the first round of combat. |
+| Attacks        | The number of attacks the unit has in melee.                                                                                                                                    |
+| Morale         | Roll equal to or higher in order to prevent your warband from succumbing to fear or routing when units are lost.                                                                |
+| Piercing       | A modifier that affects enemy defence checks when attacking.                                                                                                                    |
+
+## Advantage / Disadvantage
+There is the concept of Advantage and Disadvantage. If you have Advantage on a check, you roll 2d20 and take the higher of the two values. If you have Disadvantage, you roll 2d20 and take the lower of the two values.
+
+## Piercing modifiers
+Every positive point of Piercing reduces the opponent’s Defence by 1. Every negative point of Piercing improves the opponent’s Defence by 1.
+
+## Injury modifiers
+A positive Injury modifier will increase the Melee/Ranged roll you made by that amount for the purposes of injury only (not whether you hit or not). Likewise, a negative Injury modifier will decrease the Melee/Ranged roll you made by that amount for the purposes of injury.
+

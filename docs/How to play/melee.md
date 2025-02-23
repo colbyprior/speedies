@@ -1,0 +1,33 @@
+---
+sidebar_position: 7
+---
+
+# Melee combat phase
+Melee combat follows the steps below:
+1. Choose which combat to resolve, repeat full process per combat for each engaged unit you control.
+2. Work out the order of attacking based on the following:
+  :::tip[First round order]
+  Whoever charged in this turn goes first
+  :::
+  :::tip[Future turns order]
+  After that, go by Agility order (lowest Agility to highest)
+  :::
+  :::tip[Multiple attackers]
+  In the case that two or more of a single player’s units are attacking before an opponent’s unit, that player may choose the order of attacks
+  :::
+3. Each unit’s attacks are fully resolved in order of attacking. They are resolved as follows:
+  :::tip[Target]
+  Choose a target that the unit is in base contact with
+  :::
+  :::tip[Roll attack]
+  The attacker performs a Melee check (remember the value!). If the attacker rolls a natural 20, they Crit and immediately skip to Wounds.
+  :::
+  :::tip[Check defence]
+  If the attacker passes, the target performs a Defence check
+  :::
+  :::tip[Wounds]
+  If the target fails, their Wounds are reduced by 1. If this lowers their Wounds to 0, the attacker injures them based on what was rolled in the attack. (see the Injuries section for how this is handled)
+  :::
+4. Any unit that was Injured before they got the chance to attack, loses their chance
+
+Note that there are different rules for attacking Knocked Down or Stunned enemies in Close Combat. See the Injuries section for details.
