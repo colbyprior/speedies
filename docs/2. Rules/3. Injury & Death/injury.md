@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 ---
-
 # Injury
 Whenever someone is Injured, see the following table for the result. This is used for both melee combat, ranged combat, some spells and other checks like falling.
 
