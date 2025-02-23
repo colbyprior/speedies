@@ -47,6 +47,12 @@ const config: Config = {
     ],
   ],
 
+
+  plugins: [[ require.resolve('docusaurus-lunr-search'), {
+    languages: ['en', 'de'] // language codes
+  }]],
+
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
@@ -117,5 +123,6 @@ const config: Config = {
     },
   } satisfies Preset.ThemeConfig,
 };
+
 
 export default config;
