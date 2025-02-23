@@ -26,8 +26,9 @@ Melee combat follows the steps below:
   If the attacker passes, the target performs a Defence check
   :::
   :::tip[Wounds]
-  If the target fails, their Wounds are reduced by 1. If this lowers their Wounds to 0, the attacker injures them based on what was rolled in the attack. (see the Injuries section for how this is handled)
+  If the target fails, their Wounds are reduced by 1. If this lowers their Wounds to 0, the attacker [injures](docs/Rules/Injury/injury.md) them based on what was rolled in the attack. (see the Injuries section for how this is handled)
   :::
 4. Any unit that was Injured before they got the chance to attack, loses their chance
 
 Note that there are different rules for attacking Knocked Down or Stunned enemies in Close Combat. See the Injuries section for details.
+
