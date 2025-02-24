@@ -1,41 +1,21 @@
-# Website
+# Speedies
+Speedies rules documented via Docusaurus.
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+# Editing
+Install [obsidian](https://obsidian.md/) and open the speedies folder as a vault.
 
-### Installation
+All hyperlinks and tables will work normally.
 
+# Running locally
+https://docusaurus.io/docs/installation
+
+Install
 ```
-$ yarn
-```
-
-### Local Development
-
-```
-$ yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-### Build
-
-```
-$ yarn build
+npm install
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
+FYI: The search bar will not run locally.
 
 ```
-$ USE_SSH=true yarn deploy
+npm run start
 ```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
