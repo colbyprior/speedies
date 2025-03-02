@@ -1,0 +1,13 @@
+---
+sidebar_position: 2
+---
+# Henchmen advancement
+
+| Characteristic | Roll  |
+| -------------- | ----- |
+| Morale         | 1-2   |
+| Agility        | 3-5   |
+| Melee/Ranged   | 6-12  |
+| Defense        | 13-14 |
+| Attack         | 15-17 |
+| LGT            | 18-20 |

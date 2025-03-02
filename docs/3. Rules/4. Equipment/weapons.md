@@ -1,0 +1,55 @@
+---
+sidebar_position: 1
+---
+
+
+# Weapons
+# Melee Weapons
+
+| Melee Weapon | Effect                           | Cost |
+| ------------ | -------------------------------- | ---- |
+| Sword / Axe  | -3 Def                           | 5    |
+| Spear        | +3 Hit                           | 5    |
+| Hammer/Club  | +1 Injury                        | 5    |
+| Dagger       | None                             | 2    |
+| Whip         | +2 injury if not wearing armour  | 15   |
+| Unarmed      | -1 Injury, +3 to enemy Def rolls | Free |
+
+# Ranged weapons
+
+| Ranged Weapon   | Range   | Cost | Notes                                                                 |
+| --------------- | ------- | ---- | --------------------------------------------------------------------- |
+| Short Bow       | 20"     | 5    |                                                                       |
+| Bow             | 25"     | 10   |                                                                       |
+| Long Bow        | 30"     | 15   |                                                                       |
+| Crossbow        | 30"     | 20   | [[Long Reload]], [[Deadly]]                                           |
+| Sling           | 15"     | 5    |                                                                       |
+| Throwing Star   | 10"     | 15   | [[Thrown]]                                                            |
+| Javelin         | 15"?    | 20   | [[Thrown]]                                                            |
+| Pistol          | 10"     | 15   | [[Prepare Shot]], [[Deadly]], [[Armour Piercing]], [[Close Quarters]] |
+| Rifle           | 25"     | 25   | [[Prepare Shot]], [[Long Reload]], [[Deadly]], [[Armour Piercing]]    |
+| Blunderbuss     | Special | 25   | [[Massive Shot]], [[Fire Once]], [[Deadly]]                           |
+| Warpfire Pistol | 10"     | 30   | [[Prepare Shot]], [[Deadly]], [[Extra Armour Piercing]]               |
+## Ranged special rules
+### Thrown
+Have no penalties due to movement
+### Long Reload
+You must forgo a move action to reload your weapon
+### Deadly
+Increase Injury modifier by 2
+### Armour Piercing
+Reduce enemy defense by 3
+### Prepare Shot
+You may only fire every other turn
+### Close Quarters
+You may make an attack in the first round of combat. Use Melee skill. Deadly and Armour Piercing apply to this shot.
+### Massive Shot
+"Draw a 15"" long and 1"" wide line in any direction from the firer.
+
+All models in its path are automatically hit but roll their defence as normal.
+
+For any that fail, roll an Injury check +2 if they are reduced to 0 wounds."
+### Fire Once
+You may only fire this once per battle
+### Extra Armour Piercing
+Reduce enemy defence by 5

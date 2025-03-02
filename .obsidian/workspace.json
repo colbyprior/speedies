@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/3. Warbands/mercs.md",
+                "file": "docs/4. Warbands/Balanced Warbands/mercs.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 236.5
   },
   "right": {
     "id": "204cc3c9aa4cde65",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/3. Warbands/mercs.md",
+                "file": "docs/4. Warbands/Balanced Warbands/mercs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/3. Warbands/mercs.md",
+                "file": "docs/4. Warbands/Balanced Warbands/mercs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/3. Warbands/mercs.md"
+                "file": "docs/4. Warbands/Balanced Warbands/mercs.md"
               }
             }
           }
@@ -149,12 +149,31 @@
   },
   "active": "98757b0dbcf03b59",
   "lastOpenFiles": [
+    "docs/4. Warbands/Spell Lists/Prayers.md",
+    "docs/4. Warbands/Balanced Warbands/mercs.md",
+    "docs/3. Rules/5. Level ups/Henchmen advancement.md",
+    "docs/3. Rules/5. Level ups/Hero advancement.md",
+    "docs/4. Warbands/Spell Lists",
+    "docs/4. Warbands/Experimental Warbands",
+    "docs/4. Warbands/Balanced Warbands",
+    "docs/3. Rules/3. Injury & Death/hero serious injury.md",
+    "docs/3. Rules/5. Level ups/Untitled",
+    "docs/3. Rules/5. Level ups",
+    "docs/3. Rules/3. Injury & Death/injury.md",
+    "docs/3. Rules/4. Equipment/armour.md",
+    "docs/3. Rules/4. Equipment/weapons.md",
     "docs/1. intro.md",
-    "docs/2. Rules/3. Injury & Death/injury.md",
-    "docs/3. Warbands/mercs.md",
-    "docs/2. Rules/2. How to play/charging.md",
+    "docs/5. Campaign/post-game.md",
+    "docs/3. Rules/4. Equipment",
+    "docs/5. Campaign/scenario and deployment.md",
+    "docs/3. Rules/2. How to play/melee.md",
+    "docs/3. Rules/2. How to play/charging.md",
+    "docs/2. quick reference.md",
+    "docs/5. Campaign",
+    "gitbak.zip",
+    "gitbak/COMMIT_EDITMSG",
+    "gitbak/index",
     "docs/Rules/test.md",
-    "docs/2. Rules/2. How to play/melee.md",
     "docs/Rules/How.md"
   ]
 }

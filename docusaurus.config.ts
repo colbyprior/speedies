@@ -76,6 +76,24 @@ const config: Config = {
         },
       ],
     },
+    header: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Rules',
+          items: [
+            {
+              label: 'Rules',
+              to: '/docs/intro',
+            },
+            {
+              label: 'Rulez',
+              to: '/docs/intro',
+            }
+          ],
+        },
+      ]
+    },
     footer: {
       style: 'dark',
       links: [
@@ -86,6 +104,10 @@ const config: Config = {
               label: 'Rules',
               to: '/docs/intro',
             },
+            {
+              label: 'Rulez',
+              to: '/docs/intro',
+            }
           ],
         },
         {
@@ -118,7 +140,7 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
     prism: {
-      theme: prismThemes.github,
+      theme: prismThemes.dracula,
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
