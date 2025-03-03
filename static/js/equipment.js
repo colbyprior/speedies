@@ -157,4 +157,6 @@ function equipmentSplit(item) {
     item.innerHTML = tbl.outerHTML;
 }
 
-equipmentLoop();
+if (typeof document !== 'undefined') {
+    equipmentLoop();
+}
