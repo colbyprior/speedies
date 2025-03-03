@@ -31,9 +31,10 @@ const config: Config = {
     locales: ['en'],
   },
 
-  scripts: [
-    '/js/equipment.js'
-  ],
+  //scripts: [
+  //  '/js/equipment.js'
+  //],
+  clientModules: [ '/js/equipment.js' ],
 
   presets: [
     [
