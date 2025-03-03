@@ -111,9 +111,12 @@ async function equipmentLoop(){
         return equipmentLoop()
     }
     equipmentDivs.forEach(equipmentSplit);
+    await new Promise(r => setTimeout(r, 1000));
+    return equipmentLoop();
 }
 
 function equipmentSplit(item) {
+    item.setAttribute("name", "equipmentset");
     var equipmentItemsRaw = item.textContent;
     var equipmentItems = equipmentItemsRaw.split(", ");
     var tbl = document.createElement('table');
