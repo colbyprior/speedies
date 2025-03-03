@@ -17,20 +17,21 @@ sidebar_position: 1
 
 # Ranged weapons
 
-| Ranged Weapon   | Range   | Cost | Notes                                                                 |
-| --------------- | ------- | ---- | --------------------------------------------------------------------- |
-| Short Bow       | 20"     | 5    |                                                                       |
-| Bow             | 25"     | 10   |                                                                       |
-| Long Bow        | 30"     | 15   |                                                                       |
-| Crossbow        | 30"     | 20   | [[Long Reload]], [[Deadly]]                                           |
-| Sling           | 15"     | 5    |                                                                       |
-| Throwing Star   | 10"     | 15   | [[Thrown]]                                                            |
-| Javelin         | 15"?    | 20   | [[Thrown]]                                                            |
-| Pistol          | 10"     | 15   | [[Prepare Shot]], [[Deadly]], [[Armour Piercing]], [[Close Quarters]] |
-| Rifle           | 25"     | 25   | [[Prepare Shot]], [[Long Reload]], [[Deadly]], [[Armour Piercing]]    |
-| Blunderbuss     | Special | 25   | [[Massive Shot]], [[Fire Once]], [[Deadly]]                           |
-| Warpfire Pistol | 10"     | 30   | [[Prepare Shot]], [[Deadly]], [[Extra Armour Piercing]]               |
+| Ranged Weapon   | Range   | Cost | Notes                                                 |
+| --------------- | ------- | ---- | ----------------------------------------------------- |
+| Short Bow       | 20"     | 5    |                                                       |
+| Bow             | 25"     | 10   |                                                       |
+| Long Bow        | 30"     | 15   |                                                       |
+| Crossbow        | 30"     | 20   | Long Reload, Deadly                                   |
+| Sling           | 15"     | 5    |                                                       |
+| Throwing Star   | 10"     | 15   | Thrown                                                |
+| Javelin         | 15"?    | 20   | Thrown                                                |
+| Pistol          | 10"     | 15   | Prepare Shot, Deadly, Armour Piercing, Close Quarters |
+| Rifle           | 25"     | 25   | Prepare Shot, Long Reload, Deadly, Armour Piercing    |
+| Blunderbuss     | Special | 25   | Massive Shot, Fire Once, Deadly                       |
+| Warpfire Pistol | 10"     | 30   | Prepare Shot, Deadly, Extra Armour Piercing           |
 ## Ranged special rules
+
 ### Thrown
 Have no penalties due to movement
 ### Long Reload

@@ -31,6 +31,10 @@ const config: Config = {
     locales: ['en'],
   },
 
+  scripts: [
+    '/js/equipment.js'
+  ],
+
   presets: [
     [
       'classic',
@@ -56,6 +60,9 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
+    colorMode: {
+        defaultMode: 'dark'
+    },
     navbar: {
       title: 'Speedies',
       logo: {

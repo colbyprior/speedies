@@ -2,7 +2,6 @@
 sidebar_label: Mercenaries
 sidebar_position: 1
 ---
-
 # Mercenaries
 
 | Max Units  | 15       |
@@ -29,33 +28,13 @@ sidebar_position: 1
 
 ## Mercenary Equipment
 
-| Name          | Cost |
-| ------------- | ---- |
-| Dagger        | 2    |
-| Spear         | 5    |
-| Axe/Sword     | 5    |
-| Hammer/Mace   | 5    |
-| Great Weapons | 10   |
-| Crossbow      |      |
-| Pistol        |      |
-| Bow           |      |
-| Light armour  |      |
-| Heavy armour  |      |
-| Shield        | 5    |
+<div name='equipment'>
+Dagger, Spear, Sword, Hammer, Great Spear, Great Sword, Great Hammer, Crossbow, Pistol, Bow, Light Armour, Heavy Armour, Shield
+</div>
 
 ## Marksman Equipment
 
-| Name         | Cost |
-| ------------ | ---- |
-| Dagger       | 2    |
-| Spear        | 5    |
-| Axe/Sword    | 5    |
-| Hammer/Mace  | 5    |
-| Crossbow     |      |
-| Pistol       |      |
-| Bow          |      |
-| Long bow     |      |
-| Blunderbuss  |      |
-| Handgun      |      |
-| Light armour |      |
+<div name='equipment'>
+Dagger, Spear, Sword, Hammer, Crossbow, Pistol, Bow, Long Bow, Blunderbuss, Rifle, Light Armour
+</div>
 
