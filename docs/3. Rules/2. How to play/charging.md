@@ -2,6 +2,9 @@
 sidebar_position: 4
 ---
 # Charging phase
+
+colby testing [Failed charge](#Failed%20charge)
+
 Charging is how your units get into melee with enemy units.
 1. When you charge a model, declare to your opponent that you are doing so and indicate which of his models it is attacking.
   :::tip[When to decide the path]
