@@ -8,7 +8,7 @@ Charging is how your units get into melee with enemy units.
   :::tip[When to decide the path]
   You may jump, climb or make a diving charge as part of this movement if possible however you must decide if you are going to take these actions before measuring.
   :::
-2. If your warrior does not have line of sight of the unit they are charging then you must roll an [[out of sight]]
+2. If your warrior does not have line of sight of the unit they are charging then you must roll an out of sight roll.
 3. Afterwards measure to see if your unit has enough movement to get into base to base with the enemy unit.
   :::tip[Charge speed]
   When charging you may move a number of inches equal to your movement characteristic multiplied by 1.5. Eg. a unit with 6 movement may change 9 inches.
@@ -23,6 +23,7 @@ Charging is how your units get into melee with enemy units.
 5. If not intercepted, move the unit appropriately.
 
 # Out of sight rolls
+
 When charging a unit that your unit does not have line of sight of roll on this table. If as a result you fail the charge you still move towards the target the distance specified from the table.
 
 | d20   | Charge distance                                                                |
@@ -32,6 +33,7 @@ When charging a unit that your unit does not have line of sight of roll on this 
 | 16-20 | Charge distance is as normal (Move characteristic in inches multiplied by 1.5) |
 
 ## Failed charge
+
 Sometimes a charging warrior may not reach the enemy because you have miscalculated the distance. If this happens move your warrior his normal move distance towards the enemy. This is called a failed charge. The model cannot shoot in the same turn in which he failed a charge however a unit can still cast spells after a failed charge.
 
 Models cannot be moved into hand-to-hand combat except by charging – any move that brings a warrior into hand-to-hand combat is a charge by definition. A model that charges will ‘strike first’ in the first round of the ensuing combat.
