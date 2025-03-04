@@ -8,7 +8,7 @@ Charging is how your units get into melee with enemy units.
   :::tip[When to decide the path]
   You may jump, climb or make a diving charge as part of this movement if possible however you must decide if you are going to take these actions before measuring.
   :::
-2. If your warrior does not have line of sight of the unit they are charging then you must roll an out of sight roll (see below).
+2. If your warrior does not have line of sight of the unit they are charging then you must roll an [[out of sight]]
 3. Afterwards measure to see if your unit has enough movement to get into base to base with the enemy unit.
   :::tip[Charge speed]
   When charging you may move a number of inches equal to your movement characteristic multiplied by 1.5. Eg. a unit with 6 movement may change 9 inches.
