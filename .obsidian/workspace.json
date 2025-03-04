@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/1. Intro/1. General Wargaming.md",
+                "file": "docs/1. Intro/2. Speedheim Setting.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1. General Wargaming"
+              "title": "2. Speedheim Setting"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/1. Intro/1. General Wargaming.md",
+                "file": "docs/1. Intro/2. Speedheim Setting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 1. General Wargaming"
+              "title": "Backlinks for 2. Speedheim Setting"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/1. Intro/1. General Wargaming.md",
+                "file": "docs/1. Intro/2. Speedheim Setting.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 1. General Wargaming"
+              "title": "Outgoing links from 2. Speedheim Setting"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/1. Intro/1. General Wargaming.md",
+                "file": "docs/1. Intro/2. Speedheim Setting.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 1. General Wargaming"
+              "title": "Outline of 2. Speedheim Setting"
             }
           }
         ]
@@ -171,8 +171,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "d56040fe044c548c",
+  "active": "804210a144f63586",
   "lastOpenFiles": [
+    "docs/2. How to Play/1. Pre-Game Rules/1. Scenario and Deployment.md",
+    "docs/1. Intro/1. General Wargaming.md",
     "docs/1. Intro/4. Speedheim Terminology.md",
     "docs/1. Intro/injury.md",
     "docs/5. Reference/2. Skill List.md",
@@ -199,10 +201,8 @@
     "docs/2. How to Play/2. Game Rules/2. Upkeep Phase.md",
     "docs/2. How to Play/2. Game Rules/1. Turn Overview.md",
     "docs/2. How to Play/1. Pre-Game Rules/2. Special Rules.md",
-    "docs/2. How to Play/1. Pre-Game Rules/1. Scenario and Deployment.md",
     "docs/1. Intro/3. Speedheim Overview.md",
     "docs/1. Intro/2. Speedheim Setting.md",
-    "docs/1. Intro/1. General Wargaming.md",
     "docs/2. How to Play/3. Post-Game Rules/1. Treasure",
     "docs/2. How to Play/3. Post-Game Rules/1. Treasure.md",
     "docs/3. Campaign Rules/3. Campaign Sheet",
