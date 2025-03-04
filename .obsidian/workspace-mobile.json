@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/1. intro.md",
+                "file": "docs/4. Warbands/Balanced Warbands/mercs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1. intro"
+              "title": "mercs"
             }
           }
         ]
@@ -153,6 +153,7 @@
   },
   "active": "69121fbe59410298",
   "lastOpenFiles": [
+    "docs/1. intro.md",
     "static/js/equipment.js",
     "docs/5. Campaign/scenario and deployment.md",
     "docs/5. Campaign/post-game.md",
@@ -188,7 +189,6 @@
     "docs/3. Rules/5. Level ups",
     "docs/3. Rules/4. Equipment",
     "docs/3. Rules/3. Injury & Death",
-    "docs/3. Rules/2. How to play",
     "static/img/undraw_docusaurus_tree.svg",
     "static/img/undraw_docusaurus_react.svg",
     "static/img/undraw_docusaurus_mountain.svg",
