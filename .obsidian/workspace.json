@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "7cbe6200a5153e33",
+        "id": "202cb8f036120c68",
         "type": "tabs",
         "children": [
           {
-            "id": "98757b0dbcf03b59",
+            "id": "804210a144f63586",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/4. Warbands/Balanced Warbands/mercs.md",
+                "file": "docs/3. Rules/2. How to play/charging.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/4. Warbands/Balanced Warbands/mercs.md",
+                "file": "docs/3. Rules/2. How to play/charging.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/4. Warbands/Balanced Warbands/mercs.md",
+                "file": "docs/3. Rules/2. How to play/charging.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/4. Warbands/Balanced Warbands/mercs.md"
+                "file": "docs/3. Rules/2. How to play/charging.md"
               }
             }
           }
@@ -144,22 +144,30 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidiosaurus:Obsidiosaurus": false
+      "obsidiosaurus:Obsidiosaurus": false,
+      "obsidian-git:Open Git source control": false,
+      "github-sync:Sync with Remote": false
     }
   },
-  "active": "98757b0dbcf03b59",
+  "active": "804210a144f63586",
   "lastOpenFiles": [
+    "test.md.bak",
+    "fixlinks.py~",
+    "td",
+    "test.md~",
+    "fixlinks.py",
+    "fixlinks.sh~",
+    "test.md",
+    "fixlinks.sh",
+    "docs/3. Rules/4. Equipment/armour.md",
+    "docs/3. Rules/2. How to play/melee.md",
+    "docs/3. Rules/2. How to play/charging.md",
+    "2025-03-04.md",
+    "docs/4. Warbands/Balanced Warbands/mercs.md",
     "build/lunr-index-1740979345760.json",
     "build/lunr-index.json",
     "build/search-doc-1740979345760.json",
     "build/search-doc.json",
-    "build/sitemap.xml",
-    "build/404.html",
-    "build/index.html",
-    "build/docs/Warbands/Balanced Warbands/mercs/index.html",
-    "build/docs/Rules/Level ups/Hero advancement/index.html",
-    "build/docs/Rules/Level ups/Henchmen advancement/index.html",
-    "build/docs/Warbands/Spell Lists/Prayers/index.html",
     "build/img/undraw_docusaurus_mountain.svg",
     "build/img/undraw_docusaurus_tree.svg",
     "build/img/undraw_docusaurus_react.svg",
@@ -168,9 +176,7 @@
     "build/img/docusaurus-social-card.jpg",
     "Prepare Shot.md",
     "Long Reload.md",
-    "docs/4. Warbands/Balanced Warbands/mercs.md",
     "docs/3. Rules/4. Equipment/weapons.md",
-    "docs/3. Rules/4. Equipment/armour.md",
     "docs/4. Warbands/Spell Lists/Prayers.md",
     "docs/3. Rules/5. Level ups/Henchmen advancement.md",
     "docs/3. Rules/5. Level ups/Hero advancement.md",
@@ -179,8 +185,6 @@
     "docs/1. intro.md",
     "docs/5. Campaign/post-game.md",
     "docs/5. Campaign/scenario and deployment.md",
-    "docs/3. Rules/2. How to play/melee.md",
-    "docs/3. Rules/2. How to play/charging.md",
     "docs/2. quick reference.md",
     "docs/Rules/test.md",
     "docs/Rules/How.md"
