@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/6. Quick Reference.md",
+                "file": "docs/1. Intro/1. General Wargaming.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "6. Quick Reference"
+              "title": "1. General Wargaming"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/6. Quick Reference.md",
+                "file": "docs/1. Intro/1. General Wargaming.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 6. Quick Reference"
+              "title": "Backlinks for 1. General Wargaming"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/6. Quick Reference.md",
+                "file": "docs/1. Intro/1. General Wargaming.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 6. Quick Reference"
+              "title": "Outgoing links from 1. General Wargaming"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/6. Quick Reference.md",
+                "file": "docs/1. Intro/1. General Wargaming.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 6. Quick Reference"
+              "title": "Outline of 1. General Wargaming"
             }
           }
         ]
@@ -171,10 +171,19 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "804210a144f63586",
+  "active": "d56040fe044c548c",
   "lastOpenFiles": [
+    "docs/1. Intro/4. Speedheim Terminology.md",
+    "docs/1. Intro/injury.md",
     "docs/5. Reference/2. Skill List.md",
     "docs/5. Reference/3. Ability List.md",
+    "docs/6. Quick Reference.md",
+    "static/jsondata/ranged-weapons.json",
+    "static/jsondata/melee-weapons.json",
+    "static/jsondata/armour.json",
+    "static/js/ranged-weapons.js",
+    "static/js/melee-weapons.js",
+    "static/js/armour.js",
     "docs/5. Reference/4. Spell List/Prayers.md",
     "docs/5. Reference/1. Equipment List/2. Armour.md",
     "docs/5. Reference/1. Equipment List/1. Weapons.md",
@@ -191,24 +200,15 @@
     "docs/2. How to Play/2. Game Rules/1. Turn Overview.md",
     "docs/2. How to Play/1. Pre-Game Rules/2. Special Rules.md",
     "docs/2. How to Play/1. Pre-Game Rules/1. Scenario and Deployment.md",
-    "docs/1. Intro/4. Speedheim Terminology.md",
     "docs/1. Intro/3. Speedheim Overview.md",
     "docs/1. Intro/2. Speedheim Setting.md",
     "docs/1. Intro/1. General Wargaming.md",
-    "docs/1. Intro/injury.md",
     "docs/2. How to Play/3. Post-Game Rules/1. Treasure",
     "docs/2. How to Play/3. Post-Game Rules/1. Treasure.md",
     "docs/3. Campaign Rules/3. Campaign Sheet",
     "docs/3. Campaign Rules/2. Factions",
     "docs/3. Campaign Rules/1. Campaign Creation",
-    "docs/2. How to Play/3. Post-Game Rules/4. Update Warband",
     "docs/2. How to Play/2. Game Rules/recovery.md",
-    "docs/6. Quick Reference.md",
-    "docs/5. Reference",
-    "docs/2. How to Play/3. Post-Game Rules",
-    "docs/2. How to Play/1. Pre-Game Rules",
-    "templates",
-    "static/jsondata/weapons.json",
     "build/img/undraw_docusaurus_mountain.svg",
     "build/img/undraw_docusaurus_tree.svg",
     "build/img/undraw_docusaurus_react.svg",
