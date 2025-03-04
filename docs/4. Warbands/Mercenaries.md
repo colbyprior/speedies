@@ -28,13 +28,23 @@ sidebar_position: 1
 
 ## Mercenary Equipment
 
-<div name='equipment'>
-Dagger, Spear, Sword, Hammer, Great Spear, Great Sword, Great Hammer, Crossbow, Pistol, Bow, Light Armour, Heavy Armour, Shield
+<div name='melee-weapons'>
+Dagger, Spear, Sword, Hammer, Great Spear, Great Sword, Great Hammer, Shield
 </div>
-
+<div name='ranged-weapons'>
+Crossbow, Pistol, Bow
+</div>
+<div name='armour'>
+Light Armour, Heavy Armour
+</div>
 ## Marksman Equipment
 
-<div name='equipment'>
-Dagger, Spear, Sword, Hammer, Crossbow, Pistol, Bow, Long Bow, Blunderbuss, Rifle, Light Armour
+<div name='melee-weapons'>
+Dagger, Spear, Sword, Hammer
 </div>
-
+<div name='ranged-weapons'>
+Crossbow, Pistol, Bow, Long Bow, Blunderbuss, Rifle
+</div>
+<div name='armour'>
+Light Armour
+</div>

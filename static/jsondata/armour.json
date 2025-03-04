@@ -1,0 +1,12 @@
+{
+      "Light Armour": { 
+        "Name": "Light Armour", 
+        "Effect": "+1 Def", 
+        "Cost": "15"
+      }, 
+      "Heavy Armour": { 
+        "Name": "Heavy Armour", 
+        "Effect": "+2 Def", 
+        "Cost": "30"
+      }
+}

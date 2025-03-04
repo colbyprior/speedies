@@ -1,0 +1,50 @@
+{
+    "Dagger": {
+        "Name": "Dagger",
+        "Effect": "None",
+        "Cost": "2",
+        "Slots": "1"
+    },
+    "Sword": {
+        "Name": "Sword / Axe",
+        "Effect": "-3 Def to target",
+        "Cost": "5",
+        "Slots": "1"
+    },
+    "Spear": {
+        "Name": "Spear",
+        "Effect": "+3 Hit",
+        "Cost": "5",
+        "Slots": "1"
+    },
+    "Hammer": { 
+        "Name": "Hammer", 
+        "Effect": "+1 Injury", 
+        "Cost": "5", 
+        "Slots": "1" 
+      }, 
+      "Great Spear": { 
+        "Name": "Great Spear", 
+        "Effect": "+7 to Hit, +4 to Injury", 
+        "Cost": "10", 
+        "Slots": "2" 
+      }, 
+      "Great Sword": { 
+        "Name": "Great Sword", 
+        "Effect": "+4 to Hit, +4 to Injury, -3 Def to target", 
+        "Cost": "10", 
+        "Slots": "2" 
+      }, 
+      "Great Hammer": { 
+        "Name": "Great Hammer", 
+        "Effect": "+4 to Hit, +5 to Injury", 
+        "Cost": "10", 
+        "Slots": "2" 
+      },
+      "Shield": { 
+        "Name": "Shield", 
+        "Effect": "+4 Def", 
+        "Cost": "5", 
+        "Slots": "1" 
+      }
+}
