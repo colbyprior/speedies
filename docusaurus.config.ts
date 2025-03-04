@@ -89,11 +89,11 @@ const config: Config = {
           items: [
             {
               label: 'Speedies',
-              to: '/docs/intro',
+              to: '/docs/Intro/Speedheim%20Overview',
             },
             {
               label: 'Rulez',
-              to: '/docs/intro',
+              to: '/docs/Intro/Speedheim%20Overview',
             }
           ],
         },
@@ -107,11 +107,11 @@ const config: Config = {
           items: [
             {
               label: 'Speedies',
-              to: '/docs/intro',
+              to: '/docs/Intro/Speedheim%20Overview',
             },
             {
               label: 'Rulez',
-              to: '/docs/intro',
+              to: '/docs/Intro/Speedheim%20Overview',
             }
           ],
         },
