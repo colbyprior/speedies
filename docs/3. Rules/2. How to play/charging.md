@@ -4,6 +4,8 @@ sidebar_position: 4
 # Charging phase
 
 colby testing [Failed charge](#Failed%20charge)
+jesse testing [Out of sight rolls](#Out%20of%20sight%20rolls)
+[1. intro](docs/1.%20intro.md)
 
 Charging is how your units get into melee with enemy units.
 1. When you charge a model, declare to your opponent that you are doing so and indicate which of his models it is attacking.
