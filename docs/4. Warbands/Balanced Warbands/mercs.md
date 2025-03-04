@@ -7,7 +7,7 @@ sidebar_position: 1
 | Max Units  | 15       |
 | ---------- | -------- |
 | Play Style | Balanced |
-
+a
 ## Units
 
 | Unit      | Type     | Move | Melee | Ranged | Defense | Wounds | Agility | Attacks | Morale | Base Cost |
