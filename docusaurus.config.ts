@@ -75,7 +75,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Rules',
+          label: 'Speedies',
         },
         {
           href: 'https://github.com/colbyprior/speedies',
@@ -88,10 +88,10 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Rules',
+          title: 'Speedies',
           items: [
             {
-              label: 'Rules',
+              label: 'Speedies',
               to: '/docs/intro',
             },
             {
@@ -106,10 +106,10 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Rules',
+          title: 'Speedies',
           items: [
             {
-              label: 'Rules',
+              label: 'Speedies',
               to: '/docs/intro',
             },
             {
