@@ -11,10 +11,14 @@
             "id": "69121fbe59410298",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "docs/1. Intro/1. General Wargaming.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "1. General Wargaming"
             }
           }
         ]
