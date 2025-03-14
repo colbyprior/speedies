@@ -1,12 +1,13 @@
 ---
 sidebar_position: 1
 ---
-# Hero serious injury
+# Injury Rolls
+## Hero serious injury
 
 | On a 1-10 use Table 1 | On a 11-20 use Table 2 |
 | --------------------- | ---------------------- |
 
-## Table 1
+### Table 1
 
 | Name               | Result                                                |
 | ------------------ | ----------------------------------------------------- |
@@ -23,7 +24,7 @@ sidebar_position: 1
 | Bitter Enmity      | Hates an enemy                                        |
 | Horrible Scars     | Cause Fear                                            |
 
-## Table 2
+### Table 2
 
 | Name                      | Result                                                                    |
 | ------------------------- | ------------------------------------------------------------------------- |
