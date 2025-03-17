@@ -1,8 +1,8 @@
 ---
-sidebar_label: Mercenaries
-sidebar_position: 1
+sidebar_label: Sellswords
+sidebar_position: 6
 ---
-# Mercenaries
+# Sellswords
 
 | Max Units  | 15       |
 | ---------- | -------- |
