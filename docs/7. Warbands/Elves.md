@@ -14,7 +14,7 @@ sidebar_position: 2
 | Hero                              | 7    | 13    | 13     | 19      | 1      | 8       | 1       | 7      | 60        |
 | Citizen                           | 7    | 13    | 13     | 19      | 1      | 8       | 1       | 7      | 40        |
 | Soldier (High Elves Only)         |      |       |        |         |        |         |         |        |           |
-| Raider (Dark Elves Only)          |      |       |        |         |        |         |         |        |           |
+| Raider (Fallen Elves Only)        |      |       |        |         |        |         |         |        |           |
 | Woodland Creature (Wood Elf Only) |      |       |        |         |        |         |         |        |           |
 | Treant (Wood Elf Only)            |      |       |        |         |        |         |         |        |           |
 ## Hero Options
@@ -36,7 +36,7 @@ Crossbow, Pistol, Bow
 <div name='armour'>
 Light Armour, Heavy Armour
 </div>
-## Dark Elf Equipment
+## Fallen Elf Equipment
 
 <div name='melee-weapons'>
 Dagger, Spear, Sword, Hammer
