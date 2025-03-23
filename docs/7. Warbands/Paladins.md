@@ -55,11 +55,17 @@ Paladin armour is for the unit types: Leader, Hero, Squire, Novice
 | Heavy Armour | +2 Def | 30 |
 
 ## Skills & Abilities 
-### Determination: Paladins
+### Determination
+*Paladins*
+
 This unit may re-roll their first failed morale check of each battle.
-### Leader 6": Special
+### Leader 6"
+*Special*
+
 Allied units with 6" of this unit can use this morale stat for checks instead of their own.
-### Prayers: Spellcasting
+### Prayers
+*Spellcasting*
+
 This unit can cast Prayer spells. Immediately pick one spell from this school to be known. They can still use armour and a shield while casting unlike other spells.
 
 ## Prayers 

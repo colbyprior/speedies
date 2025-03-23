@@ -126,7 +126,8 @@ for path in Path('static/jsondata/warbands').rglob('*.json'):
                     print(f"ERR: {ability}")
                 if skill_data.get("Type") == "Spellcasting":
                     spell_schools.append(ability)
-                out_data += f"### {skill_data.get('Name')}: {skill_data.get('Type')}\n"
+                out_data += f"### {skill_data.get('Name')}\n"
+                out_data += f"*{skill_data.get('Type')}*\n\n"
                 out_data += skill_data.get("Description")
                 out_data += "\n"
 
