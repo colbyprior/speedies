@@ -108,5 +108,20 @@
     "Name": "Fear", 
     "Type": "Special", 
     "Description": "This unit causes fear."
+  },
+  "Leader 6\"": {
+    "Name": "Leader 6\"",
+    "Type": "Special",
+    "Description": "Allied units with 6\" of this unit can use this morale stat for checks instead of their own."
+  },
+  "Prayers": {
+    "Name": "Prayers",
+    "Type": "Spellcasting",
+    "Description": "This unit can cast Prayer spells. Immediately pick one spell from this school to be known. They can still use armour and a shield while casting unlike other spells."
+  },
+  "Determination": {
+    "Name": "Determination",
+    "Type": "Paladins",
+    "Description": "This unit may re-roll their first failed morale check of each battle."
   }
 }

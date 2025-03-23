@@ -9,16 +9,16 @@ Paladins are warriors who come from a holy order.
 | Play Style | Defensive |
 
 ## Heroes
-| Units | Type | Type Cap | Move | Melee | Ranged | Defense | Wounds | Agility | Attacks | Morale | Cost | Abilities | Skill Types |
+| Units | Type | Cap | Mov | Mel | Rng | Def | Wnd | Agi | Atk | Mrl | Cost | Abilities | Skill Types |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Justicar | Leader | 1  | 6 | 13 | 12 | 18 | 1 | 8 | 1 | 7 | 70 | Leader 6", Prayers | Melee, Morale, Agility, Paladins |
+| Justicar | Leader | 1  | 6 | 13 | 12 | 18 | 1 | 8 | 1 | 7 | 70 | [Leader 6"](#leader-6), [Prayers](#prayers) | Melee, Morale, Agility, Paladins |
 | Paladin | Hero | None  | 6 | 13 | 14 | 18 | 1 | 11 | 1 | 10 | 35 |  | Melee, Morale, Agility, Paladins |
 
 ## Henchmen
-| Units | Type | Type Cap | Move | Melee | Ranged | Defense | Wounds | Agility | Attacks | Morale | Cost | Abilities |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Squire | Squire | None  | 6 | 15 | 14 | 19 | 1 | 11 | 1 | 10 | 25 |  |
-| Novice | Novice | None  | 6 | 16 | 16 | - | 1 | 11 | 1 | 13 | 15 |  |
+| Units | Cap | Mov | Mel | Rng | Def | Wnd | Agi | Atk | Mrl | Cost | Abilities |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Squire | None  | 6 | 15 | 14 | 19 | 1 | 11 | 1 | 10 | 25 |  |
+| Novice | None  | 6 | 16 | 16 | - | 1 | 11 | 1 | 13 | 15 |  |
 
 ## Henchmen upgrades
 | Upgrade Trees: | 1       | 2       | 3       | 4   | 5       | 6       | 7       | 8   |
@@ -53,3 +53,21 @@ Paladin armour is for the unit types: Leader, Hero, Squire, Novice
 | ---- | ------ | ---- |
 | Light Armour | +1 Def | 15 |
 | Heavy Armour | +2 Def | 30 |
+
+## Skills & Abilities 
+### Determination: Paladins
+This unit may re-roll their first failed morale check of each battle.
+### Leader 6": Special
+Allied units with 6" of this unit can use this morale stat for checks instead of their own.
+### Prayers: Spellcasting
+This unit can cast Prayer spells. Immediately pick one spell from this school to be known. They can still use armour and a shield while casting unlike other spells.
+
+## Prayers 
+
+| Name | Check | Description |
+| ---- | ------ | ---- |
+| Blessed Weapon | 9 | The wielder gains the following: +3 to melee, 4 armour piercing, +4 to injury rolls in melee until the start of his next turn. The Priest must test on each opponents shooting phase in order to continue to use blessed weapon. |
+| Steadfast | 12 | Any allied warriors within 8" of the warrior become immune to Fear. In addition, the whole warband gains +2 on any Morale tests they have to make. The effects of this spell last until the caster is knocked down, stunned or put out of action. If cast again the effects are not cumulative, ie, the maximum bonus to Rout tests remains +2. |
+| Bright Blast | 15 | Roll an attack with melee skill 12 against each enemy model within 4", no defence saves are allowed. Undead or mutant models in range suffer the attack with a +2 to wound. |
+| Heal | 5 | Any one model within 2" of the caster (including themself) may be healed. The warrior is restored to his full quota of Wounds. In addition, if any friendly models within 2" are stunned or knocked down, they immediately come to their senses, stand up, and continue fighting as normal. |
+

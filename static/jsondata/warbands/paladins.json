@@ -43,7 +43,6 @@
     "Henchmen": [
         {
             "Name": "Squire",
-            "Type": "Squire",
             "Type Cap": "",
             "Move": "6",
             "Melee": "15",
@@ -58,7 +57,6 @@
         },
         {
             "Name": "Novice",
-            "Type": "Novice",
             "Type Cap": "",
             "Move": "6",
             "Melee": "16",

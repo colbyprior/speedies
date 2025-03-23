@@ -17,6 +17,7 @@ sidebar_position: 2
 | Raider (Fallen Elves Only)        |      |       |        |         |        |         |         |        |           |
 | Woodland Creature (Wood Elf Only) |      |       |        |         |        |         |         |        |           |
 | Treant (Wood Elf Only)            |      |       |        |         |        |         |         |        |           |
+
 ## Hero Options
 
 | Unit         | Stat Ups                         | Skills  | Additional Cost | Cap |
