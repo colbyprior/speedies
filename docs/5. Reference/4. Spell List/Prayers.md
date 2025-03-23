@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 ---
-
 # Prayers
 
 | Name           | Description                                                                                                                                                                                                                                                                                                                                     | Speed Diff |
