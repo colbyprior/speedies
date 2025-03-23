@@ -2,7 +2,8 @@ const expandedSkills = {
     "Prepare Shot": "You may only fire every other turn",
     "Deadly": "Increase Injury modifier by 2",
     "Armour Piercing": "Reduce enemy defense by 3",
-    "Close Quarters": "You may make an attack in the first round of combat. Use Melee skill. Deadly and Armour Piercing apply to this shot"
+    "Close Quarters": "You may make an attack in the first round of combat. Use Melee skill. Deadly and Armour Piercing apply to this shot",
+    "Long Reload": "You must forgo a move action to reload your weapon"
 }
 
 async function equipmentLoop(){
