@@ -2,6 +2,7 @@
     "Name": "Paladins",
     "Max Units": "15",
     "Play Style": "Defensive",
+    "Preamble": "Paladins are warriors who come from a holy order.",
     "Heroes": [
         {
             "Name": "Justicar",
@@ -10,7 +11,7 @@
             "Move": "6",
             "Melee": "13",
             "Ranged": "12",
-            "Defence": "18",
+            "Defense": "18",
             "Wounds": "1",
             "Agility": "8",
             "Attacks": "1",
@@ -29,7 +30,7 @@
             "Move": "6",
             "Melee": "13",
             "Ranged": "14",
-            "Defence": "18",
+            "Defense": "18",
             "Wounds": "1",
             "Agility": "11",
             "Attacks": "1",
@@ -47,7 +48,7 @@
             "Move": "6",
             "Melee": "15",
             "Ranged": "14",
-            "Defence": "19",
+            "Defense": "19",
             "Wounds": "1",
             "Agility": "11",
             "Attacks": "1",
@@ -62,7 +63,7 @@
             "Move": "6",
             "Melee": "16",
             "Ranged": "16",
-            "Defence": "-",
+            "Defense": "-",
             "Wounds": "1",
             "Agility": "11",
             "Attacks": "1",
@@ -71,12 +72,16 @@
             "Abilities": []
         }
     ],
+    "Henchmen Upgrades": {
+        "Squire": "Normal",
+        "Novice": "Normal"
+    },
     "Equipment": {
         "Paladin": {
             "Aliases": ["Leader", "Hero", "Squire", "Novice"],
-            "Melee Weapons": ["Hammer", "Blessed Warhammer", "Whip", "Great Hammer"],
+            "Melee Weapons": ["Hammer", "Blessed Warhammer", "Whip", "Great Hammer", "Shield"],
             "Ranged Weapons": ["Sling"],
-            "Armour": ["Light Armour", "Heavy Armour", "Shield"]
+            "Armour": ["Light Armour", "Heavy Armour"]
         }
     }
 }

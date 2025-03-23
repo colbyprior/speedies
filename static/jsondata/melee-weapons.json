@@ -46,5 +46,17 @@
         "Effect": "+4 Def", 
         "Cost": "5", 
         "Slots": "1" 
+      },
+      "Blessed Warhammer": { 
+        "Name": "Blessed Warhammer", 
+        "Effect": "-3 Def to target, +1 Injury, +3 Melee against Undead. Only heroes can dual-wield.", 
+        "Cost": "15", 
+        "Slots": "1"
+      },
+      "Whip": { 
+        "Name": "Whip", 
+        "Effect": "+1 Atk in the first round of combat when you charge", 
+        "Cost": "10", 
+        "Slots": "1"
       }
 }

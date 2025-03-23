@@ -22,3 +22,4 @@ yarn-error.log*
 .obsidian/themes
 .obsidian/appearance.json
 .obsidian/workspace.json
+.idea/misc.xml

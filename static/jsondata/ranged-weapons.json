@@ -40,5 +40,12 @@
         "Effect": "Massive Shot, Fire Once, Deadly", 
         "Cost": "25", 
         "Slots": "1" 
+      },
+      "Sling": { 
+        "Name": "Sling", 
+        "Range": "15\"",
+        "Effect": "", 
+        "Cost": "5", 
+        "Slots": "1" 
       }
 }
