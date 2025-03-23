@@ -1,0 +1,82 @@
+{
+    "Name": "Paladins",
+    "Max Units": "15",
+    "Play Style": "Defensive",
+    "Heroes": [
+        {
+            "Name": "Justicar",
+            "Type": "Leader",
+            "Type Cap": "1",
+            "Move": "6",
+            "Melee": "13",
+            "Ranged": "12",
+            "Defence": "18",
+            "Wounds": "1",
+            "Agility": "8",
+            "Attacks": "1",
+            "Morale": "7",
+            "Cost": 70,
+            "Abilities": [
+                "Leader 6\"",
+                "Prayers"
+            ],
+            "Skill Types": ["Melee", "Morale", "Agility", "Paladins"]
+        },
+        {
+            "Name": "Paladin",
+            "Type": "Hero",
+            "Type Cap": "",
+            "Move": "6",
+            "Melee": "13",
+            "Ranged": "14",
+            "Defence": "18",
+            "Wounds": "1",
+            "Agility": "11",
+            "Attacks": "1",
+            "Morale": "10",
+            "Cost": 35,
+            "Abilities": [],
+            "Skill Types": ["Melee", "Morale", "Agility", "Paladins"]
+        }
+    ],
+    "Henchmen": [
+        {
+            "Name": "Squire",
+            "Type": "Squire",
+            "Type Cap": "",
+            "Move": "6",
+            "Melee": "15",
+            "Ranged": "14",
+            "Defence": "19",
+            "Wounds": "1",
+            "Agility": "11",
+            "Attacks": "1",
+            "Morale": "10",
+            "Cost": 25,
+            "Abilities": []
+        },
+        {
+            "Name": "Novice",
+            "Type": "Novice",
+            "Type Cap": "",
+            "Move": "6",
+            "Melee": "16",
+            "Ranged": "16",
+            "Defence": "-",
+            "Wounds": "1",
+            "Agility": "11",
+            "Attacks": "1",
+            "Morale": "13",
+            "Cost": 15,
+            "Abilities": []
+        }
+    ],
+    "Equipment": {
+        "Paladin": {
+            "Aliases": ["Leader", "Hero", "Squire", "Novice"],
+            "Melee Weapons": ["Hammer", "Blessed Warhammer", "Whip", "Great Hammer"],
+            "Ranged Weapons": ["Sling"],
+            "Armour": ["Light Armour", "Heavy Armour", "Shield"]
+        }
+    }
+}

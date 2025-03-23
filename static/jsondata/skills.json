@@ -1,12 +1,112 @@
 {
-      "Light Armour": { 
-        "Name": "Light Armour", 
-        "Effect": "+1 Def", 
-        "Cost": "15"
-      }, 
-      "Heavy Armour": { 
-        "Name": "Heavy Armour", 
-        "Effect": "+2 Def", 
-        "Cost": "30"
-      }
+  "Deadly": { 
+    "Name": "Deadly", 
+    "Type": "Melee", 
+    "Description": "+2 to injury rolls in melee"
+  },
+  "Cleave": { 
+    "Name": "Cleave", 
+    "Type": "Melee", 
+    "Description": "+1 attack for each enemy target engaged in melee beyond the first"
+  },
+  "Improved Critical": { 
+    "Name": "Improved Critical", 
+    "Type": "Melee", 
+    "Description": "This unit can trigger a critical strike on a 19-20"
+  },
+  "Bull Rush": { 
+    "Name": "Bull Rush", 
+    "Type": "Melee", 
+    "Description": "This unit gets advantage on the first round of combat when they engage an enemy"
+  },
+  "Blade Defence": { 
+    "Name": "Blade Defence", 
+    "Type": "Melee", 
+    "Description": "This unit gains a +3 defence when not wearing armour or wielding a shield in melee"
+  },
+  "Sniper": { 
+    "Name": "Sniper", 
+    "Type": "Ranged", 
+    "Description": "This unit gains a +9\" to all ranged weapons"
+  },
+  "Quick Reload": { 
+    "Name": "Quick Reload", 
+    "Type": "Ranged", 
+    "Description": "This unit treats ranged weapons with Prepare Shot as Long Reload instead. If instead the weapon has Long Reload they can ignore the rule."
+  },
+  "Precise": { 
+    "Name": "Precise", 
+    "Type": "Ranged", 
+    "Description": "This unit can ignore cover penalties when firing at enemies"
+  },
+  "Master Thrower": { 
+    "Name": "Master Thrower", 
+    "Type": "Ranged", 
+    "Description": "This unit can throw a number of projectiles up to their attack value. This may target multiple targets."
+  },
+  "Runner": { 
+    "Name": "Runner", 
+    "Type": "Agility", 
+    "Description": "This units run speed is 2x their base movement instead of 1.5x."
+  },
+  "Agile": { 
+    "Name": "Agile", 
+    "Type": "Agility",
+    "Description": "This unit gets advantage on all agility checks."
+  },
+  "Strike First": { 
+    "Name": "Strike First", 
+    "Type": "Agility", 
+    "Description": "This unit will always strike first in the first round of combat. If the enemy unit also has this then they cancel out."
+  },
+  "Dodge": { 
+    "Name": "Dodge", 
+    "Type": "Agility", 
+    "Description": "This unit gets a +3 to ranged defence when not wearing any armour or wielding a shield."
+  },
+  "Iron Will": { 
+    "Name": "Iron Will", 
+    "Type": "Morale", 
+    "Description": "If a leader takes this skill they may extend their leadership aura range by 6\""
+  },
+  "Spell Master": { 
+    "Name": "Spell Master", 
+    "Type": "Morale", 
+    "Description": "This unit gets a +2 to their spellcasting checks."
+  },
+  "Haggle": { 
+    "Name": "Haggle", 
+    "Type": "Morale", 
+    "Description": "This unit may reduce the cost of a piece of equipment by 1d20 rolled with disadvantage once after each game."
+  },
+  "Magic Initiate": { 
+    "Name": "Magic Initiate", 
+    "Type": "Morale", 
+    "Description": "This unit may learn basic magic. Immediately pick one spell from the basic spells list."
+  },
+  "Battle Caster": { 
+    "Name": "Battle Caster", 
+    "Type": "Morale", 
+    "Description": "This unit may wear armour and use a shield while casting spells."
+  },
+  "Hoarder": { 
+    "Name": "Hoarder", 
+    "Type": "Morale", 
+    "Description": "When a unit of your warband dies you can keep one piece of equipment from that unit. This skill can be used once per battle."
+  },
+  "Ranged Bonus": { 
+    "Name": "Ranged Bonus", 
+    "Type": "Special", 
+    "Description": "This unit gets a +2 to their ranged skill."
+  },
+  "Melee Bonus": { 
+    "Name": "Melee Bonus", 
+    "Type": "Special", 
+    "Description": "This unit gets a +2 to their melee skill."
+  },
+  "Fear": { 
+    "Name": "Fear", 
+    "Type": "Special", 
+    "Description": "This unit causes fear."
+  }
 }
