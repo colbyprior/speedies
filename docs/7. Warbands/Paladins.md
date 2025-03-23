@@ -9,10 +9,10 @@ Paladins are warriors who come from a holy order.
 | Play Style | Defensive |
 
 ## Heroes
-| Units | Type | Cap | Mov | Mel | Rng | Def | Wnd | Agi | Atk | Mrl | Cost | Abilities | Skill Types |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Justicar | Leader | 1  | 6 | 13 | 12 | 18 | 1 | 8 | 1 | 7 | 70 | [Leader 6"](#leader-6), [Prayers](#prayers) | Melee, Morale, Agility, Paladins |
-| Paladin | Hero | None  | 6 | 13 | 14 | 18 | 1 | 11 | 1 | 10 | 35 |  | Melee, Morale, Agility, Paladins |
+| Units    | Type   | Cap  | Mov | Mel | Rng | Def | Wnd | Agi | Atk | Mrl | Cost | Abilities                                   | Skill Types                      |
+| -------- | ------ | ---- | --- | --- | --- | --- | --- | --- | --- | --- | ---- | ------------------------------------------- | -------------------------------- |
+| Justicar | Leader | 1    | 6   | 13  | 12  | 18  | 1   | 8   | 1   | 7   | 70   | [Leader 6"](#leader-6), [Prayers](#prayers) | Melee, Morale, Agility, Paladins |
+| Paladin  | Hero   | None | 6   | 13  | 14  | 18  | 1   | 11  | 1   | 10  | 35   |                                             | Melee, Morale, Agility, Paladins |
 
 ## Henchmen
 | Units | Cap | Mov | Mel | Rng | Def | Wnd | Agi | Atk | Mrl | Cost | Abilities |

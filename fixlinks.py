@@ -11,7 +11,7 @@ for path in Path('docs').rglob('*.md'):
 
     match_link = re.search(r']\(#', newline, re.IGNORECASE)
     if match_link:
-      newline = re.sub(r']\(#.*\)', lambda m: m.group(0).lower(), newline)
+      newline = re.sub(r']\(#\w*\)', lambda m: m.group(0).lower(), newline)
       newline = newline.replace("%20", "-")
 
     match_table = re.search(r'^\|', newline, re.IGNORECASE)
