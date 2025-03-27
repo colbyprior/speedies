@@ -13,12 +13,13 @@ Paladins are warriors who come from a holy order.
 | -------- | ------ | ---- | --- | --- | --- | --- | --- | --- | --- | --- | ---- | ------------------------------------------- | -------------------------------- |
 | Justicar | Leader | 1    | 6   | 13  | 12  | 18  | 1   | 8   | 1   | 7   | 70   | [Leader 6"](#leader-6), [Prayers](#prayers) | Melee, Morale, Agility, Paladins |
 | Paladin  | Hero   | None | 6   | 13  | 14  | 18  | 1   | 11  | 1   | 10  | 35   |                                             | Melee, Morale, Agility, Paladins |
+| Cleric   |        |      |     |     |     |     |     |     |     |     |      |                                             |                                  |
 
 ## Henchmen
-| Units | Cap | Mov | Mel | Rng | Def | Wnd | Agi | Atk | Mrl | Cost | Abilities |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Squire | None  | 6 | 15 | 14 | 19 | 1 | 11 | 1 | 10 | 25 |  |
-| Novice | None  | 6 | 16 | 16 | - | 1 | 11 | 1 | 13 | 15 |  |
+| Units  | Cap  | Mov | Mel | Rng | Def | Wnd | Agi | Atk | Mrl | Cost | Abilities |
+| ------ | ---- | --- | --- | --- | --- | --- | --- | --- | --- | ---- | --------- |
+| Squire | None | 6   | 15  | 14  | 19  | 1   | 11  | 1   | 10  | 25   |           |
+| Novice | None | 6   | 16  | 16  | -   | 1   | 11  | 1   | 13  | 15   |           |
 
 ## Henchmen upgrades
 | Upgrade Trees: | 1       | 2       | 3       | 4   | 5       | 6       | 7       | 8   |
