@@ -9,23 +9,26 @@ Paladins are warriors who come from a holy order.
 | Play Style | Defensive |
 
 ## Heroes
-| Units    | Type   | Cap  | Mov | Mel | Rng | Def | Wnd | Agi | Atk | Mrl | Cost | Abilities                                   | Skill Types                      |
-| -------- | ------ | ---- | --- | --- | --- | --- | --- | --- | --- | --- | ---- | ------------------------------------------- | -------------------------------- |
-| Justicar | Leader | 1    | 6   | 13  | 12  | 18  | 1   | 8   | 1   | 7   | 70   | [Leader 6"](#leader-6), [Prayers](#prayers) | Melee, Morale, Agility, Paladins |
-| Paladin  | Hero   | None | 6   | 13  | 14  | 18  | 1   | 11  | 1   | 10  | 35   |                                             | Melee, Morale, Agility, Paladins |
-| Cleric   |        |      |     |     |     |     |     |     |     |     |      |                                             |                                  |
+| Units           | Type   | Cap  | Mov | Mel | Rng | Def | Wnd | Agi | Atk | Mrl | Cost | Abilities                                   | Skill Types                      |
+| --------------- | ------ | ---- | --- | --- | --- | --- | --- | --- | --- | --- | ---- | ------------------------------------------- | -------------------------------- |
+| Justicar        | Leader | 1    | 6   | 13  | 12  | 18  | 1   | 8   | 1   | 7   | 70   | [Leader 6"](#leader-6), [Prayers](#prayers) | Melee, Morale, Agility, Paladins |
+| Paladin         | Hero   | None | 6   | 13  | 14  | 18  | 1   | 11  | 1   | 10  | 35   |                                             | Melee, Morale, Agility, Paladins |
+| Cleric          |        |      |     |     |     |     |     |     |     |     |      |                                             |                                  |
+| Standard Bearer |        |      |     |     |     |     |     |     |     |     |      |                                             |                                  |
 
 ## Henchmen
-| Units  | Cap  | Mov | Mel | Rng | Def | Wnd | Agi | Atk | Mrl | Cost | Abilities |
-| ------ | ---- | --- | --- | --- | --- | --- | --- | --- | --- | ---- | --------- |
-| Squire | None | 6   | 15  | 14  | 19  | 1   | 11  | 1   | 10  | 25   |           |
-| Novice | None | 6   | 16  | 16  | -   | 1   | 11  | 1   | 13  | 15   |           |
+| Units    | Cap  | Mov | Mel | Rng | Def | Wnd | Agi | Atk | Mrl | Cost | Abilities |
+| -------- | ---- | --- | --- | --- | --- | --- | --- | --- | --- | ---- | --------- |
+| Squire   | None | 6   | 15  | 14  | 19  | 1   | 11  | 1   | 10  | 25   |           |
+| Initiate | None | 6   | 16  | 16  | -   | 1   | 11  | 1   | 13  | 15   |           |
+| Monk     |      |     |     |     |     |     |     |     |     |      |           |
+| Cavalier |      |     |     |     |     |     |     |     |     |      |           |
 
 ## Henchmen upgrades
 | Upgrade Trees: | 1       | 2       | 3       | 4   | 5       | 6       | 7       | 8   |
 | -------------- | ------- | ------- | ------- | --- | ------- | ------- | ------- | --- |
-| Squire  | Mel/Rgd | Agi/Mor | Mel/Rgd | Def | Mel/Rgd | Agi/Mor | Mel/Rgd | Def |
-| Novice  | Mel/Rgd | Agi/Mor | Mel/Rgd | Def | Mel/Rgd | Agi/Mor | Mel/Rgd | Def |
+| Squire         | Mel/Rgd | Agi/Mor | Mel/Rgd | Def | Mel/Rgd | Agi/Mor | Mel/Rgd | Def |
+| Initiate       | Mel/Rgd | Agi/Mor | Mel/Rgd | Def | Mel/Rgd | Agi/Mor | Mel/Rgd | Def |
 
 ## Equipment
 
