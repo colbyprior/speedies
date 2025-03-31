@@ -29,6 +29,14 @@ def generate_reference_pages():
         out_data = reference_helper.generate_equipment_page()
         f.write(out_data)
         f.close()
+    with (open("docs/8. Reference/2. Skill List.md", "w") as f):
+        out_data = reference_helper.generate_skills_page()
+        f.write(out_data)
+        f.close()
+    with (open("docs/8. Reference/3. Spell List.md", "w") as f):
+        out_data = reference_helper.generate_spells_page()
+        f.write(out_data)
+        f.close()
     return
 
 generate_warbands()

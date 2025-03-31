@@ -44,6 +44,43 @@ def armour_block():
     return out_data
 
 
+def skills_block():
+    out_data = ""
+    skill_types_data = {}
+    for skill_name in global_skills_data:
+        skill_data = global_skills_data[skill_name]
+        if skill_data.get('Type') not in skill_types_data:
+            skill_types_data[skill_data.get('Type')] = [skill_data]
+        else:
+            skill_types_data[skill_data.get('Type')].append(skill_data)
+    for skill_type in skill_types_data:
+        out_data += f"\n## {skill_type} \n"
+        for skill_data in skill_types_data[skill_type]:
+            out_data += f"### {skill_data.get('Name')}\n"
+            out_data += f"*{skill_data.get('Type')}*\n\n"
+            out_data += skill_data.get("Description")
+            out_data += "\n"
+    return out_data
+
+
+def spells_block():
+    out_data = ""
+    spell_schools_data = {}
+    for spell_name in global_spells_data:
+        spell_data = global_spells_data[spell_name]
+        if spell_data.get('School') not in spell_schools_data:
+            spell_schools_data[spell_data.get('School')] = [spell_data]
+        else:
+            spell_schools_data[spell_data.get('School')].append(spell_data)
+    for spell_school in spell_schools_data:
+        out_data += f"\n## {spell_school} \n"
+        out_data += f"| Name | Diff | Description |\n"
+        out_data += f"| ---- | ---- | ----------- |\n"
+        for spell_data in spell_schools_data[spell_school]:
+            out_data += f"| {spell_data.get('Name')} | {spell_data.get('Check')} | {spell_data.get('Description')} |\n"
+    return out_data
+
+
 def generate_equipment_page():
     out_data = "---\n"
     out_data += "sidebar_position: 1\n"
@@ -53,4 +90,22 @@ def generate_equipment_page():
     out_data += melee_weapons_block()
     out_data += ranged_weapons_block()
     out_data += armour_block()
+    return out_data
+
+def generate_skills_page():
+    out_data = "---\n"
+    out_data += "sidebar_position: 1\n"
+    out_data += "sidebar_label: Skills List\n"
+    out_data += "---\n"
+    out_data += "# Skills List\n"
+    out_data += skills_block()
+    return out_data
+
+def generate_spells_page():
+    out_data = "---\n"
+    out_data += "sidebar_position: 1\n"
+    out_data += "sidebar_label: Spell List\n"
+    out_data += "---\n"
+    out_data += "# Spell List\n"
+    out_data += spells_block()
     return out_data

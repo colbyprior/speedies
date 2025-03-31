@@ -11,7 +11,7 @@ Paladins are warriors who come from a holy order.
 ## Heroes
 | Units | Type | Cap | Mov | Mel | Rng | Def | Wnd | Agi | Atk | Mrl | Cost | Abilities | Skill Types |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Justicar | Leader | 1  | 6 | 13 | 12 | 18 | 1 | 8 | 1 | 7 | 70 | [Leader 6"](#leader-6), [Prayers](#prayers) | Melee, Morale, Agility, Paladins |
+| Justicar | Leader | 1  | 6 | 13 | 12 | 18 | 1 | 8 | 1 | 7 | 70 | [Leader](#leader), [Prayers](#prayers) | Melee, Morale, Agility, Paladins |
 | Paladin | Hero | None  | 6 | 13 | 14 | 18 | 1 | 11 | 1 | 10 | 35 |  | Melee, Morale, Agility, Paladins |
 
 ## Henchmen
@@ -53,8 +53,8 @@ Paladin armour is for the unit types: Leader, Hero, Squire, Novice
 *Paladins*
 
 This unit may re-roll their first failed morale check of each battle.
-### Leader 6"
-*Special*
+### Leader
+*Inherit*
 
 Allied units with 6" of this unit can use this morale stat for checks instead of their own.
 ### Prayers
