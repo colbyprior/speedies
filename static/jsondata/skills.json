@@ -96,22 +96,22 @@
   },
   "Ranged Bonus": { 
     "Name": "Ranged Bonus", 
-    "Type": "Special", 
+    "Type": "Inherit",
     "Description": "This unit gets a +2 to their ranged skill."
   },
   "Melee Bonus": { 
     "Name": "Melee Bonus", 
-    "Type": "Special", 
+    "Type": "Inherit",
     "Description": "This unit gets a +2 to their melee skill."
   },
   "Fear": { 
     "Name": "Fear", 
-    "Type": "Special", 
+    "Type": "Inherit",
     "Description": "This unit causes fear."
   },
-  "Leader 6\"": {
-    "Name": "Leader 6\"",
-    "Type": "Special",
+  "Leader": {
+    "Name": "Leader",
+    "Type": "Inherit",
     "Description": "Allied units with 6\" of this unit can use this morale stat for checks instead of their own."
   },
   "Prayers": {
