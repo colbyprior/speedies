@@ -2,8 +2,6 @@ import json
 from pathlib import Path
 import helpers.warband_helper as warband_helper
 import helpers.reference_helper as reference_helper
-from helpers.global_data import (global_henchmen_upgrade_paths, global_skills_data, global_melee_weapons_data,
-                                 global_ranged_weapons_data, global_armour_data, global_spells_data)
 
 
 def generate_warbands():
@@ -12,14 +10,18 @@ def generate_warbands():
             warband = json.load(f)
             all_skills, spell_schools = warband_helper.get_all_skills_and_spells(warband)
             out_data = warband_helper.warband_header(warband)
+            out_data += warband_helper.warband_special_rules(warband)
             out_data += warband_helper.heroes_table(warband)
             out_data += warband_helper.henchmen_table(warband)
+            out_data += warband_helper.warband_promotion_options(warband)
             out_data += warband_helper.equipment_block(warband)
-            out_data += warband_helper.skills_block(all_skills)
+            out_data += warband_helper.skills_block(all_skills, warband)
             out_data += warband_helper.spells_block(spell_schools)
+            out_data += warband_helper.warband_available_skills(warband)
+            out_data += warband_helper.skills_block(all_skills, warband, warband_only=True)
 
             # print(out_data)
-            f = open(f"docs/7. Warbands/{warband.get('Name')}-gen.md", "w")
+            f = open(f"docs/7. Warbands Generated/{warband.get('Name')}.md", "w")
             f.write(out_data)
             f.close()
 
