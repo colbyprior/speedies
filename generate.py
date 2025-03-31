@@ -25,11 +25,11 @@ def generate_warbands():
 
 
 def generate_reference_pages():
-    with (open("docs/8. Reference/1. Equipment List-gen.md", "w") as f):
-        out_data = reference_helper.generate_equipment_page(global_melee_weapons_data, global_ranged_weapons_data, global_armour_data)
+    with (open("docs/8. Reference/1. Equipment List.md", "w") as f):
+        out_data = reference_helper.generate_equipment_page()
         f.write(out_data)
         f.close()
     return
 
-# generate_warbands()
+generate_warbands()
 generate_reference_pages()
