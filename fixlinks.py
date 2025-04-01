@@ -5,6 +5,8 @@ from pathlib import Path
 
 for path in Path('docs').rglob('*.md'):
   print(str(path))
+  if "Warbands Generated" in str(path):
+    continue
   is_table = False
   for line in fileinput.input(str(path), inplace=True):
     newline = line.replace('\n', '')

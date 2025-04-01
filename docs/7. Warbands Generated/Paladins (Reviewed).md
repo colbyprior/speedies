@@ -64,6 +64,7 @@ Paladin equipment for the unit types: Leader, Hero, Squire, Novice
 | ---- | ------ | ---- |
 | Light Armour | +1 Def | 15 |
 | Heavy Armour | +2 Def | 30 |
+
 <!--
 Instead of 'Name' for each column, it could be 'Melee Weapons', 'Ranged Weapons', and 'Armour'?
 -->
@@ -111,6 +112,7 @@ This unit is a boss dog that rides a mount.
 | Paladin | X |  |  |  | X | X | X |  |
 | Cleric |  |  | X |  | X | X | X |  |
 | Standard Bearer | X |  |  |  | X | X | X |  |
+
 <!--
 Extra column generated above. 'Start exp' is also getting 'X's for some reason? I think we should add some dummy data in.
 -->
