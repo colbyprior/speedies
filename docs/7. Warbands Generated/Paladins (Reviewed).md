@@ -1,7 +1,7 @@
 ---
 sidebar_label: Paladins
 ---
-# Paladins (Reviewed)
+# Paladins
 Paladins are warriors who come from a holy order.
 
 | Max Units | 15 |
@@ -12,29 +12,20 @@ Paladins are warriors who come from a holy order.
 ### Example special rule
 Paladins don't actually have any but this is a test.
 ## Heroes
-| Units | Mov | Mel | Rng | Def | Wnd | Agi | Atk | Mrl | Cost | Abilities | Skill Types | Cap |
+| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Abilities | Cost |  Cap | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Justicar  | 6 | 13 | 12 | 18 | 1 | 8 | 1 | 7 | 70 | [Leader](#leader), [Prayers](#prayers) | 1 |
-| Paladin  | 6 | 13 | 14 | 18 | 1 | 11 | 1 | 10 | 35 |  | None |
-| Cleric  | 6 | 15 | 14 | 19 | 1 | 11 | 1 | 10 | 30 | [Healer](#healer) | 1 |
-| Standard Bearer  | 6 | 15 | 14 | 19 | 1 | 11 | 1 | 7 | 35 | [Holy Standard](#holy-standard) | None |
+| Justicar | 6 | 1 | 1 | 13 | 12 | 18 | 8 | 7 | [Leader](#leader), [Prayers](#prayers) | 70 | 1 | [skills](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Morale,Paladins) |
+| Paladin | 6 | 1 | 1 | 13 | 14 | 18 | 11 | 10 |  | 35 | None | [skills](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
+| Cleric | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 10 | [Healer](#healer) | 30 | 1 | [skills](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Paladins) |
+| Standard Bearer | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 7 | [Holy Standard](#holy-standard) | 35 | None | [skills](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
 
-<!--
-Skill Types column still exists above.
-
-Also, I was thinking, Wnd, Atk, and Mov are all different to Mel, Rng, Def, Mrl. I think we should group them together. My suggested order would be:
-
-Mov, Atk, Wnd, Mel, Rng, Def, Agi, Mrl
-
-This way people could see how generally scary a unit is immediately (via Atk and Wnd) and then get a sense of how it performs at each Check.
--->
 ## Henchmen
-| Units | Mov | Mel | Rng | Def | Wnd | Agi | Atk | Mrl | Cost | Abilities | Cap |
+| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Abilities | Cost |  Cap |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Squire | 6 | 15 | 14 | 19 | 1 | 11 | 1 | 10 | 25 |  | None |
-| Initiate | 6 | 16 | 16 | - | 1 | 11 | 1 | 13 | 15 |  | None |
-| Monk | 7 | 15 | 14 | 19 | 1 | 8 | 1 | 10 | 40 | [Ki Strike](#ki-strike), [No Equipment](#no-equipment) | 3 |
-| Cavalier | 9 | 15 | 14 | 19 | 2 | 11 | 1 | 10 | 45 | [Mounted](#mounted) | 3 |
+| Squire | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 10 |  | 25 | None |
+| Initiate | 6 | 1 | 1 | 16 | 16 | - | 11 | 13 |  | 15 | None |
+| Monk | 7 | 1 | 1 | 15 | 14 | 19 | 8 | 10 | [Ki Strike](#ki-strike), [No Equipment](#no-equipment) | 40 | 3 |
+| Cavalier | 9 | 1 | 2 | 15 | 14 | 19 | 11 | 10 | [Mounted](#mounted) | 45 | 3 |
 
 ## Promotion Options
 | Unit | Stat Ups | Gained Skills |
@@ -48,7 +39,7 @@ This way people could see how generally scary a unit is immediately (via Atk and
 ### Paladin Equipment 
 Paladin equipment for the unit types: Leader, Hero, Squire, Novice
 
-| Name | Effect | Cost | Slots |
+| Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
 | Hammer | +1 Injury | 5 | 1 |
 | Blessed Warhammer | -3 Def to target, +1 Injury, +3 Melee against Undead. Only heroes can dual-wield. | 15 | 1 |
@@ -56,26 +47,18 @@ Paladin equipment for the unit types: Leader, Hero, Squire, Novice
 | Great Hammer | +4 to Hit, +5 to Injury | 10 | 2 |
 | Shield | +4 Def | 5 | 1 |
 
-| Name | Range | Effect | Cost | Slots |
+| Ranged Weapon | Range | Effect | Cost | Slots |
 | ---- | ----- | ------ | ---- | ----- |
 | Sling | 15" |  | 5 | 1 |
 
-| Name | Effect | Cost |
+| Armour | Effect | Cost |
 | ---- | ------ | ---- |
 | Light Armour | +1 Def | 15 |
 | Heavy Armour | +2 Def | 30 |
 
-<!--
-Instead of 'Name' for each column, it could be 'Melee Weapons', 'Ranged Weapons', and 'Armour'?
--->
-
 ## Skills 
 ### Leader
-*Inherit*
-
-<!--
-Did you mean 'Inherent'?
--->
+*Inherent*
 
 Allied units with 6" of this unit can use this morale stat for checks instead of their own.
 ### Prayers
@@ -83,15 +66,15 @@ Allied units with 6" of this unit can use this morale stat for checks instead of
 
 This unit can cast Prayer spells. Immediately pick one spell from this school to be known. They can still use armour and a shield while casting unlike other spells.
 ### Healer
-*Inherit*
+*Inherent*
 
 This unit can make a morale check in the upkeep phase to remove the dazed or stunned condition from one friendly unit within 3".
 ### No Equipment
-*Inherit*
+*Inherent*
 
 This unit may not have any equipment, but does not suffer the penalties for fighting Unarmed.
 ### Mounted
-*Inherit*
+*Inherent*
 
 This unit is a boss dog that rides a mount.
 
@@ -108,14 +91,11 @@ This unit is a boss dog that rides a mount.
 ## Available Skills & Starting Experience
 | Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Justicar | X |  | X |  | X | X | X | 2 |
-| Paladin | X |  |  |  | X | X | X |  |
-| Cleric |  |  | X |  | X | X | X |  |
-| Standard Bearer | X |  |  |  | X | X | X |  |
+| Justicar | X |  | X |  | X | X | 2 |
+| Paladin | X |  |  |  | X | X |  |
+| Cleric |  |  | X |  | X | X |  |
+| Standard Bearer | X |  |  |  | X | X |  |
 
-<!--
-Extra column generated above. 'Start exp' is also getting 'X's for some reason? I think we should add some dummy data in.
--->
 ## Warband Special Skills 
 ### Determination
 *Paladins*
