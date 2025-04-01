@@ -57,7 +57,7 @@ def warband_special_rules(warband):
 
 def heroes_table(warband):
     out_data = "## Heroes\n"
-    out_data += f"| Units | Mov | Mel | Rng | Def | Wnd | Agi | Atk | Mrl | Cost | Abilities | Skill Types | Cap |\n"
+    out_data += f"| Units | Mov | Mel | Rng | Def | Wnd | Agi | Atk | Mrl | Cost | Abilities | Cap | Skills |\n"
     out_data += f"| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |\n"
     for hero in warband.get("Heroes"):
         abilities = []
@@ -67,7 +67,7 @@ def heroes_table(warband):
         type_cap = hero.get('Type Cap')
         if not type_cap:
             type_cap = "None"
-        out_data += f"| {hero.get('Name')}  | {hero.get('Move')} | {hero.get('Melee')} | {hero.get('Ranged')} | {hero.get('Defense')} | {hero.get('Wounds')} | {hero.get('Agility')} | {hero.get('Attacks')} | {hero.get('Morale')} | {hero.get('Cost')} | {abilities_str} | {type_cap} |\n"
+        out_data += f"| {hero.get('Name')}  | {hero.get('Move')} | {hero.get('Melee')} | {hero.get('Ranged')} | {hero.get('Defense')} | {hero.get('Wounds')} | {hero.get('Agility')} | {hero.get('Attacks')} | {hero.get('Morale')} | {hero.get('Cost')} | {abilities_str} | {type_cap} | [] |\n"
     return out_data
 
 
