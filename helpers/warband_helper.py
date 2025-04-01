@@ -57,7 +57,7 @@ def warband_special_rules(warband):
 
 def heroes_table(warband):
     out_data = "## Heroes\n"
-    out_data += f"| Units | Mov | Mel | Rng | Def | Wnd | Agi | Atk | Mrl | Cost | Abilities | Cap | Skills |\n"
+    out_data += f"| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Abilities | Cost |  Cap | Skills |\n"
     out_data += f"| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |\n"
     for hero in warband.get("Heroes"):
         abilities = []
@@ -69,13 +69,13 @@ def heroes_table(warband):
             type_cap = "None"
         filter = "mov,mel"
         skill_link = f"[skills](docs/8.%20Reference/2.%20Skill%20List.md?filter={filter})"
-        out_data += f"| {hero.get('Name')}  | {hero.get('Move')} | {hero.get('Melee')} | {hero.get('Ranged')} | {hero.get('Defense')} | {hero.get('Wounds')} | {hero.get('Agility')} | {hero.get('Attacks')} | {hero.get('Morale')} | {hero.get('Cost')} | {abilities_str} | {type_cap} | {skill_link} |\n"
+        out_data += f"| {hero.get('Name')} | {hero.get('Move')} | {hero.get('Attacks')} | {hero.get('Wounds')} | {hero.get('Melee')} | {hero.get('Ranged')} | {hero.get('Defense')} | {hero.get('Agility')} | {hero.get('Morale')} | {abilities_str} | {hero.get('Cost')} | {type_cap} | {skill_link} |\n"
     return out_data
 
 
 def henchmen_table(warband):
     out_data = "\n## Henchmen\n"
-    out_data += f"| Units | Mov | Mel | Rng | Def | Wnd | Agi | Atk | Mrl | Cost | Abilities | Cap |\n"
+    out_data += f"| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Abilities | Cost |  Cap |\n"
     out_data += f"| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |\n"
     for henchmen in warband.get("Henchmen"):
         abilities = []
@@ -85,7 +85,7 @@ def henchmen_table(warband):
         type_cap = henchmen.get('Type Cap')
         if not type_cap:
             type_cap = "None"
-        out_data += f"| {henchmen.get('Name')} | {henchmen.get('Move')} | {henchmen.get('Melee')} | {henchmen.get('Ranged')} | {henchmen.get('Defense')} | {henchmen.get('Wounds')} | {henchmen.get('Agility')} | {henchmen.get('Attacks')} | {henchmen.get('Morale')} | {henchmen.get('Cost')} | {abilities_str} | {type_cap} |\n"
+        out_data += f"| {henchmen.get('Name')} | {henchmen.get('Move')} | {henchmen.get('Attacks')} | {henchmen.get('Wounds')} | {henchmen.get('Melee')} | {henchmen.get('Ranged')} | {henchmen.get('Defense')} | {henchmen.get('Agility')} | {henchmen.get('Morale')} | {abilities_str} | {henchmen.get('Cost')} | {type_cap} |\n"
     return out_data
 
 
@@ -107,7 +107,7 @@ def equipment_block(warband):
         out_data += f"\n### {equipment} Equipment \n"
         aliases = ", ".join(equipment_data.get("Aliases"))
         out_data += f"{equipment} equipment for the unit types: {aliases}\n\n"
-        out_data += f"| Name | Effect | Cost | Slots |\n"
+        out_data += f"| Melee Weapon | Effect | Cost | Slots |\n"
         out_data += f"| ---- | ------ | ---- | ----- |\n"
         for weapon_name in equipment_data.get("Melee Weapons"):
             weapon_data = global_melee_weapons_data.get(weapon_name)
@@ -115,11 +115,8 @@ def equipment_block(warband):
                 print(f"ERR: {weapon_name}")
             out_data += f"| {weapon_data.get('Name')} | {weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
 
-        # out_data += f"\n### {equipment} Ranged Weapons \n"
-        # aliases = ", ".join(equipment_data.get("Aliases"))
-        # out_data += f"{equipment} ranged weapons are for the unit types: {aliases}\n\n"
         out_data += "\n"
-        out_data += f"| Name | Range | Effect | Cost | Slots |\n"
+        out_data += f"| Ranged Weapon | Range | Effect | Cost | Slots |\n"
         out_data += f"| ---- | ----- | ------ | ---- | ----- |\n"
         for weapon_name in equipment_data.get("Ranged Weapons"):
             weapon_data = global_ranged_weapons_data.get(weapon_name)
@@ -127,11 +124,8 @@ def equipment_block(warband):
                 print(f"ERR: {weapon_name}")
             out_data += f"| {weapon_data.get('Name')} | {weapon_data.get('Range')} | {weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
 
-        # out_data += f"\n### {equipment} Armour \n"
-        # aliases = ", ".join(equipment_data.get("Aliases"))
-        # out_data += f"{equipment} armour is for the unit types: {aliases}\n\n"
         out_data += "\n"
-        out_data += f"| Name | Effect | Cost |\n"
+        out_data += f"| Armour | Effect | Cost |\n"
         out_data += f"| ---- | ------ | ---- |\n"
         for armour_name in equipment_data.get("Armour"):
             armour_data = global_armour_data.get(armour_name)
@@ -184,5 +178,5 @@ def warband_available_skills(warband):
     out_data += f"| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |\n"
     for unit in warband.get("Available Skills"):
         skill_data = warband.get("Available Skills").get(unit)
-        out_data += f"| {unit} | {skill_data.get('Mel')} | {skill_data.get('Rng')} | {skill_data.get('Def')} | {skill_data.get('Agi')} | {skill_data.get('Mrl')} | {skill_data.get('Special')} | {skill_data.get('Special')} | {skill_data.get('Start Exp')} |\n"
+        out_data += f"| {unit} | {skill_data.get('Mel')} | {skill_data.get('Rng')} | {skill_data.get('Def')} | {skill_data.get('Agi')} | {skill_data.get('Mrl')} | {skill_data.get('Special')} | {skill_data.get('Start Exp')} |\n"
     return out_data
