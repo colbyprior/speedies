@@ -46,7 +46,15 @@ def armour_block():
 
 def skills_block():
     out_data = ""
-    skill_types_data = {}
+    skill_types_data = {
+        "Inherent": [],
+        "Melee": [],
+        "Ranged": [],
+        "Agility": [],
+        "Defense": [],
+        "Morale": [],
+        "Spellcasting": []
+    }
     for skill_name in global_skills_data:
         skill_data = global_skills_data[skill_name]
         if skill_data.get('Type') not in skill_types_data:
@@ -55,6 +63,9 @@ def skills_block():
             skill_types_data[skill_data.get('Type')].append(skill_data)
     for skill_type in skill_types_data:
         out_data += f"\n## {skill_type} \n"
+        skill_types_data[skill_type].sort(key=lambda x: x['Name'])
+        if skill_type == "Inherent":
+            out_data += "*Inherent skills can never be chosen on level ups. Only certain characters start with these skills.*\n"
         for skill_data in skill_types_data[skill_type]:
             out_data += f"### {skill_data.get('Name')}\n"
             out_data += f"*{skill_data.get('Type')}*\n\n"

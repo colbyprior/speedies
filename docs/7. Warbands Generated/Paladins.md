@@ -12,15 +12,15 @@ Paladins are warriors who come from a holy order.
 ### Example special rule
 Paladins don't actually have any but this is a test.
 ## Heroes
-| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Abilities | Cost |  Cap | Skills |
+| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Justicar | 6 | 1 | 1 | 13 | 12 | 18 | 8 | 7 | [Leader](#leader), [Prayers](#prayers) | 70 | 1 | [skills](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Morale,Paladins) |
-| Paladin | 6 | 1 | 1 | 13 | 14 | 18 | 11 | 10 |  | 35 | None | [skills](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
-| Cleric | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 10 | [Healer](#healer) | 30 | 1 | [skills](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Paladins) |
-| Standard Bearer | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 7 | [Holy Standard](#holy-standard) | 35 | None | [skills](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
+| Justicar | 6 | 1 | 1 | 13 | 12 | 18 | 8 | 7 | [Leader](#leader), [Prayers](#prayers) | 70 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Morale,Paladins) |
+| Paladin | 6 | 1 | 1 | 13 | 14 | 18 | 11 | 10 |  | 35 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
+| Cleric | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 10 | [Healer](#healer) | 30 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Paladins) |
+| Standard Bearer | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 7 | [Holy Standard](#holy-standard) | 35 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
 
 ## Henchmen
-| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Abilities | Cost |  Cap |
+| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Squire | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 10 |  | 25 | None |
 | Initiate | 6 | 1 | 1 | 16 | 16 | - | 11 | 13 |  | 15 | None |

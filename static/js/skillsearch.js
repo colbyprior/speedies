@@ -1,14 +1,22 @@
 function findGetParameter(parameterName) {
-    var result = null,
-    tmp = [];
+    var result = null;
+    var res = "";
+    var tmp = [];
     location.search
         .substr(1)
         .split("&")
         .forEach(function (item) {
             tmp = item.split("=");
-            if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+            if (tmp[0] === parameterName) {
+                result = decodeURIComponent(tmp[1]);
+                if (res !== "") {
+                    res += ","
+                }
+                res += decodeURIComponent(tmp[1]);
+            }
         });
-    return result;
+    console.log(res);
+    return res;
 }
 
 async function skillsLoop(){
@@ -36,7 +44,7 @@ async function skillSplit(item) {
         var filterItem = filterItems[i];
         item.innerHTML += "<h2>" + filterItem + "</h2>";
         for (var skillName in skillList) {
-            if (skillList[skillName]['Type'] === filterItem) {
+            if (skillList[skillName]['Type'] === filterItem || (filterItem === "Other" && !(['Inherent', 'Melee', 'Ranged', 'Agility', 'Defense', 'Morale', 'Spellcasting'].includes(skillList[skillName]['Type'])))) {
                 item.innerHTML += "<h3 class='anchor'>" + skillList[skillName]['Name'] + "</h3>";
                 item.innerHTML += "<p><em>" + skillList[skillName]['Type'] + "</em></p>";
                 item.innerHTML += "<p>" + skillList[skillName]['Description'] + "</p>";
