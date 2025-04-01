@@ -9,7 +9,7 @@
       "Pistol": { 
         "Name": "Pistol", 
         "Range": "10\"",
-        "Effect": "Prepare Shot, Deadly, Armour Piercing, Close Quarters", 
+        "Effect": "Long Reload, Deadly, Armour Piercing, Close Quarters",
         "Cost": "15",
         "Slots": "1" 
       }, 
@@ -30,7 +30,7 @@
       "Rifle": { 
         "Name": "Rifle", 
         "Range": "25\"",
-        "Effect": "Prepare Shot, Long Reload, Deadly, Armour Piercing", 
+        "Effect": "Long Reload, Deadly, Armour Piercing",
         "Cost": "25", 
         "Slots": "1" 
       },  
