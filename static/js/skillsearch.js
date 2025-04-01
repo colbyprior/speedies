@@ -1,5 +1,4 @@
 function findGetParameter(parameterName) {
-    var result = null;
     var res = "";
     var tmp = [];
     location.search
@@ -15,7 +14,6 @@ function findGetParameter(parameterName) {
                 res += decodeURIComponent(tmp[1]);
             }
         });
-    console.log(res);
     return res;
 }
 
