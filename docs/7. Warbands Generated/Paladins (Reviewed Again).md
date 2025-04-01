@@ -4,8 +4,12 @@ sidebar_label: Paladins
 # Paladins
 Paladins are warriors who come from a holy order.
 
-| Max Units | 15 |
-| ---- | ---- |
+<!--
+Looking good overall!
+-->
+
+| Max Units  | 15        |
+| ---------- | --------- |
 | Play Style | Defensive |
 
 ## Special Rules
@@ -18,6 +22,10 @@ Paladins don't actually have any but this is a test.
 | Paladin | 6 | 1 | 1 | 13 | 14 | 18 | 11 | 10 |  | 35 | None | [skills](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
 | Cleric | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 10 | [Healer](#healer) | 30 | 1 | [skills](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Paladins) |
 | Standard Bearer | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 7 | [Holy Standard](#holy-standard) | 35 | None | [skills](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
+
+<!--
+Should we rename 'Abilities' column to 'Skills'? And should we rename 'Skills' to 'Learnable Skills'? It does feel a bit long though. I'm also not sure on the hyperlink name. Maybe just putting '[Link]' as the name so that it's obvious the user is expected to click on it to see the filtered skills list?
+-->
 
 ## Henchmen
 | Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Abilities | Cost |  Cap |
@@ -50,6 +58,9 @@ Paladin equipment for the unit types: Leader, Hero, Squire, Novice
 | Ranged Weapon | Range | Effect | Cost | Slots |
 | ---- | ----- | ------ | ---- | ----- |
 | Sling | 15" |  | 5 | 1 |
+<!--
+Shall we add +Prc and +Inj' as columns?
+-->
 
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |
