@@ -19,6 +19,9 @@ Paladins don't actually have any but this is a test.
 | Cleric  | 6 | 15 | 14 | 19 | 1 | 11 | 1 | 10 | 30 | [Healer](#healer) | 1 |
 | Standard Bearer  | 6 | 15 | 14 | 19 | 1 | 11 | 1 | 7 | 35 | [Holy Standard](#holy-standard) | None |
 
+<!--
+Skill Types column still exists above.
+-->
 ## Henchmen
 | Units | Mov | Mel | Rng | Def | Wnd | Agi | Atk | Mrl | Cost | Abilities | Cap |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
@@ -55,10 +58,17 @@ Paladin equipment for the unit types: Leader, Hero, Squire, Novice
 | ---- | ------ | ---- |
 | Light Armour | +1 Def | 15 |
 | Heavy Armour | +2 Def | 30 |
+<!--
+Instead of 'Name' for each column, it could be 'Melee Weapons', 'Ranged Weapons', and 'Armour'?
+-->
 
 ## Skills 
 ### Leader
 *Inherit*
+
+<!--
+Did you mean 'Inherent'?
+-->
 
 Allied units with 6" of this unit can use this morale stat for checks instead of their own.
 ### Prayers
@@ -95,7 +105,9 @@ This unit is a boss dog that rides a mount.
 | Paladin | X |  |  |  | X | X | X |  |
 | Cleric |  |  | X |  | X | X | X |  |
 | Standard Bearer | X |  |  |  | X | X | X |  |
-
+<!--
+Extra column generated above. 'Start exp' is also getting 'X's for some reason? I think we should add some dummy data in.
+-->
 ## Warband Special Skills 
 ### Determination
 *Paladins*
