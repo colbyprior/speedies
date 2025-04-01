@@ -11,18 +11,15 @@ function findGetParameter(parameterName) {
     return result;
 }
 
-async function skillsLoop(count){
-    if (count > 10) {
-        return
-    }
+async function skillsLoop(){
     await new Promise(r => setTimeout(r, 1000));
     var skillDivs = document.getElementsByName('skillsearch');
     if (skillDivs == null){
-        return skillsLoop(count+1)
+        return skillsLoop()
     }
     await skillDivs.forEach(skillSplit);
     await new Promise(r => setTimeout(r, 1000));
-    return skillsLoop(count+1);
+    return skillsLoop();
 }
 
 async function skillSplit(item) {
@@ -51,5 +48,5 @@ async function skillSplit(item) {
 }
 
 if (typeof document !== 'undefined') {
-    skillsLoop(0);
+    skillsLoop();
 }
