@@ -1,7 +1,7 @@
 ---
 sidebar_label: Paladins
 ---
-# Paladins
+# Paladins (Reviewed)
 Paladins are warriors who come from a holy order.
 
 | Max Units | 15 |
