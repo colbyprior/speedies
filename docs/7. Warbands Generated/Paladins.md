@@ -21,6 +21,12 @@ Paladins don't actually have any but this is a test.
 
 <!--
 Skill Types column still exists above.
+
+Also, I was thinking, Wnd, Atk, and Mov are all different to Mel, Rng, Def, Mrl. I think we should group them together. My suggested order would be:
+
+Mov, Atk, Wnd, Mel, Rng, Def, Agi, Mrl
+
+This way people could see how generally scary a unit is immediately (via Atk and Wnd) and then get a sense of how it performs at each Check.
 -->
 ## Henchmen
 | Units | Mov | Mel | Rng | Def | Wnd | Agi | Atk | Mrl | Cost | Abilities | Cap |
