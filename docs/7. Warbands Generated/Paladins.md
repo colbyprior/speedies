@@ -14,10 +14,10 @@ Paladins don't actually have any but this is a test.
 ## Heroes
 | Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Abilities | Cost |  Cap | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Justicar | 6 | 1 | 1 | 13 | 12 | 18 | 8 | 7 | [Leader](#leader), [Prayers](#prayers) | 70 | 1 | [skills](docs/8.%20Reference/2.%20Skill%20List.md?filter=mov,mel) |
-| Paladin | 6 | 1 | 1 | 13 | 14 | 18 | 11 | 10 |  | 35 | None | [skills](docs/8.%20Reference/2.%20Skill%20List.md?filter=mov,mel) |
-| Cleric | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 10 | [Healer](#healer) | 30 | 1 | [skills](docs/8.%20Reference/2.%20Skill%20List.md?filter=mov,mel) |
-| Standard Bearer | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 7 | [Holy Standard](#holy-standard) | 35 | None | [skills](docs/8.%20Reference/2.%20Skill%20List.md?filter=mov,mel) |
+| Justicar | 6 | 1 | 1 | 13 | 12 | 18 | 8 | 7 | [Leader](#leader), [Prayers](#prayers) | 70 | 1 | [skills](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Morale,Paladins) |
+| Paladin | 6 | 1 | 1 | 13 | 14 | 18 | 11 | 10 |  | 35 | None | [skills](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
+| Cleric | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 10 | [Healer](#healer) | 30 | 1 | [skills](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Paladins) |
+| Standard Bearer | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 7 | [Holy Standard](#holy-standard) | 35 | None | [skills](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
 
 ## Henchmen
 | Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Abilities | Cost |  Cap |

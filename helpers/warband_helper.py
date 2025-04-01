@@ -6,6 +6,18 @@ def clean_link(name):
     return name.lower().replace(" ", "-").replace("\"", "")
 
 
+def short_to_long(name, warband_name):
+    mapping = {
+        "Mel": "Melee",
+        "Rng": "Ranged",
+        "Def": "Defense",
+        "Agi": "Agility",
+        "Mrl": "Morale",
+        "Special": warband_name
+    }
+    return mapping.get(name)
+
+
 def get_unit_skills(all_skills, units):
     for unit in units:
         for ability in unit.get("Abilities"):
@@ -67,8 +79,16 @@ def heroes_table(warband):
         type_cap = hero.get('Type Cap')
         if not type_cap:
             type_cap = "None"
-        filter = "mov,mel"
-        skill_link = f"[skills](docs/8.%20Reference/2.%20Skill%20List.md?filter={filter})"
+        filter = ""
+        skill_data = warband.get("Available Skills").get(hero.get('Name'))
+        if not skill_data:
+            print(f"Failed to find skills for: {hero.get('Name')}")
+        for short_name in skill_data.keys():
+            if skill_data.get(short_name).lower() == "x":
+                if filter:
+                    filter += ","
+                filter += short_to_long(short_name, warband.get("Name"))
+        skill_link = f"[skills](docs/8.%20Reference/4.%20Skill%20Search.md?filter={filter})"
         out_data += f"| {hero.get('Name')} | {hero.get('Move')} | {hero.get('Attacks')} | {hero.get('Wounds')} | {hero.get('Melee')} | {hero.get('Ranged')} | {hero.get('Defense')} | {hero.get('Agility')} | {hero.get('Morale')} | {abilities_str} | {hero.get('Cost')} | {type_cap} | {skill_link} |\n"
     return out_data
 

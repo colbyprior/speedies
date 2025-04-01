@@ -31,7 +31,7 @@ const config: Config = {
     locales: ['en'],
   },
 
-  clientModules: [ '/js/melee-weapons.js', '/js/ranged-weapons.js','/js/armour.js' ],
+  clientModules: [ '/js/melee-weapons.js', '/js/ranged-weapons.js','/js/armour.js', '/js/skillsearch.js' ],
 
   presets: [
     [
