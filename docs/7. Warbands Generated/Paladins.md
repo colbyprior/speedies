@@ -44,7 +44,7 @@ Paladin equipment for the unit types: Leader, Hero, Squire, Novice
 | Hammer | +1 Injury | 5 | 1 |
 | Blessed Warhammer | -3 Def to target, +1 Injury, +3 Melee against Undead. Only heroes can dual-wield. | 15 | 1 |
 | Whip | +1 Atk in the first round of combat when you charge | 10 | 1 |
-| Great Hammer | +4 to Hit, +5 to Injury | 10 | 2 |
+| Great Hammer | +4 Mel, +5 to Injury | 10 | 2 |
 | Shield | +4 Def | 5 | 1 |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |

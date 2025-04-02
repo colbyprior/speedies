@@ -1,0 +1,172 @@
+{
+    "Name": "Ratlings",
+    "Max Units": "18",
+    "Play Style": "Fast and agile swarm",
+    "Preamble": "rat",
+    "Special Rules": {
+        "": ""
+    },
+    "Heroes": [
+        {
+            "Name": "Rat",
+            "Type": "Leader",
+            "Type Cap": "",
+            "Move": "",
+            "Melee": "",
+            "Ranged": "",
+            "Defense": "",
+            "Wounds": "",
+            "Agility": "",
+            "Attacks": "",
+            "Morale": "",
+            "Cost": 0,
+            "Skills": [
+                "Leader"
+            ]
+        },
+        {
+            "Name": "",
+            "Type": "Hero",
+            "Type Cap": "",
+            "Move": "",
+            "Melee": "",
+            "Ranged": "",
+            "Defense": "",
+            "Wounds": "",
+            "Agility": "",
+            "Attacks": "",
+            "Morale": "",
+            "Cost": 0,
+            "Skills": [
+            ]
+        },
+        {
+            "Name": "",
+            "Type": "Leader|Hero",
+            "Type Cap": "",
+            "Move": "",
+            "Melee": "",
+            "Ranged": "",
+            "Defense": "",
+            "Wounds": "",
+            "Agility": "",
+            "Attacks": "",
+            "Morale": "",
+            "Cost": 0,
+            "Skills": [
+            ]
+        },
+        {
+            "Name": "",
+            "Type": "Leader|Hero",
+            "Type Cap": "",
+            "Move": "",
+            "Melee": "",
+            "Ranged": "",
+            "Defense": "",
+            "Wounds": "",
+            "Agility": "",
+            "Attacks": "",
+            "Morale": "",
+            "Cost": 0,
+            "Skills": [
+            ]
+        }
+    ],
+    "Henchmen": [
+        {
+            "Name": "",
+            "Type Cap": "",
+            "Move": "",
+            "Melee": "",
+            "Ranged": "",
+            "Defense": "",
+            "Wounds": "",
+            "Agility": "",
+            "Attacks": "",
+            "Morale": "",
+            "Cost": 0,
+            "Skills": []
+        },
+        {
+            "Name": "",
+            "Type Cap": "",
+            "Move": "",
+            "Melee": "",
+            "Ranged": "",
+            "Defense": "",
+            "Wounds": "",
+            "Agility": "",
+            "Attacks": "",
+            "Morale": "",
+            "Cost": 0,
+            "Skills": []
+        },
+        {
+            "Name": "",
+            "Type Cap": "",
+            "Move": "",
+            "Melee": "",
+            "Ranged": "",
+            "Defense": "",
+            "Wounds": "",
+            "Agility": "",
+            "Attacks": "",
+            "Morale": "",
+            "Cost": 0,
+            "Skills": []
+        },
+        {
+            "Name": "",
+            "Type Cap": "",
+            "Move": "",
+            "Melee": "",
+            "Ranged": "",
+            "Defense": "",
+            "Wounds": "",
+            "Agility": "",
+            "Attacks": "",
+            "Morale": "",
+            "Cost": 0,
+            "Skills": []
+        }
+    ],
+    "Promotion Options": {
+        "Rat": {
+            "Stat Ups": "",
+            "Gained Skills": ""
+        },
+        "": {
+            "Stat Ups": "",
+            "Gained Skills": ""
+        }
+    },
+    "Available Skills": {
+        "Rat": {
+            "Mel": "X",
+            "Rng": "",
+            "Def": "X",
+            "Agi": "",
+            "Mrl": "X",
+            "Special": "X",
+            "Start Exp": "2"
+        },
+        "": {
+            "Mel": "X",
+            "Rng": "",
+            "Def": "X",
+            "Agi": "",
+            "Mrl": "X",
+            "Special": "X",
+            "Start Exp": "2"
+        }
+    },
+    "Equipment": {
+        "Heroes": {
+            "Aliases": ["Leader", "Hero"],
+            "Melee Weapons": ["Sword"],
+            "Ranged Weapons": ["Bow"],
+            "Armour": ["Light Armour"]
+        }
+    }
+}
