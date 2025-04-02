@@ -30,7 +30,7 @@
         "Slots": "2" 
       }, 
       "Great Sword": { 
-        "Name": "Great Sword", 
+        "Name": "Great Sword / Axe", 
         "Effect": "+4 to Hit, +4 to Injury, -3 Def to target", 
         "Cost": "10", 
         "Slots": "2" 
@@ -47,8 +47,8 @@
         "Cost": "5", 
         "Slots": "1" 
       },
-      "Blessed Warhammer": { 
-        "Name": "Blessed Warhammer", 
+      "Blessed Hammer": { 
+        "Name": "Blessed Hammer", 
         "Effect": "-3 Def to target, +1 Injury, +3 Melee against Undead. Only heroes can dual-wield.", 
         "Cost": "15", 
         "Slots": "1"

@@ -67,7 +67,7 @@
             "Agility": "11",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 35,
+            "Cost": 45,
             "Skills": ["Holy Standard"]
         }
     ],
@@ -188,7 +188,7 @@
     "Equipment": {
         "Paladin": {
             "Aliases": ["Leader", "Hero", "Squire", "Novice"],
-            "Melee Weapons": ["Hammer", "Blessed Warhammer", "Whip", "Great Hammer", "Shield"],
+            "Melee Weapons": ["Hammer", "Blessed Hammer", "Whip", "Great Hammer", "Shield"],
             "Ranged Weapons": ["Sling"],
             "Armour": ["Light Armour", "Heavy Armour"]
         }

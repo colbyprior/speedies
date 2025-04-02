@@ -2,7 +2,7 @@
       "Crossbow": { 
         "Name": "Crossbow", 
         "Range": "30\"",
-        "Effect": "Long Reload, Deadly", 
+        "Effect": "Stand and Reload, Deadly", 
         "Cost": "20", 
         "Slots": "1" 
       }, 
@@ -30,7 +30,7 @@
       "Rifle": { 
         "Name": "Rifle", 
         "Range": "25\"",
-        "Effect": "Long Reload, Deadly, Armour Piercing",
+        "Effect": "Stand and Reload, Long Reload, Deadly, Armour Piercing",
         "Cost": "25", 
         "Slots": "1" 
       },  
@@ -46,6 +46,13 @@
         "Range": "15\"",
         "Effect": "", 
         "Cost": "5", 
+        "Slots": "1" 
+      },
+      "Elvish Bow": { 
+        "Name": "Elvish Bow", 
+        "Range": "35\"",
+        "Effect": "", 
+        "Cost": "20", 
         "Slots": "1" 
       }
 }

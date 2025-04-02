@@ -8,5 +8,10 @@
         "Name": "Heavy Armour", 
         "Effect": "+2 Def", 
         "Cost": "30"
+      },
+      "Mithril Armour": { 
+        "Name": "Mithril Armour", 
+        "Effect": "+3 Def", 
+        "Cost": "50"
       }
 }

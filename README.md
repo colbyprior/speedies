@@ -27,5 +27,5 @@ npm run start
 	- [armour](static/jsondata/armour.json)
 - [Skills](static/jsondata/skills.json)
 - [Spells](static/jsondata/spells.json)
-- Warbands are in `static/jsondata/warbands` eg. [paladins](static/jsondata/warbands/paladins.json)
+- Warbands are in `static/jsondata/warbands` eg. [paladins](static/jsondata/warbands/Paladins.json)
 - [warband template](static/jsondata/warband%20template.json)

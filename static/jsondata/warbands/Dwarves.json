@@ -1,0 +1,180 @@
+{
+    "Name": "Dwarves",
+    "Max Units": "12",
+    "Play Style": "Rough and Tough",
+    "Preamble": "These chonkers go bonkers.",
+    "Special Rules": {
+        "Hard to Kill": "An Injury roll of 18 against a Dwarf counts as Stunned instead of Incapacitated. Injury modifiers have no effect against Dwarves.",
+        "Sturdy Legs": "Wearing Armour does not reduce a Dwarf's Move attribute.",
+        "Gem Sense": "Dwarf warbands gain an additional Treasure Roll at the end of each game."
+    },
+    "Heroes": [
+        {
+            "Name": "Noble",
+            "Type": "Leader",
+            "Type Cap": "1",
+            "Move": "5",
+            "Melee": "12",
+            "Ranged": "12",
+            "Defense": "13",
+            "Wounds": "1",
+            "Agility": "14",
+            "Attacks": "1",
+            "Morale": "5",
+            "Cost": 65,
+            "Skills": [
+                "Leader"
+            ]
+        },
+        {
+            "Name": "Engineer",
+            "Type": "Hero",
+            "Type Cap": "1",
+            "Move": "5",
+            "Melee": "13",
+            "Ranged": "13",
+            "Defense": "14",
+            "Wounds": "1",
+            "Agility": "14",
+            "Attacks": "1",
+            "Morale": "7",
+            "Cost": 60,
+            "Skills": [
+                "Weaponsmith"
+            ]
+        },
+        {
+            "Name": "Armourer",
+            "Type": "Hero",
+            "Type Cap": "1",
+            "Move": "5",
+            "Melee": "13",
+            "Ranged": "14",
+            "Defense": "13",
+            "Wounds": "1",
+            "Agility": "14",
+            "Attacks": "1",
+            "Morale": "7",
+            "Cost": 50,
+            "Skills": [
+                "Armoursmith"
+            ]
+        },
+        {
+            "Name": "Veteran",
+            "Type": "Hero",
+            "Type Cap": "-",
+            "Move": "5",
+            "Melee": "12",
+            "Ranged": "14",
+            "Defense": "14",
+            "Wounds": "1",
+            "Agility": "14",
+            "Attacks": "1",
+            "Morale": "7",
+            "Cost": 45,
+            "Skills": [
+            ]
+        }
+    ],
+    "Henchmen": [
+        {
+            "Name": "Berserker",
+            "Type Cap": "2",
+            "Move": "5",
+            "Melee": "13",
+            "Ranged": "14",
+            "Defense": "14",
+            "Wounds": "1",
+            "Agility": "14",
+            "Attacks": "1",
+            "Morale": "7",
+            "Cost": 45,
+            "Skills": [
+                "Berserk",
+                "Fearless"
+            ]
+        },
+        {
+            "Name": "Youngling",
+            "Type Cap": "-",
+            "Move": "5",
+            "Melee": "15",
+            "Ranged": "16",
+            "Defense": "15",
+            "Wounds": "1",
+            "Agility": "14",
+            "Attacks": "1",
+            "Morale": "9",
+            "Cost": 25,
+            "Skills": []
+        },
+        {
+            "Name": "Warrior",
+            "Type Cap": "-",
+            "Move": "5",
+            "Melee": "13",
+            "Ranged": "14",
+            "Defense": "14",
+            "Wounds": "1",
+            "Agility": "14",
+            "Attacks": "1",
+            "Morale": "7",
+            "Cost": 40,
+            "Skills": []
+        },
+        {
+            "Name": "Gunner",
+            "Type Cap": "4",
+            "Move": "5",
+            "Melee": "13",
+            "Ranged": "14",
+            "Defense": "14",
+            "Wounds": "1",
+            "Agility": "14",
+            "Attacks": "1",
+            "Morale": "7",
+            "Cost": 45,
+            "Skills": []
+        }
+    ],
+    "Promotion Options": {
+        "Engineer": {
+            "Stat Ups": "+1 Rng",
+            "Gained Skills": "Weaponsmith"
+        },
+        "Armourer": {
+            "Stat Ups": "+1 Def",
+            "Gained Skills": "Armoursmith"
+        },
+        "Veteran": {
+            "Stat Ups": "+1 Mel",
+            "Gained Skills": ""
+        }
+    },
+    "Available Skills": {
+        "": {
+            "Mel": "X",
+            "Rng": "",
+            "Def": "X",
+            "Agi": "",
+            "Mrl": "X",
+            "Special": "X",
+            "Start Exp": "2"
+        }
+    },
+    "Equipment": {
+        "Warrior": {
+            "Aliases": ["Noble", "Armourer", "Veteran", "Berserker", "Warrior", "Youngling"],
+            "Melee Weapons": ["Dagger", "Sword", "Hammer", "Great Sword", "Great Hammer", "Shield"],
+            "Ranged Weapons": ["Pistol"],
+            "Armour": ["Light Armour", "Heavy Armour", "Mithril Armour"]
+        }
+        "Gunner": {
+            "Aliases": ["Gunner", "Engineer"],
+            "Melee Weapons": ["Dagger", "Sword", "Hammer", "Shield"],
+            "Ranged Weapons": ["Crossbow", "Pistol", "Rifle"],
+            "Armour": ["Light Armour", "Heavy Armour"]
+        }
+    }
+}
