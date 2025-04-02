@@ -77,7 +77,7 @@
                 "Undead",
                 "Fear"
             ]
-        }
+        },
     ],
     "Henchmen": [
         {
@@ -161,7 +161,7 @@
         "Reaper": {
             "Stat Ups": "+2 Mov, +2 Mel, +1 Atk, +5 Agi, +3 Mrl",
             "Gained Skills": "Remove 'No Equipment'"
-        },
+        }
     },
     "Available Skills": {
         "Necromancer": {
@@ -211,8 +211,8 @@
         "Reaper": {
             "Aliases": ["Reaper"],
             "Melee Weapons": ["Great Sword"],
-            "Ranged Weapons": [""],
-            "Armour": [""]
+            "Ranged Weapons": [],
+            "Armour": []
         },
         "Cultist": {
             "Aliases": ["Necromancer", "Cultist"],
