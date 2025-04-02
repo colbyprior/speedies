@@ -153,14 +153,41 @@
         }
     },
     "Available Skills": {
-        "": {
+        "Noble": {
             "Mel": "X",
-            "Rng": "",
+            "Rng": "X",
             "Def": "X",
             "Agi": "",
             "Mrl": "X",
             "Special": "X",
             "Start Exp": "2"
+        },
+        "Engineer": {
+            "Mel": "",
+            "Rng": "X",
+            "Def": "X",
+            "Agi": "",
+            "Mrl": "",
+            "Special": "X",
+            "Start Exp": ""
+        },
+        "Armourer": {
+            "Mel": "X",
+            "Rng": "",
+            "Def": "X",
+            "Agi": "",
+            "Mrl": "",
+            "Special": "X",
+            "Start Exp": ""
+        },
+        "Veteran": {
+            "Mel": "X",
+            "Rng": "",
+            "Def": "X",
+            "Agi": "",
+            "Mrl": "",
+            "Special": "X",
+            "Start Exp": ""
         }
     },
     "Equipment": {
