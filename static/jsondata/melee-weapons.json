@@ -37,7 +37,7 @@
       }, 
       "Great Hammer": { 
         "Name": "Great Hammer", 
-        "Effect": "+4 to Hit, +5 to Injury", 
+        "Effect": "+4 Mel, +5 to Injury", 
         "Cost": "10", 
         "Slots": "2" 
       },
