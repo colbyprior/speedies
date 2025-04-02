@@ -207,13 +207,13 @@
             "Melee Weapons": ["Dagger", "Spear", "Sword", "Hammer", "Great Spear", "Great Sword", "Great Hammer", "Shield"],
             "Ranged Weapons": ["Short Bow", "Bow"],
             "Armour": ["Light Armour", "Heavy Armour"]
-        }
+        },
         "Reaper": {
             "Aliases": ["Reaper"],
             "Melee Weapons": ["Great Sword"],
             "Ranged Weapons": [""],
             "Armour": [""]
-        }
+        },
         "Cultist": {
             "Aliases": ["Necromancer", "Cultist"],
             "Melee Weapons": ["Dagger", "Spear", "Sword", "Hammer"],
