@@ -9,7 +9,7 @@
     "Heroes": [
         {
             "Name": "",
-            "Type": "Leader|Hero",
+            "Type": "Leader",
             "Type Cap": "",
             "Move": "",
             "Melee": "",
@@ -21,7 +21,55 @@
             "Morale": "",
             "Cost": 0,
             "Skills": [
-                ""
+                "Leader"
+            ]
+        },
+        {
+            "Name": "",
+            "Type": "Hero",
+            "Type Cap": "",
+            "Move": "",
+            "Melee": "",
+            "Ranged": "",
+            "Defense": "",
+            "Wounds": "",
+            "Agility": "",
+            "Attacks": "",
+            "Morale": "",
+            "Cost": 0,
+            "Skills": [
+            ]
+        },
+        {
+            "Name": "",
+            "Type": "Hero",
+            "Type Cap": "",
+            "Move": "",
+            "Melee": "",
+            "Ranged": "",
+            "Defense": "",
+            "Wounds": "",
+            "Agility": "",
+            "Attacks": "",
+            "Morale": "",
+            "Cost": 0,
+            "Skills": [
+            ]
+        },
+        {
+            "Name": "",
+            "Type": "Hero",
+            "Type Cap": "",
+            "Move": "",
+            "Melee": "",
+            "Ranged": "",
+            "Defense": "",
+            "Wounds": "",
+            "Agility": "",
+            "Attacks": "",
+            "Morale": "",
+            "Cost": 0,
+            "Skills": [
             ]
         }
     ],
@@ -39,11 +87,69 @@
             "Morale": "",
             "Cost": 0,
             "Skills": []
+        },
+        {
+            "Name": "",
+            "Type Cap": "",
+            "Move": "",
+            "Melee": "",
+            "Ranged": "",
+            "Defense": "",
+            "Wounds": "",
+            "Agility": "",
+            "Attacks": "",
+            "Morale": "",
+            "Cost": 0,
+            "Skills": []
+        },
+        {
+            "Name": "",
+            "Type Cap": "",
+            "Move": "",
+            "Melee": "",
+            "Ranged": "",
+            "Defense": "",
+            "Wounds": "",
+            "Agility": "",
+            "Attacks": "",
+            "Morale": "",
+            "Cost": 0,
+            "Skills": []
+        },
+        {
+            "Name": "",
+            "Type Cap": "",
+            "Move": "",
+            "Melee": "",
+            "Ranged": "",
+            "Defense": "",
+            "Wounds": "",
+            "Agility": "",
+            "Attacks": "",
+            "Morale": "",
+            "Cost": 0,
+            "Skills": []
         }
     ],
+    "Promotion Options": {
+        "": {
+            "Stat Ups": "",
+            "Gained Skills": ""
+        }
+    },
+    "Available Skills": {
+        "": {
+            "Mel": "X",
+            "Rng": "",
+            "Def": "X",
+            "Agi": "",
+            "Mrl": "X",
+            "Special": "X",
+            "Start Exp": "2"
+        }
     },
     "Equipment": {
-        "": {
+        "Heroes": {
             "Aliases": ["Leader", "Hero"],
             "Melee Weapons": ["Sword"],
             "Ranged Weapons": ["Bow"],
