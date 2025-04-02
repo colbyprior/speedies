@@ -23,7 +23,8 @@
             "Morale": "5",
             "Cost": 65,
             "Skills": [
-                "Leader"
+                "Leader",
+                "Prayers"
             ]
         },
         {
