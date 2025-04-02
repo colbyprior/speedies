@@ -109,6 +109,11 @@
     "Type": "Inherent",
     "Description": "This unit causes fear."
   },
+   "Fearless": { 
+    "Name": "Fearless", 
+    "Type": "Morale",
+    "Description": "The unit is immune to Fear checks."
+  },
   "Leader": {
     "Name": "Leader",
     "Type": "Inherent",
@@ -141,12 +146,28 @@
   },
   "Ki Strike": {
     "Name": "Ki Strike",
-    "Type": "Paladins",
+    "Type": "Inherent",
     "Description": "When fighting Unarmed, targets roll their Defense Check with Disadvantage."
+  },
+  "Weaponsmith": {
+    "Name": "Weaponsmith",
+    "Type": "Inherent",
+    "Description": "If a warband starts a game with a unit with this Skill, any Ranged Attack made by a unit in the warband that is Elevated (relative to its target) will have Advantage on the attack, even if the attack is over half of the weapon's range."
+  },
+  "Armoursmith": {
+    "Name": "Armoursmith",
+    "Type": "Inherent",
+    "Description": "If a warband contains a unit with this Skill, it gains the ability to purchase Mithril Armour."
+  },
+  "Berserk": {
+    "Name": "Berserk",
+    "Type": "Inherent",
+    "Description": "At the end of the Engage Phase, if there is an enemy within Line-of-Sight and Engage range, this unit attempts to Engage the closest such unit. For the turn that this unit Engages, it gains an additional Attack. This unit cannot wear Armour or use a Shield."
   },
   "Holy Standard": {
     "Name": "Holy Standard",
     "Type": "Paladins",
     "Description": "Allied units within 6\" of this unit can roll Morale Checks with Advantage. Rout Checks cannot gain Advantage in this way."
   }
+
 }
