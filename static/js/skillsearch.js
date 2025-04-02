@@ -37,6 +37,15 @@ async function skillSplit(item) {
         return;
     }
     var filterItems = filterStr.split(",");
+
+    var filterCheckboxes = document.getElementsByName('filter');
+    for (var f=0; f < filterCheckboxes.length; f++){
+        var filterCheckbox = filterCheckboxes[f];
+        if (filterItems.includes(filterCheckbox.value)) {
+            filterCheckbox.checked = true;
+        }
+    }
+
     item.innerHTML = "";
     for(var i = 0; i < filterItems.length; i++) {
         var filterItem = filterItems[i];
