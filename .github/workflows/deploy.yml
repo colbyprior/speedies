@@ -19,6 +19,9 @@ jobs:
       - name: Fix links
         run: python3 fixlinks.py
 
+      - name: Generate pages
+        run: python3 generate.py
+
       - uses: actions/setup-node@v4
         with:
           node-version: 18
