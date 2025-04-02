@@ -107,7 +107,7 @@
   "Fear": { 
     "Name": "Fear", 
     "Type": "Inherent",
-    "Description": "This unit causes fear."
+    "Description": "This unit causes Fear."
   },
    "Fearless": { 
     "Name": "Fearless", 
@@ -137,7 +137,12 @@
   "Prayers": {
     "Name": "Prayers",
     "Type": "Spellcasting",
-    "Description": "This unit can cast Prayer spells. Immediately pick one spell from this school to be known. They can still use armour and a shield while casting unlike other spells."
+    "Description": "This unit can cast Prayer spells. Immediately pick one spell from this school to learn. This unit can still use armour and a shield while casting, unlike other spell types."
+  },
+  "Necromancy Spells": {
+    "Name": "Necromancy Spells",
+    "Type": "Spellcasting",
+    "Description": "This unit can cast Necromancy spells. Immediately pick one spell from this school to learn. This unit cannot use armour or a shield while casting."
   },
   "Determination": {
     "Name": "Determination",
@@ -163,6 +168,26 @@
     "Name": "Berserk",
     "Type": "Inherent",
     "Description": "At the end of the Engage Phase, if there is an enemy within Line-of-Sight and Engage range, this unit attempts to Engage the closest such unit. For the turn that this unit Engages, it gains an additional Attack. This unit cannot wear Armour or use a Shield."
+  },
+  "Spread Plague": {
+    "Name": "Spread Plague",
+    "Type": "Inherent",
+    "Description": "Bottom text"
+  },
+  "Ethereal": {
+    "Name": "Ethereal",
+    "Type": "Inherent",
+    "Description": "This unit may not have its Defense reduced by equipment."
+  },
+  "Advanced Necromancy": {
+    "Name": "Advanced Necromancy",
+    "Type": "Undead",
+    "Description": "This can only be taken by a Necromancer. Death Knights and Reapers can now be the target of the 'Raise Dead' spell. The Difficulty of the spell is increased by 5 when they are the target."
+  },
+  "Undead": {
+    "Name": "Undead",
+    "Type": "Inherent",
+    "Description": "This unit may not Run, but may Engage as normal (ie. 1.5x of base Move). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to disease (including the Plague)."
   },
   "Holy Standard": {
     "Name": "Holy Standard",

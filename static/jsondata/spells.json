@@ -1,23 +1,47 @@
 {
-  "Blessed Weapon": { 
+  "Raise Dead": {
+    "Name": "Raise Dead", 
+    "School": "Necromancy Spells",
+    "Check": "6",
+    "Description": "One Zombie or Skeleton that was Incapacitated after the end of your last turn immediately returns to the battle. Place the model within 6\" of the Necromancer. The model cannot be placed such that it is Engaged with an enemy."
+  },
+  "Control Dead": {
+    "Name": "Control Dead", 
+    "School": "Necromancy Spells",
+    "Check": "10",
+    "Description": "Choose a point within 6\" of the Necromancer. Any Zombies or Skeletons within 2\" of that point may immediately move again up to their Movement distance. If this moves them into base contact with an enemy model, they count as Engaging. They take Agility Checks as normal."
+  },
+  "Lifestealer": {
+    "Name": "Lifestealer", 
+    "School": "Necromancy Spells",
+    "Check": "18",
+    "Description": "Choose a single unit within 6\". The target suffers a Wound (no Checks required) and the Necromancer gains an extra wound for the duration of the battle. If this takes an enemy to 0 Wounds, the Spell Check value is used to determine Injury (so a roll of 19 would Incapacitate the target). This may take the Necromancer’s Wounds above his original maximum value. This spell does not affect Undead units."
+  },
+  "Hex": {
+    "Name": "Hex", 
+    "School": "Necromancy Spells",
+    "Check": "13",
+    "Description": "Choose a single unit within 12\". The target has Disadvantage on all Checks it makes until the start of your next turn."
+  },
+  "Blessed Weapon": {
     "Name": "Blessed Weapon", 
     "School": "Prayers",
     "Check": "9",
     "Description": "The wielder gains the following: +3 to melee, 4 armour piercing, +4 to injury rolls in melee until the start of his next turn. The Priest must test on each opponents shooting phase in order to continue to use blessed weapon."
   },
-  "Steadfast": { 
+  "Steadfast": {
     "Name": "Steadfast", 
     "School": "Prayers",
     "Check": "12",
     "Description": "Any allied warriors within 8\" of the warrior become immune to Fear. In addition, the whole warband gains +2 on any Morale tests they have to make. The effects of this spell last until the caster is knocked down, stunned or put out of action. If cast again the effects are not cumulative, ie, the maximum bonus to Rout tests remains +2."
   },
-  "Bright Blast": { 
+  "Bright Blast": {
     "Name": "Bright Blast", 
     "School": "Prayers",
     "Check": "15",
     "Description": "Roll an attack with melee skill 12 against each enemy model within 4\", no defence saves are allowed. Undead or mutant models in range suffer the attack with a +2 to wound."
   },
-  "Heal": { 
+  "Heal": {
     "Name": "Heal", 
     "School": "Prayers",
     "Check": "5",
