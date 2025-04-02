@@ -1,0 +1,53 @@
+{
+    "Name": "",
+    "Max Units": "",
+    "Play Style": "",
+    "Preamble": "",
+    "Special Rules": {
+        "": ""
+    },
+    "Heroes": [
+        {
+            "Name": "",
+            "Type": "Leader|Hero",
+            "Type Cap": "",
+            "Move": "",
+            "Melee": "",
+            "Ranged": "",
+            "Defense": "",
+            "Wounds": "",
+            "Agility": "",
+            "Attacks": "",
+            "Morale": "",
+            "Cost": 0,
+            "Skills": [
+                ""
+            ]
+        }
+    ],
+    "Henchmen": [
+        {
+            "Name": "",
+            "Type Cap": "",
+            "Move": "",
+            "Melee": "",
+            "Ranged": "",
+            "Defense": "",
+            "Wounds": "",
+            "Agility": "",
+            "Attacks": "",
+            "Morale": "",
+            "Cost": 0,
+            "Skills": []
+        }
+    ],
+    },
+    "Equipment": {
+        "": {
+            "Aliases": ["Leader", "Hero"],
+            "Melee Weapons": ["Sword"],
+            "Ranged Weapons": ["Bow"],
+            "Armour": ["Light Armour"]
+        }
+    }
+}

@@ -19,3 +19,13 @@ FYI: The search bar will not run locally.
 ```
 npm run start
 ```
+
+# Updating Json Data
+- Equipment
+	- [melee-weapons](static/jsondata/melee-weapons.json)
+	- [ranged-weapons](static/jsondata/ranged-weapons.json)
+	- [armour](static/jsondata/armour.json)
+- [Skills](static/jsondata/skills.json)
+- [Spells](static/jsondata/spells.json)
+- Warbands are in `static/jsondata/warbands` eg. [paladins](static/jsondata/warbands/paladins.json)
+- [warband template](static/jsondata/warband%20template.json)
