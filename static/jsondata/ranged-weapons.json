@@ -48,6 +48,13 @@
         "Cost": "5", 
         "Slots": "1" 
       },
+      "Short Bow": { 
+        "Name": "Short Bow", 
+        "Range": "20\"",
+        "Effect": "", 
+        "Cost": "5", 
+        "Slots": "1" 
+      },
       "Elvish Bow": { 
         "Name": "Elvish Bow", 
         "Range": "35\"",
