@@ -17,7 +17,7 @@ Paladins don't actually have any but this is a test.
 | Justicar | 6 | 1 | 1 | 13 | 12 | 18 | 8 | 7 | [Leader](#leader), [Prayers](#prayers) | 70 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Morale,Paladins) |
 | Paladin | 6 | 1 | 1 | 13 | 14 | 18 | 11 | 10 |  | 35 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
 | Cleric | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 10 | [Healer](#healer) | 30 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Paladins) |
-| Standard Bearer | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 7 | [Holy Standard](#holy-standard) | 35 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
+| Standard Bearer | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 7 | [Holy Standard](#holy-standard) | 45 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
 
 ## Henchmen
 | Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
@@ -42,7 +42,7 @@ Paladin equipment for the unit types: Leader, Hero, Squire, Novice
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
 | Hammer | +1 Injury | 5 | 1 |
-| Blessed Warhammer | -3 Def to target, +1 Injury, +3 Melee against Undead. Only heroes can dual-wield. | 15 | 1 |
+| Blessed Hammer | -3 Def to target, +1 Injury, +3 Melee against Undead. Only heroes can dual-wield. | 15 | 1 |
 | Whip | +1 Atk in the first round of combat when you charge | 10 | 1 |
 | Great Hammer | +4 Mel, +5 to Injury | 10 | 2 |
 | Shield | +4 Def | 5 | 1 |
@@ -69,6 +69,10 @@ This unit can cast Prayer spells. Immediately pick one spell from this school to
 *Inherent*
 
 This unit can make a morale check in the upkeep phase to remove the dazed or stunned condition from one friendly unit within 3".
+### Ki Strike
+*Inherent*
+
+When fighting Unarmed, targets roll their Defense Check with Disadvantage.
 ### No Equipment
 *Inherent*
 
@@ -101,10 +105,6 @@ This unit is a boss dog that rides a mount.
 *Paladins*
 
 This unit may re-roll their first failed morale check of each battle.
-### Ki Strike
-*Paladins*
-
-When fighting Unarmed, targets roll their Defense Check with Disadvantage.
 ### Holy Standard
 *Paladins*
 

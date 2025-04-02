@@ -1,5 +1,6 @@
 from helpers.global_data import (global_henchmen_upgrade_paths, global_skills_data, global_melee_weapons_data,
                                  global_ranged_weapons_data, global_armour_data, global_spells_data)
+import sys
 
 
 def clean_link(name):
@@ -38,7 +39,8 @@ def get_all_skills_and_spells(warband):
     for skill in all_skills:
         skill_data = global_skills_data.get(skill)
         if not skill_data:
-            print(f"Failed to find skill: {skill}")
+            sys.stderr.write(f"Failed to find skill: {skill}")
+            sys.exit(1)
         if skill_data.get("Type") == "Spellcasting":
             spell_schools.append(skill)
     return all_skills, spell_schools
@@ -82,7 +84,8 @@ def heroes_table(warband):
         filter = ""
         skill_data = warband.get("Available Skills").get(hero.get('Name'))
         if not skill_data:
-            print(f"Failed to find skills for: {hero.get('Name')}")
+            sys.stderr.write(f"Failed to find skills for: {hero.get('Name')}")
+            sys.exit(1)
         for short_name in skill_data.keys():
             if skill_data.get(short_name).lower() == "x":
                 if filter:
@@ -132,7 +135,8 @@ def equipment_block(warband):
         for weapon_name in equipment_data.get("Melee Weapons"):
             weapon_data = global_melee_weapons_data.get(weapon_name)
             if not weapon_data:
-                print(f"ERR: {weapon_name}")
+                sys.stderr.write(f"Can't find weapon: {weapon_name}")
+                sys.exit(1)
             out_data += f"| {weapon_data.get('Name')} | {weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
 
         out_data += "\n"
@@ -141,7 +145,8 @@ def equipment_block(warband):
         for weapon_name in equipment_data.get("Ranged Weapons"):
             weapon_data = global_ranged_weapons_data.get(weapon_name)
             if not weapon_data:
-                print(f"ERR: {weapon_name}")
+                sys.stderr.write(f"Can't find weapon: {weapon_name}")
+                sys.exit(1)
             out_data += f"| {weapon_data.get('Name')} | {weapon_data.get('Range')} | {weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
 
         out_data += "\n"
@@ -150,7 +155,8 @@ def equipment_block(warband):
         for armour_name in equipment_data.get("Armour"):
             armour_data = global_armour_data.get(armour_name)
             if not armour_data:
-                print(f"ERR: {armour_name}")
+                sys.stderr.write(f"Can't find armour: {armour_name}")
+                sys.exit(1)
             out_data += f"| {armour_data.get('Name')} | {armour_data.get('Effect')} | {armour_data.get('Cost')} |\n"
     return out_data
 
@@ -161,16 +167,17 @@ def skills_block(all_skills, warband, warband_only=False):
         out_data = f"\n## Warband Special Skills \n"
     else:
         out_data = f"\n## Skills \n"
-    for ability in all_skills:
-        skill_data = global_skills_data.get(ability)
+    for skill_name in all_skills:
+        skill_data = global_skills_data.get(skill_name)
         if not skill_data:
-            print(f"ERR: {ability}")
+            sys.stderr.write(f"Can't find skill: {skill_name}")
+            sys.exit(1)
         if skill_data.get("Type") == warband.get("Name") and not warband_only:
             continue  # We want to skip the warband only ones
         if skill_data.get("Type") != warband.get("Name") and warband_only:
             continue # We want only the warband ones
         if skill_data.get("Type") == "Spellcasting":
-            spell_schools.append(ability)
+            spell_schools.append(skill_name)
         out_data += f"### {skill_data.get('Name')}\n"
         out_data += f"*{skill_data.get('Type')}*\n\n"
         out_data += skill_data.get("Description")
