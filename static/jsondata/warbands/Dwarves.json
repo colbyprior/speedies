@@ -196,7 +196,7 @@
             "Melee Weapons": ["Dagger", "Sword", "Hammer", "Great Sword", "Great Hammer", "Shield"],
             "Ranged Weapons": ["Pistol"],
             "Armour": ["Light Armour", "Heavy Armour", "Mithril Armour"]
-        }
+        },
         "Gunner": {
             "Aliases": ["Gunner", "Engineer"],
             "Melee Weapons": ["Dagger", "Sword", "Hammer", "Shield"],
