@@ -1,4 +1,4 @@
-import json
+import json5
 from pathlib import Path
 import helpers.warband_helper as warband_helper
 import helpers.reference_helper as reference_helper
@@ -7,7 +7,7 @@ import helpers.reference_helper as reference_helper
 def generate_warbands():
     for path in Path('static/jsondata/warbands').rglob('*.json'):
         with (open(str(path)) as f):
-            warband = json.load(f)
+            warband = json5.load(f)
             all_skills, spell_schools = warband_helper.get_all_skills_and_spells(warband)
             out_data = warband_helper.warband_header(warband)
             out_data += warband_helper.warband_special_rules(warband)
