@@ -64,7 +64,7 @@ Allied units with 6" of this unit can use this morale stat for checks instead of
 ### Prayers
 *Spellcasting*
 
-This unit can cast Prayer spells. Immediately pick one spell from this school to be known. They can still use armour and a shield while casting unlike other spells.
+This unit can cast Prayer spells. Immediately pick one spell from this school to learn. This unit can still use armour and a shield while casting, unlike other spell types.
 ### Healer
 *Inherent*
 

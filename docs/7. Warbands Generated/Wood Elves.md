@@ -14,10 +14,10 @@ sidebar_label: Wood Elves
 ## Heroes
 | Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-|  |  |  |  |  |  |  |  |  | [Leader](#leader) | 0 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Morale,Wood Elves) |
-|  |  |  |  |  |  |  |  |  |  | 0 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Morale,Wood Elves) |
-|  |  |  |  |  |  |  |  |  |  | 0 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Morale,Wood Elves) |
-|  |  |  |  |  |  |  |  |  |  | 0 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Morale,Wood Elves) |
+|  |  |  |  |  |  |  |  |  | [Leader](#leader) | 0 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Morale,Wood%20Elves) |
+|  |  |  |  |  |  |  |  |  |  | 0 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Morale,Wood%20Elves) |
+|  |  |  |  |  |  |  |  |  |  | 0 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Morale,Wood%20Elves) |
+|  |  |  |  |  |  |  |  |  |  | 0 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Morale,Wood%20Elves) |
 
 ## Henchmen
 | Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |

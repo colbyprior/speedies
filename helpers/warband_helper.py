@@ -14,7 +14,7 @@ def short_to_long(name, warband_name):
         "Def": "Defense",
         "Agi": "Agility",
         "Mrl": "Morale",
-        "Special": warband_name
+        "Special": warband_name.replace(" ", "%20"),
     }
     return mapping.get(name)
 
