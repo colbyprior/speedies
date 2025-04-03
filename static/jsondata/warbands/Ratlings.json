@@ -4,7 +4,7 @@
     "Play Style": "Fast and agile swarm",
     "Preamble": "RAT",
     "Special Rules": {
-        "": ""
+        "Rat": "Is a rat"
     },
     "Heroes": [
         {

@@ -248,5 +248,15 @@
     "Name": "Stupid",
     "Type": "Inherent",
     "Description": "If this unit is not within 6\" of an allied hero roll morale. If you fail you mat not move or attack on your turn."
+  },
+  "Bloodsucker": {
+    "Name": "Bloodsucker",
+    "Type": "Vampires",
+    "Description": "If this unit takes out another unit in melee they may recover one wound. If this units max wounds are 1, this temporarily takes it to 2 for the remainder of the battle."
+  },
+  "Keen Tail": {
+    "Name": "Keen Tail",
+    "Type": "Ratlings",
+    "Description": "This unit can use their tail to equip a one handed weapon as though it was another arm gaining an extra attack."
   }
 }
