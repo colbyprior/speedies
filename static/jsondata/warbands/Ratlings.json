@@ -8,9 +8,27 @@
     },
     "Heroes": [
         {
-            "Name": "Rat",
+            "Name": "Best Rat",
             "Type": "Leader",
-            "Type Cap": "",
+            "Type Cap": "1",
+            "Move": "8",
+            "Melee": "11",
+            "Ranged": "12",
+            "Defense": "18",
+            "Wounds": "1",
+            "Agility": "5",
+            "Attacks": "1",
+            "Morale": "10",
+            "Cost": 60,
+            "Skills": [
+                "Leader",
+                ""
+            ]
+        },
+        {
+            "Name": "Magic Rat",
+            "Type": "Hero",
+            "Type Cap": "1",
             "Move": "",
             "Melee": "",
             "Ranged": "",
@@ -21,11 +39,10 @@
             "Morale": "",
             "Cost": 0,
             "Skills": [
-                "Leader"
             ]
         },
         {
-            "Name": "",
+            "Name": "Strong Rat",
             "Type": "Hero",
             "Type Cap": "",
             "Move": "",
@@ -41,24 +58,8 @@
             ]
         },
         {
-            "Name": "",
-            "Type": "Leader|Hero",
-            "Type Cap": "",
-            "Move": "",
-            "Melee": "",
-            "Ranged": "",
-            "Defense": "",
-            "Wounds": "",
-            "Agility": "",
-            "Attacks": "",
-            "Morale": "",
-            "Cost": 0,
-            "Skills": [
-            ]
-        },
-        {
-            "Name": "",
-            "Type": "Leader|Hero",
+            "Name": "Sneaky Rat",
+            "Type": "Hero",
             "Type Cap": "",
             "Move": "",
             "Melee": "",
