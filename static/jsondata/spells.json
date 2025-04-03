@@ -17,7 +17,7 @@
     "Check": "18",
     "Description": "Choose a single unit within 6\". The target suffers a Wound (no Checks required) and the Necromancer gains an extra wound for the duration of the battle. If this takes an enemy to 0 Wounds, the Spell Check value is used to determine Injury (so a roll of 19 would Incapacitate the target). This may take the Necromancer’s Wounds above his original maximum value. This spell does not affect Undead units."
   },
-  "Hex": {
+  "Hex_Necromancer": {
     "Name": "Hex", 
     "School": "Necromancy Spells",
     "Check": "13",
@@ -89,7 +89,7 @@
     "Check": "12",
     "Description": "Choose one unit within 6\", including the caster. On a success, that unit can fly in any direction as part of their move speed. At the start of each turn, the caster must make a Morale check to keep the spell going. Only one unit can be affected by this spell at a time."
   },
-  "Hex": {
+  "Hex_Seductress": {
     "Name": "Hex",
     "School": "Vampire Seduction",
     "Check": "13",
