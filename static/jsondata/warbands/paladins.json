@@ -132,10 +132,10 @@
     "Promotion Options": {
         "Paladin": {
             "Stat Ups": "+2 Mel, +1 Def",
-            "Gained Skills": ""
+            "Gained Skills": "-"
         },
         "Cleric": {
-            "Stat Ups": "",
+            "Stat Ups": "-",
             "Gained Skills": "Healer"
         },
         "Standard Bearer": {

@@ -149,7 +149,7 @@
         },
         "Veteran": {
             "Stat Ups": "+1 Mel",
-            "Gained Skills": ""
+            "Gained Skills": "-"
         }
     },
     "Available Skills": {

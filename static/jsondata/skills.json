@@ -144,6 +144,11 @@
     "Type": "Spellcasting",
     "Description": "This unit can cast Necromancy spells. Immediately pick one spell from this school to learn. This unit cannot use armour or a shield while casting."
   },
+   "Nature Spells": {
+    "Name": "Nature Spells",
+    "Type": "Spellcasting",
+    "Description": "This unit can cast Nature spells. Immediately pick one spell from this school to learn. This unit cannot use armour or a shield while casting."
+  },
   "Determination": {
     "Name": "Determination",
     "Type": "Paladins",
@@ -187,7 +192,22 @@
   "Undead": {
     "Name": "Undead",
     "Type": "Inherent",
-    "Description": "This unit may not Run, but may Engage as normal (ie. 1.5x of base Move). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to disease (including the Plague)."
+    "Description": "This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to disease (including the Plague)."
+  },
+   "Follower": {
+    "Name": "Follower",
+    "Type": "Inherent",
+    "Description": "This unit does not count for the purposes of a warband's max units."
+  },
+   "Animal": {
+    "Name": "Animal",
+    "Type": "Inherent",
+    "Description": "This unit cannot Promote, Climb, or pick up Treasure."
+  },
+   "Slow": {
+    "Name": "Slow",
+    "Type": "Inherent",
+    "Description": "This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move)."
   },
   "Holy Standard": {
     "Name": "Holy Standard",
