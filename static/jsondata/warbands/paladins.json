@@ -74,7 +74,7 @@
     "Henchmen": [
         {
             "Name": "Squire",
-            "Type Cap": "",
+            "Type Cap": "-",
             "Move": "6",
             "Melee": "15",
             "Ranged": "14",
@@ -88,7 +88,7 @@
         },
         {
             "Name": "Initiate",
-            "Type Cap": "",
+            "Type Cap": "-",
             "Move": "6",
             "Melee": "16",
             "Ranged": "16",
