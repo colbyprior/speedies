@@ -22,38 +22,39 @@
             "Cost": 60,
             "Skills": [
                 "Leader",
-                ""
+                "+2 Piercing"
             ]
         },
         {
             "Name": "Magic Rat",
             "Type": "Hero",
             "Type Cap": "1",
-            "Move": "",
-            "Melee": "",
-            "Ranged": "",
-            "Defense": "",
-            "Wounds": "",
-            "Agility": "",
-            "Attacks": "",
-            "Morale": "",
-            "Cost": 0,
+            "Move": "8",
+            "Melee": "15",
+            "Ranged": "14",
+            "Defense": "19",
+            "Wounds": "1",
+            "Agility": "8",
+            "Attacks": "1",
+            "Morale": "13",
+            "Cost": 45,
             "Skills": [
+                "Rat Magic"
             ]
         },
         {
             "Name": "Strong Rat",
             "Type": "Hero",
             "Type Cap": "",
-            "Move": "",
-            "Melee": "",
-            "Ranged": "",
-            "Defense": "",
-            "Wounds": "",
-            "Agility": "",
-            "Attacks": "",
-            "Morale": "",
-            "Cost": 0,
+            "Move": "8",
+            "Melee": "11",
+            "Ranged": "14",
+            "Defense": "18",
+            "Wounds": "1",
+            "Agility": "8",
+            "Attacks": "1",
+            "Morale": "13",
+            "Cost": 40,
             "Skills": [
             ]
         },
@@ -61,112 +62,137 @@
             "Name": "Sneaky Rat",
             "Type": "Hero",
             "Type Cap": "",
-            "Move": "",
-            "Melee": "",
-            "Ranged": "",
-            "Defense": "",
-            "Wounds": "",
-            "Agility": "",
-            "Attacks": "",
-            "Morale": "",
-            "Cost": 0,
+            "Move": "8",
+            "Melee": "13",
+            "Ranged": "12",
+            "Defense": "18",
+            "Wounds": "1",
+            "Agility": "5",
+            "Attacks": "1",
+            "Morale": "13",
+            "Cost": 40,
             "Skills": [
             ]
         }
     ],
     "Henchmen": [
         {
-            "Name": "",
+            "Name": "Rat Boi",
             "Type Cap": "",
-            "Move": "",
-            "Melee": "",
-            "Ranged": "",
-            "Defense": "",
-            "Wounds": "",
-            "Agility": "",
-            "Attacks": "",
-            "Morale": "",
-            "Cost": 0,
+            "Move": "8",
+            "Melee": "15",
+            "Ranged": "14",
+            "Defense": "19",
+            "Wounds": "1",
+            "Agility": "8",
+            "Attacks": "1",
+            "Morale": "16",
+            "Cost": 25,
             "Skills": []
         },
         {
-            "Name": "",
-            "Type Cap": "",
-            "Move": "",
-            "Melee": "",
-            "Ranged": "",
-            "Defense": "",
-            "Wounds": "",
-            "Agility": "",
-            "Attacks": "",
-            "Morale": "",
-            "Cost": 0,
+            "Name": "Rat Slinger",
+            "Type Cap": "4",
+            "Move": "8",
+            "Melee": "16",
+            "Ranged": "13",
+            "Defense": "19",
+            "Wounds": "1",
+            "Agility": "5",
+            "Attacks": "1",
+            "Morale": "16",
+            "Cost": 30,
             "Skills": []
         },
         {
-            "Name": "",
-            "Type Cap": "",
-            "Move": "",
-            "Melee": "",
-            "Ranged": "",
-            "Defense": "",
-            "Wounds": "",
-            "Agility": "",
-            "Attacks": "",
-            "Morale": "",
-            "Cost": 0,
-            "Skills": []
+            "Name": "Giant Rat",
+            "Type Cap": "4",
+            "Move": "8",
+            "Melee": "14",
+            "Ranged": "-",
+            "Defense": "-",
+            "Wounds": "1",
+            "Agility": "8",
+            "Attacks": "1",
+            "Morale": "18",
+            "Cost": 10,
+            "Skills": [
+                "Animal"
+            ]
         },
         {
-            "Name": "",
-            "Type Cap": "",
-            "Move": "",
-            "Melee": "",
-            "Ranged": "",
-            "Defense": "",
-            "Wounds": "",
-            "Agility": "",
-            "Attacks": "",
-            "Morale": "",
-            "Cost": 0,
-            "Skills": []
+            "Name": "Rat Monster",
+            "Type Cap": "1",
+            "Move": "8",
+            "Melee": "7",
+            "Ranged": "-",
+            "Defense": "7",
+            "Wounds": "3",
+            "Agility": "8",
+            "Attacks": "3",
+            "Morale": "18",
+            "Cost": 210,
+            "Skills": [
+                "Animal",
+                "Stupid",
+                "Fear",
+                "Big Hitter"
+            ]
         }
     ],
     "Promotion Options": {
-        "Rat": {
-            "Stat Ups": "",
+        "Strong Rat": {
+            "Stat Ups": "+2 Mel, +1 Def",
             "Gained Skills": ""
         },
-        "": {
-            "Stat Ups": "",
+        "Sneaky Rat": {
+            "Stat Ups": "+1 Mel, +1 Ran, +2 Agi",
             "Gained Skills": ""
         }
     },
     "Available Skills": {
-        "Rat": {
+        "Best Rat": {
             "Mel": "X",
+            "Rng": "X",
+            "Def": "",
+            "Agi": "X",
+            "Mrl": "",
+            "Special": "X",
+            "Start Exp": ""
+        },
+        "Magic Rat": {
+            "Mel": "",
             "Rng": "",
-            "Def": "X",
+            "Def": "",
             "Agi": "",
             "Mrl": "X",
+            "Special": "X",
+            "Start Exp": ""
+        },
+        "Strong Rat": {
+            "Mel": "X",
+            "Rng": "",
+            "Def": "",
+            "Agi": "X",
+            "Mrl": "",
             "Special": "X",
             "Start Exp": "2"
         },
-        "": {
+        "Sneaky Rat": {
             "Mel": "X",
-            "Rng": "",
-            "Def": "X",
-            "Agi": "",
-            "Mrl": "X",
+            "Rng": "X",
+            "Def": "",
+            "Agi": "X",
+            "Mrl": "",
             "Special": "X",
-            "Start Exp": "2"
+            "Start Exp": "0"
         }
     },
     "Equipment": {
-        "Heroes": {
+        "Rats": {
             "Aliases": ["Leader", "Hero"],
-            "Melee Weapons": ["Sword"],
-            "Ranged Weapons": ["Bow"],
+            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Shield", "Fighting Claws"],
+            "Ranged Weapons": ["Sling", "Throwing Stars", "Pistol"],
             "Armour": ["Light Armour"]
         }
     }

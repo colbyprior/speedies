@@ -70,5 +70,53 @@
     "School": "Prayers",
     "Check": "5",
     "Description": "Any one model within 2\" of the caster (including themself) may be healed. The warrior is restored to his full quota of Wounds. In addition, if any friendly models within 2\" are stunned or knocked down, they immediately come to their senses, stand up, and continue fighting as normal."
+  },
+  "Frenzy": {
+    "Name": "Frenzy",
+    "School": "Vampire Seduction",
+    "Check": "13",
+    "Description": "Choose one unit within 6\", including the caster. On a success that unit may take their full movement even if they have already moved. If they move into base contact with an enemy unit this counts as having charged. The unit may attack with advantage on the first round."
+  },
+  "Lure": {
+    "Name": "Lure",
+    "School": "Vampire Seduction",
+    "Check": "15",
+    "Description": "Target an enemy you can see within 10\". You may immediatey make that unit move up to their base move speed. This may include drop down, jump and climbing checks. If this unit moves into base contact with any one of your units it counts as being charged by your unit."
+  },
+  "Bat wings": {
+    "Name": "Bat wings",
+    "School": "Vampire Seduction",
+    "Check": "12",
+    "Description": "Choose one unit within 6\", including the caster. On a success, that unit can fly in any direction as part of their move speed. At the start of each turn, the caster must make a Morale check to keep the spell going. Only one unit can be affected by this spell at a time."
+  },
+  "Hex": {
+    "Name": "Hex",
+    "School": "Vampire Seduction",
+    "Check": "13",
+    "Description": "Choose one unit with 10\" this unit has disadvantage on defense rolls until the start of your next turn."
+  },
+  "Ball of rats": {
+    "Name": "Ball of rats",
+    "School": "Rat Magic",
+    "Check": "13",
+    "Description": "The spell has a range of 8\", hitting the first model in its path. The spell automatically hits the target (with the spell roll being the injury roll), roll an attack roll with 10 skill on each model within 2\" of the target."
+  },
+  "Rat fury": {
+    "Name": "Rat fury",
+    "School": "Rat Magic",
+    "Check": "13",
+    "Description": "The rat may immediately charge any enemy model within 12\" (ignoring any terrain and interposing models) and gains 2 extra Attacks and +3 to wound during this turn’s hand-to-hand combat phase only."
+  },
+  "Ratpsychosis": {
+    "Name": "Ratpsychosis",
+    "School": "Rat Magic",
+    "Check": "13",
+    "Description": "All standing models in base contact with the rat must take an immediate Morale test. If they fail, you roll an attack against each target and they then run 6\" directly away from the rat."
+  },
+  "Curse of rat": {
+    "Name": "Curse of rat",
+    "School": "Rat Magic",
+    "Check": "7",
+    "Description": "The spell has a range of 12\" and affects a single model within range. The target must re-roll any successful defense rolls and to melee rolls until the start of your next turn."
   }
 }

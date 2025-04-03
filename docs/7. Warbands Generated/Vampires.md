@@ -30,8 +30,7 @@ If any enemy Hero dies during the post-game Injury rolls, they transform into a 
 ## Promotion Options
 | Unit | Stat Ups | Gained Skills |
 | ---- | ---- | ---- |
-| Vampire Master |  |  |
-|  |  |  |
+| Vampire Spawn | +2 Mov, Mel, Ran, Def, Agi | Undead |
 
 ## Equipment
 
@@ -93,6 +92,10 @@ This unit can move through the air in any direction. They must not end their mov
 
 | Name | Check | Description |
 | ---- | ------ | ---- |
+| Hex | 13 | Choose one unit with 10" this unit has disadvantage on defense rolls until the start of your next turn. |
+| Frenzy | 13 | Choose one unit within 6", including the caster. On a success that unit may take their full movement even if they have already moved. If they move into base contact with an enemy unit this counts as having charged. The unit may attack with advantage on the first round. |
+| Lure | 15 | Target an enemy you can see within 10". You may immediatey make that unit move up to their base move speed. This may include drop down, jump and climbing checks. If this unit moves into base contact with any one of your units it counts as being charged by your unit. |
+| Bat wings | 12 | Choose one unit within 6", including the caster. On a success, that unit can fly in any direction as part of their move speed. At the start of each turn, the caster must make a Morale check to keep the spell going. Only one unit can be affected by this spell at a time. |
 
 
 ## Available Skills & Starting Experience

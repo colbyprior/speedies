@@ -148,13 +148,9 @@
         }
     ],
     "Promotion Options": {
-        "Vampire Master": {
-            "Stat Ups": "",
-            "Gained Skills": ""
-        },
-        "": {
-            "Stat Ups": "",
-            "Gained Skills": ""
+        "Vampire Spawn": {
+            "Stat Ups": "+2 Mov, Mel, Ran, Def, Agi",
+            "Gained Skills": "Undead"
         }
     },
     "Available Skills": {

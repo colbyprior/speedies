@@ -55,6 +55,13 @@
         "Cost": "5", 
         "Slots": "1" 
       },
+      "Throwing Stars": {
+        "Name": "Throwing Stars",
+        "Range": "15\"",
+        "Effect": "Thrown",
+        "Cost": "10",
+        "Slots": "1"
+      },
       "Elvish Bow": { 
         "Name": "Elvish Bow", 
         "Range": "35\"",

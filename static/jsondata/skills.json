@@ -233,5 +233,20 @@
     "Name": "Flying",
     "Type": "Inherent",
     "Description": "This unit can move through the air in any direction. They must not end their movement in the air."
+  },
+  "Rat Magic": {
+    "Name": "Rat Magic",
+    "Type": "Spellcasting",
+    "Description": "This rat can cast rat spells."
+  },
+  "Big Hitter": {
+    "Name": "Big Hitter",
+    "Type": "Inherent",
+    "Description": "This unit gets +4 Inj and +3 Piercing for melee attacks."
+  },
+  "Stupid": {
+    "Name": "Stupid",
+    "Type": "Inherent",
+    "Description": "If this unit is not within 6\" of an allied hero roll morale. If you fail you mat not move or attack on your turn."
   }
 }

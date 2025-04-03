@@ -23,40 +23,46 @@
         "Cost": "5", 
         "Slots": "1" 
       }, 
-      "Great Spear": { 
-        "Name": "Great Spear", 
-        "Effect": "+7 to Hit, +4 to Injury", 
-        "Cost": "10", 
-        "Slots": "2" 
-      }, 
-      "Great Sword": { 
-        "Name": "Great Sword / Axe", 
-        "Effect": "+4 to Hit, +4 to Injury, -3 Def to target", 
-        "Cost": "10", 
-        "Slots": "2" 
-      }, 
-      "Great Hammer": { 
-        "Name": "Great Hammer", 
-        "Effect": "+4 Mel, +5 to Injury", 
-        "Cost": "10", 
-        "Slots": "2" 
-      },
-      "Shield": { 
-        "Name": "Shield", 
-        "Effect": "+4 Def", 
-        "Cost": "5", 
-        "Slots": "1" 
-      },
-      "Blessed Hammer": { 
-        "Name": "Blessed Hammer", 
-        "Effect": "-3 Def to target, +1 Injury, +3 Melee against Undead. Only heroes can dual-wield.", 
-        "Cost": "15", 
-        "Slots": "1"
-      },
-      "Whip": { 
-        "Name": "Whip", 
-        "Effect": "+1 Atk in the first round of combat when you charge", 
-        "Cost": "10", 
-        "Slots": "1"
-      }
+    "Great Spear": {
+      "Name": "Great Spear",
+      "Effect": "+7 to Hit, +4 to Injury",
+      "Cost": "10",
+      "Slots": "2"
+    },
+    "Great Sword": {
+      "Name": "Great Sword / Axe",
+      "Effect": "+4 to Hit, +4 to Injury, -3 Def to target",
+      "Cost": "10",
+      "Slots": "2"
+    },
+    "Great Hammer": {
+      "Name": "Great Hammer",
+      "Effect": "+4 Mel, +5 to Injury",
+      "Cost": "10",
+      "Slots": "2"
+    },
+    "Shield": {
+      "Name": "Shield",
+      "Effect": "+4 Def",
+      "Cost": "5",
+      "Slots": "1"
+    },
+    "Blessed Hammer": {
+      "Name": "Blessed Hammer",
+      "Effect": "-3 Def to target, +1 Injury, +3 Melee against Undead. Only heroes can dual-wield.",
+      "Cost": "15",
+      "Slots": "1"
+    },
+    "Whip": {
+      "Name": "Whip",
+      "Effect": "+1 Atk in the first round of combat when you charge",
+      "Cost": "10",
+      "Slots": "1"
+    },
+    "Fighting Claws": {
+        "Name": "Fighting Claws",
+        "Effect": "-3 Def to target, +1 Attack. You roll agility with advantage.",
+        "Cost": "20",
+        "Slots": "2"
+    }
 }
