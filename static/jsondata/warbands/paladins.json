@@ -2,7 +2,7 @@
     "Name": "Paladins",
     "Max Units": "15",
     "Play Style": "Defensive",
-    "Preamble": "Paladins are warriors who come from a holy order.",
+    "Preamble": "An order of paladins and others that seek to advance a holy agenda.",
     "Special Rules": {
         "Example special rule": "Paladins don't actually have any but this is a test."
     },
@@ -28,7 +28,7 @@
         {
             "Name": "Paladin",
             "Type": "Hero",
-            "Type Cap": "",
+            "Type Cap": "-",
             "Move": "6",
             "Melee": "13",
             "Ranged": "14",
@@ -58,7 +58,7 @@
         {
             "Name": "Standard Bearer",
             "Type": "Hero",
-            "Type Cap": "",
+            "Type Cap": "1",
             "Move": "6",
             "Melee": "15",
             "Ranged": "14",

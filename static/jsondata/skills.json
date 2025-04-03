@@ -209,6 +209,11 @@
     "Type": "Inherent",
     "Description": "This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move)."
   },
+   "Blur": {
+    "Name": "Blur",
+    "Type": "Wood Elves",
+    "Description": "If an enemy attempts to Engage this unit and this unit is in cover, the enemy must make an Out-of-Sight Roll as if the unit was out of Line-of-Sight."
+  },
    "+2 Piercing": {
     "Name": "+2 Piercing",
     "Type": "Inherent",
@@ -216,7 +221,7 @@
   },
   "Holy Standard": {
     "Name": "Holy Standard",
-    "Type": "Paladins",
+    "Type": "Inherent",
     "Description": "Allied units within 6\" of this unit can roll Morale Checks with Advantage. Rout Checks cannot gain Advantage in this way."
   }
 }
