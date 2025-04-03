@@ -107,7 +107,7 @@ Bottom text
 ### Undead
 *Inherent*
 
-This unit may not Run, but may Engage as normal (ie. 1.5x of base Move). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to disease (including the Plague).
+This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to disease (including the Plague).
 ### Fear
 *Inherent*
 

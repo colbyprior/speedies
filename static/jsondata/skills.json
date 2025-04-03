@@ -223,5 +223,15 @@
     "Name": "Holy Standard",
     "Type": "Inherent",
     "Description": "Allied units within 6\" of this unit can roll Morale Checks with Advantage. Rout Checks cannot gain Advantage in this way."
+  },
+  "Vampire Seduction": {
+    "Name": "Vampire Seduction",
+    "Type": "Spellcasting",
+    "Description": "This unit can cast Vampire Seduction spells."
+  },
+  "Flying": {
+    "Name": "Flying",
+    "Type": "Inherent",
+    "Description": "This unit can move through the air in any direction. They must not end their movement in the air."
   }
 }

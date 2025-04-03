@@ -2,133 +2,149 @@
     "Name": "Vampires",
     "Max Units": "15",
     "Play Style": "Powerful leader with minions",
-    "Preamble": "",
+    "Preamble": "This team sucks... your blood!",
     "Special Rules": {
-        "": ""
+        "Enthrall": "If any enemy Hero dies during the post-game Injury rolls, they transform into a Vampire Spawn and join your warband. This effect can only trigger if you have 5 or less Heroes in your warband."
     },
     "Heroes": [
         {
             "Name": "Vampire Master",
             "Type": "Leader",
-            "Type Cap": "",
-            "Move": "",
-            "Melee": "",
-            "Ranged": "",
-            "Defense": "",
-            "Wounds": "",
-            "Agility": "",
-            "Attacks": "",
-            "Morale": "",
-            "Cost": 0,
+            "Type Cap": "1",
+            "Move": "8",
+            "Melee": "11",
+            "Ranged": "12",
+            "Defense": "14",
+            "Wounds": "2",
+            "Agility": "5",
+            "Attacks": "2",
+            "Morale": "7",
+            "Cost": 160,
             "Skills": [
-                "Leader"
+                "Leader",
+                "Undead"
             ]
         },
         {
-            "Name": "",
+            "Name": "Vampire Seductress",
             "Type": "Hero",
-            "Type Cap": "",
-            "Move": "",
-            "Melee": "",
-            "Ranged": "",
-            "Defense": "",
-            "Wounds": "",
-            "Agility": "",
-            "Attacks": "",
-            "Morale": "",
-            "Cost": 0,
+            "Type Cap": "1",
+            "Move": "7",
+            "Melee": "14",
+            "Ranged": "14",
+            "Defense": "17",
+            "Wounds": "1",
+            "Agility": "10",
+            "Attacks": "1",
+            "Morale": "10",
+            "Cost": 50,
             "Skills": [
+                "Undead",
+                "Vampire Seduction"
             ]
         },
         {
-            "Name": "",
+            "Name": "Vampire Spawn",
             "Type": "Hero",
             "Type Cap": "",
-            "Move": "",
-            "Melee": "",
-            "Ranged": "",
-            "Defense": "",
-            "Wounds": "",
-            "Agility": "",
-            "Attacks": "",
-            "Morale": "",
-            "Cost": 0,
+            "Move": "8",
+            "Melee": "13",
+            "Ranged": "14",
+            "Defense": "16",
+            "Wounds": "1",
+            "Agility": "9",
+            "Attacks": "1",
+            "Morale": "10",
+            "Cost": 45,
             "Skills": [
+                "Undead"
             ]
         },
         {
-            "Name": "",
+            "Name": "Nosferatu",
             "Type": "Hero",
-            "Type Cap": "",
-            "Move": "",
-            "Melee": "",
-            "Ranged": "",
-            "Defense": "",
-            "Wounds": "",
-            "Agility": "",
-            "Attacks": "",
-            "Morale": "",
+            "Type Cap": "1",
+            "Move": "7",
+            "Melee": "12",
+            "Ranged": "-",
+            "Defense": "14",
+            "Wounds": "2",
+            "Agility": "7",
+            "Attacks": "2",
+            "Morale": "10",
             "Cost": 0,
             "Skills": [
+                "Undead",
+                "No Equipment"
             ]
         }
     ],
     "Henchmen": [
         {
-            "Name": "",
+            "Name": "Thrall",
             "Type Cap": "",
-            "Move": "",
-            "Melee": "",
-            "Ranged": "",
-            "Defense": "",
-            "Wounds": "",
-            "Agility": "",
-            "Attacks": "",
-            "Morale": "",
-            "Cost": 0,
+            "Move": "6",
+            "Melee": "16",
+            "Ranged": "16",
+            "Defense": "19",
+            "Wounds": "1",
+            "Agility": "12",
+            "Attacks": "1",
+            "Morale": "11",
+            "Cost": 15,
             "Skills": []
         },
         {
-            "Name": "",
+            "Name": "Ghoul",
             "Type Cap": "",
-            "Move": "",
-            "Melee": "",
-            "Ranged": "",
-            "Defense": "",
-            "Wounds": "",
-            "Agility": "",
-            "Attacks": "",
-            "Morale": "",
-            "Cost": 0,
-            "Skills": []
+            "Move": "6",
+            "Melee": "14",
+            "Ranged": "16",
+            "Defense": "17",
+            "Wounds": "1",
+            "Agility": "11",
+            "Attacks": "2",
+            "Morale": "16",
+            "Cost": 40,
+            "Skills": [
+                "Undead",
+                "No Equipment"
+            ]
         },
         {
-            "Name": "",
-            "Type Cap": "",
-            "Move": "",
-            "Melee": "",
-            "Ranged": "",
-            "Defense": "",
-            "Wounds": "",
-            "Agility": "",
-            "Attacks": "",
-            "Morale": "",
-            "Cost": 0,
-            "Skills": []
+            "Name": "Dire Wolf",
+            "Type Cap": "4",
+            "Move": "8",
+            "Melee": "10",
+            "Ranged": "-",
+            "Defense": "19",
+            "Wounds": "1",
+            "Agility": "14",
+            "Attacks": "1",
+            "Morale": "18",
+            "Cost": 30,
+            "Skills": [
+                "Undead",
+                "Bull Rush",
+                "Animal"
+            ]
         },
         {
-            "Name": "",
-            "Type Cap": "",
-            "Move": "",
-            "Melee": "",
-            "Ranged": "",
-            "Defense": "",
-            "Wounds": "",
-            "Agility": "",
-            "Attacks": "",
-            "Morale": "",
-            "Cost": 0,
-            "Skills": []
+            "Name": "Giant Bat",
+            "Type Cap": "4",
+            "Move": "6",
+            "Melee": "15",
+            "Ranged": "-",
+            "Defense": "19",
+            "Wounds": "1",
+            "Agility": "10",
+            "Attacks": "1",
+            "Morale": "14",
+            "Cost": 20,
+            "Skills": [
+                "Flying",
+                "Animal"
+            ]
         }
     ],
     "Promotion Options": {
@@ -144,29 +160,47 @@
     "Available Skills": {
         "Vampire Master": {
             "Mel": "X",
-            "Rng": "",
-            "Def": "X",
+            "Rng": "X",
+            "Def": "",
             "Agi": "",
             "Mrl": "X",
             "Special": "X",
-            "Start Exp": "2"
+            "Start Exp": ""
         },
-        "": {
+        "Vampire Seductress": {
+            "Mel": "",
+            "Rng": "",
+            "Def": "",
+            "Agi": "",
+            "Mrl": "X",
+            "Special": "X",
+            "Start Exp": ""
+        },
+        "Vampire Spawn": {
+            "Mel": "X",
+            "Rng": "X",
+            "Def": "",
+            "Agi": "X",
+            "Mrl": "",
+            "Special": "X",
+            "Start Exp": ""
+        },
+        "Nosferatu": {
             "Mel": "X",
             "Rng": "",
-            "Def": "X",
+            "Def": "",
             "Agi": "",
-            "Mrl": "X",
+            "Mrl": "",
             "Special": "X",
-            "Start Exp": "2"
+            "Start Exp": ""
         }
     },
     "Equipment": {
-        "Vampires": {
+        "Vampires & Thralls": {
             "Aliases": ["Leader", "Hero"],
-            "Melee Weapons": ["Sword"],
-            "Ranged Weapons": ["Bow"],
-            "Armour": ["Light Armour"]
+            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Great Spear", "Shield"],
+            "Ranged Weapons": ["Short Bow", "Bow"],
+            "Armour": ["Light Armour", "Heavy Armour"]
         }
     }
 }

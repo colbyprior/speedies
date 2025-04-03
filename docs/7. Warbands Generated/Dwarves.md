@@ -36,7 +36,7 @@ Dwarf warbands gain an additional Treasure Roll at the end of each game.
 | ---- | ---- | ---- |
 | Engineer | +1 Rng | Weaponsmith |
 | Armourer | +1 Def | Armoursmith |
-| Veteran | +1 Mel |  |
+| Veteran | +1 Mel | - |
 
 ## Equipment
 

@@ -31,13 +31,13 @@ async function skillsLoop(){
 async function skillSplit(item) {
     var skillList = await fetch('/jsondata/skills.json').then((res) => res.json());
     var filterStr = findGetParameter("filter");
-    if (filterStr == null) {
-        item.innerHTML = "Sorry, this page requires parameters and it can't be viewed directly."
+    if (filterStr == "") {
+        item.innerHTML = "Please select skill types to filter."
         item.setAttribute("name", "skillssearchdone");
         return;
     }
     var filterItems = filterStr.split(",");
-
+    console.log("fff" + filterItems);
     var filterCheckboxes = document.getElementsByName('filter');
     for (var f=0; f < filterCheckboxes.length; f++){
         var filterCheckbox = filterCheckboxes[f];
