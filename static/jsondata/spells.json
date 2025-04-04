@@ -17,8 +17,8 @@
     "Check": "18",
     "Description": "Choose a single unit within 6\". The target suffers a Wound (no Checks required) and the Necromancer gains an extra wound for the duration of the battle. If this takes an enemy to 0 Wounds, the Spell Check value is used to determine Injury (so a roll of 19 would Incapacitate the target). This may take the Necromancer’s Wounds above his original maximum value. This spell does not affect Undead units."
   },
-  "Hex_Necromancer": {
-    "Name": "Hex", 
+  "Necromantic Hex": {
+    "Name": "Necromantic Hex",
     "School": "Necromancy Spells",
     "Check": "13",
     "Description": "Choose a single unit within 12\". The target has Disadvantage on all Checks it makes until the start of your next turn."
@@ -89,11 +89,11 @@
     "Check": "12",
     "Description": "Choose one unit within 6\", including the caster. On a success, that unit can fly in any direction as part of their move speed. At the start of each turn, the caster must make a Morale check to keep the spell going. Only one unit can be affected by this spell at a time."
   },
-  "Hex_Seductress": {
-    "Name": "Hex",
+  "Vampire Hex": {
+    "Name": "Vampire Hex",
     "School": "Vampire Seduction",
     "Check": "13",
-    "Description": "Choose one unit with 10\" this unit has disadvantage on defense rolls until the start of your next turn."
+    "Description": "Choose one unit with 12\" this unit has disadvantage on defense rolls until the start of your next turn."
   },
   "Ball of rats": {
     "Name": "Ball of rats",

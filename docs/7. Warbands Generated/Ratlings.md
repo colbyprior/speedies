@@ -9,8 +9,8 @@ RAT
 | Play Style | Fast and agile swarm |
 
 ## Special Rules
-### 
-
+### Rat
+Is a rat
 ## Heroes
 | Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
@@ -25,7 +25,7 @@ RAT
 | Rat Boi | 8 | 1 | 1 | 15 | 14 | 19 | 8 | 16 |  | 25 | None |
 | Rat Slinger | 8 | 1 | 1 | 16 | 13 | 19 | 5 | 16 |  | 30 | 4 |
 | Giant Rat | 8 | 1 | 1 | 14 | - | - | 8 | 18 | [Animal](#animal) | 10 | 4 |
-| Rat Monster | 8 | 3 | 3 | 7 | - | 7 | 8 | 18 | [Animal](#animal), [Stupid](#stupid), [Fear](#fear), [Big Hitter](#big-hitter) | 210 | 1 |
+| Rat Monster | 8 | 3 | 3 | 7 | - | 7 | 8 | 18 | [Animal](#animal), [Stupid](#stupid), [Fear](#fear), [Big Hitter 2](#big-hitter-2), [Large](#large) | 210 | 1 |
 
 ## Promotion Options
 | Unit | Stat Ups | Gained Skills |
@@ -82,10 +82,14 @@ If this unit is not within 6" of an allied hero roll morale. If you fail you mat
 *Inherent*
 
 This unit causes Fear.
-### Big Hitter
+### Big Hitter 2
 *Inherent*
 
 This unit gets +4 Inj and +3 Piercing for melee attacks.
+### Large
+*Inherent*
+
+This units size makes them easier to hit with ranged attacks. They suffer a -3 defense penalty against ranged.
 
 ## Rat Magic 
 
@@ -106,3 +110,7 @@ This unit gets +4 Inj and +3 Piercing for melee attacks.
 | Sneaky Rat | X | X |  | X |  | X | 0 |
 
 ## Warband Special Skills 
+### Keen Tail
+*Ratlings*
+
+This unit can use their tail to equip a one handed weapon as though it was another arm gaining an extra attack.

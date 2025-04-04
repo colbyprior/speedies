@@ -130,8 +130,9 @@ def equipment_block(warband):
         out_data += f"\n### {equipment} Equipment \n"
         aliases = ", ".join(equipment_data.get("Aliases"))
         out_data += f"{equipment} equipment for the unit types: {aliases}\n\n"
-        out_data += f"| Melee Weapon | Effect | Cost | Slots |\n"
-        out_data += f"| ---- | ------ | ---- | ----- |\n"
+        if equipment_data.get("Melee Weapons"):
+            out_data += f"| Melee Weapon | Effect | Cost | Slots |\n"
+            out_data += f"| ---- | ------ | ---- | ----- |\n"
         for weapon_name in equipment_data.get("Melee Weapons"):
             weapon_data = global_melee_weapons_data.get(weapon_name)
             if not weapon_data:
@@ -139,9 +140,10 @@ def equipment_block(warband):
                 sys.exit(1)
             out_data += f"| {weapon_data.get('Name')} | {weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
 
-        out_data += "\n"
-        out_data += f"| Ranged Weapon | Range | Effect | Cost | Slots |\n"
-        out_data += f"| ---- | ----- | ------ | ---- | ----- |\n"
+        if equipment_data.get("Ranged Weapons"):
+            out_data += "\n"
+            out_data += f"| Ranged Weapon | Range | Effect | Cost | Slots |\n"
+            out_data += f"| ---- | ----- | ------ | ---- | ----- |\n"
         for weapon_name in equipment_data.get("Ranged Weapons"):
             weapon_data = global_ranged_weapons_data.get(weapon_name)
             if not weapon_data:
@@ -149,9 +151,10 @@ def equipment_block(warband):
                 sys.exit(1)
             out_data += f"| {weapon_data.get('Name')} | {weapon_data.get('Range')} | {weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
 
-        out_data += "\n"
-        out_data += f"| Armour | Effect | Cost |\n"
-        out_data += f"| ---- | ------ | ---- |\n"
+        if equipment_data.get("Armour"):
+            out_data += "\n"
+            out_data += f"| Armour | Effect | Cost |\n"
+            out_data += f"| ---- | ------ | ---- |\n"
         for armour_name in equipment_data.get("Armour"):
             armour_data = global_armour_data.get(armour_name)
             if not armour_data:

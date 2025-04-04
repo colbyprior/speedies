@@ -239,8 +239,13 @@
     "Type": "Spellcasting",
     "Description": "This rat can cast rat spells."
   },
-  "Big Hitter": {
-    "Name": "Big Hitter",
+  "Big Hitter 1": {
+    "Name": "Big Hitter 1",
+    "Type": "Inherent",
+    "Description": "This unit gets +2 Inj and +2 Piercing for melee attacks."
+  },
+  "Big Hitter 2": {
+    "Name": "Big Hitter 2",
     "Type": "Inherent",
     "Description": "This unit gets +4 Inj and +3 Piercing for melee attacks."
   },
@@ -258,5 +263,15 @@
     "Name": "Keen Tail",
     "Type": "Ratlings",
     "Description": "This unit can use their tail to equip a one handed weapon as though it was another arm gaining an extra attack."
+  },
+  "Upkeep 1": {
+    "Name": "Upkeep 1",
+    "Type": "Inherent",
+    "Description": "You must pay this unit 10g at the end of each battle. If you are unable to pay this gold the unit will not be available for your next battle."
+  },
+  "Large": {
+    "Name": "Large",
+    "Type": "Inherent",
+    "Description": "This units size makes them easier to hit with ranged attacks. They suffer a -3 defense penalty against ranged."
   }
 }

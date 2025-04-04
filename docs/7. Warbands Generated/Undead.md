@@ -66,12 +66,6 @@ Reaper equipment for the unit types: Reaper
 | ---- | ------ | ---- | ----- |
 | Great Sword / Axe | +4 to Hit, +4 to Injury, -3 Def to target | 10 | 2 |
 
-| Ranged Weapon | Range | Effect | Cost | Slots |
-| ---- | ----- | ------ | ---- | ----- |
-
-| Armour | Effect | Cost |
-| ---- | ------ | ---- |
-
 ### Cultist Equipment 
 Cultist equipment for the unit types: Necromancer, Cultist
 
@@ -128,6 +122,7 @@ This unit may not have its Defense reduced by equipment.
 | Raise Dead | 6 | One Zombie or Skeleton that was Incapacitated after the end of your last turn immediately returns to the battle. Place the model within 6" of the Necromancer. The model cannot be placed such that it is Engaged with an enemy. |
 | Control Dead | 10 | Choose a point within 6" of the Necromancer. Any Zombies or Skeletons within 2" of that point may immediately move again up to their Movement distance. If this moves them into base contact with an enemy model, they count as Engaging. They take Agility Checks as normal. |
 | Lifestealer | 18 | Choose a single unit within 6". The target suffers a Wound (no Checks required) and the Necromancer gains an extra wound for the duration of the battle. If this takes an enemy to 0 Wounds, the Spell Check value is used to determine Injury (so a roll of 19 would Incapacitate the target). This may take the Necromancer’s Wounds above his original maximum value. This spell does not affect Undead units. |
+| Necromantic Hex | 13 | Choose a single unit within 12". The target has Disadvantage on all Checks it makes until the start of your next turn. |
 
 
 ## Available Skills & Starting Experience
