@@ -273,5 +273,10 @@
     "Name": "Large",
     "Type": "Inherent",
     "Description": "This units size makes them easier to hit with ranged attacks. They suffer a -3 defense penalty against ranged."
+  },
+  "Free Skill": {
+    "Name": "Free Skill",
+    "Type": "Inherent",
+    "Description": "This unit may pick a skill of their choice that they could normally learn when hired."
   }
 }
