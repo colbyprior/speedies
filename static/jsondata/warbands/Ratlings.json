@@ -91,17 +91,17 @@
             "Skills": []
         },
         {
-            "Name": "Rat Slinger",
-            "Type Cap": "4",
+            "Name": "Rat Underling",
+            "Type Cap": "6",
             "Move": "8",
             "Melee": "16",
-            "Ranged": "13",
-            "Defense": "19",
+            "Ranged": "16",
+            "Defense": "-",
             "Wounds": "1",
-            "Agility": "5",
+            "Agility": "8",
             "Attacks": "1",
             "Morale": "16",
-            "Cost": 30,
+            "Cost": 10,
             "Skills": []
         },
         {
@@ -191,10 +191,16 @@
     },
     "Equipment": {
         "Rats": {
-            "Aliases": ["Leader", "Hero"],
+            "Aliases": ["Leader", "Hero", "Rat Boi"],
             "Melee Weapons": ["Dagger", "Club", "Sword", "Spear", "Shield", "Fighting Claws"],
             "Ranged Weapons": ["Sling", "Throwing Stars", "Pistol"],
             "Armour": ["Light Armour"]
+        },
+        "Rat Underlings": {
+            "Aliases": ["Rat Underlings"],
+            "Melee Weapons": ["Dagger", "Club"],
+            "Ranged Weapons": ["Sling"],
+            "Armour": []
         }
     }
 }

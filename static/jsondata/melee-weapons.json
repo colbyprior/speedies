@@ -13,7 +13,7 @@
   },
   "Spear": {
       "Name": "Spear",
-      "Effect": "+3 Hit",
+      "Effect": "+3 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield.",
       "Cost": "5",
       "Slots": "1"
   },
