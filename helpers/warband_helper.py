@@ -1,5 +1,5 @@
 from helpers.global_data import (global_henchmen_upgrade_paths, global_skills_data, global_melee_weapons_data,
-                                 global_ranged_weapons_data, global_armour_data, global_spells_data)
+                                 global_ranged_weapons_data, global_armour_data, global_spells_data, global_aliases)
 import sys
 
 
@@ -135,10 +135,17 @@ def equipment_block(warband):
             out_data += f"| ---- | ------ | ---- | ----- |\n"
         for weapon_name in equipment_data.get("Melee Weapons"):
             weapon_data = global_melee_weapons_data.get(weapon_name)
+            weapon_alias=""
             if not weapon_data:
-                sys.stderr.write(f"Can't find weapon: {weapon_name}")
-                sys.exit(1)
-            out_data += f"| {weapon_data.get('Name')} | {weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
+                weapon_alias = global_aliases.get("Melee Weapons").get(weapon_name)
+                if not weapon_alias:
+                    sys.stderr.write(f"Can't find weapon: {weapon_name}")
+                    sys.exit(1)
+                weapon_data = global_melee_weapons_data.get(weapon_alias)
+            if weapon_alias:
+                out_data += f"| {weapon_name} ({weapon_alias}) | {weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
+            else:
+                out_data += f"| {weapon_data.get('Name')} | {weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
 
         if equipment_data.get("Ranged Weapons"):
             out_data += "\n"
@@ -146,10 +153,17 @@ def equipment_block(warband):
             out_data += f"| ---- | ----- | ------ | ---- | ----- |\n"
         for weapon_name in equipment_data.get("Ranged Weapons"):
             weapon_data = global_ranged_weapons_data.get(weapon_name)
+            weapon_alias = ""
             if not weapon_data:
-                sys.stderr.write(f"Can't find weapon: {weapon_name}")
-                sys.exit(1)
-            out_data += f"| {weapon_data.get('Name')} | {weapon_data.get('Range')} | {weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
+                weapon_alias = global_aliases.get("Ranged Weapons").get(weapon_name)
+                if not weapon_alias:
+                    sys.stderr.write(f"Can't find weapon: {weapon_name}")
+                    sys.exit(1)
+                weapon_data = global_ranged_weapons_data.get(weapon_alias)
+            if weapon_alias:
+                out_data += f"| {weapon_name} ({weapon_alias} | {weapon_data.get('Range')} | {weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
+            else:
+                out_data += f"| {weapon_data.get('Name')} | {weapon_data.get('Range')} | {weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
 
         if equipment_data.get("Armour"):
             out_data += "\n"
@@ -157,10 +171,17 @@ def equipment_block(warband):
             out_data += f"| ---- | ------ | ---- |\n"
         for armour_name in equipment_data.get("Armour"):
             armour_data = global_armour_data.get(armour_name)
+            armour_alias = ""
             if not armour_data:
-                sys.stderr.write(f"Can't find armour: {armour_name}")
-                sys.exit(1)
-            out_data += f"| {armour_data.get('Name')} | {armour_data.get('Effect')} | {armour_data.get('Cost')} |\n"
+                armour_alias = global_aliases.get("Armour").get(armour_name)
+                if not armour_alias:
+                    sys.stderr.write(f"Can't find armour: {armour_name}")
+                    sys.exit(1)
+                armour_data = global_armour_data.get(armour_alias)
+            if armour_alias:
+                out_data += f"| {armour_name} ({armour_alias}) | {armour_data.get('Effect')} | {armour_data.get('Cost')} |\n"
+            else:
+                out_data += f"| {armour_data.get('Name')} | {armour_data.get('Effect')} | {armour_data.get('Cost')} |\n"
     return out_data
 
 

@@ -60,7 +60,7 @@ Warrior equipment for the unit types: Noble, Armourer, Veteran, Berserker, Warri
 | ---- | ------ | ---- |
 | Light Armour | +1 Def | 15 |
 | Heavy Armour | +2 Def | 30 |
-| Mithril Armour | +3 Def | 50 |
+| If warband has armourer (Mithril Armour) | +3 Def | 50 |
 
 ### Gunner Equipment 
 Gunner equipment for the unit types: Gunner, Engineer

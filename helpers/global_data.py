@@ -23,3 +23,5 @@ with (open(f"{path}/spells.json") as f):
 with (open(f"{path}/ranged-weapon-effects.json") as f):
     global_ranged_weapon_effects = json5.load(f)
 
+with (open(f"{path}/aliases.json") as f):
+    global_aliases = json5.load(f)

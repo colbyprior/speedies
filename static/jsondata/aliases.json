@@ -1,0 +1,17 @@
+{
+  "Melee Weapons": {
+    "Axe": "Sword",
+    "Great Axe": "Great Sword",
+    "Club": "Hammer",
+    "Great Club": "Great Hammer",
+    "Mace": "Hammer",
+    "Great Mace": "Great Hammer",
+    "Pitchfork": "Great Spear"
+  },
+  "Ranged Weapons": {
+
+  },
+  "Armour": {
+    "If warband has armourer": "Mithril Armour"
+  }
+}

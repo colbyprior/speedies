@@ -41,7 +41,7 @@ Rats equipment for the unit types: Leader, Hero
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
-| Hammer | +1 Injury | 5 | 1 |
+| Club (Hammer) | +1 Injury | 5 | 1 |
 | Sword / Axe | -3 Def to target | 5 | 1 |
 | Spear | +3 Hit | 5 | 1 |
 | Shield | +4 Def | 5 | 1 |
