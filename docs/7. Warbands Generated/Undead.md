@@ -38,16 +38,16 @@ If any enemy unit dies during the post-game Injury rolls, they are raised and ad
 ### Skeleton Equipment 
 Skeleton equipment for the unit types: Skeleton, Death Knight
 
-| Melee Weapon | Effect | Cost | Slots |
-| ---- | ------ | ---- | ----- |
-| Dagger | None | 2 | 1 |
-| Spear | +3 Hit | 5 | 1 |
-| Sword / Axe | -3 Def to target | 5 | 1 |
-| Hammer | +1 Injury | 5 | 1 |
-| Great Spear | +7 to Hit, +4 to Injury | 10 | 2 |
-| Great Sword / Axe | +4 to Hit, +4 to Injury, -3 Def to target | 10 | 2 |
-| Great Hammer | +4 Mel, +5 to Injury | 10 | 2 |
-| Shield | +4 Def | 5 | 1 |
+| Melee Weapon      | Effect                                    | Cost | Slots |
+| ----------------- | ----------------------------------------- | ---- | ----- |
+| Dagger            | None                                      | 2    | 1     |
+| Spear             | +3 Hit                                    | 5    | 1     |
+| Sword / Axe       | -3 Def to target                          | 5    | 1     |
+| Hammer            | +1 Injury                                 | 5    | 1     |
+| Great Spear       | +7 to Hit, +4 to Injury                   | 10   | 2     |
+| Great Sword / Axe | +4 to Hit, +4 to Injury, -3 Def to target | 10   | 2     |
+| Great Hammer      | +4 Mel, +5 to Injury                      | 10   | 2     |
+| Shield            | +4 Def                                    | 5    | 1     |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |
 | ---- | ----- | ------ | ---- | ----- |
