@@ -93,12 +93,12 @@ This units size makes them easier to hit with ranged attacks. They suffer a -3 d
 
 ## Rat Magic 
 
-| Name | Check | Description |
-| ---- | ------ | ---- |
-| Ball of rats | 13 | The spell has a range of 8", hitting the first model in its path. The spell automatically hits the target (with the spell roll being the injury roll), roll an attack roll with 10 skill on each model within 2" of the target. |
-| Rat fury | 13 | The rat may immediately charge any enemy model within 12" (ignoring any terrain and interposing models) and gains 2 extra Attacks and +3 to wound during this turn’s hand-to-hand combat phase only. |
-| Ratpsychosis | 13 | All standing models in base contact with the rat must take an immediate Morale test. If they fail, you roll an attack against each target and they then run 6" directly away from the rat. |
-| Curse of rat | 7 | The spell has a range of 12" and affects a single model within range. The target must re-roll any successful defense rolls and to melee rolls until the start of your next turn. |
+| Name         | Check | Description                                                                                                                                                                                                                     |
+| ------------ | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ball of rats | 13    | The spell has a range of 8", hitting the first model in its path. The spell automatically hits the target (with the spell roll being the injury roll), roll an attack roll with 10 skill on each model within 2" of the target. |
+| Rat fury     | 13    | The rat may immediately charge any enemy model within 12" (ignoring any terrain and interposing models) and gains 2 extra Attacks and +3 to wound during this turn’s hand-to-hand combat phase only.                            |
+| Ratpsychosis | 13    | All standing models in base contact with the rat must take an immediate Morale test. If they fail, you roll an attack against each target and they then run 6" directly away from the rat.                                      |
+| Curse of rat | 7     | The spell has a range of 12" and affects a single model within range. The target must re-roll any successful defense rolls and to melee rolls until the start of your next turn.                                                |
 
 
 ## Available Skills & Starting Experience
