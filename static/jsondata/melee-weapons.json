@@ -23,8 +23,8 @@
       "Cost": "5",
       "Slots": "1"
     },
-  "Great Spear": {
-    "Name": "Great Spear",
+  "Pike": {
+    "Name": "Pike",
     "Effect": "+7 to Hit, +4 to Injury",
     "Cost": "10",
     "Slots": "2"

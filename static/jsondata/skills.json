@@ -288,5 +288,10 @@
     "Name": "Can't promote",
     "Type": "Inherent",
     "Description": "This unit cannot promote into a hero."
+  },
+  "Rabble Rouser": {
+    "Name": "Rabble Rouser",
+    "Type": "Inquisitors",
+    "Description": ""
   }
 }

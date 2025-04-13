@@ -143,7 +143,7 @@ def equipment_block(warband):
                     sys.exit(1)
                 weapon_data = global_melee_weapons_data.get(weapon_alias)
             if weapon_alias:
-                out_data += f"| {weapon_name} ({weapon_alias}) | {weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
+                out_data += f"| {weapon_alias} | {weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
             else:
                 out_data += f"| {weapon_data.get('Name')} | {weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
 
@@ -161,7 +161,7 @@ def equipment_block(warband):
                     sys.exit(1)
                 weapon_data = global_ranged_weapons_data.get(weapon_alias)
             if weapon_alias:
-                out_data += f"| {weapon_name} ({weapon_alias} | {weapon_data.get('Range')} | {weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
+                out_data += f"| {weapon_alias} | {weapon_data.get('Range')} | {weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
             else:
                 out_data += f"| {weapon_data.get('Name')} | {weapon_data.get('Range')} | {weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
 
@@ -179,7 +179,7 @@ def equipment_block(warband):
                     sys.exit(1)
                 armour_data = global_armour_data.get(armour_alias)
             if armour_alias:
-                out_data += f"| {armour_name} ({armour_alias}) | {armour_data.get('Effect')} | {armour_data.get('Cost')} |\n"
+                out_data += f"| {armour_alias} | {armour_data.get('Effect')} | {armour_data.get('Cost')} |\n"
             else:
                 out_data += f"| {armour_data.get('Name')} | {armour_data.get('Effect')} | {armour_data.get('Cost')} |\n"
     return out_data

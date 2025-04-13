@@ -12,20 +12,20 @@ Let me off this wild ride Mr. Bones
 ### Undead Horde
 If any enemy unit dies during the post-game Injury rolls, they are raised and added to your warband as a Zombie. If this would take you past the maximum number of units for your warband (after completing your own post-game Injury rolls), the Zombie is not added to your warband.
 ## Heroes
-| Units          | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills                                                     | Cost | Cap | Skill Ups                                                                                |
-| -------------- | --- | --- | --- | --- | --- | --- | --- | --- | ---------------------------------------------------------- | ---- | --- | ---------------------------------------------------------------------------------------- |
-| Necromancer    | 6   | 1   | 1   | 15  | 14  | 19  | 11  | 7   | [Leader](#leader), [Necromancy Spells](#necromancy-spells) | 40   | 1   | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Undead) |
-| Plague Cultist | 6   | 1   | 1   | 15  | 14  | 19  | 11  | 10  | [Spread Plague](#spread-plague)                            | 25   | -   | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Undead)        |
-| Death Knight   | 7   | 1   | 2   | 13  | 16  | 17  | 14  | 13  | [Undead](#undead), [Fear](#fear)                           | 35   | -   | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Undead)       |
-| Reaper         | 9   | 2   | 1   | 13  | -   | -   | 11  | 13  | [Undead](#undead), [Fear](#fear)                           | 45   | -   | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Undead)       |
+| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Necromancer | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 7 | [Leader](#leader), [Necromancy Spells](#necromancy-spells) | 40 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Undead) |
+| Plague Cultist | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 10 | [Spread Plague](#spread-plague) | 25 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Undead) |
+| Death Knight | 7 | 1 | 2 | 13 | 16 | 17 | 14 | 13 | [Undead](#undead), [Fear](#fear) | 35 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Undead) |
+| Reaper | 9 | 2 | 1 | 13 | - | - | 11 | 13 | [Undead](#undead), [Fear](#fear) | 45 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Undead) |
 
 ## Henchmen
-| Units      | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills                                                                                 | Cost | Cap |
-| ---------- | --- | --- | --- | --- | --- | --- | --- | --- | -------------------------------------------------------------------------------------- | ---- | --- |
-| Zombie     | 6   | 1   | 1   | 14  | 16  | -   | 17  | 16  | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment)                        | 15   | -   |
-| Skeleton   | 7   | 1   | 1   | 16  | 16  | -   | 14  | 16  | [Undead](#undead), [Fear](#fear)                                                       | 15   | -   |
-| Ghost      | 6   | 1   | 1   | 14  | -   | 13  | 11  | 13  | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment), [Ethereal](#ethereal) | 40   | 3   |
-| Bone Giant | 7   | 3   | 3   | 9   | -   | 7   | 14  | 13  | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment)                        | 200  | 1   |
+| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Zombie | 6 | 1 | 1 | 14 | 16 | - | 17 | 16 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment) | 15 | - |
+| Skeleton | 7 | 1 | 1 | 16 | 16 | - | 14 | 16 | [Undead](#undead), [Fear](#fear) | 15 | - |
+| Ghost | 6 | 1 | 1 | 14 | - | 13 | 11 | 13 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment), [Ethereal](#ethereal) | 40 | 3 |
+| Bone Giant | 7 | 3 | 3 | 9 | - | 7 | 14 | 13 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment) | 200 | 1 |
 
 ## Promotion Options
 | Unit | Stat Ups | Gained Skills |
@@ -38,16 +38,16 @@ If any enemy unit dies during the post-game Injury rolls, they are raised and ad
 ### Skeleton Equipment 
 Skeleton equipment for the unit types: Skeleton, Death Knight
 
-| Melee Weapon      | Effect                                    | Cost | Slots |
-| ----------------- | ----------------------------------------- | ---- | ----- |
-| Dagger            | None                                      | 2    | 1     |
-| Spear             | +3 Hit                                    | 5    | 1     |
-| Sword / Axe       | -3 Def to target                          | 5    | 1     |
-| Hammer            | +1 Injury                                 | 5    | 1     |
-| Great Spear       | +7 to Hit, +4 to Injury                   | 10   | 2     |
-| Great Sword / Axe | +4 to Hit, +4 to Injury, -3 Def to target | 10   | 2     |
-| Great Hammer      | +4 Mel, +5 to Injury                      | 10   | 2     |
-| Shield            | +4 Def                                    | 5    | 1     |
+| Melee Weapon | Effect | Cost | Slots |
+| ---- | ------ | ---- | ----- |
+| Dagger | None | 2 | 1 |
+| Spear | +3 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Sword / Axe | -3 Def to target | 5 | 1 |
+| Hammer | +1 Injury | 5 | 1 |
+| Pike | +7 to Hit, +4 to Injury | 10 | 2 |
+| Great Sword / Axe | +4 to Hit, +4 to Injury, -3 Def to target | 10 | 2 |
+| Great Hammer | +4 Mel, +5 to Injury | 10 | 2 |
+| Shield | +4 Def | 5 | 1 |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |
 | ---- | ----- | ------ | ---- | ----- |
@@ -72,7 +72,7 @@ Cultist equipment for the unit types: Necromancer, Cultist
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
-| Spear | +3 Hit | 5 | 1 |
+| Spear | +3 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
 | Sword / Axe | -3 Def to target | 5 | 1 |
 | Hammer | +1 Injury | 5 | 1 |
 

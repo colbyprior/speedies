@@ -49,10 +49,10 @@ Heroes equipment for the unit types: Leader, Hero, Warrior, Swordsman
 | Dagger | None | 2 | 1 |
 | Hammer | +1 Injury | 5 | 1 |
 | Sword / Axe | -3 Def to target | 5 | 1 |
-| Spear | +3 Hit | 5 | 1 |
+| Spear | +3 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
 | Great Hammer | +4 Mel, +5 to Injury | 10 | 2 |
 | Great Sword / Axe | +4 to Hit, +4 to Injury, -3 Def to target | 10 | 2 |
-| Great Spear | +7 to Hit, +4 to Injury | 10 | 2 |
+| Pike | +7 to Hit, +4 to Injury | 10 | 2 |
 | Shield | +4 Def | 5 | 1 |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |
@@ -77,10 +77,10 @@ Warriors & Swordsman equipment for the unit types: Warrior, Swordsman
 | Dagger | None | 2 | 1 |
 | Hammer | +1 Injury | 5 | 1 |
 | Sword / Axe | -3 Def to target | 5 | 1 |
-| Spear | +3 Hit | 5 | 1 |
+| Spear | +3 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
 | Great Hammer | +4 Mel, +5 to Injury | 10 | 2 |
 | Great Sword / Axe | +4 to Hit, +4 to Injury, -3 Def to target | 10 | 2 |
-| Great Spear | +7 to Hit, +4 to Injury | 10 | 2 |
+| Pike | +7 to Hit, +4 to Injury | 10 | 2 |
 | Shield | +4 Def | 5 | 1 |
 
 | Armour | Effect | Cost |
@@ -118,7 +118,7 @@ Peasants equipment for the unit types: Peasant
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
 | Hammer | +1 Injury | 5 | 1 |
-| Spear | +3 Hit | 5 | 1 |
+| Spear | +3 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
 | Shield | +4 Def | 5 | 1 |
 
 ## Skills 

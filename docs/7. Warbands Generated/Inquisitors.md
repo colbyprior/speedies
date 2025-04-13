@@ -4,7 +4,7 @@ sidebar_label: Inquisitors
 # Inquisitors
 Magic never expects us.
 
-| Max Units | 15 |
+| Max Units | 12 |
 | ---- | ---- |
 | Play Style | Powerful heroes with minions |
 
@@ -16,38 +16,47 @@ When paying for extra heroes beyond the starting cap the cost is reduced by 25g.
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Inquisitor Captain | 6 | 1 | 1 | 13 | 12 | 18 | 8 | 7 | [Leader](#leader), [Hates Magic](#hates-magic) | 60 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Agility,Morale,Inquisitors) |
 | Priest | 6 | 1 | 1 | 15 | 13 | 19 | 11 | 7 | [Prayers](#prayers) | 40 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Inquisitors) |
-| Hunter | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 10 | [Hates Magic](#hates-magic) | 25 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Inquisitors) |
-| Veteran Hunter | 6 | 1 | 1 | 14 | 14 | 18 | 11 | 9 | [Free Skill](#free-skill), [Hates Magic](#hates-magic) | 50 | 2 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Inquisitors) |
+| Inquisitor | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 10 | [Hates Magic](#hates-magic) | 25 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Inquisitors) |
+| Inquisitor Rabble Rouser | 6 | 1 | 1 | 15 | 15 | 18 | 11 | 9 | [Rabble Rouser](#rabble-rouser), [Hates Magic](#hates-magic) | 50 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Inquisitors) |
 
 ## Henchmen
-| Units   | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills                                                                              | Cost | Cap  |
-| ------- | --- | --- | --- | --- | --- | --- | --- | --- | ----------------------------------------------------------------------------------- | ---- | ---- |
-| Fanatic | 6   | 1   | 1   | 12  | 14  | 15  | 11  | 3   | [Fearless](#fearless), [+2 Piercing](#+2-piercing), [Can't promote](#can't-promote) | 40   | 5    |
-| Zealot  | 6   | 1   | 1   | 16  | 16  | -   | 11  | 10  |                                                                                     | 20   | None |
-| Rabble  | 6   | 1   | 1   | 17  | 17  | -   | 12  | 14  |                                                                                     | 10   | 4    |
-| Hounds  | 8   | 1   | 1   | 8   | -   | 18  | 10  | 15  | [+2 Piercing](#+2-piercing)                                                         | 15   | 5    |
+| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Fanatic | 6 | 1 | 1 | 12 | 14 | 15 | 11 | 10 | [Fearless](#fearless), [+2 Piercing](#+2-piercing), [Can't promote](#can't-promote) | 40 | 5 |
+| Zealot | 6 | 1 | 1 | 16 | 16 | - | 11 | 10 |  | 20 | None |
+| Rabble | 6 | 1 | 1 | 17 | 17 | - | 12 | 14 |  | - | See Rabble Rouser skill |
+| Hounds | 8 | 1 | 1 | 8 | - | 18 | 10 | 15 | [+2 Piercing](#+2-piercing) | 15 | 5 |
 
 ## Promotion Options
 | Unit | Stat Ups | Gained Skills |
 | ---- | ---- | ---- |
-| Hunter | +2 Mel, +2 Ran, +2 Def | Free Skill, Hates Magic |
+| Inquisitor | +2 Mel, +2 Ran, +2 Def | Free Skill, Hates Magic |
 
 ## Equipment
 
 ### Hunters Equipment 
-Hunters equipment for the unit types: Inquisitor Captain, Hunter, Veteran Hunter
+Hunters equipment for the unit types: Inquisitor Captain, Inquisitor, Inquisitor Rabble Rouser
 
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
+| Dagger | None | 2 | 1 |
+| Hammer | +1 Injury | 5 | 1 |
 | Sword / Axe | -3 Def to target | 5 | 1 |
+| Spear | +3 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Great Hammer | +4 Mel, +5 to Injury | 10 | 2 |
+| Great Sword / Axe | +4 to Hit, +4 to Injury, -3 Def to target | 10 | 2 |
+| Pike | +7 to Hit, +4 to Injury | 10 | 2 |
+| Shield | +4 Def | 5 | 1 |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |
 | ---- | ----- | ------ | ---- | ----- |
-| Bow | 25" |  | 10 | 1 |
+| Crossbow | 30" | Stand and Reload, Deadly | 20 | 1 |
+| Pistol | 10" | Long Reload, Deadly, Armour Piercing, Close Quarters | 15 | 1 |
 
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |
 | Light Armour | +1 Def | 15 |
+| Heavy Armour | +2 Def | 30 |
 
 ### Priest Equipment 
 Priest equipment for the unit types: Priest
@@ -71,17 +80,25 @@ Fanatics equipment for the unit types: Fanatic
 | ---- | ------ | ---- | ----- |
 | Great Sword / Axe | +4 to Hit, +4 to Injury, -3 Def to target | 10 | 2 |
 | Great Hammer | +4 Mel, +5 to Injury | 10 | 2 |
-| Great Spear | +7 to Hit, +4 to Injury | 10 | 2 |
+| Pike | +7 to Hit, +4 to Injury | 10 | 2 |
 
 ### Zealots Equipment 
 Zealots equipment for the unit types: Leader, Hero
 
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
+| Dagger | None | 2 | 1 |
+| Hammer | +1 Injury | 5 | 1 |
 | Sword / Axe | -3 Def to target | 5 | 1 |
+| Spear | +3 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Great Hammer | +4 Mel, +5 to Injury | 10 | 2 |
+| Great Sword / Axe | +4 to Hit, +4 to Injury, -3 Def to target | 10 | 2 |
+| Pike | +7 to Hit, +4 to Injury | 10 | 2 |
+| Shield | +4 Def | 5 | 1 |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |
 | ---- | ----- | ------ | ---- | ----- |
+| Short Bow | 20" |  | 5 | 1 |
 | Bow | 25" |  | 10 | 1 |
 
 | Armour | Effect | Cost |
@@ -93,8 +110,8 @@ Rabble equipment for the unit types: Leader, Hero
 
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
-| Spear | +3 Hit | 5 | 1 |
-| Pitchfork (Great Spear) | +7 to Hit, +4 to Injury | 10 | 2 |
+| Spear | +3 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Pike | +7 to Hit, +4 to Injury | 10 | 2 |
 | Shield | +4 Def | 5 | 1 |
 
 ## Skills 
@@ -110,10 +127,6 @@ In the first round of melee combat with any spellcaster roll attacks with advant
 *Spellcasting*
 
 This unit can cast Prayer spells. Immediately pick one spell from this school to learn. This unit can still use armour and a shield while casting, unlike other spell types.
-### Free Skill
-*Inherent*
-
-This unit may pick a skill of their choice that they could normally learn when hired.
 ### Fearless
 *Morale*
 
@@ -142,7 +155,11 @@ This unit cannot promote into a hero.
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Inquisitor Captain | X | X | X | X | X | X |  |
 | Priest |  |  | X |  | X | X |  |
-| Hunter | X | X |  |  |  | X |  |
-| Veteran Hunter | X | X |  |  | X | X |  |
+| Inquisitor | X | X |  |  |  | X |  |
+| Inquisitor Rabble Rouser | X | X |  |  | X | X |  |
 
 ## Warband Special Skills 
+### Rabble Rouser
+*Inquisitors*
+
+

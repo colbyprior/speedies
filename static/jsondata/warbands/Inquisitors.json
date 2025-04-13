@@ -1,6 +1,6 @@
 {
     "Name": "Inquisitors",
-    "Max Units": "15",
+    "Max Units": "12",
     "Play Style": "Powerful heroes with minions",
     "Preamble": "Magic never expects us.",
     "Special Rules": {
@@ -43,7 +43,7 @@
             ]
         },
         {
-            "Name": "Hunter",
+            "Name": "Inquisitor",
             "Type": "Hero",
             "Type Cap": "",
             "Move": "6",
@@ -60,12 +60,12 @@
             ]
         },
         {
-            "Name": "Veteran Hunter",
+            "Name": "Inquisitor Rabble Rouser",
             "Type": "Hero",
-            "Type Cap": "2",
+            "Type Cap": "1",
             "Move": "6",
-            "Melee": "14",
-            "Ranged": "14",
+            "Melee": "15",
+            "Ranged": "15",
             "Defense": "18",
             "Wounds": "1",
             "Agility": "11",
@@ -73,7 +73,7 @@
             "Morale": "9",
             "Cost": 50,
             "Skills": [
-                "Free Skill",
+                "Rabble Rouser",
                 "Hates Magic"
             ]
         }
@@ -113,7 +113,7 @@
         },
         {
             "Name": "Rabble",
-            "Type Cap": "4",
+            "Type Cap": "See Rabble Rouser skill",
             "Move": "6",
             "Melee": "17",
             "Ranged": "17",
@@ -122,7 +122,7 @@
             "Agility": "12",
             "Attacks": "1",
             "Morale": "14",
-            "Cost": 10,
+            "Cost": "-",
             "Skills": []
         },
         {
@@ -143,7 +143,7 @@
         }
     ],
     "Promotion Options": {
-        "Hunter": {
+        "Inquisitor": {
             "Stat Ups": "+2 Mel, +2 Ran, +2 Def",
             "Gained Skills": "Free Skill, Hates Magic"
         }
@@ -167,7 +167,7 @@
             "Special": "X",
             "Start Exp": ""
         },
-        "Hunter": {
+        "Inquisitor": {
             "Mel": "X",
             "Rng": "X",
             "Def": "",
@@ -176,7 +176,7 @@
             "Special": "X",
             "Start Exp": ""
         },
-        "Veteran Hunter": {
+        "Inquisitor Rabble Rouser": {
             "Mel": "X",
             "Rng": "X",
             "Def": "",
@@ -188,10 +188,10 @@
     },
     "Equipment": {
         "Hunters": {
-            "Aliases": ["Inquisitor Captain", "Hunter", "Veteran Hunter"],
-            "Melee Weapons": ["Sword"],
-            "Ranged Weapons": ["Bow"],
-            "Armour": ["Light Armour"]
+            "Aliases": ["Inquisitor Captain", "Inquisitor", "Inquisitor Rabble Rouser"],
+            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
+            "Ranged Weapons": ["Crossbow", "Pistol"],
+            "Armour": ["Light Armour", "Heavy Armour"]
         },
         "Priest": {
             "Aliases": ["Priest"],
@@ -201,19 +201,19 @@
         },
         "Fanatics": {
             "Aliases": ["Fanatic"],
-            "Melee Weapons": ["Great Sword", "Great Hammer", "Great Spear"],
+            "Melee Weapons": ["Great Sword", "Great Hammer", "Pike"],
             "Ranged Weapons": [],
             "Armour": []
         },
         "Zealots": {
             "Aliases": ["Leader", "Hero"],
-            "Melee Weapons": ["Sword"],
-            "Ranged Weapons": ["Bow"],
+            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
+            "Ranged Weapons": ["Short Bow", "Bow"],
             "Armour": ["Light Armour"]
         },
         "Rabble": {
             "Aliases": ["Leader", "Hero"],
-            "Melee Weapons": ["Spear", "Pitchfork", "Shield"],
+            "Melee Weapons": ["Spear", "Pitchfork (Pike)", "Shield"],
             "Ranged Weapons": [],
             "Armour": []
         }

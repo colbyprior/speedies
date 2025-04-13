@@ -12,20 +12,20 @@ RAT
 ### Rat
 Is a rat
 ## Heroes
-| Units      | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills                                         | Cost | Cap  | Skill Ups                                                                                   |
-| ---------- | --- | --- | --- | --- | --- | --- | --- | --- | ---------------------------------------------- | ---- | ---- | ------------------------------------------------------------------------------------------- |
-| Best Rat   | 8   | 1   | 1   | 11  | 12  | 18  | 5   | 10  | [Leader](#leader), [+2 Piercing](#+2-piercing) | 60   | 1    | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
-| Magic Rat  | 8   | 1   | 1   | 15  | 14  | 19  | 8   | 13  | [Rat Magic](#rat-magic)                        | 45   | 1    | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Ratlings)               |
-| Strong Rat | 8   | 1   | 1   | 11  | 14  | 18  | 8   | 13  |                                                | 40   | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Ratlings)        |
-| Sneaky Rat | 8   | 1   | 1   | 13  | 12  | 18  | 5   | 13  |                                                | 40   | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
+| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Best Rat | 8 | 1 | 1 | 11 | 12 | 18 | 5 | 10 | [Leader](#leader), [+2 Piercing](#+2-piercing) | 60 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
+| Magic Rat | 8 | 1 | 1 | 15 | 14 | 19 | 8 | 13 | [Rat Magic](#rat-magic) | 45 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Ratlings) |
+| Strong Rat | 8 | 1 | 1 | 11 | 14 | 18 | 8 | 13 |  | 40 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Ratlings) |
+| Sneaky Rat | 8 | 1 | 1 | 13 | 12 | 18 | 5 | 13 |  | 40 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
 
 ## Henchmen
-| Units       | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills                                                                                              | Cost | Cap  |
-| ----------- | --- | --- | --- | --- | --- | --- | --- | --- | --------------------------------------------------------------------------------------------------- | ---- | ---- |
-| Rat Boi     | 8   | 1   | 1   | 15  | 14  | 19  | 8   | 16  |                                                                                                     | 25   | None |
-| Rat Slinger | 8   | 1   | 1   | 16  | 13  | 19  | 5   | 16  |                                                                                                     | 30   | 4    |
-| Giant Rat   | 8   | 1   | 1   | 14  | -   | -   | 8   | 18  | [Animal](#animal)                                                                                   | 10   | 4    |
-| Rat Monster | 8   | 3   | 3   | 7   | -   | 7   | 8   | 18  | [Animal](#animal), [Stupid](#stupid), [Fear](#fear), [Big Hitter 2](#big-hitter-2), [Large](#large) | 210  | 1    |
+| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Rat Boi | 8 | 1 | 1 | 15 | 14 | 19 | 8 | 16 |  | 25 | None |
+| Rat Underling | 8 | 1 | 1 | 16 | 16 | - | 8 | 16 |  | 10 | 6 |
+| Giant Rat | 8 | 1 | 1 | 14 | - | - | 8 | 18 | [Animal](#animal) | 10 | 4 |
+| Rat Monster | 8 | 3 | 3 | 7 | - | 7 | 8 | 18 | [Animal](#animal), [Stupid](#stupid), [Fear](#fear), [Big Hitter 2](#big-hitter-2), [Large](#large) | 210 | 1 |
 
 ## Promotion Options
 | Unit | Stat Ups | Gained Skills |
@@ -36,14 +36,14 @@ Is a rat
 ## Equipment
 
 ### Rats Equipment 
-Rats equipment for the unit types: Leader, Hero
+Rats equipment for the unit types: Leader, Hero, Rat Boi
 
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
-| Club (Hammer) | +1 Injury | 5 | 1 |
+| Hammer | +1 Injury | 5 | 1 |
 | Sword / Axe | -3 Def to target | 5 | 1 |
-| Spear | +3 Hit | 5 | 1 |
+| Spear | +3 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
 | Shield | +4 Def | 5 | 1 |
 | Fighting Claws | -3 Def to target, +1 Attack. You roll agility with advantage. | 20 | 2 |
 
@@ -56,6 +56,18 @@ Rats equipment for the unit types: Leader, Hero
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |
 | Light Armour | +1 Def | 15 |
+
+### Rat Underlings Equipment 
+Rat Underlings equipment for the unit types: Rat Underlings
+
+| Melee Weapon | Effect | Cost | Slots |
+| ---- | ------ | ---- | ----- |
+| Dagger | None | 2 | 1 |
+| Hammer | +1 Injury | 5 | 1 |
+
+| Ranged Weapon | Range | Effect | Cost | Slots |
+| ---- | ----- | ------ | ---- | ----- |
+| Sling | 15" |  | 5 | 1 |
 
 ## Skills 
 ### Leader
@@ -93,12 +105,12 @@ This units size makes them easier to hit with ranged attacks. They suffer a -3 d
 
 ## Rat Magic 
 
-| Name         | Check | Description                                                                                                                                                                                                                     |
-| ------------ | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ball of rats | 13    | The spell has a range of 8", hitting the first model in its path. The spell automatically hits the target (with the spell roll being the injury roll), roll an attack roll with 10 skill on each model within 2" of the target. |
-| Rat fury     | 13    | The rat may immediately charge any enemy model within 12" (ignoring any terrain and interposing models) and gains 2 extra Attacks and +3 to wound during this turn’s hand-to-hand combat phase only.                            |
-| Ratpsychosis | 13    | All standing models in base contact with the rat must take an immediate Morale test. If they fail, you roll an attack against each target and they then run 6" directly away from the rat.                                      |
-| Curse of rat | 7     | The spell has a range of 12" and affects a single model within range. The target must re-roll any successful defense rolls and to melee rolls until the start of your next turn.                                                |
+| Name | Check | Description |
+| ---- | ------ | ---- |
+| Ball of rats | 13 | The spell has a range of 8", hitting the first model in its path. The spell automatically hits the target (with the spell roll being the injury roll), roll an attack roll with 10 skill on each model within 2" of the target. |
+| Rat fury | 13 | The rat may immediately charge any enemy model within 12" (ignoring any terrain and interposing models) and gains 2 extra Attacks and +3 to wound during this turn’s hand-to-hand combat phase only. |
+| Ratpsychosis | 13 | All standing models in base contact with the rat must take an immediate Morale test. If they fail, you roll an attack against each target and they then run 6" directly away from the rat. |
+| Curse of rat | 7 | The spell has a range of 12" and affects a single model within range. The target must re-roll any successful defense rolls and to melee rolls until the start of your next turn. |
 
 
 ## Available Skills & Starting Experience

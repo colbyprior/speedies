@@ -191,13 +191,13 @@
     "Equipment": {
         "Heroes": {
             "Aliases": ["Leader", "Hero", "Warrior", "Swordsman"],
-            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Great Spear", "Shield"],
+            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
             "Ranged Weapons": ["Short Bow", "Bow", "Long Bow", "Crossbow", "Pistol", "Rifle"],
             "Armour": ["Light Armour", "Heavy Armour"]
         },
         "Warriors & Swordsman": {
             "Aliases": ["Warrior", "Swordsman"],
-            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Great Spear", "Shield"],
+            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
             "Ranged Weapons": [],
             "Armour": ["Light Armour", "Heavy Armour"]
         },

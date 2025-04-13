@@ -42,7 +42,7 @@ Wood Elf equipment for the unit types: All
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
-| Spear | +3 Hit | 5 | 1 |
+| Spear | +3 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
 | Sword / Axe | -3 Def to target | 5 | 1 |
 | Shield | +4 Def | 5 | 1 |
 

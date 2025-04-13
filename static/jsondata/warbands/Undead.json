@@ -204,7 +204,7 @@
     "Equipment": {
         "Skeleton": {
             "Aliases": ["Skeleton", "Death Knight"],
-            "Melee Weapons": ["Dagger", "Spear", "Sword", "Hammer", "Great Spear", "Great Sword", "Great Hammer", "Shield"],
+            "Melee Weapons": ["Dagger", "Spear", "Sword", "Hammer", "Pike", "Great Sword", "Great Hammer", "Shield"],
             "Ranged Weapons": ["Short Bow", "Bow"],
             "Armour": ["Light Armour", "Heavy Armour"]
         },

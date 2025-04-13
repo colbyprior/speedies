@@ -195,7 +195,7 @@
             "Aliases": ["Noble", "Armourer", "Veteran", "Berserker", "Warrior", "Youngling"],
             "Melee Weapons": ["Dagger", "Sword", "Hammer", "Great Sword", "Great Hammer", "Shield"],
             "Ranged Weapons": ["Pistol"],
-            "Armour": ["Light Armour", "Heavy Armour", "If warband has armourer"]
+            "Armour": ["Light Armour", "Heavy Armour", "Mithril Armour (If warband has armourer)"]
         },
         "Gunner": {
             "Aliases": ["Gunner", "Engineer"],
