@@ -2,7 +2,7 @@
   "Raise Dead": {
     "Name": "Raise Dead", 
     "School": "Necromancy Spells",
-    "Check": "6",
+    "Check": "7",
     "Description": "One Zombie or Skeleton that was Incapacitated after the end of your last turn immediately returns to the battle. Place the model within 6\" of the Necromancer. The model cannot be placed such that it is Engaged with an enemy."
   },
   "Control Dead": {

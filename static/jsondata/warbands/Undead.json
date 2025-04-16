@@ -109,7 +109,7 @@
             "Agility": "14",
             "Attacks": "1",
             "Morale": "16",
-            "Cost": 15,
+            "Cost": 20,
             "Skills": [
                 "Undead",
                 "Fear"
@@ -210,7 +210,7 @@
         },
         "Reaper": {
             "Aliases": ["Reaper"],
-            "Melee Weapons": ["Great Sword"],
+            "Melee Weapons": ["Scythe (Great Sword)"],
             "Ranged Weapons": [],
             "Armour": []
         },

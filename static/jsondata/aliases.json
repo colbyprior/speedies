@@ -6,12 +6,13 @@
     "Great Club (Great Hammer)": "Great Hammer",
     "Mace (Hammer)": "Hammer",
     "Great Mace (Great Hammer)": "Great Hammer",
-    "Pitchfork (Pike)": "Pike"
+    "Pitchfork (Pike)": "Pike",
+    "Scythe (Great Sword)": "Great Sword"
   },
   "Ranged Weapons": {
 
   },
   "Armour": {
-    "Mithril Armour (If warband has armourer)": "Mithril Armour"
+    "Mithril Armour (If warband has Armourer)": "Mithril Armour"
   }
 }

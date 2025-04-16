@@ -72,7 +72,7 @@
             "Agility": "7",
             "Attacks": "2",
             "Morale": "10",
-            "Cost": 0,
+            "Cost": 90,
             "Skills": [
                 "Undead",
                 "No Equipment"
