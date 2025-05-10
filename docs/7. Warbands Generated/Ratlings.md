@@ -20,12 +20,12 @@ Is a rat
 | Sneaky Rat | 8 | 1 | 1 | 13 | 12 | 18 | 5 | 13 |  | 40 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
 
 ## Henchmen
-| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Rat Boi | 8 | 1 | 1 | 15 | 14 | 19 | 8 | 16 |  | 25 | None |
-| Rat Underling | 8 | 1 | 1 | 16 | 16 | - | 8 | 16 |  | 20 | 6 |
-| Giant Rat | 8 | 1 | 1 | 14 | - | - | 8 | 18 | [Animal](#animal) | 10 | 4 |
-| Rat Monster | 8 | 3 | 3 | 7 | - | 7 | 8 | 18 | [Animal](#animal), [Stupid](#stupid), [Fear](#fear), [Big Hitter 2](#big-hitter-2), [Large](#large) | 210 | 1 |
+| Units         | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills                                                                                              | Cost | Cap  |
+| ------------- | --- | --- | --- | --- | --- | --- | --- | --- | --------------------------------------------------------------------------------------------------- | ---- | ---- |
+| Rat Boi       | 8   | 1   | 1   | 15  | 14  | 19  | 8   | 16  |                                                                                                     | 25   | None |
+| Rat Underling | 8   | 1   | 1   | 16  | 16  | -   | 8   | 16  |                                                                                                     | 20   | 6    |
+| Giant Rat     | 8   | 1   | 1   | 14  | -   | -   | 8   | 18  | [Animal](#animal)                                                                                   | 10   | 4    |
+| Rat Monster   | 8   | 3   | 3   | 7   | -   | 7   | 8   | 18  | [Animal](#animal), [Stupid](#stupid), [Fear](#fear), [Big Hitter 2](#big-hitter-2), [Large](#large) | 210  | 1    |
 
 ## Promotion Options
 | Unit | Stat Ups | Gained Skills |
