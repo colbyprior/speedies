@@ -279,19 +279,19 @@
     "Type": "Inherent",
     "Description": "This unit may pick a skill of their choice that they could normally learn when hired."
   },
-  "Hates Magic": {
-    "Name": "Hates Magic",
+  "Burn the Heretic": {
+    "Name": "Burn the Heretic",
     "Type": "Inherent",
-    "Description": "In the first round of melee combat with any spellcaster roll attacks with advantage. Prayers do not count as magic for this skill."
+    "Description": "This unit gets a +2 injury modifier against all enemy heroes for melee and ranged attacks."
   },
   "Can't promote": {
     "Name": "Can't promote",
     "Type": "Inherent",
     "Description": "This unit cannot promote into a hero."
   },
-  "Rabble Rouser": {
-    "Name": "Rabble Rouser",
+  "Extra Rabble": {
+    "Name": "Extra Rabble",
     "Type": "Inquisitors",
-    "Description": ""
+    "Description": "This unit counts as two heroes for the purposes of the rabble rouser skill."
   }
 }
