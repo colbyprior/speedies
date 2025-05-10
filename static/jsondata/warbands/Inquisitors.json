@@ -4,7 +4,7 @@
     "Play Style": "Powerful heroes with minions",
     "Preamble": "Magic never expects us.",
     "Special Rules": {
-        "Extra Heroes": "When paying for extra heroes beyond the starting cap the cost is reduced by 25g."
+        "Rabble Rousers": "At the start of each game roll morale once per hero. For each success you get a temporary Rabble unit that joins your warband for this game only."
     },
     "Heroes": [
         {
@@ -22,7 +22,7 @@
             "Cost": 60,
             "Skills": [
                 "Leader",
-                "Hates Magic"
+                "Burn the Heretic"
             ]
         },
         {
@@ -56,7 +56,7 @@
             "Morale": "10",
             "Cost": 25,
             "Skills": [
-                "Hates Magic"
+                "Burn the Heretic"
             ]
         },
         {
@@ -73,8 +73,8 @@
             "Morale": "9",
             "Cost": 50,
             "Skills": [
-                "Rabble Rouser",
-                "Hates Magic"
+                "Extra Rabble",
+                "Burn the Heretic"
             ]
         }
     ],
@@ -195,9 +195,9 @@
         },
         "Priest": {
             "Aliases": ["Priest"],
-            "Melee Weapons": ["Sword"],
-            "Ranged Weapons": ["Bow"],
-            "Armour": ["Light Armour"]
+            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
+            "Ranged Weapons": [],
+            "Armour": ["Light Armour", "Heavy Armour"]
         },
         "Fanatics": {
             "Aliases": ["Fanatic"],
