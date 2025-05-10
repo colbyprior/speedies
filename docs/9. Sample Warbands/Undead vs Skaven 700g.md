@@ -29,4 +29,3 @@ sidebar_position: 1
 | Rat Monster | 8   | 3   | 3   | 7   | -   | 7   | 8   | 18  | [Animal](#animal), [Stupid](#stupid), [Fear](#fear), [Big Hitter 2](#big-hitter-2), [Large](#large) | 1   |           |
 
 
-
