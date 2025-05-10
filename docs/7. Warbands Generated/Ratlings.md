@@ -23,7 +23,7 @@ Is a rat
 | Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Rat Boi | 8 | 1 | 1 | 15 | 14 | 19 | 8 | 16 |  | 25 | None |
-| Rat Underling | 8 | 1 | 1 | 16 | 16 | - | 8 | 16 |  | 10 | 6 |
+| Rat Underling | 8 | 1 | 1 | 16 | 16 | - | 8 | 16 |  | 20 | 6 |
 | Giant Rat | 8 | 1 | 1 | 14 | - | - | 8 | 18 | [Animal](#animal) | 10 | 4 |
 | Rat Monster | 8 | 3 | 3 | 7 | - | 7 | 8 | 18 | [Animal](#animal), [Stupid](#stupid), [Fear](#fear), [Big Hitter 2](#big-hitter-2), [Large](#large) | 210 | 1 |
 
