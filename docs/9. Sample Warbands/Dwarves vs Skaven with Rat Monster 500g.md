@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 ---
-# Dwarves vs Skaven (Rat Monster) 500g
+# Dwarves vs Skaven with Rat Monster 500g
 ## Skaven 500g
 
 | Units       | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills                                                                                              | No  | Equipment |
