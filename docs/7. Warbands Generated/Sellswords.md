@@ -31,7 +31,7 @@ Start with 100 extra gold. Halve any future upkeep costs.
 | Warrior | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 10 |  | 25 | None |
 | Marksmen | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 10 |  | 25 | 6 |
 | Swordsman | 6 | 1 | 1 | 13 | 14 | 18 | 11 | 10 | [Bull Rush](#bull-rush) | 35 | 5 |
-| Peasant | 6 | 1 | 1 | 16 | 16 | 19 | 13 | 14 |  | 15 | 4 |
+| Rookie | 6 | 1 | 1 | 16 | 16 | 19 | 13 | 14 |  | 15 | 4 |
 
 ## Promotion Options
 | Unit | Stat Ups | Gained Skills |

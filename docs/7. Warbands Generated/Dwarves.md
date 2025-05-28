@@ -16,20 +16,20 @@ Wearing Armour does not reduce a Dwarf's Move attribute.
 ### Gem Sense
 Dwarf warbands gain an additional Treasure Roll at the end of each game.
 ## Heroes
-| Units    | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills                      | Cost | Cap | Skill Ups                                                                                         |
-| -------- | --- | --- | --- | --- | --- | --- | --- | --- | --------------------------- | ---- | --- | ------------------------------------------------------------------------------------------------- |
-| Noble    | 5   | 1   | 1   | 12  | 12  | 13  | 14  | 5   | [Leader](#leader)           | 65   | 1   | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Morale,Dwarves) |
-| Engineer | 5   | 1   | 1   | 13  | 13  | 14  | 14  | 7   | [Weaponsmith](#weaponsmith) | 60   | 1   | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Defense,Dwarves)              |
-| Armourer | 5   | 1   | 1   | 13  | 14  | 13  | 14  | 7   | [Armoursmith](#armoursmith) | 50   | 1   | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Dwarves)               |
-| Veteran  | 5   | 1   | 1   | 12  | 14  | 14  | 14  | 7   |                             | 45   | -   | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Dwarves)               |
+| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Noble | 5 | 1 | 1 | 12 | 12 | 13 | 14 | 5 | [Leader](#leader) | 65 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Morale,Dwarves) |
+| Engineer | 5 | 1 | 1 | 13 | 13 | 14 | 14 | 7 | [Weaponsmith](#weaponsmith) | 60 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Defense,Dwarves) |
+| Armourer | 5 | 1 | 1 | 13 | 14 | 13 | 14 | 7 | [Armoursmith](#armoursmith) | 50 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Dwarves) |
+| Veteran | 5 | 1 | 1 | 12 | 14 | 14 | 14 | 7 |  | 45 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Dwarves) |
 
 ## Henchmen
-| Units     | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills                                     | Cost | Cap |
-| --------- | --- | --- | --- | --- | --- | --- | --- | --- | ------------------------------------------ | ---- | --- |
-| Berserker | 5   | 1   | 1   | 13  | 14  | 14  | 14  | 7   | [Berserk](#berserk), [Fearless](#fearless) | 45   | 2   |
-| Youngling | 5   | 1   | 1   | 15  | 16  | 15  | 14  | 9   |                                            | 25   | -   |
-| Warrior   | 5   | 1   | 1   | 13  | 14  | 14  | 14  | 7   |                                            | 40   | -   |
-| Gunner    | 5   | 1   | 1   | 13  | 14  | 14  | 14  | 7   |                                            | 45   | 4   |
+| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Berserker | 5 | 1 | 1 | 13 | 14 | 14 | 14 | 7 | [Berserk](#berserk), [Fearless](#fearless) | 45 | 2 |
+| Youngling | 5 | 1 | 1 | 15 | 16 | 15 | 14 | 9 |  | 25 | - |
+| Warrior | 5 | 1 | 1 | 13 | 14 | 14 | 14 | 7 |  | 40 | - |
+| Gunner | 5 | 1 | 1 | 13 | 14 | 14 | 14 | 7 |  | 45 | 4 |
 
 ## Promotion Options
 | Unit | Stat Ups | Gained Skills |

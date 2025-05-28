@@ -9,15 +9,15 @@ Magic never expects us.
 | Play Style | Powerful heroes with minions |
 
 ## Special Rules
-### Extra Heroes
-When paying for extra heroes beyond the starting cap the cost is reduced by 25g.
+### Rabble Rousers
+At the start of each game roll morale once per hero. For each success you get a temporary Rabble unit that joins your warband for this game only.
 ## Heroes
 | Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Inquisitor Captain | 6 | 1 | 1 | 13 | 12 | 18 | 8 | 7 | [Leader](#leader), [Hates Magic](#hates-magic) | 60 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Agility,Morale,Inquisitors) |
+| Inquisitor Captain | 6 | 1 | 1 | 13 | 12 | 18 | 8 | 7 | [Leader](#leader), [Burn the Heretic](#burn-the-heretic) | 60 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Agility,Morale,Inquisitors) |
 | Priest | 6 | 1 | 1 | 15 | 13 | 19 | 11 | 7 | [Prayers](#prayers) | 40 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Inquisitors) |
-| Inquisitor | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 10 | [Hates Magic](#hates-magic) | 25 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Inquisitors) |
-| Inquisitor Rabble Rouser | 6 | 1 | 1 | 15 | 15 | 18 | 11 | 9 | [Rabble Rouser](#rabble-rouser), [Hates Magic](#hates-magic) | 50 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Inquisitors) |
+| Inquisitor | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 10 | [Burn the Heretic](#burn-the-heretic) | 25 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Inquisitors) |
+| Inquisitor Rabble Rouser | 6 | 1 | 1 | 15 | 15 | 18 | 11 | 9 | [Extra Rabble](#extra-rabble), [Burn the Heretic](#burn-the-heretic) | 50 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Inquisitors) |
 
 ## Henchmen
 | Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
@@ -63,15 +63,19 @@ Priest equipment for the unit types: Priest
 
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
+| Dagger | None | 2 | 1 |
+| Hammer | +1 Injury | 5 | 1 |
 | Sword / Axe | -3 Def to target | 5 | 1 |
-
-| Ranged Weapon | Range | Effect | Cost | Slots |
-| ---- | ----- | ------ | ---- | ----- |
-| Bow | 25" |  | 10 | 1 |
+| Spear | +3 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Great Hammer | +4 Mel, +5 to Injury | 10 | 2 |
+| Great Sword / Axe | +4 to Hit, +4 to Injury, -3 Def to target | 10 | 2 |
+| Pike | +7 to Hit, +4 to Injury | 10 | 2 |
+| Shield | +4 Def | 5 | 1 |
 
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |
 | Light Armour | +1 Def | 15 |
+| Heavy Armour | +2 Def | 30 |
 
 ### Fanatics Equipment 
 Fanatics equipment for the unit types: Fanatic
@@ -119,10 +123,10 @@ Rabble equipment for the unit types: Leader, Hero
 *Inherent*
 
 Allied units with 6" of this unit can use this morale stat for checks instead of their own.
-### Hates Magic
+### Burn the Heretic
 *Inherent*
 
-In the first round of melee combat with any spellcaster roll attacks with advantage. Prayers do not count as magic for this skill.
+This unit gets a +2 injury modifier against all enemy heroes for melee and ranged attacks.
 ### Prayers
 *Spellcasting*
 
@@ -159,7 +163,7 @@ This unit cannot promote into a hero.
 | Inquisitor Rabble Rouser | X | X |  |  | X | X |  |
 
 ## Warband Special Skills 
-### Rabble Rouser
+### Extra Rabble
 *Inquisitors*
 
-
+This unit counts as two heroes for the purposes of the rabble rouser skill.
