@@ -129,7 +129,7 @@
             "Name": "Hounds",
             "Type Cap": "5",
             "Move": "8",
-            "Melee": "8",
+            "Melee": "12",
             "Ranged": "-",
             "Defense": "18",
             "Wounds": "1",
