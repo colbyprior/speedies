@@ -72,7 +72,7 @@ This unit does not count for the purposes of a warband's max units.
 ### Animal
 *Inherent*
 
-This unit cannot Promote, Climb, or pick up Treasure.
+This unit cannot Promote, make Climb checks, or pick up Treasure. They can still go up ladders.
 ### Fear
 *Inherent*
 

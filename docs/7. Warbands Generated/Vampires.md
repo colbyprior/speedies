@@ -82,7 +82,7 @@ This unit gets advantage on the first round of combat when they engage an enemy
 ### Animal
 *Inherent*
 
-This unit cannot Promote, Climb, or pick up Treasure.
+This unit cannot Promote, make Climb checks, or pick up Treasure. They can still go up ladders.
 ### Flying
 *Inherent*
 
