@@ -293,5 +293,10 @@
     "Name": "Extra Rabble",
     "Type": "Inquisitors",
     "Description": "This unit counts as two heroes for the purposes of the rabble rouser skill."
+  },
+  "Follow the leader": {
+    "Name": "Follow the leader",
+    "Type": "Inquisitors",
+    "Description": "This unit can use the morale of the Inquisitor Rabble Rouser if they are within 6\" of them."
   }
 }

@@ -123,13 +123,15 @@
             "Attacks": "1",
             "Morale": "14",
             "Cost": "-",
-            "Skills": []
+            "Skills": [
+                "Follow the leader"
+            ]
         },
         {
             "Name": "Hounds",
             "Type Cap": "5",
             "Move": "8",
-            "Melee": "8",
+            "Melee": "12",
             "Ranged": "-",
             "Defense": "18",
             "Wounds": "1",
@@ -187,7 +189,7 @@
         }
     },
     "Equipment": {
-        "Hunters": {
+        "Inquisitors": {
             "Aliases": ["Inquisitor Captain", "Inquisitor", "Inquisitor Rabble Rouser"],
             "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
             "Ranged Weapons": ["Crossbow", "Pistol"],
