@@ -8,7 +8,7 @@
     },
     "Heroes": [
         {
-            "Name": "Best Rat",
+            "Name": "Mastermind",
             "Type": "Leader",
             "Type Cap": "1",
             "Move": "8",
@@ -26,7 +26,7 @@
             ]
         },
         {
-            "Name": "Magic Rat",
+            "Name": "Ratlock",
             "Type": "Hero",
             "Type Cap": "1",
             "Move": "8",
@@ -59,15 +59,15 @@
             ]
         },
         {
-            "Name": "Sneaky Rat",
+            "Name": "Assassin",
             "Type": "Hero",
             "Type Cap": "",
             "Move": "8",
-            "Melee": "13",
-            "Ranged": "12",
+            "Melee": "14",
+            "Ranged": "14",
             "Defense": "18",
             "Wounds": "1",
-            "Agility": "5",
+            "Agility": "8",
             "Attacks": "1",
             "Morale": "13",
             "Cost": 40,
@@ -91,8 +91,8 @@
             "Skills": []
         },
         {
-            "Name": "Rat Underling",
-            "Type Cap": "6",
+            "Name": "Plague Host",
+            "Type Cap": "",
             "Move": "8",
             "Melee": "16",
             "Ranged": "16",
