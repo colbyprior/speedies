@@ -24,8 +24,8 @@ At the start of each game roll morale once per hero. For each success you get a 
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Fanatic | 6 | 1 | 1 | 12 | 14 | 15 | 11 | 10 | [Fearless](#fearless), [+2 Piercing](#+2-piercing), [Can't promote](#can't-promote) | 40 | 5 |
 | Zealot | 6 | 1 | 1 | 16 | 16 | - | 11 | 10 |  | 20 | None |
-| Rabble | 6 | 1 | 1 | 17 | 17 | - | 12 | 14 |  | - | See Rabble Rouser skill |
-| Hounds | 8 | 1 | 1 | 8 | - | 18 | 10 | 15 | [+2 Piercing](#+2-piercing) | 15 | 5 |
+| Rabble | 6 | 1 | 1 | 17 | 17 | - | 12 | 14 | [Follow the leader](#follow-the-leader) | - | See Rabble Rouser skill |
+| Hounds | 8 | 1 | 1 | 12 | - | 18 | 10 | 15 | [+2 Piercing](#+2-piercing) | 15 | 5 |
 
 ## Promotion Options
 | Unit | Stat Ups | Gained Skills |
@@ -34,8 +34,8 @@ At the start of each game roll morale once per hero. For each success you get a 
 
 ## Equipment
 
-### Hunters Equipment 
-Hunters equipment for the unit types: Inquisitor Captain, Inquisitor, Inquisitor Rabble Rouser
+### Inquisitors Equipment 
+Inquisitors equipment for the unit types: Inquisitor Captain, Inquisitor, Inquisitor Rabble Rouser
 
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
@@ -167,3 +167,7 @@ This unit cannot promote into a hero.
 *Inquisitors*
 
 This unit counts as two heroes for the purposes of the rabble rouser skill.
+### Follow the leader
+*Inquisitors*
+
+This unit can use the morale of the Inquisitor Rabble Rouser if they are within 6" of them.

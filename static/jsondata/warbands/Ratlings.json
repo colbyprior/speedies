@@ -151,7 +151,7 @@
         }
     },
     "Available Skills": {
-        "Best Rat": {
+        "Mastermind": {
             "Mel": "X",
             "Rng": "X",
             "Def": "",
@@ -160,7 +160,7 @@
             "Special": "X",
             "Start Exp": ""
         },
-        "Magic Rat": {
+        "Ratlock": {
             "Mel": "",
             "Rng": "",
             "Def": "",
@@ -178,7 +178,7 @@
             "Special": "X",
             "Start Exp": "2"
         },
-        "Sneaky Rat": {
+        "Assassin": {
             "Mel": "X",
             "Rng": "X",
             "Def": "",

@@ -12,20 +12,20 @@ RAT
 ### Rat
 Is a rat
 ## Heroes
-| Units      | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills                                         | Cost | Cap  | Skill Ups                                                                                   |
-| ---------- | --- | --- | --- | --- | --- | --- | --- | --- | ---------------------------------------------- | ---- | ---- | ------------------------------------------------------------------------------------------- |
-| Best Rat   | 8   | 1   | 1   | 11  | 12  | 18  | 5   | 10  | [Leader](#leader), [+2 Piercing](#+2-piercing) | 60   | 1    | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
-| Magic Rat  | 8   | 1   | 1   | 15  | 14  | 19  | 8   | 13  | [Rat Magic](#rat-magic)                        | 45   | 1    | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Ratlings)               |
-| Strong Rat | 8   | 1   | 1   | 11  | 14  | 18  | 8   | 13  |                                                | 40   | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Ratlings)        |
-| Sneaky Rat | 8   | 1   | 1   | 15  | 14  | 18  | 8   | 13  |                                                | 40   | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
+| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Mastermind | 8 | 1 | 1 | 11 | 12 | 18 | 5 | 10 | [Leader](#leader), [+2 Piercing](#+2-piercing) | 60 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
+| Ratlock | 8 | 1 | 1 | 15 | 14 | 19 | 8 | 13 | [Rat Magic](#rat-magic) | 45 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Ratlings) |
+| Strong Rat | 8 | 1 | 1 | 11 | 14 | 18 | 8 | 13 |  | 40 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Ratlings) |
+| Assassin | 8 | 1 | 1 | 14 | 14 | 18 | 8 | 13 |  | 40 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
 
 ## Henchmen
-| Units         | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills                                                                           | Cost | Cap  |
-| ------------- | --- | --- | --- | --- | --- | --- | --- | --- | -------------------------------------------------------------------------------- | ---- | ---- |
-| Rat Boi       | 8   | 1   | 1   | 15  | 14  | 19  | 8   | 16  |                                                                                  | 25   | None |
-| Rat Underling | 8   | 1   | 1   | 16  | 16  | -   | 8   | 16  |                                                                                  | 20   | None |
-| Giant Rat     | 8   | 1   | 1   | 14  | -   | -   | 8   | 18  | [Animal](#animal)                                                                | 10   | 4    |
-| Rat Monster   | 8   | 3   | 3   | 7   | -   | 7   | 8   | 18  | [Stupid](#stupid), [Fear](#fear), [Big Hitter 2](#big-hitter-2), [Large](#large) | 210  | 1    |
+| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Rat Boi | 8 | 1 | 1 | 15 | 14 | 19 | 8 | 16 |  | 25 | None |
+| Plague Host | 8 | 1 | 1 | 16 | 16 | - | 8 | 16 |  | 20 | None |
+| Giant Rat | 8 | 1 | 1 | 14 | - | - | 8 | 18 | [Animal](#animal) | 10 | 4 |
+| Rat Monster | 8 | 3 | 3 | 7 | - | 7 | 8 | 18 | [Stupid](#stupid), [Fear](#fear), [Big Hitter 2](#big-hitter-2), [Large](#large) | 210 | 1 |
 
 ## Promotion Options
 | Unit | Stat Ups | Gained Skills |
@@ -116,10 +116,10 @@ This units size makes them easier to hit with ranged attacks. They suffer a -3 d
 ## Available Skills & Starting Experience
 | Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Best Rat | X | X |  | X |  | X |  |
-| Magic Rat |  |  |  |  | X | X |  |
+| Mastermind | X | X |  | X |  | X |  |
+| Ratlock |  |  |  |  | X | X |  |
 | Strong Rat | X |  |  | X |  | X | 2 |
-| Sneaky Rat | X | X |  | X |  | X | 0 |
+| Assassin | X | X |  | X |  | X | 0 |
 
 ## Warband Special Skills 
 ### Keen Tail

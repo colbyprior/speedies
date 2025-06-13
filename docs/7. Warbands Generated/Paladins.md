@@ -20,12 +20,12 @@ Paladins don't actually have any but this is a test.
 | Standard Bearer | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 7 | [Holy Standard](#holy-standard) | 45 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
 
 ## Henchmen
-| Units    | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills                                                 | Cost | Cap |
-| -------- | --- | --- | --- | --- | --- | --- | --- | --- | ------------------------------------------------------ | ---- | --- |
-| Squire   | 6   | 1   | 1   | 15  | 14  | 19  | 11  | 10  |                                                        | 25   | -   |
-| Initiate | 6   | 1   | 1   | 16  | 16  | -   | 11  | 13  |                                                        | 15   | -   |
-| Monk     | 7   | 1   | 1   | 15  | 14  | 19  | 8   | 10  | [Ki Strike](#ki-strike), [No Equipment](#no-equipment) | 40   | 3   |
-| Cavalier | 9   | 1   | 2   | 15  | 14  | 19  | 11  | 10  | [Mounted](#mounted)                                    | 45   | 3   |
+| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Squire | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 10 |  | 25 | - |
+| Initiate | 6 | 1 | 1 | 16 | 16 | - | 11 | 13 |  | 15 | - |
+| Monk | 7 | 1 | 1 | 15 | 14 | 19 | 8 | 10 | [Ki Strike](#ki-strike), [No Equipment](#no-equipment) | 40 | 3 |
+| Cavalier | 9 | 1 | 2 | 15 | 14 | 19 | 11 | 10 | [Mounted](#mounted) | 45 | 3 |
 
 ## Promotion Options
 | Unit | Stat Ups | Gained Skills |
