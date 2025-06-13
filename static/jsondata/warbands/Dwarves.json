@@ -6,7 +6,8 @@
     "Special Rules": {
         "Hard to Kill": "An Injury roll of 18 against a Dwarf counts as Stunned instead of Incapacitated. Injury modifiers have no effect against Dwarves.",
         "Sturdy Legs": "Wearing Armour does not reduce a Dwarf's Move attribute.",
-        "Gem Sense": "Dwarf warbands gain an additional Treasure Roll at the end of each game."
+        "Gem Sense": "Dwarf warbands gain an additional Treasure Roll at the end of each game.",
+        "Ranged Shields": "Dwarf gunners may use any ranged weapon with a shield."
     },
     "Heroes": [
         {

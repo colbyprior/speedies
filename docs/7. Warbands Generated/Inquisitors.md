@@ -46,7 +46,6 @@ Inquisitors equipment for the unit types: Inquisitor Captain, Inquisitor, Inquis
 | Great Hammer | +4 Mel, +5 to Injury | 10 | 2 |
 | Great Sword / Axe | +4 to Hit, +4 to Injury, -3 Def to target | 10 | 2 |
 | Pike | +7 to Hit, +4 to Injury | 10 | 2 |
-| Shield | +4 Def | 5 | 1 |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |
 | ---- | ----- | ------ | ---- | ----- |
@@ -70,7 +69,7 @@ Priest equipment for the unit types: Priest
 | Great Hammer | +4 Mel, +5 to Injury | 10 | 2 |
 | Great Sword / Axe | +4 to Hit, +4 to Injury, -3 Def to target | 10 | 2 |
 | Pike | +7 to Hit, +4 to Injury | 10 | 2 |
-| Shield | +4 Def | 5 | 1 |
+| Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |
@@ -98,7 +97,7 @@ Zealots equipment for the unit types: Leader, Hero
 | Great Hammer | +4 Mel, +5 to Injury | 10 | 2 |
 | Great Sword / Axe | +4 to Hit, +4 to Injury, -3 Def to target | 10 | 2 |
 | Pike | +7 to Hit, +4 to Injury | 10 | 2 |
-| Shield | +4 Def | 5 | 1 |
+| Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |
 | ---- | ----- | ------ | ---- | ----- |
@@ -116,7 +115,7 @@ Rabble equipment for the unit types: Leader, Hero
 | ---- | ------ | ---- | ----- |
 | Spear | +3 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
 | Pike | +7 to Hit, +4 to Injury | 10 | 2 |
-| Shield | +4 Def | 5 | 1 |
+| Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 ## Skills 
 ### Leader

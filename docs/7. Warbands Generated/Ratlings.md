@@ -44,7 +44,6 @@ Rats equipment for the unit types: Leader, Hero, Rat Boi
 | Hammer | +1 Injury | 5 | 1 |
 | Sword / Axe | -3 Def to target | 5 | 1 |
 | Spear | +3 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Shield | +4 Def | 5 | 1 |
 | Fighting Claws | -3 Def to target, +1 Attack. You roll agility with advantage. | 20 | 2 |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |

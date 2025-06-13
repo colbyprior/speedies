@@ -191,7 +191,7 @@
     "Equipment": {
         "Rats": {
             "Aliases": ["Leader", "Hero", "Rat Boi"],
-            "Melee Weapons": ["Dagger", "Club (Hammer)", "Sword", "Spear", "Shield", "Fighting Claws"],
+            "Melee Weapons": ["Dagger", "Club (Hammer)", "Sword", "Spear", "Fighting Claws"],
             "Ranged Weapons": ["Sling", "Throwing Stars", "Pistol"],
             "Armour": ["Light Armour"]
         },

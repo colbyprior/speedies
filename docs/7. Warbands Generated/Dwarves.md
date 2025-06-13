@@ -15,6 +15,8 @@ An Injury roll of 18 against a Dwarf counts as Stunned instead of Incapacitated.
 Wearing Armour does not reduce a Dwarf's Move attribute.
 ### Gem Sense
 Dwarf warbands gain an additional Treasure Roll at the end of each game.
+### Ranged Shields
+Dwarf gunners may use any ranged weapon with a shield.
 ## Heroes
 | Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
@@ -50,7 +52,7 @@ Warrior equipment for the unit types: Noble, Armourer, Veteran, Berserker, Warri
 | Hammer | +1 Injury | 5 | 1 |
 | Great Sword / Axe | +4 to Hit, +4 to Injury, -3 Def to target | 10 | 2 |
 | Great Hammer | +4 Mel, +5 to Injury | 10 | 2 |
-| Shield | +4 Def | 5 | 1 |
+| Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |
 | ---- | ----- | ------ | ---- | ----- |
@@ -70,7 +72,7 @@ Gunner equipment for the unit types: Gunner, Engineer
 | Dagger | None | 2 | 1 |
 | Sword / Axe | -3 Def to target | 5 | 1 |
 | Hammer | +1 Injury | 5 | 1 |
-| Shield | +4 Def | 5 | 1 |
+| Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |
 | ---- | ----- | ------ | ---- | ----- |

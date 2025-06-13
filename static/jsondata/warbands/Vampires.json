@@ -192,7 +192,13 @@
         }
     },
     "Equipment": {
-        "Vampires & Thralls": {
+        "Vampires": {
+            "Aliases": ["Leader", "Hero"],
+            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
+            "Ranged Weapons": [],
+            "Armour": ["Light Armour", "Heavy Armour"]
+        },
+        "Thralls": {
             "Aliases": ["Leader", "Hero"],
             "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
             "Ranged Weapons": ["Short Bow", "Bow"],

@@ -191,7 +191,7 @@
     "Equipment": {
         "Inquisitors": {
             "Aliases": ["Inquisitor Captain", "Inquisitor", "Inquisitor Rabble Rouser"],
-            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
+            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike"],
             "Ranged Weapons": ["Crossbow", "Pistol"],
             "Armour": ["Light Armour", "Heavy Armour"]
         },

@@ -43,7 +43,7 @@
   },
   "Shield": {
     "Name": "Shield",
-    "Effect": "+4 Def",
+    "Effect": "+4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon.",
     "Cost": "5",
     "Slots": "1"
   },
