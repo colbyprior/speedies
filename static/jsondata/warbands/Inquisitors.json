@@ -123,7 +123,9 @@
             "Attacks": "1",
             "Morale": "14",
             "Cost": "-",
-            "Skills": []
+            "Skills": [
+                "Follow the leader"
+            ]
         },
         {
             "Name": "Hounds",
