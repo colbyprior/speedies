@@ -202,7 +202,7 @@
    "Animal": {
     "Name": "Animal",
     "Type": "Inherent",
-    "Description": "This unit cannot Promote, Climb, or pick up Treasure."
+    "Description": "This unit cannot Promote, make Climb checks, or pick up Treasure. They can still go up ladders."
   },
    "Slow": {
     "Name": "Slow",
