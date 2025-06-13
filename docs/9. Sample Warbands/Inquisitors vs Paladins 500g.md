@@ -33,6 +33,6 @@ sidebar_label: Inquisitors
 | Units    | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost | No  | Equipment   |
 | -------- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | ----------- |
 | Squire   | 6   | 1   | 1   | 15  | 14  | 15  | 11  | 10  |        | 25   | 3   | BW + Shield |
-| Initiate | 6   | 1   | 1   | 16  | 16  | -   | 11  | 13  |        | 15   | -   | S + E       |
+| Initiate | 6   | 1   | 1   | 16  | 16  | -   | 11  | 13  |        | 15   | 2   | S + E       |
 | Squire   | 6   | 1   | 1   | 15  | 14  | 19  | 11  | 10  |        | 25   | 1   | S + E       |
 
