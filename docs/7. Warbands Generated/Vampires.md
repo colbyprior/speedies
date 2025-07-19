@@ -15,9 +15,9 @@ If any enemy Hero dies during the post-game Injury rolls, they transform into a 
 | Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Vampire Master | 8 | 2 | 2 | 11 | - | 14 | 5 | 7 | [Leader](#leader), [Undead](#undead) | 160 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Vampires) |
-| Vampire Seductress | 7 | 2 | 2 | 14 | - | 17 | 10 | 10 | [Undead](#undead), [Vampire Seduction](#vampire-seduction) | 50 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Vampires) |
-| Vampire Spawn | 8 | 1 | 2 | 13 | - | 16 | 9 | 10 | [Undead](#undead) | 45 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Vampires) |
-| Nosferatu | 7 | 2 | 2 | 12 | - | 14 | 7 | 10 | [Undead](#undead), [No Equipment](#no-equipment) | 90 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Vampires) |
+| Vampire Seductress | 8 | 2 | 2 | 14 | - | 16 | 9 | 10 | [Undead](#undead), [Vampire Seduction](#vampire-seduction) | 130 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Vampires) |
+| Vampire Spawn | 8 | 1 | 2 | 14 | - | 16 | 9 | 10 | [Undead](#undead) | 60 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Vampires) |
+| Nosferatu | 8 | 2 | 2 | 12 | - | 14 | 7 | 10 | [Undead](#undead), [No Equipment](#no-equipment) | 100 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Vampires) |
 
 ## Henchmen
 | Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |

@@ -29,15 +29,15 @@
             "Name": "Vampire Seductress",
             "Type": "Hero",
             "Type Cap": "1",
-            "Move": "7",
+            "Move": "8",
             "Melee": "14",
             "Ranged": "-",
-            "Defense": "17",
+            "Defense": "16",
             "Wounds": "2",
-            "Agility": "10",
+            "Agility": "9",
             "Attacks": "2",
             "Morale": "10",
-            "Cost": 50,
+            "Cost": 130,
             "Skills": [
                 "Undead",
                 "Vampire Seduction"
@@ -48,14 +48,14 @@
             "Type": "Hero",
             "Type Cap": "",
             "Move": "8",
-            "Melee": "13",
+            "Melee": "14",
             "Ranged": "-",
             "Defense": "16",
             "Wounds": "2",
             "Agility": "9",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 45,
+            "Cost": 60,
             "Skills": [
                 "Undead"
             ]
@@ -64,7 +64,7 @@
             "Name": "Nosferatu",
             "Type": "Hero",
             "Type Cap": "1",
-            "Move": "7",
+            "Move": "8",
             "Melee": "12",
             "Ranged": "-",
             "Defense": "14",
@@ -72,7 +72,7 @@
             "Agility": "7",
             "Attacks": "2",
             "Morale": "10",
-            "Cost": 90,
+            "Cost": 100,
             "Skills": [
                 "Undead",
                 "No Equipment"
