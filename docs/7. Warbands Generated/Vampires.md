@@ -14,15 +14,15 @@ If any enemy Hero dies during the post-game Injury rolls, they transform into a 
 ## Heroes
 | Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Vampire Master | 8 | 2 | 2 | 11 | 12 | 14 | 5 | 7 | [Leader](#leader), [Undead](#undead) | 160 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Vampires) |
-| Vampire Seductress | 7 | 1 | 1 | 14 | 14 | 17 | 10 | 10 | [Undead](#undead), [Vampire Seduction](#vampire-seduction) | 50 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Vampires) |
-| Vampire Spawn | 8 | 1 | 1 | 13 | 14 | 16 | 9 | 10 | [Undead](#undead) | 45 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Vampires) |
+| Vampire Master | 8 | 2 | 2 | 11 | - | 14 | 5 | 7 | [Leader](#leader), [Undead](#undead) | 160 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Vampires) |
+| Vampire Seductress | 7 | 2 | 2 | 14 | - | 17 | 10 | 10 | [Undead](#undead), [Vampire Seduction](#vampire-seduction) | 50 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Vampires) |
+| Vampire Spawn | 8 | 1 | 2 | 13 | - | 16 | 9 | 10 | [Undead](#undead) | 45 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Vampires) |
 | Nosferatu | 7 | 2 | 2 | 12 | - | 14 | 7 | 10 | [Undead](#undead), [No Equipment](#no-equipment) | 90 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Vampires) |
 
 ## Henchmen
 | Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Thrall | 6 | 1 | 1 | 16 | 16 | 19 | 12 | 11 |  | 15 | None |
+| Thrall | 6 | 1 | 1 | 16 | 16 | 18 | 10 | 10 |  | 20 | None |
 | Ghoul | 6 | 2 | 1 | 14 | 16 | 17 | 11 | 16 | [Undead](#undead), [No Equipment](#no-equipment) | 40 | None |
 | Dire Wolf | 8 | 1 | 1 | 10 | - | 19 | 14 | 18 | [Undead](#undead), [Bull Rush](#bull-rush), [Animal](#animal) | 30 | 4 |
 | Giant Bat | 6 | 1 | 1 | 15 | - | 19 | 10 | 14 | [Flying](#flying), [Animal](#animal) | 20 | 4 |
