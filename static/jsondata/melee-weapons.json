@@ -47,6 +47,12 @@
     "Cost": "5",
     "Slots": "1"
   },
+  "Tower-Shield": {
+    "Name": "Shield",
+    "Effect": "+6 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon.",
+    "Cost": "10",
+    "Slots": "1"
+  },
   "Blessed Hammer": {
     "Name": "Blessed Hammer",
     "Effect": "-3 Def to target, +1 Injury, +3 Melee against Undead. Only heroes can dual-wield.",

@@ -4,20 +4,16 @@
     "Play Style": "Balanced",
     "Preamble": "",
     "Special Rules": {
-        "Mercenary Background": "At warband creation pick one Mercenary Background skill to modify your warband.",
-        "Mercenary Background: Marauders": "All heroes get +2 to melee and +1 to injury.",
-        "Mercenary Background: Rangers": "All Marksman get +2 to ranged.",
-        "Mercenary Background: Merchants": "Start with 100 extra gold. Halve any future upkeep costs."
     },
     "Heroes": [
         {
-            "Name": "Capitain",
+            "Name": "Captain",
             "Type": "Leader",
             "Type Cap": "1",
             "Move": "6",
             "Melee": "13",
-            "Ranged": "12",
-            "Defense": "19",
+            "Ranged": "13",
+            "Defense": "17",
             "Wounds": "1",
             "Agility": "8",
             "Attacks": "1",
@@ -34,50 +30,45 @@
             "Move": "6",
             "Melee": "13",
             "Ranged": "14",
-            "Defense": "19",
+            "Defense": "18",
             "Wounds": "1",
             "Agility": "11",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 35,
+            "Cost": 40,
             "Skills": [
             ]
         },
         {
-            "Name": "Scout",
+            "Name": "Sniper",
             "Type": "Hero",
             "Type Cap": "2",
             "Move": "6",
-            "Melee": "15",
+            "Melee": "14",
             "Ranged": "13",
-            "Defense": "19",
+            "Defense": "18",
             "Wounds": "1",
-            "Agility": "9",
+            "Agility": "11",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 35,
+            "Cost": 40,
             "Skills": [
             ]
         },
         {
-            "Name": "Ogre Sellsword",
+            "Name": "Knight",
             "Type": "Hero",
-            "Type Cap": "1",
+            "Type Cap": "2",
             "Move": "8",
-            "Melee": "12",
-            "Ranged": "14",
-            "Defense": "16",
-            "Wounds": "2",
-            "Agility": "13",
-            "Attacks": "2",
-            "Morale": "14",
-            "Cost": 90,
-            "Skills": [
-                "Fear",
-                "Large",
-                "Big Hitter 1",
-                "Upkeep 1"
-            ]
+            "Melee": "14",
+            "Ranged": "-",
+            "Defense": "17",
+            "Wounds": "1",
+            "Agility": "11",
+            "Attacks": "1",
+            "Morale": "10",
+            "Cost": 40,
+            "Skills": []
         }
     ],
     "Henchmen": [
@@ -85,35 +76,51 @@
             "Name": "Warrior",
             "Type Cap": "",
             "Move": "6",
-            "Melee": "15",
+            "Melee": "14",
             "Ranged": "14",
-            "Defense": "19",
+            "Defense": "18",
             "Wounds": "1",
             "Agility": "11",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 25,
+            "Cost": 30,
             "Skills": []
         },
         {
             "Name": "Marksmen",
             "Type Cap": "6",
             "Move": "6",
-            "Melee": "15",
+            "Melee": "14",
             "Ranged": "14",
-            "Defense": "19",
+            "Defense": "18",
             "Wounds": "1",
             "Agility": "11",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 25,
+            "Cost": 30,
             "Skills": []
         },
         {
             "Name": "Swordsman",
-            "Type Cap": "5",
+            "Type Cap": "3",
             "Move": "6",
-            "Melee": "13",
+            "Melee": "14",
+            "Ranged": "14",
+            "Defense": "18",
+            "Wounds": "1",
+            "Agility": "11",
+            "Attacks": "1",
+            "Morale": "10",
+            "Cost": 40,
+            "Skills": [
+                "Bull Rush"
+            ]
+        },
+        {
+            "Name": "Defender",
+            "Type Cap": "3",
+            "Move": "6",
+            "Melee": "14",
             "Ranged": "14",
             "Defense": "18",
             "Wounds": "1",
@@ -121,22 +128,6 @@
             "Attacks": "1",
             "Morale": "10",
             "Cost": 35,
-            "Skills": [
-                "Bull Rush"
-            ]
-        },
-        {
-            "Name": "Rookie",
-            "Type Cap": "4",
-            "Move": "6",
-            "Melee": "16",
-            "Ranged": "16",
-            "Defense": "19",
-            "Wounds": "1",
-            "Agility": "13",
-            "Attacks": "1",
-            "Morale": "14",
-            "Cost": 15,
             "Skills": []
         }
     ],
@@ -145,13 +136,13 @@
             "Stat Ups": "+1 Mel, +1 Def",
             "Gained Skills": ""
         },
-        "Scout": {
+        "Sniper": {
             "Stat Ups": "+1 Ran, +2 Agi",
             "Gained Skills": ""
         }
     },
     "Available Skills": {
-        "Capitain": {
+        "Captain": {
             "Mel": "X",
             "Rng": "X",
             "Def": "X",
@@ -169,7 +160,7 @@
             "Special": "X",
             "Start Exp": ""
         },
-        "Scout": {
+        "Sniper": {
             "Mel": "",
             "Rng": "X",
             "Def": "",
@@ -178,7 +169,7 @@
             "Special": "X",
             "Start Exp": ""
         },
-        "Ogre Sellsword": {
+        "Knight": {
             "Mel": "X",
             "Rng": "",
             "Def": "X",
@@ -190,7 +181,7 @@
     },
     "Equipment": {
         "Heroes": {
-            "Aliases": ["Leader", "Hero", "Warrior", "Swordsman"],
+            "Aliases": ["Leader", "Champion", "Sniper", "Warrior", "Swordsman"],
             "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
             "Ranged Weapons": ["Short Bow", "Bow", "Long Bow", "Crossbow", "Pistol", "Rifle"],
             "Armour": ["Light Armour", "Heavy Armour"]
@@ -207,9 +198,9 @@
             "Ranged Weapons": ["Short Bow", "Bow", "Long Bow", "Crossbow", "Pistol", "Rifle", "Blunderbuss"],
             "Armour": ["Light Armour"]
         },
-        "Peasants": {
-            "Aliases": ["Peasant"],
-            "Melee Weapons": ["Dagger", "Hammer", "Spear", "Shield"],
+        "Defender": {
+            "Aliases": ["Knight", "Defender"],
+            "Melee Weapons": ["Dagger", "Hammer", "Spear", "Sword", "Shield", "Tower-Shield"],
             "Ranged Weapons": [],
             "Armour": []
         }
