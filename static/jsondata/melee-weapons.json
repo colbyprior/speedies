@@ -48,7 +48,7 @@
     "Slots": "1"
   },
   "Tower-Shield": {
-    "Name": "Shield",
+    "Name": "Tower-Shield",
     "Effect": "+6 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon.",
     "Cost": "10",
     "Slots": "1"
