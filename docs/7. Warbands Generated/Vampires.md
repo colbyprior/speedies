@@ -4,7 +4,7 @@ sidebar_label: Vampires
 # Vampires
 This team sucks... your blood!
 
-| Max Units | 15 |
+| Max Units | 12 |
 | ---- | ---- |
 | Play Style | Powerful leader with minions |
 
