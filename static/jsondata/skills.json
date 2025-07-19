@@ -272,7 +272,7 @@
   "Large": {
     "Name": "Large",
     "Type": "Inherent",
-    "Description": "This units size makes them easier to hit with ranged attacks. They suffer a -3 defense penalty against ranged."
+    "Description": "This unit may be targeted by ranged attacks even if they aren't the closest model to the shooter."
   },
   "Free Skill": {
     "Name": "Free Skill",

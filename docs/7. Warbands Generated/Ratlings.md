@@ -100,7 +100,7 @@ This unit gets +4 Inj and +3 Piercing for melee attacks.
 ### Large
 *Inherent*
 
-This units size makes them easier to hit with ranged attacks. They suffer a -3 defense penalty against ranged.
+This unit may be targeted by ranged attacks even if they aren't the closest model to the shooter.
 
 ## Rat Magic 
 
