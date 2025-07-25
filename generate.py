@@ -21,7 +21,7 @@ def generate_warbands():
             out_data += warband_helper.skills_block(all_skills, warband, warband_only=True)
 
             # print(out_data)
-            f = open(f"docs/7. Warbands Generated/{warband.get('Name')}.md", "w")
+            f = open(f"docs/7. Warbands/{warband.get('Name')}.md", "w")
             f.write(out_data)
             f.close()
 
