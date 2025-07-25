@@ -24,11 +24,17 @@ sidebar_label: Sellswords
 | Swordsman | 6 | 1 | 1 | 14 | 14 | 18 | 10 | 10 | [Bull Rush](#bull-rush) | 40 | 3 |
 | Defender | 6 | 1 | 1 | 14 | 14 | 18 | 10 | 10 |  | 35 | 3 |
 
-## Promotion Options
-| Unit | Stat Ups | Gained Skills |
-| ---- | ---- | ---- |
-| Champion | +1 Mel, +1 Def |  |
-| Sniper | +1 Ran, +2 Agi |  |
+## Skills 
+### Leader
+*Inherent*
+
+Allied units with 6" of this unit can use this morale stat for checks instead of their own.
+### Bull Rush
+*Melee*
+
+This unit gets advantage on the first round of combat when they engage an enemy
+
+## Warband Special Skills 
 
 ## Equipment
 
@@ -114,15 +120,11 @@ Defender equipment for the unit types: Knight, Defender
 | Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 | Tower-Shield | +6 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 10 | 1 |
 
-## Skills 
-### Leader
-*Inherent*
-
-Allied units with 6" of this unit can use this morale stat for checks instead of their own.
-### Bull Rush
-*Melee*
-
-This unit gets advantage on the first round of combat when they engage an enemy
+## Promotion Options
+| Unit | Stat Ups | Gained Skills |
+| ---- | ---- | ---- |
+| Champion | +1 Mel, +1 Def |  |
+| Sniper | +1 Ran, +2 Agi |  |
 
 ## Skill Ups & Starting Experience
 | Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp | Skills |
@@ -131,5 +133,3 @@ This unit gets advantage on the first round of combat when they engage an enemy
 | Champion | X |  | X |  |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Sellswords) |
 | Sniper |  | X |  | X | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility,Morale,Sellswords) |
 | Knight | X |  | X |  |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Sellswords) |
-
-## Warband Special Skills 

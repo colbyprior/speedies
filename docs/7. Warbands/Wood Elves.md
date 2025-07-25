@@ -27,35 +27,6 @@ Elves can Jump Across to a maximum distance of 6", instead of the usual 3".
 | Woodland Creature | 9 | 1 | 1 | 14 | - | - | 8 | 16 | [Follower](#follower), [Animal](#animal) | 20 | 3 |
 | Treant | 8 | 2 | 3 | 12 | - | 8 | 17 | 7 | [Fear](#fear), [+2 Piercing](#+2-piercing), [Slow](#slow) | 190 | 1 |
 
-## Promotion Options
-| Unit | Stat Ups | Gained Skills |
-| ---- | ---- | ---- |
-| Mage | - | Nature Spells |
-| Honour Guard | +1 Mel, +1 Rng, +2 Def | - |
-| Ranger | +3 Rng | - |
-
-## Equipment
-
-### Wood Elf Equipment 
-Wood Elf equipment for the unit types: All
-
-| Melee Weapon | Effect | Cost | Slots |
-| ---- | ------ | ---- | ----- |
-| Dagger | None | 2 | 1 |
-| Spear | +3 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Sword / Axe | -3 Def to target | 5 | 1 |
-| Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
-
-| Ranged Weapon | Range | Effect | Cost | Slots |
-| ---- | ----- | ------ | ---- | ----- |
-| Bow | 25" |  | 10 | 1 |
-| Long Bow | 30" |  | 15 | 1 |
-| Elvish Bow | 35" |  | 20 | 1 |
-
-| Armour | Effect | Cost |
-| ---- | ------ | ---- |
-| Light Armour | +1 Def | 15 |
-
 ## Skills 
 ### Leader
 *Inherent*
@@ -86,6 +57,34 @@ This unit gains +2 Piercing for all its attacks.
 
 This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move).
 
+## Warband Special Skills 
+### Blur
+*Wood Elves*
+
+If an enemy attempts to Engage this unit and this unit is in cover, the enemy must make an Out-of-Sight Roll as if the unit was out of Line-of-Sight.
+
+## Equipment
+
+### Wood Elf Equipment 
+Wood Elf equipment for the unit types: All
+
+| Melee Weapon | Effect | Cost | Slots |
+| ---- | ------ | ---- | ----- |
+| Dagger | None | 2 | 1 |
+| Spear | +3 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Sword / Axe | -3 Def to target | 5 | 1 |
+| Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
+
+| Ranged Weapon | Range | Effect | Cost | Slots |
+| ---- | ----- | ------ | ---- | ----- |
+| Bow | 25" |  | 10 | 1 |
+| Long Bow | 30" |  | 15 | 1 |
+| Elvish Bow | 35" |  | 20 | 1 |
+
+| Armour | Effect | Cost |
+| ---- | ------ | ---- |
+| Light Armour | +1 Def | 15 |
+
 ## Nature Spells 
 
 | Name | Check | Description |
@@ -96,6 +95,13 @@ This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move).
 | Wrath of the Forest | 99 | Bottom text. |
 
 
+## Promotion Options
+| Unit | Stat Ups | Gained Skills |
+| ---- | ---- | ---- |
+| Mage | - | Nature Spells |
+| Honour Guard | +1 Mel, +1 Rng, +2 Def | - |
+| Ranger | +3 Rng | - |
+
 ## Skill Ups & Starting Experience
 | Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
@@ -103,9 +109,3 @@ This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move).
 | Mage |  |  |  | X |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Agility,Wood%20Elves) |
 | Honour Guard | X |  |  | X |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Wood%20Elves) |
 | Ranger |  | X |  | X |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility,Wood%20Elves) |
-
-## Warband Special Skills 
-### Blur
-*Wood Elves*
-
-If an enemy attempts to Engage this unit and this unit is in cover, the enemy must make an Out-of-Sight Roll as if the unit was out of Line-of-Sight.
