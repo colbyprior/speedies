@@ -128,8 +128,11 @@ def equipment_block(warband):
         equipment_data = warband.get("Equipment").get(equipment)
 
         out_data += f"\n### {equipment} Equipment \n"
-        aliases = ", ".join(equipment_data.get("Aliases"))
-        out_data += f"{equipment} equipment for the unit types: {aliases}\n\n"
+        if equipment_data.get("Aliases"):
+            aliases = ", ".join(equipment_data.get("Aliases"))
+            out_data += f"{equipment} equipment for the unit types: {aliases}\n\n"
+        else:
+            out_data += f"{equipment_data.get('Description')}\n\n"
         if equipment_data.get("Melee Weapons"):
             out_data += f"| Melee Weapon | Effect | Cost | Slots |\n"
             out_data += f"| ---- | ------ | ---- | ----- |\n"
@@ -224,7 +227,7 @@ def spells_block(spell_schools):
 
 
 def warband_available_skills(warband):
-    out_data = "\n## Available Skills & Starting Experience\n"
+    out_data = "\n## Skill Ups & Starting Experience\n"
     out_data += f"| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp |\n"
     out_data += f"| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |\n"
     for unit in warband.get("Available Skills"):

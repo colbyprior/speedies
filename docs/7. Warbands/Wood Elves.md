@@ -96,7 +96,7 @@ This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move).
 | Wrath of the Forest | 99 | Bottom text. |
 
 
-## Available Skills & Starting Experience
+## Skill Ups & Starting Experience
 | Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Noble | X | X |  | X | X | X | 2 |

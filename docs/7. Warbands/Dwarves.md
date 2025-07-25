@@ -107,7 +107,7 @@ At the end of the Engage Phase, if there is an enemy within Line-of-Sight and En
 
 The unit is immune to Fear checks.
 
-## Available Skills & Starting Experience
+## Skill Ups & Starting Experience
 | Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Noble | X | X | X |  | X | X | 2 |

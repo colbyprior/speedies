@@ -117,7 +117,7 @@ This unit can move through the air in any direction. They must not end their mov
 | Vampire Hex | 13 | Choose one unit with 12" this unit has disadvantage on defense rolls until the start of your next turn. |
 
 
-## Available Skills & Starting Experience
+## Skill Ups & Starting Experience
 | Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Vampire Master | X | X |  |  | X | X |  |

@@ -32,8 +32,8 @@ sidebar_label: Sellswords
 
 ## Equipment
 
-### Heroes Equipment 
-Heroes equipment for the unit types: Leader, Champion, Sniper, Warrior, Swordsman
+### Sellsword General Equipment 
+Equipment for all units except Warrior, Swordsmen, Marksmen, Defender
 
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
@@ -124,7 +124,7 @@ Allied units with 6" of this unit can use this morale stat for checks instead of
 
 This unit gets advantage on the first round of combat when they engage an enemy
 
-## Available Skills & Starting Experience
+## Skill Ups & Starting Experience
 | Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Captain | X | X | X |  | X | X |  |

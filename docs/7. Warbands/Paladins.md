@@ -96,7 +96,7 @@ This unit is a boss dog that rides a mount.
 | Heal | 5 | Any one model within 2" of the caster (including themself) may be healed. The warrior is restored to his full quota of Wounds. In addition, if any friendly models within 2" are stunned or knocked down, they immediately come to their senses, stand up, and continue fighting as normal. |
 
 
-## Available Skills & Starting Experience
+## Skill Ups & Starting Experience
 | Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Justicar | X |  | X |  | X | X | 2 |

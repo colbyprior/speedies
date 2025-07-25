@@ -112,7 +112,7 @@ This unit may be targeted by ranged attacks even if they aren't the closest mode
 | Curse of rat | 7 | The spell has a range of 12" and affects a single model within range. The target must re-roll any successful defense rolls and to melee rolls until the start of your next turn. |
 
 
-## Available Skills & Starting Experience
+## Skill Ups & Starting Experience
 | Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Mastermind | X | X |  | X |  | X |  |

@@ -125,7 +125,7 @@ This unit may not have its Defense reduced by equipment.
 | Necromantic Hex | 13 | Choose a single unit within 12". The target has Disadvantage on all Checks it makes until the start of your next turn. |
 
 
-## Available Skills & Starting Experience
+## Skill Ups & Starting Experience
 | Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Necromancer | X | X |  |  | X | X | 2 |
