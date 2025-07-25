@@ -125,11 +125,11 @@ Allied units with 6" of this unit can use this morale stat for checks instead of
 This unit gets advantage on the first round of combat when they engage an enemy
 
 ## Skill Ups & Starting Experience
-| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Captain | X | X | X |  | X | X |  |
-| Champion | X |  | X |  |  | X |  |
-| Sniper |  | X |  | X | X | X |  |
-| Knight | X |  | X |  |  | X |  |
+| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp | Skills |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Captain | X | X | X |  | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Morale,Sellswords) |
+| Champion | X |  | X |  |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Sellswords) |
+| Sniper |  | X |  | X | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility,Morale,Sellswords) |
+| Knight | X |  | X |  |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Sellswords) |
 
 ## Warband Special Skills 

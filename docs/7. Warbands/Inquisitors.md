@@ -154,12 +154,12 @@ This unit cannot promote into a hero.
 
 
 ## Skill Ups & Starting Experience
-| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Inquisitor Captain | X | X | X | X | X | X |  |
-| Priest |  |  | X |  | X | X |  |
-| Inquisitor | X | X |  |  |  | X |  |
-| Inquisitor Rabble Rouser | X | X |  |  | X | X |  |
+| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp | Skills |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Inquisitor Captain | X | X | X | X | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Agility,Morale,Inquisitors) |
+| Priest |  |  | X |  | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Inquisitors) |
+| Inquisitor | X | X |  |  |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Inquisitors) |
+| Inquisitor Rabble Rouser | X | X |  |  | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Inquisitors) |
 
 ## Warband Special Skills 
 ### Extra Rabble

@@ -97,12 +97,12 @@ This unit is a boss dog that rides a mount.
 
 
 ## Skill Ups & Starting Experience
-| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Justicar | X |  | X |  | X | X | 2 |
-| Paladin | X |  |  |  | X | X |  |
-| Cleric |  |  | X |  | X | X |  |
-| Standard Bearer | X |  |  |  | X | X |  |
+| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp | Skills |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Justicar | X |  | X |  | X | X | 2 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Morale,Paladins) |
+| Paladin | X |  |  |  | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
+| Cleric |  |  | X |  | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Paladins) |
+| Standard Bearer | X |  |  |  | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
 
 ## Warband Special Skills 
 ### Determination

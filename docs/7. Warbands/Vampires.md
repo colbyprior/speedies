@@ -118,12 +118,12 @@ This unit can move through the air in any direction. They must not end their mov
 
 
 ## Skill Ups & Starting Experience
-| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Vampire Master | X | X |  |  | X | X |  |
-| Vampire Seductress |  |  |  |  | X | X |  |
-| Vampire Spawn | X | X |  | X |  | X |  |
-| Nosferatu | X |  |  |  |  | X |  |
+| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp | Skills |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Vampire Master | X | X |  |  | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Vampires) |
+| Vampire Seductress |  |  |  |  | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Vampires) |
+| Vampire Spawn | X | X |  | X |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Vampires) |
+| Nosferatu | X |  |  |  |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Vampires) |
 
 ## Warband Special Skills 
 ### Bloodsucker

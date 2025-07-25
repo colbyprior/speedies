@@ -113,12 +113,12 @@ This unit may be targeted by ranged attacks even if they aren't the closest mode
 
 
 ## Skill Ups & Starting Experience
-| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Mastermind | X | X |  | X |  | X |  |
-| Ratlock |  |  |  |  | X | X |  |
-| Strong Rat | X |  |  | X |  | X | 2 |
-| Assassin | X | X |  | X |  | X | 0 |
+| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp | Skills |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Mastermind | X | X |  | X |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
+| Ratlock |  |  |  |  | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Ratlings) |
+| Strong Rat | X |  |  | X |  | X | 2 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Ratlings) |
+| Assassin | X | X |  | X |  | X | 0 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
 
 ## Warband Special Skills 
 ### Keen Tail

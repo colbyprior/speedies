@@ -108,11 +108,11 @@ At the end of the Engage Phase, if there is an enemy within Line-of-Sight and En
 The unit is immune to Fear checks.
 
 ## Skill Ups & Starting Experience
-| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Noble | X | X | X |  | X | X | 2 |
-| Engineer |  | X | X |  |  | X |  |
-| Armourer | X |  | X |  |  | X |  |
-| Veteran | X |  | X |  |  | X |  |
+| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp | Skills |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Noble | X | X | X |  | X | X | 2 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Morale,Dwarves) |
+| Engineer |  | X | X |  |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Defense,Dwarves) |
+| Armourer | X |  | X |  |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Dwarves) |
+| Veteran | X |  | X |  |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Dwarves) |
 
 ## Warband Special Skills 

@@ -126,12 +126,12 @@ This unit may not have its Defense reduced by equipment.
 
 
 ## Skill Ups & Starting Experience
-| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Necromancer | X | X |  |  | X | X | 2 |
-| Plague Cultist | X | X |  |  |  | X |  |
-| Death Knight | X |  | X |  |  | X |  |
-| Reaper | X |  |  | X |  | X |  |
+| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp | Skills |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Necromancer | X | X |  |  | X | X | 2 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Undead) |
+| Plague Cultist | X | X |  |  |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Undead) |
+| Death Knight | X |  | X |  |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Undead) |
+| Reaper | X |  |  | X |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Undead) |
 
 ## Warband Special Skills 
 ### Advanced Necromancy

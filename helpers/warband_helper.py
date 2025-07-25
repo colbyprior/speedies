@@ -3,6 +3,19 @@ from helpers.global_data import (global_henchmen_upgrade_paths, global_skills_da
 import sys
 
 
+def get_skills_link(warband_name, skill_data):
+    filter = ""
+    if not skill_data:
+        sys.stderr.write(f"Failed to find skills for: {warband_name}")
+        sys.exit(1)
+    for short_name in skill_data.keys():
+        if skill_data.get(short_name).lower() == "x":
+            if filter:
+                filter += ","
+            filter += short_to_long(short_name, warband_name)
+    return f"[\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter={filter})"
+
+
 def clean_link(name):
     return name.lower().replace(" ", "-").replace("\"", "")
 
@@ -81,17 +94,7 @@ def heroes_table(warband):
         type_cap = hero.get('Type Cap')
         if not type_cap:
             type_cap = "None"
-        filter = ""
-        skill_data = warband.get("Available Skills").get(hero.get('Name'))
-        if not skill_data:
-            sys.stderr.write(f"Failed to find skills for: {hero.get('Name')}")
-            sys.exit(1)
-        for short_name in skill_data.keys():
-            if skill_data.get(short_name).lower() == "x":
-                if filter:
-                    filter += ","
-                filter += short_to_long(short_name, warband.get("Name"))
-        skill_link = f"[\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter={filter})"
+        skill_link = get_skills_link(warband.get("Name"), warband.get("Available Skills").get(hero.get('Name')))
         out_data += f"| {hero.get('Name')} | {hero.get('Move')} | {hero.get('Attacks')} | {hero.get('Wounds')} | {hero.get('Melee')} | {hero.get('Ranged')} | {hero.get('Defense')} | {hero.get('Agility')} | {hero.get('Morale')} | {skills_str} | {hero.get('Cost')} | {type_cap} | {skill_link} |\n"
     return out_data
 
@@ -228,9 +231,10 @@ def spells_block(spell_schools):
 
 def warband_available_skills(warband):
     out_data = "\n## Skill Ups & Starting Experience\n"
-    out_data += f"| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp |\n"
-    out_data += f"| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |\n"
+    out_data += f"| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp | Skills |\n"
+    out_data += f"| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |\n"
     for unit in warband.get("Available Skills"):
         skill_data = warband.get("Available Skills").get(unit)
-        out_data += f"| {unit} | {skill_data.get('Mel')} | {skill_data.get('Rng')} | {skill_data.get('Def')} | {skill_data.get('Agi')} | {skill_data.get('Mrl')} | {skill_data.get('Special')} | {skill_data.get('Start Exp')} |\n"
+        skills_link = get_skills_link(warband.get("Name"), skill_data)
+        out_data += f"| {unit} | {skill_data.get('Mel')} | {skill_data.get('Rng')} | {skill_data.get('Def')} | {skill_data.get('Agi')} | {skill_data.get('Mrl')} | {skill_data.get('Special')} | {skill_data.get('Start Exp')} | {skills_link} |\n"
     return out_data

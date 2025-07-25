@@ -97,12 +97,12 @@ This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move).
 
 
 ## Skill Ups & Starting Experience
-| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Noble | X | X |  | X | X | X | 2 |
-| Mage |  |  |  | X |  | X |  |
-| Honour Guard | X |  |  | X |  | X |  |
-| Ranger |  | X |  | X |  | X |  |
+| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp | Skills |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Noble | X | X |  | X | X | X | 2 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale,Wood%20Elves) |
+| Mage |  |  |  | X |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Agility,Wood%20Elves) |
+| Honour Guard | X |  |  | X |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Wood%20Elves) |
+| Ranger |  | X |  | X |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility,Wood%20Elves) |
 
 ## Warband Special Skills 
 ### Blur
