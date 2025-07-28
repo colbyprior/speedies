@@ -307,6 +307,6 @@
   "Mutation": {
     "Name": "Mutation",
     "Type": "Cultists",
-    "Description": "This unit immediately mutates as per the Cultists rules."
+    "Description": "Select one monstrosity trait for the unit to adopt. Monstrosities can't use equipment and can't mutate any further. Monstrosities lose spellcasting unless it is your leader. You can have a maximum of 3 of each monstrosity trait (combined count from heroes and henchmen)."
   }
 }

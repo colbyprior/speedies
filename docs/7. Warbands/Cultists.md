@@ -10,7 +10,7 @@ Embrace the mutations for power
 
 ## Special Rules
 ### Corruption
-Whenever a hero levels up or an Initiate is knocked out of action roll 1d20. If you manage to roll equal to or under your total experience for a hero or a 15+ for a henchmen that unit mutates. Select one monstrosity trait for the unit to adopt. Monstrosities can't use equipment and can't mutate any further. Monstrosities lose spellcasting unless it is your leader. You can have a maximum of 3 of each monstrosity trait (combined count from heroes and henchmen).
+Whenever a hero levels up or an Initiate is knocked out of action roll 1d20. If you manage to roll equal to or under your total experience for a hero that unit gains the skill Mutation (If they already have 3 skills they can still gain this skill as a fourth.). Or if you roll a 15+ for a henchmen that unit is replaced with an Initiate Monstrosity if your warband has the space.
 ### Mutation: Bile-Puker
 Ranged skill improved to at least 14. Causes fear. Gains Bile Spew: Range 10" covering a 2" diameter area effect from point. Roll attack per unit in the area of effect. Usable once per 2 turns. Can hit allies and units in melee. If a unit is hit that is in melee, all connected units are also hit.
 ### Mutation: Claw-Hulk
@@ -30,8 +30,8 @@ Melee skill improved to at least 14. Gain one extra wound. Gains one extra attac
 ## Henchmen
 | Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Initiate | 6 | 1 | 1 | 15 | 15 | 18 | 10 | 10 |  | 30 | None |
-| Initiate Monstrosity | 6 | 1 | 1 | 15 | 15 | 18 | 10 | 10 | [Mutation](#mutation) | 80 | None |
+| Initiate | 6 | 1 | 1 | 15 | 15 | 18 | 10 | 12 |  | 30 | None |
+| Initiate Monstrosity | 6 | 1 | 1 | 15 | 15 | 18 | 10 | 12 | [Mutation](#mutation) | 80 | 6 |
 
 ## Skills 
 ### Leader
@@ -47,7 +47,7 @@ This unit can cast Cult Magic and immediately learns one spell of your choice. I
 ### Mutation
 *Cultists*
 
-This unit immediately mutates as per the Cultists rules.
+Select one monstrosity trait for the unit to adopt. Monstrosities can't use equipment and can't mutate any further. Monstrosities lose spellcasting unless it is your leader. You can have a maximum of 3 of each monstrosity trait (combined count from heroes and henchmen).
 
 ## Equipment
 
