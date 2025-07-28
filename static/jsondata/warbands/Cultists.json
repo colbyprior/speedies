@@ -5,7 +5,7 @@
     "Preamble": "Embrace the mutations for power",
     "Special Rules": {
         "Corruption": "Whenever a hero levels up or an Initiate is knocked out of action roll 1d20. If you manage to roll equal to or under your total experience for a hero or a 15+ for a henchmen that unit mutates. Select one monstrosity trait for the unit to adopt. Monstrosities can't use equipment and can't mutate any further. Monstrosities lose spellcasting unless it is your leader. You can have a maximum of 3 of each monstrosity trait (combined count from heroes and henchmen).",
-        "Mutation: Bile-Puker": "Ranged skill improved to at least 14. Causes fear. Gains Bile Spew: Range 10\" 2\" diameter area effect from point. Roll attack per unit in the area of effect. Usable once per 2 turns. Can hit allies and units in melee. If a unit is hit that is in melee, all connected units are also hit.",
+        "Mutation: Bile-Puker": "Ranged skill improved to at least 14. Causes fear. Gains Bile Spew: Range 10\" covering a 2\" diameter area effect from point. Roll attack per unit in the area of effect. Usable once per 2 turns. Can hit allies and units in melee. If a unit is hit that is in melee, all connected units are also hit.",
         "Mutation: Claw-Hulk": "Melee skill improved to at least 14. Gain one extra wound. Gains one extra attack. Causes fear. Gains frenzy.",
         "Mutation: Exploding Husk": "Melee skill improved to at least 14. Causes fear. Explodes on death, all units within 3\" diameter take Melee 12 attack.",
         "Mutation: Leechspawn": "Melee skill improved to at least 14. Gain one extra wound. Gains one extra attack. Causes fear. If this unit deals a wound to an enemy they can recover one wound up to their maximum wound threshold."
@@ -106,7 +106,7 @@
             "Morale": "10",
             "Cost": 80,
             "Skills": [
-                "Muration"
+                "Mutation"
             ]
         }
     ],

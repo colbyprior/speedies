@@ -298,5 +298,15 @@
     "Name": "Follow the leader",
     "Type": "Inquisitors",
     "Description": "This unit can use the morale of the Inquisitor Rabble Rouser if they are within 6\" of them."
+  },
+  "Cult Magic": {
+    "Name": "Cult Magic",
+    "Type": "Spellcasting",
+    "Description": "This unit can cast Cult Magic and immediately learns one spell of your choice. If this unit is not a Leader, all spellcasting checks have a -2 to the roll."
+  },
+  "Mutation": {
+    "Name": "Mutation",
+    "Type": "Cultists",
+    "Description": "This unit immediately mutates as per the Cultists rules."
   }
 }
