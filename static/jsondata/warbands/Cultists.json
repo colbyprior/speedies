@@ -4,10 +4,12 @@
     "Play Style": "Balanced",
     "Preamble": "",
     "Special Rules": {
+        "Corruption": "Whenever a hero levels up roll 1d20. If you manage to roll equal to or under your total experience that hero mutates.",
+        "Mutation": "If a unit mutates they immediately: Lose all spellcasting and equipment and become a monstrosity."
     },
     "Heroes": [
         {
-            "Name": "Cult Leader",
+            "Name": "Prophet",
             "Type": "Leader",
             "Type Cap": "1",
             "Move": "6",
@@ -18,56 +20,58 @@
             "Agility": "8",
             "Attacks": "1",
             "Morale": "8",
-            "Cost": "",
+            "Cost": 0,
             "Skills": [
-                "Leader"
+                "Leader",
+                "Cult Magic"
             ]
         },
         {
-            "Name": "Champion",
+            "Name": "Acolyte",
+            "Type": "Hero",
+            "Type Cap": "2",
+            "Move": "6",
+            "Melee": "15",
+            "Ranged": "15",
+            "Defense": "18",
+            "Wounds": "1",
+            "Agility": "10",
+            "Attacks": "1",
+            "Morale": "10",
+            "Cost": 0,
+            "Skills": [
+                "Cult Magic"
+            ]
+        },
+        {
+            "Name": "Brute",
+            "Type": "Hero",
+            "Type Cap": "2",
+            "Move": "6",
+            "Melee": "13",
+            "Ranged": "-",
+            "Defense": "18",
+            "Wounds": "1",
+            "Agility": "10",
+            "Attacks": "1",
+            "Morale": "10",
+            "Cost": 0,
+            "Skills": [
+            ]
+        },
+        {
+            "Name": "Seeker",
             "Type": "Hero",
             "Type Cap": "",
             "Move": "6",
-            "Melee": "13",
+            "Melee": "14",
             "Ranged": "14",
             "Defense": "18",
             "Wounds": "1",
             "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 40,
-            "Skills": [
-            ]
-        },
-        {
-            "Name": "Sniper",
-            "Type": "Hero",
-            "Type Cap": "2",
-            "Move": "6",
-            "Melee": "14",
-            "Ranged": "13",
-            "Defense": "18",
-            "Wounds": "1",
-            "Agility": "10",
-            "Attacks": "1",
-            "Morale": "10",
-            "Cost": 40,
-            "Skills": [
-            ]
-        },
-        {
-            "Name": "Knight",
-            "Type": "Hero",
-            "Type Cap": "2",
-            "Move": "8",
-            "Melee": "13",
-            "Ranged": "-",
-            "Defense": "17",
-            "Wounds": "1",
-            "Agility": "10",
-            "Attacks": "1",
-            "Morale": "10",
-            "Cost": 40,
+            "Cost": 0,
             "Skills": []
         }
     ],
