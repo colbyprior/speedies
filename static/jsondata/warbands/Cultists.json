@@ -4,8 +4,8 @@
     "Play Style": "Balanced",
     "Preamble": "",
     "Special Rules": {
-        "Corruption": "Whenever a hero levels up roll 1d20. If you manage to roll equal to or under your total experience that hero mutates.",
-        "Mutation": "If a unit mutates they immediately: Lose all spellcasting and equipment and become a monstrosity."
+        "Monstrosity": "Whenever a hero levels up or an Initiate is knocked out of action roll 1d20. If you manage to roll equal to or under your total experience for a hero or a 14+ for a henchmen that unit mutates. Select one mutation for the unit to adopt.",
+        "Mutation: Bile-Puker": ""
     },
     "Heroes": [
         {
@@ -31,8 +31,8 @@
             "Type": "Hero",
             "Type Cap": "2",
             "Move": "6",
-            "Melee": "15",
-            "Ranged": "15",
+            "Melee": "16",
+            "Ranged": "16",
             "Defense": "18",
             "Wounds": "1",
             "Agility": "10",
@@ -77,76 +77,34 @@
     ],
     "Henchmen": [
         {
-            "Name": "Warrior",
+            "Name": "Initiate",
             "Type Cap": "",
             "Move": "6",
-            "Melee": "14",
-            "Ranged": "14",
+            "Melee": "15",
+            "Ranged": "15",
             "Defense": "18",
             "Wounds": "1",
             "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
             "Cost": 30,
-            "Skills": []
-        },
-        {
-            "Name": "Marksmen",
-            "Type Cap": "6",
-            "Move": "6",
-            "Melee": "14",
-            "Ranged": "14",
-            "Defense": "18",
-            "Wounds": "1",
-            "Agility": "10",
-            "Attacks": "1",
-            "Morale": "10",
-            "Cost": 30,
-            "Skills": []
-        },
-        {
-            "Name": "Swordsman",
-            "Type Cap": "3",
-            "Move": "6",
-            "Melee": "14",
-            "Ranged": "14",
-            "Defense": "18",
-            "Wounds": "1",
-            "Agility": "10",
-            "Attacks": "1",
-            "Morale": "10",
-            "Cost": 40,
             "Skills": [
-                "Bull Rush"
+                "Corrupted Death"
             ]
-        },
-        {
-            "Name": "Defender",
-            "Type Cap": "3",
-            "Move": "6",
-            "Melee": "14",
-            "Ranged": "14",
-            "Defense": "18",
-            "Wounds": "1",
-            "Agility": "10",
-            "Attacks": "1",
-            "Morale": "10",
-            "Cost": 35,
-            "Skills": []
         }
     ],
     "Promotion Options": {
-        "Champion": {
+        "Brute": {
             "Stat Ups": "+1 Mel, +1 Def",
             "Gained Skills": ""
         },
         "Sniper": {
-            "Stat Ups": "+1 Ran, +2 Agi",
+            "Seeker": "+1 Mel, +1 Ran, +2 Agi",
             "Gained Skills": ""
         }
     },
     "Available Skills": {
-        "Captain": {
+        "Prophet": {
             "Mel": "X",
             "Rng": "X",
             "Def": "X",
@@ -155,7 +113,16 @@
             "Special": "X",
             "Start Exp": ""
         },
-        "Champion": {
+        "Acolyte": {
+            "Mel": "",
+            "Rng": "",
+            "Def": "",
+            "Agi": "",
+            "Mrl": "X",
+            "Special": "X",
+            "Start Exp": ""
+        },
+        "Brute": {
             "Mel": "X",
             "Rng": "",
             "Def": "X",
@@ -164,49 +131,34 @@
             "Special": "X",
             "Start Exp": ""
         },
-        "Sniper": {
-            "Mel": "",
+        "Seeker": {
+            "Mel": "X",
             "Rng": "X",
             "Def": "",
             "Agi": "X",
-            "Mrl": "X",
-            "Special": "X",
-            "Start Exp": ""
-        },
-        "Knight": {
-            "Mel": "X",
-            "Rng": "",
-            "Def": "X",
-            "Agi": "",
             "Mrl": "",
             "Special": "X",
             "Start Exp": ""
         }
     },
     "Equipment": {
-        "Sellsword General": {
-            "Description": "Equipment for all units except Warrior, Swordsmen, Marksmen, Defender",
-            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
-            "Ranged Weapons": ["Short Bow", "Bow", "Long Bow", "Crossbow", "Pistol", "Rifle"],
-            "Armour": ["Light Armour", "Heavy Armour"]
-        },
-        "Warriors & Swordsman": {
-            "Aliases": ["Warrior", "Swordsman"],
-            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
-            "Ranged Weapons": [],
-            "Armour": ["Light Armour", "Heavy Armour"]
-        },
-        "Marksmen": {
-            "Aliases": ["Marksmen"],
-            "Melee Weapons": ["Dagger", "Hammer", "Sword"],
-            "Ranged Weapons": ["Short Bow", "Bow", "Long Bow", "Crossbow", "Pistol", "Rifle", "Blunderbuss"],
-            "Armour": ["Light Armour"]
-        },
-        "Defender": {
-            "Aliases": ["Knight", "Defender"],
-            "Melee Weapons": ["Dagger", "Hammer", "Spear", "Sword", "Shield", "Tower-Shield"],
+        "Prophet & Acolytes": {
+            "Aliases": ["Prophet", "Acolyte"],
+            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear"],
             "Ranged Weapons": [],
             "Armour": []
+        },
+        "Brute": {
+            "Aliases": ["Brute"],
+            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
+            "Ranged Weapons": [],
+            "Armour": ["Light Armour", "Heavy Armour"]
+        },
+        "Seeker & Initiates": {
+            "Aliases": ["Seeker", "Initiate"],
+            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear"],
+            "Ranged Weapons": ["Short Bow", "Bow"],
+            "Armour": ["Light Armour"]
         }
     }
 }
