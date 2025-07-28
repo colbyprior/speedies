@@ -1,0 +1,208 @@
+{
+    "Name": "Cultists",
+    "Max Units": "12",
+    "Play Style": "Balanced",
+    "Preamble": "",
+    "Special Rules": {
+    },
+    "Heroes": [
+        {
+            "Name": "Cult Leader",
+            "Type": "Leader",
+            "Type Cap": "1",
+            "Move": "6",
+            "Melee": "14",
+            "Ranged": "14",
+            "Defense": "18",
+            "Wounds": "1",
+            "Agility": "8",
+            "Attacks": "1",
+            "Morale": "8",
+            "Cost": "",
+            "Skills": [
+                "Leader"
+            ]
+        },
+        {
+            "Name": "Champion",
+            "Type": "Hero",
+            "Type Cap": "",
+            "Move": "6",
+            "Melee": "13",
+            "Ranged": "14",
+            "Defense": "18",
+            "Wounds": "1",
+            "Agility": "10",
+            "Attacks": "1",
+            "Morale": "10",
+            "Cost": 40,
+            "Skills": [
+            ]
+        },
+        {
+            "Name": "Sniper",
+            "Type": "Hero",
+            "Type Cap": "2",
+            "Move": "6",
+            "Melee": "14",
+            "Ranged": "13",
+            "Defense": "18",
+            "Wounds": "1",
+            "Agility": "10",
+            "Attacks": "1",
+            "Morale": "10",
+            "Cost": 40,
+            "Skills": [
+            ]
+        },
+        {
+            "Name": "Knight",
+            "Type": "Hero",
+            "Type Cap": "2",
+            "Move": "8",
+            "Melee": "13",
+            "Ranged": "-",
+            "Defense": "17",
+            "Wounds": "1",
+            "Agility": "10",
+            "Attacks": "1",
+            "Morale": "10",
+            "Cost": 40,
+            "Skills": []
+        }
+    ],
+    "Henchmen": [
+        {
+            "Name": "Warrior",
+            "Type Cap": "",
+            "Move": "6",
+            "Melee": "14",
+            "Ranged": "14",
+            "Defense": "18",
+            "Wounds": "1",
+            "Agility": "10",
+            "Attacks": "1",
+            "Morale": "10",
+            "Cost": 30,
+            "Skills": []
+        },
+        {
+            "Name": "Marksmen",
+            "Type Cap": "6",
+            "Move": "6",
+            "Melee": "14",
+            "Ranged": "14",
+            "Defense": "18",
+            "Wounds": "1",
+            "Agility": "10",
+            "Attacks": "1",
+            "Morale": "10",
+            "Cost": 30,
+            "Skills": []
+        },
+        {
+            "Name": "Swordsman",
+            "Type Cap": "3",
+            "Move": "6",
+            "Melee": "14",
+            "Ranged": "14",
+            "Defense": "18",
+            "Wounds": "1",
+            "Agility": "10",
+            "Attacks": "1",
+            "Morale": "10",
+            "Cost": 40,
+            "Skills": [
+                "Bull Rush"
+            ]
+        },
+        {
+            "Name": "Defender",
+            "Type Cap": "3",
+            "Move": "6",
+            "Melee": "14",
+            "Ranged": "14",
+            "Defense": "18",
+            "Wounds": "1",
+            "Agility": "10",
+            "Attacks": "1",
+            "Morale": "10",
+            "Cost": 35,
+            "Skills": []
+        }
+    ],
+    "Promotion Options": {
+        "Champion": {
+            "Stat Ups": "+1 Mel, +1 Def",
+            "Gained Skills": ""
+        },
+        "Sniper": {
+            "Stat Ups": "+1 Ran, +2 Agi",
+            "Gained Skills": ""
+        }
+    },
+    "Available Skills": {
+        "Captain": {
+            "Mel": "X",
+            "Rng": "X",
+            "Def": "X",
+            "Agi": "",
+            "Mrl": "X",
+            "Special": "X",
+            "Start Exp": ""
+        },
+        "Champion": {
+            "Mel": "X",
+            "Rng": "",
+            "Def": "X",
+            "Agi": "",
+            "Mrl": "",
+            "Special": "X",
+            "Start Exp": ""
+        },
+        "Sniper": {
+            "Mel": "",
+            "Rng": "X",
+            "Def": "",
+            "Agi": "X",
+            "Mrl": "X",
+            "Special": "X",
+            "Start Exp": ""
+        },
+        "Knight": {
+            "Mel": "X",
+            "Rng": "",
+            "Def": "X",
+            "Agi": "",
+            "Mrl": "",
+            "Special": "X",
+            "Start Exp": ""
+        }
+    },
+    "Equipment": {
+        "Sellsword General": {
+            "Description": "Equipment for all units except Warrior, Swordsmen, Marksmen, Defender",
+            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
+            "Ranged Weapons": ["Short Bow", "Bow", "Long Bow", "Crossbow", "Pistol", "Rifle"],
+            "Armour": ["Light Armour", "Heavy Armour"]
+        },
+        "Warriors & Swordsman": {
+            "Aliases": ["Warrior", "Swordsman"],
+            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
+            "Ranged Weapons": [],
+            "Armour": ["Light Armour", "Heavy Armour"]
+        },
+        "Marksmen": {
+            "Aliases": ["Marksmen"],
+            "Melee Weapons": ["Dagger", "Hammer", "Sword"],
+            "Ranged Weapons": ["Short Bow", "Bow", "Long Bow", "Crossbow", "Pistol", "Rifle", "Blunderbuss"],
+            "Armour": ["Light Armour"]
+        },
+        "Defender": {
+            "Aliases": ["Knight", "Defender"],
+            "Melee Weapons": ["Dagger", "Hammer", "Spear", "Sword", "Shield", "Tower-Shield"],
+            "Ranged Weapons": [],
+            "Armour": []
+        }
+    }
+}
