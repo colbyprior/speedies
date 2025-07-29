@@ -27,11 +27,41 @@ If any enemy unit dies during the post-game Injury rolls, they are raised and ad
 | Ghost | 6 | 1 | 1 | 14 | - | 13 | 11 | 13 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment), [Ethereal](#ethereal) | 40 | 3 |
 | Bone Giant | 7 | 3 | 3 | 9 | - | 7 | 14 | 13 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment) | 200 | 1 |
 
-## Promotion Options
-| Unit | Stat Ups | Gained Skills |
-| ---- | ---- | ---- |
-| Death Knight | +2 Mel, +4 Def, +1 Wnd, +3 Agi, +3 Mrl | Remove 'No Equipment' |
-| Reaper | +2 Mov, +2 Mel, +1 Atk, +5 Agi, +3 Mrl | Remove 'No Equipment' |
+## Skills 
+### Leader
+*Inherent*
+
+Allied units with 6" of this unit can use this morale stat for checks instead of their own.
+### Necromancy Spells
+*Spellcasting*
+
+This unit can cast Necromancy spells. Immediately pick one spell from this school to learn. This unit cannot use armour or a shield while casting.
+### Spread Plague
+*Inherent*
+
+Bottom text
+### Undead
+*Inherent*
+
+This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to disease (including the Plague).
+### Fear
+*Inherent*
+
+This unit causes Fear.
+### No Equipment
+*Inherent*
+
+This unit may not have any equipment, but does not suffer the penalties for fighting Unarmed.
+### Ethereal
+*Inherent*
+
+This unit may not have its Defense reduced by equipment.
+
+## Warband Special Skills 
+### Advanced Necromancy
+*Undead*
+
+This can only be taken by a Necromancer. Death Knights and Reapers can now be the target of the 'Raise Dead' spell. The Difficulty of the spell is increased by 5 when they are the target.
 
 ## Equipment
 
@@ -64,7 +94,7 @@ Reaper equipment for the unit types: Reaper
 
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
-| Great Sword | +4 to Hit, +4 to Injury, -3 Def to target | 10 | 2 |
+| Scythe (Great Sword) | +4 to Hit, +4 to Injury, -3 Def to target | 10 | 2 |
 
 ### Cultist Equipment 
 Cultist equipment for the unit types: Necromancer, Cultist
@@ -85,36 +115,6 @@ Cultist equipment for the unit types: Necromancer, Cultist
 | ---- | ------ | ---- |
 | Light Armour | +1 Def | 15 |
 
-## Skills 
-### Leader
-*Inherent*
-
-Allied units with 6" of this unit can use this morale stat for checks instead of their own.
-### Necromancy Spells
-*Spellcasting*
-
-This unit can cast Necromancy spells. Immediately pick one spell from this school to learn. This unit cannot use armour or a shield while casting.
-### Spread Plague
-*Inherent*
-
-Bottom text
-### Undead
-*Inherent*
-
-This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to disease (including the Plague).
-### Fear
-*Inherent*
-
-This unit causes Fear.
-### No Equipment
-*Inherent*
-
-This unit may not have any equipment, but does not suffer the penalties for fighting Unarmed.
-### Ethereal
-*Inherent*
-
-This unit may not have its Defense reduced by equipment.
-
 ## Necromancy Spells 
 
 | Name | Check | Description |
@@ -125,16 +125,16 @@ This unit may not have its Defense reduced by equipment.
 | Necromantic Hex | 13 | Choose a single unit within 12". The target has Disadvantage on all Checks it makes until the start of your next turn. |
 
 
-## Available Skills & Starting Experience
-| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Necromancer | X | X |  |  | X | X | 2 |
-| Plague Cultist | X | X |  |  |  | X |  |
-| Death Knight | X |  | X |  |  | X |  |
-| Reaper | X |  |  | X |  | X |  |
+## Promotion Options
+| Unit | Stat Ups | Gained Skills |
+| ---- | ---- | ---- |
+| Death Knight | +2 Mel, +4 Def, +1 Wnd, +3 Agi, +3 Mrl | Remove 'No Equipment' |
+| Reaper | +2 Mov, +2 Mel, +1 Atk, +5 Agi, +3 Mrl | Remove 'No Equipment' |
 
-## Warband Special Skills 
-### Advanced Necromancy
-*Undead*
-
-This can only be taken by a Necromancer. Death Knights and Reapers can now be the target of the 'Raise Dead' spell. The Difficulty of the spell is increased by 5 when they are the target.
+## Skill Ups & Starting Experience
+| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp | Skills |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Necromancer | X | X |  |  | X | X | 2 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Undead) |
+| Plague Cultist | X | X |  |  |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Undead) |
+| Death Knight | X |  | X |  |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Undead) |
+| Reaper | X |  |  | X |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Undead) |

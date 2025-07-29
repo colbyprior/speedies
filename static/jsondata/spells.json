@@ -118,5 +118,29 @@
     "School": "Rat Magic",
     "Check": "7",
     "Description": "The spell has a range of 12\" and affects a single model within range. The target must re-roll any successful defense rolls and to melee rolls until the start of your next turn."
+  },
+  "Writheform": {
+    "Name": "Writheform",
+    "School": "Cult Magic",
+    "Check": "11",
+    "Description": "Caster gains +1 attack this turn and if they charged this turn their target must make an immediate fear check."
+  },
+  "Bend Flesh": {
+    "Name": "Bend Flesh",
+    "School": "Cult Magic",
+    "Check": "11",
+    "Description": "A unit other than the caster within 10\" gains +4 defence this turn."
+  },
+  "Spew Bile": {
+    "Name": "Spew Bile",
+    "School": "Cult Magic",
+    "Check": "13",
+    "Description": "Range 10\" covering a 2\" diameter area effect from point. Roll an attack with the target 14 per unit in the area of effect. Can hit allies and units in melee. If a unit is hit that is in melee, all connected units are also hit."
+  },
+  "Touch of Madness": {
+    "Name": "Touch of Madness",
+    "School": "Cult Magic",
+    "Check": "16",
+    "Description": "Target you are in melee against becomes knocked down."
   }
 }

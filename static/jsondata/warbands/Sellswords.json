@@ -180,8 +180,8 @@
         }
     },
     "Equipment": {
-        "Heroes": {
-            "Aliases": ["Leader", "Champion", "Sniper", "Warrior", "Swordsman"],
+        "Sellsword General": {
+            "Description": "Equipment for all units except Warrior, Swordsmen, Marksmen, Defender",
             "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
             "Ranged Weapons": ["Short Bow", "Bow", "Long Bow", "Crossbow", "Pistol", "Rifle"],
             "Armour": ["Light Armour", "Heavy Armour"]

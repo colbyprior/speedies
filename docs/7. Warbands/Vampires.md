@@ -27,10 +27,41 @@ If any enemy Hero dies during the post-game Injury rolls, they transform into a 
 | Dire Wolf | 8 | 1 | 1 | 10 | - | 19 | 14 | 18 | [Undead](#undead), [Bull Rush](#bull-rush), [Animal](#animal) | 30 | 4 |
 | Giant Bat | 6 | 1 | 1 | 15 | - | 19 | 10 | 14 | [Flying](#flying), [Animal](#animal) | 20 | 4 |
 
-## Promotion Options
-| Unit | Stat Ups | Gained Skills |
-| ---- | ---- | ---- |
-| Vampire Spawn | +2 Mov, Mel, Ran, Def, Agi | Undead |
+## Skills 
+### Leader
+*Inherent*
+
+Allied units with 6" of this unit can use this morale stat for checks instead of their own.
+### Undead
+*Inherent*
+
+This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to disease (including the Plague).
+### Vampire Seduction
+*Spellcasting*
+
+This unit can cast Vampire Seduction spells.
+### No Equipment
+*Inherent*
+
+This unit may not have any equipment, but does not suffer the penalties for fighting Unarmed.
+### Bull Rush
+*Melee*
+
+This unit gets advantage on the first round of combat when they engage an enemy
+### Animal
+*Inherent*
+
+This unit cannot Promote, make Climb checks, or pick up Treasure. They can still go up ladders.
+### Flying
+*Inherent*
+
+This unit can move through the air in any direction. They must not end their movement in the air.
+
+## Warband Special Skills 
+### Bloodsucker
+*Vampires*
+
+If this unit takes out another unit in melee they may recover one wound. If this units max wounds are 1, this temporarily takes it to 2 for the remainder of the battle.
 
 ## Equipment
 
@@ -77,36 +108,6 @@ Thralls equipment for the unit types: Leader, Hero
 | Light Armour | +1 Def | 15 |
 | Heavy Armour | +2 Def | 30 |
 
-## Skills 
-### Leader
-*Inherent*
-
-Allied units with 6" of this unit can use this morale stat for checks instead of their own.
-### Undead
-*Inherent*
-
-This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to disease (including the Plague).
-### Vampire Seduction
-*Spellcasting*
-
-This unit can cast Vampire Seduction spells.
-### No Equipment
-*Inherent*
-
-This unit may not have any equipment, but does not suffer the penalties for fighting Unarmed.
-### Bull Rush
-*Melee*
-
-This unit gets advantage on the first round of combat when they engage an enemy
-### Animal
-*Inherent*
-
-This unit cannot Promote, make Climb checks, or pick up Treasure. They can still go up ladders.
-### Flying
-*Inherent*
-
-This unit can move through the air in any direction. They must not end their movement in the air.
-
 ## Vampire Seduction 
 
 | Name | Check | Description |
@@ -117,16 +118,15 @@ This unit can move through the air in any direction. They must not end their mov
 | Vampire Hex | 13 | Choose one unit with 12" this unit has disadvantage on defense rolls until the start of your next turn. |
 
 
-## Available Skills & Starting Experience
-| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Vampire Master | X | X |  |  | X | X |  |
-| Vampire Seductress |  |  |  |  | X | X |  |
-| Vampire Spawn | X | X |  | X |  | X |  |
-| Nosferatu | X |  |  |  |  | X |  |
+## Promotion Options
+| Unit | Stat Ups | Gained Skills |
+| ---- | ---- | ---- |
+| Vampire Spawn | +2 Mov, Mel, Ran, Def, Agi | Undead |
 
-## Warband Special Skills 
-### Bloodsucker
-*Vampires*
-
-If this unit takes out another unit in melee they may recover one wound. If this units max wounds are 1, this temporarily takes it to 2 for the remainder of the battle.
+## Skill Ups & Starting Experience
+| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp | Skills |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Vampire Master | X | X |  |  | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Vampires) |
+| Vampire Seductress |  |  |  |  | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Vampires) |
+| Vampire Spawn | X | X |  | X |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Vampires) |
+| Nosferatu | X |  |  |  |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Vampires) |

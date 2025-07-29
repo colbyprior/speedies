@@ -27,10 +27,41 @@ At the start of each game roll morale once per hero. For each success you get a 
 | Rabble | 6 | 1 | 1 | 17 | 17 | - | 12 | 14 | [Follow the leader](#follow-the-leader) | - | See Rabble Rouser skill |
 | Hounds | 8 | 1 | 1 | 12 | - | 18 | 10 | 15 | [+2 Piercing](#+2-piercing) | 15 | 5 |
 
-## Promotion Options
-| Unit | Stat Ups | Gained Skills |
-| ---- | ---- | ---- |
-| Inquisitor | +2 Mel, +2 Ran, +2 Def | Free Skill, Hates Magic |
+## Skills 
+### Leader
+*Inherent*
+
+Allied units with 6" of this unit can use this morale stat for checks instead of their own.
+### Burn the Heretic
+*Inherent*
+
+This unit gets a +2 injury modifier against all enemy heroes for melee and ranged attacks.
+### Prayers
+*Spellcasting*
+
+This unit can cast Prayer spells. Immediately pick one spell from this school to learn. This unit can still use armour and a shield while casting, unlike other spell types.
+### Fearless
+*Morale*
+
+The unit is immune to Fear checks.
+### +2 Piercing
+*Inherent*
+
+This unit gains +2 Piercing for all its attacks.
+### Can't promote
+*Inherent*
+
+This unit cannot promote into a hero.
+
+## Warband Special Skills 
+### Extra Rabble
+*Inquisitors*
+
+This unit counts as two heroes for the purposes of the rabble rouser skill.
+### Follow the leader
+*Inquisitors*
+
+This unit can use the morale of the Inquisitor Rabble Rouser if they are within 6" of them.
 
 ## Equipment
 
@@ -114,34 +145,8 @@ Rabble equipment for the unit types: Leader, Hero
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
 | Spear | +3 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Pike | +7 to Hit, +4 to Injury | 10 | 2 |
+| Pitchfork (Pike) | +7 to Hit, +4 to Injury | 10 | 2 |
 | Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
-
-## Skills 
-### Leader
-*Inherent*
-
-Allied units with 6" of this unit can use this morale stat for checks instead of their own.
-### Burn the Heretic
-*Inherent*
-
-This unit gets a +2 injury modifier against all enemy heroes for melee and ranged attacks.
-### Prayers
-*Spellcasting*
-
-This unit can cast Prayer spells. Immediately pick one spell from this school to learn. This unit can still use armour and a shield while casting, unlike other spell types.
-### Fearless
-*Morale*
-
-The unit is immune to Fear checks.
-### +2 Piercing
-*Inherent*
-
-This unit gains +2 Piercing for all its attacks.
-### Can't promote
-*Inherent*
-
-This unit cannot promote into a hero.
 
 ## Prayers 
 
@@ -153,20 +158,15 @@ This unit cannot promote into a hero.
 | Heal | 5 | Any one model within 2" of the caster (including themself) may be healed. The warrior is restored to his full quota of Wounds. In addition, if any friendly models within 2" are stunned or knocked down, they immediately come to their senses, stand up, and continue fighting as normal. |
 
 
-## Available Skills & Starting Experience
-| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Inquisitor Captain | X | X | X | X | X | X |  |
-| Priest |  |  | X |  | X | X |  |
-| Inquisitor | X | X |  |  |  | X |  |
-| Inquisitor Rabble Rouser | X | X |  |  | X | X |  |
+## Promotion Options
+| Unit | Stat Ups | Gained Skills |
+| ---- | ---- | ---- |
+| Inquisitor | +2 Mel, +2 Ran, +2 Def | Free Skill, Hates Magic |
 
-## Warband Special Skills 
-### Extra Rabble
-*Inquisitors*
-
-This unit counts as two heroes for the purposes of the rabble rouser skill.
-### Follow the leader
-*Inquisitors*
-
-This unit can use the morale of the Inquisitor Rabble Rouser if they are within 6" of them.
+## Skill Ups & Starting Experience
+| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp | Skills |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Inquisitor Captain | X | X | X | X | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Agility,Morale,Inquisitors) |
+| Priest |  |  | X |  | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Inquisitors) |
+| Inquisitor | X | X |  |  |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Inquisitors) |
+| Inquisitor Rabble Rouser | X | X |  |  | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Inquisitors) |

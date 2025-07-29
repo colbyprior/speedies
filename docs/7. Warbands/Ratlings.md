@@ -27,47 +27,6 @@ Is a rat
 | Giant Rat | 8 | 1 | 1 | 14 | - | - | 8 | 18 | [Animal](#animal) | 10 | 4 |
 | Rat Monster | 8 | 3 | 3 | 7 | - | 7 | 8 | 18 | [Stupid](#stupid), [Fear](#fear), [Big Hitter 2](#big-hitter-2), [Large](#large) | 210 | 1 |
 
-## Promotion Options
-| Unit | Stat Ups | Gained Skills |
-| ---- | ---- | ---- |
-| Strong Rat | +2 Mel, +1 Def |  |
-| Sneaky Rat | +1 Mel, +1 Ran, +2 Agi |  |
-
-## Equipment
-
-### Rats Equipment 
-Rats equipment for the unit types: Leader, Hero, Rat Boi
-
-| Melee Weapon | Effect | Cost | Slots |
-| ---- | ------ | ---- | ----- |
-| Dagger | None | 2 | 1 |
-| Hammer | +1 Injury | 5 | 1 |
-| Sword / Axe | -3 Def to target | 5 | 1 |
-| Spear | +3 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Fighting Claws | -3 Def to target, +1 Attack. You roll agility with advantage. | 20 | 2 |
-
-| Ranged Weapon | Range | Effect | Cost | Slots |
-| ---- | ----- | ------ | ---- | ----- |
-| Sling | 15" |  | 5 | 1 |
-| Throwing Stars | 15" | Thrown | 10 | 1 |
-| Pistol | 10" | Long Reload, Deadly, Armour Piercing, Close Quarters | 15 | 1 |
-
-| Armour | Effect | Cost |
-| ---- | ------ | ---- |
-| Light Armour | +1 Def | 15 |
-
-### Rat Underlings Equipment 
-Rat Underlings equipment for the unit types: Rat Underlings
-
-| Melee Weapon | Effect | Cost | Slots |
-| ---- | ------ | ---- | ----- |
-| Dagger | None | 2 | 1 |
-| Hammer | +1 Injury | 5 | 1 |
-
-| Ranged Weapon | Range | Effect | Cost | Slots |
-| ---- | ----- | ------ | ---- | ----- |
-| Sling | 15" |  | 5 | 1 |
-
 ## Skills 
 ### Leader
 *Inherent*
@@ -102,6 +61,47 @@ This unit gets +4 Inj and +3 Piercing for melee attacks.
 
 This unit may be targeted by ranged attacks even if they aren't the closest model to the shooter.
 
+## Warband Special Skills 
+### Keen Tail
+*Ratlings*
+
+This unit can use their tail to equip a one handed weapon as though it was another arm gaining an extra attack.
+
+## Equipment
+
+### Rats Equipment 
+Rats equipment for the unit types: Leader, Hero, Rat Boi
+
+| Melee Weapon | Effect | Cost | Slots |
+| ---- | ------ | ---- | ----- |
+| Dagger | None | 2 | 1 |
+| Club (Hammer) | +1 Injury | 5 | 1 |
+| Sword / Axe | -3 Def to target | 5 | 1 |
+| Spear | +3 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Fighting Claws | -3 Def to target, +1 Attack. You roll agility with advantage. | 20 | 2 |
+
+| Ranged Weapon | Range | Effect | Cost | Slots |
+| ---- | ----- | ------ | ---- | ----- |
+| Sling | 15" |  | 5 | 1 |
+| Throwing Stars | 15" | Thrown | 10 | 1 |
+| Pistol | 10" | Long Reload, Deadly, Armour Piercing, Close Quarters | 15 | 1 |
+
+| Armour | Effect | Cost |
+| ---- | ------ | ---- |
+| Light Armour | +1 Def | 15 |
+
+### Rat Underlings Equipment 
+Rat Underlings equipment for the unit types: Rat Underlings
+
+| Melee Weapon | Effect | Cost | Slots |
+| ---- | ------ | ---- | ----- |
+| Dagger | None | 2 | 1 |
+| Club (Hammer) | +1 Injury | 5 | 1 |
+
+| Ranged Weapon | Range | Effect | Cost | Slots |
+| ---- | ----- | ------ | ---- | ----- |
+| Sling | 15" |  | 5 | 1 |
+
 ## Rat Magic 
 
 | Name | Check | Description |
@@ -112,16 +112,16 @@ This unit may be targeted by ranged attacks even if they aren't the closest mode
 | Curse of rat | 7 | The spell has a range of 12" and affects a single model within range. The target must re-roll any successful defense rolls and to melee rolls until the start of your next turn. |
 
 
-## Available Skills & Starting Experience
-| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Mastermind | X | X |  | X |  | X |  |
-| Ratlock |  |  |  |  | X | X |  |
-| Strong Rat | X |  |  | X |  | X | 2 |
-| Assassin | X | X |  | X |  | X | 0 |
+## Promotion Options
+| Unit | Stat Ups | Gained Skills |
+| ---- | ---- | ---- |
+| Strong Rat | +2 Mel, +1 Def |  |
+| Sneaky Rat | +1 Mel, +1 Ran, +2 Agi |  |
 
-## Warband Special Skills 
-### Keen Tail
-*Ratlings*
-
-This unit can use their tail to equip a one handed weapon as though it was another arm gaining an extra attack.
+## Skill Ups & Starting Experience
+| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp | Skills |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Mastermind | X | X |  | X |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
+| Ratlock |  |  |  |  | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Ratlings) |
+| Strong Rat | X |  |  | X |  | X | 2 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Ratlings) |
+| Assassin | X | X |  | X |  | X | 0 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |

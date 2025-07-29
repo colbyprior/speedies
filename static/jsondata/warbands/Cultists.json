@@ -1,0 +1,181 @@
+{
+    "Name": "Cultists",
+    "Max Units": "12",
+    "Play Style": "Weak units mutate into monstrosities",
+    "Preamble": "Embrace the mutations for power",
+    "Special Rules": {
+        "Corruption": "Whenever a hero levels up or an Initiate is knocked out of action roll 1d20. If you manage to roll equal to or under your total experience for a hero that unit gains the skill Mutation (If they already have 3 skills they can still gain this skill as a fourth.). Or if you roll a 15+ for a henchmen that unit is replaced with an Initiate Monstrosity if your warband has the space.",
+        "Mutation: Bile-Puker": "Ranged skill improved to at least 14. Causes fear. Gains Bile Spew: Range 10\" covering a 2\" diameter area effect from point. Roll attack per unit in the area of effect. Usable once per 2 turns. Can hit allies and units in melee. If a unit is hit that is in melee, all connected units are also hit.",
+        "Mutation: Claw-Hulk": "Melee skill improved to at least 14. Gain one extra wound. Gains one extra attack. Causes fear. Gains frenzy.",
+        "Mutation: Exploding Husk": "Melee skill improved to at least 14. Causes fear. Explodes on death, all units within 3\" diameter take Melee 12 attack.",
+        "Mutation: Leechspawn": "Melee skill improved to at least 14. Gain one extra wound. Gains one extra attack. Causes fear. If this unit deals a wound to an enemy they can recover one wound up to their maximum wound threshold."
+    },
+    "Heroes": [
+        {
+            "Name": "Prophet",
+            "Type": "Leader",
+            "Type Cap": "1",
+            "Move": "6",
+            "Melee": "14",
+            "Ranged": "14",
+            "Defense": "18",
+            "Wounds": "1",
+            "Agility": "8",
+            "Attacks": "1",
+            "Morale": "8",
+            "Cost": 90,
+            "Skills": [
+                "Leader",
+                "Cult Magic"
+            ]
+        },
+        {
+            "Name": "Acolyte",
+            "Type": "Hero",
+            "Type Cap": "2",
+            "Move": "6",
+            "Melee": "16",
+            "Ranged": "16",
+            "Defense": "18",
+            "Wounds": "1",
+            "Agility": "10",
+            "Attacks": "1",
+            "Morale": "10",
+            "Cost": 50,
+            "Skills": [
+                "Cult Magic"
+            ]
+        },
+        {
+            "Name": "Brute",
+            "Type": "Hero",
+            "Type Cap": "2",
+            "Move": "6",
+            "Melee": "13",
+            "Ranged": "-",
+            "Defense": "18",
+            "Wounds": "1",
+            "Agility": "10",
+            "Attacks": "1",
+            "Morale": "10",
+            "Cost": 50,
+            "Skills": [
+            ]
+        },
+        {
+            "Name": "Seeker",
+            "Type": "Hero",
+            "Type Cap": "",
+            "Move": "6",
+            "Melee": "14",
+            "Ranged": "14",
+            "Defense": "18",
+            "Wounds": "1",
+            "Agility": "10",
+            "Attacks": "1",
+            "Morale": "10",
+            "Cost": 50,
+            "Skills": []
+        }
+    ],
+    "Henchmen": [
+        {
+            "Name": "Initiate",
+            "Type Cap": "",
+            "Move": "6",
+            "Melee": "15",
+            "Ranged": "15",
+            "Defense": "18",
+            "Wounds": "1",
+            "Agility": "10",
+            "Attacks": "1",
+            "Morale": "12",
+            "Cost": 30,
+            "Skills": []
+        },
+        {
+            "Name": "Initiate Monstrosity",
+            "Type Cap": "6",
+            "Move": "6",
+            "Melee": "15",
+            "Ranged": "15",
+            "Defense": "18",
+            "Wounds": "1",
+            "Agility": "10",
+            "Attacks": "1",
+            "Morale": "12",
+            "Cost": 90,
+            "Skills": [
+                "Mutation"
+            ]
+        }
+    ],
+    "Promotion Options": {
+        "Brute": {
+            "Stat Ups": "+1 Mel, +1 Def",
+            "Gained Skills": ""
+        },
+        "Seeker": {
+            "Stat Ups": "+1 Mel, +1 Ran, +2 Agi",
+            "Gained Skills": ""
+        }
+    },
+    "Available Skills": {
+        "Prophet": {
+            "Mel": "X",
+            "Rng": "X",
+            "Def": "X",
+            "Agi": "",
+            "Mrl": "X",
+            "Special": "X",
+            "Start Exp": ""
+        },
+        "Acolyte": {
+            "Mel": "",
+            "Rng": "",
+            "Def": "",
+            "Agi": "",
+            "Mrl": "X",
+            "Special": "X",
+            "Start Exp": ""
+        },
+        "Brute": {
+            "Mel": "X",
+            "Rng": "",
+            "Def": "X",
+            "Agi": "",
+            "Mrl": "",
+            "Special": "X",
+            "Start Exp": ""
+        },
+        "Seeker": {
+            "Mel": "X",
+            "Rng": "X",
+            "Def": "",
+            "Agi": "X",
+            "Mrl": "",
+            "Special": "X",
+            "Start Exp": ""
+        }
+    },
+    "Equipment": {
+        "Prophet & Acolytes": {
+            "Aliases": ["Prophet", "Acolyte"],
+            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear"],
+            "Ranged Weapons": [],
+            "Armour": []
+        },
+        "Brute": {
+            "Aliases": ["Brute"],
+            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
+            "Ranged Weapons": [],
+            "Armour": ["Light Armour", "Heavy Armour"]
+        },
+        "Seeker & Initiates": {
+            "Aliases": ["Seeker", "Initiate"],
+            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Shield"],
+            "Ranged Weapons": ["Short Bow", "Bow"],
+            "Armour": ["Light Armour"]
+        }
+    }
+}

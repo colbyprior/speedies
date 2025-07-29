@@ -298,5 +298,15 @@
     "Name": "Follow the leader",
     "Type": "Inquisitors",
     "Description": "This unit can use the morale of the Inquisitor Rabble Rouser if they are within 6\" of them."
+  },
+  "Cult Magic": {
+    "Name": "Cult Magic",
+    "Type": "Spellcasting",
+    "Description": "This unit can cast Cult Magic and immediately learns one spell of your choice. If this unit is not a Leader, all spellcasting checks have a -2 to the roll."
+  },
+  "Mutation": {
+    "Name": "Mutation",
+    "Type": "Cultists",
+    "Description": "Select one monstrosity trait for the unit to adopt. Monstrosities can't use equipment and can't mutate any further. Monstrosities lose spellcasting unless it is your leader. You can have a maximum of 3 of each monstrosity trait (combined count from heroes and henchmen)."
   }
 }

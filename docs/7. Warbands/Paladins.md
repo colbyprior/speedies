@@ -27,35 +27,6 @@ Paladins don't actually have any but this is a test.
 | Monk | 7 | 1 | 1 | 15 | 14 | 19 | 8 | 10 | [Ki Strike](#ki-strike), [No Equipment](#no-equipment) | 40 | 3 |
 | Cavalier | 9 | 1 | 2 | 15 | 14 | 19 | 11 | 10 | [Mounted](#mounted) | 45 | 3 |
 
-## Promotion Options
-| Unit | Stat Ups | Gained Skills |
-| ---- | ---- | ---- |
-| Paladin | +2 Mel, +1 Def | - |
-| Cleric | - | Healer |
-| Standard Bearer | +3 Mrl | Holy Standard |
-
-## Equipment
-
-### Paladin Equipment 
-Paladin equipment for the unit types: Leader, Hero, Squire, Novice
-
-| Melee Weapon | Effect | Cost | Slots |
-| ---- | ------ | ---- | ----- |
-| Hammer | +1 Injury | 5 | 1 |
-| Blessed Hammer | -3 Def to target, +1 Injury, +3 Melee against Undead. Only heroes can dual-wield. | 15 | 1 |
-| Whip | +1 Atk in the first round of combat when you charge | 10 | 1 |
-| Great Hammer | +4 Mel, +5 to Injury | 10 | 2 |
-| Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
-
-| Ranged Weapon | Range | Effect | Cost | Slots |
-| ---- | ----- | ------ | ---- | ----- |
-| Sling | 15" |  | 5 | 1 |
-
-| Armour | Effect | Cost |
-| ---- | ------ | ---- |
-| Light Armour | +1 Def | 15 |
-| Heavy Armour | +2 Def | 30 |
-
 ## Skills 
 ### Leader
 *Inherent*
@@ -86,6 +57,34 @@ This unit may not have any equipment, but does not suffer the penalties for figh
 
 This unit is a boss dog that rides a mount.
 
+## Warband Special Skills 
+### Determination
+*Paladins*
+
+This unit may re-roll their first failed morale check of each battle.
+
+## Equipment
+
+### Paladin Equipment 
+Paladin equipment for the unit types: Leader, Hero, Squire, Novice
+
+| Melee Weapon | Effect | Cost | Slots |
+| ---- | ------ | ---- | ----- |
+| Hammer | +1 Injury | 5 | 1 |
+| Blessed Hammer | -3 Def to target, +1 Injury, +3 Melee against Undead. Only heroes can dual-wield. | 15 | 1 |
+| Whip | +1 Atk in the first round of combat when you charge | 10 | 1 |
+| Great Hammer | +4 Mel, +5 to Injury | 10 | 2 |
+| Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
+
+| Ranged Weapon | Range | Effect | Cost | Slots |
+| ---- | ----- | ------ | ---- | ----- |
+| Sling | 15" |  | 5 | 1 |
+
+| Armour | Effect | Cost |
+| ---- | ------ | ---- |
+| Light Armour | +1 Def | 15 |
+| Heavy Armour | +2 Def | 30 |
+
 ## Prayers 
 
 | Name | Check | Description |
@@ -96,16 +95,17 @@ This unit is a boss dog that rides a mount.
 | Heal | 5 | Any one model within 2" of the caster (including themself) may be healed. The warrior is restored to his full quota of Wounds. In addition, if any friendly models within 2" are stunned or knocked down, they immediately come to their senses, stand up, and continue fighting as normal. |
 
 
-## Available Skills & Starting Experience
-| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Justicar | X |  | X |  | X | X | 2 |
-| Paladin | X |  |  |  | X | X |  |
-| Cleric |  |  | X |  | X | X |  |
-| Standard Bearer | X |  |  |  | X | X |  |
+## Promotion Options
+| Unit | Stat Ups | Gained Skills |
+| ---- | ---- | ---- |
+| Paladin | +2 Mel, +1 Def | - |
+| Cleric | - | Healer |
+| Standard Bearer | +3 Mrl | Holy Standard |
 
-## Warband Special Skills 
-### Determination
-*Paladins*
-
-This unit may re-roll their first failed morale check of each battle.
+## Skill Ups & Starting Experience
+| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp | Skills |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Justicar | X |  | X |  | X | X | 2 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Morale,Paladins) |
+| Paladin | X |  |  |  | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
+| Cleric |  |  | X |  | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Paladins) |
+| Standard Bearer | X |  |  |  | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
