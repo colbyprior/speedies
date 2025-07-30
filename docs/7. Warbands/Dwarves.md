@@ -110,9 +110,9 @@ Gunner equipment for the unit types: Gunner, Engineer
 | Veteran | +1 Mel | - |
 
 ## Skill Ups & Starting Experience
-| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp | Skills |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Noble | X | X | X |  | X | X | 2 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Morale,Dwarves) |
-| Engineer |  | X | X |  |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Defense,Dwarves) |
-| Armourer | X |  | X |  |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Dwarves) |
-| Veteran | X |  | X |  |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Dwarves) |
+| Units | Mel | Rng | Def | Agi | Mrl | Special | Skills |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Noble | X | X | X |  | X | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Morale,Dwarves) |
+| Engineer |  | X | X |  |  | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Defense,Dwarves) |
+| Armourer | X |  | X |  |  | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Dwarves) |
+| Veteran | X |  | X |  |  | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Dwarves) |

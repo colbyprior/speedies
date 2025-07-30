@@ -148,8 +148,7 @@
             "Def": "X",
             "Agi": "",
             "Mrl": "X",
-            "Special": "X",
-            "Start Exp": ""
+            "Special": "X"
         },
         "Champion": {
             "Mel": "X",
@@ -157,8 +156,7 @@
             "Def": "X",
             "Agi": "",
             "Mrl": "",
-            "Special": "X",
-            "Start Exp": ""
+            "Special": "X"
         },
         "Sniper": {
             "Mel": "",
@@ -166,8 +164,7 @@
             "Def": "",
             "Agi": "X",
             "Mrl": "X",
-            "Special": "X",
-            "Start Exp": ""
+            "Special": "X"
         },
         "Knight": {
             "Mel": "X",
@@ -175,8 +172,7 @@
             "Def": "X",
             "Agi": "",
             "Mrl": "",
-            "Special": "X",
-            "Start Exp": ""
+            "Special": "X"
         }
     },
     "Equipment": {

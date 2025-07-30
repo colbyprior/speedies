@@ -103,9 +103,9 @@ Paladin equipment for the unit types: Leader, Hero, Squire, Novice
 | Standard Bearer | +3 Mrl | Holy Standard |
 
 ## Skill Ups & Starting Experience
-| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp | Skills |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Justicar | X |  | X |  | X | X | 2 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Morale,Paladins) |
-| Paladin | X |  |  |  | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
-| Cleric |  |  | X |  | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Paladins) |
-| Standard Bearer | X |  |  |  | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
+| Units | Mel | Rng | Def | Agi | Mrl | Special | Skills |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Justicar | X |  | X |  | X | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Morale,Paladins) |
+| Paladin | X |  |  |  | X | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
+| Cleric |  |  | X |  | X | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Paladins) |
+| Standard Bearer | X |  |  |  | X | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |

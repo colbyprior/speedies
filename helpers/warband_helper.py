@@ -231,10 +231,10 @@ def spells_block(spell_schools):
 
 def warband_available_skills(warband):
     out_data = "\n## Skill Ups & Starting Experience\n"
-    out_data += f"| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp | Skills |\n"
-    out_data += f"| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |\n"
+    out_data += f"| Units | Mel | Rng | Def | Agi | Mrl | Special | Skills |\n"
+    out_data += f"| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |\n"
     for unit in warband.get("Available Skills"):
         skill_data = warband.get("Available Skills").get(unit)
         skills_link = get_skills_link(warband.get("Name"), skill_data)
-        out_data += f"| {unit} | {skill_data.get('Mel')} | {skill_data.get('Rng')} | {skill_data.get('Def')} | {skill_data.get('Agi')} | {skill_data.get('Mrl')} | {skill_data.get('Special')} | {skill_data.get('Start Exp')} | {skills_link} |\n"
+        out_data += f"| {unit} | {skill_data.get('Mel')} | {skill_data.get('Rng')} | {skill_data.get('Def')} | {skill_data.get('Agi')} | {skill_data.get('Mrl')} | {skill_data.get('Special')} | {skills_link} |\n"
     return out_data

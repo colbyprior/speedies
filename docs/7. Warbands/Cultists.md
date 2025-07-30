@@ -22,16 +22,16 @@ Melee skill improved to at least 14. Gain one extra wound. Gains one extra attac
 ## Heroes
 | Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Prophet | 6 | 1 | 1 | 14 | 14 | 18 | 8 | 8 | [Leader](#leader), [Cult Magic](#cult-magic) | 0 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Morale,Cultists) |
-| Acolyte | 6 | 1 | 1 | 16 | 16 | 18 | 10 | 10 | [Cult Magic](#cult-magic) | 0 | 2 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Cultists) |
-| Brute | 6 | 1 | 1 | 13 | - | 18 | 10 | 10 |  | 0 | 2 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Cultists) |
-| Seeker | 6 | 1 | 1 | 14 | 14 | 18 | 10 | 10 |  | 0 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Cultists) |
+| Prophet | 6 | 1 | 1 | 14 | 14 | 18 | 8 | 8 | [Leader](#leader), [Cult Magic](#cult-magic) | 90 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Morale,Cultists) |
+| Acolyte | 6 | 1 | 1 | 16 | 16 | 18 | 10 | 10 | [Cult Magic](#cult-magic) | 50 | 2 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Cultists) |
+| Brute | 6 | 1 | 1 | 13 | - | 18 | 10 | 10 |  | 50 | 2 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Cultists) |
+| Seeker | 6 | 1 | 1 | 14 | 14 | 18 | 10 | 10 |  | 50 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Cultists) |
 
 ## Henchmen
 | Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Initiate | 6 | 1 | 1 | 15 | 15 | 18 | 10 | 12 |  | 30 | None |
-| Initiate Monstrosity | 6 | 1 | 1 | 15 | 15 | 18 | 10 | 12 | [Mutation](#mutation) | 80 | 6 |
+| Initiate Monstrosity | 6 | 1 | 1 | 15 | 15 | 18 | 10 | 12 | [Mutation](#mutation) | 90 | 6 |
 
 ## Skills 
 ### Leader
@@ -117,9 +117,9 @@ Seeker & Initiates equipment for the unit types: Seeker, Initiate
 | Seeker | +1 Mel, +1 Ran, +2 Agi |  |
 
 ## Skill Ups & Starting Experience
-| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp | Skills |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Prophet | X | X | X |  | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Morale,Cultists) |
-| Acolyte |  |  |  |  | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Cultists) |
-| Brute | X |  | X |  |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Cultists) |
-| Seeker | X | X |  | X |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Cultists) |
+| Units | Mel | Rng | Def | Agi | Mrl | Special | Skills |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Prophet | X | X | X |  | X | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Morale,Cultists) |
+| Acolyte |  |  |  |  | X | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Cultists) |
+| Brute | X |  | X |  |  | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Cultists) |
+| Seeker | X | X |  | X |  | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Cultists) |

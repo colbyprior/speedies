@@ -119,9 +119,9 @@ Rat Underlings equipment for the unit types: Rat Underlings
 | Sneaky Rat | +1 Mel, +1 Ran, +2 Agi |  |
 
 ## Skill Ups & Starting Experience
-| Units | Mel | Rng | Def | Agi | Mrl | Special | Start Exp | Skills |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Mastermind | X | X |  | X |  | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
-| Ratlock |  |  |  |  | X | X |  | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Ratlings) |
-| Strong Rat | X |  |  | X |  | X | 2 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Ratlings) |
-| Assassin | X | X |  | X |  | X | 0 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
+| Units | Mel | Rng | Def | Agi | Mrl | Special | Skills |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Mastermind | X | X |  | X |  | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
+| Ratlock |  |  |  |  | X | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Ratlings) |
+| Strong Rat | X |  |  | X |  | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Ratlings) |
+| Assassin | X | X |  | X |  | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |

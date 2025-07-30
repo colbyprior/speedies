@@ -157,8 +157,7 @@
             "Def": "",
             "Agi": "X",
             "Mrl": "",
-            "Special": "X",
-            "Start Exp": ""
+            "Special": "X"
         },
         "Ratlock": {
             "Mel": "",
@@ -166,8 +165,7 @@
             "Def": "",
             "Agi": "",
             "Mrl": "X",
-            "Special": "X",
-            "Start Exp": ""
+            "Special": "X"
         },
         "Strong Rat": {
             "Mel": "X",
@@ -175,8 +173,7 @@
             "Def": "",
             "Agi": "X",
             "Mrl": "",
-            "Special": "X",
-            "Start Exp": "2"
+            "Special": "X"
         },
         "Assassin": {
             "Mel": "X",
@@ -184,8 +181,7 @@
             "Def": "",
             "Agi": "X",
             "Mrl": "",
-            "Special": "X",
-            "Start Exp": "0"
+            "Special": "X"
         }
     },
     "Equipment": {

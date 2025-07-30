@@ -154,8 +154,7 @@
             "Def": "X",
             "Agi": "",
             "Mrl": "X",
-            "Special": "X",
-            "Start Exp": "2"
+            "Special": "X"
         },
         "Paladin": {
             "Mel": "X",
@@ -163,8 +162,7 @@
             "Def": "",
             "Agi": "",
             "Mrl": "X",
-            "Special": "X",
-            "Start Exp": ""
+            "Special": "X"
         },
         "Cleric": {
             "Mel": "",
@@ -172,8 +170,7 @@
             "Def": "X",
             "Agi": "",
             "Mrl": "X",
-            "Special": "X",
-            "Start Exp": ""
+            "Special": "X"
         },
         "Standard Bearer": {
             "Mel": "X",
@@ -181,8 +178,7 @@
             "Def": "",
             "Agi": "",
             "Mrl": "X",
-            "Special": "X",
-            "Start Exp": ""
+            "Special": "X"
         }
     },
     "Equipment": {
