@@ -84,8 +84,8 @@ def warband_special_rules(warband):
 
 def heroes_table(warband):
     out_data = "## Heroes\n"
-    out_data += f"| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |\n"
-    out_data += f"| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |\n"
+    out_data += f"| Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |\n"
+    out_data += f"| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |\n"
     for hero in warband.get("Heroes"):
         skills = []
         for skill in hero.get("Skills"):
@@ -95,14 +95,14 @@ def heroes_table(warband):
         if not type_cap:
             type_cap = "None"
         skill_link = get_skills_link(warband.get("Name"), warband.get("Available Skills").get(hero.get('Name')))
-        out_data += f"| {hero.get('Name')} | {hero.get('Move')} | {hero.get('Attacks')} | {hero.get('Wounds')} | {hero.get('Melee')} | {hero.get('Ranged')} | {hero.get('Defense')} | {hero.get('Agility')} | {hero.get('Morale')} | {skills_str} | {hero.get('Cost')} | {type_cap} | {skill_link} |\n"
+        out_data += f"| {hero.get('Name')} | {hero.get('Move')} | {hero.get('Attacks')} | {hero.get('Wounds')}| {hero.get('Piercing')}| {hero.get('Injury')} | {hero.get('Melee')} | {hero.get('Ranged')} | {hero.get('Defense')} | {hero.get('Agility')} | {hero.get('Morale')} | {skills_str} | {hero.get('Cost')} | {type_cap} | {skill_link} |\n"
     return out_data
 
 
 def henchmen_table(warband):
     out_data = "\n## Henchmen\n"
-    out_data += f"| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |\n"
-    out_data += f"| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |\n"
+    out_data += f"| Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |\n"
+    out_data += f"| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |\n"
     for henchmen in warband.get("Henchmen"):
         skills = []
         for skill in henchmen.get("Skills"):
@@ -111,7 +111,7 @@ def henchmen_table(warband):
         type_cap = henchmen.get('Type Cap')
         if not type_cap:
             type_cap = "None"
-        out_data += f"| {henchmen.get('Name')} | {henchmen.get('Move')} | {henchmen.get('Attacks')} | {henchmen.get('Wounds')} | {henchmen.get('Melee')} | {henchmen.get('Ranged')} | {henchmen.get('Defense')} | {henchmen.get('Agility')} | {henchmen.get('Morale')} | {skills_str} | {henchmen.get('Cost')} | {type_cap} |\n"
+        out_data += f"| {henchmen.get('Name')} | {henchmen.get('Move')} | {henchmen.get('Attacks')} | {henchmen.get('Wounds')}| {henchmen.get('Piercing')}| {henchmen.get('Injury')} | {henchmen.get('Melee')} | {henchmen.get('Ranged')} | {henchmen.get('Defense')} | {henchmen.get('Agility')} | {henchmen.get('Morale')} | {skills_str} | {henchmen.get('Cost')} | {type_cap} |\n"
     return out_data
 
 

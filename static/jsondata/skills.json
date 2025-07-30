@@ -244,11 +244,6 @@
     "Type": "Inherent",
     "Description": "This unit gets +2 Inj and +2 Piercing for melee attacks."
   },
-  "Big Hitter 2": {
-    "Name": "Big Hitter 2",
-    "Type": "Inherent",
-    "Description": "This unit gets +4 Inj and +3 Piercing for melee attacks."
-  },
   "Stupid": {
     "Name": "Stupid",
     "Type": "Inherent",

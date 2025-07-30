@@ -20,18 +20,18 @@ Melee skill improved to at least 14. Causes fear. Explodes on death, all units w
 ### Mutation: Leechspawn
 Melee skill improved to at least 14. Gain one extra wound. Gains one extra attack. Causes fear. If this unit deals a wound to an enemy they can recover one wound up to their maximum wound threshold.
 ## Heroes
-| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Prophet | 6 | 1 | 1 | 14 | 14 | 18 | 8 | 8 | [Leader](#leader), [Cult Magic](#cult-magic) | 90 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Morale,Cultists) |
-| Acolyte | 6 | 1 | 1 | 16 | 16 | 18 | 10 | 10 | [Cult Magic](#cult-magic) | 50 | 2 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Cultists) |
-| Brute | 6 | 1 | 1 | 13 | - | 18 | 10 | 10 |  | 50 | 2 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Cultists) |
-| Seeker | 6 | 1 | 1 | 14 | 14 | 18 | 10 | 10 |  | 50 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Cultists) |
+| Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Prophet | 6 | 1 | 1| 0| 0 | 14 | 14 | 18 | 8 | 8 | [Leader](#leader), [Cult Magic](#cult-magic) | 90 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Morale,Cultists) |
+| Acolyte | 6 | 1 | 1| 0| 0 | 16 | 16 | 18 | 10 | 10 | [Cult Magic](#cult-magic) | 50 | 2 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Cultists) |
+| Brute | 6 | 1 | 1| 0| 0 | 13 | - | 18 | 10 | 10 |  | 50 | 2 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Cultists) |
+| Seeker | 6 | 1 | 1| 0| 0 | 14 | 14 | 18 | 10 | 10 |  | 50 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Cultists) |
 
 ## Henchmen
-| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Initiate | 6 | 1 | 1 | 15 | 15 | 18 | 10 | 12 |  | 30 | None |
-| Initiate Monstrosity | 6 | 1 | 1 | 15 | 15 | 18 | 10 | 12 | [Mutation](#mutation) | 90 | 6 |
+| Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Initiate | 6 | 1 | 1| 0| 0 | 15 | 15 | 18 | 10 | 12 |  | 30 | None |
+| Initiate Monstrosity | 6 | 1 | 1| 0| 0 | 15 | 15 | 18 | 10 | 12 | [Mutation](#mutation) | 90 | 6 |
 
 ## Skills 
 ### Leader

@@ -9,20 +9,20 @@ sidebar_label: Sellswords
 | Play Style | Balanced |
 
 ## Heroes
-| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Captain | 6 | 1 | 1 | 13 | 13 | 17 | 8 | 7 | [Leader](#leader) | 60 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Morale,Sellswords) |
-| Champion | 6 | 1 | 1 | 13 | 14 | 18 | 10 | 10 |  | 40 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Sellswords) |
-| Sniper | 6 | 1 | 1 | 14 | 13 | 18 | 10 | 10 |  | 40 | 2 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility,Morale,Sellswords) |
-| Knight | 8 | 1 | 1 | 13 | - | 17 | 10 | 10 |  | 40 | 2 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Sellswords) |
+| Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Captain | 6 | 1 | 1| 0| 0 | 13 | 13 | 17 | 8 | 7 | [Leader](#leader) | 60 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Morale,Sellswords) |
+| Champion | 6 | 1 | 1| 0| 0 | 13 | 14 | 18 | 10 | 10 |  | 40 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Sellswords) |
+| Sniper | 6 | 1 | 1| 0| 0 | 14 | 13 | 18 | 10 | 10 |  | 40 | 2 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility,Morale,Sellswords) |
+| Knight | 8 | 1 | 1| 0| 0 | 13 | - | 17 | 10 | 10 |  | 40 | 2 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Sellswords) |
 
 ## Henchmen
-| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Warrior | 6 | 1 | 1 | 14 | 14 | 18 | 10 | 10 |  | 30 | None |
-| Marksmen | 6 | 1 | 1 | 14 | 14 | 18 | 10 | 10 |  | 30 | 6 |
-| Swordsman | 6 | 1 | 1 | 14 | 14 | 18 | 10 | 10 | [Bull Rush](#bull-rush) | 40 | 3 |
-| Defender | 6 | 1 | 1 | 14 | 14 | 18 | 10 | 10 |  | 35 | 3 |
+| Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Warrior | 6 | 1 | 1| 0| 0 | 14 | 14 | 18 | 10 | 10 |  | 30 | None |
+| Marksmen | 6 | 1 | 1| 0| 0 | 14 | 14 | 18 | 10 | 10 |  | 30 | 6 |
+| Swordsman | 6 | 1 | 1| 0| 0 | 14 | 14 | 18 | 10 | 10 | [Bull Rush](#bull-rush) | 40 | 3 |
+| Defender | 6 | 1 | 1| 0| 0 | 14 | 14 | 18 | 10 | 10 |  | 35 | 3 |
 
 ## Skills 
 ### Leader

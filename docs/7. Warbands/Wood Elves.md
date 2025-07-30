@@ -12,20 +12,20 @@ Elves, bleh!
 ### Elven Agility
 Elves can Jump Across to a maximum distance of 6", instead of the usual 3".
 ## Heroes
-| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Noble | 7 | 1 | 1 | 12 | 12 | 17 | 5 | 5 | [Leader](#leader) | 70 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale,Wood%20Elves) |
-| Mage | 7 | 1 | 1 | 13 | 13 | 19 | 8 | 7 | [Nature Spells](#nature-spells) | 40 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Agility,Wood%20Elves) |
-| Honour Guard | 7 | 1 | 1 | 12 | 12 | 17 | 5 | 7 |  | 60 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Wood%20Elves) |
-| Ranger | 7 | 1 | 1 | 13 | 10 | 19 | 5 | 7 |  | 60 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility,Wood%20Elves) |
+| Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Noble | 7 | 1 | 1| 0| 0 | 12 | 12 | 17 | 5 | 5 | [Leader](#leader) | 70 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale,Wood%20Elves) |
+| Mage | 7 | 1 | 1| 0| 0 | 13 | 13 | 19 | 8 | 7 | [Nature Spells](#nature-spells) | 40 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Agility,Wood%20Elves) |
+| Honour Guard | 7 | 1 | 1| 0| 0 | 12 | 12 | 17 | 5 | 7 |  | 60 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Wood%20Elves) |
+| Ranger | 7 | 1 | 1| 0| 0 | 13 | 10 | 19 | 5 | 7 |  | 60 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility,Wood%20Elves) |
 
 ## Henchmen
-| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Citizen | 7 | 1 | 1 | 13 | 13 | 19 | 8 | 7 |  | 40 | - |
-| Scout | 7 | 1 | 1 | 13 | 13 | 19 | 5 | 7 |  | 50 | 5 |
-| Woodland Creature | 9 | 1 | 1 | 14 | - | - | 8 | 16 | [Follower](#follower), [Animal](#animal) | 20 | 3 |
-| Treant | 8 | 2 | 3 | 12 | - | 8 | 17 | 7 | [Fear](#fear), [+2 Piercing](#+2-piercing), [Slow](#slow) | 190 | 1 |
+| Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Citizen | 7 | 1 | 1| 0| 0 | 13 | 13 | 19 | 8 | 7 |  | 40 | - |
+| Scout | 7 | 1 | 1| 0| 0 | 13 | 13 | 19 | 5 | 7 |  | 50 | 5 |
+| Woodland Creature | 9 | 1 | 1| 0| 0 | 14 | - | - | 8 | 16 | [Follower](#follower), [Animal](#animal) | 20 | 3 |
+| Treant | 8 | 2 | 3| 2| 0 | 12 | - | 8 | 17 | 7 | [Fear](#fear), [Slow](#slow) | 190 | 1 |
 
 ## Skills 
 ### Leader
@@ -48,10 +48,6 @@ This unit cannot Promote, make Climb checks, or pick up Treasure. They can still
 *Inherent*
 
 This unit causes Fear.
-### +2 Piercing
-*Inherent*
-
-This unit gains +2 Piercing for all its attacks.
 ### Slow
 *Inherent*
 

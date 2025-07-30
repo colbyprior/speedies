@@ -12,6 +12,8 @@
             "Type": "Leader",
             "Type Cap": "1",
             "Move": "8",
+            "Piercing": "0",
+            "Injury": "0",
             "Melee": "11",
             "Ranged": "12",
             "Defense": "18",
@@ -21,8 +23,7 @@
             "Morale": "10",
             "Cost": 60,
             "Skills": [
-                "Leader",
-                "+2 Piercing"
+                "Leader"
             ]
         },
         {
@@ -30,6 +31,8 @@
             "Type": "Hero",
             "Type Cap": "1",
             "Move": "8",
+            "Piercing": "0",
+            "Injury": "0",
             "Melee": "15",
             "Ranged": "14",
             "Defense": "19",
@@ -47,6 +50,8 @@
             "Type": "Hero",
             "Type Cap": "",
             "Move": "8",
+            "Piercing": "0",
+            "Injury": "0",
             "Melee": "11",
             "Ranged": "14",
             "Defense": "18",
@@ -63,6 +68,8 @@
             "Type": "Hero",
             "Type Cap": "",
             "Move": "8",
+            "Piercing": "0",
+            "Injury": "0",
             "Melee": "14",
             "Ranged": "14",
             "Defense": "18",
@@ -80,6 +87,8 @@
             "Name": "Rat Boi",
             "Type Cap": "",
             "Move": "8",
+            "Piercing": "0",
+            "Injury": "0",
             "Melee": "14",
             "Ranged": "14",
             "Defense": "18",
@@ -94,6 +103,8 @@
             "Name": "Plague Host",
             "Type Cap": "",
             "Move": "8",
+            "Piercing": "0",
+            "Injury": "0",
             "Melee": "16",
             "Ranged": "16",
             "Defense": "-",
@@ -108,6 +119,8 @@
             "Name": "Giant Rat",
             "Type Cap": "4",
             "Move": "8",
+            "Piercing": "0",
+            "Injury": "0",
             "Melee": "14",
             "Ranged": "-",
             "Defense": "-",
@@ -124,6 +137,8 @@
             "Name": "Rat Monster",
             "Type Cap": "1",
             "Move": "8",
+            "Piercing": "3",
+            "Injury": "4",
             "Melee": "7",
             "Ranged": "-",
             "Defense": "7",
@@ -135,7 +150,6 @@
             "Skills": [
                 "Stupid",
                 "Fear",
-                "Big Hitter 2",
                 "Large"
             ]
         }

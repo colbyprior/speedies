@@ -12,20 +12,20 @@ Magic never expects us.
 ### Rabble Rousers
 At the start of each game roll morale once per hero. For each success you get a temporary Rabble unit that joins your warband for this game only.
 ## Heroes
-| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Inquisitor Captain | 6 | 1 | 1 | 13 | 12 | 18 | 8 | 7 | [Leader](#leader), [Burn the Heretic](#burn-the-heretic) | 60 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Agility,Morale,Inquisitors) |
-| Priest | 6 | 1 | 1 | 15 | 13 | 19 | 11 | 7 | [Prayers](#prayers) | 40 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Inquisitors) |
-| Inquisitor | 6 | 1 | 1 | 15 | 14 | 19 | 11 | 10 | [Burn the Heretic](#burn-the-heretic) | 25 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Inquisitors) |
-| Inquisitor Rabble Rouser | 6 | 1 | 1 | 15 | 15 | 18 | 11 | 9 | [Extra Rabble](#extra-rabble), [Burn the Heretic](#burn-the-heretic) | 50 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Inquisitors) |
+| Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Inquisitor Captain | 6 | 1 | 1| 0| 0 | 13 | 12 | 18 | 8 | 7 | [Leader](#leader), [Burn the Heretic](#burn-the-heretic) | 60 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Agility,Morale,Inquisitors) |
+| Priest | 6 | 1 | 1| 0| 0 | 15 | 13 | 19 | 11 | 7 | [Prayers](#prayers) | 40 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Inquisitors) |
+| Inquisitor | 6 | 1 | 1| 0| 0 | 15 | 14 | 19 | 11 | 10 | [Burn the Heretic](#burn-the-heretic) | 25 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Inquisitors) |
+| Inquisitor Rabble Rouser | 6 | 1 | 1| 0| 0 | 15 | 15 | 18 | 11 | 9 | [Extra Rabble](#extra-rabble), [Burn the Heretic](#burn-the-heretic) | 50 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Inquisitors) |
 
 ## Henchmen
-| Units | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Fanatic | 6 | 1 | 1 | 12 | 14 | 15 | 11 | 10 | [Fearless](#fearless), [+2 Piercing](#+2-piercing), [Can't promote](#can't-promote) | 40 | 5 |
-| Zealot | 6 | 1 | 1 | 16 | 16 | - | 11 | 10 |  | 20 | None |
-| Rabble | 6 | 1 | 1 | 17 | 17 | - | 12 | 14 | [Follow the leader](#follow-the-leader) | - | See Rabble Rouser skill |
-| Hounds | 8 | 1 | 1 | 12 | - | 18 | 10 | 15 | [+2 Piercing](#+2-piercing) | 15 | 5 |
+| Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Fanatic | 6 | 1 | 1| 2| 0 | 12 | 14 | 15 | 11 | 10 | [Fearless](#fearless), [Can't promote](#can't-promote) | 40 | 5 |
+| Zealot | 6 | 1 | 1| 0| 0 | 16 | 16 | - | 11 | 10 |  | 20 | None |
+| Rabble | 6 | 1 | 1| 0| 0 | 17 | 17 | - | 12 | 14 | [Follow the leader](#follow-the-leader) | - | See Rabble Rouser skill |
+| Hounds | 8 | 1 | 1| 2| 0 | 12 | - | 18 | 10 | 15 |  | 15 | 5 |
 
 ## Skills 
 ### Leader
@@ -44,10 +44,6 @@ This unit can cast Prayer spells. Immediately pick one spell from this school to
 *Morale*
 
 The unit is immune to Fear checks.
-### +2 Piercing
-*Inherent*
-
-This unit gains +2 Piercing for all its attacks.
 ### Can't promote
 *Inherent*
 

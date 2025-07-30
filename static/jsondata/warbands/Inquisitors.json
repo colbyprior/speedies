@@ -12,6 +12,8 @@
             "Type": "Leader",
             "Type Cap": "1",
             "Move": "6",
+            "Piercing": "0",
+            "Injury": "0",
             "Melee": "13",
             "Ranged": "12",
             "Defense": "18",
@@ -30,6 +32,8 @@
             "Type": "Hero",
             "Type Cap": "1",
             "Move": "6",
+            "Piercing": "0",
+            "Injury": "0",
             "Melee": "15",
             "Ranged": "13",
             "Defense": "19",
@@ -47,6 +51,8 @@
             "Type": "Hero",
             "Type Cap": "",
             "Move": "6",
+            "Piercing": "0",
+            "Injury": "0",
             "Melee": "15",
             "Ranged": "14",
             "Defense": "19",
@@ -64,6 +70,8 @@
             "Type": "Hero",
             "Type Cap": "1",
             "Move": "6",
+            "Piercing": "0",
+            "Injury": "0",
             "Melee": "15",
             "Ranged": "15",
             "Defense": "18",
@@ -83,6 +91,8 @@
             "Name": "Fanatic",
             "Type Cap": "5",
             "Move": "6",
+            "Piercing": "2",
+            "Injury": "0",
             "Melee": "12",
             "Ranged": "14",
             "Defense": "15",
@@ -93,7 +103,6 @@
             "Cost": 40,
             "Skills": [
                 "Fearless",
-                "+2 Piercing",
                 "Can't promote"
             ]
         },
@@ -101,6 +110,8 @@
             "Name": "Zealot",
             "Type Cap": "",
             "Move": "6",
+            "Piercing": "0",
+            "Injury": "0",
             "Melee": "16",
             "Ranged": "16",
             "Defense": "-",
@@ -115,6 +126,8 @@
             "Name": "Rabble",
             "Type Cap": "See Rabble Rouser skill",
             "Move": "6",
+            "Piercing": "0",
+            "Injury": "0",
             "Melee": "17",
             "Ranged": "17",
             "Defense": "-",
@@ -131,6 +144,8 @@
             "Name": "Hounds",
             "Type Cap": "5",
             "Move": "8",
+            "Piercing": "2",
+            "Injury": "0",
             "Melee": "12",
             "Ranged": "-",
             "Defense": "18",
@@ -140,7 +155,6 @@
             "Morale": "15",
             "Cost": 15,
             "Skills": [
-                "+2 Piercing"
             ]
         }
     ],
