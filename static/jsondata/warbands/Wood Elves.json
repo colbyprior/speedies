@@ -16,12 +16,12 @@
             "Injury": "0",
             "Melee": "12",
             "Ranged": "12",
-            "Defense": "17",
+            "Defense": "16",
             "Wounds": "1",
-            "Agility": "5",
+            "Agility": "4",
             "Attacks": "1",
             "Morale": "5",
-            "Cost": 70,
+            "Cost": 95,
             "Skills": [
                 "Leader"
             ]
@@ -35,12 +35,12 @@
             "Injury": "0",
             "Melee": "13",
             "Ranged": "13",
-            "Defense": "19",
+            "Defense": "18",
             "Wounds": "1",
-            "Agility": "8",
+            "Agility": "6",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 40,
+            "Cost": 90,
             "Skills": [
                 "Nature Spells"
             ]
@@ -54,12 +54,12 @@
             "Injury": "0",
             "Melee": "12",
             "Ranged": "12",
-            "Defense": "17",
+            "Defense": "16",
             "Wounds": "1",
             "Agility": "5",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 60,
+            "Cost": 80,
             "Skills": [
             ]
         },
@@ -72,12 +72,12 @@
             "Injury": "0",
             "Melee": "13",
             "Ranged": "10",
-            "Defense": "19",
+            "Defense": "18",
             "Wounds": "1",
             "Agility": "5",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 60,
+            "Cost": 70,
             "Skills": [
             ]
         }
@@ -91,12 +91,12 @@
             "Injury": "0",
             "Melee": "13",
             "Ranged": "13",
-            "Defense": "19",
+            "Defense": "18",
             "Wounds": "1",
-            "Agility": "8",
+            "Agility": "6",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 40,
+            "Cost": 55,
             "Skills": []
         },
         {
@@ -107,23 +107,23 @@
             "Injury": "0",
             "Melee": "13",
             "Ranged": "13",
-            "Defense": "19",
+            "Defense": "18",
             "Wounds": "1",
             "Agility": "5",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 50,
+            "Cost": 60,
             "Skills": []
         },
         {
             "Name": "Woodland Creature",
             "Type Cap": "3",
-            "Move": "9",
+            "Move": "8",
             "Piercing": "0",
             "Injury": "0",
             "Melee": "14",
             "Ranged": "-",
-            "Defense": "-",
+            "Defense": "18",
             "Wounds": "1",
             "Agility": "8",
             "Attacks": "1",
@@ -144,10 +144,10 @@
             "Ranged": "-",
             "Defense": "8",
             "Wounds": "3",
-            "Agility": "17",
+            "Agility": "16",
             "Attacks": "2",
             "Morale": "7",
-            "Cost": 190,
+            "Cost": 185,
             "Skills": [
                 "Fear",
                 "Slow"

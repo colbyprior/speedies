@@ -18,7 +18,7 @@
             "Ranged": "-",
             "Defense": "14",
             "Wounds": "2",
-            "Agility": "5",
+            "Agility": "6",
             "Attacks": "2",
             "Morale": "7",
             "Cost": 160,
@@ -38,7 +38,7 @@
             "Ranged": "-",
             "Defense": "16",
             "Wounds": "2",
-            "Agility": "9",
+            "Agility": "8",
             "Attacks": "2",
             "Morale": "10",
             "Cost": 130,
@@ -58,10 +58,10 @@
             "Ranged": "-",
             "Defense": "16",
             "Wounds": "2",
-            "Agility": "9",
+            "Agility": "8",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 60,
+            "Cost": 70,
             "Skills": [
                 "Undead"
             ]
@@ -77,10 +77,10 @@
             "Ranged": "-",
             "Defense": "14",
             "Wounds": "2",
-            "Agility": "7",
+            "Agility": "8",
             "Attacks": "2",
             "Morale": "10",
-            "Cost": 100,
+            "Cost": 115,
             "Skills": [
                 "Undead",
                 "No Equipment"
@@ -101,7 +101,7 @@
             "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 20,
+            "Cost": 25,
             "Skills": []
         },
         {
@@ -112,9 +112,9 @@
             "Injury": "0",
             "Melee": "14",
             "Ranged": "16",
-            "Defense": "17",
+            "Defense": "16",
             "Wounds": "1",
-            "Agility": "11",
+            "Agility": "10",
             "Attacks": "2",
             "Morale": "16",
             "Cost": 40,
@@ -146,17 +146,17 @@
         {
             "Name": "Giant Bat",
             "Type Cap": "4",
-            "Move": "6",
+            "Move": "8",
             "Piercing": "0",
             "Injury": "0",
-            "Melee": "15",
+            "Melee": "16",
             "Ranged": "-",
-            "Defense": "19",
+            "Defense": "-",
             "Wounds": "1",
-            "Agility": "10",
+            "Agility": "8",
             "Attacks": "1",
-            "Morale": "14",
-            "Cost": 20,
+            "Morale": "16",
+            "Cost": 15,
             "Skills": [
                 "Flying",
                 "Animal"

@@ -14,14 +14,14 @@
             "Move": "8",
             "Piercing": "0",
             "Injury": "0",
-            "Melee": "11",
+            "Melee": "12",
             "Ranged": "12",
             "Defense": "18",
             "Wounds": "1",
-            "Agility": "5",
+            "Agility": "6",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 60,
+            "Cost": 80,
             "Skills": [
                 "Leader"
             ]
@@ -33,14 +33,14 @@
             "Move": "8",
             "Piercing": "0",
             "Injury": "0",
-            "Melee": "15",
+            "Melee": "14",
             "Ranged": "14",
-            "Defense": "19",
+            "Defense": "18",
             "Wounds": "1",
             "Agility": "8",
             "Attacks": "1",
             "Morale": "13",
-            "Cost": 45,
+            "Cost": 65,
             "Skills": [
                 "Rat Magic"
             ]
@@ -52,14 +52,14 @@
             "Move": "8",
             "Piercing": "0",
             "Injury": "0",
-            "Melee": "11",
+            "Melee": "12",
             "Ranged": "14",
             "Defense": "18",
             "Wounds": "1",
             "Agility": "8",
             "Attacks": "1",
             "Morale": "13",
-            "Cost": 40,
+            "Cost": 50,
             "Skills": [
             ]
         },
@@ -74,10 +74,10 @@
             "Ranged": "14",
             "Defense": "18",
             "Wounds": "1",
-            "Agility": "8",
+            "Agility": "6",
             "Attacks": "1",
             "Morale": "13",
-            "Cost": 40,
+            "Cost": 55,
             "Skills": [
             ]
         }
@@ -96,7 +96,7 @@
             "Agility": "8",
             "Attacks": "1",
             "Morale": "16",
-            "Cost": 25,
+            "Cost": 30,
             "Skills": []
         },
         {
@@ -112,7 +112,7 @@
             "Agility": "8",
             "Attacks": "1",
             "Morale": "16",
-            "Cost": 20,
+            "Cost": 25,
             "Skills": []
         },
         {
@@ -121,11 +121,11 @@
             "Move": "8",
             "Piercing": "0",
             "Injury": "0",
-            "Melee": "14",
+            "Melee": "15",
             "Ranged": "-",
             "Defense": "-",
             "Wounds": "1",
-            "Agility": "8",
+            "Agility": "6",
             "Attacks": "1",
             "Morale": "18",
             "Cost": 10,
@@ -138,10 +138,10 @@
             "Type Cap": "1",
             "Move": "8",
             "Piercing": "3",
-            "Injury": "4",
-            "Melee": "7",
+            "Injury": "3",
+            "Melee": "8",
             "Ranged": "-",
-            "Defense": "7",
+            "Defense": "8",
             "Wounds": "3",
             "Agility": "8",
             "Attacks": "3",

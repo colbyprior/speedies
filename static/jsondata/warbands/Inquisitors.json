@@ -8,7 +8,7 @@
     },
     "Heroes": [
         {
-            "Name": "Inquisitor Captain",
+            "Name": "Grand Inquisitor",
             "Type": "Leader",
             "Type Cap": "1",
             "Move": "6",
@@ -16,15 +16,15 @@
             "Injury": "0",
             "Melee": "13",
             "Ranged": "12",
-            "Defense": "18",
+            "Defense": "17",
             "Wounds": "1",
             "Agility": "8",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 60,
+            "Cost": 100,
             "Skills": [
                 "Leader",
-                "Burn the Heretic"
+                "Inquisitor"
             ]
         },
         {
@@ -34,14 +34,14 @@
             "Move": "6",
             "Piercing": "0",
             "Injury": "0",
-            "Melee": "15",
-            "Ranged": "13",
-            "Defense": "19",
+            "Melee": "14",
+            "Ranged": "14",
+            "Defense": "18",
             "Wounds": "1",
-            "Agility": "11",
+            "Agility": "10",
             "Attacks": "1",
-            "Morale": "7",
-            "Cost": 40,
+            "Morale": "9",
+            "Cost": 60,
             "Skills": [
                 "Prayers"
             ]
@@ -53,20 +53,20 @@
             "Move": "6",
             "Piercing": "0",
             "Injury": "0",
-            "Melee": "15",
+            "Melee": "14",
             "Ranged": "14",
-            "Defense": "19",
+            "Defense": "18",
             "Wounds": "1",
-            "Agility": "11",
+            "Agility": "10",
             "Attacks": "1",
-            "Morale": "10",
-            "Cost": 25,
+            "Morale": "9",
+            "Cost": 50,
             "Skills": [
-                "Burn the Heretic"
+                "Inquisitor"
             ]
         },
         {
-            "Name": "Inquisitor Rabble Rouser",
+            "Name": "Rabble Rouser",
             "Type": "Hero",
             "Type Cap": "1",
             "Move": "6",
@@ -76,13 +76,13 @@
             "Ranged": "15",
             "Defense": "18",
             "Wounds": "1",
-            "Agility": "11",
+            "Agility": "10",
             "Attacks": "1",
             "Morale": "9",
             "Cost": 50,
             "Skills": [
                 "Extra Rabble",
-                "Burn the Heretic"
+                "Inquisitor"
             ]
         }
     ],
@@ -97,10 +97,10 @@
             "Ranged": "14",
             "Defense": "15",
             "Wounds": "1",
-            "Agility": "11",
+            "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 40,
+            "Cost": 50,
             "Skills": [
                 "Fearless",
                 "Can't promote"
@@ -114,12 +114,12 @@
             "Injury": "0",
             "Melee": "16",
             "Ranged": "16",
-            "Defense": "-",
+            "Defense": "18",
             "Wounds": "1",
-            "Agility": "11",
+            "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 20,
+            "Cost": 25,
             "Skills": []
         },
         {
@@ -134,7 +134,7 @@
             "Wounds": "1",
             "Agility": "12",
             "Attacks": "1",
-            "Morale": "14",
+            "Morale": "16",
             "Cost": "-",
             "Skills": [
                 "Follow the leader"
@@ -144,17 +144,18 @@
             "Name": "Hounds",
             "Type Cap": "5",
             "Move": "8",
-            "Piercing": "2",
+            "Piercing": "0",
             "Injury": "0",
-            "Melee": "12",
+            "Melee": "14",
             "Ranged": "-",
             "Defense": "18",
             "Wounds": "1",
-            "Agility": "10",
+            "Agility": "8",
             "Attacks": "1",
-            "Morale": "15",
-            "Cost": 15,
+            "Morale": "16",
+            "Cost": 25,
             "Skills": [
+                "Pack Tactics"
             ]
         }
     ],
