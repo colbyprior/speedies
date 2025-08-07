@@ -14,28 +14,24 @@ At the start of each game roll morale once per hero. For each success you get a 
 ## Heroes
 | Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Inquisitor Captain | 6 | 1 | 1| 0| 0 | 13 | 12 | 18 | 8 | 7 | [Leader](#leader), [Burn the Heretic](#burn-the-heretic) | 60 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Agility,Morale,Inquisitors) |
-| Priest | 6 | 1 | 1| 0| 0 | 15 | 13 | 19 | 11 | 7 | [Prayers](#prayers) | 40 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Inquisitors) |
-| Inquisitor | 6 | 1 | 1| 0| 0 | 15 | 14 | 19 | 11 | 10 | [Burn the Heretic](#burn-the-heretic) | 25 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Inquisitors) |
-| Inquisitor Rabble Rouser | 6 | 1 | 1| 0| 0 | 15 | 15 | 18 | 11 | 9 | [Extra Rabble](#extra-rabble), [Burn the Heretic](#burn-the-heretic) | 50 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Inquisitors) |
+| Grand Inquisitor | 6 | 1 | 1| 0| 0 | 13 | 12 | 17 | 8 | 7 | [Leader](#leader), [Inquisitor](#inquisitor) | 100 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Agility,Morale,Inquisitors) |
+| Priest | 6 | 1 | 1| 0| 0 | 14 | 14 | 18 | 10 | 9 | [Prayers](#prayers) | 60 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Inquisitors) |
+| Inquisitor | 6 | 1 | 1| 0| 0 | 14 | 14 | 18 | 10 | 9 | [Inquisitor](#inquisitor) | 50 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Inquisitors) |
+| Rabble Rouser | 6 | 1 | 1| 0| 0 | 15 | 15 | 18 | 10 | 9 | [Extra Rabble](#extra-rabble), [Inquisitor](#inquisitor) | 50 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Inquisitors) |
 
 ## Henchmen
 | Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Fanatic | 6 | 1 | 1| 2| 0 | 12 | 14 | 15 | 11 | 10 | [Fearless](#fearless), [Can't promote](#can't-promote) | 40 | 5 |
-| Zealot | 6 | 1 | 1| 0| 0 | 16 | 16 | - | 11 | 10 |  | 20 | None |
-| Rabble | 6 | 1 | 1| 0| 0 | 17 | 17 | - | 12 | 14 | [Follow the leader](#follow-the-leader) | - | See Rabble Rouser skill |
-| Hounds | 8 | 1 | 1| 2| 0 | 12 | - | 18 | 10 | 15 |  | 15 | 5 |
+| Fanatic | 6 | 1 | 1| 2| 0 | 12 | 14 | 15 | 10 | 10 | [Fearless](#fearless), [Can't promote](#can't-promote) | 50 | 5 |
+| Zealot | 6 | 1 | 1| 0| 0 | 16 | 16 | 18 | 10 | 10 |  | 25 | None |
+| Rabble | 6 | 1 | 1| 0| 0 | 17 | 17 | - | 12 | 16 | [Follow the leader](#follow-the-leader) | - | See Rabble Rouser skill |
+| Hounds | 8 | 1 | 1| 0| 0 | 14 | - | 18 | 8 | 16 | [Pack Tactics](#pack-tactics) | 25 | 5 |
 
 ## Skills 
 ### Leader
 *Inherent*
 
 Allied units with 6" of this unit can use this morale stat for checks instead of their own.
-### Burn the Heretic
-*Inherent*
-
-This unit gets a +2 injury modifier against all enemy heroes for melee and ranged attacks.
 ### Prayers
 *Spellcasting*
 
@@ -48,8 +44,16 @@ The unit is immune to Fear checks.
 *Inherent*
 
 This unit cannot promote into a hero.
+### Pack Tactics
+*Inherent*
+
+If this unit attacks an enemy that is also engaged with an ally of the unit, the unit has advantage on the attack.
 
 ## Warband Special Skills 
+### Inquisitor
+*Inquisitors*
+
+This unit gets a +2 injury modifier against all enemy heroes for melee attacks.
 ### Extra Rabble
 *Inquisitors*
 
@@ -62,7 +66,7 @@ This unit can use the morale of the Inquisitor Rabble Rouser if they are within 
 ## Equipment
 
 ### Inquisitors Equipment 
-Inquisitors equipment for the unit types: Inquisitor Captain, Inquisitor, Inquisitor Rabble Rouser
+Inquisitors equipment for the unit types: Grand Inquisitor, Inquisitor, Rabble Rouser
 
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
@@ -162,7 +166,7 @@ Rabble equipment for the unit types: Leader, Hero
 ## Skill Ups & Starting Experience
 | Units | Mel | Rng | Def | Agi | Mrl | Special | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Inquisitor Captain | X | X | X | X | X | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Agility,Morale,Inquisitors) |
+| Grand Inquisitor | X | X | X | X | X | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Agility,Morale,Inquisitors) |
 | Priest |  |  | X |  | X | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Inquisitors) |
 | Inquisitor | X | X |  |  |  | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Inquisitors) |
-| Inquisitor Rabble Rouser | X | X |  |  | X | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Inquisitors) |
+| Rabble Rouser | X | X |  |  | X | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Inquisitors) |

@@ -14,18 +14,18 @@ If any enemy unit dies during the post-game Injury rolls, they are raised and ad
 ## Heroes
 | Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Necromancer | 6 | 1 | 1| 0| 0 | 15 | 14 | 19 | 11 | 7 | [Leader](#leader), [Necromancy Spells](#necromancy-spells) | 40 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Undead) |
-| Plague Cultist | 6 | 1 | 1| 0| 0 | 15 | 14 | 19 | 11 | 10 | [Spread Plague](#spread-plague) | 25 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Undead) |
-| Death Knight | 7 | 1 | 2| 0| 0 | 13 | 16 | 17 | 14 | 13 | [Undead](#undead), [Fear](#fear) | 35 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Undead) |
-| Reaper | 9 | 2 | 1| 0| 0 | 13 | - | - | 11 | 13 | [Undead](#undead), [Fear](#fear) | 45 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Undead) |
+| Necromancer | 6 | 1 | 1| 0| 0 | 14 | 14 | 18 | 10 | 7 | [Leader](#leader), [Necromancy Spells](#necromancy-spells) | 65 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Undead) |
+| Plague Cultist | 6 | 1 | 1| 0| 0 | 14 | 14 | 18 | 10 | 10 | [Spread Plague](#spread-plague) | 45 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Undead) |
+| Death Knight | 7 | 1 | 2| 0| 0 | 13 | 16 | 16 | 14 | 13 | [Undead](#undead), [Fear](#fear) | 50 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Undead) |
+| Reaper | 9 | 2 | 1| 0| 0 | 13 | - | - | 10 | 13 | [Undead](#undead), [Fear](#fear) | 65 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Undead) |
 
 ## Henchmen
 | Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Zombie | 6 | 1 | 1| 0| 0 | 14 | 16 | - | 17 | 16 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment) | 15 | - |
-| Skeleton | 7 | 1 | 1| 0| 0 | 16 | 16 | - | 14 | 16 | [Undead](#undead), [Fear](#fear) | 20 | - |
-| Ghost | 6 | 1 | 1| 0| 0 | 14 | - | 13 | 11 | 13 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment), [Ethereal](#ethereal) | 40 | 3 |
-| Bone Giant | 7 | 3 | 3| 0| 0 | 9 | - | 7 | 14 | 13 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment) | 200 | 1 |
+| Zombie | 6 | 1 | 1| 0| 0 | 13 | - | - | 16 | 16 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment) | 15 | - |
+| Skeleton | 7 | 1 | 1| 0| 0 | 15 | 15 | - | 14 | 16 | [Undead](#undead), [Fear](#fear) | 20 | - |
+| Ghost | 6 | 1 | 1| 0| 0 | 13 | - | 13 | 10 | 13 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment), [Ethereal](#ethereal) | 40 | 3 |
+| Bone Giant | 7 | 3 | 3| 0| 0 | 9 | - | 7 | 14 | 13 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment) | 225 | 1 |
 
 ## Skills 
 ### Leader

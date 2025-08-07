@@ -14,18 +14,18 @@ Is a rat
 ## Heroes
 | Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Mastermind | 8 | 1 | 1| 0| 0 | 11 | 12 | 18 | 5 | 10 | [Leader](#leader) | 60 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
-| Ratlock | 8 | 1 | 1| 0| 0 | 15 | 14 | 19 | 8 | 13 | [Rat Magic](#rat-magic) | 45 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Ratlings) |
-| Strong Rat | 8 | 1 | 1| 0| 0 | 11 | 14 | 18 | 8 | 13 |  | 40 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Ratlings) |
-| Assassin | 8 | 1 | 1| 0| 0 | 14 | 14 | 18 | 8 | 13 |  | 40 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
+| Mastermind | 8 | 1 | 1| 0| 0 | 12 | 12 | 18 | 6 | 10 | [Leader](#leader) | 80 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
+| Ratlock | 8 | 1 | 1| 0| 0 | 14 | 14 | 18 | 8 | 13 | [Rat Magic](#rat-magic) | 65 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Ratlings) |
+| Strong Rat | 8 | 1 | 1| 0| 0 | 12 | 14 | 18 | 8 | 13 |  | 50 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Ratlings) |
+| Assassin | 8 | 1 | 1| 0| 0 | 14 | 14 | 18 | 6 | 13 |  | 55 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
 
 ## Henchmen
 | Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Rat Boi | 8 | 1 | 1| 0| 0 | 14 | 14 | 18 | 8 | 16 |  | 25 | None |
-| Plague Host | 8 | 1 | 1| 0| 0 | 16 | 16 | - | 8 | 16 |  | 20 | None |
-| Giant Rat | 8 | 1 | 1| 0| 0 | 14 | - | - | 8 | 18 | [Animal](#animal) | 10 | 4 |
-| Rat Monster | 8 | 3 | 3| 3| 4 | 7 | - | 7 | 8 | 18 | [Stupid](#stupid), [Fear](#fear), [Large](#large) | 210 | 1 |
+| Rat Boi | 8 | 1 | 1| 0| 0 | 14 | 14 | 18 | 8 | 16 |  | 30 | None |
+| Plague Host | 8 | 1 | 1| 0| 0 | 16 | 16 | - | 8 | 16 |  | 25 | None |
+| Giant Rat | 8 | 1 | 1| 0| 0 | 15 | - | - | 6 | 18 | [Animal](#animal) | 10 | 4 |
+| Rat Monster | 8 | 3 | 3| 3| 3 | 8 | - | 8 | 8 | 18 | [Stupid](#stupid), [Fear](#fear), [Large](#large) | 210 | 1 |
 
 ## Skills 
 ### Leader

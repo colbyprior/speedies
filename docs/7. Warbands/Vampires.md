@@ -14,18 +14,18 @@ If any enemy Hero dies during the post-game Injury rolls, they transform into a 
 ## Heroes
 | Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Vampire Master | 8 | 2 | 2| 0| 0 | 11 | - | 14 | 5 | 7 | [Leader](#leader), [Undead](#undead) | 160 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Vampires) |
-| Vampire Seductress | 8 | 2 | 2| 0| 0 | 14 | - | 16 | 9 | 10 | [Undead](#undead), [Vampire Seduction](#vampire-seduction) | 130 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Vampires) |
-| Vampire Spawn | 8 | 1 | 2| 0| 0 | 14 | - | 16 | 9 | 10 | [Undead](#undead) | 60 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Vampires) |
-| Nosferatu | 8 | 2 | 2| 0| 0 | 12 | - | 14 | 7 | 10 | [Undead](#undead), [No Equipment](#no-equipment) | 100 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Vampires) |
+| Vampire Master | 8 | 2 | 2| 0| 0 | 11 | - | 14 | 6 | 7 | [Leader](#leader), [Undead](#undead) | 160 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Vampires) |
+| Vampire Seductress | 8 | 2 | 2| 0| 0 | 14 | - | 16 | 8 | 10 | [Undead](#undead), [Vampire Seduction](#vampire-seduction) | 130 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Vampires) |
+| Vampire Spawn | 8 | 1 | 2| 0| 0 | 14 | - | 16 | 8 | 10 | [Undead](#undead) | 70 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Vampires) |
+| Nosferatu | 8 | 2 | 2| 0| 0 | 12 | - | 14 | 8 | 10 | [Undead](#undead), [No Equipment](#no-equipment) | 115 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Vampires) |
 
 ## Henchmen
 | Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Thrall | 6 | 1 | 1| 0| 0 | 16 | 16 | 18 | 10 | 10 |  | 20 | None |
-| Ghoul | 6 | 2 | 1| 0| 0 | 14 | 16 | 17 | 11 | 16 | [Undead](#undead), [No Equipment](#no-equipment) | 40 | None |
+| Thrall | 6 | 1 | 1| 0| 0 | 16 | 16 | 18 | 10 | 10 |  | 25 | None |
+| Ghoul | 6 | 2 | 1| 0| 0 | 14 | 16 | 16 | 10 | 16 | [Undead](#undead), [No Equipment](#no-equipment) | 40 | None |
 | Dire Wolf | 8 | 1 | 1| 0| 0 | 10 | - | 19 | 14 | 18 | [Undead](#undead), [Bull Rush](#bull-rush), [Animal](#animal) | 30 | 4 |
-| Giant Bat | 6 | 1 | 1| 0| 0 | 15 | - | 19 | 10 | 14 | [Flying](#flying), [Animal](#animal) | 20 | 4 |
+| Giant Bat | 8 | 1 | 1| 0| 0 | 16 | - | - | 8 | 16 | [Flying](#flying), [Animal](#animal) | 15 | 4 |
 
 ## Skills 
 ### Leader
