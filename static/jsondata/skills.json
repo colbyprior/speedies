@@ -274,10 +274,10 @@
     "Type": "Inherent",
     "Description": "This unit may pick a skill of their choice that they could normally learn when hired."
   },
-  "Burn the Heretic": {
-    "Name": "Burn the Heretic",
+  "Inquisitor": {
+    "Name": "Inquisitor",
     "Type": "Inherent",
-    "Description": "This unit gets a +2 injury modifier against all enemy heroes for melee and ranged attacks."
+    "Description": "This unit gets a +2 injury modifier against all enemy heroes for melee attacks."
   },
   "Can't promote": {
     "Name": "Can't promote",
