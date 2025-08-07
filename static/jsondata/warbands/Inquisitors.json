@@ -166,7 +166,7 @@
         }
     },
     "Available Skills": {
-        "Inquisitor Captain": {
+        "Grand Insquisitor": {
             "Mel": "X",
             "Rng": "X",
             "Def": "X",
@@ -190,7 +190,7 @@
             "Mrl": "",
             "Special": "X"
         },
-        "Inquisitor Rabble Rouser": {
+        "Rabble Rouser": {
             "Mel": "X",
             "Rng": "X",
             "Def": "",
@@ -201,7 +201,7 @@
     },
     "Equipment": {
         "Inquisitors": {
-            "Aliases": ["Inquisitor Captain", "Inquisitor", "Inquisitor Rabble Rouser"],
+            "Aliases": ["Grand Inquisitor", "Inquisitor", "Rabble Rouser"],
             "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike"],
             "Ranged Weapons": ["Crossbow", "Pistol"],
             "Armour": ["Light Armour", "Heavy Armour"]
