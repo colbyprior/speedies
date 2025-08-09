@@ -13,31 +13,31 @@
   },
   "Spear": {
       "Name": "Spear",
-      "Effect": "+3 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield.",
+      "Effect": "+2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield.",
       "Cost": "5",
       "Slots": "1"
   },
   "Hammer": {
       "Name": "Hammer",
-      "Effect": "+1 Injury",
+      "Effect": "+4 Injury",
       "Cost": "5",
       "Slots": "1"
     },
   "Pike": {
     "Name": "Pike",
-    "Effect": "+7 to Hit, +4 to Injury",
+    "Effect": "+7 to Hit, +3 to Injury",
     "Cost": "10",
     "Slots": "2"
   },
   "Great Sword": {
     "Name": "Great Sword / Axe",
-    "Effect": "+4 to Hit, +4 to Injury, -3 Def to target",
+    "Effect": "+5 to Hit, +3 to Injury, -3 Def to target",
     "Cost": "10",
     "Slots": "2"
   },
   "Great Hammer": {
     "Name": "Great Hammer",
-    "Effect": "+4 Mel, +5 to Injury",
+    "Effect": "+5 Mel, +7 to Injury",
     "Cost": "10",
     "Slots": "2"
   },
