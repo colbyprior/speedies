@@ -71,12 +71,12 @@ Skeleton equipment for the unit types: Skeleton, Death Knight
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
-| Spear | +3 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Spear | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
 | Sword / Axe | -3 Def to target | 5 | 1 |
-| Hammer | +1 Injury | 5 | 1 |
-| Pike | +7 to Hit, +4 to Injury | 10 | 2 |
-| Great Sword / Axe | +4 to Hit, +4 to Injury, -3 Def to target | 10 | 2 |
-| Great Hammer | +4 Mel, +5 to Injury | 10 | 2 |
+| Hammer | +4 Injury | 5 | 1 |
+| Pike | +7 to Hit, +3 to Injury | 10 | 2 |
+| Great Sword / Axe | +5 to Hit, +3 to Injury, -3 Def to target | 10 | 2 |
+| Great Hammer | +5 Mel, +7 to Injury | 10 | 2 |
 | Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |
@@ -94,7 +94,7 @@ Reaper equipment for the unit types: Reaper
 
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
-| Scythe (Great Sword) | +4 to Hit, +4 to Injury, -3 Def to target | 10 | 2 |
+| Scythe (Great Sword) | +5 to Hit, +3 to Injury, -3 Def to target | 10 | 2 |
 
 ### Cultist Equipment 
 Cultist equipment for the unit types: Necromancer, Cultist
@@ -102,9 +102,9 @@ Cultist equipment for the unit types: Necromancer, Cultist
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
-| Spear | +3 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Spear | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
 | Sword / Axe | -3 Def to target | 5 | 1 |
-| Hammer | +1 Injury | 5 | 1 |
+| Hammer | +4 Injury | 5 | 1 |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |
 | ---- | ----- | ------ | ---- | ----- |

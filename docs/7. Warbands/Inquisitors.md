@@ -71,12 +71,12 @@ Inquisitors equipment for the unit types: Grand Inquisitor, Inquisitor, Rabble R
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
-| Hammer | +1 Injury | 5 | 1 |
+| Hammer | +4 Injury | 5 | 1 |
 | Sword / Axe | -3 Def to target | 5 | 1 |
-| Spear | +3 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Great Hammer | +4 Mel, +5 to Injury | 10 | 2 |
-| Great Sword / Axe | +4 to Hit, +4 to Injury, -3 Def to target | 10 | 2 |
-| Pike | +7 to Hit, +4 to Injury | 10 | 2 |
+| Spear | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Great Hammer | +5 Mel, +7 to Injury | 10 | 2 |
+| Great Sword / Axe | +5 to Hit, +3 to Injury, -3 Def to target | 10 | 2 |
+| Pike | +7 to Hit, +3 to Injury | 10 | 2 |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |
 | ---- | ----- | ------ | ---- | ----- |
@@ -94,12 +94,12 @@ Priest equipment for the unit types: Priest
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
-| Hammer | +1 Injury | 5 | 1 |
+| Hammer | +4 Injury | 5 | 1 |
 | Sword / Axe | -3 Def to target | 5 | 1 |
-| Spear | +3 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Great Hammer | +4 Mel, +5 to Injury | 10 | 2 |
-| Great Sword / Axe | +4 to Hit, +4 to Injury, -3 Def to target | 10 | 2 |
-| Pike | +7 to Hit, +4 to Injury | 10 | 2 |
+| Spear | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Great Hammer | +5 Mel, +7 to Injury | 10 | 2 |
+| Great Sword / Axe | +5 to Hit, +3 to Injury, -3 Def to target | 10 | 2 |
+| Pike | +7 to Hit, +3 to Injury | 10 | 2 |
 | Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Armour | Effect | Cost |
@@ -112,9 +112,9 @@ Fanatics equipment for the unit types: Fanatic
 
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
-| Great Sword / Axe | +4 to Hit, +4 to Injury, -3 Def to target | 10 | 2 |
-| Great Hammer | +4 Mel, +5 to Injury | 10 | 2 |
-| Pike | +7 to Hit, +4 to Injury | 10 | 2 |
+| Great Sword / Axe | +5 to Hit, +3 to Injury, -3 Def to target | 10 | 2 |
+| Great Hammer | +5 Mel, +7 to Injury | 10 | 2 |
+| Pike | +7 to Hit, +3 to Injury | 10 | 2 |
 
 ### Zealots Equipment 
 Zealots equipment for the unit types: Leader, Hero
@@ -122,12 +122,12 @@ Zealots equipment for the unit types: Leader, Hero
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
-| Hammer | +1 Injury | 5 | 1 |
+| Hammer | +4 Injury | 5 | 1 |
 | Sword / Axe | -3 Def to target | 5 | 1 |
-| Spear | +3 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Great Hammer | +4 Mel, +5 to Injury | 10 | 2 |
-| Great Sword / Axe | +4 to Hit, +4 to Injury, -3 Def to target | 10 | 2 |
-| Pike | +7 to Hit, +4 to Injury | 10 | 2 |
+| Spear | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Great Hammer | +5 Mel, +7 to Injury | 10 | 2 |
+| Great Sword / Axe | +5 to Hit, +3 to Injury, -3 Def to target | 10 | 2 |
+| Pike | +7 to Hit, +3 to Injury | 10 | 2 |
 | Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |
@@ -144,8 +144,8 @@ Rabble equipment for the unit types: Leader, Hero
 
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
-| Spear | +3 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Pitchfork (Pike) | +7 to Hit, +4 to Injury | 10 | 2 |
+| Spear | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Pitchfork (Pike) | +7 to Hit, +3 to Injury | 10 | 2 |
 | Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 ## Prayers 

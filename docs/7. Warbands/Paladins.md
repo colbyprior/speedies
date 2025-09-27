@@ -70,10 +70,10 @@ Paladin equipment for the unit types: Leader, Hero, Squire, Novice
 
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
-| Hammer | +1 Injury | 5 | 1 |
+| Hammer | +4 Injury | 5 | 1 |
 | Blessed Hammer | -3 Def to target, +1 Injury, +3 Melee against Undead. Only heroes can dual-wield. | 15 | 1 |
 | Whip | +1 Atk in the first round of combat when you charge | 10 | 1 |
-| Great Hammer | +4 Mel, +5 to Injury | 10 | 2 |
+| Great Hammer | +5 Mel, +7 to Injury | 10 | 2 |
 | Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |
