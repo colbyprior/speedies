@@ -61,8 +61,8 @@ This unit can use their tail to equip a one handed weapon as though it was anoth
 
 ## Equipment
 
-### Rats Equipment 
-Rats equipment for the unit types: Leader, Hero, Rat Boi
+### Hero Rats Equipment 
+Hero Rats equipment for the unit types: Mastermind, Ratlock, Strong Rat, Assassin
 
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
@@ -83,12 +83,15 @@ Rats equipment for the unit types: Leader, Hero, Rat Boi
 | Light Armour | +1 Def | 15 |
 
 ### Rat Underlings Equipment 
-Rat Underlings equipment for the unit types: Rat Underlings
+Rat Underlings equipment for the unit types: Rat Boi, Plague Host
 
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
 | Club (Hammer) | +4 Injury | 5 | 1 |
+| Sword / Axe | -3 Def to target | 5 | 1 |
+| Spear | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |
 | ---- | ----- | ------ | ---- | ----- |
