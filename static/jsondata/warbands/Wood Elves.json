@@ -150,7 +150,8 @@
             "Cost": 185,
             "Skills": [
                 "Fear",
-                "Slow"
+                "Slow",
+				"Large"
             ]
         }
     ],
