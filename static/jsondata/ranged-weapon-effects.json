@@ -4,7 +4,7 @@
   "Deadly": "Increase Injury modifier by 2.",
   "Armour Piercing": "Reduce enemy defense by 3.",
   "Long Reload": "You may only fire every other turn.",
-  "Close Quarters": "You may make an attack in the first round of combat. Use Melee skill. Deadly and Armour Piercing apply to this shot.",
+  "Close Quarters": "Your target does not receive a bonus to their Defense if you Moved before Shooting this turn.",
   "Massive Shot": "Draw a 15\" long and 1\" wide line in any direction from the firer.\nAll models in its path are automatically hit but roll their defence as normal.\nFor any that fail, roll an Injury check +2 if they are reduced to 0 wounds.",
   "Fire Once": "You may only fire this once per battle.",
   "Dual Wield": "You may purchase this weapon up to two times and wield both at once without using an additional weapon slot. If you do, you have Advantage on attacks with the weapon.",

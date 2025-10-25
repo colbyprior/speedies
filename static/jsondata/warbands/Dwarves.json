@@ -6,7 +6,6 @@
     "Special Rules": {
         "Hard to Kill": "Dwarves have a -2 to Injury rolls made against them (eg. an unmodified roll of 19 would count as a 17, Stunning rather than Incapaciating the Dwarf).",
         "Sturdy Legs": "Wearing Armour does not reduce a Dwarf's Move attribute.",
-        "Gem Sense": "Dwarf warbands gain an additional Treasure Roll at the end of each game.",
         "Ranged Shields": "Dwarf gunners may use any ranged weapon with a shield."
     },
     "Heroes": [
@@ -102,7 +101,7 @@
             "Morale": "7",
             "Cost": 45,
             "Skills": [
-                "Berserk",
+                "Berserker",
                 "Fearless"
             ]
         },

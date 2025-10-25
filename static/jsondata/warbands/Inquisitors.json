@@ -4,7 +4,7 @@
     "Play Style": "Powerful heroes with minions",
     "Preamble": "Magic never expects us.",
     "Special Rules": {
-        "Rabble Rousers": "At the start of each game roll morale once per hero. For each success you get a temporary Rabble unit that joins your warband for this game only."
+        "Incite the Mob": "At the start of each game make a Morale Check once per hero. For each success, a Peasant temporarily joins your warband for this game only. This unit wields farm tools or anything else that was on-hand when it was roused. Its improvised weapons are reflected in its stats."
     },
     "Heroes": [
         {
@@ -66,7 +66,7 @@
             ]
         },
         {
-            "Name": "Rabble Rouser",
+            "Name": "Doomsayer",
             "Type": "Hero",
             "Type Cap": "1",
             "Move": "6",
@@ -81,7 +81,7 @@
             "Morale": "9",
             "Cost": 50,
             "Skills": [
-                "Extra Rabble",
+                "The Rapture is Nigh",
                 "Inquisitor"
             ]
         }
@@ -123,8 +123,8 @@
             "Skills": []
         },
         {
-            "Name": "Rabble",
-            "Type Cap": "See Rabble Rouser skill",
+            "Name": "Peasant",
+            "Type Cap": "See Incite the Mob skill",
             "Move": "6",
             "Piercing": "0",
             "Injury": "0",
@@ -137,7 +137,7 @@
             "Morale": "16",
             "Cost": "-",
             "Skills": [
-                "Follow the leader"
+                "Heed the Scripture"
             ]
         },
         {
@@ -223,12 +223,6 @@
             "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
             "Ranged Weapons": ["Short Bow", "Bow"],
             "Armour": ["Light Armour"]
-        },
-        "Rabble": {
-            "Aliases": ["Leader", "Hero"],
-            "Melee Weapons": ["Spear", "Pitchfork (Pike)", "Shield"],
-            "Ranged Weapons": [],
-            "Armour": []
         }
     }
 }

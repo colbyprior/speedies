@@ -167,17 +167,17 @@
   "Weaponsmith": {
     "Name": "Weaponsmith",
     "Type": "Inherent",
-    "Description": "If a warband starts a game with a unit with this Skill, any Ranged Attack made by a unit in the warband that is Elevated (relative to its target) will have Advantage on the attack, even if the attack is over half of the weapon's range."
+    "Description": "If a warband starts a game with a unit with this Skill, all Ranged Weapons have their Range increased by 10\", except for Pistols whose Range is incrased by 5\""
   },
   "Armoursmith": {
     "Name": "Armoursmith",
     "Type": "Inherent",
     "Description": "If a warband contains a unit with this Skill, it gains the ability to purchase Mithril Armour."
   },
-  "Berserk": {
-    "Name": "Berserk",
+  "Berserker": {
+    "Name": "Berserker",
     "Type": "Inherent",
-    "Description": "At the end of the Engage Phase, if there is an enemy within Line-of-Sight and Engage range, this unit attempts to Engage the closest such unit. For the turn that this unit Engages, it gains an additional Attack. This unit cannot wear Armour or use a Shield."
+    "Description": "At the end of the Engage Phase, if there is an enemy within Line-of-Sight and Engage range, this unit attempts to Engage the closest such unit. For the turn that this unit Engages or is Engaged, it gains an Advantage on its Attacks. This unit cannot wear Armour or use a Shield."
   },
   "Spread Plague": {
     "Name": "Spread Plague",
@@ -289,15 +289,15 @@
     "Type": "Inherent",
     "Description": "This unit cannot promote into a hero."
   },
-  "Extra Rabble": {
-    "Name": "Extra Rabble",
+  "The Rapture is Nigh": {
+    "Name": "The Rapture is Nigh",
     "Type": "Inquisitors",
-    "Description": "This unit counts as two heroes for the purposes of the rabble rouser skill."
+    "Description": "This unit counts as two heroes for the purposes of the 'Incite the Mob' skill."
   },
-  "Follow the leader": {
-    "Name": "Follow the leader",
+  "Heed the Scripture": {
+    "Name": "Heed the Scripture",
     "Type": "Inquisitors",
-    "Description": "This unit can use the morale of the Inquisitor Rabble Rouser if they are within 6\" of them."
+    "Description": "This unit can use the morale of the Doomsayer if they are within 6\" of it."
   },
   "Cult Magic": {
     "Name": "Cult Magic",
