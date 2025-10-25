@@ -139,20 +139,20 @@
     "Type": "Inherent",
     "Description": "This unit is a boss dog that rides a mount."
   },
-  "Prayers": {
-    "Name": "Prayers",
+  "Divine Magic": {
+    "Name": "Divine Magic",
     "Type": "Spellcasting",
-    "Description": "This unit can cast Prayer spells. Immediately pick one spell from this school to learn. This unit can still use armour and a shield while casting, unlike other spell types."
+    "Description": "This unit is capable of casting Divine Magic. See the relevant spell list for a list of learnable spells. As a Divine Spellcaster, this unit has the usual three slots for weapons and can use armour and shields as normal."
   },
-  "Necromancy Spells": {
-    "Name": "Necromancy Spells",
+  "Necromantic Magic": {
+    "Name": "Necromantic Magic",
     "Type": "Spellcasting",
-    "Description": "This unit can cast Necromancy spells. Immediately pick one spell from this school to learn. This unit cannot use armour or a shield while casting."
+    "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Spellcaster, this unit has an innate spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
   },
-   "Nature Spells": {
-    "Name": "Nature Spells",
+   "Forest Magic": {
+    "Name": "Forest Magic",
     "Type": "Spellcasting",
-    "Description": "This unit can cast Nature spells. Immediately pick one spell from this school to learn. This unit cannot use armour or a shield while casting."
+    "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Spellcaster, this unit has an innate spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
   },
   "Determination": {
     "Name": "Determination",
@@ -229,20 +229,20 @@
     "Type": "Inherent",
     "Description": "Allied units within 6\" of this unit can roll Morale Checks with Advantage. Rout Checks cannot gain Advantage in this way."
   },
-  "Vampire Seduction": {
-    "Name": "Vampire Seduction",
+  "Vampiric Magic": {
+    "Name": "Vampiric Magic",
     "Type": "Spellcasting",
-    "Description": "This unit can cast Vampire Seduction spells."
+    "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Spellcaster, this unit has an innate spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
   },
   "Flying": {
     "Name": "Flying",
     "Type": "Inherent",
     "Description": "This unit can move through the air in any direction. They must not end their movement in the air."
   },
-  "Rat Magic": {
-    "Name": "Rat Magic",
+  "Plague Magic": {
+    "Name": "Plague Magic",
     "Type": "Spellcasting",
-    "Description": "This rat can cast rat spells."
+    "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Spellcaster, this unit has an innate spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
   },
   "Big Hitter 1": {
     "Name": "Big Hitter 1",
