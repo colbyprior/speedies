@@ -190,7 +190,7 @@
             "Mrl": "",
             "Special": "X"
         },
-        "Rabble Rouser": {
+        "Doomsayer": {
             "Mel": "X",
             "Rng": "X",
             "Def": "",
@@ -201,7 +201,7 @@
     },
     "Equipment": {
         "Inquisitors": {
-            "Aliases": ["Grand Inquisitor", "Inquisitor", "Rabble Rouser"],
+            "Aliases": ["Grand Inquisitor", "Inquisitor", "Doomsayer"],
             "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike"],
             "Ranged Weapons": ["Crossbow", "Pistol"],
             "Armour": ["Light Armour", "Heavy Armour"]

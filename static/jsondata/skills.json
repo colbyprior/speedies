@@ -282,7 +282,7 @@
   "Inquisitor": {
     "Name": "Inquisitor",
     "Type": "Inquisitors",
-    "Description": "This unit gets a +2 injury modifier against all enemy heroes for melee attacks."
+    "Description": "This unit gets a +2 Injury modifier against all enemy heroes for melee attacks."
   },
   "Can't promote": {
     "Name": "Can't promote",
