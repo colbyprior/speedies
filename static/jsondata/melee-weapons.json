@@ -53,11 +53,17 @@
     "Cost": "10",
     "Slots": "1"
   },
-  "Blessed Hammer": {
-    "Name": "Blessed Hammer",
-    "Effect": "-3 Def to target, +1 Injury, +3 Melee against Undead. Only heroes can dual-wield.",
+  "Divine Hammer": {
+    "Name": "Divine Hammer",
+    "Effect": "-3 Def to target, +4 Injury, Advantage against Undead. Only heroes can dual-wield.",
     "Cost": "15",
     "Slots": "1"
+  },
+    "Divine Great Hammer": {
+    "Name": "Divine Great Hammer",
+    "Effect": "-3 Def to target, +5 Mel, +7 Injury, Advantage against Undead.",
+    "Cost": "20",
+    "Slots": "2"
   },
   "Whip": {
     "Name": "Whip",

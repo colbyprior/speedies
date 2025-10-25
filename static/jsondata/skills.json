@@ -69,6 +69,11 @@
     "Type": "Morale", 
     "Description": "If a leader takes this skill they may extend their leadership aura range by 6\""
   },
+  "Treasure Hunter": {
+	"Name": "Treasure Hunter", 
+    "Type": "Morale", 
+    "Description": "If any unit in the your warband has this skill, you can roll on the Loot table when rolling a 19-20 on a Treasure Roll, rather than the usual 20."
+  },
   "Spell Master": { 
     "Name": "Spell Master", 
     "Type": "Morale", 
@@ -202,7 +207,7 @@
    "Animal": {
     "Name": "Animal",
     "Type": "Inherent",
-    "Description": "This unit cannot Promote, make Climb checks, or pick up Treasure. They can still go up ladders."
+    "Description": "This unit cannot Promote, use ladders (except by making a full Climb Check), pick up Treasure, or use equipment."
   },
    "Slow": {
     "Name": "Slow",

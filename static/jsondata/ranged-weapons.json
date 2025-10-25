@@ -9,7 +9,7 @@
       "Pistol": { 
         "Name": "Pistol", 
         "Range": "10\"",
-        "Effect": "Long Reload, Deadly, Armour Piercing, Close Quarters",
+        "Effect": "Long Reload, Deadly, Armour Piercing, Close Quarters, Dual Wield",
         "Cost": "15",
         "Slots": "1" 
       }, 

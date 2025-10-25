@@ -123,9 +123,9 @@
             "Defense": "18",
             "Wounds": "1",
             "Agility": "8",
-            "Attacks": "1",
+            "Attacks": "2",
             "Morale": "10",
-            "Cost": 40,
+            "Cost": 400,
             "Skills": ["Ki Strike", "No Equipment"]
         },
         {
@@ -200,7 +200,7 @@
     "Equipment": {
         "Paladin": {
             "Aliases": ["Leader", "Hero", "Squire", "Novice"],
-            "Melee Weapons": ["Hammer", "Blessed Hammer", "Whip", "Great Hammer", "Shield"],
+            "Melee Weapons": ["Hammer", "Divine Hammer", "Divine Great Hammer", "Whip", "Great Hammer", "Shield"],
             "Ranged Weapons": ["Sling"],
             "Armour": ["Light Armour", "Heavy Armour"]
         }
