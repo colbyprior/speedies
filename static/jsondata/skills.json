@@ -122,7 +122,7 @@
   "Leader": {
     "Name": "Leader",
     "Type": "Inherent",
-    "Description": "Allied units with 6\" of this unit can use this morale stat for checks instead of their own."
+    "Description": "Allied units with 5\" of this unit can use this morale stat for checks instead of their own."
   },
   "No Equipment": {
     "Name": "No Equipment",
@@ -292,12 +292,12 @@
   "The Rapture is Nigh": {
     "Name": "The Rapture is Nigh",
     "Type": "Inquisitors",
-    "Description": "This unit counts as two heroes for the purposes of the 'Incite the Mob' skill."
+    "Description": "This unit counts as two heroes for the purposes of the 'Incite the Mob' special rule."
   },
   "Heed the Scripture": {
     "Name": "Heed the Scripture",
     "Type": "Inquisitors",
-    "Description": "This unit can use the morale of the Doomsayer if they are within 6\" of it."
+    "Description": "This unit can use the morale of the Doomsayer if they are within 5\" of it."
   },
   "Cult Magic": {
     "Name": "Cult Magic",
