@@ -192,29 +192,29 @@
         }
     },
     "Equipment": {
-        "Sellsword General": {
-            "Description": "Equipment for all units except Warrior, Swordsmen, Marksmen, Defender",
+        "Hero": {
+			"Aliases": ["Captain", "Champion"],
             "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
-            "Ranged Weapons": ["Short Bow", "Bow", "Long Bow", "Crossbow", "Pistol", "Rifle"],
+            "Ranged Weapons": ["Short Bow", "Bow", "Crossbow", "Pistol"],
             "Armour": ["Light Armour", "Heavy Armour"]
         },
         "Warriors & Swordsman": {
             "Aliases": ["Warrior", "Swordsman"],
             "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
-            "Ranged Weapons": [],
+            "Ranged Weapons": ["Short Bow", "Bow", "Crossbow"],
             "Armour": ["Light Armour", "Heavy Armour"]
         },
         "Marksmen": {
-            "Aliases": ["Marksmen"],
+            "Aliases": ["Marksmen", "Sniper"],
             "Melee Weapons": ["Dagger", "Hammer", "Sword"],
             "Ranged Weapons": ["Short Bow", "Bow", "Long Bow", "Crossbow", "Pistol", "Rifle", "Blunderbuss"],
             "Armour": ["Light Armour"]
         },
         "Defender": {
             "Aliases": ["Knight", "Defender"],
-            "Melee Weapons": ["Dagger", "Hammer", "Spear", "Sword", "Shield", "Tower-Shield"],
+            "Melee Weapons": ["Dagger", "Hammer", "Spear", "Sword", "Shield", "Tower Shield"],
             "Ranged Weapons": [],
-            "Armour": []
+            "Armour": ["Light Armour", "Heavy Armour"]
         }
     }
 }
