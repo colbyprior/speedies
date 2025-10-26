@@ -71,19 +71,20 @@
             "Type": "Hero",
             "Type Cap": "-",
             "Move": "9",
-            "Piercing": "0",
-            "Injury": "0",
-            "Melee": "13",
+            "Piercing": "3",
+            "Injury": "3",
+            "Melee": "8",
             "Ranged": "-",
             "Defense": "-",
             "Wounds": "1",
             "Agility": "10",
             "Attacks": "2",
             "Morale": "13",
-            "Cost": 65,
+            "Cost": 75,
             "Skills": [
                 "Undead",
-                "Fear"
+                "Fear",
+				"Fixed Equipment (Scythe)"
             ]
         },
     ],
@@ -215,20 +216,14 @@
         }
     },
     "Equipment": {
-        "Skeleton": {
+        "Undead": {
             "Aliases": ["Skeleton", "Death Knight"],
             "Melee Weapons": ["Dagger", "Spear", "Sword", "Hammer", "Pike", "Great Sword", "Great Hammer", "Shield"],
             "Ranged Weapons": ["Short Bow", "Bow"],
             "Armour": ["Light Armour", "Heavy Armour"]
         },
-        "Reaper": {
-            "Aliases": ["Reaper"],
-            "Melee Weapons": ["Scythe (Great Sword)"],
-            "Ranged Weapons": [],
-            "Armour": []
-        },
         "Cultist": {
-            "Aliases": ["Necromancer", "Cultist"],
+            "Aliases": ["Necromancer", "Plague Cultist"],
             "Melee Weapons": ["Dagger", "Spear", "Sword", "Hammer"],
             "Ranged Weapons": ["Short Bow", "Bow"],
             "Armour": ["Light Armour"]

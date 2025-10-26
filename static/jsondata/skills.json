@@ -313,5 +313,15 @@
     "Name": "Mutation",
     "Type": "Cultists",
     "Description": "Select one monstrosity trait for the unit to adopt. Monstrosities can't use equipment and can't mutate any further. Monstrosities lose spellcasting unless it is your leader. You can have a maximum of 3 of each monstrosity trait (combined count from heroes and henchmen)."
+  },
+  "Fixed Equipment (Scythe)": {
+    "Name": "Fixed Equipment (Scythe)",
+    "Type": "Inherent",
+    "Description": "This unit has fixed equipment that cannot be lost. The equipment modifers are included in the unit's stats."
+  },
+  "Fixed Equipment (Farm Tools)": {
+    "Name": "Fixed Equipment (Farm Tools)",
+    "Type": "Inherent",
+    "Description": "This unit has fixed equipment that cannot be lost or changed. The equipment modifers are included in the unit's stats."
   }
 }

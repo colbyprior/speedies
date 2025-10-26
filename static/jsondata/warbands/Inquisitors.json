@@ -4,7 +4,7 @@
     "Play Style": "Powerful heroes with minions",
     "Preamble": "Magic never expects us.",
     "Special Rules": {
-        "Incite the Mob": "At the start of each game make a Morale Check once per hero. For each success, a Peasant temporarily joins your warband for this game only. This unit wields farm tools or anything else that was on-hand when it was roused. Its improvised weapons are reflected in its stats."
+        "Incite the Mob": "At the start of each game make a Morale Check once per hero. For each success, a Peasant temporarily joins your warband for this game only."
     },
     "Heroes": [
         {
@@ -137,7 +137,8 @@
             "Morale": "16",
             "Cost": "-",
             "Skills": [
-                "Heed the Scripture"
+                "Heed the Scripture",
+				"Fixed Equipment (Farm Tools)"
             ]
         },
         {
