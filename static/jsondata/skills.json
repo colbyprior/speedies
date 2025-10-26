@@ -14,10 +14,10 @@
     "Type": "Melee", 
     "Description": "This unit can trigger a critical strike on a 19-20"
   },
-  "Bull Rush": { 
-    "Name": "Bull Rush", 
+  "Ambush": { 
+    "Name": "Ambush", 
     "Type": "Melee", 
-    "Description": "This unit gets advantage on the first round of combat when they engage an enemy"
+    "Description": "This unit gets Advantage on the first round of combat when they Engage an enemy"
   },
   "Blade Defence": { 
     "Name": "Blade Defence", 
@@ -67,7 +67,7 @@
   "Iron Will": { 
     "Name": "Iron Will", 
     "Type": "Morale", 
-    "Description": "If a leader takes this skill they may extend their leadership aura range by 6\""
+    "Description": "If a leader takes this skill they may extend their 'Leader' skill's range by 5\""
   },
   "Treasure Hunter": {
 	"Name": "Treasure Hunter", 
@@ -122,7 +122,7 @@
   "Leader": {
     "Name": "Leader",
     "Type": "Inherent",
-    "Description": "Allied units with 5\" of this unit can use this morale stat for checks instead of their own."
+    "Description": "Allied units within 5\" of this unit can use this unit's Morale stat for Checks instead of their own."
   },
   "No Equipment": {
     "Name": "No Equipment",
