@@ -8,7 +8,7 @@
     },
     "Heroes": [
         {
-            "Name": "Vampire Master",
+            "Name": "Vampire Noble",
             "Type": "Leader",
             "Type Cap": "1",
             "Move": "8",
@@ -29,7 +29,7 @@
             ]
         },
         {
-            "Name": "Vampire Seductress",
+            "Name": "Vampire Seductor",
             "Type": "Hero",
             "Type Cap": "1",
             "Move": "8",
@@ -44,9 +44,30 @@
             "Morale": "10",
             "Cost": 130,
             "Skills": [
+				"Vampiric Magic",
                 "Undead",
-				"Fear",
-                "Vampiric Magic"
+				"Fear"
+            ]
+        },
+		{
+            "Name": "Nosferatu",
+            "Type": "Hero",
+            "Type Cap": "1",
+            "Move": "8",
+            "Piercing": "0",
+            "Injury": "0",
+            "Melee": "12",
+            "Ranged": "-",
+            "Defense": "14",
+            "Wounds": "2",
+            "Agility": "8",
+            "Attacks": "2",
+            "Morale": "10",
+            "Cost": 115,
+            "Skills": [
+                "No Equipment",
+                "Undead",
+				"Fear"
             ]
         },
         {
@@ -67,27 +88,6 @@
             "Skills": [
                 "Undead",
 				"Fear"
-            ]
-        },
-        {
-            "Name": "Nosferatu",
-            "Type": "Hero",
-            "Type Cap": "1",
-            "Move": "8",
-            "Piercing": "0",
-            "Injury": "0",
-            "Melee": "12",
-            "Ranged": "-",
-            "Defense": "14",
-            "Wounds": "2",
-            "Agility": "8",
-            "Attacks": "2",
-            "Morale": "10",
-            "Cost": 115,
-            "Skills": [
-                "Undead",
-				"Fear",
-                "No Equipment"
             ]
         }
     ],
@@ -209,16 +209,16 @@
     },
     "Equipment": {
         "Vampires": {
-            "Aliases": ["Leader", "Hero"],
-            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
+            "Aliases": ["Vampire Noble", "Vampire Seductor", "Vampire Spawn"],
+            "Melee Weapons": ["Dagger", "Great Hammer", "Great Sword", "Pike"],
             "Ranged Weapons": [],
             "Armour": ["Light Armour", "Heavy Armour"]
         },
         "Thralls": {
-            "Aliases": ["Leader", "Hero"],
+            "Aliases": ["Thrall"],
             "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
             "Ranged Weapons": ["Short Bow", "Bow"],
-            "Armour": ["Light Armour", "Heavy Armour"]
+            "Armour": ["Light Armour"]
         }
     }
 }
