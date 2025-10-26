@@ -65,7 +65,7 @@
   },
   "Tower-Shield": {
     "Name": "Tower-Shield",
-    "Effect": "+6 Def. CCannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon.",
+    "Effect": "+6 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon.",
     "Cost": "10",
     "Injury": "0",
     "Piercing": "0",
