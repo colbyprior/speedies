@@ -6,6 +6,8 @@ import helpers.reference_helper as reference_helper
 
 def generate_warbands():
     for path in Path('static/jsondata/warbands').rglob('*.json'):
+        if "Cultists" in path.name:
+            continue # Skip Cultists
         with (open(str(path)) as f):
             warband = json5.load(f)
             all_skills, spell_schools = warband_helper.get_all_skills_and_spells(warband)
