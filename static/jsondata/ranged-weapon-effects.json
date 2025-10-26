@@ -1,9 +1,9 @@
 {
-  "Black Powder": "Whenever a 1 is rolled, the weapon misfires. Immediately roll an Injury to yourself (using the weapons injury roll modifier). You may no longer use the weapon for the rest of the game. Afterwards, it is repaired at no cost. If you have advantage and if either dice rolls a 1 you still misfire. If the higher roll still hits the enemy, resolve it as normal.",
-  "Thrown": "This ranged weapon has no penalties due to movement.",
+  "Blackpowder": "Whenever a 1 is rolled, the weapon misfires. Immediately roll an Injury to yourself (applying the weapon's Injury modifier). You may no longer use the weapon for the rest of the game. After the game, it is repaired at no cost. If you have Advantage and if either dice rolls a 1 you still misfire. If the higher roll still hits the enemy, resolve it as normal.",
   "Long Reload": "You may only fire every other turn.",
   "Close Quarters": "Your target does not receive a bonus to their Defense if you Moved before Shooting this turn.",
   "Massive Shot": "Draw a 15\" long and 1\" wide line in any direction from the firer.\nAll models in its path are automatically hit but roll their defence as normal.\nFor any that fail, roll an Injury check +2 if they are reduced to 0 wounds.",
   "Fire Once": "You may only fire this once per battle.",
-  "Dual Wield": "You may purchase this weapon up to two times and wield both at once without using an additional weapon slot. If you do, you have Advantage on attacks with the weapon."
+  "Dual Wield": "You may purchase this weapon up to two times and wield both at once without using an additional weapon slot. If you do, you have Advantage on attacks with the weapon.",
+  "Light": "This weapon may be used with a Shield."
 }

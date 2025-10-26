@@ -254,10 +254,10 @@
     "Type": "Inherent",
     "Description": "If this unit is not within 6\" of an allied hero roll morale. If you fail you mat not move or attack on your turn."
   },
-  "Bloodsucker": {
-    "Name": "Bloodsucker",
+  "Bloodthirsty": {
+    "Name": "Bloodthirsty",
     "Type": "Vampires",
-    "Description": "If this unit takes out another unit in melee they may recover one wound. If this units max wounds are 1, this temporarily takes it to 2 for the remainder of the battle."
+    "Description": "If this unit Incapacitates another unit in Melee they may recover one Wound."
   },
   "Keen Tail": {
     "Name": "Keen Tail",
