@@ -36,11 +36,11 @@
     },
   "Pike": {
     "Name": "Pike",
-    "Effect": "+7 Mel",
+    "Effect": "",
     "Cost": "10",
     "Injury": "3",
     "Piercing": "0",
-    "Melee": "5",
+    "Melee": "7",
     "Slots": "2"
   },
   "Great Sword": {

@@ -12,20 +12,20 @@ Elves, bleh!
 ### Elven Agility
 Elves can Jump Across to a maximum distance of 6", instead of the usual 3".
 ## Heroes
-| Units | Mov | Mel | Rng | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
+| Units | Mov | Mel | Rng | Def | Agi | Mrl | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | --- | --------- |
-| Noble | 7 | 12 | 12| 4| 5 | 16 | 1 | 1 | 0 | 0 | [Leader](#leader) | 95 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale,Wood%20Elves) |
-| Mage | 7 | 13 | 13| 6| 7 | 18 | 1 | 1 | 0 | 0 | [Forest Magic](#forest-magic) | 90 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Agility,Wood%20Elves) |
-| Honour Guard | 7 | 12 | 12| 5| 7 | 16 | 1 | 1 | 0 | 0 |  | 80 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Wood%20Elves) |
-| Ranger | 7 | 13 | 10| 5| 7 | 18 | 1 | 1 | 0 | 0 |  | 70 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility,Wood%20Elves) |
+| Noble | 7 | 12 | 12 | 16 | 4| 5 | 1 | 1 | 0 | 0 | [Leader](#leader) | 95 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale,Wood%20Elves) |
+| Mage | 7 | 13 | 13 | 18 | 6| 7 | 1 | 1 | 0 | 0 | [Forest Magic](#forest-magic) | 90 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Agility,Wood%20Elves) |
+| Honour Guard | 7 | 12 | 12 | 16 | 5| 7 | 1 | 1 | 0 | 0 |  | 80 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Wood%20Elves) |
+| Ranger | 7 | 13 | 10 | 18 | 5| 7 | 1 | 1 | 0 | 0 |  | 70 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility,Wood%20Elves) |
 
 ## Henchmen
-| Units | Mov | Mel | Rng | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
+| Units | Mov | Mel | Rng | Def | Agi | Mrl | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | ---- |
-| Citizen | 7 | 13 | 13| 6| 7 | 18 | 1 | 1 | 0 | 0 |  | 55 | - |
-| Scout | 7 | 13 | 13| 5| 7 | 18 | 1 | 1 | 0 | 0 |  | 60 | 5 |
-| Woodland Creature | 8 | 14 | -| 8| 16 | 18 | 1 | 1 | 0 | 0 | [Follower](#follower), [Animal](#animal) | 20 | 3 |
-| Treant | 8 | 12 | -| 16| 7 | 8 | 2 | 3 | 0 | 2 | [Fear](#fear), [Slow](#slow), [Large](#large), [No Equipment](#no-equipment) | 185 | 1 |
+| Citizen | 7 | 13 | 13 | 18 | 6| 7 | 1 | 1 | 0 | 0 |  | 55 | - |
+| Scout | 7 | 13 | 13 | 18 | 5| 7 | 1 | 1 | 0 | 0 |  | 60 | 5 |
+| Woodland Creature | 8 | 14 | - | 18 | 8| 16 | 1 | 1 | 0 | 0 | [Follower](#follower), [Animal](#animal) | 20 | 3 |
+| Treant | 8 | 12 | - | 8 | 16| 7 | 2 | 3 | 0 | 2 | [Fear](#fear), [Slow](#slow), [Large](#large), [No Equipment](#no-equipment) | 185 | 1 |
 
 ## Skills 
 ### Leader
@@ -72,22 +72,22 @@ If an enemy attempts to Engage this unit and this unit is in cover, the enemy mu
 ### Wood Elf Equipment 
 Wood Elf equipment for the unit types: All
 
-| Melee Weapon | Injury | Piercing | Melee | Effect | Cost | Slots |
-| ------------ | ------ | -------- | ----- | ------ | ---- | ----- |
+| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
 | Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
 | Sword / Axe | 0 | 3 | None |  | 5 | 1 |
 | Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
-| Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
-| ------------- | ----- | ------ | -------- | ------ | ---- | ----- |
-| Bow | 25" | 25" | 0 | Light | 10 | 1 |
-| Long Bow | 30" | 30" | 0 |  | 15 | 1 |
-| Elvish Bow | 35" | 35" | 0 |  | 20 | 1 |
+| Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
+| ------------- | --- | --- | --- | ------ | ---- | ----- |
+| Bow | 25" | 0 | 0 | Light | 10 | 1 |
+| Long Bow | 30" | 0 | 0 |  | 15 | 1 |
+| Elvish Bow | 35" | 0 | 0 |  | 20 | 1 |
 
-| Armour | Effect | Cost |
-| ---- | ------ | ---- |
-| Light Armour | +1 Def | 15 |
+| Armour | Def | Cost |
+| ------ | --- | ---- |
+| Light Armour | 1 | 15 |
 
 ## Forest Magic 
 
@@ -106,7 +106,7 @@ Wood Elf equipment for the unit types: All
 | Honour Guard | +1 Mel, +1 Rng, +2 Def | - |
 | Ranger | +3 Rng | - |
 
-## Skill Ups & Starting Experience
+## Skill Table
 | Units | Mel | Rng | Def | Agi | Mrl | Special | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Noble | X | X |  | X | X | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale,Wood%20Elves) |

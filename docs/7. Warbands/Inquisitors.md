@@ -12,20 +12,20 @@ Magic never expects us.
 ### Incite the Mob
 At the start of each game make a Morale Check once per hero. For each success, a Peasant temporarily joins your warband for this game only. This unit wields farm tools or anything else that was on-hand when it was roused. Its improvised weapons are reflected in its stats.
 ## Heroes
-| Units | Mov | Mel | Rng | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
+| Units | Mov | Mel | Rng | Def | Agi | Mrl | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | --- | --------- |
-| Grand Inquisitor | 6 | 13 | 12| 8| 7 | 17 | 1 | 1 | 0 | 0 | [Leader](#leader), [Inquisitor](#inquisitor) | 100 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Agility,Morale,Inquisitors) |
-| Priest | 6 | 14 | 14| 10| 9 | 18 | 1 | 1 | 0 | 0 | [Divine Magic](#divine-magic) | 60 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Inquisitors) |
-| Inquisitor | 6 | 14 | 14| 10| 9 | 18 | 1 | 1 | 0 | 0 | [Inquisitor](#inquisitor) | 50 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Inquisitors) |
-| Doomsayer | 6 | 15 | 15| 10| 9 | 18 | 1 | 1 | 0 | 0 | [The Rapture is Nigh](#the-rapture-is-nigh), [Inquisitor](#inquisitor) | 50 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Inquisitors) |
+| Grand Inquisitor | 6 | 13 | 12 | 17 | 8| 7 | 1 | 1 | 0 | 0 | [Leader](#leader), [Inquisitor](#inquisitor) | 100 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Agility,Morale,Inquisitors) |
+| Priest | 6 | 14 | 14 | 18 | 10| 9 | 1 | 1 | 0 | 0 | [Divine Magic](#divine-magic) | 60 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Inquisitors) |
+| Inquisitor | 6 | 14 | 14 | 18 | 10| 9 | 1 | 1 | 0 | 0 | [Inquisitor](#inquisitor) | 50 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Inquisitors) |
+| Doomsayer | 6 | 15 | 15 | 18 | 10| 9 | 1 | 1 | 0 | 0 | [The Rapture is Nigh](#the-rapture-is-nigh), [Inquisitor](#inquisitor) | 50 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Inquisitors) |
 
 ## Henchmen
-| Units | Mov | Mel | Rng | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
+| Units | Mov | Mel | Rng | Def | Agi | Mrl | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | ---- |
-| Fanatic | 6 | 12 | 14| 10| 10 | 15 | 1 | 1 | 0 | 2 | [Fearless](#fearless), [Can't promote](#can't-promote) | 50 | 5 |
-| Zealot | 6 | 16 | 16| 10| 10 | 18 | 1 | 1 | 0 | 0 |  | 25 | None |
-| Peasant | 6 | 17 | 17| 12| 16 | - | 1 | 1 | 0 | 0 | [Heed the Scripture](#heed-the-scripture) | - | See Incite the Mob skill |
-| Hounds | 8 | 14 | -| 8| 16 | 18 | 1 | 1 | 0 | 0 | [Pack Tactics](#pack-tactics) | 25 | 5 |
+| Fanatic | 6 | 12 | 14 | 15 | 10| 10 | 1 | 1 | 0 | 2 | [Fearless](#fearless), [Can't promote](#can't-promote) | 50 | 5 |
+| Zealot | 6 | 16 | 16 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 25 | None |
+| Peasant | 6 | 17 | 17 | - | 12| 16 | 1 | 1 | 0 | 0 | [Heed the Scripture](#heed-the-scripture) | - | See Incite the Mob skill |
+| Hounds | 8 | 14 | - | 18 | 8| 16 | 1 | 1 | 0 | 0 | [Pack Tactics](#pack-tactics) | 25 | 5 |
 
 ## Skills 
 ### Leader
@@ -68,76 +68,76 @@ This unit can use the morale of the Doomsayer if they are within 5" of it.
 ### Inquisitors Equipment 
 Inquisitors equipment for the unit types: Grand Inquisitor, Inquisitor, Doomsayer
 
-| Melee Weapon | Injury | Piercing | Melee | Effect | Cost | Slots |
-| ------------ | ------ | -------- | ----- | ------ | ---- | ----- |
+| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
 | Hammer | 4 | 0 | 0 |  | 5 | 1 |
 | Sword / Axe | 0 | 3 | None |  | 5 | 1 |
 | Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
 | Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
 | Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
-| Pike | 3 | 0 | 5 | +7 Mel | 10 | 2 |
+| Pike | 3 | 0 | 7 |  | 10 | 2 |
 
-| Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
-| ------------- | ----- | ------ | -------- | ------ | ---- | ----- |
-| Crossbow | 30" | 30" | 2 | Long Reload | 20 | 1 |
-| Pistol | 10" | 10" | 2 | Long Reload, Close Quarters, Dual Wield, Blackpowder, Light | 15 | 1 |
+| Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
+| ------------- | --- | --- | --- | ------ | ---- | ----- |
+| Crossbow | 30" | 2 | 0 | Long Reload | 20 | 1 |
+| Pistol | 10" | 2 | 3 | Long Reload, Close Quarters, Dual Wield, Blackpowder, Light | 15 | 1 |
 
-| Armour | Effect | Cost |
-| ---- | ------ | ---- |
-| Light Armour | +1 Def | 15 |
-| Heavy Armour | +2 Def | 30 |
+| Armour | Def | Cost |
+| ------ | --- | ---- |
+| Light Armour | 1 | 15 |
+| Heavy Armour | 2 | 30 |
 
 ### Priest Equipment 
 Priest equipment for the unit types: Priest
 
-| Melee Weapon | Injury | Piercing | Melee | Effect | Cost | Slots |
-| ------------ | ------ | -------- | ----- | ------ | ---- | ----- |
+| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
 | Hammer | 4 | 0 | 0 |  | 5 | 1 |
 | Sword / Axe | 0 | 3 | None |  | 5 | 1 |
 | Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
 | Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
 | Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
-| Pike | 3 | 0 | 5 | +7 Mel | 10 | 2 |
+| Pike | 3 | 0 | 7 |  | 10 | 2 |
 | Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
-| Armour | Effect | Cost |
-| ---- | ------ | ---- |
-| Light Armour | +1 Def | 15 |
-| Heavy Armour | +2 Def | 30 |
+| Armour | Def | Cost |
+| ------ | --- | ---- |
+| Light Armour | 1 | 15 |
+| Heavy Armour | 2 | 30 |
 
 ### Fanatics Equipment 
 Fanatics equipment for the unit types: Fanatic
 
-| Melee Weapon | Injury | Piercing | Melee | Effect | Cost | Slots |
-| ------------ | ------ | -------- | ----- | ------ | ---- | ----- |
+| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
 | Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
-| Pike | 3 | 0 | 5 | +7 Mel | 10 | 2 |
+| Pike | 3 | 0 | 7 |  | 10 | 2 |
 
 ### Zealots Equipment 
 Zealots equipment for the unit types: Leader, Hero
 
-| Melee Weapon | Injury | Piercing | Melee | Effect | Cost | Slots |
-| ------------ | ------ | -------- | ----- | ------ | ---- | ----- |
+| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
 | Hammer | 4 | 0 | 0 |  | 5 | 1 |
 | Sword / Axe | 0 | 3 | None |  | 5 | 1 |
 | Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
 | Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
 | Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
-| Pike | 3 | 0 | 5 | +7 Mel | 10 | 2 |
+| Pike | 3 | 0 | 7 |  | 10 | 2 |
 | Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
-| Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
-| ------------- | ----- | ------ | -------- | ------ | ---- | ----- |
-| Short Bow | 20" | 20" | 0 | Light | 5 | 1 |
-| Bow | 25" | 25" | 0 | Light | 10 | 1 |
+| Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
+| ------------- | --- | --- | --- | ------ | ---- | ----- |
+| Short Bow | 20" | 0 | 0 | Light | 5 | 1 |
+| Bow | 25" | 0 | 0 | Light | 10 | 1 |
 
-| Armour | Effect | Cost |
-| ---- | ------ | ---- |
-| Light Armour | +1 Def | 15 |
+| Armour | Def | Cost |
+| ------ | --- | ---- |
+| Light Armour | 1 | 15 |
 
 ## Divine Magic 
 
@@ -154,7 +154,7 @@ Zealots equipment for the unit types: Leader, Hero
 | ---- | ---- | ---- |
 | Inquisitor | +2 Mel, +2 Ran, +2 Def | Free Skill, Hates Magic |
 
-## Skill Ups & Starting Experience
+## Skill Table
 | Units | Mel | Rng | Def | Agi | Mrl | Special | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Grand Inquisitor | X | X | X | X | X | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Agility,Morale,Inquisitors) |

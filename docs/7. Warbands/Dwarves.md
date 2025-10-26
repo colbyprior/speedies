@@ -16,20 +16,20 @@ Wearing Armour does not reduce a Dwarf's Move attribute.
 ### Ranged Shields
 Dwarf gunners may use any ranged weapon with a shield.
 ## Heroes
-| Units | Mov | Mel | Rng | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
+| Units | Mov | Mel | Rng | Def | Agi | Mrl | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | --- | --------- |
-| Noble | 5 | 12 | 12| 14| 5 | 13 | 1 | 1 | 0 | 0 | [Leader](#leader) | 75 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Morale,Dwarves) |
-| Engineer | 5 | 13 | 13| 14| 7 | 14 | 1 | 1 | 0 | 0 | [Weaponsmith](#weaponsmith) | 70 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Defense,Dwarves) |
-| Armourer | 5 | 13 | 14| 14| 7 | 13 | 1 | 1 | 0 | 0 | [Armoursmith](#armoursmith) | 55 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Dwarves) |
-| Veteran | 5 | 12 | 14| 14| 7 | 14 | 1 | 1 | 0 | 0 |  | 45 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Dwarves) |
+| Noble | 5 | 12 | 12 | 13 | 14| 5 | 1 | 1 | 0 | 0 | [Leader](#leader) | 75 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Morale,Dwarves) |
+| Engineer | 5 | 13 | 13 | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Weaponsmith](#weaponsmith) | 70 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Defense,Dwarves) |
+| Armourer | 5 | 13 | 14 | 13 | 14| 7 | 1 | 1 | 0 | 0 | [Armoursmith](#armoursmith) | 55 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Dwarves) |
+| Veteran | 5 | 12 | 14 | 14 | 14| 7 | 1 | 1 | 0 | 0 |  | 45 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Dwarves) |
 
 ## Henchmen
-| Units | Mov | Mel | Rng | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
+| Units | Mov | Mel | Rng | Def | Agi | Mrl | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | ---- |
-| Berserker | 5 | 13 | 14| 14| 7 | 14 | 1 | 1 | 0 | 0 | [Berserker](#berserker), [Fearless](#fearless) | 45 | 2 |
-| Youngling | 5 | 15 | 15| 14| 7 | 14 | 1 | 1 | 0 | 0 |  | 30 | - |
-| Warrior | 5 | 13 | 14| 14| 7 | 14 | 1 | 1 | 0 | 0 |  | 40 | - |
-| Gunner | 5 | 13 | 14| 14| 7 | 14 | 1 | 1 | 0 | 0 |  | 40 | 4 |
+| Berserker | 5 | 13 | 14 | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Berserker](#berserker), [Fearless](#fearless) | 45 | 2 |
+| Youngling | 5 | 15 | 15 | 14 | 14| 7 | 1 | 1 | 0 | 0 |  | 30 | - |
+| Warrior | 5 | 13 | 14 | 14 | 14| 7 | 1 | 1 | 0 | 0 |  | 40 | - |
+| Gunner | 5 | 13 | 14 | 14 | 14| 7 | 1 | 1 | 0 | 0 |  | 40 | 4 |
 
 ## Skills 
 ### Leader
@@ -60,8 +60,8 @@ The unit is immune to Fear checks.
 ### Warrior Equipment 
 Warrior equipment for the unit types: Noble, Armourer, Veteran, Berserker, Warrior, Youngling
 
-| Melee Weapon | Injury | Piercing | Melee | Effect | Cost | Slots |
-| ------------ | ------ | -------- | ----- | ------ | ---- | ----- |
+| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
 | Sword / Axe | 0 | 3 | None |  | 5 | 1 |
 | Hammer | 4 | 0 | 0 |  | 5 | 1 |
@@ -69,36 +69,36 @@ Warrior equipment for the unit types: Noble, Armourer, Veteran, Berserker, Warri
 | Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
 | Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
-| Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
-| ------------- | ----- | ------ | -------- | ------ | ---- | ----- |
-| Pistol | 10" | 10" | 2 | Long Reload, Close Quarters, Dual Wield, Blackpowder, Light | 15 | 1 |
+| Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
+| ------------- | --- | --- | --- | ------ | ---- | ----- |
+| Pistol | 10" | 2 | 3 | Long Reload, Close Quarters, Dual Wield, Blackpowder, Light | 15 | 1 |
 
-| Armour | Effect | Cost |
-| ---- | ------ | ---- |
-| Light Armour | +1 Def | 15 |
-| Heavy Armour | +2 Def | 30 |
-| Mithril Armour (If warband has Armourer) | +3 Def | 50 |
+| Armour | Def | Cost |
+| ------ | --- | ---- |
+| Light Armour | 1 | 15 |
+| Heavy Armour | 2 | 30 |
+| Mithril Armour (If warband has Armourer) | 3 | 50 |
 
 ### Gunner Equipment 
 Gunner equipment for the unit types: Gunner, Engineer
 
-| Melee Weapon | Injury | Piercing | Melee | Effect | Cost | Slots |
-| ------------ | ------ | -------- | ----- | ------ | ---- | ----- |
+| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
 | Sword / Axe | 0 | 3 | None |  | 5 | 1 |
 | Hammer | 4 | 0 | 0 |  | 5 | 1 |
 | Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
-| Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
-| ------------- | ----- | ------ | -------- | ------ | ---- | ----- |
-| Crossbow | 30" | 30" | 2 | Long Reload | 20 | 1 |
-| Pistol | 10" | 10" | 2 | Long Reload, Close Quarters, Dual Wield, Blackpowder, Light | 15 | 1 |
-| Rifle | 25" | 25" | 2 | Long Reload, Blackpowder | 25 | 1 |
+| Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
+| ------------- | --- | --- | --- | ------ | ---- | ----- |
+| Crossbow | 30" | 2 | 0 | Long Reload | 20 | 1 |
+| Pistol | 10" | 2 | 3 | Long Reload, Close Quarters, Dual Wield, Blackpowder, Light | 15 | 1 |
+| Rifle | 25" | 2 | 3 | Long Reload, Blackpowder | 25 | 1 |
 
-| Armour | Effect | Cost |
-| ---- | ------ | ---- |
-| Light Armour | +1 Def | 15 |
-| Heavy Armour | +2 Def | 30 |
+| Armour | Def | Cost |
+| ------ | --- | ---- |
+| Light Armour | 1 | 15 |
+| Heavy Armour | 2 | 30 |
 
 ## Promotion Options
 | Unit | Stat Ups | Gained Skills |
@@ -107,7 +107,7 @@ Gunner equipment for the unit types: Gunner, Engineer
 | Armourer | +1 Def | Armoursmith |
 | Veteran | +1 Mel | - |
 
-## Skill Ups & Starting Experience
+## Skill Table
 | Units | Mel | Rng | Def | Agi | Mrl | Special | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Noble | X | X | X |  | X | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Morale,Dwarves) |

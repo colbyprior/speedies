@@ -12,20 +12,20 @@ This team sucks... your blood!
 ### Enthrall
 If any enemy Hero dies during the post-game Injury rolls, they transform into a Vampire Spawn and join your warband. This effect can only trigger if you have 5 or less Heroes in your warband.
 ## Heroes
-| Units | Mov | Mel | Rng | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
+| Units | Mov | Mel | Rng | Def | Agi | Mrl | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | --- | --------- |
-| Vampire Master | 8 | 11 | -| 6| 7 | 14 | 2 | 2 | 0 | 0 | [Leader](#leader), [Undead](#undead), [Fear](#fear) | 160 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Vampires) |
-| Vampire Seductress | 8 | 14 | -| 8| 10 | 16 | 2 | 2 | 0 | 0 | [Undead](#undead), [Fear](#fear), [Vampiric Magic](#vampiric-magic) | 130 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Vampires) |
-| Vampire Spawn | 8 | 14 | -| 8| 10 | 16 | 1 | 2 | 0 | 0 | [Undead](#undead), [Fear](#fear) | 70 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Vampires) |
-| Nosferatu | 8 | 12 | -| 8| 10 | 14 | 2 | 2 | 0 | 0 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment) | 115 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Vampires) |
+| Vampire Master | 8 | 11 | - | 14 | 6| 7 | 2 | 2 | 0 | 0 | [Leader](#leader), [Undead](#undead), [Fear](#fear) | 160 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Vampires) |
+| Vampire Seductress | 8 | 14 | - | 16 | 8| 10 | 2 | 2 | 0 | 0 | [Undead](#undead), [Fear](#fear), [Vampiric Magic](#vampiric-magic) | 130 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Vampires) |
+| Vampire Spawn | 8 | 14 | - | 16 | 8| 10 | 1 | 2 | 0 | 0 | [Undead](#undead), [Fear](#fear) | 70 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Vampires) |
+| Nosferatu | 8 | 12 | - | 14 | 8| 10 | 2 | 2 | 0 | 0 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment) | 115 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Vampires) |
 
 ## Henchmen
-| Units | Mov | Mel | Rng | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
+| Units | Mov | Mel | Rng | Def | Agi | Mrl | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | ---- |
-| Thrall | 6 | 16 | 16| 10| 10 | 18 | 1 | 1 | 0 | 0 |  | 25 | None |
-| Ghoul | 6 | 14 | 16| 10| 16 | 16 | 2 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment) | 40 | None |
-| Dire Wolf | 8 | 10 | -| 14| 18 | 19 | 1 | 1 | 0 | 0 | [Ambush](#ambush), [Animal](#animal) | 30 | 4 |
-| Giant Bat | 8 | 16 | -| 8| 16 | - | 1 | 1 | 0 | 0 | [Flying](#flying), [Animal](#animal) | 15 | 4 |
+| Thrall | 6 | 16 | 16 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 25 | None |
+| Ghoul | 6 | 14 | 16 | 16 | 10| 16 | 2 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment) | 40 | None |
+| Dire Wolf | 8 | 10 | - | 19 | 14| 18 | 1 | 1 | 0 | 0 | [Ambush](#ambush), [Animal](#animal) | 30 | 4 |
+| Giant Bat | 8 | 16 | - | - | 8| 16 | 1 | 1 | 0 | 0 | [Flying](#flying), [Animal](#animal) | 15 | 4 |
 
 ## Skills 
 ### Leader
@@ -72,45 +72,45 @@ If this unit Incapacitates another unit in Melee they may recover one Wound.
 ### Vampires Equipment 
 Vampires equipment for the unit types: Leader, Hero
 
-| Melee Weapon | Injury | Piercing | Melee | Effect | Cost | Slots |
-| ------------ | ------ | -------- | ----- | ------ | ---- | ----- |
+| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
 | Hammer | 4 | 0 | 0 |  | 5 | 1 |
 | Sword / Axe | 0 | 3 | None |  | 5 | 1 |
 | Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
 | Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
 | Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
-| Pike | 3 | 0 | 5 | +7 Mel | 10 | 2 |
+| Pike | 3 | 0 | 7 |  | 10 | 2 |
 | Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
-| Armour | Effect | Cost |
-| ---- | ------ | ---- |
-| Light Armour | +1 Def | 15 |
-| Heavy Armour | +2 Def | 30 |
+| Armour | Def | Cost |
+| ------ | --- | ---- |
+| Light Armour | 1 | 15 |
+| Heavy Armour | 2 | 30 |
 
 ### Thralls Equipment 
 Thralls equipment for the unit types: Leader, Hero
 
-| Melee Weapon | Injury | Piercing | Melee | Effect | Cost | Slots |
-| ------------ | ------ | -------- | ----- | ------ | ---- | ----- |
+| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
 | Hammer | 4 | 0 | 0 |  | 5 | 1 |
 | Sword / Axe | 0 | 3 | None |  | 5 | 1 |
 | Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
 | Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
 | Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
-| Pike | 3 | 0 | 5 | +7 Mel | 10 | 2 |
+| Pike | 3 | 0 | 7 |  | 10 | 2 |
 | Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
-| Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
-| ------------- | ----- | ------ | -------- | ------ | ---- | ----- |
-| Short Bow | 20" | 20" | 0 | Light | 5 | 1 |
-| Bow | 25" | 25" | 0 | Light | 10 | 1 |
+| Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
+| ------------- | --- | --- | --- | ------ | ---- | ----- |
+| Short Bow | 20" | 0 | 0 | Light | 5 | 1 |
+| Bow | 25" | 0 | 0 | Light | 10 | 1 |
 
-| Armour | Effect | Cost |
-| ---- | ------ | ---- |
-| Light Armour | +1 Def | 15 |
-| Heavy Armour | +2 Def | 30 |
+| Armour | Def | Cost |
+| ------ | --- | ---- |
+| Light Armour | 1 | 15 |
+| Heavy Armour | 2 | 30 |
 
 ## Vampiric Magic 
 
@@ -127,7 +127,7 @@ Thralls equipment for the unit types: Leader, Hero
 | ---- | ---- | ---- |
 | Vampire Spawn | +2 Mov, Mel, Ran, Def, Agi | Undead |
 
-## Skill Ups & Starting Experience
+## Skill Table
 | Units | Mel | Rng | Def | Agi | Mrl | Special | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Vampire Master | X | X |  |  | X | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Vampires) |

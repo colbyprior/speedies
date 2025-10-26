@@ -12,20 +12,20 @@ An order of paladins and others that seek to advance a holy agenda.
 ### Example special rule
 Paladins don't actually have any but this is a test.
 ## Heroes
-| Units | Mov | Mel | Rng | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
+| Units | Mov | Mel | Rng | Def | Agi | Mrl | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | --- | --------- |
-| Justicar | 6 | 13 | 13| 8| 7 | 17 | 1 | 1 | 0 | 0 | [Leader](#leader), [Divine Magic](#divine-magic) | 90 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Morale,Paladins) |
-| Paladin | 6 | 13 | 14| 10| 10 | 17 | 1 | 1 | 0 | 0 |  | 40 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
-| Cleric | 6 | 14 | 14| 10| 10 | 18 | 1 | 1 | 0 | 0 | [Healer](#healer) | 40 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Paladins) |
-| Standard Bearer | 6 | 14 | 14| 10| 7 | 18 | 1 | 1 | 0 | 0 | [Holy Standard](#holy-standard) | 45 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
+| Justicar | 6 | 13 | 13 | 17 | 8| 7 | 1 | 1 | 0 | 0 | [Leader](#leader), [Divine Magic](#divine-magic) | 90 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Morale,Paladins) |
+| Paladin | 6 | 13 | 14 | 17 | 10| 10 | 1 | 1 | 0 | 0 |  | 40 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
+| Cleric | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 | [Healer](#healer) | 40 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Paladins) |
+| Standard Bearer | 6 | 14 | 14 | 18 | 10| 7 | 1 | 1 | 0 | 0 | [Holy Standard](#holy-standard) | 45 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
 
 ## Henchmen
-| Units | Mov | Mel | Rng | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
+| Units | Mov | Mel | Rng | Def | Agi | Mrl | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | ---- |
-| Squire | 6 | 14 | 14| 10| 10 | 18 | 1 | 1 | 0 | 0 |  | 30 | - |
-| Initiate | 6 | 16 | 16| 10| 10 | 18 | 1 | 1 | 0 | 0 |  | 25 | - |
-| Monk | 7 | 14 | 14| 8| 10 | 18 | 2 | 1 | 0 | 0 | [Ki Strike](#ki-strike), [No Equipment](#no-equipment) | 400 | 3 |
-| Cavalier | 9 | 14 | 14| 10| 10 | 18 | 1 | 2 | 0 | 0 | [Mounted](#mounted) | 55 | 3 |
+| Squire | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 30 | - |
+| Initiate | 6 | 16 | 16 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 25 | - |
+| Monk | 7 | 14 | 14 | 18 | 8| 10 | 2 | 1 | 0 | 0 | [Ki Strike](#ki-strike), [No Equipment](#no-equipment) | 400 | 3 |
+| Cavalier | 9 | 14 | 14 | 18 | 10| 10 | 1 | 2 | 0 | 0 | [Mounted](#mounted) | 55 | 3 |
 
 ## Skills 
 ### Leader
@@ -68,8 +68,8 @@ This unit may re-roll their first failed morale check of each battle.
 ### Paladin Equipment 
 Paladin equipment for the unit types: Leader, Hero, Squire, Novice
 
-| Melee Weapon | Injury | Piercing | Melee | Effect | Cost | Slots |
-| ------------ | ------ | -------- | ----- | ------ | ---- | ----- |
+| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Hammer | 4 | 0 | 0 |  | 5 | 1 |
 | Divine Hammer | 4 | 3 | 0 | Advantage against Undead. Only heroes can dual-wield. | 15 | 1 |
 | Divine Great Hammer | 7 | 3 | 5 | Advantage against Undead. | 20 | 2 |
@@ -77,14 +77,14 @@ Paladin equipment for the unit types: Leader, Hero, Squire, Novice
 | Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
 | Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
-| Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
-| ------------- | ----- | ------ | -------- | ------ | ---- | ----- |
-| Sling | 15" | 15" | 0 | Light | 5 | 1 |
+| Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
+| ------------- | --- | --- | --- | ------ | ---- | ----- |
+| Sling | 15" | 0 | 0 | Light | 5 | 1 |
 
-| Armour | Effect | Cost |
-| ---- | ------ | ---- |
-| Light Armour | +1 Def | 15 |
-| Heavy Armour | +2 Def | 30 |
+| Armour | Def | Cost |
+| ------ | --- | ---- |
+| Light Armour | 1 | 15 |
+| Heavy Armour | 2 | 30 |
 
 ## Divine Magic 
 
@@ -103,7 +103,7 @@ Paladin equipment for the unit types: Leader, Hero, Squire, Novice
 | Cleric | - | Healer |
 | Standard Bearer | +3 Mrl | Holy Standard |
 
-## Skill Ups & Starting Experience
+## Skill Table
 | Units | Mel | Rng | Def | Agi | Mrl | Special | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Justicar | X |  | X |  | X | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Morale,Paladins) |
