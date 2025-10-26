@@ -70,13 +70,13 @@ Vampires equipment for the unit types: Leader, Hero
 
 | Melee Weapon | Injury | Piercing | Effect | Cost | Slots |
 | ------------ | ------ | -------- | ------ | ---- | ----- |
-| Dagger | 0 | 0 | None | 2 | 1 |
+| Dagger | 0 | 0 |  | 2 | 1 |
 | Hammer | 4 | 0 |  | 5 | 1 |
 | Sword / Axe | 0 | 3 |  | 5 | 1 |
-| Spear | 0 | 0 | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Spear | 0 | 0 | +2 Mel. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
 | Great Hammer | 7 | 0 | +5 Mel | 10 | 2 |
-| Great Sword / Axe | 3 | 3 | +5 to Hit | 10 | 2 |
-| Pike | 3 | 0 | +7 to Hit | 10 | 2 |
+| Great Sword / Axe | 3 | 3 | +5 Mel | 10 | 2 |
+| Pike | 3 | 0 | +7 Mel | 10 | 2 |
 | Shield | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Armour | Effect | Cost |
@@ -89,13 +89,13 @@ Thralls equipment for the unit types: Leader, Hero
 
 | Melee Weapon | Injury | Piercing | Effect | Cost | Slots |
 | ------------ | ------ | -------- | ------ | ---- | ----- |
-| Dagger | 0 | 0 | None | 2 | 1 |
+| Dagger | 0 | 0 |  | 2 | 1 |
 | Hammer | 4 | 0 |  | 5 | 1 |
 | Sword / Axe | 0 | 3 |  | 5 | 1 |
-| Spear | 0 | 0 | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Spear | 0 | 0 | +2 Mel. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
 | Great Hammer | 7 | 0 | +5 Mel | 10 | 2 |
-| Great Sword / Axe | 3 | 3 | +5 to Hit | 10 | 2 |
-| Pike | 3 | 0 | +7 to Hit | 10 | 2 |
+| Great Sword / Axe | 3 | 3 | +5 Mel | 10 | 2 |
+| Pike | 3 | 0 | +7 Mel | 10 | 2 |
 | Shield | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |

@@ -62,16 +62,16 @@ Warrior equipment for the unit types: Noble, Armourer, Veteran, Berserker, Warri
 
 | Melee Weapon | Injury | Piercing | Effect | Cost | Slots |
 | ------------ | ------ | -------- | ------ | ---- | ----- |
-| Dagger | 0 | 0 | None | 2 | 1 |
+| Dagger | 0 | 0 |  | 2 | 1 |
 | Sword / Axe | 0 | 3 |  | 5 | 1 |
 | Hammer | 4 | 0 |  | 5 | 1 |
-| Great Sword / Axe | 3 | 3 | +5 to Hit | 10 | 2 |
+| Great Sword / Axe | 3 | 3 | +5 Mel | 10 | 2 |
 | Great Hammer | 7 | 0 | +5 Mel | 10 | 2 |
 | Shield | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
 | ------------- | ----- | ------ | -------- | ------ | ---- | ----- |
-| Pistol | 10" | 10" | 2 | Long Reload, Close Quarters, Dual Wield | 15 | 1 |
+| Pistol | 10" | 10" | 2 | Long Reload, Close Quarters, Dual Wield, Black Powder | 15 | 1 |
 
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |
@@ -84,16 +84,16 @@ Gunner equipment for the unit types: Gunner, Engineer
 
 | Melee Weapon | Injury | Piercing | Effect | Cost | Slots |
 | ------------ | ------ | -------- | ------ | ---- | ----- |
-| Dagger | 0 | 0 | None | 2 | 1 |
+| Dagger | 0 | 0 |  | 2 | 1 |
 | Sword / Axe | 0 | 3 |  | 5 | 1 |
 | Hammer | 4 | 0 |  | 5 | 1 |
 | Shield | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
 | ------------- | ----- | ------ | -------- | ------ | ---- | ----- |
-| Crossbow | 30" | 30" | 2 | Stand and Reload | 20 | 1 |
-| Pistol | 10" | 10" | 2 | Long Reload, Close Quarters, Dual Wield | 15 | 1 |
-| Rifle | 25" | 25" | 2 | Stand and Reload, Long Reload | 25 | 1 |
+| Crossbow | 30" | 30" | 2 | Long Reload | 20 | 1 |
+| Pistol | 10" | 10" | 2 | Long Reload, Close Quarters, Dual Wield, Black Powder | 15 | 1 |
+| Rifle | 25" | 25" | 2 | Long Reload, Black Powder | 25 | 1 |
 
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |

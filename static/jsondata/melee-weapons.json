@@ -1,7 +1,7 @@
 {
   "Dagger": {
     "Name": "Dagger",
-    "Effect": "None",
+    "Effect": "",
     "Cost": "2",
     "Injury": "0",
     "Piercing": "0",
@@ -17,7 +17,7 @@
   },
   "Spear": {
     "Name": "Spear",
-    "Effect": "+2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield.",
+    "Effect": "+2 Mel. A spear may not be used with dual-wielding melee weapons but may be used with a shield.",
     "Cost": "5",
     "Injury": "0",
     "Piercing": "0",
@@ -33,7 +33,7 @@
     },
   "Pike": {
     "Name": "Pike",
-    "Effect": "+7 to Hit",
+    "Effect": "+7 Mel",
     "Cost": "10",
     "Injury": "3",
     "Piercing": "0",
@@ -41,7 +41,7 @@
   },
   "Great Sword": {
     "Name": "Great Sword / Axe",
-    "Effect": "+5 to Hit",
+    "Effect": "+5 Mel",
     "Cost": "10",
     "Injury": "3",
     "Piercing": "3",

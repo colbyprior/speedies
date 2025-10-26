@@ -2,7 +2,7 @@
       "Crossbow": { 
         "Name": "Crossbow", 
         "Range": "30\"",
-        "Effect": "Stand and Reload",
+        "Effect": "Long Reload",
         "Cost": "20", 
         "Slots": "1",
         "Injury": "2",
@@ -11,7 +11,7 @@
       "Pistol": { 
         "Name": "Pistol", 
         "Range": "10\"",
-        "Effect": "Long Reload, Close Quarters, Dual Wield",
+        "Effect": "Long Reload, Close Quarters, Dual Wield, Black Powder",
         "Cost": "15",
         "Slots": "1",
         "Injury": "2",
@@ -38,7 +38,7 @@
       "Rifle": { 
         "Name": "Rifle", 
         "Range": "25\"",
-        "Effect": "Stand and Reload, Long Reload",
+        "Effect": "Long Reload, Black Powder",
         "Cost": "25", 
         "Slots": "1",
         "Injury": "2",
@@ -47,7 +47,7 @@
       "Blunderbuss": { 
         "Name": "Blunderbuss", 
         "Range": "-",
-        "Effect": "Massive Shot, Fire Once",
+        "Effect": "Massive Shot, Fire Once, Black Powder",
         "Cost": "25", 
         "Slots": "1",
         "Injury": "2",

@@ -74,8 +74,8 @@ Wood Elf equipment for the unit types: All
 
 | Melee Weapon | Injury | Piercing | Effect | Cost | Slots |
 | ------------ | ------ | -------- | ------ | ---- | ----- |
-| Dagger | 0 | 0 | None | 2 | 1 |
-| Spear | 0 | 0 | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Dagger | 0 | 0 |  | 2 | 1 |
+| Spear | 0 | 0 | +2 Mel. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
 | Sword / Axe | 0 | 3 |  | 5 | 1 |
 | Shield | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
