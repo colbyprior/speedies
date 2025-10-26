@@ -1,17 +1,17 @@
 {
       "Light Armour": { 
         "Name": "Light Armour", 
-        "Effect": "+1 Def", 
+        "Defense": "1",
         "Cost": "15"
       }, 
       "Heavy Armour": { 
         "Name": "Heavy Armour", 
-        "Effect": "+2 Def", 
+        "Defense": "2",
         "Cost": "30"
       },
       "Mithril Armour": { 
         "Name": "Mithril Armour", 
-        "Effect": "+3 Def", 
+        "Defense": "3",
         "Cost": "50"
       }
 }

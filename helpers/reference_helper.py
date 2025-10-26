@@ -6,17 +6,17 @@ from helpers.warband_helper import clean_link
 
 def melee_weapons_block():
     out_data = f"\n## Melee Weapons \n"
-    out_data += f"| Name | Injury | Piercing | Effect | Cost | Slots |\n"
-    out_data += f"| ---- | ------ | -------- | ------ | ---- | ----- |\n"
+    out_data += f"| Name | Inj | Prc | Mel | Effect | Cost | Slots |\n"
+    out_data += f"| ---- | ------ | -------- | ----- | ------ | ---- | ----- |\n"
     for weapon_key in global_melee_weapons_data:
         weapon_data = global_melee_weapons_data.get(weapon_key)
-        out_data += f"| {weapon_data.get('Name')} | {weapon_data.get('Injury')} |{weapon_data.get('Piercing')} |{weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
+        out_data += f"| {weapon_data.get('Name')} | {weapon_data.get('Injury')} |{weapon_data.get('Piercing')} | {weapon_data.get('Melee')} |{weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
     return out_data
 
 
 def ranged_weapons_block():
     out_data = f"\n## Ranged Weapons \n"
-    out_data += f"| Name | Range | Injury | Piercing | Effect | Cost | Slots |\n"
+    out_data += f"| Name | Rng | Inj | Prc | Effect | Cost | Slots |\n"
     out_data += f"| ---- | ----- | ------ | -------- | ------ | ---- | ----- |\n"
     for weapon_key in global_ranged_weapons_data:
         weapon_data = global_ranged_weapons_data.get(weapon_key)
@@ -36,11 +36,11 @@ def ranged_weapons_block():
 
 def armour_block():
     out_data = f"\n## Armour \n"
-    out_data += f"| Name | Effect | Cost |\n"
-    out_data += f"| ---- | ------ | ---- |\n"
+    out_data += f"| Name | Def | Cost |\n"
+    out_data += f"| ---- | --- | ---- |\n"
     for armour_key in global_armour_data:
         armour_data = global_armour_data.get(armour_key)
-        out_data += f"| {armour_data.get('Name')} | {armour_data.get('Effect')} | {armour_data.get('Cost')} |\n"
+        out_data += f"| {armour_data.get('Name')} | {armour_data.get('Defense')} | {armour_data.get('Cost')} |\n"
     return out_data
 
 
