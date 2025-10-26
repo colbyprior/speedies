@@ -14,6 +14,7 @@
     "Cost": "5",
     "Injury": "0",
     "Piercing": "3",
+	"Melee": "0",
     "Slots": "1"
   },
   "Spear": {
