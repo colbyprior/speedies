@@ -63,7 +63,7 @@
   },
   "Shield": {
     "Name": "Shield",
-    "Effect": "+4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon.",
+    "Effect": "+4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon.",
     "Cost": "5",
     "Injury": "0",
     "Piercing": "0",
@@ -72,7 +72,7 @@
   },
   "Tower-Shield": {
     "Name": "Tower-Shield",
-    "Effect": "+6 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon.",
+    "Effect": "+6 Def. CCannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon.",
     "Cost": "10",
     "Injury": "0",
     "Piercing": "0",
@@ -99,7 +99,7 @@
   },
   "Whip": {
     "Name": "Whip",
-    "Effect": "+1 Atk in the first round of combat when you charge",
+    "Effect": "+1 Atk in the first round of combat if this unit Engages.",
     "Cost": "10",
     "Injury": "0",
     "Piercing": "0",
@@ -108,7 +108,7 @@
   },
   "Fighting Claws": {
     "Name": "Fighting Claws",
-    "Effect": "+1 Attack. You roll agility with advantage.",
+    "Effect": "+1 Attack. This unit makes Agility Checks with Advantage.",
     "Cost": "20",
     "Injury": "0",
     "Piercing": "3",

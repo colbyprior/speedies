@@ -11,7 +11,7 @@
       "Pistol": { 
         "Name": "Pistol", 
         "Range": "10\"",
-        "Effect": "Long Reload, Close Quarters, Dual Wield, Black Powder",
+        "Effect": "Long Reload, Close Quarters, Dual Wield, Blackpowder, Light",
         "Cost": "15",
         "Slots": "1",
         "Injury": "2",
@@ -20,7 +20,7 @@
       "Bow": { 
         "Name": "Bow", 
         "Range": "25\"",
-        "Effect": "", 
+        "Effect": "Light", 
         "Cost": "10", 
         "Slots": "1",
         "Injury": "0",
@@ -38,7 +38,7 @@
       "Rifle": { 
         "Name": "Rifle", 
         "Range": "25\"",
-        "Effect": "Long Reload, Black Powder",
+        "Effect": "Long Reload, Blackpowder",
         "Cost": "25", 
         "Slots": "1",
         "Injury": "2",
@@ -47,7 +47,7 @@
       "Blunderbuss": { 
         "Name": "Blunderbuss", 
         "Range": "-",
-        "Effect": "Massive Shot, Fire Once, Black Powder",
+        "Effect": "Massive Shot, Fire Once, Blackpowder",
         "Cost": "25", 
         "Slots": "1",
         "Injury": "2",
@@ -56,7 +56,7 @@
       "Sling": { 
         "Name": "Sling", 
         "Range": "15\"",
-        "Effect": "", 
+        "Effect": "Light", 
         "Cost": "5", 
         "Slots": "1",
         "Injury": "0",
@@ -65,7 +65,7 @@
       "Short Bow": { 
         "Name": "Short Bow", 
         "Range": "20\"",
-        "Effect": "", 
+        "Effect": "Light", 
         "Cost": "5", 
         "Slots": "1",
         "Injury": "0",
@@ -74,7 +74,7 @@
       "Throwing Stars": {
         "Name": "Throwing Stars",
         "Range": "15\"",
-        "Effect": "Thrown",
+        "Effect": "Light, Close Quarters",
         "Cost": "10",
         "Slots": "1",
         "Injury": "0",
