@@ -70,13 +70,13 @@ Hero Rats equipment for the unit types: Mastermind, Ratlock, Strong Rat, Assassi
 | Club (Hammer) | 4 | 0 | 0 |  | 5 | 1 |
 | Sword / Axe | 0 | 3 | None |  | 5 | 1 |
 | Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Fighting Claws | 0 | 3 | 0 | +1 Attack. You roll agility with advantage. | 20 | 2 |
+| Fighting Claws | 0 | 3 | 0 | +1 Attack. This unit makes Agility Checks with Advantage. | 20 | 2 |
 
 | Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
 | ------------- | ----- | ------ | -------- | ------ | ---- | ----- |
-| Sling | 15" | 15" | 0 |  | 5 | 1 |
-| Throwing Stars | 15" | 15" | 0 | Thrown | 10 | 1 |
-| Pistol | 10" | 10" | 2 | Long Reload, Close Quarters, Dual Wield, Black Powder | 15 | 1 |
+| Sling | 15" | 15" | 0 | Light | 5 | 1 |
+| Throwing Stars | 15" | 15" | 0 | Light, Close Quarters | 10 | 1 |
+| Pistol | 10" | 10" | 2 | Long Reload, Close Quarters, Dual Wield, Blackpowder, Light | 15 | 1 |
 
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |
@@ -91,11 +91,11 @@ Rat Underlings equipment for the unit types: Rat Boi, Plague Host
 | Club (Hammer) | 4 | 0 | 0 |  | 5 | 1 |
 | Sword / Axe | 0 | 3 | None |  | 5 | 1 |
 | Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Shield | 0 | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
+| Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
 | Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
 | ------------- | ----- | ------ | -------- | ------ | ---- | ----- |
-| Sling | 15" | 15" | 0 |  | 5 | 1 |
+| Sling | 15" | 15" | 0 | Light | 5 | 1 |
 
 ## Plague Magic 
 

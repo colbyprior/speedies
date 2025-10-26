@@ -73,13 +73,13 @@ Paladin equipment for the unit types: Leader, Hero, Squire, Novice
 | Hammer | 4 | 0 | 0 |  | 5 | 1 |
 | Divine Hammer | 4 | 3 | 0 | Advantage against Undead. Only heroes can dual-wield. | 15 | 1 |
 | Divine Great Hammer | 7 | 3 | 5 | Advantage against Undead. | 20 | 2 |
-| Whip | 0 | 0 | 0 | +1 Atk in the first round of combat when you charge | 10 | 1 |
+| Whip | 0 | 0 | 0 | +1 Atk in the first round of combat if this unit Engages. | 10 | 1 |
 | Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
-| Shield | 0 | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
+| Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
 | Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
 | ------------- | ----- | ------ | -------- | ------ | ---- | ----- |
-| Sling | 15" | 15" | 0 |  | 5 | 1 |
+| Sling | 15" | 15" | 0 | Light | 5 | 1 |
 
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |

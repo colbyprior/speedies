@@ -62,10 +62,10 @@ This unit cannot Promote, use ladders (except by making a full Climb Check), pic
 This unit can move through the air in any direction. They must not end their movement in the air.
 
 ## Warband Special Skills 
-### Bloodsucker
+### Bloodthirsty
 *Vampires*
 
-If this unit takes out another unit in melee they may recover one wound. If this units max wounds are 1, this temporarily takes it to 2 for the remainder of the battle.
+If this unit Incapacitates another unit in Melee they may recover one Wound.
 
 ## Equipment
 
@@ -81,7 +81,7 @@ Vampires equipment for the unit types: Leader, Hero
 | Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
 | Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
 | Pike | 3 | 0 | 5 | +7 Mel | 10 | 2 |
-| Shield | 0 | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
+| Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |
@@ -100,12 +100,12 @@ Thralls equipment for the unit types: Leader, Hero
 | Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
 | Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
 | Pike | 3 | 0 | 5 | +7 Mel | 10 | 2 |
-| Shield | 0 | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
+| Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
 | Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
 | ------------- | ----- | ------ | -------- | ------ | ---- | ----- |
-| Short Bow | 20" | 20" | 0 |  | 5 | 1 |
-| Bow | 25" | 25" | 0 |  | 10 | 1 |
+| Short Bow | 20" | 20" | 0 | Light | 5 | 1 |
+| Bow | 25" | 25" | 0 | Light | 10 | 1 |
 
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |

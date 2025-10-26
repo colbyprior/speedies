@@ -81,12 +81,12 @@ Skeleton equipment for the unit types: Skeleton, Death Knight
 | Pike | 3 | 0 | 5 | +7 Mel | 10 | 2 |
 | Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
 | Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
-| Shield | 0 | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
+| Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
 | Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
 | ------------- | ----- | ------ | -------- | ------ | ---- | ----- |
-| Short Bow | 20" | 20" | 0 |  | 5 | 1 |
-| Bow | 25" | 25" | 0 |  | 10 | 1 |
+| Short Bow | 20" | 20" | 0 | Light | 5 | 1 |
+| Bow | 25" | 25" | 0 | Light | 10 | 1 |
 
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |
@@ -112,8 +112,8 @@ Cultist equipment for the unit types: Necromancer, Cultist
 
 | Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
 | ------------- | ----- | ------ | -------- | ------ | ---- | ----- |
-| Short Bow | 20" | 20" | 0 |  | 5 | 1 |
-| Bow | 25" | 25" | 0 |  | 10 | 1 |
+| Short Bow | 20" | 20" | 0 | Light | 5 | 1 |
+| Bow | 25" | 25" | 0 | Light | 10 | 1 |
 
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |
