@@ -1,121 +1,121 @@
 {
   "Raise Dead": {
     "Name": "Raise Dead", 
-    "School": "Necromancy Spells",
+    "School": "Necromantic Magic",
     "Check": "7",
     "Description": "One Zombie or Skeleton that was Incapacitated after the end of your last turn immediately returns to the battle. Place the model within 6\" of the Necromancer. The model cannot be placed such that it is Engaged with an enemy."
   },
   "Control Dead": {
     "Name": "Control Dead", 
-    "School": "Necromancy Spells",
+    "School": "Necromantic Magic",
     "Check": "10",
     "Description": "Choose a point within 6\" of the Necromancer. Any Zombies or Skeletons within 2\" of that point may immediately move again up to their Movement distance. If this moves them into base contact with an enemy model, they count as Engaging. They take Agility Checks as normal."
   },
   "Lifestealer": {
     "Name": "Lifestealer", 
-    "School": "Necromancy Spells",
+    "School": "Necromantic Magic",
     "Check": "18",
     "Description": "Choose a single unit within 6\". The target suffers a Wound (no Checks required) and the Necromancer gains an extra wound for the duration of the battle. If this takes an enemy to 0 Wounds, the Spell Check value is used to determine Injury (so a roll of 19 would Incapacitate the target). This may take the Necromancer’s Wounds above his original maximum value. This spell does not affect Undead units."
   },
   "Necromantic Hex": {
     "Name": "Necromantic Hex",
-    "School": "Necromancy Spells",
+    "School": "Necromantic Magic",
     "Check": "13",
     "Description": "Choose a single unit within 12\". The target has Disadvantage on all Checks it makes until the start of your next turn."
   },
   "Blessed Weapon": {
     "Name": "Blessed Weapon", 
-    "School": "Prayers",
+    "School": "Divine Magic",
     "Check": "9",
     "Description": "The wielder gains the following: +3 to melee, 4 armour piercing, +4 to injury rolls in melee until the start of his next turn. The Priest must test on each opponents shooting phase in order to continue to use blessed weapon."
   },
   "Steadfast": {
     "Name": "Steadfast", 
-    "School": "Prayers",
+    "School": "Divine Magic",
     "Check": "12",
     "Description": "Any allied warriors within 8\" of the warrior become immune to Fear. In addition, the whole warband gains +2 on any Morale tests they have to make. The effects of this spell last until the caster is knocked down, stunned or put out of action. If cast again the effects are not cumulative, ie, the maximum bonus to Rout tests remains +2."
   },
   "Bright Blast": {
     "Name": "Bright Blast", 
-    "School": "Prayers",
+    "School": "Divine Magic",
     "Check": "15",
     "Description": "Roll an attack with melee skill 12 against each enemy model within 4\", no defence saves are allowed. Undead or mutant models in range suffer the attack with a +2 to wound."
   },
    "Invisibility": {
     "Name": "Invisibility", 
-    "School": "Nature Spells",
+    "School": "Forest Magic",
     "Check": "12",
     "Description": "Choose one unit within 6\", which can be the caster. On a success, that unit cannot be targeted by Shooting or Engages until the spell ends. If the unit is in combat, it moves 1\" out of combat. If the unit Engages, casts a spell, or makes a Ranged attack, the spell ends. At the start of each of the player's turns, the caster must make a Morale check to keep the spell going. Only one unit can be affected by this spell at a time. LB. This does not block opponent run, movement, or contest treasure. LB. Ends if Wizard is stunned or OoA."
   },
    "Overgrowth": {
     "Name": "Overgrowth", 
-    "School": "Nature Spells",
+    "School": "Forest Magic",
     "Check": "9",
     "Description": "Choose a point within 12\". Place a piece of natural terrain (eg. woods) centred at that point. The terrain cannot be longer or wider than 3\", or taller than 5\". Some leniency should be made if it fits the spirit of the spell. LB. The terrain must fit within the space (ie. other terrain cannot be moved to accommodate it). If a unit is able to move through the terrain at all, it counts as Difficult Terrain. LB. Only one such piece of terrain can exist at a time. If the spell is successfully recast, the existing piece of terrain disappears, then the new piece of terrain is created."
   },
    "Root": {
     "Name": "Root", 
-    "School": "Nature Spells",
+    "School": "Forest Magic",
     "Check": "11",
     "Description": "Choose one unit within 20\". That unit cannot Engage, Move, Run, or Disengage until the start of your next turn."
   },
    "Wrath of the Forest": {
     "Name": "Wrath of the Forest", 
-    "School": "Nature Spells",
+    "School": "Forest Magic",
     "Check": "99",
     "Description": "Bottom text."
   },
   "Heal": {
     "Name": "Heal", 
-    "School": "Prayers",
+    "School": "Divine Magic",
     "Check": "5",
     "Description": "Any one model within 2\" of the caster (including themself) may be healed. The warrior is restored to his full quota of Wounds. In addition, if any friendly models within 2\" are stunned or knocked down, they immediately come to their senses, stand up, and continue fighting as normal."
   },
   "Frenzy": {
     "Name": "Frenzy",
-    "School": "Vampire Seduction",
+    "School": "Vampiric Magic",
     "Check": "13",
     "Description": "Choose one unit within 6\", including the caster. On a success that unit may take their full movement even if they have already moved. If they move into base contact with an enemy unit this counts as having charged. The unit may attack with advantage on the first round."
   },
   "Lure": {
     "Name": "Lure",
-    "School": "Vampire Seduction",
+    "School": "Vampiric Magic",
     "Check": "15",
     "Description": "Target an enemy you can see within 10\". You may immediatey make that unit move up to their base move speed. This may include drop down, jump and climbing checks. If this unit moves into base contact with any one of your units it counts as being charged by your unit."
   },
   "Bat wings": {
     "Name": "Bat wings",
-    "School": "Vampire Seduction",
+    "School": "Vampiric Magic",
     "Check": "12",
     "Description": "Choose one unit within 6\", including the caster. On a success, that unit can fly in any direction as part of their move speed. At the start of each turn, the caster must make a Morale check to keep the spell going. Only one unit can be affected by this spell at a time."
   },
   "Vampire Hex": {
     "Name": "Vampire Hex",
-    "School": "Vampire Seduction",
+    "School": "Vampiric Magic",
     "Check": "13",
     "Description": "Choose one unit with 12\" this unit has disadvantage on defense rolls until the start of your next turn."
   },
   "Ball of rats": {
     "Name": "Ball of rats",
-    "School": "Rat Magic",
+    "School": "Plague Magic",
     "Check": "13",
     "Description": "The spell has a range of 8\", hitting the first model in its path. The spell automatically hits the target (with the spell roll being the injury roll), roll an attack roll with 10 skill on each model within 2\" of the target."
   },
   "Rat fury": {
     "Name": "Rat fury",
-    "School": "Rat Magic",
+    "School": "Plague Magic",
     "Check": "13",
     "Description": "The rat may immediately charge any enemy model within 12\" (ignoring any terrain and interposing models) and gains 2 extra Attacks and +3 to wound during this turn’s hand-to-hand combat phase only."
   },
   "Ratpsychosis": {
     "Name": "Ratpsychosis",
-    "School": "Rat Magic",
+    "School": "Plague Magic",
     "Check": "13",
     "Description": "All standing models in base contact with the rat must take an immediate Morale test. If they fail, you roll an attack against each target and they then run 6\" directly away from the rat."
   },
   "Curse of rat": {
     "Name": "Curse of rat",
-    "School": "Rat Magic",
+    "School": "Plague Magic",
     "Check": "7",
     "Description": "The spell has a range of 12\" and affects a single model within range. The target must re-roll any successful defense rolls and to melee rolls until the start of your next turn."
   },
