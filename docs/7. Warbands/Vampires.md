@@ -14,28 +14,32 @@ If any enemy Hero dies during the post-game Injury rolls, they transform into a 
 ## Heroes
 | Units | Mov | Mel | Rng | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | --- | --------- |
-| Vampire Master | 8 | 11 | -| 6| 7 | 14 | 2 | 2 | 0 | 0 | [Leader](#leader), [Undead](#undead) | 160 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Vampires) |
-| Vampire Seductress | 8 | 14 | -| 8| 10 | 16 | 2 | 2 | 0 | 0 | [Undead](#undead), [Vampiric Magic](#vampiric-magic) | 130 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Vampires) |
-| Vampire Spawn | 8 | 14 | -| 8| 10 | 16 | 1 | 2 | 0 | 0 | [Undead](#undead) | 70 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Vampires) |
-| Nosferatu | 8 | 12 | -| 8| 10 | 14 | 2 | 2 | 0 | 0 | [Undead](#undead), [No Equipment](#no-equipment) | 115 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Vampires) |
+| Vampire Master | 8 | 11 | -| 6| 7 | 14 | 2 | 2 | 0 | 0 | [Leader](#leader), [Undead](#undead), [Fear](#fear) | 160 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Vampires) |
+| Vampire Seductress | 8 | 14 | -| 8| 10 | 16 | 2 | 2 | 0 | 0 | [Undead](#undead), [Fear](#fear), [Vampiric Magic](#vampiric-magic) | 130 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Vampires) |
+| Vampire Spawn | 8 | 14 | -| 8| 10 | 16 | 1 | 2 | 0 | 0 | [Undead](#undead), [Fear](#fear) | 70 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Vampires) |
+| Nosferatu | 8 | 12 | -| 8| 10 | 14 | 2 | 2 | 0 | 0 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment) | 115 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Vampires) |
 
 ## Henchmen
 | Units | Mov | Mel | Rng | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | ---- |
 | Thrall | 6 | 16 | 16| 10| 10 | 18 | 1 | 1 | 0 | 0 |  | 25 | None |
-| Ghoul | 6 | 14 | 16| 10| 16 | 16 | 2 | 1 | 0 | 0 | [Undead](#undead), [No Equipment](#no-equipment) | 40 | None |
-| Dire Wolf | 8 | 10 | -| 14| 18 | 19 | 1 | 1 | 0 | 0 | [Undead](#undead), [Bull Rush](#bull-rush), [Animal](#animal) | 30 | 4 |
+| Ghoul | 6 | 14 | 16| 10| 16 | 16 | 2 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment) | 40 | None |
+| Dire Wolf | 8 | 10 | -| 14| 18 | 19 | 1 | 1 | 0 | 0 | [Ambush](#ambush), [Animal](#animal) | 30 | 4 |
 | Giant Bat | 8 | 16 | -| 8| 16 | - | 1 | 1 | 0 | 0 | [Flying](#flying), [Animal](#animal) | 15 | 4 |
 
 ## Skills 
 ### Leader
 *Inherent*
 
-Allied units with 5" of this unit can use this morale stat for checks instead of their own.
+Allied units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
 ### Undead
 *Inherent*
 
 This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to disease (including the Plague).
+### Fear
+*Inherent*
+
+This unit causes Fear.
 ### Vampiric Magic
 *Spellcasting*
 
@@ -44,10 +48,10 @@ This unit is capable of casting Arcane Magic. See the relevant spell list for a 
 *Inherent*
 
 This unit may not have any equipment, but does not suffer the penalties for fighting Unarmed.
-### Bull Rush
+### Ambush
 *Melee*
 
-This unit gets advantage on the first round of combat when they engage an enemy
+This unit gets Advantage on the first round of combat when they Engage an enemy
 ### Animal
 *Inherent*
 

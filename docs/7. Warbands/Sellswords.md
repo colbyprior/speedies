@@ -21,18 +21,18 @@ sidebar_label: Sellswords
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | ---- |
 | Warrior | 6 | 14 | 14| 10| 10 | 18 | 1 | 1 | 0 | 0 |  | 30 | None |
 | Marksmen | 6 | 14 | 14| 10| 10 | 18 | 1 | 1 | 0 | 0 |  | 30 | 6 |
-| Swordsman | 6 | 14 | 14| 10| 10 | 18 | 1 | 1 | 0 | 0 | [Bull Rush](#bull-rush) | 40 | 3 |
+| Swordsman | 6 | 14 | 14| 10| 10 | 18 | 1 | 1 | 0 | 0 | [Ambush](#ambush) | 40 | 3 |
 | Defender | 6 | 14 | 14| 10| 10 | 18 | 1 | 1 | 0 | 0 |  | 35 | 3 |
 
 ## Skills 
 ### Leader
 *Inherent*
 
-Allied units with 5" of this unit can use this morale stat for checks instead of their own.
-### Bull Rush
+Allied units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
+### Ambush
 *Melee*
 
-This unit gets advantage on the first round of combat when they engage an enemy
+This unit gets Advantage on the first round of combat when they Engage an enemy
 
 ## Warband Special Skills 
 

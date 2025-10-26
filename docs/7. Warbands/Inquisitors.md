@@ -31,7 +31,7 @@ At the start of each game make a Morale Check once per hero. For each success, a
 ### Leader
 *Inherent*
 
-Allied units with 5" of this unit can use this morale stat for checks instead of their own.
+Allied units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
 ### Divine Magic
 *Spellcasting*
 

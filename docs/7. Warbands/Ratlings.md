@@ -31,7 +31,7 @@ Is a rat
 ### Leader
 *Inherent*
 
-Allied units with 5" of this unit can use this morale stat for checks instead of their own.
+Allied units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
 ### Plague Magic
 *Spellcasting*
 
