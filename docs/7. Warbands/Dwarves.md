@@ -63,7 +63,7 @@ Warrior equipment for the unit types: Noble, Armourer, Veteran, Berserker, Warri
 | Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
-| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
+| Sword / Axe | 0 | 3 | 0 |  | 5 | 1 |
 | Hammer | 4 | 0 | 0 |  | 5 | 1 |
 | Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
 | Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
@@ -85,7 +85,7 @@ Gunner equipment for the unit types: Gunner, Engineer
 | Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
-| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
+| Sword / Axe | 0 | 3 | 0 |  | 5 | 1 |
 | Hammer | 4 | 0 | 0 |  | 5 | 1 |
 | Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 

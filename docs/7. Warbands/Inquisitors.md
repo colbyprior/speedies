@@ -10,7 +10,7 @@ Magic never expects us.
 
 ## Special Rules
 ### Incite the Mob
-At the start of each game make a Morale Check once per hero. For each success, a Peasant temporarily joins your warband for this game only. This unit wields farm tools or anything else that was on-hand when it was roused. Its improvised weapons are reflected in its stats.
+At the start of each game make a Morale Check once per hero. For each success, a Peasant temporarily joins your warband for this game only.
 ## Heroes
 | Units | Mov | Mel | Rng | Def | Agi | Mrl | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | --- | --------- |
@@ -24,7 +24,7 @@ At the start of each game make a Morale Check once per hero. For each success, a
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | ---- |
 | Fanatic | 6 | 12 | 14 | 15 | 10| 10 | 1 | 1 | 0 | 2 | [Fearless](#fearless), [Can't promote](#can't-promote) | 50 | 5 |
 | Zealot | 6 | 16 | 16 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 25 | None |
-| Peasant | 6 | 17 | 17 | - | 12| 16 | 1 | 1 | 0 | 0 | [Heed the Scripture](#heed-the-scripture) | - | See Incite the Mob skill |
+| Peasant | 6 | 17 | 17 | - | 12| 16 | 1 | 1 | 0 | 0 | [Heed the Scripture](#heed-the-scripture), [Fixed Equipment (Farm Tools)](#fixed-equipment-(farm-tools)) | - | See Incite the Mob skill |
 | Hounds | 8 | 14 | - | 18 | 8| 16 | 1 | 1 | 0 | 0 | [Pack Tactics](#pack-tactics) | 25 | 5 |
 
 ## Skills 
@@ -44,6 +44,10 @@ The unit is immune to Fear checks.
 *Inherent*
 
 This unit cannot promote into a hero.
+### Fixed Equipment (Farm Tools)
+*Inherent*
+
+This unit has fixed equipment that cannot be lost or changed. The equipment modifers are included in the unit's stats.
 ### Pack Tactics
 *Inherent*
 
@@ -72,8 +76,9 @@ Inquisitors equipment for the unit types: Grand Inquisitor, Inquisitor, Doomsaye
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
 | Hammer | 4 | 0 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
+| Sword / Axe | 0 | 3 | 0 |  | 5 | 1 |
 | Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Torch | 0 | 0 | 0 | This unit does not need to make Out-Of-Sight Rolls when attempting to Engage. | 10 | 1 |
 | Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
 | Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
 | Pike | 3 | 0 | 7 |  | 10 | 2 |
@@ -82,6 +87,7 @@ Inquisitors equipment for the unit types: Grand Inquisitor, Inquisitor, Doomsaye
 | ------------- | --- | --- | --- | ------ | ---- | ----- |
 | Crossbow | 30" | 2 | 0 | Long Reload | 20 | 1 |
 | Pistol | 10" | 2 | 3 | Long Reload, Close Quarters, Dual Wield, Blackpowder, Light | 15 | 1 |
+| Rifle | 25" | 2 | 3 | Long Reload, Blackpowder | 25 | 1 |
 
 | Armour | Def | Cost |
 | ------ | --- | ---- |
@@ -95,7 +101,7 @@ Priest equipment for the unit types: Priest
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
 | Hammer | 4 | 0 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
+| Sword / Axe | 0 | 3 | 0 |  | 5 | 1 |
 | Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
 | Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
 | Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
@@ -117,23 +123,22 @@ Fanatics equipment for the unit types: Fanatic
 | Pike | 3 | 0 | 7 |  | 10 | 2 |
 
 ### Zealots Equipment 
-Zealots equipment for the unit types: Leader, Hero
+Zealots equipment for the unit types: Zealot
 
 | Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
 | Hammer | 4 | 0 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
+| Sword / Axe | 0 | 3 | 0 |  | 5 | 1 |
 | Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Torch | 0 | 0 | 0 | This unit does not need to make Out-Of-Sight Rolls when attempting to Engage. | 10 | 1 |
 | Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
 | Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
 | Pike | 3 | 0 | 7 |  | 10 | 2 |
-| Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
 | Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
 | ------------- | --- | --- | --- | ------ | ---- | ----- |
-| Short Bow | 20" | 0 | 0 | Light | 5 | 1 |
-| Bow | 25" | 0 | 0 | Light | 10 | 1 |
+| Crossbow | 30" | 2 | 0 | Long Reload | 20 | 1 |
 
 | Armour | Def | Cost |
 | ------ | --- | ---- |

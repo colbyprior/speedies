@@ -174,7 +174,7 @@
         }
     },
     "Available Skills": {
-        "Vampire Master": {
+        "Vampire Noble": {
             "Mel": "X",
             "Rng": "X",
             "Def": "",
@@ -182,7 +182,7 @@
             "Mrl": "X",
             "Special": "X"
         },
-        "Vampire Seductress": {
+        "Vampire Seductor": {
             "Mel": "",
             "Rng": "",
             "Def": "",

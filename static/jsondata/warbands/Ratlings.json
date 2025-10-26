@@ -156,7 +156,7 @@
         }
     ],
     "Promotion Options": {
-        "Strong Rat": {
+        "Overseer": {
             "Stat Ups": "+2 Mel, +1 Def",
             "Gained Skills": ""
         },
@@ -182,7 +182,7 @@
             "Mrl": "X",
             "Special": "X"
         },
-        "Strong Rat": {
+        "Overseer": {
             "Mel": "X",
             "Rng": "",
             "Def": "",

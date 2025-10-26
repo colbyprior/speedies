@@ -14,10 +14,10 @@ If any enemy Hero dies during the post-game Injury rolls, they transform into a 
 ## Heroes
 | Units | Mov | Mel | Rng | Def | Agi | Mrl | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | --- | --------- |
-| Vampire Master | 8 | 11 | - | 14 | 6| 7 | 2 | 2 | 0 | 0 | [Leader](#leader), [Undead](#undead), [Fear](#fear) | 160 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Vampires) |
-| Vampire Seductress | 8 | 14 | - | 16 | 8| 10 | 2 | 2 | 0 | 0 | [Undead](#undead), [Fear](#fear), [Vampiric Magic](#vampiric-magic) | 130 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Vampires) |
+| Vampire Noble | 8 | 11 | - | 14 | 6| 7 | 2 | 2 | 0 | 0 | [Leader](#leader), [Undead](#undead), [Fear](#fear) | 160 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Vampires) |
+| Vampire Seductor | 8 | 14 | - | 16 | 8| 10 | 2 | 2 | 0 | 0 | [Vampiric Magic](#vampiric-magic), [Undead](#undead), [Fear](#fear) | 130 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Vampires) |
+| Nosferatu | 8 | 12 | - | 14 | 8| 10 | 2 | 2 | 0 | 0 | [No Equipment](#no-equipment), [Undead](#undead), [Fear](#fear) | 115 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Vampires) |
 | Vampire Spawn | 8 | 14 | - | 16 | 8| 10 | 1 | 2 | 0 | 0 | [Undead](#undead), [Fear](#fear) | 70 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Vampires) |
-| Nosferatu | 8 | 12 | - | 14 | 8| 10 | 2 | 2 | 0 | 0 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment) | 115 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Vampires) |
 
 ## Henchmen
 | Units | Mov | Mel | Rng | Def | Agi | Mrl | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
@@ -70,18 +70,14 @@ If this unit Incapacitates another unit in Melee they may recover one Wound.
 ## Equipment
 
 ### Vampires Equipment 
-Vampires equipment for the unit types: Leader, Hero
+Vampires equipment for the unit types: Vampire Noble, Vampire Seductor, Vampire Spawn
 
 | Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
-| Hammer | 4 | 0 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
-| Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
 | Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
 | Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
 | Pike | 3 | 0 | 7 |  | 10 | 2 |
-| Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
 | Armour | Def | Cost |
 | ------ | --- | ---- |
@@ -89,13 +85,13 @@ Vampires equipment for the unit types: Leader, Hero
 | Heavy Armour | 2 | 30 |
 
 ### Thralls Equipment 
-Thralls equipment for the unit types: Leader, Hero
+Thralls equipment for the unit types: Thrall
 
 | Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
 | Hammer | 4 | 0 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
+| Sword / Axe | 0 | 3 | 0 |  | 5 | 1 |
 | Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
 | Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
 | Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
@@ -110,7 +106,6 @@ Thralls equipment for the unit types: Leader, Hero
 | Armour | Def | Cost |
 | ------ | --- | ---- |
 | Light Armour | 1 | 15 |
-| Heavy Armour | 2 | 30 |
 
 ## Vampiric Magic 
 
@@ -130,7 +125,7 @@ Thralls equipment for the unit types: Leader, Hero
 ## Skill Table
 | Units | Mel | Rng | Def | Agi | Mrl | Special | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Vampire Master | X | X |  |  | X | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Vampires) |
-| Vampire Seductress |  |  |  |  | X | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Vampires) |
+| Vampire Noble | X | X |  |  | X | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Vampires) |
+| Vampire Seductor |  |  |  |  | X | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Vampires) |
 | Vampire Spawn | X | X |  | X |  | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Vampires) |
 | Nosferatu | X |  |  |  |  | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Vampires) |

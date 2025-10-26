@@ -7,7 +7,7 @@ def get_skills_link(warband_name, skill_data):
     filter = ""
     if not skill_data:
         sys.stderr.write(f"Failed to find skills for: {warband_name}")
-        sys.exit(1)
+        return "ERROR"
     for short_name in skill_data.keys():
         if skill_data.get(short_name).lower() == "x":
             if filter:
@@ -95,6 +95,9 @@ def heroes_table(warband):
         if not type_cap:
             type_cap = "None"
         skill_link = get_skills_link(warband.get("Name"), warband.get("Available Skills").get(hero.get('Name')))
+        if skill_link == "ERROR":
+            sys.stderr.write(f"\nFailed to find level up options for {hero.get('Name')}")
+            sys.exit(1)
         out_data += f"| {hero.get('Name')} | {hero.get('Move')} | {hero.get('Melee')} | {hero.get('Ranged')} | {hero.get('Defense')} | {hero.get('Agility')}| {hero.get('Morale')} | {hero.get('Attacks')} | {hero.get('Wounds')} | {hero.get('Injury')} | {hero.get('Piercing')} | {skills_str} | {hero.get('Cost')} | {type_cap} | {skill_link} |\n"
     return out_data
 

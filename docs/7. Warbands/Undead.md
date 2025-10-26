@@ -17,7 +17,7 @@ If any enemy unit dies during the post-game Injury rolls, they are raised and ad
 | Necromancer | 6 | 14 | 14 | 18 | 10| 7 | 1 | 1 | 0 | 0 | [Leader](#leader), [Necromantic Magic](#necromantic-magic) | 65 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Undead) |
 | Plague Cultist | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 | [Spread Plague](#spread-plague) | 45 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Undead) |
 | Death Knight | 7 | 13 | 16 | 16 | 14| 13 | 1 | 2 | 0 | 0 | [Undead](#undead), [Fear](#fear) | 50 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Undead) |
-| Reaper | 9 | 13 | - | - | 10| 13 | 2 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear) | 65 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Undead) |
+| Reaper | 9 | 8 | - | - | 10| 13 | 2 | 1 | 3 | 3 | [Undead](#undead), [Fear](#fear), [Fixed Equipment (Scythe)](#fixed-equipment-(scythe)) | 75 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Undead) |
 
 ## Henchmen
 | Units | Mov | Mel | Rng | Def | Agi | Mrl | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
@@ -48,6 +48,10 @@ This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move). I
 *Inherent*
 
 This unit causes Fear.
+### Fixed Equipment (Scythe)
+*Inherent*
+
+This unit has fixed equipment that cannot be lost. The equipment modifers are included in the unit's stats.
 ### No Equipment
 *Inherent*
 
@@ -69,14 +73,14 @@ This can only be taken by a Necromancer. Death Knights and Reapers can now be th
 
 ## Equipment
 
-### Skeleton Equipment 
-Skeleton equipment for the unit types: Skeleton, Death Knight
+### Undead Equipment 
+Undead equipment for the unit types: Skeleton, Death Knight
 
 | Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
 | Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
+| Sword / Axe | 0 | 3 | 0 |  | 5 | 1 |
 | Hammer | 4 | 0 | 0 |  | 5 | 1 |
 | Pike | 3 | 0 | 7 |  | 10 | 2 |
 | Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
@@ -93,21 +97,14 @@ Skeleton equipment for the unit types: Skeleton, Death Knight
 | Light Armour | 1 | 15 |
 | Heavy Armour | 2 | 30 |
 
-### Reaper Equipment 
-Reaper equipment for the unit types: Reaper
-
-| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
-| ------------ | --- | --- | --- | ------ | ---- | ----- |
-| Scythe (Great Sword) | 3 | 3 | 5 |  | 10 | 2 |
-
 ### Cultist Equipment 
-Cultist equipment for the unit types: Necromancer, Cultist
+Cultist equipment for the unit types: Necromancer, Plague Cultist
 
 | Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
 | Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
+| Sword / Axe | 0 | 3 | 0 |  | 5 | 1 |
 | Hammer | 4 | 0 | 0 |  | 5 | 1 |
 
 | Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |

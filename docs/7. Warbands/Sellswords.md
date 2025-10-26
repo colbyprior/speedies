@@ -38,14 +38,14 @@ This unit gets Advantage on the first round of combat when they Engage an enemy
 
 ## Equipment
 
-### Sellsword General Equipment 
-Equipment for all units except Warrior, Swordsmen, Marksmen, Defender
+### Hero Equipment 
+Hero equipment for the unit types: Captain, Champion
 
 | Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
 | Hammer | 4 | 0 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
+| Sword / Axe | 0 | 3 | 0 |  | 5 | 1 |
 | Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
 | Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
 | Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
@@ -56,10 +56,8 @@ Equipment for all units except Warrior, Swordsmen, Marksmen, Defender
 | ------------- | --- | --- | --- | ------ | ---- | ----- |
 | Short Bow | 20" | 0 | 0 | Light | 5 | 1 |
 | Bow | 25" | 0 | 0 | Light | 10 | 1 |
-| Long Bow | 30" | 0 | 0 |  | 15 | 1 |
 | Crossbow | 30" | 2 | 0 | Long Reload | 20 | 1 |
 | Pistol | 10" | 2 | 3 | Long Reload, Close Quarters, Dual Wield, Blackpowder, Light | 15 | 1 |
-| Rifle | 25" | 2 | 3 | Long Reload, Blackpowder | 25 | 1 |
 
 | Armour | Def | Cost |
 | ------ | --- | ---- |
@@ -73,12 +71,18 @@ Warriors & Swordsman equipment for the unit types: Warrior, Swordsman
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
 | Hammer | 4 | 0 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
+| Sword / Axe | 0 | 3 | 0 |  | 5 | 1 |
 | Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
 | Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
 | Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
 | Pike | 3 | 0 | 7 |  | 10 | 2 |
 | Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
+
+| Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
+| ------------- | --- | --- | --- | ------ | ---- | ----- |
+| Short Bow | 20" | 0 | 0 | Light | 5 | 1 |
+| Bow | 25" | 0 | 0 | Light | 10 | 1 |
+| Crossbow | 30" | 2 | 0 | Long Reload | 20 | 1 |
 
 | Armour | Def | Cost |
 | ------ | --- | ---- |
@@ -86,13 +90,13 @@ Warriors & Swordsman equipment for the unit types: Warrior, Swordsman
 | Heavy Armour | 2 | 30 |
 
 ### Marksmen Equipment 
-Marksmen equipment for the unit types: Marksmen
+Marksmen equipment for the unit types: Marksmen, Sniper
 
 | Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
 | Hammer | 4 | 0 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
+| Sword / Axe | 0 | 3 | 0 |  | 5 | 1 |
 
 | Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
 | ------------- | --- | --- | --- | ------ | ---- | ----- |
@@ -116,9 +120,14 @@ Defender equipment for the unit types: Knight, Defender
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
 | Hammer | 4 | 0 | 0 |  | 5 | 1 |
 | Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
+| Sword / Axe | 0 | 3 | 0 |  | 5 | 1 |
 | Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
-| Tower-Shield | 0 | 0 | 0 | +6 Def. CCannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 10 | 1 |
+| Tower Shield | 0 | 0 | 0 | +6 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 10 | 1 |
+
+| Armour | Def | Cost |
+| ------ | --- | ---- |
+| Light Armour | 1 | 15 |
+| Heavy Armour | 2 | 30 |
 
 ## Promotion Options
 | Unit | Stat Ups | Gained Skills |

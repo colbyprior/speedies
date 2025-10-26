@@ -16,16 +16,16 @@ Is a rat
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | --- | --------- |
 | Mastermind | 8 | 12 | 12 | 18 | 6| 10 | 1 | 1 | 0 | 0 | [Leader](#leader) | 80 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
 | Ratlock | 8 | 14 | 14 | 18 | 8| 13 | 1 | 1 | 0 | 0 | [Plague Magic](#plague-magic) | 65 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Ratlings) |
-| Strong Rat | 8 | 12 | 14 | 18 | 8| 13 | 1 | 1 | 0 | 0 |  | 50 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Ratlings) |
+| Overseer | 8 | 12 | 14 | 18 | 8| 13 | 1 | 1 | 0 | 0 |  | 50 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Ratlings) |
 | Assassin | 8 | 14 | 14 | 18 | 6| 13 | 1 | 1 | 0 | 0 |  | 55 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
 
 ## Henchmen
 | Units | Mov | Mel | Rng | Def | Agi | Mrl | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | ---- |
-| Rat Boi | 8 | 14 | 14 | 18 | 8| 16 | 1 | 1 | 0 | 0 |  | 30 | None |
+| Underrat | 8 | 14 | 14 | 18 | 8| 16 | 1 | 1 | 0 | 0 |  | 30 | None |
 | Plague Host | 8 | 16 | 16 | - | 8| 16 | 1 | 1 | 0 | 0 |  | 25 | None |
 | Giant Rat | 8 | 15 | - | - | 6| 18 | 1 | 1 | 0 | 0 | [Animal](#animal) | 10 | 4 |
-| Rat Monster | 8 | 8 | - | 8 | 8| 18 | 3 | 3 | 3 | 3 | [Stupid](#stupid), [Fear](#fear), [Large](#large), [Animal](#animal) | 210 | 1 |
+| Rat Monstrosity | 8 | 8 | - | 8 | 8| 18 | 3 | 3 | 3 | 3 | [Stupid](#stupid), [Fear](#fear), [Large](#large), [Animal](#animal) | 210 | 1 |
 
 ## Skills 
 ### Leader
@@ -61,15 +61,16 @@ This unit can use their tail to equip a one handed weapon as though it was anoth
 
 ## Equipment
 
-### Hero Rats Equipment 
-Hero Rats equipment for the unit types: Mastermind, Ratlock, Strong Rat, Assassin
+### Heroes Equipment 
+Heroes equipment for the unit types: Mastermind, Ratlock, Overseer, Assassin
 
 | Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
 | Club (Hammer) | 4 | 0 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
+| Sword / Axe | 0 | 3 | 0 |  | 5 | 1 |
 | Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Pike | 3 | 0 | 7 |  | 10 | 2 |
 | Fighting Claws | 0 | 3 | 0 | +1 Attack. This unit makes Agility Checks with Advantage. | 20 | 2 |
 
 | Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
@@ -83,14 +84,15 @@ Hero Rats equipment for the unit types: Mastermind, Ratlock, Strong Rat, Assassi
 | Light Armour | 1 | 15 |
 
 ### Rat Underlings Equipment 
-Rat Underlings equipment for the unit types: Rat Boi, Plague Host
+Rat Underlings equipment for the unit types: Underrat, Plague Host
 
 | Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
 | Club (Hammer) | 4 | 0 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
+| Sword / Axe | 0 | 3 | 0 |  | 5 | 1 |
 | Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Pike | 3 | 0 | 7 |  | 10 | 2 |
 | Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
 | Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
@@ -110,7 +112,7 @@ Rat Underlings equipment for the unit types: Rat Boi, Plague Host
 ## Promotion Options
 | Unit | Stat Ups | Gained Skills |
 | ---- | ---- | ---- |
-| Strong Rat | +2 Mel, +1 Def |  |
+| Overseer | +2 Mel, +1 Def |  |
 | Sneaky Rat | +1 Mel, +1 Ran, +2 Agi |  |
 
 ## Skill Table
@@ -118,5 +120,5 @@ Rat Underlings equipment for the unit types: Rat Boi, Plague Host
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Mastermind | X | X |  | X |  | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
 | Ratlock |  |  |  |  | X | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Ratlings) |
-| Strong Rat | X |  |  | X |  | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Ratlings) |
+| Overseer | X |  |  | X |  | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Ratlings) |
 | Assassin | X | X |  | X |  | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
