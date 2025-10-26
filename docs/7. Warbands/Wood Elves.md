@@ -12,20 +12,20 @@ Elves, bleh!
 ### Elven Agility
 Elves can Jump Across to a maximum distance of 6", instead of the usual 3".
 ## Heroes
-| Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Noble | 7 | 1 | 1| 0| 0 | 12 | 12 | 16 | 4 | 5 | [Leader](#leader) | 95 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale,Wood%20Elves) |
-| Mage | 7 | 1 | 1| 0| 0 | 13 | 13 | 18 | 6 | 7 | [Forest Magic](#forest-magic) | 90 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Agility,Wood%20Elves) |
-| Honour Guard | 7 | 1 | 1| 0| 0 | 12 | 12 | 16 | 5 | 7 |  | 80 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Wood%20Elves) |
-| Ranger | 7 | 1 | 1| 0| 0 | 13 | 10 | 18 | 5 | 7 |  | 70 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility,Wood%20Elves) |
+| Units | Mov | Mel | Rgn | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
+| ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | --- | --------- |
+| Noble | 7 | 12 | 12| 4| 5 | 16 | 1 | 1 | 0 | 0 | [Leader](#leader) | 95 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale,Wood%20Elves) |
+| Mage | 7 | 13 | 13| 6| 7 | 18 | 1 | 1 | 0 | 0 | [Forest Magic](#forest-magic) | 90 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Agility,Wood%20Elves) |
+| Honour Guard | 7 | 12 | 12| 5| 7 | 16 | 1 | 1 | 0 | 0 |  | 80 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Wood%20Elves) |
+| Ranger | 7 | 13 | 10| 5| 7 | 18 | 1 | 1 | 0 | 0 |  | 70 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility,Wood%20Elves) |
 
 ## Henchmen
-| Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Citizen | 7 | 1 | 1| 0| 0 | 13 | 13 | 18 | 6 | 7 |  | 55 | - |
-| Scout | 7 | 1 | 1| 0| 0 | 13 | 13 | 18 | 5 | 7 |  | 60 | 5 |
-| Woodland Creature | 8 | 1 | 1| 0| 0 | 14 | - | 18 | 8 | 16 | [Follower](#follower), [Animal](#animal) | 20 | 3 |
-| Treant | 8 | 2 | 3| 2| 0 | 12 | - | 8 | 16 | 7 | [Fear](#fear), [Slow](#slow), [Large](#large), [No Equipment](#no-equipment) | 185 | 1 |
+| Units | Mov | Mel | Rgn | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
+| ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | ---- |
+| Citizen | 7 | 13 | 13| 6| 7 | 18 | 1 | 1 | 0 | 0 |  | 55 | - |
+| Scout | 7 | 13 | 13| 5| 7 | 18 | 1 | 1 | 0 | 0 |  | 60 | 5 |
+| Woodland Creature | 8 | 14 | -| 8| 16 | 18 | 1 | 1 | 0 | 0 | [Follower](#follower), [Animal](#animal) | 20 | 3 |
+| Treant | 8 | 12 | -| 16| 7 | 8 | 2 | 3 | 0 | 2 | [Fear](#fear), [Slow](#slow), [Large](#large), [No Equipment](#no-equipment) | 185 | 1 |
 
 ## Skills 
 ### Leader
@@ -72,18 +72,18 @@ If an enemy attempts to Engage this unit and this unit is in cover, the enemy mu
 ### Wood Elf Equipment 
 Wood Elf equipment for the unit types: All
 
-| Melee Weapon | Effect | Cost | Slots |
-| ---- | ------ | ---- | ----- |
-| Dagger | None | 2 | 1 |
-| Spear | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Sword / Axe |  | 5 | 1 |
-| Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
+| Melee Weapon | Injury | Piercing | Effect | Cost | Slots |
+| ------------ | ------ | -------- | ------ | ---- | ----- |
+| Dagger | 0 | 0 | None | 2 | 1 |
+| Spear | 0 | 0 | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Sword / Axe | 0 | 3 |  | 5 | 1 |
+| Shield | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
-| Ranged Weapon | Range | Effect | Cost | Slots |
-| ---- | ----- | ------ | ---- | ----- |
-| Bow | 25" |  | 10 | 1 |
-| Long Bow | 30" |  | 15 | 1 |
-| Elvish Bow | 35" |  | 20 | 1 |
+| Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
+| ------------- | ----- | ------ | -------- | ------ | ---- | ----- |
+| Bow | 25" | 25" | 0 |  | 10 | 1 |
+| Long Bow | 30" | 30" | 0 |  | 15 | 1 |
+| Elvish Bow | 35" | 35" | 0 |  | 20 | 1 |
 
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |

@@ -16,20 +16,20 @@ Wearing Armour does not reduce a Dwarf's Move attribute.
 ### Ranged Shields
 Dwarf gunners may use any ranged weapon with a shield.
 ## Heroes
-| Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Noble | 5 | 1 | 1| 0| 0 | 12 | 12 | 13 | 14 | 5 | [Leader](#leader) | 75 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Morale,Dwarves) |
-| Engineer | 5 | 1 | 1| 0| 0 | 13 | 13 | 14 | 14 | 7 | [Weaponsmith](#weaponsmith) | 70 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Defense,Dwarves) |
-| Armourer | 5 | 1 | 1| 0| 0 | 13 | 14 | 13 | 14 | 7 | [Armoursmith](#armoursmith) | 55 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Dwarves) |
-| Veteran | 5 | 1 | 1| 0| 0 | 12 | 14 | 14 | 14 | 7 |  | 45 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Dwarves) |
+| Units | Mov | Mel | Rgn | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
+| ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | --- | --------- |
+| Noble | 5 | 12 | 12| 14| 5 | 13 | 1 | 1 | 0 | 0 | [Leader](#leader) | 75 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Morale,Dwarves) |
+| Engineer | 5 | 13 | 13| 14| 7 | 14 | 1 | 1 | 0 | 0 | [Weaponsmith](#weaponsmith) | 70 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Defense,Dwarves) |
+| Armourer | 5 | 13 | 14| 14| 7 | 13 | 1 | 1 | 0 | 0 | [Armoursmith](#armoursmith) | 55 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Dwarves) |
+| Veteran | 5 | 12 | 14| 14| 7 | 14 | 1 | 1 | 0 | 0 |  | 45 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Dwarves) |
 
 ## Henchmen
-| Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Berserker | 5 | 1 | 1| 0| 0 | 13 | 14 | 14 | 14 | 7 | [Berserker](#berserker), [Fearless](#fearless) | 45 | 2 |
-| Youngling | 5 | 1 | 1| 0| 0 | 15 | 15 | 14 | 14 | 7 |  | 30 | - |
-| Warrior | 5 | 1 | 1| 0| 0 | 13 | 14 | 14 | 14 | 7 |  | 40 | - |
-| Gunner | 5 | 1 | 1| 0| 0 | 13 | 14 | 14 | 14 | 7 |  | 40 | 4 |
+| Units | Mov | Mel | Rgn | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
+| ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | ---- |
+| Berserker | 5 | 13 | 14| 14| 7 | 14 | 1 | 1 | 0 | 0 | [Berserker](#berserker), [Fearless](#fearless) | 45 | 2 |
+| Youngling | 5 | 15 | 15| 14| 7 | 14 | 1 | 1 | 0 | 0 |  | 30 | - |
+| Warrior | 5 | 13 | 14| 14| 7 | 14 | 1 | 1 | 0 | 0 |  | 40 | - |
+| Gunner | 5 | 13 | 14| 14| 7 | 14 | 1 | 1 | 0 | 0 |  | 40 | 4 |
 
 ## Skills 
 ### Leader
@@ -60,18 +60,18 @@ The unit is immune to Fear checks.
 ### Warrior Equipment 
 Warrior equipment for the unit types: Noble, Armourer, Veteran, Berserker, Warrior, Youngling
 
-| Melee Weapon | Effect | Cost | Slots |
-| ---- | ------ | ---- | ----- |
-| Dagger | None | 2 | 1 |
-| Sword / Axe |  | 5 | 1 |
-| Hammer |  | 5 | 1 |
-| Great Sword / Axe | +5 to Hit | 10 | 2 |
-| Great Hammer | +5 Mel | 10 | 2 |
-| Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
+| Melee Weapon | Injury | Piercing | Effect | Cost | Slots |
+| ------------ | ------ | -------- | ------ | ---- | ----- |
+| Dagger | 0 | 0 | None | 2 | 1 |
+| Sword / Axe | 0 | 3 |  | 5 | 1 |
+| Hammer | 4 | 0 |  | 5 | 1 |
+| Great Sword / Axe | 3 | 3 | +5 to Hit | 10 | 2 |
+| Great Hammer | 7 | 0 | +5 Mel | 10 | 2 |
+| Shield | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
-| Ranged Weapon | Range | Effect | Cost | Slots |
-| ---- | ----- | ------ | ---- | ----- |
-| Pistol | 10" | Long Reload, Close Quarters, Dual Wield | 15 | 1 |
+| Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
+| ------------- | ----- | ------ | -------- | ------ | ---- | ----- |
+| Pistol | 10" | 10" | 2 | Long Reload, Close Quarters, Dual Wield | 15 | 1 |
 
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |
@@ -82,18 +82,18 @@ Warrior equipment for the unit types: Noble, Armourer, Veteran, Berserker, Warri
 ### Gunner Equipment 
 Gunner equipment for the unit types: Gunner, Engineer
 
-| Melee Weapon | Effect | Cost | Slots |
-| ---- | ------ | ---- | ----- |
-| Dagger | None | 2 | 1 |
-| Sword / Axe |  | 5 | 1 |
-| Hammer |  | 5 | 1 |
-| Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
+| Melee Weapon | Injury | Piercing | Effect | Cost | Slots |
+| ------------ | ------ | -------- | ------ | ---- | ----- |
+| Dagger | 0 | 0 | None | 2 | 1 |
+| Sword / Axe | 0 | 3 |  | 5 | 1 |
+| Hammer | 4 | 0 |  | 5 | 1 |
+| Shield | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
-| Ranged Weapon | Range | Effect | Cost | Slots |
-| ---- | ----- | ------ | ---- | ----- |
-| Crossbow | 30" | Stand and Reload | 20 | 1 |
-| Pistol | 10" | Long Reload, Close Quarters, Dual Wield | 15 | 1 |
-| Rifle | 25" | Stand and Reload, Long Reload | 25 | 1 |
+| Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
+| ------------- | ----- | ------ | -------- | ------ | ---- | ----- |
+| Crossbow | 30" | 30" | 2 | Stand and Reload | 20 | 1 |
+| Pistol | 10" | 10" | 2 | Long Reload, Close Quarters, Dual Wield | 15 | 1 |
+| Rifle | 25" | 25" | 2 | Stand and Reload, Long Reload | 25 | 1 |
 
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |

@@ -12,20 +12,20 @@ An order of paladins and others that seek to advance a holy agenda.
 ### Example special rule
 Paladins don't actually have any but this is a test.
 ## Heroes
-| Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Justicar | 6 | 1 | 1| 0| 0 | 13 | 13 | 17 | 8 | 7 | [Leader](#leader), [Divine Magic](#divine-magic) | 90 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Morale,Paladins) |
-| Paladin | 6 | 1 | 1| 0| 0 | 13 | 14 | 17 | 10 | 10 |  | 40 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
-| Cleric | 6 | 1 | 1| 0| 0 | 14 | 14 | 18 | 10 | 10 | [Healer](#healer) | 40 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Paladins) |
-| Standard Bearer | 6 | 1 | 1| 0| 0 | 14 | 14 | 18 | 10 | 7 | [Holy Standard](#holy-standard) | 45 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
+| Units | Mov | Mel | Rgn | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
+| ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | --- | --------- |
+| Justicar | 6 | 13 | 13| 8| 7 | 17 | 1 | 1 | 0 | 0 | [Leader](#leader), [Divine Magic](#divine-magic) | 90 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Morale,Paladins) |
+| Paladin | 6 | 13 | 14| 10| 10 | 17 | 1 | 1 | 0 | 0 |  | 40 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
+| Cleric | 6 | 14 | 14| 10| 10 | 18 | 1 | 1 | 0 | 0 | [Healer](#healer) | 40 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Paladins) |
+| Standard Bearer | 6 | 14 | 14| 10| 7 | 18 | 1 | 1 | 0 | 0 | [Holy Standard](#holy-standard) | 45 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
 
 ## Henchmen
-| Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Squire | 6 | 1 | 1| 0| 0 | 14 | 14 | 18 | 10 | 10 |  | 30 | - |
-| Initiate | 6 | 1 | 1| 0| 0 | 16 | 16 | 18 | 10 | 10 |  | 25 | - |
-| Monk | 7 | 2 | 1| 0| 0 | 14 | 14 | 18 | 8 | 10 | [Ki Strike](#ki-strike), [No Equipment](#no-equipment) | 400 | 3 |
-| Cavalier | 9 | 1 | 2| 0| 0 | 14 | 14 | 18 | 10 | 10 | [Mounted](#mounted) | 55 | 3 |
+| Units | Mov | Mel | Rgn | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
+| ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | ---- |
+| Squire | 6 | 14 | 14| 10| 10 | 18 | 1 | 1 | 0 | 0 |  | 30 | - |
+| Initiate | 6 | 16 | 16| 10| 10 | 18 | 1 | 1 | 0 | 0 |  | 25 | - |
+| Monk | 7 | 14 | 14| 8| 10 | 18 | 2 | 1 | 0 | 0 | [Ki Strike](#ki-strike), [No Equipment](#no-equipment) | 400 | 3 |
+| Cavalier | 9 | 14 | 14| 10| 10 | 18 | 1 | 2 | 0 | 0 | [Mounted](#mounted) | 55 | 3 |
 
 ## Skills 
 ### Leader
@@ -68,18 +68,18 @@ This unit may re-roll their first failed morale check of each battle.
 ### Paladin Equipment 
 Paladin equipment for the unit types: Leader, Hero, Squire, Novice
 
-| Melee Weapon | Effect | Cost | Slots |
-| ---- | ------ | ---- | ----- |
-| Hammer |  | 5 | 1 |
-| Divine Hammer | Advantage against Undead. Only heroes can dual-wield. | 15 | 1 |
-| Divine Great Hammer | +5 Mel. Advantage against Undead. | 20 | 2 |
-| Whip | +1 Atk in the first round of combat when you charge | 10 | 1 |
-| Great Hammer | +5 Mel | 10 | 2 |
-| Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
+| Melee Weapon | Injury | Piercing | Effect | Cost | Slots |
+| ------------ | ------ | -------- | ------ | ---- | ----- |
+| Hammer | 4 | 0 |  | 5 | 1 |
+| Divine Hammer | 4 | 3 | Advantage against Undead. Only heroes can dual-wield. | 15 | 1 |
+| Divine Great Hammer | 7 | 3 | +5 Mel. Advantage against Undead. | 20 | 2 |
+| Whip | 0 | 0 | +1 Atk in the first round of combat when you charge | 10 | 1 |
+| Great Hammer | 7 | 0 | +5 Mel | 10 | 2 |
+| Shield | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
-| Ranged Weapon | Range | Effect | Cost | Slots |
-| ---- | ----- | ------ | ---- | ----- |
-| Sling | 15" |  | 5 | 1 |
+| Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
+| ------------- | ----- | ------ | -------- | ------ | ---- | ----- |
+| Sling | 15" | 15" | 0 |  | 5 | 1 |
 
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |

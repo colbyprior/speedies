@@ -12,20 +12,20 @@ Let me off this wild ride Mr. Bones
 ### Undead Horde
 If any enemy unit dies during the post-game Injury rolls, they are raised and added to your warband as a Zombie. If this would take you past the maximum number of units for your warband (after completing your own post-game Injury rolls), the Zombie is not added to your warband.
 ## Heroes
-| Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Necromancer | 6 | 1 | 1| 0| 0 | 14 | 14 | 18 | 10 | 7 | [Leader](#leader), [Necromantic Magic](#necromantic-magic) | 65 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Undead) |
-| Plague Cultist | 6 | 1 | 1| 0| 0 | 14 | 14 | 18 | 10 | 10 | [Spread Plague](#spread-plague) | 45 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Undead) |
-| Death Knight | 7 | 1 | 2| 0| 0 | 13 | 16 | 16 | 14 | 13 | [Undead](#undead), [Fear](#fear) | 50 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Undead) |
-| Reaper | 9 | 2 | 1| 0| 0 | 13 | - | - | 10 | 13 | [Undead](#undead), [Fear](#fear) | 65 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Undead) |
+| Units | Mov | Mel | Rgn | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
+| ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | --- | --------- |
+| Necromancer | 6 | 14 | 14| 10| 7 | 18 | 1 | 1 | 0 | 0 | [Leader](#leader), [Necromantic Magic](#necromantic-magic) | 65 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Undead) |
+| Plague Cultist | 6 | 14 | 14| 10| 10 | 18 | 1 | 1 | 0 | 0 | [Spread Plague](#spread-plague) | 45 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Undead) |
+| Death Knight | 7 | 13 | 16| 14| 13 | 16 | 1 | 2 | 0 | 0 | [Undead](#undead), [Fear](#fear) | 50 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Undead) |
+| Reaper | 9 | 13 | -| 10| 13 | - | 2 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear) | 65 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Undead) |
 
 ## Henchmen
-| Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Zombie | 6 | 1 | 1| 0| 0 | 13 | - | - | 16 | 16 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment) | 15 | - |
-| Skeleton | 7 | 1 | 1| 0| 0 | 15 | 15 | - | 14 | 16 | [Undead](#undead), [Fear](#fear) | 20 | - |
-| Ghost | 6 | 1 | 1| 0| 0 | 13 | - | 13 | 10 | 13 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment), [Ethereal](#ethereal) | 40 | 3 |
-| Bone Giant | 7 | 3 | 3| 0| 0 | 9 | - | 7 | 14 | 13 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment), [Large](#large) | 225 | 1 |
+| Units | Mov | Mel | Rgn | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
+| ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | ---- |
+| Zombie | 6 | 13 | -| 16| 16 | - | 1 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment) | 15 | - |
+| Skeleton | 7 | 15 | 15| 14| 16 | - | 1 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear) | 20 | - |
+| Ghost | 6 | 13 | -| 10| 13 | 13 | 1 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment), [Ethereal](#ethereal) | 40 | 3 |
+| Bone Giant | 7 | 9 | -| 14| 13 | 7 | 3 | 3 | 0 | 0 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment), [Large](#large) | 225 | 1 |
 
 ## Skills 
 ### Leader
@@ -72,21 +72,21 @@ This can only be taken by a Necromancer. Death Knights and Reapers can now be th
 ### Skeleton Equipment 
 Skeleton equipment for the unit types: Skeleton, Death Knight
 
-| Melee Weapon | Effect | Cost | Slots |
-| ---- | ------ | ---- | ----- |
-| Dagger | None | 2 | 1 |
-| Spear | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Sword / Axe |  | 5 | 1 |
-| Hammer |  | 5 | 1 |
-| Pike | +7 to Hit | 10 | 2 |
-| Great Sword / Axe | +5 to Hit | 10 | 2 |
-| Great Hammer | +5 Mel | 10 | 2 |
-| Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
+| Melee Weapon | Injury | Piercing | Effect | Cost | Slots |
+| ------------ | ------ | -------- | ------ | ---- | ----- |
+| Dagger | 0 | 0 | None | 2 | 1 |
+| Spear | 0 | 0 | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Sword / Axe | 0 | 3 |  | 5 | 1 |
+| Hammer | 4 | 0 |  | 5 | 1 |
+| Pike | 3 | 0 | +7 to Hit | 10 | 2 |
+| Great Sword / Axe | 3 | 3 | +5 to Hit | 10 | 2 |
+| Great Hammer | 7 | 0 | +5 Mel | 10 | 2 |
+| Shield | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
-| Ranged Weapon | Range | Effect | Cost | Slots |
-| ---- | ----- | ------ | ---- | ----- |
-| Short Bow | 20" |  | 5 | 1 |
-| Bow | 25" |  | 10 | 1 |
+| Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
+| ------------- | ----- | ------ | -------- | ------ | ---- | ----- |
+| Short Bow | 20" | 20" | 0 |  | 5 | 1 |
+| Bow | 25" | 25" | 0 |  | 10 | 1 |
 
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |
@@ -96,24 +96,24 @@ Skeleton equipment for the unit types: Skeleton, Death Knight
 ### Reaper Equipment 
 Reaper equipment for the unit types: Reaper
 
-| Melee Weapon | Effect | Cost | Slots |
-| ---- | ------ | ---- | ----- |
-| Scythe (Great Sword) | +5 to Hit | 10 | 2 |
+| Melee Weapon | Injury | Piercing | Effect | Cost | Slots |
+| ------------ | ------ | -------- | ------ | ---- | ----- |
+| Scythe (Great Sword) | 3 | 3 | +5 to Hit | 10 | 2 |
 
 ### Cultist Equipment 
 Cultist equipment for the unit types: Necromancer, Cultist
 
-| Melee Weapon | Effect | Cost | Slots |
-| ---- | ------ | ---- | ----- |
-| Dagger | None | 2 | 1 |
-| Spear | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Sword / Axe |  | 5 | 1 |
-| Hammer |  | 5 | 1 |
+| Melee Weapon | Injury | Piercing | Effect | Cost | Slots |
+| ------------ | ------ | -------- | ------ | ---- | ----- |
+| Dagger | 0 | 0 | None | 2 | 1 |
+| Spear | 0 | 0 | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Sword / Axe | 0 | 3 |  | 5 | 1 |
+| Hammer | 4 | 0 |  | 5 | 1 |
 
-| Ranged Weapon | Range | Effect | Cost | Slots |
-| ---- | ----- | ------ | ---- | ----- |
-| Short Bow | 20" |  | 5 | 1 |
-| Bow | 25" |  | 10 | 1 |
+| Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
+| ------------- | ----- | ------ | -------- | ------ | ---- | ----- |
+| Short Bow | 20" | 20" | 0 |  | 5 | 1 |
+| Bow | 25" | 25" | 0 |  | 10 | 1 |
 
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |
