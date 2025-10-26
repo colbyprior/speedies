@@ -71,8 +71,8 @@
     "Melee": "0",
     "Slots": "1"
   },
-  "Tower-Shield": {
-    "Name": "Tower-Shield",
+  "Tower Shield": {
+    "Name": "Tower Shield",
     "Effect": "+6 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon.",
     "Cost": "10",
     "Injury": "0",
