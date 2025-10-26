@@ -84,8 +84,8 @@ def warband_special_rules(warband):
 
 def heroes_table(warband):
     out_data = "## Heroes\n"
-    out_data += f"| Units | Mov | Mel | Rng | Def | Agi | Mrl | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |\n"
-    out_data += f"| ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | --- | --------- |\n"
+    out_data += f"| Units | Mov | Mel | Rng | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |\n"
+    out_data += f"| ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |\n"
     for hero in warband.get("Heroes"):
         skills = []
         for skill in hero.get("Skills"):
@@ -104,8 +104,8 @@ def heroes_table(warband):
 
 def henchmen_table(warband):
     out_data = "\n## Henchmen\n"
-    out_data += f"| Units | Mov | Mel | Rng | Def | Agi | Mrl | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |\n"
-    out_data += f"| ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | ---- |\n"
+    out_data += f"| Units | Mov | Mel | Rng | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |\n"
+    out_data += f"| ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |\n"
     for henchmen in warband.get("Henchmen"):
         skills = []
         for skill in henchmen.get("Skills"):
