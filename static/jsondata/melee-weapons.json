@@ -115,5 +115,14 @@
     "Piercing": "3",
     "Melee": "0",
     "Slots": "2"
-  }
+  },
+  "Torch": {
+    "Name": "Torch",
+    "Effect": "This unit does not need to make Out-Of-Sight Rolls when attempting to Engage.",
+    "Cost": "10",
+    "Injury": "0",
+    "Piercing": "0",
+    "Melee": "0",
+    "Slots": "1"
+  },
 }

@@ -46,7 +46,7 @@
             ]
         },
         {
-            "Name": "Strong Rat",
+            "Name": "Overseer",
             "Type": "Hero",
             "Type Cap": "",
             "Move": "8",
@@ -84,7 +84,7 @@
     ],
     "Henchmen": [
         {
-            "Name": "Rat Boi",
+            "Name": "Underrat",
             "Type Cap": "",
             "Move": "8",
             "Piercing": "0",
@@ -134,7 +134,7 @@
             ]
         },
         {
-            "Name": "Rat Monster",
+            "Name": "Rat Monstrosity",
             "Type Cap": "1",
             "Move": "8",
             "Piercing": "3",
@@ -200,15 +200,15 @@
         }
     },
     "Equipment": {
-        "Hero Rats": {
-            "Aliases": ["Mastermind", "Ratlock", "Strong Rat", "Assassin"],
-            "Melee Weapons": ["Dagger", "Club (Hammer)", "Sword", "Spear", "Fighting Claws"],
+        "Heroes": {
+            "Aliases": ["Mastermind", "Ratlock", "Overseer", "Assassin"],
+            "Melee Weapons": ["Dagger", "Club (Hammer)", "Sword", "Spear", "Pike", "Fighting Claws"],
             "Ranged Weapons": ["Sling", "Throwing Stars", "Pistol"],
             "Armour": ["Light Armour"]
         },
         "Rat Underlings": {
-            "Aliases": ["Rat Boi", "Plague Host"],
-            "Melee Weapons": ["Dagger", "Club (Hammer)", "Sword", "Spear", "Shield"],
+            "Aliases": ["Underrat", "Plague Host"],
+            "Melee Weapons": ["Dagger", "Club (Hammer)", "Sword", "Spear", "Pike", "Shield"],
             "Ranged Weapons": ["Sling"],
             "Armour": []
         }
