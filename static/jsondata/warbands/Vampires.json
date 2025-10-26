@@ -24,7 +24,8 @@
             "Cost": 160,
             "Skills": [
                 "Leader",
-                "Undead"
+                "Undead",
+				"Fear"
             ]
         },
         {
@@ -44,6 +45,7 @@
             "Cost": 130,
             "Skills": [
                 "Undead",
+				"Fear",
                 "Vampiric Magic"
             ]
         },
@@ -63,7 +65,8 @@
             "Morale": "10",
             "Cost": 70,
             "Skills": [
-                "Undead"
+                "Undead",
+				"Fear"
             ]
         },
         {
@@ -83,6 +86,7 @@
             "Cost": 115,
             "Skills": [
                 "Undead",
+				"Fear",
                 "No Equipment"
             ]
         }
@@ -120,6 +124,7 @@
             "Cost": 40,
             "Skills": [
                 "Undead",
+				"Fear",
                 "No Equipment"
             ]
         },
@@ -138,8 +143,7 @@
             "Morale": "18",
             "Cost": 30,
             "Skills": [
-                "Undead",
-                "Bull Rush",
+                "Ambush",
                 "Animal"
             ]
         },
