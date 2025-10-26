@@ -6,11 +6,11 @@ from helpers.warband_helper import clean_link
 
 def melee_weapons_block():
     out_data = f"\n## Melee Weapons \n"
-    out_data += f"| Name | Injury | Piercing | Effect | Cost | Slots |\n"
-    out_data += f"| ---- | ------ | -------- | ------ | ---- | ----- |\n"
+    out_data += f"| Name | Injury | Piercing | Melee | Effect | Cost | Slots |\n"
+    out_data += f"| ---- | ------ | -------- | ----- | ------ | ---- | ----- |\n"
     for weapon_key in global_melee_weapons_data:
         weapon_data = global_melee_weapons_data.get(weapon_key)
-        out_data += f"| {weapon_data.get('Name')} | {weapon_data.get('Injury')} |{weapon_data.get('Piercing')} |{weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
+        out_data += f"| {weapon_data.get('Name')} | {weapon_data.get('Injury')} |{weapon_data.get('Piercing')} | {weapon_data.get('Melee')} |{weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
     return out_data
 
 

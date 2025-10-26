@@ -12,7 +12,7 @@ This team sucks... your blood!
 ### Enthrall
 If any enemy Hero dies during the post-game Injury rolls, they transform into a Vampire Spawn and join your warband. This effect can only trigger if you have 5 or less Heroes in your warband.
 ## Heroes
-| Units | Mov | Mel | Rgn | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
+| Units | Mov | Mel | Rng | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | --- | --------- |
 | Vampire Master | 8 | 11 | -| 6| 7 | 14 | 2 | 2 | 0 | 0 | [Leader](#leader), [Undead](#undead) | 160 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Vampires) |
 | Vampire Seductress | 8 | 14 | -| 8| 10 | 16 | 2 | 2 | 0 | 0 | [Undead](#undead), [Vampiric Magic](#vampiric-magic) | 130 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Vampires) |
@@ -20,7 +20,7 @@ If any enemy Hero dies during the post-game Injury rolls, they transform into a 
 | Nosferatu | 8 | 12 | -| 8| 10 | 14 | 2 | 2 | 0 | 0 | [Undead](#undead), [No Equipment](#no-equipment) | 115 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Vampires) |
 
 ## Henchmen
-| Units | Mov | Mel | Rgn | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
+| Units | Mov | Mel | Rng | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | ---- |
 | Thrall | 6 | 16 | 16| 10| 10 | 18 | 1 | 1 | 0 | 0 |  | 25 | None |
 | Ghoul | 6 | 14 | 16| 10| 16 | 16 | 2 | 1 | 0 | 0 | [Undead](#undead), [No Equipment](#no-equipment) | 40 | None |
@@ -68,16 +68,16 @@ If this unit takes out another unit in melee they may recover one wound. If this
 ### Vampires Equipment 
 Vampires equipment for the unit types: Leader, Hero
 
-| Melee Weapon | Injury | Piercing | Effect | Cost | Slots |
-| ------------ | ------ | -------- | ------ | ---- | ----- |
-| Dagger | 0 | 0 |  | 2 | 1 |
-| Hammer | 4 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 |  | 5 | 1 |
-| Spear | 0 | 0 | +2 Mel. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Great Hammer | 7 | 0 | +5 Mel | 10 | 2 |
-| Great Sword / Axe | 3 | 3 | +5 Mel | 10 | 2 |
-| Pike | 3 | 0 | +7 Mel | 10 | 2 |
-| Shield | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
+| Melee Weapon | Injury | Piercing | Melee | Effect | Cost | Slots |
+| ------------ | ------ | -------- | ----- | ------ | ---- | ----- |
+| Dagger | 0 | 0 | 0 |  | 2 | 1 |
+| Hammer | 4 | 0 | 0 |  | 5 | 1 |
+| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
+| Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
+| Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
+| Pike | 3 | 0 | 5 | +7 Mel | 10 | 2 |
+| Shield | 0 | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |
@@ -87,16 +87,16 @@ Vampires equipment for the unit types: Leader, Hero
 ### Thralls Equipment 
 Thralls equipment for the unit types: Leader, Hero
 
-| Melee Weapon | Injury | Piercing | Effect | Cost | Slots |
-| ------------ | ------ | -------- | ------ | ---- | ----- |
-| Dagger | 0 | 0 |  | 2 | 1 |
-| Hammer | 4 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 |  | 5 | 1 |
-| Spear | 0 | 0 | +2 Mel. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Great Hammer | 7 | 0 | +5 Mel | 10 | 2 |
-| Great Sword / Axe | 3 | 3 | +5 Mel | 10 | 2 |
-| Pike | 3 | 0 | +7 Mel | 10 | 2 |
-| Shield | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
+| Melee Weapon | Injury | Piercing | Melee | Effect | Cost | Slots |
+| ------------ | ------ | -------- | ----- | ------ | ---- | ----- |
+| Dagger | 0 | 0 | 0 |  | 2 | 1 |
+| Hammer | 4 | 0 | 0 |  | 5 | 1 |
+| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
+| Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
+| Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
+| Pike | 3 | 0 | 5 | +7 Mel | 10 | 2 |
+| Shield | 0 | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
 | ------------- | ----- | ------ | -------- | ------ | ---- | ----- |

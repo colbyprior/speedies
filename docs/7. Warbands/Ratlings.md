@@ -12,7 +12,7 @@ RAT
 ### Rat
 Is a rat
 ## Heroes
-| Units | Mov | Mel | Rgn | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
+| Units | Mov | Mel | Rng | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | --- | --------- |
 | Mastermind | 8 | 12 | 12| 6| 10 | 18 | 1 | 1 | 0 | 0 | [Leader](#leader) | 80 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
 | Ratlock | 8 | 14 | 14| 8| 13 | 18 | 1 | 1 | 0 | 0 | [Plague Magic](#plague-magic) | 65 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Ratlings) |
@@ -20,7 +20,7 @@ Is a rat
 | Assassin | 8 | 14 | 14| 6| 13 | 18 | 1 | 1 | 0 | 0 |  | 55 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
 
 ## Henchmen
-| Units | Mov | Mel | Rgn | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
+| Units | Mov | Mel | Rng | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | ---- |
 | Rat Boi | 8 | 14 | 14| 8| 16 | 18 | 1 | 1 | 0 | 0 |  | 30 | None |
 | Plague Host | 8 | 16 | 16| 8| 16 | - | 1 | 1 | 0 | 0 |  | 25 | None |
@@ -64,13 +64,13 @@ This unit can use their tail to equip a one handed weapon as though it was anoth
 ### Hero Rats Equipment 
 Hero Rats equipment for the unit types: Mastermind, Ratlock, Strong Rat, Assassin
 
-| Melee Weapon | Injury | Piercing | Effect | Cost | Slots |
-| ------------ | ------ | -------- | ------ | ---- | ----- |
-| Dagger | 0 | 0 |  | 2 | 1 |
-| Club (Hammer) | 4 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 |  | 5 | 1 |
-| Spear | 0 | 0 | +2 Mel. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Fighting Claws | 0 | 3 | +1 Attack. You roll agility with advantage. | 20 | 2 |
+| Melee Weapon | Injury | Piercing | Melee | Effect | Cost | Slots |
+| ------------ | ------ | -------- | ----- | ------ | ---- | ----- |
+| Dagger | 0 | 0 | 0 |  | 2 | 1 |
+| Club (Hammer) | 4 | 0 | 0 |  | 5 | 1 |
+| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
+| Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Fighting Claws | 0 | 3 | 0 | +1 Attack. You roll agility with advantage. | 20 | 2 |
 
 | Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
 | ------------- | ----- | ------ | -------- | ------ | ---- | ----- |
@@ -85,13 +85,13 @@ Hero Rats equipment for the unit types: Mastermind, Ratlock, Strong Rat, Assassi
 ### Rat Underlings Equipment 
 Rat Underlings equipment for the unit types: Rat Boi, Plague Host
 
-| Melee Weapon | Injury | Piercing | Effect | Cost | Slots |
-| ------------ | ------ | -------- | ------ | ---- | ----- |
-| Dagger | 0 | 0 |  | 2 | 1 |
-| Club (Hammer) | 4 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 |  | 5 | 1 |
-| Spear | 0 | 0 | +2 Mel. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Shield | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
+| Melee Weapon | Injury | Piercing | Melee | Effect | Cost | Slots |
+| ------------ | ------ | -------- | ----- | ------ | ---- | ----- |
+| Dagger | 0 | 0 | 0 |  | 2 | 1 |
+| Club (Hammer) | 4 | 0 | 0 |  | 5 | 1 |
+| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
+| Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Shield | 0 | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
 | ------------- | ----- | ------ | -------- | ------ | ---- | ----- |

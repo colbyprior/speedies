@@ -12,7 +12,7 @@ Magic never expects us.
 ### Incite the Mob
 At the start of each game make a Morale Check once per hero. For each success, a Peasant temporarily joins your warband for this game only. This unit wields farm tools or anything else that was on-hand when it was roused. Its improvised weapons are reflected in its stats.
 ## Heroes
-| Units | Mov | Mel | Rgn | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
+| Units | Mov | Mel | Rng | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | --- | --------- |
 | Grand Inquisitor | 6 | 13 | 12| 8| 7 | 17 | 1 | 1 | 0 | 0 | [Leader](#leader), [Inquisitor](#inquisitor) | 100 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Agility,Morale,Inquisitors) |
 | Priest | 6 | 14 | 14| 10| 9 | 18 | 1 | 1 | 0 | 0 | [Divine Magic](#divine-magic) | 60 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Inquisitors) |
@@ -20,7 +20,7 @@ At the start of each game make a Morale Check once per hero. For each success, a
 | Doomsayer | 6 | 15 | 15| 10| 9 | 18 | 1 | 1 | 0 | 0 | [The Rapture is Nigh](#the-rapture-is-nigh), [Inquisitor](#inquisitor) | 50 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Inquisitors) |
 
 ## Henchmen
-| Units | Mov | Mel | Rgn | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
+| Units | Mov | Mel | Rng | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | ---- |
 | Fanatic | 6 | 12 | 14| 10| 10 | 15 | 1 | 1 | 0 | 2 | [Fearless](#fearless), [Can't promote](#can't-promote) | 50 | 5 |
 | Zealot | 6 | 16 | 16| 10| 10 | 18 | 1 | 1 | 0 | 0 |  | 25 | None |
@@ -68,15 +68,15 @@ This unit can use the morale of the Doomsayer if they are within 5" of it.
 ### Inquisitors Equipment 
 Inquisitors equipment for the unit types: Grand Inquisitor, Inquisitor, Doomsayer
 
-| Melee Weapon | Injury | Piercing | Effect | Cost | Slots |
-| ------------ | ------ | -------- | ------ | ---- | ----- |
-| Dagger | 0 | 0 |  | 2 | 1 |
-| Hammer | 4 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 |  | 5 | 1 |
-| Spear | 0 | 0 | +2 Mel. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Great Hammer | 7 | 0 | +5 Mel | 10 | 2 |
-| Great Sword / Axe | 3 | 3 | +5 Mel | 10 | 2 |
-| Pike | 3 | 0 | +7 Mel | 10 | 2 |
+| Melee Weapon | Injury | Piercing | Melee | Effect | Cost | Slots |
+| ------------ | ------ | -------- | ----- | ------ | ---- | ----- |
+| Dagger | 0 | 0 | 0 |  | 2 | 1 |
+| Hammer | 4 | 0 | 0 |  | 5 | 1 |
+| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
+| Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
+| Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
+| Pike | 3 | 0 | 5 | +7 Mel | 10 | 2 |
 
 | Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
 | ------------- | ----- | ------ | -------- | ------ | ---- | ----- |
@@ -91,16 +91,16 @@ Inquisitors equipment for the unit types: Grand Inquisitor, Inquisitor, Doomsaye
 ### Priest Equipment 
 Priest equipment for the unit types: Priest
 
-| Melee Weapon | Injury | Piercing | Effect | Cost | Slots |
-| ------------ | ------ | -------- | ------ | ---- | ----- |
-| Dagger | 0 | 0 |  | 2 | 1 |
-| Hammer | 4 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 |  | 5 | 1 |
-| Spear | 0 | 0 | +2 Mel. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Great Hammer | 7 | 0 | +5 Mel | 10 | 2 |
-| Great Sword / Axe | 3 | 3 | +5 Mel | 10 | 2 |
-| Pike | 3 | 0 | +7 Mel | 10 | 2 |
-| Shield | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
+| Melee Weapon | Injury | Piercing | Melee | Effect | Cost | Slots |
+| ------------ | ------ | -------- | ----- | ------ | ---- | ----- |
+| Dagger | 0 | 0 | 0 |  | 2 | 1 |
+| Hammer | 4 | 0 | 0 |  | 5 | 1 |
+| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
+| Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
+| Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
+| Pike | 3 | 0 | 5 | +7 Mel | 10 | 2 |
+| Shield | 0 | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |
@@ -110,25 +110,25 @@ Priest equipment for the unit types: Priest
 ### Fanatics Equipment 
 Fanatics equipment for the unit types: Fanatic
 
-| Melee Weapon | Injury | Piercing | Effect | Cost | Slots |
-| ------------ | ------ | -------- | ------ | ---- | ----- |
-| Great Sword / Axe | 3 | 3 | +5 Mel | 10 | 2 |
-| Great Hammer | 7 | 0 | +5 Mel | 10 | 2 |
-| Pike | 3 | 0 | +7 Mel | 10 | 2 |
+| Melee Weapon | Injury | Piercing | Melee | Effect | Cost | Slots |
+| ------------ | ------ | -------- | ----- | ------ | ---- | ----- |
+| Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
+| Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
+| Pike | 3 | 0 | 5 | +7 Mel | 10 | 2 |
 
 ### Zealots Equipment 
 Zealots equipment for the unit types: Leader, Hero
 
-| Melee Weapon | Injury | Piercing | Effect | Cost | Slots |
-| ------------ | ------ | -------- | ------ | ---- | ----- |
-| Dagger | 0 | 0 |  | 2 | 1 |
-| Hammer | 4 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 |  | 5 | 1 |
-| Spear | 0 | 0 | +2 Mel. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Great Hammer | 7 | 0 | +5 Mel | 10 | 2 |
-| Great Sword / Axe | 3 | 3 | +5 Mel | 10 | 2 |
-| Pike | 3 | 0 | +7 Mel | 10 | 2 |
-| Shield | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
+| Melee Weapon | Injury | Piercing | Melee | Effect | Cost | Slots |
+| ------------ | ------ | -------- | ----- | ------ | ---- | ----- |
+| Dagger | 0 | 0 | 0 |  | 2 | 1 |
+| Hammer | 4 | 0 | 0 |  | 5 | 1 |
+| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
+| Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
+| Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
+| Pike | 3 | 0 | 5 | +7 Mel | 10 | 2 |
+| Shield | 0 | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
 | ------------- | ----- | ------ | -------- | ------ | ---- | ----- |

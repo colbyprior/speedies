@@ -9,7 +9,7 @@ sidebar_label: Sellswords
 | Play Style | Balanced |
 
 ## Heroes
-| Units | Mov | Mel | Rgn | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
+| Units | Mov | Mel | Rng | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | --- | --------- |
 | Captain | 6 | 13 | 13| 8| 7 | 17 | 1 | 1 | 0 | 0 | [Leader](#leader) | 60 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defense,Morale,Sellswords) |
 | Champion | 6 | 13 | 14| 10| 10 | 18 | 1 | 1 | 0 | 0 |  | 40 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Sellswords) |
@@ -17,7 +17,7 @@ sidebar_label: Sellswords
 | Knight | 8 | 13 | -| 10| 10 | 17 | 1 | 1 | 0 | 0 |  | 40 | 2 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Sellswords) |
 
 ## Henchmen
-| Units | Mov | Mel | Rgn | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
+| Units | Mov | Mel | Rng | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | ---- |
 | Warrior | 6 | 14 | 14| 10| 10 | 18 | 1 | 1 | 0 | 0 |  | 30 | None |
 | Marksmen | 6 | 14 | 14| 10| 10 | 18 | 1 | 1 | 0 | 0 |  | 30 | 6 |
@@ -41,16 +41,16 @@ This unit gets advantage on the first round of combat when they engage an enemy
 ### Sellsword General Equipment 
 Equipment for all units except Warrior, Swordsmen, Marksmen, Defender
 
-| Melee Weapon | Injury | Piercing | Effect | Cost | Slots |
-| ------------ | ------ | -------- | ------ | ---- | ----- |
-| Dagger | 0 | 0 |  | 2 | 1 |
-| Hammer | 4 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 |  | 5 | 1 |
-| Spear | 0 | 0 | +2 Mel. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Great Hammer | 7 | 0 | +5 Mel | 10 | 2 |
-| Great Sword / Axe | 3 | 3 | +5 Mel | 10 | 2 |
-| Pike | 3 | 0 | +7 Mel | 10 | 2 |
-| Shield | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
+| Melee Weapon | Injury | Piercing | Melee | Effect | Cost | Slots |
+| ------------ | ------ | -------- | ----- | ------ | ---- | ----- |
+| Dagger | 0 | 0 | 0 |  | 2 | 1 |
+| Hammer | 4 | 0 | 0 |  | 5 | 1 |
+| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
+| Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
+| Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
+| Pike | 3 | 0 | 5 | +7 Mel | 10 | 2 |
+| Shield | 0 | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
 | ------------- | ----- | ------ | -------- | ------ | ---- | ----- |
@@ -69,16 +69,16 @@ Equipment for all units except Warrior, Swordsmen, Marksmen, Defender
 ### Warriors & Swordsman Equipment 
 Warriors & Swordsman equipment for the unit types: Warrior, Swordsman
 
-| Melee Weapon | Injury | Piercing | Effect | Cost | Slots |
-| ------------ | ------ | -------- | ------ | ---- | ----- |
-| Dagger | 0 | 0 |  | 2 | 1 |
-| Hammer | 4 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 |  | 5 | 1 |
-| Spear | 0 | 0 | +2 Mel. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Great Hammer | 7 | 0 | +5 Mel | 10 | 2 |
-| Great Sword / Axe | 3 | 3 | +5 Mel | 10 | 2 |
-| Pike | 3 | 0 | +7 Mel | 10 | 2 |
-| Shield | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
+| Melee Weapon | Injury | Piercing | Melee | Effect | Cost | Slots |
+| ------------ | ------ | -------- | ----- | ------ | ---- | ----- |
+| Dagger | 0 | 0 | 0 |  | 2 | 1 |
+| Hammer | 4 | 0 | 0 |  | 5 | 1 |
+| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
+| Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
+| Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
+| Pike | 3 | 0 | 5 | +7 Mel | 10 | 2 |
+| Shield | 0 | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |
@@ -88,11 +88,11 @@ Warriors & Swordsman equipment for the unit types: Warrior, Swordsman
 ### Marksmen Equipment 
 Marksmen equipment for the unit types: Marksmen
 
-| Melee Weapon | Injury | Piercing | Effect | Cost | Slots |
-| ------------ | ------ | -------- | ------ | ---- | ----- |
-| Dagger | 0 | 0 |  | 2 | 1 |
-| Hammer | 4 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 |  | 5 | 1 |
+| Melee Weapon | Injury | Piercing | Melee | Effect | Cost | Slots |
+| ------------ | ------ | -------- | ----- | ------ | ---- | ----- |
+| Dagger | 0 | 0 | 0 |  | 2 | 1 |
+| Hammer | 4 | 0 | 0 |  | 5 | 1 |
+| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
 
 | Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
 | ------------- | ----- | ------ | -------- | ------ | ---- | ----- |
@@ -111,14 +111,14 @@ Marksmen equipment for the unit types: Marksmen
 ### Defender Equipment 
 Defender equipment for the unit types: Knight, Defender
 
-| Melee Weapon | Injury | Piercing | Effect | Cost | Slots |
-| ------------ | ------ | -------- | ------ | ---- | ----- |
-| Dagger | 0 | 0 |  | 2 | 1 |
-| Hammer | 4 | 0 |  | 5 | 1 |
-| Spear | 0 | 0 | +2 Mel. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Sword / Axe | 0 | 3 |  | 5 | 1 |
-| Shield | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
-| Tower-Shield | 0 | 0 | +6 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 10 | 1 |
+| Melee Weapon | Injury | Piercing | Melee | Effect | Cost | Slots |
+| ------------ | ------ | -------- | ----- | ------ | ---- | ----- |
+| Dagger | 0 | 0 | 0 |  | 2 | 1 |
+| Hammer | 4 | 0 | 0 |  | 5 | 1 |
+| Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
+| Shield | 0 | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
+| Tower-Shield | 0 | 0 | 0 | +6 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 10 | 1 |
 
 ## Promotion Options
 | Unit | Stat Ups | Gained Skills |

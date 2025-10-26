@@ -12,7 +12,7 @@ Elves, bleh!
 ### Elven Agility
 Elves can Jump Across to a maximum distance of 6", instead of the usual 3".
 ## Heroes
-| Units | Mov | Mel | Rgn | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
+| Units | Mov | Mel | Rng | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | --- | --------- |
 | Noble | 7 | 12 | 12| 4| 5 | 16 | 1 | 1 | 0 | 0 | [Leader](#leader) | 95 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale,Wood%20Elves) |
 | Mage | 7 | 13 | 13| 6| 7 | 18 | 1 | 1 | 0 | 0 | [Forest Magic](#forest-magic) | 90 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Agility,Wood%20Elves) |
@@ -20,7 +20,7 @@ Elves can Jump Across to a maximum distance of 6", instead of the usual 3".
 | Ranger | 7 | 13 | 10| 5| 7 | 18 | 1 | 1 | 0 | 0 |  | 70 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility,Wood%20Elves) |
 
 ## Henchmen
-| Units | Mov | Mel | Rgn | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
+| Units | Mov | Mel | Rng | Agi | Mrl | Def | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | ---- |
 | Citizen | 7 | 13 | 13| 6| 7 | 18 | 1 | 1 | 0 | 0 |  | 55 | - |
 | Scout | 7 | 13 | 13| 5| 7 | 18 | 1 | 1 | 0 | 0 |  | 60 | 5 |
@@ -72,12 +72,12 @@ If an enemy attempts to Engage this unit and this unit is in cover, the enemy mu
 ### Wood Elf Equipment 
 Wood Elf equipment for the unit types: All
 
-| Melee Weapon | Injury | Piercing | Effect | Cost | Slots |
-| ------------ | ------ | -------- | ------ | ---- | ----- |
-| Dagger | 0 | 0 |  | 2 | 1 |
-| Spear | 0 | 0 | +2 Mel. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Sword / Axe | 0 | 3 |  | 5 | 1 |
-| Shield | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
+| Melee Weapon | Injury | Piercing | Melee | Effect | Cost | Slots |
+| ------------ | ------ | -------- | ----- | ------ | ---- | ----- |
+| Dagger | 0 | 0 | 0 |  | 2 | 1 |
+| Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
+| Sword / Axe | 0 | 3 | None |  | 5 | 1 |
+| Shield | 0 | 0 | 0 | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Ranged Weapon | Range | Injury | Piercing | Effect | Cost | Slots |
 | ------------- | ----- | ------ | -------- | ------ | ---- | ----- |
