@@ -28,7 +28,7 @@ sidebar_label: Sellswords
 ### Leader
 *Inherent*
 
-Allied units with 6" of this unit can use this morale stat for checks instead of their own.
+Allied units with 5" of this unit can use this morale stat for checks instead of their own.
 ### Bull Rush
 *Melee*
 
@@ -44,12 +44,12 @@ Equipment for all units except Warrior, Swordsmen, Marksmen, Defender
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
-| Hammer | +4 Injury | 5 | 1 |
-| Sword / Axe | -3 Def to target | 5 | 1 |
+| Hammer |  | 5 | 1 |
+| Sword / Axe |  | 5 | 1 |
 | Spear | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Great Hammer | +5 Mel, +7 to Injury | 10 | 2 |
-| Great Sword / Axe | +5 to Hit, +3 to Injury, -3 Def to target | 10 | 2 |
-| Pike | +7 to Hit, +3 to Injury | 10 | 2 |
+| Great Hammer | +5 Mel | 10 | 2 |
+| Great Sword / Axe | +5 to Hit | 10 | 2 |
+| Pike | +7 to Hit | 10 | 2 |
 | Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |
@@ -57,9 +57,9 @@ Equipment for all units except Warrior, Swordsmen, Marksmen, Defender
 | Short Bow | 20" |  | 5 | 1 |
 | Bow | 25" |  | 10 | 1 |
 | Long Bow | 30" |  | 15 | 1 |
-| Crossbow | 30" | Stand and Reload, Deadly | 20 | 1 |
-| Pistol | 10" | Long Reload, Deadly, Armour Piercing, Close Quarters | 15 | 1 |
-| Rifle | 25" | Stand and Reload, Long Reload, Deadly, Armour Piercing | 25 | 1 |
+| Crossbow | 30" | Stand and Reload | 20 | 1 |
+| Pistol | 10" | Long Reload, Close Quarters, Dual Wield | 15 | 1 |
+| Rifle | 25" | Stand and Reload, Long Reload | 25 | 1 |
 
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |
@@ -72,12 +72,12 @@ Warriors & Swordsman equipment for the unit types: Warrior, Swordsman
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
-| Hammer | +4 Injury | 5 | 1 |
-| Sword / Axe | -3 Def to target | 5 | 1 |
+| Hammer |  | 5 | 1 |
+| Sword / Axe |  | 5 | 1 |
 | Spear | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Great Hammer | +5 Mel, +7 to Injury | 10 | 2 |
-| Great Sword / Axe | +5 to Hit, +3 to Injury, -3 Def to target | 10 | 2 |
-| Pike | +7 to Hit, +3 to Injury | 10 | 2 |
+| Great Hammer | +5 Mel | 10 | 2 |
+| Great Sword / Axe | +5 to Hit | 10 | 2 |
+| Pike | +7 to Hit | 10 | 2 |
 | Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Armour | Effect | Cost |
@@ -91,18 +91,18 @@ Marksmen equipment for the unit types: Marksmen
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
-| Hammer | +4 Injury | 5 | 1 |
-| Sword / Axe | -3 Def to target | 5 | 1 |
+| Hammer |  | 5 | 1 |
+| Sword / Axe |  | 5 | 1 |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |
 | ---- | ----- | ------ | ---- | ----- |
 | Short Bow | 20" |  | 5 | 1 |
 | Bow | 25" |  | 10 | 1 |
 | Long Bow | 30" |  | 15 | 1 |
-| Crossbow | 30" | Stand and Reload, Deadly | 20 | 1 |
-| Pistol | 10" | Long Reload, Deadly, Armour Piercing, Close Quarters | 15 | 1 |
-| Rifle | 25" | Stand and Reload, Long Reload, Deadly, Armour Piercing | 25 | 1 |
-| Blunderbuss | 30" | Massive Shot, Fire Once, Deadly | 25 | 1 |
+| Crossbow | 30" | Stand and Reload | 20 | 1 |
+| Pistol | 10" | Long Reload, Close Quarters, Dual Wield | 15 | 1 |
+| Rifle | 25" | Stand and Reload, Long Reload | 25 | 1 |
+| Blunderbuss | - | Massive Shot, Fire Once | 25 | 1 |
 
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |
@@ -114,9 +114,9 @@ Defender equipment for the unit types: Knight, Defender
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
-| Hammer | +4 Injury | 5 | 1 |
+| Hammer |  | 5 | 1 |
 | Spear | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Sword / Axe | -3 Def to target | 5 | 1 |
+| Sword / Axe |  | 5 | 1 |
 | Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 | Tower-Shield | +6 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 10 | 1 |
 

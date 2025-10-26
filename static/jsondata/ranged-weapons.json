@@ -2,71 +2,91 @@
       "Crossbow": { 
         "Name": "Crossbow", 
         "Range": "30\"",
-        "Effect": "Stand and Reload, Deadly", 
+        "Effect": "Stand and Reload",
         "Cost": "20", 
-        "Slots": "1" 
+        "Slots": "1",
+        "Injury": "2",
+        "Piercing": "0"
       }, 
       "Pistol": { 
         "Name": "Pistol", 
         "Range": "10\"",
-        "Effect": "Long Reload, Deadly, Armour Piercing, Close Quarters, Dual Wield",
+        "Effect": "Long Reload, Close Quarters, Dual Wield",
         "Cost": "15",
-        "Slots": "1" 
+        "Slots": "1",
+        "Injury": "2",
+        "Piercing": "3"
       }, 
       "Bow": { 
         "Name": "Bow", 
         "Range": "25\"",
         "Effect": "", 
         "Cost": "10", 
-        "Slots": "1" 
+        "Slots": "1",
+        "Injury": "0",
+        "Piercing": "0"
       },  
       "Long Bow": { 
         "Name": "Long Bow", 
         "Range": "30\"",
         "Effect": "", 
         "Cost": "15", 
-        "Slots": "1" 
+        "Slots": "1",
+        "Injury": "0",
+        "Piercing": "0"
       },  
       "Rifle": { 
         "Name": "Rifle", 
         "Range": "25\"",
-        "Effect": "Stand and Reload, Long Reload, Deadly, Armour Piercing",
+        "Effect": "Stand and Reload, Long Reload",
         "Cost": "25", 
-        "Slots": "1" 
+        "Slots": "1",
+        "Injury": "2",
+        "Piercing": "3"
       },  
       "Blunderbuss": { 
         "Name": "Blunderbuss", 
-        "Range": "30\"",
-        "Effect": "Massive Shot, Fire Once, Deadly", 
+        "Range": "-",
+        "Effect": "Massive Shot, Fire Once",
         "Cost": "25", 
-        "Slots": "1" 
+        "Slots": "1",
+        "Injury": "2",
+        "Piercing": "0"
       },
       "Sling": { 
         "Name": "Sling", 
         "Range": "15\"",
         "Effect": "", 
         "Cost": "5", 
-        "Slots": "1" 
+        "Slots": "1",
+        "Injury": "0",
+        "Piercing": "0"
       },
       "Short Bow": { 
         "Name": "Short Bow", 
         "Range": "20\"",
         "Effect": "", 
         "Cost": "5", 
-        "Slots": "1" 
+        "Slots": "1",
+        "Injury": "0",
+        "Piercing": "0"
       },
       "Throwing Stars": {
         "Name": "Throwing Stars",
         "Range": "15\"",
         "Effect": "Thrown",
         "Cost": "10",
-        "Slots": "1"
+        "Slots": "1",
+        "Injury": "0",
+        "Piercing": "0"
       },
       "Elvish Bow": { 
         "Name": "Elvish Bow", 
         "Range": "35\"",
         "Effect": "", 
         "Cost": "20", 
-        "Slots": "1" 
+        "Slots": "1",
+        "Injury": "0",
+        "Piercing": "0"
       }
 }

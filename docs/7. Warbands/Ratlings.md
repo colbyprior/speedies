@@ -15,7 +15,7 @@ Is a rat
 | Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Mastermind | 8 | 1 | 1| 0| 0 | 12 | 12 | 18 | 6 | 10 | [Leader](#leader) | 80 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
-| Ratlock | 8 | 1 | 1| 0| 0 | 14 | 14 | 18 | 8 | 13 | [Rat Magic](#rat-magic) | 65 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Ratlings) |
+| Ratlock | 8 | 1 | 1| 0| 0 | 14 | 14 | 18 | 8 | 13 | [Plague Magic](#plague-magic) | 65 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Ratlings) |
 | Strong Rat | 8 | 1 | 1| 0| 0 | 12 | 14 | 18 | 8 | 13 |  | 50 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Ratlings) |
 | Assassin | 8 | 1 | 1| 0| 0 | 14 | 14 | 18 | 6 | 13 |  | 55 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Ratlings) |
 
@@ -25,21 +25,21 @@ Is a rat
 | Rat Boi | 8 | 1 | 1| 0| 0 | 14 | 14 | 18 | 8 | 16 |  | 30 | None |
 | Plague Host | 8 | 1 | 1| 0| 0 | 16 | 16 | - | 8 | 16 |  | 25 | None |
 | Giant Rat | 8 | 1 | 1| 0| 0 | 15 | - | - | 6 | 18 | [Animal](#animal) | 10 | 4 |
-| Rat Monster | 8 | 3 | 3| 3| 3 | 8 | - | 8 | 8 | 18 | [Stupid](#stupid), [Fear](#fear), [Large](#large) | 210 | 1 |
+| Rat Monster | 8 | 3 | 3| 3| 3 | 8 | - | 8 | 8 | 18 | [Stupid](#stupid), [Fear](#fear), [Large](#large), [Animal](#animal) | 210 | 1 |
 
 ## Skills 
 ### Leader
 *Inherent*
 
-Allied units with 6" of this unit can use this morale stat for checks instead of their own.
-### Rat Magic
+Allied units with 5" of this unit can use this morale stat for checks instead of their own.
+### Plague Magic
 *Spellcasting*
 
-This rat can cast rat spells.
+This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Spellcaster, this unit has an innate spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield.
 ### Animal
 *Inherent*
 
-This unit cannot Promote, make Climb checks, or pick up Treasure. They can still go up ladders.
+This unit cannot Promote, use ladders (except by making a full Climb Check), pick up Treasure, or use equipment.
 ### Stupid
 *Inherent*
 
@@ -51,7 +51,7 @@ This unit causes Fear.
 ### Large
 *Inherent*
 
-This unit may be targeted by ranged attacks even if they aren't the closest model to the shooter.
+This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It may be targeted by ranged attacks even if they aren't the closest model to the shooter.
 
 ## Warband Special Skills 
 ### Keen Tail
@@ -67,16 +67,16 @@ Hero Rats equipment for the unit types: Mastermind, Ratlock, Strong Rat, Assassi
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
-| Club (Hammer) | +4 Injury | 5 | 1 |
-| Sword / Axe | -3 Def to target | 5 | 1 |
+| Club (Hammer) |  | 5 | 1 |
+| Sword / Axe |  | 5 | 1 |
 | Spear | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Fighting Claws | -3 Def to target, +1 Attack. You roll agility with advantage. | 20 | 2 |
+| Fighting Claws | +1 Attack. You roll agility with advantage. | 20 | 2 |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |
 | ---- | ----- | ------ | ---- | ----- |
 | Sling | 15" |  | 5 | 1 |
 | Throwing Stars | 15" | Thrown | 10 | 1 |
-| Pistol | 10" | Long Reload, Deadly, Armour Piercing, Close Quarters | 15 | 1 |
+| Pistol | 10" | Long Reload, Close Quarters, Dual Wield | 15 | 1 |
 
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |
@@ -88,8 +88,8 @@ Rat Underlings equipment for the unit types: Rat Boi, Plague Host
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
-| Club (Hammer) | +4 Injury | 5 | 1 |
-| Sword / Axe | -3 Def to target | 5 | 1 |
+| Club (Hammer) |  | 5 | 1 |
+| Sword / Axe |  | 5 | 1 |
 | Spear | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
 | Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
@@ -97,7 +97,7 @@ Rat Underlings equipment for the unit types: Rat Boi, Plague Host
 | ---- | ----- | ------ | ---- | ----- |
 | Sling | 15" |  | 5 | 1 |
 
-## Rat Magic 
+## Plague Magic 
 
 | Name | Check | Description |
 | ---- | ------ | ---- |

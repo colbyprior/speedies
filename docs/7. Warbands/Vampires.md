@@ -15,7 +15,7 @@ If any enemy Hero dies during the post-game Injury rolls, they transform into a 
 | Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Vampire Master | 8 | 2 | 2| 0| 0 | 11 | - | 14 | 6 | 7 | [Leader](#leader), [Undead](#undead) | 160 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Vampires) |
-| Vampire Seductress | 8 | 2 | 2| 0| 0 | 14 | - | 16 | 8 | 10 | [Undead](#undead), [Vampire Seduction](#vampire-seduction) | 130 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Vampires) |
+| Vampire Seductress | 8 | 2 | 2| 0| 0 | 14 | - | 16 | 8 | 10 | [Undead](#undead), [Vampiric Magic](#vampiric-magic) | 130 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Vampires) |
 | Vampire Spawn | 8 | 1 | 2| 0| 0 | 14 | - | 16 | 8 | 10 | [Undead](#undead) | 70 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Vampires) |
 | Nosferatu | 8 | 2 | 2| 0| 0 | 12 | - | 14 | 8 | 10 | [Undead](#undead), [No Equipment](#no-equipment) | 115 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Vampires) |
 
@@ -31,15 +31,15 @@ If any enemy Hero dies during the post-game Injury rolls, they transform into a 
 ### Leader
 *Inherent*
 
-Allied units with 6" of this unit can use this morale stat for checks instead of their own.
+Allied units with 5" of this unit can use this morale stat for checks instead of their own.
 ### Undead
 *Inherent*
 
 This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to disease (including the Plague).
-### Vampire Seduction
+### Vampiric Magic
 *Spellcasting*
 
-This unit can cast Vampire Seduction spells.
+This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Spellcaster, this unit has an innate spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield.
 ### No Equipment
 *Inherent*
 
@@ -51,7 +51,7 @@ This unit gets advantage on the first round of combat when they engage an enemy
 ### Animal
 *Inherent*
 
-This unit cannot Promote, make Climb checks, or pick up Treasure. They can still go up ladders.
+This unit cannot Promote, use ladders (except by making a full Climb Check), pick up Treasure, or use equipment.
 ### Flying
 *Inherent*
 
@@ -71,12 +71,12 @@ Vampires equipment for the unit types: Leader, Hero
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
-| Hammer | +4 Injury | 5 | 1 |
-| Sword / Axe | -3 Def to target | 5 | 1 |
+| Hammer |  | 5 | 1 |
+| Sword / Axe |  | 5 | 1 |
 | Spear | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Great Hammer | +5 Mel, +7 to Injury | 10 | 2 |
-| Great Sword / Axe | +5 to Hit, +3 to Injury, -3 Def to target | 10 | 2 |
-| Pike | +7 to Hit, +3 to Injury | 10 | 2 |
+| Great Hammer | +5 Mel | 10 | 2 |
+| Great Sword / Axe | +5 to Hit | 10 | 2 |
+| Pike | +7 to Hit | 10 | 2 |
 | Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Armour | Effect | Cost |
@@ -90,12 +90,12 @@ Thralls equipment for the unit types: Leader, Hero
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
-| Hammer | +4 Injury | 5 | 1 |
-| Sword / Axe | -3 Def to target | 5 | 1 |
+| Hammer |  | 5 | 1 |
+| Sword / Axe |  | 5 | 1 |
 | Spear | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Great Hammer | +5 Mel, +7 to Injury | 10 | 2 |
-| Great Sword / Axe | +5 to Hit, +3 to Injury, -3 Def to target | 10 | 2 |
-| Pike | +7 to Hit, +3 to Injury | 10 | 2 |
+| Great Hammer | +5 Mel | 10 | 2 |
+| Great Sword / Axe | +5 to Hit | 10 | 2 |
+| Pike | +7 to Hit | 10 | 2 |
 | Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |
@@ -108,7 +108,7 @@ Thralls equipment for the unit types: Leader, Hero
 | Light Armour | +1 Def | 15 |
 | Heavy Armour | +2 Def | 30 |
 
-## Vampire Seduction 
+## Vampiric Magic 
 
 | Name | Check | Description |
 | ---- | ------ | ---- |

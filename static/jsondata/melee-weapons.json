@@ -1,80 +1,106 @@
 {
   "Dagger": {
-      "Name": "Dagger",
-      "Effect": "None",
-      "Cost": "2",
-      "Slots": "1"
+    "Name": "Dagger",
+    "Effect": "None",
+    "Cost": "2",
+    "Injury": "0",
+    "Piercing": "0",
+    "Slots": "1"
   },
   "Sword": {
-      "Name": "Sword / Axe",
-      "Effect": "-3 Def to target",
-      "Cost": "5",
-      "Slots": "1"
+    "Name": "Sword / Axe",
+    "Effect": "",
+    "Cost": "5",
+    "Injury": "0",
+    "Piercing": "3",
+    "Slots": "1"
   },
   "Spear": {
-      "Name": "Spear",
-      "Effect": "+2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield.",
-      "Cost": "5",
-      "Slots": "1"
+    "Name": "Spear",
+    "Effect": "+2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield.",
+    "Cost": "5",
+    "Injury": "0",
+    "Piercing": "0",
+    "Slots": "1"
   },
   "Hammer": {
-      "Name": "Hammer",
-      "Effect": "+4 Injury",
-      "Cost": "5",
-      "Slots": "1"
+    "Name": "Hammer",
+    "Effect": "",
+    "Cost": "5",
+    "Injury": "4",
+    "Piercing": "0",
+    "Slots": "1"
     },
   "Pike": {
     "Name": "Pike",
-    "Effect": "+7 to Hit, +3 to Injury",
+    "Effect": "+7 to Hit",
     "Cost": "10",
+    "Injury": "3",
+    "Piercing": "0",
     "Slots": "2"
   },
   "Great Sword": {
     "Name": "Great Sword / Axe",
-    "Effect": "+5 to Hit, +3 to Injury, -3 Def to target",
+    "Effect": "+5 to Hit",
     "Cost": "10",
+    "Injury": "3",
+    "Piercing": "3",
     "Slots": "2"
   },
   "Great Hammer": {
     "Name": "Great Hammer",
-    "Effect": "+5 Mel, +7 to Injury",
+    "Effect": "+5 Mel",
     "Cost": "10",
+    "Injury": "7",
+    "Piercing": "0",
     "Slots": "2"
   },
   "Shield": {
     "Name": "Shield",
     "Effect": "+4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon.",
     "Cost": "5",
+    "Injury": "0",
+    "Piercing": "0",
     "Slots": "1"
   },
   "Tower-Shield": {
     "Name": "Tower-Shield",
     "Effect": "+6 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon.",
     "Cost": "10",
+    "Injury": "0",
+    "Piercing": "0",
     "Slots": "1"
   },
   "Divine Hammer": {
     "Name": "Divine Hammer",
-    "Effect": "-3 Def to target, +4 Injury, Advantage against Undead. Only heroes can dual-wield.",
+    "Effect": "Advantage against Undead. Only heroes can dual-wield.",
     "Cost": "15",
+    "Injury": "4",
+    "Piercing": "3",
     "Slots": "1"
   },
     "Divine Great Hammer": {
     "Name": "Divine Great Hammer",
-    "Effect": "-3 Def to target, +5 Mel, +7 Injury, Advantage against Undead.",
+    "Effect": "+5 Mel. Advantage against Undead.",
     "Cost": "20",
+    "Injury": "7",
+    "Piercing": "3",
     "Slots": "2"
   },
   "Whip": {
     "Name": "Whip",
     "Effect": "+1 Atk in the first round of combat when you charge",
     "Cost": "10",
+    "Injury": "0",
+    "Piercing": "0",
     "Slots": "1"
   },
   "Fighting Claws": {
-      "Name": "Fighting Claws",
-      "Effect": "-3 Def to target, +1 Attack. You roll agility with advantage.",
-      "Cost": "20",
-      "Slots": "2"
+    "Name": "Fighting Claws",
+    "Effect": "+1 Attack. You roll agility with advantage.",
+    "Cost": "20",
+    "Injury": "0",
+    "Piercing": "3",
+    "Slots": "2"
   }
 }

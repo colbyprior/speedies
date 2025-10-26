@@ -15,7 +15,7 @@ Elves can Jump Across to a maximum distance of 6", instead of the usual 3".
 | Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Noble | 7 | 1 | 1| 0| 0 | 12 | 12 | 16 | 4 | 5 | [Leader](#leader) | 95 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale,Wood%20Elves) |
-| Mage | 7 | 1 | 1| 0| 0 | 13 | 13 | 18 | 6 | 7 | [Nature Spells](#nature-spells) | 90 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Agility,Wood%20Elves) |
+| Mage | 7 | 1 | 1| 0| 0 | 13 | 13 | 18 | 6 | 7 | [Forest Magic](#forest-magic) | 90 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Agility,Wood%20Elves) |
 | Honour Guard | 7 | 1 | 1| 0| 0 | 12 | 12 | 16 | 5 | 7 |  | 80 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Wood%20Elves) |
 | Ranger | 7 | 1 | 1| 0| 0 | 13 | 10 | 18 | 5 | 7 |  | 70 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility,Wood%20Elves) |
 
@@ -25,17 +25,17 @@ Elves can Jump Across to a maximum distance of 6", instead of the usual 3".
 | Citizen | 7 | 1 | 1| 0| 0 | 13 | 13 | 18 | 6 | 7 |  | 55 | - |
 | Scout | 7 | 1 | 1| 0| 0 | 13 | 13 | 18 | 5 | 7 |  | 60 | 5 |
 | Woodland Creature | 8 | 1 | 1| 0| 0 | 14 | - | 18 | 8 | 16 | [Follower](#follower), [Animal](#animal) | 20 | 3 |
-| Treant | 8 | 2 | 3| 2| 0 | 12 | - | 8 | 16 | 7 | [Fear](#fear), [Slow](#slow) | 185 | 1 |
+| Treant | 8 | 2 | 3| 2| 0 | 12 | - | 8 | 16 | 7 | [Fear](#fear), [Slow](#slow), [Large](#large), [No Equipment](#no-equipment) | 185 | 1 |
 
 ## Skills 
 ### Leader
 *Inherent*
 
-Allied units with 6" of this unit can use this morale stat for checks instead of their own.
-### Nature Spells
+Allied units with 5" of this unit can use this morale stat for checks instead of their own.
+### Forest Magic
 *Spellcasting*
 
-This unit can cast Nature spells. Immediately pick one spell from this school to learn. This unit cannot use armour or a shield while casting.
+This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Spellcaster, this unit has an innate spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield.
 ### Follower
 *Inherent*
 
@@ -43,7 +43,7 @@ This unit does not count for the purposes of a warband's max units.
 ### Animal
 *Inherent*
 
-This unit cannot Promote, make Climb checks, or pick up Treasure. They can still go up ladders.
+This unit cannot Promote, use ladders (except by making a full Climb Check), pick up Treasure, or use equipment.
 ### Fear
 *Inherent*
 
@@ -52,6 +52,14 @@ This unit causes Fear.
 *Inherent*
 
 This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move).
+### Large
+*Inherent*
+
+This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It may be targeted by ranged attacks even if they aren't the closest model to the shooter.
+### No Equipment
+*Inherent*
+
+This unit may not have any equipment, but does not suffer the penalties for fighting Unarmed.
 
 ## Warband Special Skills 
 ### Blur
@@ -68,7 +76,7 @@ Wood Elf equipment for the unit types: All
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
 | Spear | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Sword / Axe | -3 Def to target | 5 | 1 |
+| Sword / Axe |  | 5 | 1 |
 | Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |
@@ -81,7 +89,7 @@ Wood Elf equipment for the unit types: All
 | ---- | ------ | ---- |
 | Light Armour | +1 Def | 15 |
 
-## Nature Spells 
+## Forest Magic 
 
 | Name | Check | Description |
 | ---- | ------ | ---- |

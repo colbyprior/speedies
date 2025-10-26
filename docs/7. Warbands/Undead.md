@@ -14,7 +14,7 @@ If any enemy unit dies during the post-game Injury rolls, they are raised and ad
 ## Heroes
 | Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Necromancer | 6 | 1 | 1| 0| 0 | 14 | 14 | 18 | 10 | 7 | [Leader](#leader), [Necromancy Spells](#necromancy-spells) | 65 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Undead) |
+| Necromancer | 6 | 1 | 1| 0| 0 | 14 | 14 | 18 | 10 | 7 | [Leader](#leader), [Necromantic Magic](#necromantic-magic) | 65 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Undead) |
 | Plague Cultist | 6 | 1 | 1| 0| 0 | 14 | 14 | 18 | 10 | 10 | [Spread Plague](#spread-plague) | 45 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Undead) |
 | Death Knight | 7 | 1 | 2| 0| 0 | 13 | 16 | 16 | 14 | 13 | [Undead](#undead), [Fear](#fear) | 50 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Undead) |
 | Reaper | 9 | 2 | 1| 0| 0 | 13 | - | - | 10 | 13 | [Undead](#undead), [Fear](#fear) | 65 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Undead) |
@@ -25,17 +25,17 @@ If any enemy unit dies during the post-game Injury rolls, they are raised and ad
 | Zombie | 6 | 1 | 1| 0| 0 | 13 | - | - | 16 | 16 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment) | 15 | - |
 | Skeleton | 7 | 1 | 1| 0| 0 | 15 | 15 | - | 14 | 16 | [Undead](#undead), [Fear](#fear) | 20 | - |
 | Ghost | 6 | 1 | 1| 0| 0 | 13 | - | 13 | 10 | 13 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment), [Ethereal](#ethereal) | 40 | 3 |
-| Bone Giant | 7 | 3 | 3| 0| 0 | 9 | - | 7 | 14 | 13 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment) | 225 | 1 |
+| Bone Giant | 7 | 3 | 3| 0| 0 | 9 | - | 7 | 14 | 13 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment), [Large](#large) | 225 | 1 |
 
 ## Skills 
 ### Leader
 *Inherent*
 
-Allied units with 6" of this unit can use this morale stat for checks instead of their own.
-### Necromancy Spells
+Allied units with 5" of this unit can use this morale stat for checks instead of their own.
+### Necromantic Magic
 *Spellcasting*
 
-This unit can cast Necromancy spells. Immediately pick one spell from this school to learn. This unit cannot use armour or a shield while casting.
+This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Spellcaster, this unit has an innate spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield.
 ### Spread Plague
 *Inherent*
 
@@ -56,6 +56,10 @@ This unit may not have any equipment, but does not suffer the penalties for figh
 *Inherent*
 
 This unit may not have its Defense reduced by equipment.
+### Large
+*Inherent*
+
+This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It may be targeted by ranged attacks even if they aren't the closest model to the shooter.
 
 ## Warband Special Skills 
 ### Advanced Necromancy
@@ -72,11 +76,11 @@ Skeleton equipment for the unit types: Skeleton, Death Knight
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
 | Spear | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Sword / Axe | -3 Def to target | 5 | 1 |
-| Hammer | +4 Injury | 5 | 1 |
-| Pike | +7 to Hit, +3 to Injury | 10 | 2 |
-| Great Sword / Axe | +5 to Hit, +3 to Injury, -3 Def to target | 10 | 2 |
-| Great Hammer | +5 Mel, +7 to Injury | 10 | 2 |
+| Sword / Axe |  | 5 | 1 |
+| Hammer |  | 5 | 1 |
+| Pike | +7 to Hit | 10 | 2 |
+| Great Sword / Axe | +5 to Hit | 10 | 2 |
+| Great Hammer | +5 Mel | 10 | 2 |
 | Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |
@@ -94,7 +98,7 @@ Reaper equipment for the unit types: Reaper
 
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
-| Scythe (Great Sword) | +5 to Hit, +3 to Injury, -3 Def to target | 10 | 2 |
+| Scythe (Great Sword) | +5 to Hit | 10 | 2 |
 
 ### Cultist Equipment 
 Cultist equipment for the unit types: Necromancer, Cultist
@@ -103,8 +107,8 @@ Cultist equipment for the unit types: Necromancer, Cultist
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
 | Spear | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Sword / Axe | -3 Def to target | 5 | 1 |
-| Hammer | +4 Injury | 5 | 1 |
+| Sword / Axe |  | 5 | 1 |
+| Hammer |  | 5 | 1 |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |
 | ---- | ----- | ------ | ---- | ----- |
@@ -115,7 +119,7 @@ Cultist equipment for the unit types: Necromancer, Cultist
 | ---- | ------ | ---- |
 | Light Armour | +1 Def | 15 |
 
-## Necromancy Spells 
+## Necromantic Magic 
 
 | Name | Check | Description |
 | ---- | ------ | ---- |

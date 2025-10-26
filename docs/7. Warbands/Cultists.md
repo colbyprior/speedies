@@ -37,7 +37,7 @@ Melee skill improved to at least 14. Gain one extra wound. Gains one extra attac
 ### Leader
 *Inherent*
 
-Allied units with 6" of this unit can use this morale stat for checks instead of their own.
+Allied units with 5" of this unit can use this morale stat for checks instead of their own.
 ### Cult Magic
 *Spellcasting*
 
@@ -57,8 +57,8 @@ Prophet & Acolytes equipment for the unit types: Prophet, Acolyte
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
-| Hammer | +4 Injury | 5 | 1 |
-| Sword / Axe | -3 Def to target | 5 | 1 |
+| Hammer |  | 5 | 1 |
+| Sword / Axe |  | 5 | 1 |
 | Spear | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
 
 ### Brute Equipment 
@@ -67,12 +67,12 @@ Brute equipment for the unit types: Brute
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
-| Hammer | +4 Injury | 5 | 1 |
-| Sword / Axe | -3 Def to target | 5 | 1 |
+| Hammer |  | 5 | 1 |
+| Sword / Axe |  | 5 | 1 |
 | Spear | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Great Hammer | +5 Mel, +7 to Injury | 10 | 2 |
-| Great Sword / Axe | +5 to Hit, +3 to Injury, -3 Def to target | 10 | 2 |
-| Pike | +7 to Hit, +3 to Injury | 10 | 2 |
+| Great Hammer | +5 Mel | 10 | 2 |
+| Great Sword / Axe | +5 to Hit | 10 | 2 |
+| Pike | +7 to Hit | 10 | 2 |
 | Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Armour | Effect | Cost |
@@ -86,8 +86,8 @@ Seeker & Initiates equipment for the unit types: Seeker, Initiate
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
-| Hammer | +4 Injury | 5 | 1 |
-| Sword / Axe | -3 Def to target | 5 | 1 |
+| Hammer |  | 5 | 1 |
+| Sword / Axe |  | 5 | 1 |
 | Spear | +2 Hit. A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
 | Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 

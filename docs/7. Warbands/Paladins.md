@@ -14,7 +14,7 @@ Paladins don't actually have any but this is a test.
 ## Heroes
 | Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap | Skill Ups |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Justicar | 6 | 1 | 1| 0| 0 | 13 | 13 | 17 | 8 | 7 | [Leader](#leader), [Prayers](#prayers) | 90 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Morale,Paladins) |
+| Justicar | 6 | 1 | 1| 0| 0 | 13 | 13 | 17 | 8 | 7 | [Leader](#leader), [Divine Magic](#divine-magic) | 90 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defense,Morale,Paladins) |
 | Paladin | 6 | 1 | 1| 0| 0 | 13 | 14 | 17 | 10 | 10 |  | 40 | - | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
 | Cleric | 6 | 1 | 1| 0| 0 | 14 | 14 | 18 | 10 | 10 | [Healer](#healer) | 40 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Defense,Morale,Paladins) |
 | Standard Bearer | 6 | 1 | 1| 0| 0 | 14 | 14 | 18 | 10 | 7 | [Holy Standard](#holy-standard) | 45 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale,Paladins) |
@@ -24,18 +24,18 @@ Paladins don't actually have any but this is a test.
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Squire | 6 | 1 | 1| 0| 0 | 14 | 14 | 18 | 10 | 10 |  | 30 | - |
 | Initiate | 6 | 1 | 1| 0| 0 | 16 | 16 | 18 | 10 | 10 |  | 25 | - |
-| Monk | 7 | 1 | 1| 0| 0 | 14 | 14 | 18 | 8 | 10 | [Ki Strike](#ki-strike), [No Equipment](#no-equipment) | 40 | 3 |
+| Monk | 7 | 2 | 1| 0| 0 | 14 | 14 | 18 | 8 | 10 | [Ki Strike](#ki-strike), [No Equipment](#no-equipment) | 400 | 3 |
 | Cavalier | 9 | 1 | 2| 0| 0 | 14 | 14 | 18 | 10 | 10 | [Mounted](#mounted) | 55 | 3 |
 
 ## Skills 
 ### Leader
 *Inherent*
 
-Allied units with 6" of this unit can use this morale stat for checks instead of their own.
-### Prayers
+Allied units with 5" of this unit can use this morale stat for checks instead of their own.
+### Divine Magic
 *Spellcasting*
 
-This unit can cast Prayer spells. Immediately pick one spell from this school to learn. This unit can still use armour and a shield while casting, unlike other spell types.
+This unit is capable of casting Divine Magic. See the relevant spell list for a list of learnable spells. As a Divine Spellcaster, this unit has the usual three slots for weapons and can use armour and shields as normal.
 ### Healer
 *Inherent*
 
@@ -70,10 +70,11 @@ Paladin equipment for the unit types: Leader, Hero, Squire, Novice
 
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
-| Hammer | +4 Injury | 5 | 1 |
-| Blessed Hammer | -3 Def to target, +1 Injury, +3 Melee against Undead. Only heroes can dual-wield. | 15 | 1 |
+| Hammer |  | 5 | 1 |
+| Divine Hammer | Advantage against Undead. Only heroes can dual-wield. | 15 | 1 |
+| Divine Great Hammer | +5 Mel. Advantage against Undead. | 20 | 2 |
 | Whip | +1 Atk in the first round of combat when you charge | 10 | 1 |
-| Great Hammer | +5 Mel, +7 to Injury | 10 | 2 |
+| Great Hammer | +5 Mel | 10 | 2 |
 | Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |
@@ -85,7 +86,7 @@ Paladin equipment for the unit types: Leader, Hero, Squire, Novice
 | Light Armour | +1 Def | 15 |
 | Heavy Armour | +2 Def | 30 |
 
-## Prayers 
+## Divine Magic 
 
 | Name | Check | Description |
 | ---- | ------ | ---- |

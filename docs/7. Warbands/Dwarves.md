@@ -10,11 +10,9 @@ These chonkers go bonkers.
 
 ## Special Rules
 ### Hard to Kill
-An Injury roll of 18 against a Dwarf counts as Stunned instead of Incapacitated. Injury modifiers have no effect against Dwarves.
+Dwarves have a -2 to Injury rolls made against them (eg. an unmodified roll of 19 would count as a 17, Stunning rather than Incapaciating the Dwarf).
 ### Sturdy Legs
 Wearing Armour does not reduce a Dwarf's Move attribute.
-### Gem Sense
-Dwarf warbands gain an additional Treasure Roll at the end of each game.
 ### Ranged Shields
 Dwarf gunners may use any ranged weapon with a shield.
 ## Heroes
@@ -28,7 +26,7 @@ Dwarf gunners may use any ranged weapon with a shield.
 ## Henchmen
 | Units | Mov | Atk | Wnd | Prc | Inj | Mel | Rng | Def | Agi | Mrl | Skills | Cost |  Cap |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Berserker | 5 | 1 | 1| 0| 0 | 13 | 14 | 14 | 14 | 7 | [Berserk](#berserk), [Fearless](#fearless) | 45 | 2 |
+| Berserker | 5 | 1 | 1| 0| 0 | 13 | 14 | 14 | 14 | 7 | [Berserker](#berserker), [Fearless](#fearless) | 45 | 2 |
 | Youngling | 5 | 1 | 1| 0| 0 | 15 | 15 | 14 | 14 | 7 |  | 30 | - |
 | Warrior | 5 | 1 | 1| 0| 0 | 13 | 14 | 14 | 14 | 7 |  | 40 | - |
 | Gunner | 5 | 1 | 1| 0| 0 | 13 | 14 | 14 | 14 | 7 |  | 40 | 4 |
@@ -37,19 +35,19 @@ Dwarf gunners may use any ranged weapon with a shield.
 ### Leader
 *Inherent*
 
-Allied units with 6" of this unit can use this morale stat for checks instead of their own.
+Allied units with 5" of this unit can use this morale stat for checks instead of their own.
 ### Weaponsmith
 *Inherent*
 
-If a warband starts a game with a unit with this Skill, any Ranged Attack made by a unit in the warband that is Elevated (relative to its target) will have Advantage on the attack, even if the attack is over half of the weapon's range.
+If a warband starts a game with a unit with this Skill, all Ranged Weapons have their Range increased by 10", except for Pistols whose Range is incrased by 5"
 ### Armoursmith
 *Inherent*
 
 If a warband contains a unit with this Skill, it gains the ability to purchase Mithril Armour.
-### Berserk
+### Berserker
 *Inherent*
 
-At the end of the Engage Phase, if there is an enemy within Line-of-Sight and Engage range, this unit attempts to Engage the closest such unit. For the turn that this unit Engages, it gains an additional Attack. This unit cannot wear Armour or use a Shield.
+At the end of the Engage Phase, if there is an enemy within Line-of-Sight and Engage range, this unit attempts to Engage the closest such unit. For the turn that this unit Engages or is Engaged, it gains an Advantage on its Attacks. This unit cannot wear Armour or use a Shield.
 ### Fearless
 *Morale*
 
@@ -65,15 +63,15 @@ Warrior equipment for the unit types: Noble, Armourer, Veteran, Berserker, Warri
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
-| Sword / Axe | -3 Def to target | 5 | 1 |
-| Hammer | +4 Injury | 5 | 1 |
-| Great Sword / Axe | +5 to Hit, +3 to Injury, -3 Def to target | 10 | 2 |
-| Great Hammer | +5 Mel, +7 to Injury | 10 | 2 |
+| Sword / Axe |  | 5 | 1 |
+| Hammer |  | 5 | 1 |
+| Great Sword / Axe | +5 to Hit | 10 | 2 |
+| Great Hammer | +5 Mel | 10 | 2 |
 | Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |
 | ---- | ----- | ------ | ---- | ----- |
-| Pistol | 10" | Long Reload, Deadly, Armour Piercing, Close Quarters | 15 | 1 |
+| Pistol | 10" | Long Reload, Close Quarters, Dual Wield | 15 | 1 |
 
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |
@@ -87,15 +85,15 @@ Gunner equipment for the unit types: Gunner, Engineer
 | Melee Weapon | Effect | Cost | Slots |
 | ---- | ------ | ---- | ----- |
 | Dagger | None | 2 | 1 |
-| Sword / Axe | -3 Def to target | 5 | 1 |
-| Hammer | +4 Injury | 5 | 1 |
+| Sword / Axe |  | 5 | 1 |
+| Hammer |  | 5 | 1 |
 | Shield | +4 Def. Can't be used if the hero has a ranged weapon apart from a Sling, Pistol, Short Bow or a Bow. Can't wield a shield without having a melee weapon. | 5 | 1 |
 
 | Ranged Weapon | Range | Effect | Cost | Slots |
 | ---- | ----- | ------ | ---- | ----- |
-| Crossbow | 30" | Stand and Reload, Deadly | 20 | 1 |
-| Pistol | 10" | Long Reload, Deadly, Armour Piercing, Close Quarters | 15 | 1 |
-| Rifle | 25" | Stand and Reload, Long Reload, Deadly, Armour Piercing | 25 | 1 |
+| Crossbow | 30" | Stand and Reload | 20 | 1 |
+| Pistol | 10" | Long Reload, Close Quarters, Dual Wield | 15 | 1 |
+| Rifle | 25" | Stand and Reload, Long Reload | 25 | 1 |
 
 | Armour | Effect | Cost |
 | ---- | ------ | ---- |
