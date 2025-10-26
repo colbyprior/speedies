@@ -177,12 +177,22 @@
   "Berserker": {
     "Name": "Berserker",
     "Type": "Inherent",
-    "Description": "At the end of the Engage Phase, if there is an enemy within Line-of-Sight and Engage range, this unit attempts to Engage the closest such unit. For the turn that this unit Engages or is Engaged, it gains an Advantage on its Attacks. This unit cannot wear Armour or use a Shield."
+    "Description": "At the end of the Engage Phase, if there is an enemy within Line-of-Sight and Engage range, this unit attempts to Engage the closest such unit. For the turn that this unit Engages or is Engaged, it gains an Advantage on its Attacks."
+  },
+  "Deathwish": {
+    "Name": "Deathwish",
+    "Type": "Inherent",
+    "Description": "This unit cannot wear Armour or use a Shield."
   },
   "Spread Plague": {
     "Name": "Spread Plague",
     "Type": "Inherent",
-    "Description": "Bottom text"
+    "Description": "If this unit Incapacitates or is Incapacitated by an enemy in Melee, that unit must make a Morale Check. If they fail it, they immediately contract the plague. If this unit also has the Plague, the Morale Check is made with Disadvantage."
+  },
+   "Resist the Plague": {
+    "Name": "Spread Plague",
+    "Type": "Inherent",
+    "Description": "This unit makes Plague Progression Checks with Advantage. It can choose to treat and 'Recovers from the Plague' rolls as 'Nothing Happens'."
   },
   "Ethereal": {
     "Name": "Ethereal",
@@ -323,5 +333,15 @@
     "Name": "Fixed Equipment (Farm Tools)",
     "Type": "Inherent",
     "Description": "This unit has fixed equipment that cannot be lost or changed. The equipment modifers are included in the unit's stats."
+  },
+  "Fixed Equipment (Holy Standard)": {
+    "Name": "Fixed Equipment (Holy Standard)",
+    "Type": "Inherent",
+    "Description": "This unit has fixed equipment that cannot be lost or changed. The equipment modifers are included in the unit's stats."
+  },
+  "Hatred": {
+    "Name": "Hatred",
+    "Type": "Inherent",
+    "Description": "This unit hates a specific unit, unit type, or warband. This unit makes Melee Checks with Advantage against enemies it hates."
   }
 }
