@@ -3,65 +3,65 @@
     "Name": "Raise Dead", 
     "School": "Necromantic Magic",
     "Check": "7",
-    "Description": "One Zombie or Skeleton that was Incapacitated after the end of your last turn immediately returns to the battle. Place the model within 6\" of the Necromancer. The model cannot be placed such that it is Engaged with an enemy."
+    "Description": "One allied Zombie or Skeleton that was Incapacitated after the end of your last turn immediately returns to the battle. Place the model within 5\" of the Necromancer. The model cannot be placed such that it is Engaged with an enemy."
   },
   "Control Dead": {
     "Name": "Control Dead", 
     "School": "Necromantic Magic",
     "Check": "10",
-    "Description": "Choose a point within 6\" of the Necromancer. Any Zombies or Skeletons within 2\" of that point may immediately move again up to their Movement distance. If this moves them into base contact with an enemy model, they count as Engaging. They take Agility Checks as normal."
+    "Description": "Choose a point within 5\" of the caster. Any allied Zombies or Skeletons within 2\" of that point may immediately move again up to their Move. If this moves them into base contact with an enemy unit, they count as Engaging. They take Agility Checks as normal."
   },
   "Lifestealer": {
     "Name": "Lifestealer", 
     "School": "Necromantic Magic",
     "Check": "18",
-    "Description": "Choose a single unit within 6\". The target suffers a Wound (no Checks required) and the Necromancer gains an extra wound for the duration of the battle. If this takes an enemy to 0 Wounds, the Spell Check value is used to determine Injury (so a roll of 19 would Incapacitate the target). This may take the Necromancer’s Wounds above his original maximum value. This spell does not affect Undead units."
+    "Description": "Choose a single unit within 5\". The target suffers a Wound (no check required) and the caster gains an extra Wound for the duration of the battle. This may take the caster's Wounds above its maximum value. This spell does not affect Undead units."
   },
   "Necromantic Hex": {
-    "Name": "Necromantic Hex",
+    "Name": "Hex",
     "School": "Necromantic Magic",
     "Check": "13",
-    "Description": "Choose a single unit within 12\". The target has Disadvantage on all Checks it makes until the start of your next turn."
+    "Description": "Choose a single enemy within 10\". The target has Disadvantage on all Checks it makes until the start of your next turn."
   },
-  "Blessed Weapon": {
-    "Name": "Blessed Weapon", 
+  "Bless Weapon": {
+    "Name": "Bless Weapon", 
     "School": "Divine Magic",
-    "Check": "9",
-    "Description": "The wielder gains the following: +3 to melee, 4 armour piercing, +4 to injury rolls in melee until the start of his next turn. The Priest must test on each opponents shooting phase in order to continue to use blessed weapon."
+    "Check": "7",
+    "Description": "The caster gains Advantage on all Melee Checks. This unit must attempt to make a Morale Check at the start of its turn, otherwise the spell ends."
   },
-  "Steadfast": {
-    "Name": "Steadfast", 
+  "Divine Fervour": {
+    "Name": "Divine Fervour", 
     "School": "Divine Magic",
     "Check": "12",
-    "Description": "Any allied warriors within 8\" of the warrior become immune to Fear. In addition, the whole warband gains +2 on any Morale tests they have to make. The effects of this spell last until the caster is knocked down, stunned or put out of action. If cast again the effects are not cumulative, ie, the maximum bonus to Rout tests remains +2."
+    "Description": "Reduce any Injury results against allies within 5\" of the caster (including themselves by 3 until the end of the turn."
   },
-  "Bright Blast": {
-    "Name": "Bright Blast", 
+  "Holy Smite": {
+    "Name": "Holy Smite", 
     "School": "Divine Magic",
     "Check": "15",
-    "Description": "Roll an attack with melee skill 12 against each enemy model within 4\", no defence saves are allowed. Undead or mutant models in range suffer the attack with a +2 to wound."
+    "Description": "Make an Injury Check against all enemies within 5\". Add +2 to the Check if the enemy is Undead."
   },
    "Invisibility": {
     "Name": "Invisibility", 
-    "School": "Forest Magic",
+    "School": "Life Magic",
     "Check": "12",
-    "Description": "Choose one unit within 6\", which can be the caster. On a success, that unit cannot be targeted by Shooting or Engages until the spell ends. If the unit is in combat, it moves 1\" out of combat. If the unit Engages, casts a spell, or makes a Ranged attack, the spell ends. At the start of each of the player's turns, the caster must make a Morale check to keep the spell going. Only one unit can be affected by this spell at a time. LB. This does not block opponent run, movement, or contest treasure. LB. Ends if Wizard is stunned or OoA."
+    "Description": "Ongoing. Choose one ally within 5\" (including themselves). On a success, this unit is treated as no longer existing for the purposes of targeting or blocking Movement, line-of-sight or picking up Treasure. If it is Engaged, it is no longer Engaged and moves 1\". If this unit Engages, casts a Spell, or makes a Ranged attack, the spell ends."
   },
    "Overgrowth": {
     "Name": "Overgrowth", 
-    "School": "Forest Magic",
+    "School": "Life Magic",
     "Check": "9",
-    "Description": "Choose a point within 12\". Place a piece of natural terrain (eg. woods) centred at that point. The terrain cannot be longer or wider than 3\", or taller than 5\". Some leniency should be made if it fits the spirit of the spell. LB. The terrain must fit within the space (ie. other terrain cannot be moved to accommodate it). If a unit is able to move through the terrain at all, it counts as Difficult Terrain. LB. Only one such piece of terrain can exist at a time. If the spell is successfully recast, the existing piece of terrain disappears, then the new piece of terrain is created."
+    "Description": "Choose a point within 10\". Place a piece of natural terrain (eg. woods) at that point. The terrain cannot be longer or wider than 3\", or taller than 5\". Some leniency should be made if it fits the spirit of the spell. The terrain must fit within the space. If this is cast on a unit, move that unit to the closest space that it can be safely placed (this may be within the new terrain)."
   },
    "Root": {
     "Name": "Root", 
-    "School": "Forest Magic",
+    "School": "Life Magic",
     "Check": "11",
-    "Description": "Choose one unit within 20\". That unit cannot Engage, Move, Run, or Disengage until the start of your next turn."
+    "Description": "Choose one unit within 20\". That unit cannot Engage, Move, or Run until the start of your next turn."
   },
    "Wrath of the Forest": {
     "Name": "Wrath of the Forest", 
-    "School": "Forest Magic",
+    "School": "Life Magic",
     "Check": "99",
     "Description": "Bottom text."
   },
@@ -69,13 +69,13 @@
     "Name": "Heal", 
     "School": "Divine Magic",
     "Check": "5",
-    "Description": "Any one model within 2\" of the caster (including themself) may be healed. The warrior is restored to his full quota of Wounds. In addition, if any friendly models within 2\" are stunned or knocked down, they immediately come to their senses, stand up, and continue fighting as normal."
+    "Description": "Any ally within 2\" of the caster (including themselves) removes Dazed or Staggered and regains 1 Wound, up to their maximum."
   },
   "Frenzy": {
     "Name": "Frenzy",
     "School": "Vampiric Magic",
     "Check": "13",
-    "Description": "Choose one unit within 6\", including the caster. On a success that unit may take their full movement even if they have already moved. If they move into base contact with an enemy unit this counts as having charged. The unit may attack with advantage on the first round."
+    "Description": "Choose one unit within 5\", including the caster. On a success that unit may take their full movement even if they have already moved. If they move into base contact with an enemy unit this counts as having charged. The unit may attack with advantage on the first round."
   },
   "Lure": {
     "Name": "Lure",
@@ -87,37 +87,37 @@
     "Name": "Bat wings",
     "School": "Vampiric Magic",
     "Check": "12",
-    "Description": "Choose one unit within 6\", including the caster. On a success, that unit can fly in any direction as part of their move speed. At the start of each turn, the caster must make a Morale check to keep the spell going. Only one unit can be affected by this spell at a time."
+    "Description": "Choose one unit within 5\", including the caster. On a success, that unit can fly in any direction as part of their move speed. At the start of each turn, the caster must make a Morale check to keep the spell going. Only one unit can be affected by this spell at a time."
   },
-  "Vampire Hex": {
-    "Name": "Vampire Hex",
+  "Vampiric Hex": {
+    "Name": "Hex",
     "School": "Vampiric Magic",
     "Check": "13",
-    "Description": "Choose one unit with 12\" this unit has disadvantage on defense rolls until the start of your next turn."
+    "Description": "Choose a single enemy within 10\". The target has Disadvantage on all Checks it makes until the start of your next turn."
   },
-  "Ball of rats": {
-    "Name": "Ball of rats",
+  "Swarm of Rats": {
+    "Name": "Swarm of Rats",
     "School": "Plague Magic",
     "Check": "13",
-    "Description": "The spell has a range of 8\", hitting the first model in its path. The spell automatically hits the target (with the spell roll being the injury roll), roll an attack roll with 10 skill on each model within 2\" of the target."
+    "Description": "The spell has a range of 10\", hitting the first unit in its path. Make an Injury Check against all units within 2\" of the target. Treat the Cast Check result for this spell as the Injury Roll for the initial unit that was hit."
   },
-  "Rat fury": {
-    "Name": "Rat fury",
+  "Plague Madness": {
+    "Name": "Plague Madness",
     "School": "Plague Magic",
     "Check": "13",
-    "Description": "The rat may immediately charge any enemy model within 12\" (ignoring any terrain and interposing models) and gains 2 extra Attacks and +3 to wound during this turn’s hand-to-hand combat phase only."
+    "Description": "The caster may immediately Engage any enemy within 10\" of movement, automatically passing any Agility Checks required. The caster gains 2 Attacks and +3 Injury until the end of this turn."
   },
   "Ratpsychosis": {
     "Name": "Ratpsychosis",
     "School": "Plague Magic",
     "Check": "13",
-    "Description": "All standing models in base contact with the rat must take an immediate Morale test. If they fail, you roll an attack against each target and they then run 6\" directly away from the rat."
+    "Description": "All standing models in base contact with the rat must take an immediate Morale test. If they fail, you roll an attack against each target and they then run 5\" directly away from the rat."
   },
   "Curse of rat": {
     "Name": "Curse of rat",
     "School": "Plague Magic",
     "Check": "7",
-    "Description": "The spell has a range of 12\" and affects a single model within range. The target must re-roll any successful defense rolls and to melee rolls until the start of your next turn."
+    "Description": "The spell has a range of 10\" and affects a single model within range. The target must re-roll any successful defense rolls and to melee rolls until the start of your next turn."
   },
   "Writheform": {
     "Name": "Writheform",

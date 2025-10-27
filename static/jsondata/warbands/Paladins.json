@@ -181,7 +181,7 @@
         "Paladin": {
             "Mel": "X",
             "Rng": "",
-            "Def": "",
+            "Def": "X",
             "Agi": "",
             "Mrl": "X",
             "Special": "X"
@@ -195,9 +195,9 @@
             "Special": "X"
         },
         "Standard Bearer": {
-            "Mel": "X",
+            "Mel": "",
             "Rng": "",
-            "Def": "",
+            "Def": "X",
             "Agi": "",
             "Mrl": "X",
             "Special": "X"

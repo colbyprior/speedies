@@ -176,23 +176,23 @@
     "Available Skills": {
         "Vampire Noble": {
             "Mel": "X",
-            "Rng": "X",
-            "Def": "",
-            "Agi": "",
+            "Rng": "",
+            "Def": "X",
+            "Agi": "X",
             "Mrl": "X",
             "Special": "X"
         },
         "Vampire Seductor": {
-            "Mel": "",
+            "Mel": "X",
             "Rng": "",
             "Def": "",
-            "Agi": "",
+            "Agi": "X",
             "Mrl": "X",
             "Special": "X"
         },
         "Vampire Spawn": {
             "Mel": "X",
-            "Rng": "X",
+            "Rng": "",
             "Def": "",
             "Agi": "X",
             "Mrl": "",
@@ -201,8 +201,8 @@
         "Nosferatu": {
             "Mel": "X",
             "Rng": "",
-            "Def": "",
-            "Agi": "",
+            "Def": "X",
+            "Agi": "X",
             "Mrl": "",
             "Special": "X"
         }

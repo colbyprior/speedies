@@ -42,7 +42,7 @@
             "Morale": "7",
             "Cost": 90,
             "Skills": [
-                "Forest Magic"
+                "Life Magic"
             ]
         },
         {
@@ -174,14 +174,14 @@
         "Noble": {
             "Mel": "X",
             "Rng": "X",
-            "Def": "",
+            "Def": "X",
             "Agi": "X",
             "Mrl": "X",
             "Special": "X"
         },
         "Mage": {
             "Mel": "",
-            "Rng": "",
+            "Rng": "X",
             "Def": "",
             "Agi": "X",
             "Mrl": "",

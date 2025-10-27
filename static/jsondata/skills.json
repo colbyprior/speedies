@@ -142,17 +142,17 @@
   "Divine Magic": {
     "Name": "Divine Magic",
     "Type": "Spellcasting",
-    "Description": "This unit is capable of casting Divine Magic. See the relevant spell list for a list of learnable spells. As a Divine Spellcaster, this unit has the usual three slots for weapons and can use armour and shields as normal."
+    "Description": "This unit is capable of casting Divine Magic. See the relevant spell list for a list of learnable spells. As a Divine Caster, this unit has the usual three slots for weapons and can use armour and shields as normal."
   },
   "Necromantic Magic": {
     "Name": "Necromantic Magic",
     "Type": "Spellcasting",
-    "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Spellcaster, this unit has an innate spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
+    "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
   },
-   "Forest Magic": {
-    "Name": "Forest Magic",
+   "Life Magic": {
+    "Name": "Life Magic",
     "Type": "Spellcasting",
-    "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Spellcaster, this unit has an innate spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
+    "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
   },
   "Determination": {
     "Name": "Determination",
@@ -182,7 +182,7 @@
   "Deathwish": {
     "Name": "Deathwish",
     "Type": "Inherent",
-    "Description": "This unit cannot wear Armour or use a Shield."
+    "Description": "This unit cannot equip Armour, Shields, or Ranged Weapons."
   },
   "Spread Plague": {
     "Name": "Spread Plague",
@@ -242,7 +242,7 @@
   "Vampiric Magic": {
     "Name": "Vampiric Magic",
     "Type": "Spellcasting",
-    "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Spellcaster, this unit has an innate spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
+    "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
   },
   "Flying": {
     "Name": "Flying",
@@ -252,7 +252,7 @@
   "Plague Magic": {
     "Name": "Plague Magic",
     "Type": "Spellcasting",
-    "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Spellcaster, this unit has an innate spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
+    "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
   },
   "Big Hitter 1": {
     "Name": "Big Hitter 1",
