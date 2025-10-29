@@ -190,7 +190,7 @@
     "Description": "If this unit Incapacitates or is Incapacitated by an enemy in Melee, that unit must make a Morale Check. If they fail it, they immediately contract the plague. If this unit also has the Plague, the Morale Check is made with Disadvantage."
   },
    "Resist the Plague": {
-    "Name": "Spread Plague",
+    "Name": "Resist the Plague",
     "Type": "Inherent",
     "Description": "This unit makes Plague Progression Checks with Advantage. It can choose to treat and 'Recovers from the Plague' rolls as 'Nothing Happens'."
   },
