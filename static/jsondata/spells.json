@@ -5,6 +5,12 @@
     "Check": "7",
     "Description": "One allied Zombie or Skeleton that was Incapacitated after the end of your last turn immediately returns to the battle. Place the model within 5\" of the Necromancer. The model cannot be placed such that it is Engaged with an enemy."
   },
+  "Soul Rend": {
+    "Name": "Soul Rend", 
+    "School": "Necromantic Magic",
+    "Check": "-",
+    "Description": "Basic. Choose one unit within 15\". Make an Injury Roll against the target. If this spell Incapacitates the target, create a Zombie where it was Incapacitated. It is an ally to you and counts towards your Rout Threshold."
+  },
   "Control Dead": {
     "Name": "Control Dead", 
     "School": "Necromantic Magic",
@@ -65,6 +71,12 @@
     "Check": "99",
     "Description": "Bottom text."
   },
+   "Magic Arrow": {
+    "Name": "Magic Arrow", 
+    "School": "Life Magic",
+    "Check": "-",
+    "Description": "Basic. Choose one unit within 30\". Make an Injury Roll against the target."
+  },
   "Heal": {
     "Name": "Heal", 
     "School": "Divine Magic",
@@ -80,8 +92,14 @@
   "Lure": {
     "Name": "Lure",
     "School": "Vampiric Magic",
-    "Check": "15",
-    "Description": "Target an enemy you can see within 10\". You may immediatey make that unit move up to their base move speed. This may include drop down, jump and climbing checks. If this unit moves into base contact with any one of your units it counts as being charged by your unit."
+    "Check": "12",
+    "Description": "Basic. Target an enemy you can see within 15\". The target immediately moves towards the Caster by the most direct path, including by Jumping Down. If the target is able to reach the Caster, it is placed in base contact and the Caster is considered to have Engaged it."
+  },
+  "New Spell": {
+    "Name": "New Spell",
+    "School": "Vampiric Magic",
+    "Check": "99",
+    "Description": "Bottom text."
   },
   "Bat wings": {
     "Name": "Bat wings",
