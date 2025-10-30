@@ -9,7 +9,7 @@
     "Name": "Soul Rend", 
     "School": "Necromantic Magic",
     "Check": "-",
-    "Description": "Basic. Choose one unit within 15\". Make an Injury Roll against the target. If this spell Incapacitates the target, create a Zombie where it was Incapacitated. It is an ally to you and counts towards your Rout Threshold."
+    "Description": "Basic. Target one unit you can see within 15\". Make an Injury Roll against the target. If this spell Incapacitates the target, create a Zombie where it was Incapacitated. It is an ally to you and counts towards your Rout Threshold."
   },
   "Control Dead": {
     "Name": "Control Dead", 
@@ -33,7 +33,7 @@
     "Name": "Bless Weapon", 
     "School": "Divine Magic",
     "Check": "7",
-    "Description": "The caster gains Advantage on all Melee Checks. This unit must attempt to make a Morale Check at the start of its turn, otherwise the spell ends."
+    "Description": "Ongoing. The caster gains Advantage on all Melee Checks."
   },
   "Divine Fervour": {
     "Name": "Divine Fervour", 
@@ -75,7 +75,7 @@
     "Name": "Magic Arrow", 
     "School": "Life Magic",
     "Check": "-",
-    "Description": "Basic. Choose one unit within 30\". Make an Injury Roll against the target."
+    "Description": "Basic. Target one unit you can see within 30\". Make an Injury Roll against the target."
   },
   "Heal": {
     "Name": "Heal", 
@@ -93,7 +93,7 @@
     "Name": "Lure",
     "School": "Vampiric Magic",
     "Check": "12",
-    "Description": "Basic. Target an enemy you can see within 15\". The target immediately moves towards the Caster by the most direct path, including by Jumping Down. If the target is able to reach the Caster, it is placed in base contact and the Caster is considered to have Engaged it."
+    "Description": "Basic. Target one unit you can see within 15\". The target immediately moves towards the Caster by the most direct path, including by Jumping Down. If the target is able to reach the Caster, it is placed in base contact and the Caster is considered to have Engaged it."
   },
   "New Spell": {
     "Name": "New Spell",
@@ -105,7 +105,7 @@
     "Name": "Bat wings",
     "School": "Vampiric Magic",
     "Check": "12",
-    "Description": "Choose one unit within 5\", including the caster. On a success, that unit can fly in any direction as part of their move speed. At the start of each turn, the caster must make a Morale check to keep the spell going. Only one unit can be affected by this spell at a time."
+    "Description": "Ongoing. Choose one unit within 5\", including the caster. On a success, that unit gains the Flying skill until the spell ends."
   },
   "Vampiric Hex": {
     "Name": "Hex",
@@ -118,6 +118,12 @@
     "School": "Plague Magic",
     "Check": "13",
     "Description": "The spell has a range of 10\", hitting the first unit in its path. Make an Injury Check against all units within 2\" of the target. Treat the Cast Check result for this spell as the Injury Roll for the initial unit that was hit."
+  },
+  "Sewer Filth": {
+    "Name": "Swarm of Rats",
+    "School": "Plague Magic",
+    "Check": "10",
+    "Description": "Basic. Target one unit you can see within 20\". The target is Dazed."
   },
   "Plague Madness": {
     "Name": "Plague Madness",

@@ -147,12 +147,12 @@
   "Necromantic Magic": {
     "Name": "Necromantic Magic",
     "Type": "Spellcasting",
-    "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
+    "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate 'Basic' spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
   },
    "Life Magic": {
     "Name": "Life Magic",
     "Type": "Spellcasting",
-    "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
+    "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate 'Basic' spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
   },
   "Determination": {
     "Name": "Determination",
@@ -194,10 +194,15 @@
     "Type": "Inherent",
     "Description": "If this unit Incapacitates an enemy in Melee, that unit must make a Morale Check. If they fail it, they immediately contract the Plague. This unit is immune to the Plague. If this unit is Incapacitated in Melee, nothing happens."
   },
-   "Resist the Plague": {
-    "Name": "Resist the Plague",
+   "Spread Plague (Minor)": {
+    "Name": "Spread Plague (Minor)",
     "Type": "Inherent",
-    "Description": "This unit makes Plague Progression Checks with Advantage. It can choose to treat and 'Recovers from the Plague' rolls as 'Nothing Happens'."
+    "Description": "If this unit Incapacitates an enemy in Melee, that unit must make a Morale Check. If they fail it, they immediately contract the Plague. This unit is immune to the Plague. If this unit is Incapacitated in Melee, nothing happens."
+  },
+   "Pit Fighter": {
+    "Name": "Pit Fighter",
+    "Type": "Inherent",
+    "Description": "This unit treats Dazed results against it as Staggered instead."
   },
   "Ethereal": {
     "Name": "Ethereal",
@@ -247,7 +252,7 @@
   "Vampiric Magic": {
     "Name": "Vampiric Magic",
     "Type": "Spellcasting",
-    "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
+    "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate 'Basic' spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
   },
   "Flying": {
     "Name": "Flying",
@@ -257,7 +262,7 @@
   "Plague Magic": {
     "Name": "Plague Magic",
     "Type": "Spellcasting",
-    "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
+    "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate 'Basic' spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
   },
   "Big Hitter 1": {
     "Name": "Big Hitter 1",
