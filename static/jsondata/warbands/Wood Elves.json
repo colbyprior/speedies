@@ -207,8 +207,8 @@
     "Equipment": {
         "Wood Elf": {
             "Aliases": ["All"],
-            "Melee Weapons": ["Dagger", "Spear", "Sword", "Pike", "Shield"],
-            "Ranged Weapons": ["Bow", "Long Bow", "Elvish Bow"],
+            "Melee Weapons": ["Dagger", "Spear", "Sword", "Glaive", "Shield"],
+            "Ranged Weapons": ["Short Bow", "Bow", "Long Bow", "Elvish Bow"],
             "Armour": ["Light Armour"]
         }
     }

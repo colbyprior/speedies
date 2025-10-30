@@ -2,12 +2,15 @@
   "Melee Weapons": {
     "Axe (Sword)": "Sword",
     "Great Axe (Great Sword)": "Great Sword",
-    "Club (Hammer)": "Hammer",
+    "Club": "Hammer",
     "Great Club (Great Hammer)": "Great Hammer",
     "Mace (Hammer)": "Hammer",
     "Great Mace (Great Hammer)": "Great Hammer",
     "Pitchfork (Pike)": "Pike",
-    "Scythe (Great Sword)": "Great Sword"
+    "Scythe (Great Sword)": "Great Sword",
+	"Glaive": "Great Sword",
+	"Flail": "Great Hammer",
+	"Flail / Great Hammer": "Great Hammer"
   },
   "Ranged Weapons": {
 

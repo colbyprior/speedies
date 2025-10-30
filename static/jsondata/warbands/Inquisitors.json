@@ -215,7 +215,7 @@
         },
         "Fanatics": {
             "Aliases": ["Fanatic"],
-            "Melee Weapons": ["Great Sword", "Great Hammer", "Pike"],
+            "Melee Weapons": ["Great Sword", "Flail", "Pike"],
             "Ranged Weapons": [],
             "Armour": []
         },

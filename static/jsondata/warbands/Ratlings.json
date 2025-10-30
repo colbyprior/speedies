@@ -206,7 +206,7 @@
     "Equipment": {
         "Heroes": {
             "Aliases": ["Mastermind", "Ratlock", "Overseer", "Assassin"],
-            "Melee Weapons": ["Dagger", "Club (Hammer)", "Sword", "Spear", "Pike", "Fighting Claws"],
+            "Melee Weapons": ["Dagger", "Club (Hammer)", "Sword", "Spear", "Glaive", "Flail", "Fighting Claws"],
             "Ranged Weapons": ["Sling", "Throwing Stars", "Pistol"],
             "Armour": ["Light Armour"]
         },

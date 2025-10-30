@@ -20,7 +20,7 @@
       "Bow": { 
         "Name": "Bow", 
         "Range": "25\"",
-        "Effect": "Light", 
+        "Effect": "", 
         "Cost": "10", 
         "Slots": "1",
         "Injury": "0",
