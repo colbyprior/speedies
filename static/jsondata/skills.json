@@ -184,10 +184,15 @@
     "Type": "Inherent",
     "Description": "This unit cannot equip Armour, Shields, or Ranged Weapons."
   },
-  "Spread Plague": {
-    "Name": "Spread Plague",
+  "Spread Plague (Major)": {
+    "Name": "Spread Plague (Major)",
     "Type": "Inherent",
-    "Description": "If this unit Incapacitates or is Incapacitated by an enemy in Melee, that unit must make a Morale Check. If they fail it, they immediately contract the plague. If this unit also has the Plague, the Morale Check is made with Disadvantage."
+    "Description": "If this unit Incapacitates or is Incapacitated by an enemy in Melee, that unit must make a Morale Check. If they fail it, they immediately contract the Plague. This unit is immune to the Plague."
+  },
+   "Spread Plague (Minor)": {
+    "Name": "Spread Plague (Minor)",
+    "Type": "Inherent",
+    "Description": "If this unit Incapacitates an enemy in Melee, that unit must make a Morale Check. If they fail it, they immediately contract the Plague. This unit is immune to the Plague. If this unit is Incapacitated in Melee, nothing happens."
   },
    "Resist the Plague": {
     "Name": "Resist the Plague",
@@ -207,7 +212,7 @@
   "Undead": {
     "Name": "Undead",
     "Type": "Inherent",
-    "Description": "This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to disease (including the Plague)."
+    "Description": "This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to the Plague."
   },
    "Follower": {
     "Name": "Follower",
@@ -282,7 +287,7 @@
   "Large": {
     "Name": "Large",
     "Type": "Inherent",
-    "Description": "This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It may be targeted by ranged attacks even if they aren't the closest model to the shooter."
+    "Description": "This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It may be targeted by ranged attacks even if they aren't the closest model to the shooter. This unit is immune to the Plague."
   },
   "Free Skill": {
     "Name": "Free Skill",

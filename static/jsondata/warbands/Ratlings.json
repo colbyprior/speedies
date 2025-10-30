@@ -105,17 +105,16 @@
             "Move": "8",
             "Piercing": "0",
             "Injury": "0",
-            "Melee": "16",
-            "Ranged": "16",
+            "Melee": "14",
+            "Ranged": "14",
             "Defense": "-",
             "Wounds": "1",
             "Agility": "8",
             "Attacks": "1",
             "Morale": "16",
-            "Cost": 25,
+            "Cost": 35,
             "Skills": [
-			"Spread Plague",
-			"Resist the Plague"
+			"Spread Plague (Minor)"
 			]
         },
         {
@@ -133,8 +132,7 @@
             "Morale": "18",
             "Cost": 10,
             "Skills": [
-                "Animal",
-				"Spread Plague"
+                "Animal"
             ]
         },
         {
