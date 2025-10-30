@@ -65,11 +65,11 @@
     "Check": "11",
     "Description": "Choose one unit within 20\". That unit cannot Engage, Move, or Run until the start of your next turn."
   },
-   "Wrath of the Forest": {
-    "Name": "Wrath of the Forest", 
+   "Earthquake": {
+    "Name": "Earthquake", 
     "School": "Life Magic",
-    "Check": "99",
-    "Description": "Bottom text."
+    "Check": "14",
+    "Description": "All units within 10\" must make an Agility check or become Dazed. This does not reduced a unit's Wounds."
   },
    "Magic Arrow": {
     "Name": "Magic Arrow", 
