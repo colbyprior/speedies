@@ -118,7 +118,7 @@
   },
   "Torch": {
     "Name": "Torch",
-    "Effect": "This unit does not need to make Out-Of-Sight Rolls when attempting to Engage.",
+    "Effect": "This unit have Advantage on Out-Of-Sight Rolls when attempting to Engage.",
     "Cost": "10",
     "Injury": "0",
     "Piercing": "0",

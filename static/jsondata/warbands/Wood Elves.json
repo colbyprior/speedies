@@ -112,8 +112,10 @@
             "Agility": "5",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 60,
-            "Skills": []
+            "Cost": 65,
+            "Skills": [
+				"Mark Target"
+			]
         },
         {
             "Name": "Woodland Creature",

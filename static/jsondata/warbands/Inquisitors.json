@@ -102,7 +102,7 @@
             "Morale": "10",
             "Cost": 50,
             "Skills": [
-                "Fearless",
+                "Fear",
                 "Can't promote"
             ]
         },

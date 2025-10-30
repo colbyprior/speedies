@@ -343,5 +343,10 @@
     "Name": "Hatred",
     "Type": "Inherent",
     "Description": "This unit hates a specific unit, unit type, or warband. This unit makes Melee Checks with Advantage against enemies it hates."
-  }
+  },
+  "Mark Target": {
+    "Name": "Mark Target",
+    "Type": "Inherent",
+    "Description": "Once per Ranged Phase, instead of making a Ranged Attack, this unit may instead Mark an enemy unit within 10\" (and within line-of-sight) until the start of the next turn. A unit that is Marked can be targeted by Ranged Attacks even when the unit is Engaged."
+  },
 }
