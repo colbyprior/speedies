@@ -4,8 +4,8 @@ sidebar_label: Dwarves
 # Dwarves
 These chonkers go bonkers.
 
-| Max Units | 12 |
-| ---- | ---- |
+| Max Units  | 12              |
+| ---------- | --------------- |
 | Play Style | Rough and Tough |
 
 ## Special Rules
