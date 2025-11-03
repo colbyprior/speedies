@@ -176,7 +176,6 @@
             "Def": "X",
             "Agi": "",
             "Mrl": "X",
-            "Special": "X"
         },
         "Engineer": {
             "Mel": "",
@@ -184,7 +183,6 @@
             "Def": "X",
             "Agi": "",
             "Mrl": "",
-            "Special": "X"
         },
         "Armourer": {
             "Mel": "X",
@@ -192,7 +190,6 @@
             "Def": "X",
             "Agi": "",
             "Mrl": "",
-            "Special": "X"
         },
         "Veteran": {
             "Mel": "X",
@@ -200,7 +197,6 @@
             "Def": "X",
             "Agi": "",
             "Mrl": "",
-            "Special": "X"
         }
     },
     "Equipment": {
@@ -213,7 +209,7 @@
         "Gunner": {
             "Aliases": ["Gunner", "Engineer"],
             "Melee Weapons": ["Dagger", "Sword", "Hammer", "Shield"],
-            "Ranged Weapons": ["Crossbow", "Pistol", "Rifle"],
+            "Ranged Weapons": ["Crossbow", "Pistol", "Rifle", "Blunderbuss"],
             "Armour": ["Light Armour", "Heavy Armour"]
         }
     }

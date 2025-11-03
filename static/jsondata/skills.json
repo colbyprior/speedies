@@ -337,17 +337,17 @@
   "Fixed Equipment (Scythe)": {
     "Name": "Fixed Equipment (Scythe)",
     "Type": "Inherent",
-    "Description": "This unit has fixed equipment that cannot be lost. The equipment modifers are included in the unit's stats."
+    "Description": "This unit has fixed equipment that cannot be lost. The equipment modifers are included in the unit's stats and cost."
   },
   "Fixed Equipment (Farm Tools)": {
     "Name": "Fixed Equipment (Farm Tools)",
     "Type": "Inherent",
-    "Description": "This unit has fixed equipment that cannot be lost or changed. The equipment modifers are included in the unit's stats."
+    "Description": "This unit has fixed equipment that cannot be lost or changed. The equipment modifers are included in the unit's stats and cost."
   },
   "Fixed Equipment (Holy Standard)": {
     "Name": "Fixed Equipment (Holy Standard)",
     "Type": "Inherent",
-    "Description": "This unit has fixed equipment that cannot be lost or changed. The equipment modifers are included in the unit's stats."
+    "Description": "This unit has fixed equipment that cannot be lost or changed. The equipment modifers are included in the unit's stats and cost."
   },
   "Hatred": {
     "Name": "Hatred",
