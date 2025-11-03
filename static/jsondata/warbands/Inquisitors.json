@@ -40,7 +40,7 @@
             "Wounds": "1",
             "Agility": "10",
             "Attacks": "1",
-            "Morale": "9",
+            "Morale": "10",
             "Cost": 60,
             "Skills": [
                 "Divine Magic"
@@ -59,7 +59,7 @@
             "Wounds": "1",
             "Agility": "10",
             "Attacks": "1",
-            "Morale": "9",
+            "Morale": "10",
             "Cost": 50,
             "Skills": [
                 "Inquisitor"
@@ -78,7 +78,7 @@
             "Wounds": "1",
             "Agility": "10",
             "Attacks": "1",
-            "Morale": "9",
+            "Morale": "10",
             "Cost": 50,
             "Skills": [
                 "The Rapture is Nigh",
@@ -102,8 +102,7 @@
             "Morale": "10",
             "Cost": 50,
             "Skills": [
-                "Fear",
-                "Can't promote"
+                "Fear"
             ]
         },
         {
@@ -205,7 +204,7 @@
         },
         "Priest": {
             "Aliases": ["Priest"],
-            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
+            "Melee Weapons": ["Hammer", "Flail / Great Hammer", "Shield"],
             "Ranged Weapons": [],
             "Armour": ["Light Armour", "Heavy Armour"]
         },
@@ -217,7 +216,7 @@
         },
         "Zealots": {
             "Aliases": ["Zealot"],
-            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Torch", "Great Hammer", "Great Sword", "Pike"],
+            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Torch", "Shield"],
             "Ranged Weapons": ["Crossbow"],
             "Armour": ["Light Armour"]
         }

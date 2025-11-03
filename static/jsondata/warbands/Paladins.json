@@ -3,8 +3,6 @@
     "Max Units": "15",
     "Play Style": "Defensive",
     "Preamble": "An order of paladins and others that seek to advance a holy agenda.",
-    "Special Rules": {
-        "Example special rule": "Paladins don't actually have any but this is a test."
     },
     "Heroes": [
         {
@@ -202,7 +200,7 @@
     "Equipment": {
         "Paladins": {
             "Aliases": ["Justicar", "Paladin", "Cleric", "Initiate", "Squire", "Cavalier"],
-            "Melee Weapons": ["Hammer", "Divine Hammer", "Divine Great Hammer", "Flail / Great Hammer", "Shield"],
+            "Melee Weapons": ["Hammer", "Flail / Great Hammer", "Divine Hammer", "Divine Great Hammer", "Sword", "Great Sword", "Shield"],
             "Ranged Weapons": ["Sling"],
             "Armour": ["Light Armour", "Heavy Armour"]
         }

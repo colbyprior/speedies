@@ -101,7 +101,7 @@
         },
         {
             "Name": "Scout",
-            "Type Cap": "5",
+            "Type Cap": "2",
             "Move": "7",
             "Piercing": "0",
             "Injury": "0",

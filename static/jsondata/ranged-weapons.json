@@ -8,6 +8,15 @@
         "Injury": "2",
         "Piercing": "0"
       }, 
+      "Hand Crossbow": { 
+        "Name": "Hand Crossbow", 
+        "Range": "10\"",
+        "Effect": "Long Reload, Close Quarters, Dual Wield, Light",
+        "Cost": "15",
+        "Slots": "1",
+        "Injury": "2",
+        "Piercing": "0"
+      }, 
       "Pistol": { 
         "Name": "Pistol", 
         "Range": "10\"",
@@ -73,7 +82,7 @@
       },
       "Throwing Stars": {
         "Name": "Throwing Stars",
-        "Range": "15\"",
+        "Range": "10\"",
         "Effect": "Light, Close Quarters",
         "Cost": "10",
         "Slots": "1",

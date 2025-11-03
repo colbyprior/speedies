@@ -79,6 +79,7 @@
             "Morale": "13",
             "Cost": 55,
             "Skills": [
+				"Vanguard"
             ]
         }
     ],
@@ -101,7 +102,7 @@
         },
         {
             "Name": "Plague Host",
-            "Type Cap": "",
+            "Type Cap": "2",
             "Move": "8",
             "Piercing": "0",
             "Injury": "0",
@@ -201,7 +202,7 @@
         "Heroes": {
             "Aliases": ["Mastermind", "Ratlock", "Enforcer", "Assassin"],
             "Melee Weapons": ["Dagger", "Club (Hammer)", "Sword", "Spear", "Glaive", "Flail", "Fighting Claws"],
-            "Ranged Weapons": ["Sling", "Throwing Stars", "Pistol"],
+            "Ranged Weapons": ["Throwing Stars", "Pistol"],
             "Armour": ["Light Armour"]
         },
         "Rat Underlings": {

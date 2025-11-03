@@ -113,7 +113,7 @@
             "Skills": []
         },
         {
-            "Name": "Swordsman",
+            "Name": "Man-at-Arms",
             "Type Cap": "3",
             "Move": "6",
             "Piercing": "0",
@@ -195,7 +195,7 @@
             "Armour": ["Light Armour", "Heavy Armour"]
         },
         "Warriors & Swordsman": {
-            "Aliases": ["Warrior", "Swordsman"],
+            "Aliases": ["Warrior", "Man-at-Arms"],
             "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
             "Ranged Weapons": ["Short Bow", "Bow", "Crossbow"],
             "Armour": ["Light Armour", "Heavy Armour"]

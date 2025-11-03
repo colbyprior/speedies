@@ -25,7 +25,8 @@
             "Skills": [
                 "Leader",
                 "Undead",
-				"Fear"
+				"Fear",
+				"Vampire"
             ]
         },
         {
@@ -46,7 +47,8 @@
             "Skills": [
 				"Vampiric Magic",
                 "Undead",
-				"Fear"
+				"Fear",
+				"Vampire"
             ]
         },
 		{
@@ -67,7 +69,8 @@
             "Skills": [
                 "No Equipment",
                 "Undead",
-				"Fear"
+				"Fear",
+				"Vampire"
             ]
         },
         {
@@ -206,7 +209,7 @@
     "Equipment": {
         "Vampires": {
             "Aliases": ["Vampire Noble", "Vampire Seductor", "Vampire Spawn"],
-            "Melee Weapons": ["Dagger", "Great Hammer", "Great Sword", "Pike"],
+            "Melee Weapons": ["Dagger", "Sword", "Great Sword"],
             "Ranged Weapons": [],
             "Armour": ["Light Armour", "Heavy Armour"]
         },

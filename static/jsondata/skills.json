@@ -302,7 +302,7 @@
   "Inquisitor": {
     "Name": "Inquisitor",
     "Type": "Inquisitors",
-    "Description": "This unit gets a +2 Injury modifier against all enemy heroes for melee attacks."
+    "Description": "This unit gets a +2 Pierce modifier against all enemy heroes for melee attacks."
   },
   "Can't promote": {
     "Name": "Can't promote",
@@ -359,4 +359,14 @@
     "Type": "Inherent",
     "Description": "Once per Ranged Phase, instead of making a Ranged Attack, this unit may instead Mark an enemy unit within 10\" (and within line-of-sight) until the start of the next turn. A unit that is Marked can be targeted by Ranged Attacks even when the unit is Engaged."
   },
+  "Vampire": {
+    "Name": "Vampire",
+    "Type": "Inherent",
+    "Description": "If this unit is Dazed and there is a non-Undead, non-Animal ally within 2\" during your Recovery Step, you may immediately Incapacitate that ally to remove Dazed from this unit without becoming Staggered."
+  },
+  "Vanguard": {
+    "Name": "Vanguard",
+    "Type": "Inherent",
+    "Description": "After unit deployment, but before any player takes their first turn, this unit may perform a Run. If multiple players have units with this skill, resolve it in turn order. This unit may never pick up Treasure tokens."
+  }
 }
