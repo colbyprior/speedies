@@ -176,7 +176,6 @@
             "Def": "X",
             "Agi": "",
             "Mrl": "X",
-            "Special": "X"
         },
         "Paladin": {
             "Mel": "X",
@@ -184,7 +183,6 @@
             "Def": "X",
             "Agi": "",
             "Mrl": "X",
-            "Special": "X"
         },
         "Cleric": {
             "Mel": "",
@@ -192,7 +190,6 @@
             "Def": "X",
             "Agi": "",
             "Mrl": "X",
-            "Special": "X"
         },
         "Standard Bearer": {
             "Mel": "",
@@ -200,7 +197,6 @@
             "Def": "X",
             "Agi": "",
             "Mrl": "X",
-            "Special": "X"
         }
     },
     "Equipment": {

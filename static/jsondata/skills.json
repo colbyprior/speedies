@@ -247,7 +247,7 @@
   "Holy Standard": {
     "Name": "Holy Standard",
     "Type": "Inherent",
-    "Description": "Allied units within 6\" of this unit can roll Morale Checks with Advantage. Rout Checks cannot gain Advantage in this way."
+    "Description": "Allied units within 5\" of this unit can roll Morale Checks with Advantage. Rout Checks cannot gain Advantage in this way."
   },
   "Vampiric Magic": {
     "Name": "Vampiric Magic",
@@ -269,10 +269,10 @@
     "Type": "Inherent",
     "Description": "This unit gets +2 Inj and +2 Piercing for melee attacks."
   },
-  "Stupid": {
-    "Name": "Stupid",
+  "Cowardly": {
+    "Name": "Cowardly",
     "Type": "Inherent",
-    "Description": "If this unit is not within 6\" of an allied hero roll morale. If you fail you mat not move or attack on your turn."
+    "Description": "If this unit is not within 5\" of an allied hero at the start of its turn, it cannot act during the Engage, Move, Cast, and Ranged phases. It can act in Melee Combat as normal."
   },
   "Bloodthirsty": {
     "Name": "Bloodthirsty",

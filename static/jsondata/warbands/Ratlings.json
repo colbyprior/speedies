@@ -46,7 +46,7 @@
             ]
         },
         {
-            "Name": "Overseer",
+            "Name": "Enforcer",
             "Type": "Hero",
             "Type Cap": "",
             "Move": "8",
@@ -173,24 +173,21 @@
             "Rng": "X",
             "Def": "",
             "Agi": "X",
-            "Mrl": "",
-            "Special": "X"
+            "Mrl": "X",
         },
         "Ratlock": {
-            "Mel": "",
-            "Rng": "",
-            "Def": "",
-            "Agi": "",
-            "Mrl": "X",
-            "Special": "X"
-        },
-        "Overseer": {
             "Mel": "X",
             "Rng": "",
             "Def": "",
             "Agi": "X",
             "Mrl": "",
-            "Special": "X"
+        },
+        "Enforcer": {
+            "Mel": "X",
+            "Rng": "X",
+            "Def": "",
+            "Agi": "X",
+            "Mrl": "",
         },
         "Assassin": {
             "Mel": "X",
@@ -198,12 +195,11 @@
             "Def": "",
             "Agi": "X",
             "Mrl": "",
-            "Special": "X"
         }
     },
     "Equipment": {
         "Heroes": {
-            "Aliases": ["Mastermind", "Ratlock", "Overseer", "Assassin"],
+            "Aliases": ["Mastermind", "Ratlock", "Enforcer", "Assassin"],
             "Melee Weapons": ["Dagger", "Club (Hammer)", "Sword", "Spear", "Glaive", "Flail", "Fighting Claws"],
             "Ranged Weapons": ["Sling", "Throwing Stars", "Pistol"],
             "Armour": ["Light Armour"]

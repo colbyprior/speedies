@@ -46,11 +46,11 @@
       },  
       "Blunderbuss": { 
         "Name": "Blunderbuss", 
-        "Range": "-",
-        "Effect": "Massive Shot, Fire Once, Blackpowder",
-        "Cost": "25", 
+        "Range": "5\"",
+        "Effect": "Long Reload, Buckshot, Blackpowder",
+        "Cost": "30", 
         "Slots": "1",
-        "Injury": "2",
+        "Injury": "-2",
         "Piercing": "0"
       },
       "Sling": { 

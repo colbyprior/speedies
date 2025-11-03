@@ -164,31 +164,27 @@
             "Def": "X",
             "Agi": "",
             "Mrl": "X",
-            "Special": "X"
         },
         "Champion": {
             "Mel": "X",
-            "Rng": "",
+            "Rng": "X",
             "Def": "X",
             "Agi": "",
             "Mrl": "",
-            "Special": "X"
         },
         "Sniper": {
             "Mel": "",
             "Rng": "X",
             "Def": "",
             "Agi": "X",
-            "Mrl": "X",
-            "Special": "X"
+            "Mrl": "",
         },
         "Knight": {
             "Mel": "X",
             "Rng": "",
             "Def": "X",
             "Agi": "",
-            "Mrl": "",
-            "Special": "X"
+            "Mrl": "X",
         }
     },
     "Equipment": {

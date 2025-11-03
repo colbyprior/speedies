@@ -179,7 +179,6 @@
             "Def": "X",
             "Agi": "X",
             "Mrl": "X",
-            "Special": "X"
         },
         "Mage": {
             "Mel": "",
@@ -187,7 +186,6 @@
             "Def": "",
             "Agi": "X",
             "Mrl": "",
-            "Special": "X"
         },
         "Honour Guard": {
             "Mel": "X",
@@ -195,7 +193,6 @@
             "Def": "",
             "Agi": "X",
             "Mrl": "",
-            "Special": "X"
         },
         "Ranger": {
             "Mel": "",
@@ -203,7 +200,6 @@
             "Def": "",
             "Agi": "X",
             "Mrl": "",
-            "Special": "X"
         }
     },
     "Equipment": {

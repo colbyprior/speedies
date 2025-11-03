@@ -180,7 +180,6 @@
             "Def": "X",
             "Agi": "X",
             "Mrl": "X",
-            "Special": "X"
         },
         "Vampire Seductor": {
             "Mel": "X",
@@ -188,7 +187,6 @@
             "Def": "",
             "Agi": "X",
             "Mrl": "X",
-            "Special": "X"
         },
         "Vampire Spawn": {
             "Mel": "X",
@@ -196,7 +194,6 @@
             "Def": "",
             "Agi": "X",
             "Mrl": "",
-            "Special": "X"
         },
         "Nosferatu": {
             "Mel": "X",
@@ -204,7 +201,6 @@
             "Def": "X",
             "Agi": "X",
             "Mrl": "",
-            "Special": "X"
         }
     },
     "Equipment": {

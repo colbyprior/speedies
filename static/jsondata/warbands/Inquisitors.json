@@ -173,7 +173,6 @@
             "Def": "X",
             "Agi": "X",
             "Mrl": "X",
-            "Special": "X"
         },
         "Priest": {
             "Mel": "",
@@ -181,7 +180,6 @@
             "Def": "X",
             "Agi": "",
             "Mrl": "X",
-            "Special": "X"
         },
         "Inquisitor": {
             "Mel": "X",
@@ -189,7 +187,6 @@
             "Def": "",
             "Agi": "",
             "Mrl": "",
-            "Special": "X"
         },
         "Doomsayer": {
             "Mel": "X",
@@ -197,7 +194,6 @@
             "Def": "",
             "Agi": "",
             "Mrl": "X",
-            "Special": "X"
         }
     },
     "Equipment": {

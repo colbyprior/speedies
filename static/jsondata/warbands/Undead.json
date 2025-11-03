@@ -188,7 +188,6 @@
             "Def": "",
             "Agi": "",
             "Mrl": "X",
-            "Special": "X"
         },
         "Plague Cultist": {
             "Mel": "X",
@@ -196,15 +195,13 @@
             "Def": "",
             "Agi": "",
             "Mrl": "X",
-            "Special": "X"
         },
         "Death Knight": {
             "Mel": "X",
-            "Rng": "",
+            "Rng": "X",
             "Def": "X",
             "Agi": "",
             "Mrl": "",
-            "Special": "X"
         },
         "Reaper": {
             "Mel": "X",
@@ -212,7 +209,6 @@
             "Def": "",
             "Agi": "X",
             "Mrl": "",
-            "Special": "X"
         }
     },
     "Equipment": {

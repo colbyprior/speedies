@@ -139,7 +139,6 @@
             "Def": "X",
             "Agi": "",
             "Mrl": "X",
-            "Special": "X"
         },
         "Acolyte": {
             "Mel": "",
@@ -147,7 +146,6 @@
             "Def": "",
             "Agi": "",
             "Mrl": "X",
-            "Special": "X"
         },
         "Brute": {
             "Mel": "X",
@@ -155,7 +153,6 @@
             "Def": "X",
             "Agi": "",
             "Mrl": "",
-            "Special": "X"
         },
         "Seeker": {
             "Mel": "X",
@@ -163,7 +160,6 @@
             "Def": "",
             "Agi": "X",
             "Mrl": "",
-            "Special": "X"
         }
     },
     "Equipment": {
