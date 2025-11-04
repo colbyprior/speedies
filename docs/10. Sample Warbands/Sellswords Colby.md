@@ -3,6 +3,9 @@ sidebar_label: Sellswords
 ---
 # Sellswords
 
+:::danger[Actively Being Updated]
+This section will change prior to the start of alpha playtesting.
+:::
 
 | Max Units | 15 |
 | ---- | ---- |

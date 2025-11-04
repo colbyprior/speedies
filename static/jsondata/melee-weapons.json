@@ -19,7 +19,7 @@
   },
   "Spear": {
     "Name": "Spear",
-    "Effect": "A spear may not be used with dual-wielding melee weapons but may be used with a shield.",
+    "Effect": "Cannot be dual-wielded, but may be used with a shield.",
     "Cost": "5",
     "Injury": "0",
     "Piercing": "0",
@@ -118,7 +118,7 @@
   },
   "Torch": {
     "Name": "Torch",
-    "Effect": "This unit have Advantage on Out-Of-Sight Rolls when attempting to Engage.",
+    "Effect": "This unit has Advantage on Out-Of-Sight Rolls when attempting to Engage.",
     "Cost": "10",
     "Injury": "0",
     "Piercing": "0",

@@ -3,6 +3,10 @@ sidebar_label: Inquisitors
 ---
 # Inquisitors vs Paladins 500g
 
+:::danger[Actively Being Updated]
+This section will change prior to the start of alpha playtesting.
+:::
+
 ## Inquisitors
 
 

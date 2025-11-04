@@ -2,6 +2,10 @@
 sidebar_position: 1
 ---
 # Dwarves vs Skaven with Rat Monster 500g
+
+:::danger[Actively Being Updated]
+This section will change prior to the start of alpha playtesting.
+:::
 ## Skaven 500g
 
 | Units       | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills                                                                                              | No  | Equipment |

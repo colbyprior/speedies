@@ -2,6 +2,10 @@
 sidebar_position: 1
 ---
 # Undead vs Skaven 700g
+
+:::danger[Actively Being Updated]
+This section will change prior to the start of alpha playtesting.
+:::
 ## Undead 700g
 
 | Units        | Mov | Atk | Wnd | Mel | Rng | Def | Agi | Mrl | Skills                                                                                 | #   | Equipment                        |
