@@ -28,7 +28,7 @@
         {
             "Name": "Champion",
             "Type": "Hero",
-            "Type Cap": "",
+            "Type Cap": "-",
             "Move": "6",
             "Piercing": "0",
             "Injury": "0",
@@ -82,7 +82,7 @@
     "Henchmen": [
         {
             "Name": "Warrior",
-            "Type Cap": "",
+            "Type Cap": "-",
             "Move": "6",
             "Piercing": "0",
             "Injury": "0",
@@ -137,7 +137,7 @@
             "Piercing": "0",
             "Injury": "0",
             "Melee": "14",
-            "Ranged": "14",
+            "Ranged": "-",
             "Defense": "18",
             "Wounds": "1",
             "Agility": "10",
@@ -180,7 +180,7 @@
             "Mrl": "",
         },
         "Knight": {
-            "Mel": "X",
+            "Mel": "",
             "Rng": "",
             "Def": "X",
             "Agi": "",

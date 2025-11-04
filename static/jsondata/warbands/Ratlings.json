@@ -34,7 +34,7 @@
             "Piercing": "0",
             "Injury": "0",
             "Melee": "14",
-            "Ranged": "14",
+            "Ranged": "-",
             "Defense": "18",
             "Wounds": "1",
             "Agility": "8",
@@ -48,7 +48,7 @@
         {
             "Name": "Enforcer",
             "Type": "Hero",
-            "Type Cap": "",
+            "Type Cap": "-",
             "Move": "8",
             "Piercing": "0",
             "Injury": "0",
@@ -66,7 +66,7 @@
         {
             "Name": "Assassin",
             "Type": "Hero",
-            "Type Cap": "",
+            "Type Cap": "-",
             "Move": "8",
             "Piercing": "0",
             "Injury": "0",
@@ -86,7 +86,7 @@
     "Henchmen": [
         {
             "Name": "Underrat",
-            "Type Cap": "",
+            "Type Cap": "-",
             "Move": "8",
             "Piercing": "0",
             "Injury": "0",

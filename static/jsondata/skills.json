@@ -137,7 +137,7 @@
   "Mounted": {
     "Name": "Mounted",
     "Type": "Inherent",
-    "Description": "This unit is a boss dog that rides a mount."
+    "Description": "This unit cannot use ladders or make Climb Checks. It gains +3 Mov and +1 Wnd, which are already reflected in its stat block."
   },
   "Divine Magic": {
     "Name": "Divine Magic",

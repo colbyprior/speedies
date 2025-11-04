@@ -15,7 +15,7 @@
             "Piercing": "0",
             "Injury": "0",
             "Melee": "14",
-            "Ranged": "14",
+            "Ranged": "-",
             "Defense": "18",
             "Wounds": "1",
             "Agility": "10",
@@ -49,7 +49,7 @@
         {
             "Name": "Death Knight",
             "Type": "Hero",
-            "Type Cap": "-",
+            "Type Cap": "2",
             "Move": "7",
             "Piercing": "0",
             "Injury": "0",
@@ -69,7 +69,7 @@
         {
             "Name": "Reaper",
             "Type": "Hero",
-            "Type Cap": "-",
+            "Type Cap": "2",
             "Move": "9",
             "Piercing": "3",
             "Injury": "3",

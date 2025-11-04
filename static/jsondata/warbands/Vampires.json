@@ -76,7 +76,7 @@
         {
             "Name": "Vampire Spawn",
             "Type": "Hero",
-            "Type Cap": "",
+            "Type Cap": "-",
             "Move": "8",
             "Piercing": "0",
             "Injury": "0",
@@ -97,7 +97,7 @@
     "Henchmen": [
         {
             "Name": "Thrall",
-            "Type Cap": "",
+            "Type Cap": "-",
             "Move": "6",
             "Piercing": "0",
             "Injury": "0",
@@ -113,12 +113,12 @@
         },
         {
             "Name": "Ghoul",
-            "Type Cap": "",
+            "Type Cap": "-",
             "Move": "6",
             "Piercing": "0",
             "Injury": "0",
             "Melee": "14",
-            "Ranged": "16",
+            "Ranged": "-",
             "Defense": "16",
             "Wounds": "1",
             "Agility": "10",
@@ -133,7 +133,7 @@
         },
         {
             "Name": "Dire Wolf",
-            "Type Cap": "4",
+            "Type Cap": "3",
             "Move": "8",
             "Piercing": "0",
             "Injury": "0",
@@ -152,7 +152,7 @@
         },
         {
             "Name": "Giant Bat",
-            "Type Cap": "4",
+            "Type Cap": "3",
             "Move": "8",
             "Piercing": "0",
             "Injury": "0",
