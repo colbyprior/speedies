@@ -220,7 +220,7 @@
         },
         "Cultist": {
             "Aliases": ["Necromancer", "Plague Cultist"],
-            "Melee Weapons": ["Dagger", "Spear", "Sword", "Hammer"],
+            "Melee Weapons": ["Dagger", "Spear / Staff", "Sword", "Hammer"],
             "Ranged Weapons": ["Short Bow", "Bow"],
             "Armour": ["Light Armour"]
         }
