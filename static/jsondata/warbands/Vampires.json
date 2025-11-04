@@ -4,7 +4,7 @@
     "Play Style": "Powerful leader with minions",
     "Preamble": "This team sucks... your blood!",
     "Special Rules": {
-        "Enthrall": "If any enemy Hero dies during the post-game Injury rolls, they transform into a Vampire Spawn and join your warband. This effect can only trigger if you have 5 or less Heroes in your warband."
+        "Enthrall": "If any enemy Hero you just fought dies from a Scar or Plague Roll, they transform into a Vampire Spawn and join your warband. This effect can only trigger if you have 5 or less Heroes in your warband (after completing your own Scar and Plague Rolls)."
     },
     "Heroes": [
         {

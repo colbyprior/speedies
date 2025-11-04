@@ -4,7 +4,7 @@
     "Play Style": "Slow and Skelly",
     "Preamble": "Let me off this wild ride Mr. Bones",
     "Special Rules": {
-        "Undead Horde": "If any enemy unit dies during the post-game Injury rolls, they are raised and added to your warband as a Zombie. If this would take you past the maximum number of units for your warband (after completing your own post-game Injury rolls), the Zombie is not added to your warband."
+        "Undead Horde": "If any enemy unit you just fought dies from a Scar or Plague Roll, they are raised and added to your warband as a Zombie. If this would take you past the maximum number of units for your warband (after completing your own Scar and Plague Rolls), the Zombie is not added to your warband."
     },
     "Heroes": [
         {
