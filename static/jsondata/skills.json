@@ -162,7 +162,7 @@
   "Ki Strike": {
     "Name": "Ki Strike",
     "Type": "Inherent",
-    "Description": "When fighting Unarmed, targets roll their Defense Check with Disadvantage."
+    "Description": "When fighting Unarmed, targets roll their Defence Check with Disadvantage."
   },
   "Weaponsmith": {
     "Name": "Weaponsmith",
@@ -207,7 +207,7 @@
   "Ethereal": {
     "Name": "Ethereal",
     "Type": "Inherent",
-    "Description": "This unit may not have its Defense reduced by equipment."
+    "Description": "This unit may move through terrain and other units as if they weren't there, but may not ends its movement inside of terrain or other units. It must still make Out-of-Sight Rolls as normal and must move through terrain or units when Engaging if this will make the path to its target shorter. It may be intercepted by enemies as normal."
   },
   "Advanced Necromancy": {
     "Name": "Advanced Necromancy",

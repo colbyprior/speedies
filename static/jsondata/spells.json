@@ -141,7 +141,7 @@
     "Name": "Curse of rat",
     "School": "Plague Magic",
     "Check": "7",
-    "Description": "The spell has a range of 10\" and affects a single model within range. The target must re-roll any successful defense rolls and to melee rolls until the start of your next turn."
+    "Description": "The spell has a range of 10\" and affects a single model within range. The target must re-roll any successful defence rolls and to melee rolls until the start of your next turn."
   },
   "Writheform": {
     "Name": "Writheform",

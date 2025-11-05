@@ -1,7 +1,7 @@
 {
   "Blackpowder": "Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately make an Injury Roll against yourself (applying the weapon's Injury modifier). You may no longer use the weapon for the rest of the game (resolving any remaining targets from the current attack first). After the game, it is repaired at no cost. If you have Advantage and either dice rolls a 1 you still misfire. If the higher roll still hits the enemy, resolve it as normal.",
   "Long Reload": "You may not use this weapon if it was fired in the previous turn.",
-  "Close Quarters": "Your target does not receive a bonus to their Defense if you Moved before Shooting this turn.",
+  "Close Quarters": "Your target does not receive a bonus to their Defence if you Moved before Shooting this turn.",
   "Dual Wield": "You may purchase this weapon up to two times and wield both at once without using an additional weapon slot. If you do, you have Advantage on attacks with the weapon.",
   "Light": "This weapon may be used with a Shield.",
   "Buckshot": "Select a point within line-of-sight and within this weapon's range. Target ALL units within 1.5\" of this point. If any unit Engaged in Melee Combat is targeted, ALL units within that Melee Combat are targeted. Resolve each target separately, following the usual rules for Ranged Attacks. This weapon ignores cover."
