@@ -3,19 +3,19 @@
     "Name": "Raise Dead", 
     "School": "Necromantic Magic",
     "Check": "7",
-    "Description": "One allied Zombie or Skeleton that was Incapacitated after the end of your last turn immediately returns to the battle. Place the model within 5\" of the Necromancer. The model cannot be placed such that it is Engaged with an enemy."
+    "Description": "One allied Zombie or Skeleton that was Incapacitated after the end of your last turn immediately returns to the battle, no longer counting towards your Rout Threshold. Place the model within 5\" of the Caster. The model cannot be placed such that it is Engaged with an enemy."
   },
   "Soul Rend": {
     "Name": "Soul Rend", 
     "School": "Necromantic Magic",
     "Check": "12",
-    "Description": "Basic. Cast Attack. Target one unit you can see within 15\" and perform a Cast Attack against them. If this spell Incapacitates the target, create a Zombie where it was Incapacitated. It is an ally to you and counts towards your Rout Threshold."
+    "Description": "Basic. Cast Attack. Target one unit you can see within 15\" and perform a Cast Attack against them. If this spell Incapacitates the target, create a Zombie where it was Incapacitated. It is an ally to you and will count towards your Rout Threshold."
   },
   "Control Dead": {
     "Name": "Control Dead", 
     "School": "Necromantic Magic",
     "Check": "10",
-    "Description": "Choose a point within 5\" of the caster. Any allied Zombies or Skeletons within 2\" of that point may immediately move again up to their Move. If this moves them into base contact with an enemy unit, they count as Engaging. They take Agility Checks as normal."
+    "Description": "Choose a point within 5\" of the caster. Any allied Zombies or Skeletons within 1.5\" of that point may immediately move again up to their Move. If this moves them into base contact with an enemy unit, they count as Engaging. They take Agility Checks as normal."
   },
   "Lifestealer": {
     "Name": "Lifestealer", 
@@ -26,8 +26,8 @@
   "Necromantic Hex": {
     "Name": "Hex",
     "School": "Necromantic Magic",
-    "Check": "13",
-    "Description": "Choose a single enemy within 10\". The target has Disadvantage on all Checks it makes until the start of your next turn."
+    "Check": "14",
+    "Description": "Ongoing. Choose a single enemy within 10\". The target has Disadvantage on all Checks it makes."
   },
   "Bless Weapon": {
     "Name": "Bless Weapon", 
@@ -39,19 +39,19 @@
     "Name": "Divine Fervour", 
     "School": "Divine Magic",
     "Check": "12",
-    "Description": "Reduce any Injury results against allies within 5\" of the caster (including themselves by 3 until the end of the turn."
+    "Description": "Reduce any Injury results against allies within 5\" of the caster (including themselves) by 3 until the end of the turn."
   },
   "Holy Smite": {
     "Name": "Holy Smite", 
     "School": "Divine Magic",
     "Check": "15",
-    "Description": "Make an Injury Check against all enemies within 5\". Add +2 to the Check if the enemy is Undead."
+    "Description": "Make an Injury Roll against all enemies within 5\". Add +2 to the Check if the enemy is Undead."
   },
    "Invisibility": {
     "Name": "Invisibility", 
     "School": "Life Magic",
     "Check": "12",
-    "Description": "Ongoing. Choose one ally within 5\" (including themselves). On a success, this unit is treated as no longer existing for the purposes of targeting or blocking Movement, line-of-sight or picking up Treasure. If it is Engaged, it is no longer Engaged and moves 1\". If this unit Engages, casts a Spell, or makes a Ranged attack, the spell ends."
+    "Description": "Ongoing. Choose one ally within 5\" (including themselves). This unit is treated as no longer existing for the purposes of targeting or blocking Movement, line-of-sight or picking up Treasure. If it is Engaged, it is no longer Engaged and moves 1\". If this unit Engages, casts a Spell, or makes a Ranged attack, the spell ends."
   },
    "Overgrowth": {
     "Name": "Overgrowth", 
@@ -63,7 +63,7 @@
     "Name": "Root", 
     "School": "Life Magic",
     "Check": "11",
-    "Description": "Choose one unit within 20\". That unit cannot Engage, Move, or Run until the start of your next turn."
+    "Description": "Ongoing. Choose one unit within 20\". That unit cannot Engage, Move, or Run."
   },
    "Earthquake": {
     "Name": "Earthquake", 
@@ -87,7 +87,7 @@
     "Name": "Frenzy",
     "School": "Vampiric Magic",
     "Check": "13",
-    "Description": "Choose one unit within 5\", including the caster. On a success that unit may take their full movement even if they have already moved. If they move into base contact with an enemy unit this counts as having charged. The unit may attack with advantage on the first round."
+    "Description": "Choose one unit within 5\", including the caster. That unit may take their full movement even if they have already moved. If they move into base contact with an enemy unit this counts as having charged. The unit may attack with advantage on the first round."
   },
   "Lure": {
     "Name": "Lure",
@@ -105,22 +105,22 @@
     "Name": "Bat wings",
     "School": "Vampiric Magic",
     "Check": "12",
-    "Description": "Ongoing. Choose one unit within 5\", including the caster. On a success, that unit gains the Flying skill until the spell ends."
+    "Description": "Ongoing. Choose one ally within 5\", including the caster. That unit gains the Flying skill."
   },
   "Vampiric Hex": {
     "Name": "Hex",
     "School": "Vampiric Magic",
     "Check": "13",
-    "Description": "Choose a single enemy within 10\". The target has Disadvantage on all Checks it makes until the start of your next turn."
+    "Description": "Ongoing. Choose a single enemy within 10\". The target has Disadvantage on all Checks it makes."
   },
   "Swarm of Rats": {
     "Name": "Swarm of Rats",
     "School": "Plague Magic",
-    "Check": "13",
-    "Description": "The spell has a range of 10\", hitting the first unit in its path. Make an Injury Check against all units within 2\" of the target. Treat the Cast Check result for this spell as the Injury Roll for the initial unit that was hit."
+    "Check": "15",
+    "Description": "Cast Attack. Choose the closest enemy within 10\". Make a Cast Attack against the target and all units within 1.5\" of it."
   },
   "Sewer Filth": {
-    "Name": "Swarm of Rats",
+    "Name": "Sewer Filth",
     "School": "Plague Magic",
     "Check": "10",
     "Description": "Basic. Target one unit you can see within 20\". The target is Dazed."
