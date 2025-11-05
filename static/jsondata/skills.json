@@ -132,7 +132,7 @@
   "Healer": {
     "Name": "Healer",
     "Type": "Inherent",
-    "Description": "This unit can make a morale check in the upkeep phase to remove the dazed or stunned condition from one friendly unit within 3\"."
+    "Description": "This unit can use the 'Heal' Divine Magic spell."
   },
   "Mounted": {
     "Name": "Mounted",

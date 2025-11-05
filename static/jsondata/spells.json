@@ -8,8 +8,8 @@
   "Soul Rend": {
     "Name": "Soul Rend", 
     "School": "Necromantic Magic",
-    "Check": "-",
-    "Description": "Basic. Target one unit you can see within 15\". Make an Injury Roll against the target. If this spell Incapacitates the target, create a Zombie where it was Incapacitated. It is an ally to you and counts towards your Rout Threshold."
+    "Check": "12",
+    "Description": "Basic. Cast Attack. Target one unit you can see within 15\" and perform a Cast Attack against them. If this spell Incapacitates the target, create a Zombie where it was Incapacitated. It is an ally to you and counts towards your Rout Threshold."
   },
   "Control Dead": {
     "Name": "Control Dead", 
@@ -74,8 +74,8 @@
    "Magic Arrow": {
     "Name": "Magic Arrow", 
     "School": "Life Magic",
-    "Check": "-",
-    "Description": "Basic. Target one unit you can see within 30\". Make an Injury Roll against the target."
+    "Check": "12",
+    "Description": "Basic. Cast Attack. Target one unit you can see within 30\" and perform a Cast Attack."
   },
   "Heal": {
     "Name": "Heal", 
