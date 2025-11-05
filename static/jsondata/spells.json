@@ -62,7 +62,7 @@
    "Root": {
     "Name": "Root", 
     "School": "Life Magic",
-    "Check": "11",
+    "Check": "12",
     "Description": "Ongoing. Choose one unit within 20\". That unit cannot Engage, Move, or Run."
   },
    "Earthquake": {
@@ -104,13 +104,13 @@
   "Bat wings": {
     "Name": "Bat wings",
     "School": "Vampiric Magic",
-    "Check": "12",
+    "Check": "11",
     "Description": "Ongoing. Choose one ally within 5\", including the caster. That unit gains the Flying skill."
   },
   "Vampiric Hex": {
     "Name": "Hex",
     "School": "Vampiric Magic",
-    "Check": "13",
+    "Check": "14",
     "Description": "Ongoing. Choose a single enemy within 10\". The target has Disadvantage on all Checks it makes."
   },
   "Swarm of Rats": {
