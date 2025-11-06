@@ -11,7 +11,7 @@
       "Hand Crossbow": { 
         "Name": "Hand Crossbow", 
         "Range": "10\"",
-        "Effect": "Long Reload, Close Quarters, Dual Wield, Light",
+        "Effect": "Long Reload, Close Quarters, Dual-Wield, Light",
         "Cost": "15",
         "Slots": "1",
         "Injury": "2",
@@ -20,7 +20,7 @@
       "Pistol": { 
         "Name": "Pistol", 
         "Range": "10\"",
-        "Effect": "Long Reload, Close Quarters, Dual Wield, Blackpowder, Light",
+        "Effect": "Long Reload, Close Quarters, Dual-Wield, Blackpowder, Light",
         "Cost": "15",
         "Slots": "1",
         "Injury": "2",

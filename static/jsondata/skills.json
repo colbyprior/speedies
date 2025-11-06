@@ -227,7 +227,7 @@
    "Animal": {
     "Name": "Animal",
     "Type": "Inherent",
-    "Description": "This unit cannot Promote, use ladders (except by making a full Climb Check), pick up Treasure, or use equipment."
+    "Description": "This unit cannot Promote, use ladders (except by making a full Climb Check), pick up Treasure, or use equipment (but is not penalised for fighting Unarmed)."
   },
    "Slow": {
     "Name": "Slow",
@@ -362,7 +362,7 @@
   "Vampire": {
     "Name": "Vampire",
     "Type": "Inherent",
-    "Description": "If this unit is Dazed and there is a non-Undead, non-Animal ally within 2\" during your Recovery Step, you may immediately Incapacitate that ally to remove Dazed from this unit without becoming Staggered."
+    "Description": "If this unit is Dazed and there is a non-Undead, non-Animal ally within 2\" during your Recovery Step, you may immediately Incapacitate that ally to remove Dazed from this unit without becoming Staggered. This unit also gains one Wound, up to their maximum."
   },
   "Vanguard": {
     "Name": "Vanguard",
