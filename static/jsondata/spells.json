@@ -117,7 +117,7 @@
     "Name": "Swarm of Rats",
     "School": "Plague Magic",
     "Check": "15",
-    "Description": "Cast Attack. Choose the closest enemy within 10\". Make a Cast Attack against the target and all units within 1.5\" of it."
+    "Description": "Cast Attack. Choose the closest enemy within 10\". Make a Cast Attack against the target. If you succeed, make an Injury Roll against all units within 1.5\" of it."
   },
   "Sewer Filth": {
     "Name": "Sewer Filth",
