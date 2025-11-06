@@ -292,7 +292,7 @@
   "Large": {
     "Name": "Large",
     "Type": "Inherent",
-    "Description": "This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It may be targeted by ranged attacks even if they aren't the closest model to the shooter. This unit is immune to the Plague."
+    "Description": "This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It may be targeted by ranged attacks even if they aren't the closest model to the shooter. This unit is immune to the Plague. It cannot Promote."
   },
   "Free Skill": {
     "Name": "Free Skill",
