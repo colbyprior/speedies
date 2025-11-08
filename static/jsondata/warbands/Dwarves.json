@@ -10,7 +10,7 @@
     },
     "Heroes": [
         {
-            "Name": "Noble",
+            "Name": "Chieftain",
             "Type": "Leader",
             "Type Cap": "1",
             "Move": "5",
@@ -123,7 +123,7 @@
             "Skills": []
         },
         {
-            "Name": "Warrior",
+            "Name": "Miner",
             "Type Cap": "-",
             "Move": "5",
             "Piercing": "0",
@@ -170,7 +170,7 @@
         }
     },
     "Available Skills": {
-        "Noble": {
+        "Chieftain": {
             "Mel": "X",
             "Rng": "X",
             "Def": "X",
@@ -201,7 +201,7 @@
     },
     "Equipment": {
         "Warrior": {
-            "Aliases": ["Noble", "Armourer", "Veteran", "Berserker", "Warrior", "Youngling"],
+            "Aliases": ["Chieftain", "Armourer", "Veteran", "Berserker", "Miner", "Youngling"],
             "Melee Weapons": ["Dagger", "Sword", "Hammer", "Great Sword", "Great Hammer", "Shield"],
             "Ranged Weapons": ["Pistol"],
             "Armour": ["Light Armour", "Heavy Armour", "Mithril Armour (If warband has Armourer)"]

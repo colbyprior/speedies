@@ -97,7 +97,7 @@
             "Skills": []
         },
         {
-            "Name": "Marksmen",
+            "Name": "Marksman",
             "Type Cap": "6",
             "Move": "6",
             "Piercing": "0",
@@ -201,7 +201,7 @@
             "Armour": ["Light Armour", "Heavy Armour"]
         },
         "Marksmen": {
-            "Aliases": ["Marksmen", "Sniper"],
+            "Aliases": ["Marksman", "Sniper"],
             "Melee Weapons": ["Dagger", "Hammer", "Sword"],
             "Ranged Weapons": ["Short Bow", "Bow", "Long Bow", "Crossbow", "Pistol", "Rifle", "Blunderbuss"],
             "Armour": ["Light Armour"]

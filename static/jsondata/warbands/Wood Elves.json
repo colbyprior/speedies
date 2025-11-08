@@ -8,7 +8,7 @@
     },
     "Heroes": [
         {
-            "Name": "Noble",
+            "Name": "Commander",
             "Type": "Leader",
             "Type Cap": "1",
             "Move": "7",
@@ -173,7 +173,7 @@
         }
     },
     "Available Skills": {
-        "Noble": {
+        "Commander": {
             "Mel": "X",
             "Rng": "X",
             "Def": "X",
