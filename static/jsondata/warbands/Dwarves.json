@@ -175,28 +175,28 @@
             "Rng": "X",
             "Def": "X",
             "Agi": "",
-            "Mrl": "X",
+            "Mrl": "X"
         },
         "Engineer": {
             "Mel": "",
             "Rng": "X",
             "Def": "X",
             "Agi": "",
-            "Mrl": "",
+            "Mrl": ""
         },
         "Armourer": {
             "Mel": "X",
             "Rng": "",
             "Def": "X",
             "Agi": "",
-            "Mrl": "",
+            "Mrl": ""
         },
         "Veteran": {
             "Mel": "X",
             "Rng": "",
             "Def": "X",
             "Agi": "",
-            "Mrl": "",
+            "Mrl": ""
         }
     },
     "Equipment": {

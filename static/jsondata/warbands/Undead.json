@@ -86,7 +86,7 @@
                 "Fear",
 				"Fixed Equipment (Scythe)"
             ]
-        },
+        }
     ],
     "Henchmen": [
         {
@@ -187,28 +187,28 @@
             "Rng": "X",
             "Def": "",
             "Agi": "",
-            "Mrl": "X",
+            "Mrl": "X"
         },
         "Plague Cultist": {
             "Mel": "X",
             "Rng": "X",
             "Def": "",
             "Agi": "",
-            "Mrl": "X",
+            "Mrl": "X"
         },
         "Death Knight": {
             "Mel": "X",
             "Rng": "X",
             "Def": "X",
             "Agi": "",
-            "Mrl": "",
+            "Mrl": ""
         },
         "Reaper": {
             "Mel": "X",
             "Rng": "",
             "Def": "",
             "Agi": "X",
-            "Mrl": "",
+            "Mrl": ""
         }
     },
     "Equipment": {

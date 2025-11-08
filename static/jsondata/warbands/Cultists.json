@@ -138,28 +138,28 @@
             "Rng": "X",
             "Def": "X",
             "Agi": "",
-            "Mrl": "X",
+            "Mrl": "X"
         },
         "Acolyte": {
             "Mel": "",
             "Rng": "",
             "Def": "",
             "Agi": "",
-            "Mrl": "X",
+            "Mrl": "X"
         },
         "Brute": {
             "Mel": "X",
             "Rng": "",
             "Def": "X",
             "Agi": "",
-            "Mrl": "",
+            "Mrl": ""
         },
         "Seeker": {
             "Mel": "X",
             "Rng": "X",
             "Def": "",
             "Agi": "X",
-            "Mrl": "",
+            "Mrl": ""
         }
     },
     "Equipment": {

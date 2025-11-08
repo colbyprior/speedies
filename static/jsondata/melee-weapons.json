@@ -98,15 +98,6 @@
     "Melee": "5",
     "Slots": "2"
   },
-  "Whip": {
-    "Name": "Whip / Flail",
-    "Effect": "+1 Atk in the first round of combat if this unit Engages.",
-    "Cost": "10",
-    "Injury": "0",
-    "Piercing": "0",
-    "Melee": "0",
-    "Slots": "1"
-  },
   "Fighting Claws": {
     "Name": "Fighting Claws",
     "Effect": "+1 Attack. This unit makes Agility Checks with Advantage.",

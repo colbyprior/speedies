@@ -178,28 +178,28 @@
             "Rng": "X",
             "Def": "X",
             "Agi": "X",
-            "Mrl": "X",
+            "Mrl": "X"
         },
         "Mage": {
             "Mel": "",
             "Rng": "X",
             "Def": "",
             "Agi": "X",
-            "Mrl": "",
+            "Mrl": ""
         },
         "Honour Guard": {
             "Mel": "X",
             "Rng": "",
             "Def": "",
             "Agi": "X",
-            "Mrl": "",
+            "Mrl": ""
         },
         "Ranger": {
             "Mel": "",
             "Rng": "X",
             "Def": "",
             "Agi": "X",
-            "Mrl": "",
+            "Mrl": ""
         }
     },
     "Equipment": {

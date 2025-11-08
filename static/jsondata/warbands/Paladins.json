@@ -172,28 +172,28 @@
             "Rng": "",
             "Def": "X",
             "Agi": "",
-            "Mrl": "X",
+            "Mrl": "X"
         },
         "Paladin": {
             "Mel": "X",
             "Rng": "",
             "Def": "X",
             "Agi": "",
-            "Mrl": "X",
+            "Mrl": "X"
         },
         "Cleric": {
             "Mel": "",
             "Rng": "",
             "Def": "X",
             "Agi": "",
-            "Mrl": "X",
+            "Mrl": "X"
         },
         "Standard Bearer": {
             "Mel": "",
             "Rng": "",
             "Def": "X",
             "Agi": "",
-            "Mrl": "X",
+            "Mrl": "X"
         }
     },
     "Equipment": {

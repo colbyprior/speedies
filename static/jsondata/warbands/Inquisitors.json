@@ -171,28 +171,28 @@
             "Rng": "X",
             "Def": "X",
             "Agi": "X",
-            "Mrl": "X",
+            "Mrl": "X"
         },
         "Priest": {
             "Mel": "",
             "Rng": "",
             "Def": "X",
             "Agi": "",
-            "Mrl": "X",
+            "Mrl": "X"
         },
         "Inquisitor": {
             "Mel": "X",
             "Rng": "X",
             "Def": "",
             "Agi": "",
-            "Mrl": "",
+            "Mrl": ""
         },
         "Doomsayer": {
             "Mel": "X",
             "Rng": "X",
             "Def": "",
             "Agi": "",
-            "Mrl": "X",
+            "Mrl": "X"
         }
     },
     "Equipment": {

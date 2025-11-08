@@ -182,28 +182,28 @@
             "Rng": "",
             "Def": "X",
             "Agi": "X",
-            "Mrl": "X",
+            "Mrl": "X"
         },
         "Vampire Seductor": {
             "Mel": "X",
             "Rng": "",
             "Def": "",
             "Agi": "X",
-            "Mrl": "X",
+            "Mrl": "X"
         },
         "Vampire Spawn": {
             "Mel": "X",
             "Rng": "",
             "Def": "",
             "Agi": "X",
-            "Mrl": "",
+            "Mrl": ""
         },
         "Nosferatu": {
             "Mel": "X",
             "Rng": "",
             "Def": "X",
             "Agi": "X",
-            "Mrl": "",
+            "Mrl": ""
         }
     },
     "Equipment": {

@@ -174,28 +174,28 @@
             "Rng": "X",
             "Def": "",
             "Agi": "X",
-            "Mrl": "X",
+            "Mrl": "X"
         },
         "Ratlock": {
             "Mel": "X",
             "Rng": "",
             "Def": "",
             "Agi": "X",
-            "Mrl": "",
+            "Mrl": ""
         },
         "Enforcer": {
             "Mel": "X",
             "Rng": "X",
             "Def": "",
             "Agi": "X",
-            "Mrl": "",
+            "Mrl": ""
         },
         "Assassin": {
             "Mel": "X",
             "Rng": "X",
             "Def": "",
             "Agi": "X",
-            "Mrl": "",
+            "Mrl": ""
         }
     },
     "Equipment": {
