@@ -91,7 +91,7 @@
   },
     "Divine Great Hammer": {
     "Name": "Divine Great Hammer",
-    "Effect": "Advantage against Undead.",
+    "Effect": "Advantage against Undead. Only heroes can wield.",
     "Cost": "20",
     "Injury": "7",
     "Piercing": "3",
