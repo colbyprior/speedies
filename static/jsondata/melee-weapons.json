@@ -83,7 +83,7 @@
   "Divine Hammer": {
     "Name": "Divine Hammer",
     "Effect": "Advantage against Undead. Only heroes can dual-wield.",
-    "Cost": "15",
+    "Cost": "10",
     "Injury": "4",
     "Piercing": "3",
     "Melee": "0",
