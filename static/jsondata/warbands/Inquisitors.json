@@ -141,7 +141,7 @@
             ]
         },
         {
-            "Name": "Hounds",
+            "Name": "Hound",
             "Type Cap": "5",
             "Move": "8",
             "Piercing": "0",
@@ -155,6 +155,7 @@
             "Morale": "16",
             "Cost": 25,
             "Skills": [
+				"Animal",
                 "Pack Tactics"
             ]
         }
