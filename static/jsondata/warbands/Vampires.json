@@ -82,15 +82,16 @@
             "Injury": "0",
             "Melee": "14",
             "Ranged": "-",
-            "Defense": "16",
+            "Defense": "18",
             "Wounds": "2",
-            "Agility": "8",
+            "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
             "Cost": 70,
             "Skills": [
                 "Undead",
-				"Fear"
+				"Fear",
+				"Vampire"
             ]
         }
     ],
@@ -108,7 +109,7 @@
             "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 25,
+            "Cost": 20,
             "Skills": []
         },
         {
@@ -117,14 +118,14 @@
             "Move": "6",
             "Piercing": "0",
             "Injury": "0",
-            "Melee": "14",
+            "Melee": "13",
             "Ranged": "-",
-            "Defense": "16",
+            "Defense": "-",
             "Wounds": "1",
             "Agility": "10",
             "Attacks": "2",
             "Morale": "16",
-            "Cost": 40,
+            "Cost": 60,
             "Skills": [
                 "Undead",
 				"Fear",
@@ -144,7 +145,7 @@
             "Agility": "14",
             "Attacks": "1",
             "Morale": "18",
-            "Cost": 30,
+            "Cost": 25,
             "Skills": [
                 "Ambush",
                 "Animal"

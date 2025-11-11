@@ -41,7 +41,7 @@
             "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 60,
+            "Cost": 85,
             "Skills": [
                 "Divine Magic"
             ]
@@ -60,7 +60,7 @@
             "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 50,
+            "Cost": 65,
             "Skills": [
                 "Inquisitor"
             ]
@@ -79,7 +79,7 @@
             "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 50,
+            "Cost":80,
             "Skills": [
                 "The Rapture is Nigh",
                 "Inquisitor"
@@ -91,11 +91,11 @@
             "Name": "Fanatic",
             "Type Cap": "5",
             "Move": "6",
-            "Piercing": "2",
+            "Piercing": "0",
             "Injury": "0",
-            "Melee": "12",
+            "Melee": "14",
             "Ranged": "-",
-            "Defense": "15",
+            "Defense": "16",
             "Wounds": "1",
             "Agility": "10",
             "Attacks": "1",
@@ -118,7 +118,7 @@
             "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 25,
+            "Cost": 20,
             "Skills": []
         },
         {

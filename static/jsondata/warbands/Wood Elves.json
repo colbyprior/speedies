@@ -21,7 +21,7 @@
             "Agility": "5",
             "Attacks": "1",
             "Morale": "5",
-            "Cost": 95,
+            "Cost": 100,
             "Skills": [
                 "Leader"
             ]
@@ -40,7 +40,7 @@
             "Agility": "6",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 90,
+            "Cost": 75,
             "Skills": [
                 "Life Magic"
             ]
@@ -59,7 +59,7 @@
             "Agility": "5",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 80,
+            "Cost": 85,
             "Skills": [
             ]
         },
@@ -77,7 +77,7 @@
             "Agility": "5",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 70,
+            "Cost": 75,
             "Skills": [
             ]
         }
@@ -130,7 +130,7 @@
             "Agility": "8",
             "Attacks": "1",
             "Morale": "16",
-            "Cost": 20,
+            "Cost": 25,
             "Skills": [
                 "Follower",
                 "Animal"

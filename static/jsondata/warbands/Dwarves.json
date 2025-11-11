@@ -23,7 +23,7 @@
             "Agility": "14",
             "Attacks": "1",
             "Morale": "5",
-            "Cost": 75,
+            "Cost": 80,
             "Skills": [
                 "Leader"
             ]
@@ -42,7 +42,7 @@
             "Agility": "14",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 70,
+            "Cost": 65,
             "Skills": [
                 "Weaponsmith"
             ]
@@ -61,7 +61,7 @@
             "Agility": "14",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 55,
+            "Cost": 65,
             "Skills": [
                 "Armoursmith"
             ]
@@ -80,7 +80,7 @@
             "Agility": "14",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 45,
+            "Cost": 60,
             "Skills": [
             ]
         }
@@ -151,7 +151,7 @@
             "Agility": "14",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 40,
+            "Cost": 45,
             "Skills": []
         }
     ],
