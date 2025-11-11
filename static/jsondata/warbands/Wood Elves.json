@@ -34,7 +34,7 @@
             "Piercing": "0",
             "Injury": "0",
             "Melee": "13",
-            "Ranged": "13",
+            "Ranged": "-",
             "Defense": "18",
             "Wounds": "1",
             "Agility": "6",
