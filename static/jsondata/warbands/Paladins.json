@@ -18,7 +18,7 @@
             "Agility": "8",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 100,
+            "Cost": 105,
             "Skills": [
                 "Leader",
                 "Divine Magic"
@@ -72,7 +72,7 @@
             "Agility": "10",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 55,
+            "Cost": 50,
             "Skills": [
 			"Holy Standard",
 			"Fixed Equipment (Holy Standard)"
@@ -118,14 +118,14 @@
             "Move": "7",
             "Piercing": "0",
             "Injury": "0",
-            "Melee": "14",
+            "Melee": "15",
             "Ranged": "-",
             "Defense": "18",
             "Wounds": "1",
             "Agility": "8",
             "Attacks": "2",
             "Morale": "10",
-            "Cost": 65,
+            "Cost": 50,
             "Skills": [
 			"Ki Strike",
 			"No Equipment"
@@ -138,13 +138,13 @@
             "Piercing": "0",
             "Injury": "0",
             "Melee": "14",
-            "Ranged": "14",
+            "Ranged": "-",
             "Defense": "18",
             "Wounds": "2",
             "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 70,
+            "Cost": 45,
             "Skills": ["Mounted"]
         }
     ],
@@ -198,9 +198,15 @@
     },
     "Equipment": {
         "Paladins": {
-            "Aliases": ["Justicar", "Paladin", "Cleric", "Initiate", "Squire", "Cavalier"],
+            "Aliases": ["Justicar", "Paladin", "Cleric", "Initiate", "Squire"],
             "Melee Weapons": ["Hammer", "Flail / Great Hammer", "Divine Hammer", "Divine Great Hammer", "Sword", "Great Sword", "Shield"],
             "Ranged Weapons": ["Sling"],
+            "Armour": ["Light Armour", "Heavy Armour"]
+        },
+        "Cavalier": {
+            "Aliases": ["Cavalier"],
+            "Melee Weapons": ["Hammer", "Divine Hammer", "Sword", "Pike", "Shield"],
+            "Ranged Weapons": [],
             "Armour": ["Light Armour", "Heavy Armour"]
         }
     }

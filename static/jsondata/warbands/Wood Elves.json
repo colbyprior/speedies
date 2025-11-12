@@ -21,7 +21,7 @@
             "Agility": "5",
             "Attacks": "1",
             "Morale": "5",
-            "Cost": 100,
+            "Cost": 90,
             "Skills": [
                 "Leader"
             ]
@@ -40,7 +40,7 @@
             "Agility": "6",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 75,
+            "Cost": 70,
             "Skills": [
                 "Life Magic"
             ]
@@ -59,7 +59,7 @@
             "Agility": "5",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 85,
+            "Cost": 80,
             "Skills": [
             ]
         },
@@ -77,7 +77,7 @@
             "Agility": "5",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 75,
+            "Cost": 70,
             "Skills": [
             ]
         }
@@ -96,7 +96,7 @@
             "Agility": "6",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 55,
+            "Cost": 50,
             "Skills": []
         },
         {
@@ -112,7 +112,7 @@
             "Agility": "5",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 65,
+            "Cost": 60,
             "Skills": [
 				"Mark Target"
 			]
@@ -130,7 +130,7 @@
             "Agility": "8",
             "Attacks": "1",
             "Morale": "16",
-            "Cost": 25,
+            "Cost": 20,
             "Skills": [
                 "Follower",
                 "Animal"
@@ -139,17 +139,17 @@
         {
             "Name": "Treant",
             "Type Cap": "1",
-            "Move": "8",
-            "Piercing": "2",
-            "Injury": "0",
+            "Move": "6",
+            "Piercing": "4",
+            "Injury": "4",
             "Melee": "12",
             "Ranged": "-",
-            "Defense": "8",
+            "Defense": "9",
             "Wounds": "3",
             "Agility": "16",
             "Attacks": "2",
             "Morale": "7",
-            "Cost": 185,
+            "Cost": 200,
             "Skills": [
                 "Fear",
                 "Slow",

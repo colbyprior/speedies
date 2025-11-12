@@ -4,7 +4,6 @@
     "Play Style": "Powerful leader with minions",
     "Preamble": "This team sucks... your blood!",
     "Special Rules": {
-        "Enthrall": "If any enemy Hero you just fought dies from a Scar or Plague Roll, they transform into a Vampire Spawn and join your warband. This effect can only trigger if you have 5 or less Heroes in your warband (after completing your own Scar and Plague Rolls)."
     },
     "Heroes": [
         {
@@ -14,14 +13,14 @@
             "Move": "8",
             "Piercing": "0",
             "Injury": "0",
-            "Melee": "11",
+            "Melee": "13",
             "Ranged": "-",
-            "Defense": "14",
+            "Defense": "18",
             "Wounds": "2",
             "Agility": "6",
             "Attacks": "2",
             "Morale": "7",
-            "Cost": 160,
+            "Cost": 195,
             "Skills": [
                 "Leader",
                 "Undead",
@@ -38,12 +37,12 @@
             "Injury": "0",
             "Melee": "14",
             "Ranged": "-",
-            "Defense": "16",
+            "Defense": "18",
             "Wounds": "2",
-            "Agility": "8",
+            "Agility": "10",
             "Attacks": "2",
             "Morale": "10",
-            "Cost": 130,
+            "Cost": 120,
             "Skills": [
 				"Vampiric Magic",
                 "Undead",
@@ -60,12 +59,12 @@
             "Injury": "0",
             "Melee": "12",
             "Ranged": "-",
-            "Defense": "14",
+            "Defense": "18",
             "Wounds": "2",
             "Agility": "8",
             "Attacks": "2",
             "Morale": "10",
-            "Cost": 115,
+            "Cost": 135,
             "Skills": [
                 "No Equipment",
                 "Undead",
@@ -87,7 +86,7 @@
             "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 70,
+            "Cost": 75,
             "Skills": [
                 "Undead",
 				"Fear",
@@ -125,7 +124,7 @@
             "Agility": "10",
             "Attacks": "2",
             "Morale": "16",
-            "Cost": 60,
+            "Cost": 45,
             "Skills": [
                 "Undead",
 				"Fear",
@@ -137,15 +136,15 @@
             "Type Cap": "3",
             "Move": "8",
             "Piercing": "0",
-            "Injury": "0",
+            "Injury": "2",
             "Melee": "10",
             "Ranged": "-",
-            "Defense": "19",
+            "Defense": "18",
             "Wounds": "1",
-            "Agility": "14",
+            "Agility": "10",
             "Attacks": "1",
             "Morale": "18",
-            "Cost": 25,
+            "Cost": 35,
             "Skills": [
                 "Ambush",
                 "Animal"
@@ -217,8 +216,8 @@
         "Thralls": {
             "Aliases": ["Thrall"],
             "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
-            "Ranged Weapons": ["Short Bow", "Bow"],
-            "Armour": ["Light Armour"]
+            "Ranged Weapons": ["Short Bow", "Bow", "Crossbow"],
+            "Armour": ["Light Armour", "Heavy Armour"]
         }
     }
 }

@@ -21,7 +21,7 @@
             "Agility": "6",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 95,
+            "Cost": 80,
             "Skills": [
                 "Leader"
             ]
@@ -40,7 +40,7 @@
             "Agility": "8",
             "Attacks": "1",
             "Morale": "13",
-            "Cost": 55,
+            "Cost": 60,
             "Skills": [
                 "Plague Magic"
             ]
@@ -59,7 +59,7 @@
             "Agility": "8",
             "Attacks": "1",
             "Morale": "13",
-            "Cost": 80,
+            "Cost": 60,
             "Skills": [
             ]
         },
@@ -77,7 +77,7 @@
             "Agility": "6",
             "Attacks": "1",
             "Morale": "13",
-            "Cost": 60,
+            "Cost": 55,
             "Skills": [
 				"Vanguard"
             ]
@@ -90,8 +90,8 @@
             "Move": "8",
             "Piercing": "0",
             "Injury": "0",
-            "Melee": "14",
-            "Ranged": "14",
+            "Melee": "15",
+            "Ranged": "15",
             "Defense": "18",
             "Wounds": "1",
             "Agility": "8",
@@ -113,7 +113,7 @@
             "Agility": "8",
             "Attacks": "1",
             "Morale": "16",
-            "Cost": 35,
+            "Cost": 40,
             "Skills": [
 			"Spread Plague (Minor)"
 			]
@@ -140,16 +140,16 @@
             "Name": "Rat Monstrosity",
             "Type Cap": "1",
             "Move": "8",
-            "Piercing": "5",
+            "Piercing": "0",
             "Injury": "0",
-            "Melee": "8",
+            "Melee": "12",
             "Ranged": "-",
-            "Defense": "11",
+            "Defense": "12",
             "Wounds": "3",
             "Agility": "8",
             "Attacks": "3",
             "Morale": "18",
-            "Cost": 210,
+            "Cost": 250,
             "Skills": [
                 "Cowardly",
                 "Fear",

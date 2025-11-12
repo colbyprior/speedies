@@ -21,7 +21,7 @@
             "Agility": "10",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 60,
+            "Cost": 65,
             "Skills": [
                 "Leader",
                 "Necromantic Magic"
@@ -41,7 +41,7 @@
             "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 50,
+            "Cost": 45,
             "Skills": [
                 "Spread Plague (Major)"
             ]
@@ -53,14 +53,14 @@
             "Move": "7",
             "Piercing": "0",
             "Injury": "0",
-            "Melee": "15",
+            "Melee": "13",
             "Ranged": "15",
             "Defense": "16",
             "Wounds": "2",
             "Agility": "14",
             "Attacks": "1",
             "Morale": "13",
-            "Cost": 50,
+            "Cost": 55,
             "Skills": [
                 "Undead",
                 "Fear"
@@ -70,7 +70,7 @@
             "Name": "Reaper",
             "Type": "Hero",
             "Type Cap": "1",
-            "Move": "7",
+            "Move": "9",
             "Piercing": "3",
             "Injury": "3",
             "Melee": "10",
@@ -80,7 +80,7 @@
             "Agility": "14",
             "Attacks": "2",
             "Morale": "13",
-            "Cost": 85,
+            "Cost":65,
             "Skills": [
                 "Undead",
                 "Fear",
@@ -141,7 +141,7 @@
             "Agility": "10",
             "Attacks": "1",
             "Morale": "13",
-            "Cost": 45,
+            "Cost": 40,
             "Skills": [
                 "Undead",
                 "Fear",
@@ -162,7 +162,7 @@
             "Agility": "14",
             "Attacks": "2",
             "Morale": "13",
-            "Cost": 999,
+            "Cost": 190,
             "Skills": [
                 "Undead",
                 "Fear",

@@ -177,7 +177,7 @@
   "Berserker": {
     "Name": "Berserker",
     "Type": "Inherent",
-    "Description": "At the end of the Engage Phase, if there is an enemy within Line-of-Sight and Engage range, this unit attempts to Engage the closest such unit. For the turn that this unit Engages or is Engaged, it gains an Advantage on its Attacks."
+    "Description": "At the end of the Engage Phase, if there is an enemy within Line-of-Sight and Engage range, this unit attempts to Engage the closest such unit."
   },
   "Deathwish": {
     "Name": "Deathwish",
@@ -327,7 +327,7 @@
   "Pack Tactics": {
     "Name": "Pack Tactics",
     "Type": "Inherent",
-    "Description": "If this unit attacks an enemy that is also engaged with an ally of the unit, the unit has advantage on the attack."
+    "Description": "If this unit attacks an enemy that is also in base contact with an ally that also has Pack Tactics, this unit has advantage on the attack."
   },
   "Mutation": {
     "Name": "Mutation",
