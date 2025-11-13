@@ -39,7 +39,7 @@
             "Agility": "8",
             "Attacks": "1",
             "Morale": "13",
-            "Cost": 60,
+            "Cost": 55,
             "Skills": [
                 "Plague Magic"
             ]
@@ -58,7 +58,7 @@
             "Agility": "8",
             "Attacks": "1",
             "Morale": "13",
-            "Cost": 60,
+            "Cost": 55,
             "Skills": [
             ]
         },
@@ -76,7 +76,7 @@
             "Agility": "6",
             "Attacks": "1",
             "Morale": "13",
-            "Cost": 55,
+            "Cost": 60,
             "Skills": [
 				"Vanguard"
             ]
@@ -96,7 +96,7 @@
             "Agility": "8",
             "Attacks": "1",
             "Morale": "16",
-            "Cost": 35,
+            "Cost": 30,
             "Skills": []
         },
         {

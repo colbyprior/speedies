@@ -124,7 +124,7 @@
             "Agility": "10",
             "Attacks": "2",
             "Morale": "16",
-            "Cost": 45,
+            "Cost": 50,
             "Skills": [
                 "Undead",
 				"Fear",

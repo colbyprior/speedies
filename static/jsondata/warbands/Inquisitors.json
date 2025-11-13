@@ -21,7 +21,7 @@
             "Agility": "8",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 90,
+            "Cost": 85,
             "Skills": [
                 "Leader",
                 "Inquisitor"
@@ -79,7 +79,7 @@
             "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
-            "Cost":75,
+            "Cost": 75,
             "Skills": [
                 "The Rapture is Nigh",
                 "Inquisitor"
@@ -100,7 +100,7 @@
             "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 50,
+            "Cost": 45,
             "Skills": [
                 "Fear"
             ]
@@ -153,7 +153,7 @@
             "Agility": "8",
             "Attacks": "1",
             "Morale": "16",
-            "Cost": 25,
+            "Cost": 20,
             "Skills": [
 				"Animal",
                 "Pack Tactics"
