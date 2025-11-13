@@ -4,7 +4,6 @@
     "Play Style": "Fast and agile swarm",
     "Preamble": "RAT",
     "Special Rules": {
-        "Rat": "Is a rat"
     },
     "Heroes": [
         {
@@ -142,14 +141,14 @@
             "Move": "8",
             "Piercing": "0",
             "Injury": "0",
-            "Melee": "12",
+            "Melee": "13",
             "Ranged": "-",
             "Defense": "12",
             "Wounds": "3",
             "Agility": "8",
             "Attacks": "3",
             "Morale": "18",
-            "Cost": 250,
+            "Cost": 210,
             "Skills": [
                 "Cowardly",
                 "Fear",
