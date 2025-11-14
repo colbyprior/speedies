@@ -4,7 +4,7 @@
     "Play Style": "Powerful heroes with minions",
     "Preamble": "Magic never expects us.",
     "Special Rules": {
-        "Incite the Mob": "At the start of each game make a Morale Check once per hero. For each success, a Peasant temporarily joins your warband for this game only."
+        "Incite the Mob": "At the start of each game make a Morale Check once per hero. For each success, a Peasant temporarily joins your warband for this game only. These Peasants do not count towards the rout threshold when Incapacitated."
     },
     "Heroes": [
         {
@@ -41,7 +41,7 @@
             "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 85,
+            "Cost": 80,
             "Skills": [
                 "Divine Magic"
             ]
@@ -60,7 +60,7 @@
             "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 60,
+            "Cost": 55,
             "Skills": [
                 "Inquisitor"
             ]
@@ -79,7 +79,7 @@
             "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 75,
+            "Cost": 65,
             "Skills": [
                 "The Rapture is Nigh",
                 "Inquisitor"

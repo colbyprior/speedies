@@ -67,7 +67,7 @@
             "Type": "Hero",
             "Type Cap": "-",
             "Move": "8",
-            "Piercing": "0",
+            "Piercing": "2",
             "Injury": "0",
             "Melee": "14",
             "Ranged": "14",

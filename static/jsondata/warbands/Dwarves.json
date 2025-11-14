@@ -5,8 +5,7 @@
     "Preamble": "These chonkers go bonkers.",
     "Special Rules": {
         "Hard to Kill": "Dwarves have a -2 to Injury rolls made against them (eg. an unmodified roll of 19 would count as a 17, Stunning rather than Incapaciating the Dwarf).",
-        "Sturdy Legs": "Wearing Armour does not reduce a Dwarf's Move attribute.",
-        "Ranged Shields": "Dwarf gunners may use any ranged weapon with a shield."
+        "Ranged Shields": "Dwarves may use any Ranged weapon with a Shield."
     },
     "Heroes": [
         {

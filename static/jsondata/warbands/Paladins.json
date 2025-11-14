@@ -13,7 +13,7 @@
             "Injury": "0",
             "Melee": "13",
             "Ranged": "13",
-            "Defense": "17",
+            "Defense": "16",
             "Wounds": "1",
             "Agility": "8",
             "Attacks": "1",
@@ -33,12 +33,12 @@
             "Injury": "0",
             "Melee": "13",
             "Ranged": "14",
-            "Defense": "17",
+            "Defense": "16",
             "Wounds": "1",
             "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 45,
+            "Cost": 50,
             "Skills": []
         },
         {
@@ -50,12 +50,12 @@
             "Injury": "0",
             "Melee": "14",
             "Ranged": "14",
-            "Defense": "18",
+            "Defense": "17",
             "Wounds": "1",
             "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 45,
+            "Cost": 50,
             "Skills": ["Healer"]
         },
         {
@@ -67,12 +67,12 @@
             "Injury": "3",
             "Melee": "7",
             "Ranged": "-",
-            "Defense": "18",
+            "Defense": "17",
             "Wounds": "1",
             "Agility": "10",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 50,
+            "Cost": 55,
             "Skills": [
 			"Holy Standard",
 			"Fixed Equipment (Holy Standard)"

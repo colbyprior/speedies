@@ -80,7 +80,7 @@
             "Agility": "14",
             "Attacks": "2",
             "Morale": "13",
-            "Cost":80,
+            "Cost":85,
             "Skills": [
                 "Undead",
                 "Fear",
@@ -122,7 +122,7 @@
             "Agility": "14",
             "Attacks": "1",
             "Morale": "16",
-            "Cost": 25,
+            "Cost": 30,
             "Skills": [
                 "Undead",
                 "Fear"
