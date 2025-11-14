@@ -274,11 +274,6 @@
     "Type": "Inherent",
     "Description": "If this unit is not within 5\" of an allied hero at the start of its turn, it cannot act during the Engage, Move, Cast, and Ranged phases. It can act in Melee Combat as normal."
   },
-  "Bloodthirsty": {
-    "Name": "Bloodthirsty",
-    "Type": "Vampires",
-    "Description": "If this unit Incapacitates another unit in Melee they may recover one Wound."
-  },
   "Keen Tail": {
     "Name": "Keen Tail",
     "Type": "Ratlings",
@@ -362,7 +357,7 @@
   "Vampire": {
     "Name": "Vampire",
     "Type": "Inherent",
-    "Description": "If this unit is Dazed and there is a non-Undead, non-Animal ally within 2\" during your Recovery Step, you may immediately Incapacitate that ally to remove Dazed from this unit without becoming Staggered. This unit also gains one Wound, up to their maximum."
+    "Description": "If there is a non-Undead, non-Animal ally within 2\" at the start of the Engage Phase, you may immediately Incapacitate that ally to remove Staggered from this unit and gain one Wound, up to the unit's maximum Wounds."
   },
   "Vanguard": {
     "Name": "Vanguard",

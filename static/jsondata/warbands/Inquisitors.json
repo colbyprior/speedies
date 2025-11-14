@@ -93,14 +93,14 @@
             "Move": "6",
             "Piercing": "0",
             "Injury": "0",
-            "Melee": "14",
+            "Melee": "13",
             "Ranged": "-",
             "Defense": "16",
             "Wounds": "1",
             "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 45,
+            "Cost": 50,
             "Skills": [
                 "Fear"
             ]
