@@ -74,7 +74,7 @@
   "Tower Shield": {
     "Name": "Tower Shield",
     "Effect": "+6 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon.",
-    "Cost": "10",
+    "Cost": "15",
     "Injury": "0",
     "Piercing": "0",
     "Melee": "0",
@@ -83,7 +83,7 @@
   "Divine Hammer": {
     "Name": "Divine Hammer",
     "Effect": "Advantage against Undead. Only heroes can dual-wield.",
-    "Cost": "10",
+    "Cost": "15",
     "Injury": "4",
     "Piercing": "3",
     "Melee": "0",
@@ -92,7 +92,7 @@
     "Divine Great Hammer": {
     "Name": "Divine Great Hammer",
     "Effect": "Advantage against Undead. Only heroes can wield.",
-    "Cost": "20",
+    "Cost": "30",
     "Injury": "7",
     "Piercing": "3",
     "Melee": "5",

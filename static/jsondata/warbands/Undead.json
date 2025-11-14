@@ -53,14 +53,14 @@
             "Move": "7",
             "Piercing": "0",
             "Injury": "0",
-            "Melee": "13",
-            "Ranged": "15",
+            "Melee": "14",
+            "Ranged": "14",
             "Defense": "16",
             "Wounds": "2",
             "Agility": "14",
             "Attacks": "1",
             "Morale": "13",
-            "Cost": 65,
+            "Cost": 75,
             "Skills": [
                 "Undead",
                 "Fear"
@@ -162,7 +162,7 @@
             "Agility": "14",
             "Attacks": "2",
             "Morale": "13",
-            "Cost": 190,
+            "Cost": 200,
             "Skills": [
                 "Undead",
                 "Fear",

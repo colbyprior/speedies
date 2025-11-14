@@ -17,10 +17,10 @@
             "Ranged": "-",
             "Defense": "18",
             "Wounds": "2",
-            "Agility": "6",
+            "Agility": "7",
             "Attacks": "2",
             "Morale": "7",
-            "Cost": 195,
+            "Cost": 165,
             "Skills": [
                 "Leader",
                 "Undead",
@@ -42,7 +42,7 @@
             "Agility": "10",
             "Attacks": "2",
             "Morale": "10",
-            "Cost": 120,
+            "Cost": 125,
             "Skills": [
 				"Vampiric Magic",
                 "Undead",
@@ -64,7 +64,7 @@
             "Agility": "8",
             "Attacks": "2",
             "Morale": "10",
-            "Cost": 135,
+            "Cost": 125,
             "Skills": [
                 "No Equipment",
                 "Undead",
@@ -86,7 +86,7 @@
             "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 75,
+            "Cost": 85,
             "Skills": [
                 "Undead",
 				"Fear",

@@ -137,14 +137,14 @@
             "Move": "9",
             "Piercing": "0",
             "Injury": "0",
-            "Melee": "14",
+            "Melee": "13",
             "Ranged": "-",
-            "Defense": "18",
+            "Defense": "17",
             "Wounds": "2",
             "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 45,
+            "Cost": 50,
             "Skills": ["Mounted"]
         }
     ],

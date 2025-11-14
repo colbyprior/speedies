@@ -139,7 +139,7 @@
             "Name": "Rat Monstrosity",
             "Type Cap": "1",
             "Move": "8",
-            "Piercing": "0",
+            "Piercing": "3",
             "Injury": "0",
             "Melee": "13",
             "Ranged": "-",
@@ -148,7 +148,7 @@
             "Agility": "8",
             "Attacks": "3",
             "Morale": "18",
-            "Cost": 210,
+            "Cost": 205,
             "Skills": [
                 "Cowardly",
                 "Fear",

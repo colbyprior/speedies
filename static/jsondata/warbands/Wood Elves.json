@@ -21,7 +21,7 @@
             "Agility": "6",
             "Attacks": "1",
             "Morale": "5",
-            "Cost": 90,
+            "Cost": 95,
             "Skills": [
                 "Leader"
             ]
@@ -77,7 +77,7 @@
             "Agility": "6",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 70,
+            "Cost": 75,
             "Skills": [
             ]
         }
@@ -96,7 +96,7 @@
             "Agility": "6",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 50,
+            "Cost": 55,
             "Skills": []
         },
         {
@@ -112,7 +112,7 @@
             "Agility": "6",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 60,
+            "Cost": 65,
             "Skills": [
 				"Mark Target"
 			]
@@ -149,7 +149,7 @@
             "Agility": "16",
             "Attacks": "2",
             "Morale": "7",
-            "Cost": 200,
+            "Cost": 175,
             "Skills": [
                 "Fear",
                 "Slow",
