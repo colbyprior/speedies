@@ -3,23 +3,25 @@ sidebar_position: 7
 ---
 # Vampires
 
-Grand Total Cost: 500
+Grand Total Cost: 499
+
+A somewhat greedy build focused on starting with the three strongest Vampires. The Thralls are willing to sacrifice themselves to keep the Vampires alive. The warband should focus on getting more units potentially some armour for its Vampires.
 ## Heroes
 
-Total Cost: 280
+Total Cost: 427
 
-| Unit      | Melee Slot 1 | Melee Slot 2 | Ranged Slot | Unit Cost | Equipment Cost | Total Cost |
-| --------- | ------------ | ------------ | ----------- | --------- | -------------- | ---------- |
-| Chieftain | Axe          | Shield       | Pistol      | 90        | 25             | 115        |
-| Engineer  | Axe          | Shield       | Crossbow    | 65        | 30             | 95         |
-| Veteran   | Great Axe    | -            |             | 60        | 10             | 70         |
+
+| Unit             | Melee Slot 1 | Melee Slot 2 | Ranged Slot | Unit Cost | Equipment Cost | Total Cost |
+| ---------------- | ------------ | ------------ | ----------- | --------- | -------------- | ---------- |
+| Vampire Noble    | Great Sword  | -            | -           | 165       | 10             | 175        |
+| Vampire Seductor | Dagger       | -            | -           | 125       | 2              | 127        |
+| Nosferatu        | -            | -            | -           | 125       | 0              | 125        |
 
 ## Henchman
 
-Total Cost: 220
+Total Cost: 72
 
-| Number of Units | Unit      | Melee Slot | Flex Slot | Unit Cost | Equipment Cost | Total Cost per Unit | Total Cost |
-| --------------- | --------- | ---------- | --------- | --------- | -------------- | ------------------- | ---------- |
-| 1               | Berserker | Axe        | Axe       | 55        | 10             | 65                  | 65         |
-| 2               | Youngling | Hammer     | Shield    | 30        | 10             | 40                  | 80         |
-| 1               | Gunner    | Hammer     | Crossbow  | 50        | 25             | 75                  | 75         |
+| Number of Units | Unit   | Melee Slot | Flex Slot | Unit Cost | Equipment Cost | Total Cost per Unit | Total Cost |
+| --------------- | ------ | ---------- | --------- | --------- | -------------- | ------------------- | ---------- |
+| 3               | Thrall | Dagger     | Dagger    | 20        | 4              | 24                  | 72         |
+

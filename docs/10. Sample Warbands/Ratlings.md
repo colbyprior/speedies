@@ -4,22 +4,25 @@ sidebar_position: 4
 # Ratlings
 
 Grand Total Cost: 500
+
+A build focused on getting a balance of strong heroes and weak henchman to overwhelm the enemy. Heroes can be given cheaper equipment to instead get more Underrats.
 ## Heroes
 
-Total Cost: 280
+Total Cost: 260
 
-| Unit      | Melee Slot 1 | Melee Slot 2 | Ranged Slot | Unit Cost | Equipment Cost | Total Cost |
-| --------- | ------------ | ------------ | ----------- | --------- | -------------- | ---------- |
-| Chieftain | Axe          | Shield       | Pistol      | 90        | 25             | 115        |
-| Engineer  | Axe          | Shield       | Crossbow    | 65        | 30             | 95         |
-| Veteran   | Great Axe    | -            |             | 60        | 10             | 70         |
-
+| Unit        | Melee Slot 1   | Melee Slot 2 | Ranged Slot    | Unit Cost | Equipment Cost | Total Cost |
+| ----------- | -------------- | ------------ | -------------- | --------- | -------------- | ---------- |
+| Guildmaster | Fighting Claws | -            | Throwing Stars | 80        | 30             | 110        |
+| Ratlock     | Staff          | -            | -              | 55        | 5              | 60         |
+| Assassin    | Fighting Claws | -            | Throwing Stars | 60        | 30             | 90         |
 ## Henchman
 
-Total Cost: 220
+Total Cost: 240
 
-| Number of Units | Unit      | Melee Slot | Flex Slot | Unit Cost | Equipment Cost | Total Cost per Unit | Total Cost |
-| --------------- | --------- | ---------- | --------- | --------- | -------------- | ------------------- | ---------- |
-| 1               | Berserker | Axe        | Axe       | 55        | 10             | 65                  | 65         |
-| 2               | Youngling | Hammer     | Shield    | 30        | 10             | 40                  | 80         |
-| 1               | Gunner    | Hammer     | Crossbow  | 50        | 25             | 75                  | 75         |
+| Number of Units | Unit        | Melee Slot | Flex Slot | Unit Cost | Equipment Cost | Total Cost per Unit | Total Cost |
+| --------------- | ----------- | ---------- | --------- | --------- | -------------- | ------------------- | ---------- |
+| 2               | Underrat    | Spear      | Sling     | 30        | 10             | 40                  | 80         |
+| 2               | Plague Host | Pike       | -         | 40        | 10             | 50                  | 100        |
+| 4               | Giant Rat   | -          | -         | 15        | 0              | 15                  | 60         |
+
+

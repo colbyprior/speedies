@@ -5,7 +5,7 @@ sidebar_position: 1
 
 Grand Total Cost: 500
 
-A balanced build. The Berserker and Chieftain's Pistol could be dropped in favour of a second Gunner.
+A balanced build. The Berserker and Chieftain's Pistol could be dropped in favour of a second Gunner. It's also possible to stretch for a Blunderbuss for the existing Gunner or Engineer.
 ## Heroes
 
 Total Cost: 280
