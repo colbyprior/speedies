@@ -167,7 +167,7 @@
   "Weaponsmith": {
     "Name": "Weaponsmith",
     "Type": "Inherent",
-    "Description": "If a warband starts a game with a unit with this Skill, all Ranged Weapons have their Range increased by 10\", except for Pistols whose Range is incrased by 5\""
+    "Description": "If a warband starts a game with a unit with this Skill, all Ranged Weapons have their Range increased by 10\", except for Pistols whose Range is incrased by 5\". Blunderbuss range is unaffected."
   },
   "Armoursmith": {
     "Name": "Armoursmith",
