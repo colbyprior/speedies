@@ -229,7 +229,7 @@ def spells_block(spell_schools):
     out_data = ""
     for spell_school in spell_schools:
         out_data += f"\n## {spell_school} \n\n"
-        out_data += f"| Name | Check | Description |\n"
+        out_data += f"| Name | Difficulty | Description |\n"
         out_data += f"| ---- | ------ | ---- |\n"
         for spell_name in global_spells_data:
             spell_data = global_spells_data.get(spell_name)
