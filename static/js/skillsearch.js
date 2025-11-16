@@ -57,14 +57,14 @@ async function skillSplit(item) {
     for(var i = 0; i < filterItems.length; i++) {
         var filterItem = filterItems[i];
         item.innerHTML += "<h2>" + filterItem + "</h2>";
-        if (!(filterItems.includes("Other")) && !(['Inherent', 'Melee', 'Ranged', 'Agility', 'Defense', 'Morale', 'Spellcasting', 'Other'].includes(filterItem))) {
+        if (!(filterItems.includes("Other")) && !(['Inherent', 'Melee', 'Ranged', 'Agility', 'Defence', 'Morale', 'Spellcasting', 'Other'].includes(filterItem))) {
             var newFilterNode = document.createElement('tr');
             newFilterNode.innerHTML = "<td>" + filterItem + "</td><td><input type=\"checkbox\" value=\"" + filterItem + "\" name=\"filter\" checked></td>";
             var finalRow = document.getElementById('finalrow');
             finalRow.parentNode.insertBefore(newFilterNode, finalRow);
         }
         for (var skillName in skillList) {
-            if (skillList[skillName]['Type'] === filterItem || (filterItem === "Other" && !(['Inherent', 'Melee', 'Ranged', 'Agility', 'Defense', 'Morale', 'Spellcasting'].includes(skillList[skillName]['Type'])))) {
+            if (skillList[skillName]['Type'] === filterItem || (filterItem === "Other" && !(['Inherent', 'Melee', 'Ranged', 'Agility', 'Defence', 'Morale', 'Spellcasting'].includes(skillList[skillName]['Type'])))) {
                 item.innerHTML += "<h3 class='anchor'>" + skillList[skillName]['Name'] + "</h3>";
                 item.innerHTML += "<p><em>" + skillList[skillName]['Type'] + "</em></p>";
                 item.innerHTML += "<p>" + skillList[skillName]['Description'] + "</p>";
