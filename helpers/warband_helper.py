@@ -204,6 +204,7 @@ def skills_block(all_skills, warband, warband_only=False):
     #    out_data = f"\n## Warband Special Skills \n"
     # I was lazy and didn't work out where else this was getting called, so it's not getting called and nothing is happening for warband skills
     # Fix it when you want to
+    out_data = ""
     if not warband_only:
       out_data = f"\n## Skills \n"
     for skill_name in all_skills:
