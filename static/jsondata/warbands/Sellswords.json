@@ -148,14 +148,6 @@
         }
     ],
     "Promotion Options": {
-        "Champion": {
-            "Stat Ups": "+1 Mel, +1 Def",
-            "Gained Skills": ""
-        },
-        "Sniper": {
-            "Stat Ups": "+1 Ran, +2 Agi",
-            "Gained Skills": ""
-        }
     },
     "Available Skills": {
         "Captain": {

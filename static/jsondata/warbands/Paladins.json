@@ -149,18 +149,6 @@
         }
     ],
     "Promotion Options": {
-        "Paladin": {
-            "Stat Ups": "+2 Mel, +1 Def",
-            "Gained Skills": "-"
-        },
-        "Cleric": {
-            "Stat Ups": "-",
-            "Gained Skills": "Healer"
-        },
-        "Standard Bearer": {
-            "Stat Ups": "+3 Mrl",
-            "Gained Skills": "Holy Standard"
-        }
     },
     "Henchmen Upgrades": {
         "Squire": "Normal",

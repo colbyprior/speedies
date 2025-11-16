@@ -158,14 +158,6 @@
         }
     ],
     "Promotion Options": {
-        "Overseer": {
-            "Stat Ups": "+2 Mel, +1 Def",
-            "Gained Skills": ""
-        },
-        "Sneaky Rat": {
-            "Stat Ups": "+1 Mel, +1 Ran, +2 Agi",
-            "Gained Skills": ""
-        }
     },
     "Available Skills": {
         "Guildmaster": {

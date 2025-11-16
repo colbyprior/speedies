@@ -161,10 +161,6 @@
         }
     ],
     "Promotion Options": {
-        "Inquisitor": {
-            "Stat Ups": "+2 Mel, +2 Ran, +2 Def",
-            "Gained Skills": "Free Skill, Hates Magic"
-        }
     },
     "Available Skills": {
         "Grand Inquisitor": {

@@ -159,18 +159,6 @@
         }
     ],
     "Promotion Options": {
-        "Mage": {
-            "Stat Ups": "-",
-            "Gained Skills": "Nature Spells"
-        },
-        "Honour Guard": {
-            "Stat Ups": "+1 Mel, +1 Rng, +2 Def",
-            "Gained Skills": "-"
-        },
-        "Ranger": {
-            "Stat Ups": "+3 Rng",
-            "Gained Skills": "-"
-        }
     },
     "Available Skills": {
         "Commander": {

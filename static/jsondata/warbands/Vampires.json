@@ -171,10 +171,6 @@
         }
     ],
     "Promotion Options": {
-        "Vampire Spawn": {
-            "Stat Ups": "+2 Mov, Mel, Ran, Def, Agi",
-            "Gained Skills": "Undead"
-        }
     },
     "Available Skills": {
         "Vampire Noble": {
