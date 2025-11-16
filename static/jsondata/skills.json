@@ -154,11 +154,6 @@
     "Type": "Spellcasting",
     "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate 'Basic' spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
   },
-  "Determination": {
-    "Name": "Determination",
-    "Type": "Paladins",
-    "Description": "This unit may re-roll their first failed morale check of each battle."
-  },
   "Ki Strike": {
     "Name": "Ki Strike",
     "Type": "Inherent",
@@ -209,11 +204,6 @@
     "Type": "Inherent",
     "Description": "This unit may move through terrain and other units as if they weren't there, but may not ends its movement inside of terrain or other units. It must still make Out-of-Sight Rolls as normal and must move through terrain or units when Engaging if this will make the path to its target shorter. It may be intercepted by enemies as normal."
   },
-  "Advanced Necromancy": {
-    "Name": "Advanced Necromancy",
-    "Type": "Undead",
-    "Description": "This can only be taken by a Necromancer. Death Knights and Reapers can now be the target of the 'Raise Dead' spell. The Difficulty of the spell is increased by 5 when they are the target."
-  },
   "Undead": {
     "Name": "Undead",
     "Type": "Inherent",
@@ -233,11 +223,6 @@
     "Name": "Slow",
     "Type": "Inherent",
     "Description": "This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move)."
-  },
-   "Blur": {
-    "Name": "Blur",
-    "Type": "Wood Elves",
-    "Description": "If an enemy attempts to Engage this unit and this unit is in cover, the enemy must make an Out-of-Sight Roll as if the unit was out of Line-of-Sight."
   },
    "+2 Piercing": {
     "Name": "+2 Piercing",
@@ -274,11 +259,6 @@
     "Type": "Inherent",
     "Description": "If this unit is not within 5\" of an allied hero at the start of its turn, it cannot act during the Engage, Move, Cast, and Ranged phases. It can act in Melee Combat as normal."
   },
-  "Keen Tail": {
-    "Name": "Keen Tail",
-    "Type": "Ratlings",
-    "Description": "This unit can use their tail to equip a one handed weapon as though it was another arm gaining an extra attack."
-  },
   "Upkeep 1": {
     "Name": "Upkeep 1",
     "Type": "Inherent",
@@ -296,7 +276,7 @@
   },
   "Inquisitor": {
     "Name": "Inquisitor",
-    "Type": "Inquisitors",
+    "Type": "Inherent",
     "Description": "This unit gets a +2 Pierce modifier against all enemy heroes for melee attacks."
   },
   "Can't promote": {
@@ -306,28 +286,18 @@
   },
   "The Rapture is Nigh": {
     "Name": "The Rapture is Nigh",
-    "Type": "Inquisitors",
+    "Type": "Inherent",
     "Description": "This unit counts as two heroes for the purposes of the 'Incite the Mob' special rule."
   },
   "Heed the Scripture": {
     "Name": "Heed the Scripture",
-    "Type": "Inquisitors",
+    "Type": "Inherent",
     "Description": "This unit can use the morale of the Doomsayer if they are within 5\" of it."
-  },
-  "Cult Magic": {
-    "Name": "Cult Magic",
-    "Type": "Spellcasting",
-    "Description": "This unit can cast Cult Magic and immediately learns one spell of your choice. If this unit is not a Leader, all spellcasting checks have a -2 to the roll."
   },
   "Pack Tactics": {
     "Name": "Pack Tactics",
     "Type": "Inherent",
     "Description": "If this unit attacks an enemy that is also in base contact with an ally that also has Pack Tactics, this unit has advantage on the attack."
-  },
-  "Mutation": {
-    "Name": "Mutation",
-    "Type": "Cultists",
-    "Description": "Select one monstrosity trait for the unit to adopt. Monstrosities can't use equipment and can't mutate any further. Monstrosities lose spellcasting unless it is your leader. You can have a maximum of 3 of each monstrosity trait (combined count from heroes and henchmen)."
   },
   "Fixed Equipment (Scythe)": {
     "Name": "Fixed Equipment (Scythe)",
