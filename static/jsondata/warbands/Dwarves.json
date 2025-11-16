@@ -155,18 +155,6 @@
         }
     ],
     "Promotion Options": {
-        "Engineer": {
-            "Stat Ups": "+1 Rng",
-            "Gained Skills": "Weaponsmith"
-        },
-        "Armourer": {
-            "Stat Ups": "+1 Def",
-            "Gained Skills": "Armoursmith"
-        },
-        "Veteran": {
-            "Stat Ups": "+1 Mel",
-            "Gained Skills": "-"
-        }
     },
     "Available Skills": {
         "Chieftain": {
