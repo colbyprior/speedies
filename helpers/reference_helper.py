@@ -78,9 +78,9 @@ def spells_block():
     out_data = ""
     spell_schools_data = {}
     for spell_name in global_spells_data:
+        spell_data = global_spells_data[spell_name]
         if spell_data.get('School') == "Cult Magic":
           continue
-        spell_data = global_spells_data[spell_name]
         if spell_data.get('School') not in spell_schools_data:
             spell_schools_data[spell_data.get('School')] = [spell_data]
         else:
