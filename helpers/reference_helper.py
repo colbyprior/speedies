@@ -51,7 +51,7 @@ def skills_block():
         "Melee": [],
         "Ranged": [],
         "Agility": [],
-        "Defense": [],
+        "Defence": [],
         "Morale": [],
         "Spellcasting": []
     }
