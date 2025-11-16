@@ -19,6 +19,11 @@
     "Type": "Melee", 
     "Description": "This unit gets Advantage on the first round of combat when they Engage an enemy"
   },
+   "Good Defence": { 
+    "Name": "Good Defence", 
+    "Type": "Defence", 
+    "Description": "Yes, this unit has a gooder Defence than other units."
+  },
   "Blade Defence": { 
     "Name": "Blade Defence", 
     "Type": "Melee", 
