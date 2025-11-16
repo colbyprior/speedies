@@ -84,7 +84,7 @@ def warband_special_rules(warband):
 
 def heroes_table(warband):
     out_data = "## Heroes\n"
-    out_data += f"| Units | Mov | Mel | Rng | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |\n"
+    out_data += f"| Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |\n"
     out_data += f"| ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |\n"
     for hero in warband.get("Heroes"):
         skills = []
@@ -104,7 +104,7 @@ def heroes_table(warband):
 
 def henchmen_table(warband):
     out_data = "\n## Henchmen\n"
-    out_data += f"| Units | Mov | Mel | Rng | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |\n"
+    out_data += f"| Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |\n"
     out_data += f"| ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |\n"
     for henchmen in warband.get("Henchmen"):
         skills = []
@@ -120,8 +120,11 @@ def henchmen_table(warband):
 
 def warband_promotion_options(warband):
     out_data = "\n## Promotion Options\n"
-    out_data += f"| Unit | Stat Ups | Gained Skills |\n"
-    out_data += f"| ---- | ---- | ---- |\n"
+    #Removing the following lines now that we are changing promotion options
+    #Removing the following lines now that we are changing promotion options
+    out_data += "Coming Soon!" #Adding placeholder
+    #out_data += f"| Unit | Stat Ups | Gained Skills |\n"
+    #out_data += f"| ---- | ---- | ---- |\n"
     for unit in warband.get("Promotion Options"):
         promotion_data = warband.get("Promotion Options").get(unit)
         out_data += f"| {unit} | {promotion_data.get('Stat Ups')} | {promotion_data.get('Gained Skills')} |\n"
@@ -196,10 +199,10 @@ def equipment_block(warband):
 
 def skills_block(all_skills, warband, warband_only=False):
     spell_schools = []
-    if warband_only:
-        out_data = f"\n## Warband Special Skills \n"
-    else:
-        out_data = f"\n## Skills \n"
+    # Remove warband only ones
+    #if warband_only:
+    #    out_data = f"\n## Warband Special Skills \n"
+    out_data = f"\n## Skills \n"
     for skill_name in all_skills:
         skill_data = global_skills_data.get(skill_name)
         if not skill_data:
@@ -234,10 +237,10 @@ def spells_block(spell_schools):
 
 def warband_available_skills(warband):
     out_data = "\n## Skill Table\n"
-    out_data += f"| Units | Mel | Rng | Def | Agi | Mrl | Special | Skills |\n"
-    out_data += f"| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |\n"
+    out_data += f"| Units | Mel | Rgd | Def | Agi | Mrl | Skills |\n"
+    out_data += f"| ---- | ---- | ---- | ---- | ---- | ---- | ---- |\n"
     for unit in warband.get("Available Skills"):
         skill_data = warband.get("Available Skills").get(unit)
         skills_link = get_skills_link(warband.get("Name"), skill_data)
-        out_data += f"| {unit} | {skill_data.get('Mel')} | {skill_data.get('Rng')} | {skill_data.get('Def')} | {skill_data.get('Agi')} | {skill_data.get('Mrl')} | {skill_data.get('Special')} | {skills_link} |\n"
+        out_data += f"| {unit} | {skill_data.get('Mel')} | {skill_data.get('Rng')} | {skill_data.get('Def')} | {skill_data.get('Agi')} | {skill_data.get('Mrl')} | {skills_link} |\n"
     return out_data
