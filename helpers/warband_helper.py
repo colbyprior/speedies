@@ -119,7 +119,7 @@ def henchmen_table(warband):
 
 
 def warband_promotion_options(warband):
-    out_data = "\n## Promotion Options\n"
+    out_data = "\n## Promotion Table\n"
     #Removing the following lines now that we are changing promotion options
     #Removing the following lines now that we are changing promotion options
     out_data += "Coming Soon!" #Adding placeholder
@@ -202,7 +202,10 @@ def skills_block(all_skills, warband, warband_only=False):
     # Remove warband only ones
     #if warband_only:
     #    out_data = f"\n## Warband Special Skills \n"
-    out_data = f"\n## Skills \n"
+    # I was lazy and didn't work out where else this was getting called, so it's not getting called and nothing is happening for warband skills
+    # Fix it when you want to
+    if not warband_only:
+      out_data = f"\n## Skills \n"
     for skill_name in all_skills:
         skill_data = global_skills_data.get(skill_name)
         if not skill_data:
