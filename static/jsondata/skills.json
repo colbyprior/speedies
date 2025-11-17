@@ -229,11 +229,6 @@
     "Type": "Inherent",
     "Description": "This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move)."
   },
-   "+2 Piercing": {
-    "Name": "+2 Piercing",
-    "Type": "Inherent",
-    "Description": "This unit gains +2 Piercing for all its attacks."
-  },
   "Holy Standard": {
     "Name": "Holy Standard",
     "Type": "Inherent",
@@ -253,11 +248,6 @@
     "Name": "Plague Magic",
     "Type": "Spellcasting",
     "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate 'Basic' spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
-  },
-  "Big Hitter 1": {
-    "Name": "Big Hitter 1",
-    "Type": "Inherent",
-    "Description": "This unit gets +2 Inj and +2 Piercing for melee attacks."
   },
   "Cowardly": {
     "Name": "Cowardly",

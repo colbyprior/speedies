@@ -211,7 +211,7 @@
         },
         "Thralls": {
             "Aliases": ["Thrall"],
-            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
+            "Melee Weapons": ["Dagger", "Hammer / Club", "Sword", "Spear", "Great Hammer / Club", "Great Sword", "Pike", "Shield"],
             "Ranged Weapons": ["Short Bow", "Bow", "Crossbow"],
             "Armour": ["Light Armour", "Heavy Armour"]
         }

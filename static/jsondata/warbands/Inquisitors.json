@@ -195,7 +195,7 @@
     "Equipment": {
         "Inquisitors": {
             "Aliases": ["Grand Inquisitor", "Inquisitor", "Doomsayer"],
-            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Torch", "Great Hammer", "Great Sword", "Pike"],
+            "Melee Weapons": ["Dagger", "Hammer", "Sword / Axe", "Torch", "Great Hammer", "Great Sword / Axe", "Pike"],
             "Ranged Weapons": ["Crossbow", "Hand Crossbow", "Pistol", "Rifle"],
             "Armour": ["Light Armour", "Heavy Armour"]
         },
@@ -207,13 +207,13 @@
         },
         "Fanatics": {
             "Aliases": ["Fanatic"],
-            "Melee Weapons": ["Great Sword", "Flail", "Pike"],
+            "Melee Weapons": ["Great Sword / Axe", "Flail", "Pike"],
             "Ranged Weapons": [],
             "Armour": []
         },
         "Zealots": {
             "Aliases": ["Zealot"],
-            "Melee Weapons": ["Dagger", "Hammer", "Sword", "Spear", "Torch", "Shield"],
+            "Melee Weapons": ["Dagger", "Hammer / Club", "Sword / Axe", "Spear", "Torch", "Shield"],
             "Ranged Weapons": ["Crossbow"],
             "Armour": ["Light Armour"]
         }

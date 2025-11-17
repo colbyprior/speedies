@@ -9,7 +9,7 @@
     "Slots": "1"
   },
   "Sword": {
-    "Name": "Sword / Axe",
+    "Name": "Sword",
     "Effect": "",
     "Cost": "5",
     "Injury": "0",
@@ -45,7 +45,7 @@
     "Slots": "2"
   },
   "Great Sword": {
-    "Name": "Great Sword / Axe",
+    "Name": "Great Sword",
     "Effect": "",
     "Cost": "10",
     "Injury": "3",

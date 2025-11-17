@@ -3,6 +3,7 @@
     "Axe (Sword)": "Sword",
     "Great Axe (Great Sword)": "Great Sword",
     "Club (Hammer)": "Hammer",
+	"Hammer / Club": "Hammer",
     "Great Club (Great Hammer)": "Great Hammer",
     "Mace (Hammer)": "Hammer",
     "Great Mace (Great Hammer)": "Great Hammer",
@@ -11,7 +12,10 @@
 	"Glaive": "Great Sword",
 	"Flail": "Great Hammer",
 	"Flail / Great Hammer": "Great Hammer",
-	"Spear / Staff": "Spear"
+	"Spear / Staff": "Spear",
+	"Great Sword / Axe": "Great Sword",
+	"Sword / Axe": "Sword",
+	"Great Hammer / Club": "Great Hammer"
   },
   "Ranged Weapons": {
 

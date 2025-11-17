@@ -189,13 +189,13 @@
     "Equipment": {
         "Warrior": {
             "Aliases": ["Chieftain", "Armourer", "Veteran", "Berserker", "Miner", "Youngling"],
-            "Melee Weapons": ["Dagger", "Sword", "Hammer", "Great Sword", "Great Hammer", "Shield"],
+            "Melee Weapons": ["Dagger", "Sword / Axe", "Hammer", "Great Sword / Axe", "Great Hammer", "Shield"],
             "Ranged Weapons": ["Pistol"],
             "Armour": ["Light Armour", "Heavy Armour", "Mithril Armour (If warband has Armourer)"]
         },
         "Gunner": {
             "Aliases": ["Gunner", "Engineer"],
-            "Melee Weapons": ["Dagger", "Sword", "Hammer", "Shield"],
+            "Melee Weapons": ["Dagger", "Sword / Axe", "Hammer", "Shield"],
             "Ranged Weapons": ["Crossbow", "Pistol", "Rifle", "Blunderbuss"],
             "Armour": ["Light Armour", "Heavy Armour"]
         }

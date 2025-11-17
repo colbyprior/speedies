@@ -206,13 +206,13 @@
     "Equipment": {
         "Undead": {
             "Aliases": ["Skeleton", "Death Knight"],
-            "Melee Weapons": ["Dagger", "Spear", "Sword", "Hammer", "Pike", "Great Sword", "Great Hammer", "Shield"],
+            "Melee Weapons": ["Dagger", "Spear", "Sword / Axe", "Hammer", "Pike", "Great Sword / Axe", "Great Hammer", "Shield"],
             "Ranged Weapons": ["Short Bow", "Bow"],
             "Armour": ["Light Armour", "Heavy Armour"]
         },
         "Cultist": {
             "Aliases": ["Necromancer", "Plague Cultist"],
-            "Melee Weapons": ["Dagger", "Spear / Staff", "Sword", "Hammer"],
+            "Melee Weapons": ["Dagger", "Spear / Staff", "Sword"],
             "Ranged Weapons": ["Short Bow", "Bow"],
             "Armour": ["Light Armour"]
         }
