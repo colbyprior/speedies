@@ -13,7 +13,7 @@ def get_skills_link(warband_name, skill_data):
             if filter:
                 filter += ","
             filter += short_to_long(short_name, warband_name)
-    return f"[\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter={filter})"
+    return f"[\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter={filter})"
 
 
 def clean_link(name):
