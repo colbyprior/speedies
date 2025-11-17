@@ -23,21 +23,21 @@ def generate_warbands():
             out_data += warband_helper.warband_available_skills(warband)
 
             # print(out_data)
-            f = open(f"docs/7. Warbands/{warband.get('Name')}.md", "w")
+            f = open(f"docs/8. Warbands/{warband.get('Name')}.md", "w")
             f.write(out_data)
             f.close()
 
 
 def generate_reference_pages():
-    with (open("docs/8. Reference/1. Equipment List.md", "w") as f):
+    with (open("docs/9. Reference/1. Equipment List.md", "w") as f):
         out_data = reference_helper.generate_equipment_page()
         f.write(out_data)
         f.close()
-    with (open("docs/8. Reference/2. Skill List.md", "w") as f):
+    with (open("docs/9. Reference/2. Skill List.md", "w") as f):
         out_data = reference_helper.generate_skills_page()
         f.write(out_data)
         f.close()
-    with (open("docs/8. Reference/3. Spell List.md", "w") as f):
+    with (open("docs/9. Reference/3. Spell List.md", "w") as f):
         out_data = reference_helper.generate_spells_page()
         f.write(out_data)
         f.close()
