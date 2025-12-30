@@ -8,24 +8,21 @@ This team sucks... your blood!
 | ---- | ---- |
 | Play Style | Powerful leader with minions |
 
-## Special Rules
-### Enthrall
-If any enemy Hero dies during the post-game Injury rolls, they transform into a Vampire Spawn and join your warband. This effect can only trigger if you have 5 or less Heroes in your warband.
 ## Heroes
-| Units | Mov | Mel | Rng | Def | Agi | Mrl | Atk | Wound | Inj | Prc | Skills | Cost | Cap | Skill Ups |
-| ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | --- | --------- |
-| Vampire Noble | 8 | 11 | - | 14 | 6| 7 | 2 | 2 | 0 | 0 | [Leader](#leader), [Undead](#undead), [Fear](#fear) | 160 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Vampires) |
-| Vampire Seductor | 8 | 14 | - | 16 | 8| 10 | 2 | 2 | 0 | 0 | [Vampiric Magic](#vampiric-magic), [Undead](#undead), [Fear](#fear) | 130 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Vampires) |
-| Nosferatu | 8 | 12 | - | 14 | 8| 10 | 2 | 2 | 0 | 0 | [No Equipment](#no-equipment), [Undead](#undead), [Fear](#fear) | 115 | 1 | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Vampires) |
-| Vampire Spawn | 8 | 14 | - | 16 | 8| 10 | 1 | 2 | 0 | 0 | [Undead](#undead), [Fear](#fear) | 70 | None | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Vampires) |
+| Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
+| ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
+| Vampire Noble | 8 | 14 | - | 18 | 7| 7 | 2 | 2 | 0 | 0 | [Leader](#leader), [Undead](#undead), [Fear](#fear), [Vampire](#vampire) | 165 | 1 | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility,Morale) |
+| Vampire Seductor | 8 | 14 | - | 18 | 10| 10 | 2 | 2 | 0 | 0 | [Vampiric Magic](#vampiric-magic), [Undead](#undead), [Fear](#fear), [Vampire](#vampire) | 125 | 1 | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
+| Nosferatu | 8 | 12 | - | 18 | 8| 10 | 2 | 2 | 0 | 0 | [No Equipment](#no-equipment), [Undead](#undead), [Fear](#fear), [Vampire](#vampire) | 125 | 1 | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility) |
+| Vampire Spawn | 8 | 14 | - | 18 | 10| 10 | 1 | 2 | 0 | 0 | [Undead](#undead), [Fear](#fear), [Vampire](#vampire) | 85 | - | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
 
 ## Henchmen
-| Units | Mov | Mel | Rng | Def | Agi | Mrl | Atk | Wound | Inj | Prc | Skills | Cost |  Cap |
-| ----- | --- | --- | --- | --- | --- | --- | --- | ----- | --- | --- | ------ | ---- | ---- |
-| Thrall | 6 | 16 | 16 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 25 | None |
-| Ghoul | 6 | 14 | 16 | 16 | 10| 16 | 2 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment) | 40 | None |
-| Dire Wolf | 8 | 10 | - | 19 | 14| 18 | 1 | 1 | 0 | 0 | [Ambush](#ambush), [Animal](#animal) | 30 | 4 |
-| Giant Bat | 8 | 16 | - | - | 8| 16 | 1 | 1 | 0 | 0 | [Flying](#flying), [Animal](#animal) | 15 | 4 |
+| Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
+| ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
+| Thrall | 6 | 16 | 16 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 20 | - |
+| Ghoul | 6 | 13 | - | - | 10| 16 | 2 | 1 | 2 | 0 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment) | 60 | - |
+| Dire Wolf | 8 | 10 | - | 18 | 10| 18 | 1 | 1 | 2 | 0 | [Ambush](#ambush), [Animal](#animal) | 35 | 3 |
+| Giant Bat | 8 | 16 | - | - | 8| 16 | 1 | 1 | 0 | 0 | [Flying](#flying), [Animal](#animal) | 15 | 3 |
 
 ## Skills 
 ### Leader
@@ -35,15 +32,19 @@ Allied units within 5" of this unit can use this unit's Morale stat for Checks i
 ### Undead
 *Inherent*
 
-This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to disease (including the Plague).
+This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to the Plague.
 ### Fear
 *Inherent*
 
 This unit causes Fear.
+### Vampire
+*Inherent*
+
+If there is a non-Undead, non-Animal ally within 2" at the start of the Engage Phase, you may immediately Incapacitate that ally to remove Staggered from this unit and gain one Wound, up to the unit's maximum Wounds.
 ### Vampiric Magic
 *Spellcasting*
 
-This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Spellcaster, this unit has an innate spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield.
+This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate 'Basic' spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield.
 ### No Equipment
 *Inherent*
 
@@ -55,17 +56,11 @@ This unit gets Advantage on the first round of combat when they Engage an enemy
 ### Animal
 *Inherent*
 
-This unit cannot Promote, use ladders (except by making a full Climb Check), pick up Treasure, or use equipment.
+This unit cannot Promote, use ladders (except by making a full Climb Check), pick up Treasure, or use equipment (but is not penalised for fighting Unarmed).
 ### Flying
 *Inherent*
 
 This unit can move through the air in any direction. They must not end their movement in the air.
-
-## Warband Special Skills 
-### Bloodthirsty
-*Vampires*
-
-If this unit Incapacitates another unit in Melee they may recover one Wound.
 
 ## Equipment
 
@@ -75,14 +70,13 @@ Vampires equipment for the unit types: Vampire Noble, Vampire Seductor, Vampire 
 | Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
-| Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
-| Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
-| Pike | 3 | 0 | 7 |  | 10 | 2 |
+| Sword | 0 | 3 | 0 |  | 5 | 1 |
+| Great Sword | 3 | 3 | 5 |  | 10 | 2 |
 
 | Armour | Def | Cost |
 | ------ | --- | ---- |
-| Light Armour | 1 | 15 |
-| Heavy Armour | 2 | 30 |
+| Light Armour | 1 | 10 |
+| Heavy Armour | 2 | 20 |
 
 ### Thralls Equipment 
 Thralls equipment for the unit types: Thrall
@@ -90,42 +84,48 @@ Thralls equipment for the unit types: Thrall
 | Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
-| Hammer | 4 | 0 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 | 0 |  | 5 | 1 |
-| Spear | 0 | 0 | 2 | A spear may not be used with dual-wielding melee weapons but may be used with a shield. | 5 | 1 |
-| Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
-| Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
+| Hammer / Club | 4 | 0 | 0 |  | 5 | 1 |
+| Sword | 0 | 3 | 0 |  | 5 | 1 |
+| Spear | 0 | 0 | 2 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
+| Great Hammer / Club | 7 | 0 | 5 |  | 10 | 2 |
+| Great Sword | 3 | 3 | 5 |  | 10 | 2 |
 | Pike | 3 | 0 | 7 |  | 10 | 2 |
 | Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
 | Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
 | ------------- | --- | --- | --- | ------ | ---- | ----- |
-| Short Bow | 20" | 0 | 0 | Light | 5 | 1 |
-| Bow | 25" | 0 | 0 | Light | 10 | 1 |
+| Short Bow | 20" | 0 | 0 | [Light](#light) | 5 | 1 |
+| Bow | 25" | 0 | 0 |  | 10 | 1 |
+| Crossbow | 30" | 2 | 0 | [Long Reload](#long-reload) | 20 | 1 |
 
 | Armour | Def | Cost |
 | ------ | --- | ---- |
-| Light Armour | 1 | 15 |
+| Light Armour | 1 | 10 |
+| Heavy Armour | 2 | 20 |
+
+### Ranged Weapon Effects
+#### Light 
+This weapon may be used with a Shield.
+#### Long Reload 
+You may not use this weapon if it was fired in the previous turn.
 
 ## Vampiric Magic 
 
-| Name | Check | Description |
+| Name | Difficulty | Description |
 | ---- | ------ | ---- |
-| Frenzy | 13 | Choose one unit within 6", including the caster. On a success that unit may take their full movement even if they have already moved. If they move into base contact with an enemy unit this counts as having charged. The unit may attack with advantage on the first round. |
-| Lure | 15 | Target an enemy you can see within 10". You may immediatey make that unit move up to their base move speed. This may include drop down, jump and climbing checks. If this unit moves into base contact with any one of your units it counts as being charged by your unit. |
-| Bat wings | 12 | Choose one unit within 6", including the caster. On a success, that unit can fly in any direction as part of their move speed. At the start of each turn, the caster must make a Morale check to keep the spell going. Only one unit can be affected by this spell at a time. |
-| Vampire Hex | 13 | Choose one unit with 12" this unit has disadvantage on defense rolls until the start of your next turn. |
+| Frenzy | 13 | Choose one unit within 5", including the caster. That unit may take their full movement even if they have already moved. If they move into base contact with an enemy unit this counts as having charged. The unit may attack with advantage on the first round. |
+| Lure | 12 | Basic. Target one unit you can see within 15". The target immediately moves towards the Caster by the most direct path, including by Jumping Down. If the target is able to reach the Caster, it is placed in base contact and the Caster is considered to have Engaged it. |
+| New Spell | 99 | Bottom text. |
+| Bat wings | 11 | Ongoing. Choose one ally within 5", including the caster. That unit gains the Flying skill. |
+| Hex | 14 | Ongoing. Choose a single enemy within 10". The target has Disadvantage on all Checks it makes. |
 
 
-## Promotion Options
-| Unit | Stat Ups | Gained Skills |
-| ---- | ---- | ---- |
-| Vampire Spawn | +2 Mov, Mel, Ran, Def, Agi | Undead |
-
+## Promotion Table
+Coming Soon!
 ## Skill Table
-| Units | Mel | Rng | Def | Agi | Mrl | Special | Skills |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Vampire Noble | X | X |  |  | X | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale,Vampires) |
-| Vampire Seductor |  |  |  |  | X | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Morale,Vampires) |
-| Vampire Spawn | X | X |  | X |  | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Vampires) |
-| Nosferatu | X |  |  |  |  | X | [\[Link\]](docs/8.%20Reference/4.%20Skill%20Search.md?filter=Melee,Vampires) |
+| Units | Mel | Rgd | Def | Agi | Mrl | Skills |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Vampire Noble | X |  | X | X | X | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility,Morale) |
+| Vampire Seductor | X |  |  | X | X | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
+| Vampire Spawn | X |  |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
+| Nosferatu | X |  | X | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility) |

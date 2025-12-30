@@ -1,5 +1,6 @@
 from helpers.global_data import (global_henchmen_upgrade_paths, global_skills_data, global_melee_weapons_data,
-                                 global_ranged_weapons_data, global_armour_data, global_spells_data, global_aliases)
+                                 global_ranged_weapons_data, global_armour_data, global_spells_data, global_aliases,
+                                 global_ranged_weapon_effects)
 import sys
 
 
@@ -132,6 +133,7 @@ def warband_promotion_options(warband):
 
 
 def equipment_block(warband):
+    ranged_weapon_effects = []
     out_data = "\n## Equipment\n"
     for equipment in warband.get("Equipment"):
         equipment_data = warband.get("Equipment").get(equipment)
@@ -165,6 +167,19 @@ def equipment_block(warband):
             out_data += f"| ------------- | --- | --- | --- | ------ | ---- | ----- |\n"
         for weapon_name in equipment_data.get("Ranged Weapons"):
             weapon_data = global_ranged_weapons_data.get(weapon_name)
+
+            # Get all ranged weapon effects
+            weapon_effects = weapon_data.get('Effect').split(", ")
+            effects_str = ""
+            if weapon_effects != [""]:
+                effects = []
+                for weapon_effect in weapon_effects:
+                    weapon_effect = weapon_effect.strip()
+                    effects += [f"[{weapon_effect}](#{clean_link(weapon_effect)})"]
+                    if weapon_effect not in ranged_weapon_effects:
+                        ranged_weapon_effects += [weapon_effect]
+                effects_str = ", ".join(effects)
+
             weapon_alias = ""
             if not weapon_data:
                 weapon_alias = global_aliases.get("Ranged Weapons").get(weapon_name)
@@ -173,9 +188,9 @@ def equipment_block(warband):
                     sys.exit(1)
                 weapon_data = global_ranged_weapons_data.get(weapon_alias)
             if weapon_alias:
-                out_data += f"| {weapon_name} | {weapon_data.get('Range')} | {weapon_data.get('Injury')} | {weapon_data.get('Piercing')} | {weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
+                out_data += f"| {weapon_name} | {weapon_data.get('Range')} | {weapon_data.get('Injury')} | {weapon_data.get('Piercing')} | {effects_str} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
             else:
-                out_data += f"| {weapon_data.get('Name')} | {weapon_data.get('Range')} | {weapon_data.get('Injury')} | {weapon_data.get('Piercing')} | {weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
+                out_data += f"| {weapon_data.get('Name')} | {weapon_data.get('Range')} | {weapon_data.get('Injury')} | {weapon_data.get('Piercing')} | {effects_str} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
 
         if equipment_data.get("Armour"):
             out_data += "\n"
@@ -194,6 +209,12 @@ def equipment_block(warband):
                 out_data += f"| {armour_name} | {armour_data.get('Defense')} | {armour_data.get('Cost')} |\n"
             else:
                 out_data += f"| {armour_data.get('Name')} | {armour_data.get('Defense')} | {armour_data.get('Cost')} |\n"
+
+    out_data += "\n### Ranged Weapon Effects\n"
+    for effect_name in ranged_weapon_effects:
+        effect = global_ranged_weapon_effects[effect_name]
+        out_data += f"#### {effect_name} \n"
+        out_data += f"{effect}\n"
     return out_data
 
 
