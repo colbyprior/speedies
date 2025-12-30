@@ -59,7 +59,7 @@ This unit may not have any equipment, but does not suffer the penalties for figh
 ### Ethereal
 *Inherent*
 
-This unit may move through terrain and other units as if they weren't there, but may not ends its movement inside of terrain or other units. It must still make Out-of-Sight Rolls as normal and must move through terrain or units when Engaging if this will make the path to its target shorter. It may be intercepted by enemies as normal.
+This unit may move through terrain and other units as if they weren't there, but may not ends its movement inside of terrain or other units. It must still make Out-of-Sight Rolls as normal and must move through terrain or units when Engaging if this will make the path to its target shorter. It may be intercepted by enemies as normal. It may not Protect others from Ranged Attacks.
 ### Large
 *Inherent*
 
