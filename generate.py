@@ -2,6 +2,7 @@ import json5
 from pathlib import Path
 import helpers.warband_helper as warband_helper
 import helpers.reference_helper as reference_helper
+import helpers.faction_helper as faction_helper
 
 
 def generate_warbands():
@@ -43,5 +44,13 @@ def generate_reference_pages():
         f.close()
     return
 
+def generate_factions():
+    with (open("docs/7. Factions List/4. Faction Agents.md", "w") as f):
+        out_data = faction_helper.generate_faction_agents()
+        f.write(out_data)
+        f.close()
+
+
 generate_warbands()
 generate_reference_pages()
+generate_factions()
