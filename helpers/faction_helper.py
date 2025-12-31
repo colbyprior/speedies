@@ -1,4 +1,4 @@
-from helpers.global_data import (global_faction_agents)
+from helpers.global_data import (global_faction_agents, global_skills_data)
 
 def minimalNumber(x):
     if type(x) is str:
@@ -27,6 +27,13 @@ def generate_faction_agents():
         out_data += f"| {faction_agent['Move']} | {minimalNumber(float(faction_agent['Move'])*1.5)}| {faction_agent['Melee']}| {faction_agent['Ranged']} "
         out_data += f"| {faction_agent['Defense']}| {faction_agent['Agility']}| {faction_agent['Morale']}| {faction_agent['Attacks']} "
         out_data += f"| {faction_agent['Wounds']}| {faction_agent['Piercing']}| {faction_agent['Injury']}| {faction_agent['Faction Support Cost']}| {faction_agent['Skills']}\n\n"
+        for skill in faction_agent['Skills'].split(", "):
+            if skill == "":
+                continue
+            out_data += f"##### {skill}\n"
+            out_data += global_skills_data[skill]["Description"]
+            out_data += "\n"
+
         out_data += f"#### Event\n"
         out_data += f"{faction_agent['Event']}\n"
     return out_data
