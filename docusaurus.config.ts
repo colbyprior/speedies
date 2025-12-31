@@ -64,7 +64,7 @@ const config: Config = {
     navbar: {
       title: 'Speedies',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Speedies',
         src: 'img/logo.svg',
       },
       items: [
@@ -93,6 +93,15 @@ const config: Config = {
             },
             {
               label: 'Rulez',
+              to: '/docs/Intro/Speedheim%20Overview',
+            }
+          ],
+        },
+        {
+          title: 'Egg',
+          items: [
+            {
+              label: 'Egg',
               to: '/docs/Intro/Speedheim%20Overview',
             }
           ],

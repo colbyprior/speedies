@@ -16,6 +16,7 @@ function HomepageHeader() {
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
+        <meta http-equiv="refresh" content="0; url=/docs/Intro/Speedheim%20Overview" />
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
         </div>
