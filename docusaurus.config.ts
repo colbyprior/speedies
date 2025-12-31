@@ -59,7 +59,8 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
-        defaultMode: 'dark'
+        defaultMode: 'dark',
+        disableSwitch: true
     },
     navbar: {
       title: 'Speedies',
@@ -73,6 +74,31 @@ const config: Config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Speedies',
+        },
+        {
+          href: '/docs/Quick%20Reference',
+          position: 'left',
+          label: 'Quick Reference',
+        },
+        {
+          href: '/docs/Game%20Concepts/Injury',
+          position: 'left',
+          label: 'Injury',
+        },
+        {
+          href: '/docs/Pre-Game%20Rules/Pre-Game%20Overview',
+          position: 'left',
+          label: 'Pre-Game Overview',
+        },
+        {
+          href: '/docs/Game%20Rules/Turn%20Overview',
+          position: 'left',
+          label: 'Turn Overview',
+        },
+        {
+          href: '/docs/Post-Game%20Rules/Post-Game%20Overview',
+          position: 'left',
+          label: 'Post-Game Overview',
         },
         {
           href: 'https://github.com/colbyprior/speedies',
@@ -119,8 +145,24 @@ const config: Config = {
               to: '/docs/Intro/Speedheim%20Overview',
             },
             {
-              label: 'Rulez',
-              to: '/docs/Intro/Speedheim%20Overview',
+              to: '/docs/Quick%20Reference',
+              label: 'Quick Reference',
+            },
+            {
+              to: '/docs/Game%20Concepts/Injury',
+              label: 'Injury',
+            },
+            {
+              to: '/docs/Pre-Game%20Rules/Pre-Game%20Overview',
+              label: 'Pre-Game Overview',
+            },
+            {
+              to: '/docs/Game%20Rules/Turn%20Overview',
+              label: 'Turn Overview',
+            },
+            {
+              to: '/docs/Post-Game%20Rules/Post-Game%20Overview',
+              label: 'Post-Game Overview',
             }
           ],
         },
