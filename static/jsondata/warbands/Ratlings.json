@@ -41,7 +41,7 @@
             "Morale": "13",
             "Cost": 55,
             "Skills": [
-                "Plague Magic"
+                "Blight Magic"
             ]
         },
         {
@@ -100,7 +100,7 @@
             "Skills": []
         },
         {
-            "Name": "Plague Host",
+            "Name": "Blight Host",
             "Type Cap": "2",
             "Move": "8",
             "Piercing": "0",
@@ -114,7 +114,7 @@
             "Morale": "16",
             "Cost": 40,
             "Skills": [
-			"Spread Plague (Minor)"
+			"Spread Blight (Minor)"
 			]
         },
         {
@@ -195,7 +195,7 @@
             "Agi": "X",
             "Mrl": ""
         },
-        "Plague Host": {
+        "Blight Host": {
             "Mel": "X",
             "Rng": "",
             "Def": "",
@@ -218,7 +218,7 @@
             "Armour": ["Light Armour"]
         },
         "Rat Underlings": {
-            "Aliases": ["Underrat", "Plague Host"],
+            "Aliases": ["Underrat", "Blight Host"],
             "Melee Weapons": ["Dagger", "Hammer / Club", "Sword / Axe", "Spear", "Pike", "Shield"],
             "Ranged Weapons": ["Sling"],
             "Armour": []

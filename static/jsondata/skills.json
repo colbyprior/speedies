@@ -184,20 +184,15 @@
     "Type": "Inherent",
     "Description": "This unit cannot equip Armour, Shields, or Ranged Weapons."
   },
-  "Spread Plague (Major)": {
-    "Name": "Spread Plague (Major)",
+  "Spread Blight (Major)": {
+    "Name": "Spread Blight (Major)",
     "Type": "Inherent",
-    "Description": "If this unit Incapacitates or is Incapacitated by an enemy in Melee, that unit must make a Morale Check. If they fail it, they immediately contract the Plague. This unit is immune to the Plague."
+    "Description": "If this unit Incapacitates or is Incapacitated by an enemy in Melee, that unit must make a Morale Check. If they fail it, they immediately contract the Blight. This unit is immune to the Blight."
   },
-   "Spread Plague (Minor)": {
-    "Name": "Spread Plague (Minor)",
+   "Spread Blight (Minor)": {
+    "Name": "Spread Blight (Minor)",
     "Type": "Inherent",
-    "Description": "If this unit Incapacitates an enemy in Melee, that unit must make a Morale Check. If they fail it, they immediately contract the Plague. This unit is immune to the Plague. If this unit is Incapacitated in Melee, nothing happens."
-  },
-   "Spread Plague (Minor)": {
-    "Name": "Spread Plague (Minor)",
-    "Type": "Inherent",
-    "Description": "If this unit Incapacitates an enemy in Melee, that unit must make a Morale Check. If they fail it, they immediately contract the Plague. This unit is immune to the Plague. If this unit is Incapacitated in Melee, nothing happens."
+    "Description": "If this unit Incapacitates an enemy in Melee, that unit must make a Morale Check. If they fail it, they immediately contract the Blight. This unit is immune to the Blight. If this unit is Incapacitated in Melee, nothing happens."
   },
    "Pit Fighter": {
     "Name": "Pit Fighter",
@@ -212,7 +207,7 @@
   "Undead": {
     "Name": "Undead",
     "Type": "Inherent",
-    "Description": "This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to the Plague."
+    "Description": "This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to the Blight."
   },
    "Follower": {
     "Name": "Follower",
@@ -244,8 +239,8 @@
     "Type": "Inherent",
     "Description": "This unit can move through the air in any direction. They must not end their movement in the air."
   },
-  "Plague Magic": {
-    "Name": "Plague Magic",
+  "Blight Magic": {
+    "Name": "Blight Magic",
     "Type": "Spellcasting",
     "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate 'Basic' spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
   },
@@ -262,7 +257,7 @@
   "Large": {
     "Name": "Large",
     "Type": "Inherent",
-    "Description": "This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It cannot pick up Treasure. This unit is immune to the Plague. It cannot Promote."
+    "Description": "This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It cannot pick up Treasure. This unit is immune to the Blight. It cannot Promote."
   },
   "Free Skill": {
     "Name": "Free Skill",

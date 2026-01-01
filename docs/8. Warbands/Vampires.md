@@ -32,7 +32,7 @@ Allied, non-animal units within 5" of this unit can use this unit's Morale stat 
 ### Undead
 *Inherent*
 
-This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to the Plague.
+This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to the Blight.
 ### Fear
 *Inherent*
 

@@ -4,7 +4,7 @@
     "Play Style": "Slow and Skelly",
     "Preamble": "Let me off this wild ride Mr. Bones",
     "Special Rules": {
-        "Undead Horde": "If any enemy unit you just fought dies from a Scar or Plague Roll, they are raised and added to your warband as a Zombie. If this would take you past the maximum number of units for your warband (after completing your own Scar and Plague Rolls), the Zombie is not added to your warband."
+        "Undead Horde": "If any enemy unit you just fought dies from a Scar or Blight Roll, they are raised and added to your warband as a Zombie. If this would take you past the maximum number of units for your warband (after completing your own Scar and Blight Rolls), the Zombie is not added to your warband."
     },
     "Heroes": [
         {
@@ -28,7 +28,7 @@
             ]
         },
         {
-            "Name": "Plague Cultist",
+            "Name": "Blight Cultist",
             "Type": "Hero",
             "Type Cap": "-",
             "Move": "6",
@@ -43,7 +43,7 @@
             "Morale": "10",
             "Cost": 45,
             "Skills": [
-                "Spread Plague (Major)"
+                "Spread Blight (Major)"
             ]
         },
         {
@@ -181,7 +181,7 @@
             "Agi": "",
             "Mrl": "X"
         },
-        "Plague Cultist": {
+        "Blight Cultist": {
             "Mel": "X",
             "Rng": "X",
             "Def": "",
@@ -232,7 +232,7 @@
             "Armour": ["Light Armour", "Heavy Armour"]
         },
         "Cultist": {
-            "Aliases": ["Necromancer", "Plague Cultist"],
+            "Aliases": ["Necromancer", "Blight Cultist"],
             "Melee Weapons": ["Dagger", "Spear / Staff", "Sword"],
             "Ranged Weapons": ["Short Bow", "Bow"],
             "Armour": ["Light Armour"]

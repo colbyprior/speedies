@@ -22,7 +22,7 @@ Total Cost: 240
 | Number of Units | Unit        | Melee Slot | Flex Slot | Unit Cost | Equipment Cost | Total Cost per Unit | Total Cost |
 | --------------- | ----------- | ---------- | --------- | --------- | -------------- | ------------------- | ---------- |
 | 2               | Underrat    | Spear      | Sling     | 30        | 10             | 40                  | 80         |
-| 2               | Plague Host | Pike       | -         | 40        | 10             | 50                  | 100        |
+| 2               | Blight Host | Pike       | -         | 40        | 10             | 50                  | 100        |
 | 4               | Giant Rat   | -          | -         | 15        | 0              | 15                  | 60         |
 
 

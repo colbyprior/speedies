@@ -12,7 +12,7 @@ RAT
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
 | Guildmaster | 8 | 12 | 12 | 18 | 6| 10 | 1 | 1 | 0 | 0 | [Leader](#leader) | 80 | 1 | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale) |
-| Ratlock | 8 | 14 | - | 18 | 8| 13 | 1 | 1 | 0 | 0 | [Plague Magic](#plague-magic) | 55 | 1 | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
+| Ratlock | 8 | 14 | - | 18 | 8| 13 | 1 | 1 | 0 | 0 | [Blight Magic](#blight-magic) | 55 | 1 | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
 | Enforcer | 8 | 13 | 14 | 18 | 8| 13 | 1 | 1 | 0 | 0 |  | 55 | - | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
 | Assassin | 8 | 14 | 14 | 18 | 6| 13 | 1 | 1 | 0 | 2 | [Vanguard](#vanguard) | 60 | - | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
 
@@ -20,7 +20,7 @@ RAT
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
 | Underrat | 8 | 15 | 15 | 18 | 8| 16 | 1 | 1 | 0 | 0 |  | 30 | - |
-| Plague Host | 8 | 14 | 14 | - | 8| 16 | 1 | 1 | 0 | 0 | [Spread Plague (Minor)](#spread-plague-(minor)) | 40 | 2 |
+| Blight Host | 8 | 14 | 14 | - | 8| 16 | 1 | 1 | 0 | 0 | [Spread Blight (Minor)](#spread-blight-(minor)) | 40 | 2 |
 | Giant Rat | 8 | 15 | - | - | 6| 18 | 1 | 1 | 0 | 0 | [Animal](#animal) | 15 | 4 |
 | Rat Monstrosity | 8 | 13 | - | 12 | 8| 18 | 3 | 3 | 0 | 3 | [Cowardly](#cowardly), [Fear](#fear), [Large](#large), [Animal](#animal) | 205 | 1 |
 
@@ -29,7 +29,7 @@ RAT
 *Inherent*
 
 Allied, non-animal units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
-### Plague Magic
+### Blight Magic
 *Spellcasting*
 
 This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate 'Basic' spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield.
@@ -37,10 +37,10 @@ This unit is capable of casting Arcane Magic. See the relevant spell list for a 
 *Inherent*
 
 After unit deployment, but before any player takes their first turn, this unit may perform a Run. If multiple players have units with this skill, resolve it in turn order. This unit may never pick up Treasure tokens.
-### Spread Plague (Minor)
+### Spread Blight (Minor)
 *Inherent*
 
-If this unit Incapacitates an enemy in Melee, that unit must make a Morale Check. If they fail it, they immediately contract the Plague. This unit is immune to the Plague. If this unit is Incapacitated in Melee, nothing happens.
+If this unit Incapacitates an enemy in Melee, that unit must make a Morale Check. If they fail it, they immediately contract the Blight. This unit is immune to the Blight. If this unit is Incapacitated in Melee, nothing happens.
 ### Animal
 *Inherent*
 
@@ -56,7 +56,7 @@ This unit causes Fear.
 ### Large
 *Inherent*
 
-This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It cannot pick up Treasure. This unit is immune to the Plague. It cannot Promote.
+This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It cannot pick up Treasure. This unit is immune to the Blight. It cannot Promote.
 
 ## Equipment
 
@@ -83,7 +83,7 @@ Heroes equipment for the unit types: Guildmaster, Ratlock, Enforcer, Assassin
 | Light Armour | 1 | 10 |
 
 ### Rat Underlings Equipment 
-Rat Underlings equipment for the unit types: Underrat, Plague Host
+Rat Underlings equipment for the unit types: Underrat, Blight Host
 
 | Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
@@ -110,13 +110,13 @@ You may purchase this weapon up to two times and wield both at once without usin
 #### Blackpowder 
 Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately make an Injury Roll against yourself (applying the weapon's Injury modifier). You may no longer use the weapon for the rest of the game (resolving any remaining targets from the current attack first). After the game, it is repaired at no cost. If you have Advantage and either dice rolls a 1 you still misfire. If the higher roll still hits the enemy, resolve it as normal.
 
-## Plague Magic 
+## Blight Magic 
 
 | Name | Difficulty | Description |
 | ---- | ------ | ---- |
 | Swarm of Rats | 15 | Cast Attack. Choose the closest enemy within 10". Make a Cast Attack against the target. If you succeed, make an Injury Roll against all units within 1.5" of it. |
 | Sewer Filth | 10 | Basic. Target one unit you can see within 20". The target is Dazed. |
-| Plague Madness | 13 | The caster may immediately Engage any enemy within 10" of movement, automatically passing any Agility Checks required. The caster gains 2 Attacks and +3 Injury until the end of this turn. |
+| Blight Madness | 13 | The caster may immediately Engage any enemy within 10" of movement, automatically passing any Agility Checks required. The caster gains 2 Attacks and +3 Injury until the end of this turn. |
 | Ratpsychosis | 13 | All standing models in base contact with the rat must take an immediate Morale test. If they fail, you roll an attack against each target and they then run 5" directly away from the rat. |
 | Curse of rat | 7 | The spell has a range of 10" and affects a single model within range. The target must re-roll any successful defence rolls and to melee rolls until the start of your next turn. |
 
@@ -129,5 +129,5 @@ Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately 
 | Enforcer | X | X |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
 | Assassin | X | X |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
 | Underrat | X | X |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
-| Plague Host | X |  |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
+| Blight Host | X |  |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
 | Giant Rat | X |  |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |

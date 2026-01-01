@@ -115,31 +115,31 @@
   },
   "Swarm of Rats": {
     "Name": "Swarm of Rats",
-    "School": "Plague Magic",
+    "School": "Blight Magic",
     "Check": "15",
     "Description": "Cast Attack. Choose the closest enemy within 10\". Make a Cast Attack against the target. If you succeed, make an Injury Roll against all units within 1.5\" of it."
   },
   "Sewer Filth": {
     "Name": "Sewer Filth",
-    "School": "Plague Magic",
+    "School": "Blight Magic",
     "Check": "10",
     "Description": "Basic. Target one unit you can see within 20\". The target is Dazed."
   },
-  "Plague Madness": {
-    "Name": "Plague Madness",
-    "School": "Plague Magic",
+  "Blight Madness": {
+    "Name": "Blight Madness",
+    "School": "Blight Magic",
     "Check": "13",
     "Description": "The caster may immediately Engage any enemy within 10\" of movement, automatically passing any Agility Checks required. The caster gains 2 Attacks and +3 Injury until the end of this turn."
   },
   "Ratpsychosis": {
     "Name": "Ratpsychosis",
-    "School": "Plague Magic",
+    "School": "Blight Magic",
     "Check": "13",
     "Description": "All standing models in base contact with the rat must take an immediate Morale test. If they fail, you roll an attack against each target and they then run 5\" directly away from the rat."
   },
   "Curse of rat": {
     "Name": "Curse of rat",
-    "School": "Plague Magic",
+    "School": "Blight Magic",
     "Check": "7",
     "Description": "The spell has a range of 10\" and affects a single model within range. The target must re-roll any successful defence rolls and to melee rolls until the start of your next turn."
   },

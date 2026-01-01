@@ -59,7 +59,7 @@ This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move).
 ### Large
 *Inherent*
 
-This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It cannot pick up Treasure. This unit is immune to the Plague. It cannot Promote.
+This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It cannot pick up Treasure. This unit is immune to the Blight. It cannot Promote.
 ### No Equipment
 *Inherent*
 
