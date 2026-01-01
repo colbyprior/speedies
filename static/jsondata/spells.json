@@ -20,8 +20,8 @@
   "Lifestealer": {
     "Name": "Lifestealer", 
     "School": "Necromantic Magic",
-    "Check": "18",
-    "Description": "Choose a single unit within 5\". The target suffers a Wound (no check required) and the caster gains an extra Wound for the duration of the battle. This may take the caster's Wounds above its maximum value. This spell does not affect Undead units."
+    "Check": "17",
+    "Description": "Choose a single unit within 5\". The target suffers a Wound (no check required) and is automatically Incapacitated if this is its last Wound. The caster gains an extra Wound for the duration of the battle. This may take the caster's Wounds above its maximum value. This spell does not affect Undead units."
   },
   "Necromantic Hex": {
     "Name": "Hex",
@@ -53,11 +53,11 @@
     "Check": "12",
     "Description": "Ongoing. Choose one ally within 5\" (including themselves). This unit is treated as no longer existing for the purposes of targeting or blocking Movement, line-of-sight or picking up Treasure. If it is Engaged, it is no longer Engaged and moves 1\". If this unit Engages, casts a Spell, or makes a Ranged attack, the spell ends."
   },
-   "Overgrowth": {
-    "Name": "Overgrowth", 
+   "Control Earth": {
+    "Name": "Control Earth", 
     "School": "Life Magic",
     "Check": "9",
-    "Description": "Choose a point within 10\". Place a piece of natural terrain (eg. woods) at that point. The terrain cannot be longer or wider than 3\", or taller than 5\". Some leniency should be made if it fits the spirit of the spell. The terrain must fit within the space. If this is cast on a unit, move that unit to the closest space that it can be safely placed (this may be within the new terrain)."
+    "Description": "Choose a point within 10\". Place a piece of natural terrain (a wood, mesa, etc.) at that point. The terrain cannot be larger than 3\" in any dimension. Some leniency should be made if it fits the spirit of the spell. The terrain must fit within the space. If this is cast on a unit, move that unit to the closest space that it can be safely placed (this may be within or on the new terrain)."
   },
    "Root": {
     "Name": "Root", 
