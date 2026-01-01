@@ -22,8 +22,8 @@ If any enemy unit you just fought dies from a Scar or Plague Roll, they are rais
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
-| Zombie | 6 | 13 | - | - | 16| 16 | 1 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment) | 20 | - |
-| Skeleton | 7 | 15 | 15 | - | 14| 16 | 1 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear) | 30 | - |
+| Zombie | 6 | 13 | - | - | 16| 13 | 1 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment) | 20 | - |
+| Skeleton | 7 | 15 | 15 | - | 14| 13 | 1 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear) | 30 | - |
 | Ghost | 6 | 13 | - | 13 | 10| 13 | 1 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment), [Ethereal](#ethereal) | 40 | 3 |
 | Bone Giant | 7 | 9 | - | 13 | 14| 13 | 2 | 3 | 3 | 3 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment), [Large](#large) | 200 | 1 |
 
@@ -31,7 +31,7 @@ If any enemy unit you just fought dies from a Scar or Plague Roll, they are rais
 ### Leader
 *Inherent*
 
-Allied units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
+Allied, non-animal units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
 ### Necromantic Magic
 *Spellcasting*
 
@@ -63,7 +63,7 @@ This unit may move through terrain and other units as if they weren't there, but
 ### Large
 *Inherent*
 
-This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It may be targeted by ranged attacks even if they aren't the closest model to the shooter. This unit is immune to the Plague. It cannot Promote.
+This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It cannot pick up Treasure. This unit is immune to the Plague. It cannot Promote.
 
 ## Equipment
 
@@ -120,12 +120,10 @@ This weapon may be used with a Shield.
 | Raise Dead | 7 | One allied Zombie or Skeleton that was Incapacitated after the end of your last turn immediately returns to the battle, no longer counting towards your Rout Threshold. Place the model within 5" of the Caster. The model cannot be placed such that it is Engaged with an enemy. |
 | Soul Rend | 12 | Basic. Cast Attack. Target one unit you can see within 15" and perform a Cast Attack against them. If this spell Incapacitates the target, create a Zombie where it was Incapacitated. It is an ally to you and will count towards your Rout Threshold. |
 | Control Dead | 10 | Choose a point within 5" of the caster. Any allied Zombies or Skeletons within 1.5" of that point may immediately move again up to their Move. If this moves them into base contact with an enemy unit, they count as Engaging. They take Agility Checks as normal. |
-| Lifestealer | 18 | Choose a single unit within 5". The target suffers a Wound (no check required) and the caster gains an extra Wound for the duration of the battle. This may take the caster's Wounds above its maximum value. This spell does not affect Undead units. |
+| Lifestealer | 17 | Choose a single unit within 5". The target suffers a Wound (no check required) and is automatically Incapacitated if this is its last Wound. The caster gains an extra Wound for the duration of the battle. This may take the caster's Wounds above its maximum value. This spell does not affect Undead units. |
 | Hex | 14 | Ongoing. Choose a single enemy within 10". The target has Disadvantage on all Checks it makes. |
 
 
-## Promotion Table
-Coming Soon!
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |

@@ -31,7 +31,7 @@ Elves can Jump Across to a maximum distance of 6", instead of the usual 3".
 ### Leader
 *Inherent*
 
-Allied units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
+Allied, non-animal units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
 ### Life Magic
 *Spellcasting*
 
@@ -39,7 +39,7 @@ This unit is capable of casting Arcane Magic. See the relevant spell list for a 
 ### Mark Target
 *Inherent*
 
-Once per Ranged Phase, instead of making a Ranged Attack, this unit may instead Mark an enemy unit within 10" (and within line-of-sight) until the start of the next turn. A unit that is Marked can be targeted by Ranged Attacks even when the unit is Engaged.
+Once per Ranged Phase, instead of making a Ranged Attack, this unit may instead Mark an enemy unit within 10" (and within line-of-sight) until the start of the next turn. A unit that is Marked can be targeted by Ranged Attacks even when the unit is Engaged, but cannot be Protected from such Ranged Attacks.
 ### Follower
 *Inherent*
 
@@ -47,7 +47,7 @@ This unit does not count for the purposes of a warband's max units.
 ### Animal
 *Inherent*
 
-This unit cannot Promote, use ladders (except by making a full Climb Check), pick up Treasure, or use equipment (but is not penalised for fighting Unarmed).
+This unit cannot Promote, use ladders (except by making a full Climb Check), pick up Treasure, benefit from the 'Leader' skill or use equipment (but is not penalised for fighting Unarmed).
 ### Fear
 *Inherent*
 
@@ -59,7 +59,7 @@ This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move).
 ### Large
 *Inherent*
 
-This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It may be targeted by ranged attacks even if they aren't the closest model to the shooter. This unit is immune to the Plague. It cannot Promote.
+This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It cannot pick up Treasure. This unit is immune to the Plague. It cannot Promote.
 ### No Equipment
 *Inherent*
 
@@ -98,14 +98,12 @@ This weapon may be used with a Shield.
 | Name | Difficulty | Description |
 | ---- | ------ | ---- |
 | Invisibility | 12 | Ongoing. Choose one ally within 5" (including themselves). This unit is treated as no longer existing for the purposes of targeting or blocking Movement, line-of-sight or picking up Treasure. If it is Engaged, it is no longer Engaged and moves 1". If this unit Engages, casts a Spell, or makes a Ranged attack, the spell ends. |
-| Overgrowth | 9 | Choose a point within 10". Place a piece of natural terrain (eg. woods) at that point. The terrain cannot be longer or wider than 3", or taller than 5". Some leniency should be made if it fits the spirit of the spell. The terrain must fit within the space. If this is cast on a unit, move that unit to the closest space that it can be safely placed (this may be within the new terrain). |
+| Control Earth | 9 | Choose a point within 10". Place a piece of natural terrain (a wood, mesa, etc.) at that point. The terrain cannot be larger than 3" in any dimension. Some leniency should be made if it fits the spirit of the spell. The terrain must fit within the space. If this is cast on a unit, move that unit to the closest space that it can be safely placed (this may be within or on the new terrain). |
 | Root | 12 | Ongoing. Choose one unit within 20". That unit cannot Engage, Move, or Run. |
 | Earthquake | 14 | All units within 10" must make an Agility check or become Dazed. This does not reduced a unit's Wounds. |
 | Magic Arrow | 12 | Basic. Cast Attack. Target one unit you can see within 30" and perform a Cast Attack. |
 
 
-## Promotion Table
-Coming Soon!
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |

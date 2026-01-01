@@ -28,7 +28,7 @@ RAT
 ### Leader
 *Inherent*
 
-Allied units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
+Allied, non-animal units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
 ### Plague Magic
 *Spellcasting*
 
@@ -44,7 +44,7 @@ If this unit Incapacitates an enemy in Melee, that unit must make a Morale Check
 ### Animal
 *Inherent*
 
-This unit cannot Promote, use ladders (except by making a full Climb Check), pick up Treasure, or use equipment (but is not penalised for fighting Unarmed).
+This unit cannot Promote, use ladders (except by making a full Climb Check), pick up Treasure, benefit from the 'Leader' skill or use equipment (but is not penalised for fighting Unarmed).
 ### Cowardly
 *Inherent*
 
@@ -56,7 +56,7 @@ This unit causes Fear.
 ### Large
 *Inherent*
 
-This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It may be targeted by ranged attacks even if they aren't the closest model to the shooter. This unit is immune to the Plague. It cannot Promote.
+This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It cannot pick up Treasure. This unit is immune to the Plague. It cannot Promote.
 
 ## Equipment
 
@@ -71,7 +71,7 @@ Heroes equipment for the unit types: Guildmaster, Ratlock, Enforcer, Assassin
 | Spear / Staff | 0 | 0 | 2 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
 | Glaive | 3 | 3 | 5 |  | 10 | 2 |
 | Flail | 7 | 0 | 5 |  | 10 | 2 |
-| Fighting Claws | 0 | 3 | 0 | +1 Attack. This unit makes Agility Checks with Advantage. | 20 | 2 |
+| Fighting Claws | 0 | 3 | 0 | +1 Attack. This unit makes Climb Checks with Advantage. | 20 | 2 |
 
 | Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
 | ------------- | --- | --- | --- | ------ | ---- | ----- |
@@ -121,8 +121,6 @@ Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately 
 | Curse of rat | 7 | The spell has a range of 10" and affects a single model within range. The target must re-roll any successful defence rolls and to melee rolls until the start of your next turn. |
 
 
-## Promotion Table
-Coming Soon!
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |

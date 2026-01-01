@@ -20,7 +20,7 @@ def generate_warbands():
             out_data += warband_helper.skills_block(all_skills, warband, warband_only=True)
             out_data += warband_helper.equipment_block(warband)
             out_data += warband_helper.spells_block(spell_schools)
-            out_data += warband_helper.warband_promotion_options(warband)
+            # out_data += warband_helper.warband_promotion_options(warband)
             out_data += warband_helper.warband_available_skills(warband)
 
             # print(out_data)

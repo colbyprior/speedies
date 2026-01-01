@@ -19,7 +19,7 @@ sidebar_label: Sellswords
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
-| Warrior | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 30 | - |
+| Infantry | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 30 | - |
 | Marksman | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 35 | 6 |
 | Man-at-Arms | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 | [Ambush](#ambush) | 50 | 3 |
 | Defender | 6 | 14 | - | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 35 | 3 |
@@ -28,7 +28,7 @@ sidebar_label: Sellswords
 ### Leader
 *Inherent*
 
-Allied units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
+Allied, non-animal units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
 ### Ambush
 *Melee*
 
@@ -141,8 +141,6 @@ Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately 
 #### Buckshot 
 Select a point within line-of-sight and within this weapon's range. Target ALL units within 1.5" of this point. If any unit Engaged in Melee Combat is targeted, ALL units within that Melee Combat are targeted. Resolve each target separately, following the usual rules for Ranged Attacks. This weapon ignores cover.
 
-## Promotion Table
-Coming Soon!
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |

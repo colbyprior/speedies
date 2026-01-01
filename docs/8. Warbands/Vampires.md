@@ -28,7 +28,7 @@ This team sucks... your blood!
 ### Leader
 *Inherent*
 
-Allied units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
+Allied, non-animal units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
 ### Undead
 *Inherent*
 
@@ -56,7 +56,7 @@ This unit gets Advantage on the first round of combat when they Engage an enemy
 ### Animal
 *Inherent*
 
-This unit cannot Promote, use ladders (except by making a full Climb Check), pick up Treasure, or use equipment (but is not penalised for fighting Unarmed).
+This unit cannot Promote, use ladders (except by making a full Climb Check), pick up Treasure, benefit from the 'Leader' skill or use equipment (but is not penalised for fighting Unarmed).
 ### Flying
 *Inherent*
 
@@ -120,8 +120,6 @@ You may not use this weapon if it was fired in the previous turn.
 | Hex | 14 | Ongoing. Choose a single enemy within 10". The target has Disadvantage on all Checks it makes. |
 
 
-## Promotion Table
-Coming Soon!
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |

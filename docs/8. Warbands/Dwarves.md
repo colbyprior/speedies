@@ -33,7 +33,7 @@ Dwarves may use any Ranged weapon with a Shield.
 ### Leader
 *Inherent*
 
-Allied units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
+Allied, non-animal units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
 ### Weaponsmith
 *Inherent*
 
@@ -115,8 +115,6 @@ This weapon may be used with a Shield.
 #### Buckshot 
 Select a point within line-of-sight and within this weapon's range. Target ALL units within 1.5" of this point. If any unit Engaged in Melee Combat is targeted, ALL units within that Melee Combat are targeted. Resolve each target separately, following the usual rules for Ranged Attacks. This weapon ignores cover.
 
-## Promotion Table
-Coming Soon!
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |

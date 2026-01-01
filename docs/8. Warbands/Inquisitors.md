@@ -31,7 +31,7 @@ At the start of each game make a Morale Check once per hero. For each success, a
 ### Leader
 *Inherent*
 
-Allied units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
+Allied, non-animal units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
 ### Inquisitor
 *Inherent*
 
@@ -59,7 +59,7 @@ This unit has fixed equipment that cannot be lost or changed. The equipment modi
 ### Animal
 *Inherent*
 
-This unit cannot Promote, use ladders (except by making a full Climb Check), pick up Treasure, or use equipment (but is not penalised for fighting Unarmed).
+This unit cannot Promote, use ladders (except by making a full Climb Check), pick up Treasure, benefit from the 'Leader' skill or use equipment (but is not penalised for fighting Unarmed).
 ### Pack Tactics
 *Inherent*
 
@@ -157,8 +157,6 @@ Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately 
 | Heal | 5 | Any ally within 2" of the caster (including themselves) removes Dazed or Staggered and regains 1 Wound, up to their maximum. |
 
 
-## Promotion Table
-Coming Soon!
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |

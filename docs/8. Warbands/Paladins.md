@@ -28,7 +28,7 @@ An order of paladins and others that seek to advance a holy agenda.
 ### Leader
 *Inherent*
 
-Allied units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
+Allied, non-animal units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
 ### Divine Magic
 *Spellcasting*
 
@@ -112,8 +112,6 @@ This weapon may be used with a Shield.
 | Heal | 5 | Any ally within 2" of the caster (including themselves) removes Dazed or Staggered and regains 1 Wound, up to their maximum. |
 
 
-## Promotion Table
-Coming Soon!
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
