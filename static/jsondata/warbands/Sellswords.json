@@ -81,7 +81,7 @@
     ],
     "Henchmen": [
         {
-            "Name": "Warrior",
+            "Name": "Infantry",
             "Type Cap": "-",
             "Move": "6",
             "Piercing": "0",

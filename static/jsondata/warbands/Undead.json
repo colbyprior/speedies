@@ -101,7 +101,7 @@
             "Wounds": "1",
             "Agility": "16",
             "Attacks": "1",
-            "Morale": "16",
+            "Morale": "13",
             "Cost": 20,
             "Skills": [
                 "Undead",
@@ -121,7 +121,7 @@
             "Wounds": "1",
             "Agility": "14",
             "Attacks": "1",
-            "Morale": "16",
+            "Morale": "13",
             "Cost": 30,
             "Skills": [
                 "Undead",

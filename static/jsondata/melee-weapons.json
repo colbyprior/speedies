@@ -100,7 +100,7 @@
   },
   "Fighting Claws": {
     "Name": "Fighting Claws",
-    "Effect": "+1 Attack. This unit makes Agility Checks with Advantage.",
+    "Effect": "+1 Attack. This unit makes Climb Checks with Advantage.",
     "Cost": "20",
     "Injury": "0",
     "Piercing": "3",

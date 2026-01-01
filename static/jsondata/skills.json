@@ -127,7 +127,7 @@
   "Leader": {
     "Name": "Leader",
     "Type": "Inherent",
-    "Description": "Allied units within 5\" of this unit can use this unit's Morale stat for Checks instead of their own."
+    "Description": "Allied, non-animal units within 5\" of this unit can use this unit's Morale stat for Checks instead of their own."
   },
   "No Equipment": {
     "Name": "No Equipment",
@@ -222,7 +222,7 @@
    "Animal": {
     "Name": "Animal",
     "Type": "Inherent",
-    "Description": "This unit cannot Promote, use ladders (except by making a full Climb Check), pick up Treasure, or use equipment (but is not penalised for fighting Unarmed)."
+    "Description": "This unit cannot Promote, use ladders (except by making a full Climb Check), pick up Treasure, benefit from the 'Leader' skill or use equipment (but is not penalised for fighting Unarmed)."
   },
    "Slow": {
     "Name": "Slow",
@@ -317,7 +317,7 @@
   "Mark Target": {
     "Name": "Mark Target",
     "Type": "Inherent",
-    "Description": "Once per Ranged Phase, instead of making a Ranged Attack, this unit may instead Mark an enemy unit within 10\" (and within line-of-sight) until the start of the next turn. A unit that is Marked can be targeted by Ranged Attacks even when the unit is Engaged."
+    "Description": "Once per Ranged Phase, instead of making a Ranged Attack, this unit may instead Mark an enemy unit within 10\" (and within line-of-sight) until the start of the next turn. A unit that is Marked can be targeted by Ranged Attacks even when the unit is Engaged, but cannot be Protected from such Ranged Attacks."
   },
   "Vampire": {
     "Name": "Vampire",
