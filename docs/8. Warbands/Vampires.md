@@ -127,3 +127,7 @@ You may not use this weapon if it was fired in the previous turn.
 | Vampire Seductor | X |  |  | X | X | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
 | Vampire Spawn | X |  |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
 | Nosferatu | X |  | X | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility) |
+| Thrall | X | X |  |  |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
+| Ghoul | X |  | X |  |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence) |
+| Dire Wolf | X |  |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
+| Giant Bat | X |  |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |

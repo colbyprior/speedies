@@ -111,3 +111,6 @@ This weapon may be used with a Shield.
 | Mage |  | X |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
 | Honour Guard | X |  |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
 | Ranger |  | X |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
+| Citizen |  | X |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
+| Scout |  | X |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
+| Woodland Creature | X |  |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |

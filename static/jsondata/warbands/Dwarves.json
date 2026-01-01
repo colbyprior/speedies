@@ -184,6 +184,34 @@
             "Def": "X",
             "Agi": "",
             "Mrl": ""
+        },
+        "Berserker": {
+            "Mel": "X",
+            "Rng": "",
+            "Def": "",
+            "Agi": "",
+            "Mrl": ""
+        },
+        "Youngling": {
+            "Mel": "X",
+            "Rng": "",
+            "Def": "X",
+            "Agi": "",
+            "Mrl": ""
+        },
+        "Miner": {
+            "Mel": "X",
+            "Rng": "",
+            "Def": "X",
+            "Agi": "",
+            "Mrl": ""
+        },
+        "Gunner": {
+            "Mel": "",
+            "Rng": "X",
+            "Def": "X",
+            "Agi": "",
+            "Mrl": ""
         }
     },
     "Equipment": {

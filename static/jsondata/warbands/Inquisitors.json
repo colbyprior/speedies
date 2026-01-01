@@ -190,6 +190,34 @@
             "Def": "",
             "Agi": "",
             "Mrl": "X"
+        },
+        "Fanatic": {
+            "Mel": "X",
+            "Rng": "",
+            "Def": "",
+            "Agi": "",
+            "Mrl": ""
+        },
+        "Zealot": {
+            "Mel": "X",
+            "Rng": "X",
+            "Def": "",
+            "Agi": "",
+            "Mrl": ""
+        },
+        "Peasant": {
+            "Mel": "",
+            "Rng": "",
+            "Def": "",
+            "Agi": "",
+            "Mrl": "X"
+        },
+        "Hound": {
+            "Mel": "X",
+            "Rng": "",
+            "Def": "",
+            "Agi": "X",
+            "Mrl": ""
         }
     },
     "Equipment": {

@@ -187,6 +187,27 @@
             "Def": "",
             "Agi": "X",
             "Mrl": ""
+        },
+        "Underrat": {
+            "Mel": "X",
+            "Rng": "X",
+            "Def": "",
+            "Agi": "X",
+            "Mrl": ""
+        },
+        "Plague Host": {
+            "Mel": "X",
+            "Rng": "",
+            "Def": "",
+            "Agi": "X",
+            "Mrl": ""
+        },
+        "Giant Rat": {
+            "Mel": "X",
+            "Rng": "",
+            "Def": "",
+            "Agi": "X",
+            "Mrl": ""
         }
     },
     "Equipment": {

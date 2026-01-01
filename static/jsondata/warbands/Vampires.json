@@ -200,6 +200,34 @@
             "Def": "X",
             "Agi": "X",
             "Mrl": ""
+        },
+        "Thrall": {
+            "Mel": "X",
+            "Rng": "X",
+            "Def": "",
+            "Agi": "",
+            "Mrl": ""
+        },
+        "Ghoul": {
+            "Mel": "X",
+            "Rng": "",
+            "Def": "X",
+            "Agi": "",
+            "Mrl": ""
+        },
+        "Dire Wolf": {
+            "Mel": "X",
+            "Rng": "",
+            "Def": "",
+            "Agi": "X",
+            "Mrl": ""
+        },
+        "Giant Bat": {
+            "Mel": "X",
+            "Rng": "",
+            "Def": "",
+            "Agi": "X",
+            "Mrl": ""
         }
     },
     "Equipment": {

@@ -164,3 +164,7 @@ Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately 
 | Priest |  |  | X |  | X | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
 | Inquisitor | X | X |  |  |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
 | Doomsayer | X | X |  |  | X | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
+| Fanatic | X |  |  |  |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee) |
+| Zealot | X | X |  |  |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
+| Peasant |  |  |  |  | X | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Morale) |
+| Hound | X |  |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |

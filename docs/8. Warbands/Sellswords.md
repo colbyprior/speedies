@@ -148,3 +148,7 @@ Select a point within line-of-sight and within this weapon's range. Target ALL u
 | Champion | X | X | X |  |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
 | Sniper |  | X |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
 | Knight |  |  | X |  | X | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
+| Infantry | X | X | X |  |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
+| Marksman |  | X |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
+| Man-at-Arms | X |  | X |  |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence) |
+| Defender |  |  | X |  | X | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |

@@ -177,6 +177,34 @@
             "Def": "X",
             "Agi": "",
             "Mrl": "X"
+        },
+        "Infantry": {
+            "Mel": "X",
+            "Rng": "X",
+            "Def": "X",
+            "Agi": "",
+            "Mrl": ""
+        },
+        "Marksman": {
+            "Mel": "",
+            "Rng": "X",
+            "Def": "",
+            "Agi": "X",
+            "Mrl": ""
+        },
+        "Man-at-Arms": {
+            "Mel": "X",
+            "Rng": "",
+            "Def": "X",
+            "Agi": "",
+            "Mrl": ""
+        },
+        "Defender": {
+            "Mel": "",
+            "Rng": "",
+            "Def": "X",
+            "Agi": "",
+            "Mrl": "X"
         }
     },
     "Equipment": {

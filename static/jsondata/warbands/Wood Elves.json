@@ -188,6 +188,27 @@
             "Def": "",
             "Agi": "X",
             "Mrl": ""
+        },
+        "Citizen": {
+            "Mel": "",
+            "Rng": "X",
+            "Def": "",
+            "Agi": "X",
+            "Mrl": ""
+        },
+        "Scout": {
+            "Mel": "",
+            "Rng": "X",
+            "Def": "",
+            "Agi": "X",
+            "Mrl": ""
+        },
+        "Woodland Creature": {
+            "Mel": "X",
+            "Rng": "",
+            "Def": "",
+            "Agi": "X",
+            "Mrl": ""
         }
     },
     "Equipment": {

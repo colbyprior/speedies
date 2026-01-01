@@ -201,6 +201,27 @@
             "Def": "",
             "Agi": "X",
             "Mrl": ""
+        },
+        "Zombie": {
+            "Mel": "X",
+            "Rng": "",
+            "Def": "",
+            "Agi": "",
+            "Mrl": ""
+        },
+        "Skeleton": {
+            "Mel": "X",
+            "Rng": "X",
+            "Def": "",
+            "Agi": "",
+            "Mrl": ""
+        },
+        "Ghost": {
+            "Mel": "X",
+            "Rng": "",
+            "Def": "",
+            "Agi": "",
+            "Mrl": ""
         }
     },
     "Equipment": {
