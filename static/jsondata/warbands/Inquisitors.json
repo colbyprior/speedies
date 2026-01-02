@@ -4,7 +4,7 @@
     "Play Style": "Powerful heroes with minions",
     "Preamble": "Magic never expects us.",
     "Special Rules": {
-        "Incite the Mob": "At the start of each game make a Morale Check once per hero. For each success, a Peasant temporarily joins your warband for this game only. These Peasants do not count towards the rout threshold when Incapacitated."
+        "Incite the Mob": "At the start of each game make a Morale Check once per hero. For each success, a Peasant temporarily joins your warband for this game only. These Peasants do not count towards the rout threshold when Incapacitated and cannot Promote."
     },
     "Heroes": [
         {

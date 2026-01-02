@@ -214,13 +214,13 @@
             "Ranged Weapons": ["Short Bow", "Bow", "Crossbow", "Pistol"],
             "Armour": ["Light Armour", "Heavy Armour"]
         },
-        "Warriors & Swordsman": {
-            "Aliases": ["Warrior", "Man-at-Arms"],
+        "Infantry": {
+            "Aliases": ["Infantry", "Man-at-Arms"],
             "Melee Weapons": ["Dagger", "Hammer", "Sword / Axe", "Spear", "Great Hammer", "Great Sword / Axe", "Pike", "Shield"],
             "Ranged Weapons": ["Short Bow", "Bow", "Crossbow"],
             "Armour": ["Light Armour", "Heavy Armour"]
         },
-        "Marksmen": {
+        "Marksman": {
             "Aliases": ["Marksman", "Sniper"],
             "Melee Weapons": ["Dagger", "Hammer", "Sword / Axe"],
             "Ranged Weapons": ["Short Bow", "Bow", "Long Bow", "Crossbow", "Pistol", "Rifle", "Blunderbuss"],
