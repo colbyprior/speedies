@@ -4,8 +4,8 @@
     "Play Style": "Rough and Tough",
     "Preamble": "These chonkers go bonkers.",
     "Special Rules": {
-        "Hard to Kill": "Dwarves have a -2 to Injury rolls made against them (eg. an unmodified roll of 19 would count as a 17, Stunning rather than Incapaciating the Dwarf).",
-        "Ranged Shields": "Dwarves may use any Ranged weapon with a Shield."
+        "Hard to Kill": "Dwarves have a -2 to Injury rolls made against them (eg. an unmodified roll of 19 would count as a 17, Stunning rather than Incapacitating the Dwarf).",
+        "Heavy Gunners": "Dwarves may use any Ranged weapon with a Shield."
     },
     "Heroes": [
         {
