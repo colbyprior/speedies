@@ -83,11 +83,11 @@
     "Check": "5",
     "Description": "Any ally within 2\" of the caster (including themselves) removes Dazed or Staggered and regains 1 Wound, up to their maximum."
   },
-  "Frenzy": {
-    "Name": "Frenzy",
+  "Blood Frenzy": {
+    "Name": "Blood Frenzy",
     "School": "Vampiric Magic",
-    "Check": "13",
-    "Description": "Choose one unit within 5\", including the caster. That unit may take their full movement even if they have already moved. If they move into base contact with an enemy unit this counts as having charged. The unit may attack with advantage on the first round."
+    "Check": "7",
+    "Description": "Ongoing. Choose one unit within 5\", including the caster. It gains the Berserk and Ambush skills."
   },
   "Lure": {
     "Name": "Lure",
@@ -95,11 +95,11 @@
     "Check": "12",
     "Description": "Basic. Target one unit you can see within 15\". The target immediately moves towards the Caster by the most direct path, including by Jumping Down. If the target is able to reach the Caster, it is placed in base contact and the Caster is considered to have Engaged it."
   },
-  "New Spell": {
-    "Name": "New Spell",
-    "School": "Vampiric Magic",
-    "Check": "99",
-    "Description": "Bottom text."
+  "Blight Bolt": {
+    "Name": "Blight Bolt",
+    "School": "Blight Magic",
+    "Check": "12",
+    "Description": "Cast Attack. Target one unit you can see within 10\" and perform a Cast Attack against them. On a success, the taret makes a Plague Check."
   },
   "Bat wings": {
     "Name": "Bat wings",
@@ -122,26 +122,26 @@
   "Sewer Filth": {
     "Name": "Sewer Filth",
     "School": "Blight Magic",
-    "Check": "10",
+    "Check": "12",
     "Description": "Basic. Target one unit you can see within 20\". The target is Dazed."
   },
-  "Blight Madness": {
-    "Name": "Blight Madness",
+  "Pounce": {
+    "Name": "Pounce",
     "School": "Blight Magic",
-    "Check": "13",
-    "Description": "The caster may immediately Engage any enemy within 10\" of movement, automatically passing any Agility Checks required. The caster gains 2 Attacks and +3 Injury until the end of this turn."
+    "Check": "10",
+    "Description": "The caster gains 2 Attacks and +3 Injury until the end of this turn. They may immediately make an Engage action, unless they are already Engaged."
   },
-  "Ratpsychosis": {
-    "Name": "Ratpsychosis",
-    "School": "Blight Magic",
-    "Check": "13",
-    "Description": "All standing models in base contact with the rat must take an immediate Morale test. If they fail, you roll an attack against each target and they then run 5\" directly away from the rat."
+  "Death Visage": {
+    "Name": "Death Visage",
+    "School": "Vampiric Magic",
+    "Check": "12",
+    "Description": "All enemies in base contact with the caster that are not Stunned or Dazed make an immediate Morale check. If they fail, the caster makes an attack against the target, which then perfoms a Move directly away from the caster, if able."
   },
-  "Curse of rat": {
-    "Name": "Curse of rat",
+  "Rat Rage": {
+    "Name": "Rat Rage",
     "School": "Blight Magic",
     "Check": "7",
-    "Description": "The spell has a range of 10\" and affects a single model within range. The target must re-roll any successful defence rolls and to melee rolls until the start of your next turn."
+    "Description": "Ongoing. Upon casting and at the start of each turn, any Giant Rats within 5\" of the caster gain Fear for the round."
   },
   "Writheform": {
     "Name": "Writheform",
