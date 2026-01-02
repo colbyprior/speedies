@@ -39,6 +39,8 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          routeBasePath: '/', // Optional: makes docs the root
+    //      sidebarPath: false, // Disable manual sidebar
           editUrl:
             'https://github.com/colbyprior/speedies/tree/main/packages/create-docusaurus/templates/shared/',
         },
@@ -73,30 +75,30 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Speedies',
+          label: 'Overview',
         },
         {
-          href: '/docs/Quick%20Reference',
+          href: '/Quick%20Reference',
           position: 'left',
           label: 'Quick Reference',
         },
         {
-          href: '/docs/Game%20Concepts/Injury',
+          href: '/Game%20Concepts/Injury',
           position: 'left',
           label: 'Injury',
         },
         {
-          href: '/docs/Pre-Game%20Rules/Pre-Game%20Overview',
+          href: '/Pre-Game%20Rules/Pre-Game%20Overview',
           position: 'left',
           label: 'Pre-Game Overview',
         },
         {
-          href: '/docs/Game%20Rules/Turn%20Overview',
+          href: '/Game%20Rules/Turn%20Overview',
           position: 'left',
           label: 'Turn Overview',
         },
         {
-          href: '/docs/Post-Game%20Rules/Post-Game%20Overview',
+          href: '/Post-Game%20Rules/Post-Game%20Overview',
           position: 'left',
           label: 'Post-Game Overview',
         },
@@ -115,11 +117,11 @@ const config: Config = {
           items: [
             {
               label: 'Speedies',
-              to: '/docs/Intro/Speedheim%20Overview',
+              to: '/Intro/Speedheim%20Overview',
             },
             {
               label: 'Rulez',
-              to: '/docs/Intro/Speedheim%20Overview',
+              to: '/Intro/Speedheim%20Overview',
             }
           ],
         },
@@ -128,7 +130,7 @@ const config: Config = {
           items: [
             {
               label: 'Egg',
-              to: '/docs/Intro/Speedheim%20Overview',
+              to: '/Intro/Speedheim%20Overview',
             }
           ],
         },
@@ -142,26 +144,26 @@ const config: Config = {
           items: [
             {
               label: 'Speedies',
-              to: '/docs/Intro/Speedheim%20Overview',
+              to: '/Intro/Speedheim%20Overview',
             },
             {
-              to: '/docs/Quick%20Reference',
+              to: '/Quick%20Reference',
               label: 'Quick Reference',
             },
             {
-              to: '/docs/Game%20Concepts/Injury',
+              to: '/Game%20Concepts/Injury',
               label: 'Injury',
             },
             {
-              to: '/docs/Pre-Game%20Rules/Pre-Game%20Overview',
+              to: '/Pre-Game%20Rules/Pre-Game%20Overview',
               label: 'Pre-Game Overview',
             },
             {
-              to: '/docs/Game%20Rules/Turn%20Overview',
+              to: '/Game%20Rules/Turn%20Overview',
               label: 'Turn Overview',
             },
             {
-              to: '/docs/Post-Game%20Rules/Post-Game%20Overview',
+              to: '/Post-Game%20Rules/Post-Game%20Overview',
               label: 'Post-Game Overview',
             }
           ],

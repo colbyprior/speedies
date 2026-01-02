@@ -31,7 +31,7 @@ async function equipmentSplit(item) {
         console.log(element);
         const tr = tbl.insertRow();
         const tdName = tr.insertCell();
-        tdName.innerHTML = "<a href=\"/docs/Rules/Equipment/weapons\">" + equipmentList[element].Name + "</a>";
+        tdName.innerHTML = "<a href=\"/Rules/Equipment/weapons\">" + equipmentList[element].Name + "</a>";
         const tdEffect = tr.insertCell();
 
         var effect = equipmentList[element].Effect;
