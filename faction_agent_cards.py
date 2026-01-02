@@ -13,7 +13,17 @@ def load_agents(json_file):
         return json.load(f)
 
 
-def create_card_content(name, agent_data):
+def load_skills(skills_file):
+    """Load skills data from JSON file."""
+    try:
+        with open(skills_file, 'r') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        print(f"Warning: {skills_file} not found. Skills will not have descriptions.")
+        return {}
+
+
+def create_card_content(name, agent_data, skills_db):
     """Create content for a single agent card."""
     styles = getSampleStyleSheet()
 
@@ -89,6 +99,26 @@ def create_card_content(name, agent_data):
         about = Paragraph(agent_data['About'], body_style)
         card_data.append(about)
 
+    # Checkbox table for Blight and Plaguetouched
+    checkbox_table = Table(
+        [['Blight', 'Plaguetouched'], ['', '']],
+        colWidths=[0.7 * inch, 0.9 * inch]
+    )
+    checkbox_table.setStyle(TableStyle([
+        ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+        ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+        ('FONTSIZE', (0, 0), (-1, 0), 7),
+        ('BOTTOMPADDING', (0, 0), (-1, 0), 2),
+        ('TOPPADDING', (0, 0), (-1, 0), 2),
+        ('GRID', (0, 0), (-1, -1), 0.5, colors.grey),
+        ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#ecf0f1')),
+        ('ROWHEIGHT', (0, 1), (-1, 1), 0.15 * inch),  # Empty row for checkboxes
+    ]))
+
+    card_data.append(Spacer(1, 0.03 * inch))
+    card_data.append(checkbox_table)
+    card_data.append(Spacer(1, 0.03 * inch))
+
     # Stats table - without Cost column
     stats_header = ['Mov', 'Run', 'Mel', 'Rgd', 'Def', 'Agi', 'Mrl', 'Atk', 'Wnd', 'Prc', 'Inj']
     run_value = str(int(agent_data['Move']) + 4)
@@ -131,13 +161,22 @@ def create_card_content(name, agent_data):
         skills_header = Paragraph("<b>Skills</b>", section_style)
         card_data.append(skills_header)
 
+        # Parse skills (can be comma-separated)
         skills_text = agent_data['Skills']
-        if skills_text == "Deadly":
-            skill_desc = Paragraph("<i>Deadly:</i> +2 to injury rolls in melee", body_style)
-            card_data.append(skill_desc)
-        else:
-            skill_desc = Paragraph(skills_text, body_style)
-            card_data.append(skill_desc)
+        skill_names = [s.strip() for s in skills_text.split(',') if s.strip()]
+
+        for skill_name in skill_names:
+            if skill_name in skills_db:
+                skill_info = skills_db[skill_name]
+                skill_desc = Paragraph(
+                    f"<i>{skill_info['Name']}:</i> {skill_info['Description']}",
+                    body_style
+                )
+                card_data.append(skill_desc)
+            else:
+                # Fallback if skill not found in database
+                skill_desc = Paragraph(f"<i>{skill_name}</i>", body_style)
+                card_data.append(skill_desc)
 
     # Event section
     if agent_data.get('Event'):
@@ -151,7 +190,8 @@ def create_card_content(name, agent_data):
     return card_data
 
 
-def generate_pdf(json_file, output_pdf='faction_agents.pdf', cards_per_row=2, cards_per_col=2):
+def generate_pdf(json_file, output_pdf='faction_agents.pdf', cards_per_row=2, cards_per_col=2,
+                 skills_file='skills.json'):
     """Generate PDF with multiple agent cards per page.
 
     Args:
@@ -159,8 +199,10 @@ def generate_pdf(json_file, output_pdf='faction_agents.pdf', cards_per_row=2, ca
         output_pdf: Output PDF filename
         cards_per_row: Number of cards horizontally per page
         cards_per_col: Number of cards vertically per page
+        skills_file: Path to the JSON file with skills data
     """
     agents = load_agents(json_file)
+    skills_db = load_skills(skills_file)
 
     page_width, page_height = landscape(letter)
 
@@ -200,7 +242,7 @@ def generate_pdf(json_file, output_pdf='faction_agents.pdf', cards_per_row=2, ca
 
                 if card_idx < len(page_cards):
                     name, data = page_cards[card_idx]
-                    card_content = create_card_content(name, data)
+                    card_content = create_card_content(name, data, skills_db)
                     row.append(card_content)
                 else:
                     # Empty cell
@@ -212,7 +254,7 @@ def generate_pdf(json_file, output_pdf='faction_agents.pdf', cards_per_row=2, ca
         page_table = Table(
             rows,
             colWidths=[card_width] * cards_per_row,
-            rowHeights=[card_height] * cards_per_col
+            rowHeights=None  # Let it auto-calculate heights
         )
 
         # Build style with borders for each card
@@ -252,4 +294,4 @@ def generate_pdf(json_file, output_pdf='faction_agents.pdf', cards_per_row=2, ca
 if __name__ == "__main__":
     # Example usage - generate with 2x2 grid (4 cards per page)
     # You can change cards_per_row and cards_per_col to fit more cards
-    generate_pdf('static/jsondata/faction-agents.json', 'faction_agents.pdf', cards_per_row=2, cards_per_col=3)
+    generate_pdf('static/jsondata/faction-agents.json', 'faction_agents.pdf', cards_per_row=2, cards_per_col=2)
