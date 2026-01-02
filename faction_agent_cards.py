@@ -191,7 +191,7 @@ def create_card_content(name, agent_data, skills_db):
 
 
 def generate_pdf(json_file, output_pdf='faction_agents.pdf', cards_per_row=2, cards_per_col=2,
-                 skills_file='skills.json'):
+                 skills_file='static/jsondata/skills.json'):
     """Generate PDF with multiple agent cards per page.
 
     Args:

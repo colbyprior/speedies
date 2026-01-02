@@ -3,6 +3,7 @@ from pathlib import Path
 import helpers.warband_helper as warband_helper
 import helpers.reference_helper as reference_helper
 import helpers.faction_helper as faction_helper
+from faction_agent_cards import generate_pdf
 
 
 def generate_warbands():
@@ -54,3 +55,4 @@ def generate_factions():
 generate_warbands()
 generate_reference_pages()
 generate_factions()
+generate_pdf('static/jsondata/faction-agents.json', 'static/img/faction_agents.pdf', cards_per_row=2, cards_per_col=2)
