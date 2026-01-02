@@ -16,10 +16,10 @@ Dwarves may use any Ranged weapon with a Shield.
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| Chieftain | 5 | 12 | 12 | 13 | 14| 5 | 1 | 1 | 0 | 0 | [Leader](#leader) | 90 | 1 | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Morale) |
-| Engineer | 5 | 13 | 13 | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Weaponsmith](#weaponsmith) | 65 | 1 | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Defence) |
-| Armourer | 5 | 13 | 14 | 13 | 14| 7 | 1 | 1 | 0 | 0 | [Armoursmith](#armoursmith) | 65 | 1 | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence) |
-| Veteran | 5 | 12 | 14 | 14 | 14| 7 | 1 | 1 | 0 | 0 |  | 60 | - | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence) |
+| Chieftain | 5 | 12 | 12 | 13 | 14| 5 | 1 | 1 | 0 | 0 | [Leader](#leader) | 90 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Morale) |
+| Engineer | 5 | 13 | 13 | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Weaponsmith](#weaponsmith) | 65 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Defence) |
+| Armourer | 5 | 13 | 14 | 13 | 14| 7 | 1 | 1 | 0 | 0 | [Armoursmith](#armoursmith) | 65 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence) |
+| Veteran | 5 | 12 | 14 | 14 | 14| 7 | 1 | 1 | 0 | 0 |  | 60 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
@@ -118,11 +118,11 @@ Select a point within line-of-sight and within this weapon's range. Target ALL u
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Chieftain | X | X | X |  | X | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Morale) |
-| Engineer |  | X | X |  |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Defence) |
-| Armourer | X |  | X |  |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence) |
-| Veteran | X |  | X |  |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence) |
-| Berserker | X |  |  |  |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee) |
-| Youngling | X |  | X |  |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence) |
-| Miner | X |  | X |  |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence) |
-| Gunner |  | X | X |  |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Defence) |
+| Chieftain | X | X | X |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Morale) |
+| Engineer |  | X | X |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Defence) |
+| Armourer | X |  | X |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence) |
+| Veteran | X |  | X |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence) |
+| Berserker | X |  |  |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee) |
+| Youngling | X |  | X |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence) |
+| Miner | X |  | X |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence) |
+| Gunner |  | X | X |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Defence) |

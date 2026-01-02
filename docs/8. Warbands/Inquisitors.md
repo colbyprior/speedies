@@ -14,10 +14,10 @@ At the start of each game make a Morale Check once per hero. For each success, a
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| Grand Inquisitor | 6 | 13 | 12 | 17 | 8| 7 | 1 | 1 | 0 | 0 | [Leader](#leader), [Inquisitor](#inquisitor) | 85 | 1 | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Agility,Morale) |
-| Priest | 6 | 14 | - | 18 | 10| 10 | 1 | 1 | 0 | 0 | [Divine Magic](#divine-magic) | 80 | 1 | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
-| Inquisitor | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 | [Inquisitor](#inquisitor) | 55 | - | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
-| Doomsayer | 6 | 15 | 15 | 18 | 10| 10 | 1 | 1 | 0 | 0 | [The Rapture is Nigh](#the-rapture-is-nigh), [Inquisitor](#inquisitor) | 65 | 1 | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
+| Grand Inquisitor | 6 | 13 | 12 | 17 | 8| 7 | 1 | 1 | 0 | 0 | [Leader](#leader), [Inquisitor](#inquisitor) | 85 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Agility,Morale) |
+| Priest | 6 | 14 | - | 18 | 10| 10 | 1 | 1 | 0 | 0 | [Divine Magic](#divine-magic) | 80 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
+| Inquisitor | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 | [Inquisitor](#inquisitor) | 55 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
+| Doomsayer | 6 | 15 | 15 | 18 | 10| 10 | 1 | 1 | 0 | 0 | [The Rapture is Nigh](#the-rapture-is-nigh), [Inquisitor](#inquisitor) | 65 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
@@ -160,11 +160,11 @@ Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately 
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Grand Inquisitor | X | X | X | X | X | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Agility,Morale) |
-| Priest |  |  | X |  | X | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
-| Inquisitor | X | X |  |  |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
-| Doomsayer | X | X |  |  | X | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
-| Fanatic | X |  |  |  |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee) |
-| Zealot | X | X |  |  |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
-| Peasant |  |  |  |  | X | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Morale) |
-| Hound | X |  |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
+| Grand Inquisitor | X | X | X | X | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Agility,Morale) |
+| Priest |  |  | X |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
+| Inquisitor | X | X |  |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
+| Doomsayer | X | X |  |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
+| Fanatic | X |  |  |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee) |
+| Zealot | X | X |  |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
+| Peasant |  |  |  |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Morale) |
+| Hound | X |  |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |

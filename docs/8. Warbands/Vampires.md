@@ -11,10 +11,10 @@ This team sucks... your blood!
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| Vampire Noble | 8 | 14 | - | 18 | 7| 7 | 2 | 2 | 0 | 0 | [Leader](#leader), [Undead](#undead), [Fear](#fear), [Vampire](#vampire) | 165 | 1 | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility,Morale) |
-| Vampire Seductor | 8 | 14 | - | 18 | 10| 10 | 2 | 2 | 0 | 0 | [Vampiric Magic](#vampiric-magic), [Undead](#undead), [Fear](#fear), [Vampire](#vampire) | 125 | 1 | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
-| Nosferatu | 8 | 12 | - | 18 | 8| 10 | 2 | 2 | 0 | 0 | [No Equipment](#no-equipment), [Undead](#undead), [Fear](#fear), [Vampire](#vampire) | 125 | 1 | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility) |
-| Vampire Spawn | 8 | 14 | - | 18 | 10| 10 | 1 | 2 | 0 | 0 | [Undead](#undead), [Fear](#fear), [Vampire](#vampire) | 85 | - | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
+| Vampire Noble | 8 | 14 | - | 18 | 7| 7 | 2 | 2 | 0 | 0 | [Leader](#leader), [Undead](#undead), [Fear](#fear), [Vampire](#vampire) | 165 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility,Morale) |
+| Vampire Seductor | 8 | 14 | - | 18 | 10| 10 | 2 | 2 | 0 | 0 | [Vampiric Magic](#vampiric-magic), [Undead](#undead), [Fear](#fear), [Vampire](#vampire) | 125 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
+| Nosferatu | 8 | 12 | - | 18 | 8| 10 | 2 | 2 | 0 | 0 | [No Equipment](#no-equipment), [Undead](#undead), [Fear](#fear), [Vampire](#vampire) | 125 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility) |
+| Vampire Spawn | 8 | 14 | - | 18 | 10| 10 | 1 | 2 | 0 | 0 | [Undead](#undead), [Fear](#fear), [Vampire](#vampire) | 85 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
@@ -123,11 +123,11 @@ You may not use this weapon if it was fired in the previous turn.
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Vampire Noble | X |  | X | X | X | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility,Morale) |
-| Vampire Seductor | X |  |  | X | X | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
-| Vampire Spawn | X |  |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
-| Nosferatu | X |  | X | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility) |
-| Thrall | X | X |  |  |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
-| Ghoul | X |  | X |  |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence) |
-| Dire Wolf | X |  |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
-| Giant Bat | X |  |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
+| Vampire Noble | X |  | X | X | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility,Morale) |
+| Vampire Seductor | X |  |  | X | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
+| Vampire Spawn | X |  |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
+| Nosferatu | X |  | X | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility) |
+| Thrall | X | X |  |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
+| Ghoul | X |  | X |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence) |
+| Dire Wolf | X |  |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
+| Giant Bat | X |  |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |

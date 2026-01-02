@@ -11,10 +11,10 @@ sidebar_label: Sellswords
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| Captain | 6 | 12 | 12 | 17 | 8| 7 | 1 | 1 | 0 | 0 | [Leader](#leader) | 75 | 1 | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Morale) |
-| Champion | 6 | 13 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 40 | - | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
-| Sniper | 6 | 14 | 13 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 45 | 2 | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
-| Knight | 8 | 13 | - | 17 | 10| 10 | 1 | 1 | 0 | 0 |  | 45 | 2 | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
+| Captain | 6 | 12 | 12 | 17 | 8| 7 | 1 | 1 | 0 | 0 | [Leader](#leader) | 75 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Morale) |
+| Champion | 6 | 13 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 40 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
+| Sniper | 6 | 14 | 13 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 45 | 2 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
+| Knight | 8 | 13 | - | 17 | 10| 10 | 1 | 1 | 0 | 0 |  | 45 | 2 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
@@ -144,11 +144,11 @@ Select a point within line-of-sight and within this weapon's range. Target ALL u
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Captain | X | X | X |  | X | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Morale) |
-| Champion | X | X | X |  |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
-| Sniper |  | X |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
-| Knight |  |  | X |  | X | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
-| Infantry | X | X | X |  |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
-| Marksman |  | X |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
-| Man-at-Arms | X |  | X |  |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence) |
-| Defender |  |  | X |  | X | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
+| Captain | X | X | X |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Morale) |
+| Champion | X | X | X |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
+| Sniper |  | X |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
+| Knight |  |  | X |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
+| Infantry | X | X | X |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
+| Marksman |  | X |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
+| Man-at-Arms | X |  | X |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence) |
+| Defender |  |  | X |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |

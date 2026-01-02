@@ -14,10 +14,10 @@ Elves can Jump Across to a maximum distance of 6", instead of the usual 3".
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| Commander | 7 | 12 | 12 | 16 | 6| 5 | 1 | 1 | 0 | 0 | [Leader](#leader) | 95 | 1 | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Agility,Morale) |
-| Mage | 7 | 13 | - | 18 | 6| 7 | 1 | 1 | 0 | 0 | [Life Magic](#life-magic) | 70 | 1 | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
-| Honour Guard | 7 | 12 | 13 | 16 | 6| 7 | 1 | 1 | 0 | 0 |  | 80 | - | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
-| Ranger | 7 | 13 | 10 | 18 | 6| 7 | 1 | 1 | 0 | 0 |  | 75 | - | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
+| Commander | 7 | 12 | 12 | 16 | 6| 5 | 1 | 1 | 0 | 0 | [Leader](#leader) | 95 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Agility,Morale) |
+| Mage | 7 | 13 | - | 18 | 6| 7 | 1 | 1 | 0 | 0 | [Life Magic](#life-magic) | 70 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
+| Honour Guard | 7 | 12 | 13 | 16 | 6| 7 | 1 | 1 | 0 | 0 |  | 80 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
+| Ranger | 7 | 13 | 10 | 18 | 6| 7 | 1 | 1 | 0 | 0 |  | 75 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
@@ -107,10 +107,10 @@ This weapon may be used with a Shield.
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Commander | X | X | X | X | X | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Agility,Morale) |
-| Mage |  | X |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
-| Honour Guard | X |  |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
-| Ranger |  | X |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
-| Citizen |  | X |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
-| Scout |  | X |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
-| Woodland Creature | X |  |  | X |  | [\[Link\]](docs/9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
+| Commander | X | X | X | X | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Agility,Morale) |
+| Mage |  | X |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
+| Honour Guard | X |  |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
+| Ranger |  | X |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
+| Citizen |  | X |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
+| Scout |  | X |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
+| Woodland Creature | X |  |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
