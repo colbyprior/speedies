@@ -116,8 +116,8 @@
             "Name": "Man-at-Arms",
             "Type Cap": "3",
             "Move": "6",
-            "Piercing": "0",
-            "Injury": "0",
+            "Piercing": "2",
+            "Injury": "2",
             "Melee": "14",
             "Ranged": "14",
             "Defense": "18",
@@ -125,9 +125,8 @@
             "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 50,
+            "Cost": 35,
             "Skills": [
-                "Ambush"
             ]
         },
         {
