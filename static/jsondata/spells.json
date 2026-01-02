@@ -15,18 +15,18 @@
     "Name": "Control Dead", 
     "School": "Necromantic Magic",
     "Check": "10",
-    "Description": "Choose a point within 5\" of the caster. Any allied Zombies or Skeletons within 1.5\" of that point may immediately move again up to their Move. If this moves them into base contact with an enemy unit, they count as Engaging. They take Agility Checks as normal."
+    "Description": "Choose a point within 5\" of the caster. Any allied Zombies or Skeletons within 1.5\" of that point may immediately move again up to their Move. If this moves them into base contact with an enemy unit, they count as Engaging."
   },
   "Lifestealer": {
     "Name": "Lifestealer", 
     "School": "Necromantic Magic",
-    "Check": "17",
+    "Check": "16",
     "Description": "Choose a single unit within 5\". The target suffers a Wound (no check required) and is automatically Incapacitated if this is its last Wound. The caster gains an extra Wound for the duration of the battle. This may take the caster's Wounds above its maximum value. This spell does not affect Undead units."
   },
   "Necromantic Hex": {
     "Name": "Hex",
     "School": "Necromantic Magic",
-    "Check": "14",
+    "Check": "13",
     "Description": "Ongoing. Choose a single enemy within 10\". The target has Disadvantage on all Checks it makes."
   },
   "Bless Weapon": {
@@ -38,13 +38,13 @@
   "Divine Fervour": {
     "Name": "Divine Fervour", 
     "School": "Divine Magic",
-    "Check": "12",
+    "Check": "11",
     "Description": "Reduce any Injury results against allies within 5\" of the caster (including themselves) by 3 until the end of the turn."
   },
   "Holy Smite": {
     "Name": "Holy Smite", 
     "School": "Divine Magic",
-    "Check": "15",
+    "Check": "14",
     "Description": "Make an Injury Roll against all enemies within 5\". Add +2 to the Check if the enemy is Undead."
   },
    "Invisibility": {
@@ -56,20 +56,20 @@
    "Control Earth": {
     "Name": "Control Earth", 
     "School": "Life Magic",
-    "Check": "9",
+    "Check": "10",
     "Description": "Choose a point within 10\". Place a piece of natural terrain (a wood, mesa, etc.) at that point. The terrain cannot be larger than 3\" in any dimension. Some leniency should be made if it fits the spirit of the spell. The terrain must fit within the space. If this is cast on a unit, move that unit to the closest space that it can be safely placed (this may be within or on the new terrain)."
   },
    "Root": {
     "Name": "Root", 
     "School": "Life Magic",
-    "Check": "12",
+    "Check": "11",
     "Description": "Ongoing. Choose one unit within 20\". That unit cannot Engage, Move, or Run."
   },
    "Earthquake": {
     "Name": "Earthquake", 
     "School": "Life Magic",
-    "Check": "14",
-    "Description": "All units within 10\" must make an Agility check or become Dazed. This does not reduced a unit's Wounds."
+    "Check": "13",
+    "Description": "All units within 10\" must make an Agility check or become Dazed."
   },
    "Magic Arrow": {
     "Name": "Magic Arrow", 
@@ -99,18 +99,18 @@
     "Name": "Blight Bolt",
     "School": "Blight Magic",
     "Check": "12",
-    "Description": "Cast Attack. Target one unit you can see within 10\" and perform a Cast Attack against them. On a success, the taret makes a Plague Check."
+    "Description": "Cast Attack. Target one unit you can see within 10\" and perform a Cast Attack against them. On a success, the target makes a Plague Check."
   },
   "Bat wings": {
     "Name": "Bat wings",
     "School": "Vampiric Magic",
-    "Check": "11",
+    "Check": "5",
     "Description": "Ongoing. Choose one ally within 5\", including the caster. That unit gains the Flying skill."
   },
   "Vampiric Hex": {
     "Name": "Hex",
     "School": "Vampiric Magic",
-    "Check": "14",
+    "Check": "13",
     "Description": "Ongoing. Choose a single enemy within 10\". The target has Disadvantage on all Checks it makes."
   },
   "Swarm of Rats": {
@@ -122,7 +122,7 @@
   "Sewer Filth": {
     "Name": "Sewer Filth",
     "School": "Blight Magic",
-    "Check": "12",
+    "Check": "10",
     "Description": "Basic. Target one unit you can see within 20\". The target is Dazed."
   },
   "Pounce": {
