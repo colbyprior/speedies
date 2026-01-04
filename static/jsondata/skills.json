@@ -104,25 +104,10 @@
     "Type": "Morale", 
     "Description": "When a unit of your warband dies you can keep one piece of equipment from that unit. This skill can be used once per battle."
   },
-  "Ranged Bonus": { 
-    "Name": "Ranged Bonus", 
-    "Type": "Inherent",
-    "Description": "This unit gets a +2 to their ranged skill."
-  },
-  "Melee Bonus": { 
-    "Name": "Melee Bonus", 
-    "Type": "Inherent",
-    "Description": "This unit gets a +2 to their melee skill."
-  },
   "Fear": { 
     "Name": "Fear", 
     "Type": "Inherent",
     "Description": "This unit causes Fear."
-  },
-   "Fearless": { 
-    "Name": "Fearless", 
-    "Type": "Morale",
-    "Description": "The unit is immune to Fear checks."
   },
   "Leader": {
     "Name": "Leader",
@@ -249,30 +234,15 @@
     "Type": "Inherent",
     "Description": "If this unit is not within 5\" of an allied hero at the start of its turn, it cannot act during the Engage, Move, Cast, and Ranged phases. It can act in Melee Combat as normal."
   },
-  "Upkeep 1": {
-    "Name": "Upkeep 1",
-    "Type": "Inherent",
-    "Description": "You must pay this unit 10g at the end of each battle. If you are unable to pay this gold the unit will not be available for your next battle."
-  },
   "Large": {
     "Name": "Large",
     "Type": "Inherent",
     "Description": "This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It cannot pick up Treasure. This unit is immune to the Blight. It cannot Promote."
   },
-  "Free Skill": {
-    "Name": "Free Skill",
-    "Type": "Inherent",
-    "Description": "This unit may pick a skill of their choice that they could normally learn when hired."
-  },
   "Inquisitor": {
     "Name": "Inquisitor",
     "Type": "Inherent",
     "Description": "This unit gets a +2 Pierce modifier against all enemy heroes for melee attacks."
-  },
-  "Can't promote": {
-    "Name": "Can't promote",
-    "Type": "Inherent",
-    "Description": "This unit cannot promote into a hero."
   },
   "The Rapture is Nigh": {
     "Name": "The Rapture is Nigh",
@@ -323,5 +293,10 @@
     "Name": "Vanguard",
     "Type": "Inherent",
     "Description": "After unit deployment, but before any player takes their first turn, this unit may perform a Run. If multiple players have units with this skill, resolve it in turn order. This unit may never pick up Treasure tokens."
+  },
+    "Madness": {
+    "Name": "Madness",
+    "Type": "Inherent",
+    "Description": "This unit makes all Morale Checks with Disadvantage."
   }
 }
