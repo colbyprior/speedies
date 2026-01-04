@@ -60,7 +60,7 @@
     "Event": "Attacks immediately. Disengages at the end of each of his combats. On his turn, 50/50 whether he attacks or wanders randomly."
   },
   "egg2": {
-    "Type": "Agent",
+    "Type": "Henchman",
     "Faction": "Underworld",
     "Move": "8",
     "Piercing": "0",
@@ -80,7 +80,7 @@
     "Event": "Attacks immediately. Disengages at the end of each of his combats. On his turn, 50/50 whether he attacks or wanders randomly."
   },
   "egg3": {
-    "Type": "Agent",
+    "Type": "Henchman",
     "Faction": "Underworld",
     "Move": "8",
     "Piercing": "0",

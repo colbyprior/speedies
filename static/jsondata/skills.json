@@ -37,7 +37,7 @@
   "Drag You Down": { 
     "Name": "Drag You Down", 
     "Type": "Defence", 
-    "Description": "If a unit is Incapacitated in Melee, it immediately makes a single Attack against the Incapacitator."
+    "Description": "If this unit is Incapacitated in Melee, the Incapacitator makes an Injury Roll after resolving its Melee Attacks."
   },
   "Taunt": { 
     "Name": "Taunt", 
