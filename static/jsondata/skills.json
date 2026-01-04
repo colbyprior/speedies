@@ -4,10 +4,60 @@
     "Type": "Melee", 
     "Description": "+2 to injury rolls in melee"
   },
+  "Shove": { 
+    "Name": "Shove", 
+    "Type": "Melee", 
+    "Description": "This unit may declare it is replacing one or more of its attacks with shoves before attacking. If it does, make a Melee check for each shove without modifiers. On a success, the target may not make a Defence check and is immediately pushed back 2\", moving it out of Melee. This may not be used on Large units and the unit may not attack a unit they are also shoving."
+  },
+  "Fencing Specialist": { 
+    "Name": "Fencing Specialist", 
+    "Type": "Agility", 
+    "Description": "If this unit is using a one-handed weapon and no Shield, they have Advantage on Defence Checks in Melee."
+  },
+  "Great Weapon Specialist": { 
+    "Name": "Great Weapon Specialist", 
+    "Type": "Melee", 
+    "Description": "If this unit is using a two-handed weapon, the enemy has Disadvantage on Defence Checks against them in Melee."
+  },
+ "Dual Wielding Specialist": { 
+    "Name": "Dual Wielding Specialist", 
+    "Type": "Melee", 
+    "Description": "If this unit is dual wielding Melee weapons, it double its Attacks in Melee instead of gaining the usual one additional Attack."
+  },
+ "Shield Specialist": { 
+    "Name": "Shield Specialist", 
+    "Type": "Defence", 
+    "Description": "If this unit is using a Shield, it gains one additional Attack in Melee."
+  },
+  "Grapple": { 
+    "Name": "Grapple", 
+    "Type": "Melee", 
+    "Description": "This unit may declare it is replacing all of its attacks with a single grapple before attacking. If it does, make a Melee check without modifiers. On a success, the target may not make a Defence check and both this unit and its target immediately become Dazed. This may not be used on Large units."
+  },
+  "Drag You Down": { 
+    "Name": "Drag You Down", 
+    "Type": "Defence", 
+    "Description": "If a unit is Incapacitated in Melee, it immediately makes a single Attack against the Incapacitator."
+  },
+  "Taunt": { 
+    "Name": "Taunt", 
+    "Type": "Defence", 
+    "Description": "If an enemy attempts to Engage an ally within 5\" of this unit, this unit may make a Morale Check. On a success, the enemy attempts to Engage this unit instead."
+  },
+  "Hero Killer": { 
+    "Name": "Hero Killer", 
+    "Type": "Melee", 
+    "Description": "If this unit rolls an unmodified Melee Attack of 18-20, the target automatically fails its Defence Check."
+  },
   "Cleave": { 
     "Name": "Cleave", 
     "Type": "Melee", 
-    "Description": "+1 attack for each enemy target engaged in melee beyond the first"
+    "Description": "If this unit Incapacitates an enemy in Melee, they may immediately make another Attack."
+  },
+   "Magebane": { 
+    "Name": "Magebane", 
+    "Type": "Melee", 
+    "Description": "This unit has Advantage against Casters in Melee."
   },
   "Improved Critical": { 
     "Name": "Improved Critical", 
@@ -17,27 +67,112 @@
   "Ambush": { 
     "Name": "Ambush", 
     "Type": "Melee", 
-    "Description": "This unit gets Advantage on the first round of combat when they Engage an enemy"
+    "Description": "This unit gets Advantage on the first round of combat when they Engage an enemy."
   },
-   "Good Defence": { 
-    "Name": "Good Defence", 
+  "Spell Sniper": { 
+    "Name": "Spell Sniper", 
+    "Type": "Morale", 
+    "Description": "This unit's Cast Attack spells have their range increased by 5\"."
+  },
+  "Dread Aura": { 
+    "Name": "Dread Aura", 
+    "Type": "Morale", 
+    "Description": "Enemy units within 5\" of this unit have Disadvantage on Morale Checks."
+  },
+  "Sneaky": { 
+    "Name": "Sneaky", 
+    "Type": "Agility", 
+    "Description": "Out-of-Sight rolls against this unit are rolled with Disadvantage."
+  },
+  "Thief": { 
+    "Name": "Thief", 
+    "Type": "Agility", 
+    "Description": "This unit may pick up Treasure, even when it is contested."
+  },
+  "Animal Handler": { 
+    "Name": "Animal Handler", 
+    "Type": "Agility", 
+    "Description": "This unit may make a Morale Check against an Animal within 5\" during the Ranged Phase (instead of a Ranged Attack). If the unit passes, the Animal cannot Engage or Move on its following turn."
+  },
+  "Surefooted": { 
+    "Name": "Surefooted", 
+    "Type": "Agility", 
+    "Description": "You ignore the effects of Difficult terrain."
+  },
+  "Coup De Grace": { 
+    "Name": "Coup De Grace", 
+    "Type": "Agility", 
+    "Description": "This unit may target Dazed or Stunned enemies, even if a non-Stunned or Dazed enemy is Engaged with them."
+  },
+  "Defensive Stance": { 
+    "Name": "Defensive Stance", 
     "Type": "Defence", 
-    "Description": "Yes, this unit has a gooder Defence than other units."
+    "Description": "Enemies don't get to automatically attack first in Melee on the turn they Engage. Resolve it based on Agility instead."
+  },
+  "Protector": { 
+    "Name": "Protector", 
+    "Type": "Defence", 
+    "Description": "You have Advantage on Morale checks to protect other units from Ranged Attacks and always count as being in Cover."
+  },
+  "Gunner": { 
+    "Name": "Gunner", 
+    "Type": "Ranged", 
+    "Description": "This unit cannot misfire with Blackpowder weapons (the Blunderbuss can still misfire)."
+  },
+  "Piercing Shot": { 
+    "Name": "Piercing Shot", 
+    "Type": "Ranged", 
+    "Description": "This unit may roll Ranged Attacks with Disadvantage. If it does, the enemy cannot make Defence checks."
+  },
+  "Jumper": { 
+    "Name": "Jumper", 
+    "Type": "Agility", 
+    "Description": "This unit's max jump distance is increased by 3\"."
+  },
+   "Arbalist": { 
+    "Name": "Arbalist", 
+    "Type": "Ranged", 
+    "Description": "Crossbows used by this unit gain +2 Injury."
+  },
+  "Archer": { 
+    "Name": "Archer", 
+    "Type": "Ranged", 
+    "Description": "Bows used by this unit gain Close Quarters."
+  },
+  "Heavy Gunner": { 
+    "Name": "Heavy Gunner", 
+    "Type": "Ranged", 
+    "Description": "This unit may use any Ranged weapon with a Shield."
+  },
+  "Sprint": { 
+    "Name": "Sprint", 
+    "Type": "Agility", 
+    "Description": "This unit's Run speed is double its base Move."
+  },
+  "Sturdy": { 
+    "Name": "Sturdy", 
+    "Type": "Defence", 
+    "Description": "This unit cannot be Staggered."
   },
   "Blade Defence": { 
     "Name": "Blade Defence", 
-    "Type": "Melee", 
-    "Description": "This unit gains a +3 defence when not wearing armour or wielding a shield in melee"
+    "Type": "Defence", 
+    "Description": "This unit gains +2 Defence when not wearing Armour or wielding a Shield in melee"
+  },
+   "Tough": { 
+    "Name": "Tough", 
+    "Type": "Defence", 
+    "Description": "When this unit is Injured, the opponent rolls again and takes the lower result."
   },
   "Sniper": { 
     "Name": "Sniper", 
     "Type": "Ranged", 
-    "Description": "This unit gains a +9\" to all ranged weapons"
+    "Description": "This unit gains +5\" range to all Ranged weapons."
   },
   "Quick Reload": { 
     "Name": "Quick Reload", 
     "Type": "Ranged", 
-    "Description": "This unit treats ranged weapons with Prepare Shot as Long Reload instead. If instead the weapon has Long Reload they can ignore the rule."
+    "Description": "This unit ignores the Long Reload special rule for weapons."
   },
   "Precise": { 
     "Name": "Precise", 
@@ -49,15 +184,10 @@
     "Type": "Ranged", 
     "Description": "This unit can throw a number of projectiles up to their attack value. This may target multiple targets."
   },
-  "Runner": { 
-    "Name": "Runner", 
-    "Type": "Agility", 
-    "Description": "This units run speed is 2x their base movement instead of 1.5x."
-  },
   "Agile": { 
     "Name": "Agile", 
     "Type": "Agility",
-    "Description": "This unit gets advantage on all agility checks."
+    "Description": "This unit gets Advantage on all Agility checks."
   },
   "Strike First": { 
     "Name": "Strike First", 
@@ -67,7 +197,7 @@
   "Dodge": { 
     "Name": "Dodge", 
     "Type": "Agility", 
-    "Description": "This unit gets a +3 to ranged defence when not wearing any armour or wielding a shield."
+    "Description": "Ranged attacks cannot have Advantage against this unit."
   },
   "Iron Will": { 
     "Name": "Iron Will", 
@@ -99,6 +229,11 @@
     "Type": "Morale", 
     "Description": "This unit may wear armour and use a shield while casting spells."
   },
+  "War Caster": { 
+    "Name": "War Caster", 
+    "Type": "Morale", 
+    "Description": "This unit has Advantage on Moracle checks for Ongoing Spells."
+  },
   "Hoarder": { 
     "Name": "Hoarder", 
     "Type": "Morale", 
@@ -106,7 +241,7 @@
   },
   "Fear": { 
     "Name": "Fear", 
-    "Type": "Inherent",
+    "Type": "Morale",
     "Description": "This unit causes Fear."
   },
   "Leader": {
@@ -291,7 +426,7 @@
   },
   "Vanguard": {
     "Name": "Vanguard",
-    "Type": "Inherent",
+    "Type": "Agility",
     "Description": "After unit deployment, but before any player takes their first turn, this unit may perform a Run. If multiple players have units with this skill, resolve it in turn order. This unit may never pick up Treasure tokens."
   },
     "Madness": {
