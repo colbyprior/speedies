@@ -91,7 +91,7 @@
   },
   "Animal Handler": { 
     "Name": "Animal Handler", 
-    "Type": "Agility", 
+    "Type": "Morale", 
     "Description": "This unit may make a Morale Check against an Animal within 5\" during the Ranged Phase (instead of a Ranged Attack). If the unit passes, the Animal cannot Engage or Move on its following turn."
   },
   "Surefooted": { 
@@ -112,7 +112,7 @@
   "Protector": { 
     "Name": "Protector", 
     "Type": "Defence", 
-    "Description": "You have Advantage on Morale checks to protect other units from Ranged Attacks and always count as being in Cover."
+    "Description": "You have Advantage on Morale checks to Protect other units from Ranged Attacks and always count as being in Cover."
   },
   "Gunner": { 
     "Name": "Gunner", 
