@@ -1,14 +1,5 @@
 from helpers.global_data import (global_faction_agents, global_skills_data)
-
-def minimalNumber(x):
-    if type(x) is str:
-        if x == '':
-            x = 0
-    f = float(x)
-    if f.is_integer():
-        return int(f)
-    else:
-        return f
+from helpers.run_helper import minimalNumber
 
 
 def generate_faction_agents():
