@@ -6,6 +6,7 @@ This team sucks... your blood!
 
 | Max Units | 12 |
 | ---- | ---- |
+| Complexity | ★★★ |
 | Play Style | Powerful leader with minions |
 
 ## Heroes
@@ -34,7 +35,7 @@ Allied, non-animal units within 5" of this unit can use this unit's Morale stat 
 
 This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to the Blight.
 ### Fear
-*Inherent*
+*Morale*
 
 This unit causes Fear.
 ### Vampire
@@ -52,7 +53,7 @@ This unit may not have any equipment, but does not suffer the penalties for figh
 ### Ambush
 *Melee*
 
-This unit gets Advantage on the first round of combat when they Engage an enemy
+This unit gets Advantage on the first round of combat when they Engage an enemy.
 ### Animal
 *Inherent*
 
@@ -67,11 +68,11 @@ This unit can move through the air in any direction. They must not end their mov
 ### Vampires Equipment 
 Vampires equipment for the unit types: Vampire Noble, Vampire Seductor, Vampire Spawn
 
-| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
-| Sword | 0 | 3 | 0 |  | 5 | 1 |
-| Great Sword | 3 | 3 | 5 |  | 10 | 2 |
+| Sword | 0 | 0 | 3 |  | 5 | 1 |
+| Great Sword | 5 | 3 | 3 |  | 10 | 2 |
 
 | Armour | Def | Cost |
 | ------ | --- | ---- |
@@ -81,18 +82,18 @@ Vampires equipment for the unit types: Vampire Noble, Vampire Seductor, Vampire 
 ### Thralls Equipment 
 Thralls equipment for the unit types: Thrall
 
-| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
-| Hammer / Club | 4 | 0 | 0 |  | 5 | 1 |
-| Sword | 0 | 3 | 0 |  | 5 | 1 |
-| Spear | 0 | 0 | 2 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
-| Great Hammer / Club | 7 | 0 | 5 |  | 10 | 2 |
-| Great Sword | 3 | 3 | 5 |  | 10 | 2 |
-| Pike | 3 | 0 | 7 |  | 10 | 2 |
-| Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
+| Hammer / Club | 0 | 4 | 0 |  | 5 | 1 |
+| Sword | 0 | 0 | 3 |  | 5 | 1 |
+| Spear | 2 | 0 | 0 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
+| Great Hammer / Club | 5 | 7 | 0 |  | 10 | 2 |
+| Great Sword | 5 | 3 | 3 |  | 10 | 2 |
+| Pike | 7 | 3 | 0 |  | 10 | 2 |
+| Shield | 0 | 0 | 0 | +4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
-| Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
+| Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |
 | ------------- | --- | --- | --- | ------ | ---- | ----- |
 | Short Bow | 20" | 0 | 0 | [Light](#light) | 5 | 1 |
 | Bow | 25" | 0 | 0 |  | 10 | 1 |
@@ -113,11 +114,11 @@ You may not use this weapon if it was fired in the previous turn.
 
 | Name | Difficulty | Description |
 | ---- | ------ | ---- |
-| Frenzy | 13 | Choose one unit within 5", including the caster. That unit may take their full movement even if they have already moved. If they move into base contact with an enemy unit this counts as having charged. The unit may attack with advantage on the first round. |
+| Blood Frenzy | 7 | Ongoing. Choose one unit within 5", including the caster. It gains the Berserk and Ambush skills. |
 | Lure | 12 | Basic. Target one unit you can see within 15". The target immediately moves towards the Caster by the most direct path, including by Jumping Down. If the target is able to reach the Caster, it is placed in base contact and the Caster is considered to have Engaged it. |
-| New Spell | 99 | Bottom text. |
-| Bat wings | 11 | Ongoing. Choose one ally within 5", including the caster. That unit gains the Flying skill. |
-| Hex | 14 | Ongoing. Choose a single enemy within 10". The target has Disadvantage on all Checks it makes. |
+| Bat wings | 5 | Ongoing. Choose one ally within 5", including the caster. That unit gains the Flying skill. |
+| Hex | 13 | Ongoing. Choose a single enemy within 10". The target has Disadvantage on all Checks it makes. |
+| Death Visage | 12 | All enemies in base contact with the caster that are not Stunned or Dazed make an immediate Morale check. If they fail, the caster makes an attack against the target, which then perfoms a Move directly away from the caster, if able. |
 
 
 ## Skill Table

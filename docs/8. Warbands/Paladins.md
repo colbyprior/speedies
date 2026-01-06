@@ -6,6 +6,7 @@ An order of paladins and others that seek to advance a holy agenda.
 
 | Max Units | 15 |
 | ---- | ---- |
+| Complexity | ★☆☆ |
 | Play Style | Defensive |
 
 ## Heroes
@@ -63,17 +64,17 @@ This unit cannot use ladders or make Climb Checks. It gains +3 Mov and +1 Wnd, w
 ### Paladins Equipment 
 Paladins equipment for the unit types: Justicar, Paladin, Cleric, Initiate, Squire
 
-| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
-| Hammer | 4 | 0 | 0 |  | 5 | 1 |
-| Flail / Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
-| Divine Hammer | 4 | 3 | 0 | Advantage against Undead. Only heroes can dual-wield. | 15 | 1 |
-| Divine Great Hammer | 7 | 3 | 5 | Advantage against Undead. Only heroes can wield. | 30 | 2 |
-| Sword | 0 | 3 | 0 |  | 5 | 1 |
-| Great Sword | 3 | 3 | 5 |  | 10 | 2 |
-| Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
+| Hammer | 0 | 4 | 0 |  | 5 | 1 |
+| Flail / Great Hammer | 5 | 7 | 0 |  | 10 | 2 |
+| Divine Hammer | 0 | 4 | 3 | Advantage against Undead. Only heroes can dual-wield. | 15 | 1 |
+| Divine Great Hammer | 5 | 7 | 3 | Advantage against Undead. Only heroes can wield. | 30 | 2 |
+| Sword | 0 | 0 | 3 |  | 5 | 1 |
+| Great Sword | 5 | 3 | 3 |  | 10 | 2 |
+| Shield | 0 | 0 | 0 | +4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
-| Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
+| Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |
 | ------------- | --- | --- | --- | ------ | ---- | ----- |
 | Sling | 15" | 0 | 0 | [Light](#light) | 5 | 1 |
 
@@ -85,13 +86,13 @@ Paladins equipment for the unit types: Justicar, Paladin, Cleric, Initiate, Squi
 ### Cavalier Equipment 
 Cavalier equipment for the unit types: Cavalier
 
-| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
-| Hammer | 4 | 0 | 0 |  | 5 | 1 |
-| Divine Hammer | 4 | 3 | 0 | Advantage against Undead. Only heroes can dual-wield. | 15 | 1 |
-| Sword | 0 | 3 | 0 |  | 5 | 1 |
-| Pike | 3 | 0 | 7 |  | 10 | 2 |
-| Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
+| Hammer | 0 | 4 | 0 |  | 5 | 1 |
+| Divine Hammer | 0 | 4 | 3 | Advantage against Undead. Only heroes can dual-wield. | 15 | 1 |
+| Sword | 0 | 0 | 3 |  | 5 | 1 |
+| Pike | 7 | 3 | 0 |  | 10 | 2 |
+| Shield | 0 | 0 | 0 | +4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
 | Armour | Def | Cost |
 | ------ | --- | ---- |
@@ -107,8 +108,8 @@ This weapon may be used with a Shield.
 | Name | Difficulty | Description |
 | ---- | ------ | ---- |
 | Bless Weapon | 7 | Ongoing. The caster gains Advantage on all Melee Checks. |
-| Divine Fervour | 12 | Reduce any Injury results against allies within 5" of the caster (including themselves) by 3 until the end of the turn. |
-| Holy Smite | 15 | Make an Injury Roll against all enemies within 5". Add +2 to the Check if the enemy is Undead. |
+| Divine Fervour | 11 | Reduce any Injury results against allies within 5" of the caster (including themselves) by 3 until the end of the turn. |
+| Holy Smite | 14 | Make an Injury Roll against all enemies within 5". Add +2 to the Check if the enemy is Undead. |
 | Heal | 5 | Any ally within 2" of the caster (including themselves) removes Dazed or Staggered and regains 1 Wound, up to their maximum. |
 
 

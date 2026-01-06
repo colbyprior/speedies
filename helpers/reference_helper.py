@@ -6,17 +6,17 @@ from helpers.warband_helper import clean_link
 
 def melee_weapons_block():
     out_data = f"\n## Melee Weapons \n"
-    out_data += f"| Name | Inj | Prc | Mel | Effect | Cost | Slots |\n"
+    out_data += f"| Name | Mel | Inj | Prc | Special Rules | Cost | Slots |\n"
     out_data += f"| ---- | ------ | -------- | ----- | ------ | ---- | ----- |\n"
     for weapon_key in global_melee_weapons_data:
         weapon_data = global_melee_weapons_data.get(weapon_key)
-        out_data += f"| {weapon_data.get('Name')} | {weapon_data.get('Injury')} |{weapon_data.get('Piercing')} | {weapon_data.get('Melee')} |{weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
+        out_data += f"| {weapon_data.get('Name')} | {weapon_data.get('Melee')} | {weapon_data.get('Injury')} |{weapon_data.get('Piercing')} |{weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
     return out_data
 
 
 def ranged_weapons_block():
     out_data = f"\n## Ranged Weapons \n"
-    out_data += f"| Name | Rng | Inj | Prc | Effect | Cost | Slots |\n"
+    out_data += f"| Name | Rng | Inj | Prc | Special Rules | Cost | Slots |\n"
     out_data += f"| ---- | ----- | ------ | -------- | ------ | ---- | ----- |\n"
     for weapon_key in global_ranged_weapons_data:
         weapon_data = global_ranged_weapons_data.get(weapon_key)

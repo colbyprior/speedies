@@ -6,6 +6,7 @@ Let me off this wild ride Mr. Bones
 
 | Max Units | 18 |
 | ---- | ---- |
+| Complexity | ★★☆ |
 | Play Style | Slow and Skelly |
 
 ## Special Rules
@@ -45,7 +46,7 @@ If this unit Incapacitates or is Incapacitated by an enemy in Melee, that unit m
 
 This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to the Blight.
 ### Fear
-*Inherent*
+*Morale*
 
 This unit causes Fear.
 ### Fixed Equipment (Scythe)
@@ -70,18 +71,18 @@ This unit may not be purchased at warband creation. It counts as two units for t
 ### Undead Equipment 
 Undead equipment for the unit types: Skeleton, Death Knight
 
-| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
-| Spear | 0 | 0 | 2 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
-| Sword / Axe | 0 | 3 | 0 |  | 5 | 1 |
-| Hammer | 4 | 0 | 0 |  | 5 | 1 |
-| Pike | 3 | 0 | 7 |  | 10 | 2 |
-| Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
-| Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
-| Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
+| Spear | 2 | 0 | 0 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
+| Sword / Axe | 0 | 0 | 3 |  | 5 | 1 |
+| Hammer | 0 | 4 | 0 |  | 5 | 1 |
+| Pike | 7 | 3 | 0 |  | 10 | 2 |
+| Great Sword / Axe | 5 | 3 | 3 |  | 10 | 2 |
+| Great Hammer | 5 | 7 | 0 |  | 10 | 2 |
+| Shield | 0 | 0 | 0 | +4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
-| Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
+| Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |
 | ------------- | --- | --- | --- | ------ | ---- | ----- |
 | Short Bow | 20" | 0 | 0 | [Light](#light) | 5 | 1 |
 | Bow | 25" | 0 | 0 |  | 10 | 1 |
@@ -94,13 +95,13 @@ Undead equipment for the unit types: Skeleton, Death Knight
 ### Cultist Equipment 
 Cultist equipment for the unit types: Necromancer, Blight Cultist
 
-| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
-| Spear / Staff | 0 | 0 | 2 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
-| Sword | 0 | 3 | 0 |  | 5 | 1 |
+| Spear / Staff | 2 | 0 | 0 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
+| Sword | 0 | 0 | 3 |  | 5 | 1 |
 
-| Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
+| Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |
 | ------------- | --- | --- | --- | ------ | ---- | ----- |
 | Short Bow | 20" | 0 | 0 | [Light](#light) | 5 | 1 |
 | Bow | 25" | 0 | 0 |  | 10 | 1 |
@@ -119,9 +120,9 @@ This weapon may be used with a Shield.
 | ---- | ------ | ---- |
 | Raise Dead | 7 | One allied Zombie or Skeleton that was Incapacitated after the end of your last turn immediately returns to the battle, no longer counting towards your Rout Threshold. Place the model within 5" of the Caster. The model cannot be placed such that it is Engaged with an enemy. |
 | Soul Rend | 12 | Basic. Cast Attack. Target one unit you can see within 15" and perform a Cast Attack against them. If this spell Incapacitates the target, create a Zombie where it was Incapacitated. It is an ally to you and will count towards your Rout Threshold. |
-| Control Dead | 10 | Choose a point within 5" of the caster. Any allied Zombies or Skeletons within 1.5" of that point may immediately move again up to their Move. If this moves them into base contact with an enemy unit, they count as Engaging. They take Agility Checks as normal. |
-| Lifestealer | 17 | Choose a single unit within 5". The target suffers a Wound (no check required) and is automatically Incapacitated if this is its last Wound. The caster gains an extra Wound for the duration of the battle. This may take the caster's Wounds above its maximum value. This spell does not affect Undead units. |
-| Hex | 14 | Ongoing. Choose a single enemy within 10". The target has Disadvantage on all Checks it makes. |
+| Control Dead | 10 | Choose a point within 5" of the caster. Any allied Zombies or Skeletons within 1.5" of that point may immediately move again up to their Move. If this moves them into base contact with an enemy unit, they count as Engaging. |
+| Lifestealer | 16 | Choose a single unit within 5". The target suffers a Wound (no check required) and is automatically Incapacitated if this is its last Wound. The caster gains an extra Wound for the duration of the battle. This may take the caster's Wounds above its maximum value. This spell does not affect Undead units. |
+| Hex | 13 | Ongoing. Choose a single enemy within 10". The target has Disadvantage on all Checks it makes. |
 
 
 ## Skill Table

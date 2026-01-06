@@ -6,12 +6,13 @@ These chonkers go bonkers.
 
 | Max Units | 12 |
 | ---- | ---- |
+| Complexity | ★★☆ |
 | Play Style | Rough and Tough |
 
 ## Special Rules
 ### Hard to Kill
-Dwarves have a -2 to Injury rolls made against them (eg. an unmodified roll of 19 would count as a 17, Stunning rather than Incapaciating the Dwarf).
-### Ranged Shields
+Dwarves have a -2 to Injury rolls made against them (eg. an unmodified roll of 19 would count as a 17, Stunning rather than Incapacitating the Dwarf).
+### Heavy Gunners
 Dwarves may use any Ranged weapon with a Shield.
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
@@ -51,7 +52,7 @@ At the end of the Engage Phase, if there is an enemy within Line-of-Sight and En
 
 This unit cannot equip Armour, Shields, or Ranged Weapons.
 ### Fear
-*Inherent*
+*Morale*
 
 This unit causes Fear.
 
@@ -60,16 +61,16 @@ This unit causes Fear.
 ### Warrior Equipment 
 Warrior equipment for the unit types: Chieftain, Armourer, Veteran, Berserker, Miner, Youngling
 
-| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
-| Sword / Axe | 0 | 3 | 0 |  | 5 | 1 |
-| Hammer | 4 | 0 | 0 |  | 5 | 1 |
-| Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
-| Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
-| Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
+| Sword / Axe | 0 | 0 | 3 |  | 5 | 1 |
+| Hammer | 0 | 4 | 0 |  | 5 | 1 |
+| Great Sword / Axe | 5 | 3 | 3 |  | 10 | 2 |
+| Great Hammer | 5 | 7 | 0 |  | 10 | 2 |
+| Shield | 0 | 0 | 0 | +4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
-| Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
+| Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |
 | ------------- | --- | --- | --- | ------ | ---- | ----- |
 | Pistol | 10" | 2 | 3 | [Long Reload](#long-reload), [Close Quarters](#close-quarters), [Dual-Wield](#dual-wield), [Blackpowder](#blackpowder), [Light](#light) | 15 | 1 |
 
@@ -82,14 +83,14 @@ Warrior equipment for the unit types: Chieftain, Armourer, Veteran, Berserker, M
 ### Gunner Equipment 
 Gunner equipment for the unit types: Gunner, Engineer
 
-| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
-| Sword / Axe | 0 | 3 | 0 |  | 5 | 1 |
-| Hammer | 4 | 0 | 0 |  | 5 | 1 |
-| Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
+| Sword / Axe | 0 | 0 | 3 |  | 5 | 1 |
+| Hammer | 0 | 4 | 0 |  | 5 | 1 |
+| Shield | 0 | 0 | 0 | +4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
-| Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
+| Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |
 | ------------- | --- | --- | --- | ------ | ---- | ----- |
 | Crossbow | 30" | 2 | 0 | [Long Reload](#long-reload) | 20 | 1 |
 | Pistol | 10" | 2 | 3 | [Long Reload](#long-reload), [Close Quarters](#close-quarters), [Dual-Wield](#dual-wield), [Blackpowder](#blackpowder), [Light](#light) | 15 | 1 |
@@ -113,7 +114,7 @@ Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately 
 #### Light 
 This weapon may be used with a Shield.
 #### Buckshot 
-Select a point within line-of-sight and within this weapon's range. Target ALL units within 1.5" of this point. If any unit Engaged in Melee Combat is targeted, ALL units within that Melee Combat are targeted. Resolve each target separately, following the usual rules for Ranged Attacks. This weapon ignores cover.
+Select a point within line-of-sight and within this weapon's range. Target ALL units within 1.5" of this point that are in line-of-sight. If any unit Engaged in Melee Combat is targeted, ALL units within that Melee Combat are targeted, even if they are not within line-of-sight. Resolve each target separately, following the usual rules for Ranged Attacks and Blackpowder. This weapon ignores cover.
 
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |

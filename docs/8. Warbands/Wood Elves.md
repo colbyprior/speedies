@@ -6,6 +6,7 @@ Elves, bleh!
 
 | Max Units | 12 |
 | ---- | ---- |
+| Complexity | ★★★ |
 | Play Style | Agile and Fragile |
 
 ## Special Rules
@@ -49,7 +50,7 @@ This unit does not count for the purposes of a warband's max units.
 
 This unit cannot Promote, use ladders (except by making a full Climb Check), pick up Treasure, benefit from the 'Leader' skill or use equipment (but is not penalised for fighting Unarmed).
 ### Fear
-*Inherent*
+*Morale*
 
 This unit causes Fear.
 ### Slow
@@ -70,15 +71,15 @@ This unit may not have any equipment, but does not suffer the penalties for figh
 ### Wood Elf Equipment 
 Wood Elf equipment for the unit types: All
 
-| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
-| Spear / Staff | 0 | 0 | 2 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
-| Sword | 0 | 3 | 0 |  | 5 | 1 |
-| Glaive | 3 | 3 | 5 |  | 10 | 2 |
-| Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
+| Spear / Staff | 2 | 0 | 0 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
+| Sword | 0 | 0 | 3 |  | 5 | 1 |
+| Glaive | 5 | 3 | 3 |  | 10 | 2 |
+| Shield | 0 | 0 | 0 | +4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
-| Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
+| Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |
 | ------------- | --- | --- | --- | ------ | ---- | ----- |
 | Short Bow | 20" | 0 | 0 | [Light](#light) | 5 | 1 |
 | Bow | 25" | 0 | 0 |  | 10 | 1 |
@@ -98,9 +99,9 @@ This weapon may be used with a Shield.
 | Name | Difficulty | Description |
 | ---- | ------ | ---- |
 | Invisibility | 12 | Ongoing. Choose one ally within 5" (including themselves). This unit is treated as no longer existing for the purposes of targeting or blocking Movement, line-of-sight or picking up Treasure. If it is Engaged, it is no longer Engaged and moves 1". If this unit Engages, casts a Spell, or makes a Ranged attack, the spell ends. |
-| Control Earth | 9 | Choose a point within 10". Place a piece of natural terrain (a wood, mesa, etc.) at that point. The terrain cannot be larger than 3" in any dimension. Some leniency should be made if it fits the spirit of the spell. The terrain must fit within the space. If this is cast on a unit, move that unit to the closest space that it can be safely placed (this may be within or on the new terrain). |
-| Root | 12 | Ongoing. Choose one unit within 20". That unit cannot Engage, Move, or Run. |
-| Earthquake | 14 | All units within 10" must make an Agility check or become Dazed. This does not reduced a unit's Wounds. |
+| Control Earth | 10 | Choose a point within 10". Place a piece of natural terrain (a wood, mesa, etc.) at that point. The terrain cannot be larger than 3" in any dimension. Some leniency should be made if it fits the spirit of the spell. The terrain must fit within the space. If this is cast on a unit, move that unit to the closest space that it can be safely placed (this may be within or on the new terrain). |
+| Root | 11 | Ongoing. Choose one unit within 20". That unit cannot Engage, Move, or Run. |
+| Earthquake | 13 | All units within 10" must make an Agility check or become Dazed. |
 | Magic Arrow | 12 | Basic. Cast Attack. Target one unit you can see within 30" and perform a Cast Attack. |
 
 

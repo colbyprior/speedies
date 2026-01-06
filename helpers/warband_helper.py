@@ -68,6 +68,7 @@ def warband_header(warband):
     out_data += f"{warband.get('Preamble')}\n\n"
     out_data += f"| Max Units | {warband.get('Max Units')} |\n"
     out_data += "| ---- | ---- |\n"
+    out_data += f"| Complexity | {warband.get('Complexity')} |\n"
     out_data += f"| Play Style | {warband.get('Play Style')} |\n\n"
     return out_data
 
@@ -145,7 +146,7 @@ def equipment_block(warband):
         else:
             out_data += f"{equipment_data.get('Description')}\n\n"
         if equipment_data.get("Melee Weapons"):
-            out_data += f"| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |\n"
+            out_data += f"| Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |\n"
             out_data += f"| ------------ | --- | --- | --- | ------ | ---- | ----- |\n"
         for weapon_name in equipment_data.get("Melee Weapons"):
             weapon_data = global_melee_weapons_data.get(weapon_name)
@@ -157,13 +158,13 @@ def equipment_block(warband):
                     sys.exit(1)
                 weapon_data = global_melee_weapons_data.get(weapon_alias)
             if weapon_alias:
-                out_data += f"| {weapon_name} | {weapon_data.get('Injury')} | {weapon_data.get('Piercing')} | {weapon_data.get('Melee')} | {weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
+                out_data += f"| {weapon_name} | {weapon_data.get('Melee')} | {weapon_data.get('Injury')} | {weapon_data.get('Piercing')} | {weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
             else:
-                out_data += f"| {weapon_data.get('Name')} | {weapon_data.get('Injury')} | {weapon_data.get('Piercing')} | {weapon_data.get('Melee')} | {weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
+                out_data += f"| {weapon_data.get('Name')} | {weapon_data.get('Melee')} | {weapon_data.get('Injury')} | {weapon_data.get('Piercing')} | {weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
 
         if equipment_data.get("Ranged Weapons"):
             out_data += "\n"
-            out_data += f"| Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |\n"
+            out_data += f"| Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |\n"
             out_data += f"| ------------- | --- | --- | --- | ------ | ---- | ----- |\n"
         for weapon_name in equipment_data.get("Ranged Weapons"):
             weapon_data = global_ranged_weapons_data.get(weapon_name)

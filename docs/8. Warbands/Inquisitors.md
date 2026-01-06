@@ -6,11 +6,12 @@ Magic never expects us.
 
 | Max Units | 12 |
 | ---- | ---- |
+| Complexity | ★☆☆ |
 | Play Style | Powerful heroes with minions |
 
 ## Special Rules
 ### Incite the Mob
-At the start of each game make a Morale Check once per hero. For each success, a Peasant temporarily joins your warband for this game only. These Peasants do not count towards the rout threshold when Incapacitated.
+At the start of each game make a Morale Check once per hero. For each success, a Peasant temporarily joins your warband for this game only. These Peasants do not count towards the rout threshold when Incapacitated and cannot Promote.
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
@@ -45,7 +46,7 @@ This unit is capable of casting Divine Magic. See the relevant spell list for a 
 
 This unit counts as two heroes for the purposes of the 'Incite the Mob' special rule.
 ### Fear
-*Inherent*
+*Morale*
 
 This unit causes Fear.
 ### Heed the Scripture
@@ -70,17 +71,17 @@ If this unit attacks an enemy that is also in base contact with an ally that als
 ### Inquisitors Equipment 
 Inquisitors equipment for the unit types: Grand Inquisitor, Inquisitor, Doomsayer
 
-| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
-| Hammer | 4 | 0 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 | 0 |  | 5 | 1 |
+| Hammer | 0 | 4 | 0 |  | 5 | 1 |
+| Sword / Axe | 0 | 0 | 3 |  | 5 | 1 |
 | Torch | 0 | 0 | 0 | This unit has Advantage on Out-Of-Sight Rolls when attempting to Engage. | 10 | 1 |
-| Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
-| Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
-| Pike | 3 | 0 | 7 |  | 10 | 2 |
+| Great Hammer | 5 | 7 | 0 |  | 10 | 2 |
+| Great Sword / Axe | 5 | 3 | 3 |  | 10 | 2 |
+| Pike | 7 | 3 | 0 |  | 10 | 2 |
 
-| Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
+| Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |
 | ------------- | --- | --- | --- | ------ | ---- | ----- |
 | Crossbow | 30" | 2 | 0 | [Long Reload](#long-reload) | 20 | 1 |
 | Hand Crossbow | 10" | 2 | 0 | [Long Reload](#long-reload), [Close Quarters](#close-quarters), [Dual-Wield](#dual-wield), [Light](#light) | 15 | 1 |
@@ -95,11 +96,11 @@ Inquisitors equipment for the unit types: Grand Inquisitor, Inquisitor, Doomsaye
 ### Priest Equipment 
 Priest equipment for the unit types: Priest
 
-| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
-| Hammer | 4 | 0 | 0 |  | 5 | 1 |
-| Flail / Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
-| Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
+| Hammer | 0 | 4 | 0 |  | 5 | 1 |
+| Flail / Great Hammer | 5 | 7 | 0 |  | 10 | 2 |
+| Shield | 0 | 0 | 0 | +4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
 | Armour | Def | Cost |
 | ------ | --- | ---- |
@@ -109,25 +110,25 @@ Priest equipment for the unit types: Priest
 ### Fanatics Equipment 
 Fanatics equipment for the unit types: Fanatic
 
-| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
-| Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
-| Flail | 7 | 0 | 5 |  | 10 | 2 |
-| Pike | 3 | 0 | 7 |  | 10 | 2 |
+| Great Sword / Axe | 5 | 3 | 3 |  | 10 | 2 |
+| Flail | 5 | 7 | 0 |  | 10 | 2 |
+| Pike | 7 | 3 | 0 |  | 10 | 2 |
 
 ### Zealots Equipment 
 Zealots equipment for the unit types: Zealot
 
-| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
-| Hammer / Club | 4 | 0 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 | 0 |  | 5 | 1 |
-| Spear | 0 | 0 | 2 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
+| Hammer / Club | 0 | 4 | 0 |  | 5 | 1 |
+| Sword / Axe | 0 | 0 | 3 |  | 5 | 1 |
+| Spear | 2 | 0 | 0 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
 | Torch | 0 | 0 | 0 | This unit has Advantage on Out-Of-Sight Rolls when attempting to Engage. | 10 | 1 |
-| Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
+| Shield | 0 | 0 | 0 | +4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
-| Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
+| Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |
 | ------------- | --- | --- | --- | ------ | ---- | ----- |
 | Crossbow | 30" | 2 | 0 | [Long Reload](#long-reload) | 20 | 1 |
 
@@ -152,8 +153,8 @@ Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately 
 | Name | Difficulty | Description |
 | ---- | ------ | ---- |
 | Bless Weapon | 7 | Ongoing. The caster gains Advantage on all Melee Checks. |
-| Divine Fervour | 12 | Reduce any Injury results against allies within 5" of the caster (including themselves) by 3 until the end of the turn. |
-| Holy Smite | 15 | Make an Injury Roll against all enemies within 5". Add +2 to the Check if the enemy is Undead. |
+| Divine Fervour | 11 | Reduce any Injury results against allies within 5" of the caster (including themselves) by 3 until the end of the turn. |
+| Holy Smite | 14 | Make an Injury Roll against all enemies within 5". Add +2 to the Check if the enemy is Undead. |
 | Heal | 5 | Any ally within 2" of the caster (including themselves) removes Dazed or Staggered and regains 1 Wound, up to their maximum. |
 
 

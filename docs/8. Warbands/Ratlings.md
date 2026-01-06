@@ -6,6 +6,7 @@ RAT
 
 | Max Units | 18 |
 | ---- | ---- |
+| Complexity | ★☆☆ |
 | Play Style | Fast and agile swarm |
 
 ## Heroes
@@ -34,7 +35,7 @@ Allied, non-animal units within 5" of this unit can use this unit's Morale stat 
 
 This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate 'Basic' spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield.
 ### Vanguard
-*Inherent*
+*Agility*
 
 After unit deployment, but before any player takes their first turn, this unit may perform a Run. If multiple players have units with this skill, resolve it in turn order. This unit may never pick up Treasure tokens.
 ### Spread Blight (Minor)
@@ -50,7 +51,7 @@ This unit cannot Promote, use ladders (except by making a full Climb Check), pic
 
 If this unit is not within 5" of an allied hero at the start of its turn, it cannot act during the Engage, Move, Cast, and Ranged phases. It can act in Melee Combat as normal.
 ### Fear
-*Inherent*
+*Morale*
 
 This unit causes Fear.
 ### Large
@@ -63,17 +64,17 @@ This unit may not be purchased at warband creation. It counts as two units for t
 ### Heroes Equipment 
 Heroes equipment for the unit types: Guildmaster, Ratlock, Enforcer, Assassin
 
-| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
-| Hammer / Club | 4 | 0 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 | 0 |  | 5 | 1 |
-| Spear / Staff | 0 | 0 | 2 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
-| Glaive | 3 | 3 | 5 |  | 10 | 2 |
-| Flail | 7 | 0 | 5 |  | 10 | 2 |
-| Fighting Claws | 0 | 3 | 0 | +1 Attack. This unit makes Climb Checks with Advantage. | 20 | 2 |
+| Hammer / Club | 0 | 4 | 0 |  | 5 | 1 |
+| Sword / Axe | 0 | 0 | 3 |  | 5 | 1 |
+| Spear / Staff | 2 | 0 | 0 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
+| Glaive | 5 | 3 | 3 |  | 10 | 2 |
+| Flail | 5 | 7 | 0 |  | 10 | 2 |
+| Fighting Claws | 0 | 0 | 3 | +1 Attack. This unit makes Climb Checks with Advantage. | 20 | 2 |
 
-| Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
+| Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |
 | ------------- | --- | --- | --- | ------ | ---- | ----- |
 | Throwing Stars | 10" | 0 | 0 | [Light](#light), [Close Quarters](#close-quarters) | 10 | 1 |
 | Pistol | 10" | 2 | 3 | [Long Reload](#long-reload), [Close Quarters](#close-quarters), [Dual-Wield](#dual-wield), [Blackpowder](#blackpowder), [Light](#light) | 15 | 1 |
@@ -85,16 +86,16 @@ Heroes equipment for the unit types: Guildmaster, Ratlock, Enforcer, Assassin
 ### Rat Underlings Equipment 
 Rat Underlings equipment for the unit types: Underrat, Blight Host
 
-| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
-| Hammer / Club | 4 | 0 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 | 0 |  | 5 | 1 |
-| Spear | 0 | 0 | 2 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
-| Pike | 3 | 0 | 7 |  | 10 | 2 |
-| Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
+| Hammer / Club | 0 | 4 | 0 |  | 5 | 1 |
+| Sword / Axe | 0 | 0 | 3 |  | 5 | 1 |
+| Spear | 2 | 0 | 0 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
+| Pike | 7 | 3 | 0 |  | 10 | 2 |
+| Shield | 0 | 0 | 0 | +4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
-| Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
+| Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |
 | ------------- | --- | --- | --- | ------ | ---- | ----- |
 | Sling | 15" | 0 | 0 | [Light](#light) | 5 | 1 |
 
@@ -114,11 +115,11 @@ Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately 
 
 | Name | Difficulty | Description |
 | ---- | ------ | ---- |
+| Blight Bolt | 12 | Cast Attack. Target one unit you can see within 10" and perform a Cast Attack against them. On a success, the target makes a Plague Check. |
 | Swarm of Rats | 15 | Cast Attack. Choose the closest enemy within 10". Make a Cast Attack against the target. If you succeed, make an Injury Roll against all units within 1.5" of it. |
 | Sewer Filth | 10 | Basic. Target one unit you can see within 20". The target is Dazed. |
-| Blight Madness | 13 | The caster may immediately Engage any enemy within 10" of movement, automatically passing any Agility Checks required. The caster gains 2 Attacks and +3 Injury until the end of this turn. |
-| Ratpsychosis | 13 | All standing models in base contact with the rat must take an immediate Morale test. If they fail, you roll an attack against each target and they then run 5" directly away from the rat. |
-| Curse of rat | 7 | The spell has a range of 10" and affects a single model within range. The target must re-roll any successful defence rolls and to melee rolls until the start of your next turn. |
+| Pounce | 10 | The caster gains 2 Attacks and +3 Injury until the end of this turn. They may immediately make an Engage action, unless they are already Engaged. |
+| Rat Rage | 7 | Ongoing. Upon casting and at the start of each turn, any Giant Rats within 5" of the caster gain Fear for the round. |
 
 
 ## Skill Table

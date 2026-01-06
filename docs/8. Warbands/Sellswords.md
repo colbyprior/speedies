@@ -6,6 +6,7 @@ sidebar_label: Sellswords
 
 | Max Units | 15 |
 | ---- | ---- |
+| Complexity | ★☆☆ |
 | Play Style | Balanced |
 
 ## Heroes
@@ -21,7 +22,7 @@ sidebar_label: Sellswords
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
 | Infantry | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 30 | - |
 | Marksman | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 35 | 6 |
-| Man-at-Arms | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 | [Ambush](#ambush) | 50 | 3 |
+| Man-at-Arms | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 2 | 2 |  | 35 | 3 |
 | Defender | 6 | 14 | - | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 35 | 3 |
 
 ## Skills 
@@ -29,28 +30,24 @@ sidebar_label: Sellswords
 *Inherent*
 
 Allied, non-animal units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
-### Ambush
-*Melee*
-
-This unit gets Advantage on the first round of combat when they Engage an enemy
 
 ## Equipment
 
 ### Hero Equipment 
 Hero equipment for the unit types: Captain, Champion
 
-| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
-| Hammer | 4 | 0 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 | 0 |  | 5 | 1 |
-| Spear | 0 | 0 | 2 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
-| Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
-| Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
-| Pike | 3 | 0 | 7 |  | 10 | 2 |
-| Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
+| Hammer | 0 | 4 | 0 |  | 5 | 1 |
+| Sword / Axe | 0 | 0 | 3 |  | 5 | 1 |
+| Spear | 2 | 0 | 0 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
+| Great Hammer | 5 | 7 | 0 |  | 10 | 2 |
+| Great Sword / Axe | 5 | 3 | 3 |  | 10 | 2 |
+| Pike | 7 | 3 | 0 |  | 10 | 2 |
+| Shield | 0 | 0 | 0 | +4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
-| Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
+| Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |
 | ------------- | --- | --- | --- | ------ | ---- | ----- |
 | Short Bow | 20" | 0 | 0 | [Light](#light) | 5 | 1 |
 | Bow | 25" | 0 | 0 |  | 10 | 1 |
@@ -62,21 +59,21 @@ Hero equipment for the unit types: Captain, Champion
 | Light Armour | 1 | 10 |
 | Heavy Armour | 2 | 20 |
 
-### Warriors & Swordsman Equipment 
-Warriors & Swordsman equipment for the unit types: Warrior, Man-at-Arms
+### Infantry Equipment 
+Infantry equipment for the unit types: Infantry, Man-at-Arms
 
-| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
-| Hammer | 4 | 0 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 | 0 |  | 5 | 1 |
-| Spear | 0 | 0 | 2 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
-| Great Hammer | 7 | 0 | 5 |  | 10 | 2 |
-| Great Sword / Axe | 3 | 3 | 5 |  | 10 | 2 |
-| Pike | 3 | 0 | 7 |  | 10 | 2 |
-| Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
+| Hammer | 0 | 4 | 0 |  | 5 | 1 |
+| Sword / Axe | 0 | 0 | 3 |  | 5 | 1 |
+| Spear | 2 | 0 | 0 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
+| Great Hammer | 5 | 7 | 0 |  | 10 | 2 |
+| Great Sword / Axe | 5 | 3 | 3 |  | 10 | 2 |
+| Pike | 7 | 3 | 0 |  | 10 | 2 |
+| Shield | 0 | 0 | 0 | +4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
-| Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
+| Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |
 | ------------- | --- | --- | --- | ------ | ---- | ----- |
 | Short Bow | 20" | 0 | 0 | [Light](#light) | 5 | 1 |
 | Bow | 25" | 0 | 0 |  | 10 | 1 |
@@ -87,16 +84,16 @@ Warriors & Swordsman equipment for the unit types: Warrior, Man-at-Arms
 | Light Armour | 1 | 10 |
 | Heavy Armour | 2 | 20 |
 
-### Marksmen Equipment 
-Marksmen equipment for the unit types: Marksman, Sniper
+### Marksman Equipment 
+Marksman equipment for the unit types: Marksman, Sniper
 
-| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
-| Hammer | 4 | 0 | 0 |  | 5 | 1 |
-| Sword / Axe | 0 | 3 | 0 |  | 5 | 1 |
+| Hammer | 0 | 4 | 0 |  | 5 | 1 |
+| Sword / Axe | 0 | 0 | 3 |  | 5 | 1 |
 
-| Ranged Weapon | Rng | Inj | Prc | Effect | Cost | Slots |
+| Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |
 | ------------- | --- | --- | --- | ------ | ---- | ----- |
 | Short Bow | 20" | 0 | 0 | [Light](#light) | 5 | 1 |
 | Bow | 25" | 0 | 0 |  | 10 | 1 |
@@ -113,14 +110,14 @@ Marksmen equipment for the unit types: Marksman, Sniper
 ### Defender Equipment 
 Defender equipment for the unit types: Knight, Defender
 
-| Melee Weapon | Inj | Prc | Mel | Effect | Cost | Slots |
+| Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
-| Hammer | 4 | 0 | 0 |  | 5 | 1 |
-| Spear | 0 | 0 | 2 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
-| Sword / Axe | 0 | 3 | 0 |  | 5 | 1 |
-| Shield | 0 | 0 | 0 | +4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
-| Tower Shield | 0 | 0 | 0 | +6 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 15 | 1 |
+| Hammer | 0 | 4 | 0 |  | 5 | 1 |
+| Spear | 2 | 0 | 0 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
+| Sword / Axe | 0 | 0 | 3 |  | 5 | 1 |
+| Shield | 0 | 0 | 0 | +4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
+| Tower Shield | 0 | 0 | 0 | +6 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 15 | 1 |
 
 | Armour | Def | Cost |
 | ------ | --- | ---- |
@@ -139,7 +136,7 @@ You may purchase this weapon up to two times and wield both at once without usin
 #### Blackpowder 
 Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately make an Injury Roll against yourself (applying the weapon's Injury modifier). You may no longer use the weapon for the rest of the game (resolving any remaining targets from the current attack first). After the game, it is repaired at no cost. If you have Advantage and either dice rolls a 1 you still misfire. If the higher roll still hits the enemy, resolve it as normal.
 #### Buckshot 
-Select a point within line-of-sight and within this weapon's range. Target ALL units within 1.5" of this point. If any unit Engaged in Melee Combat is targeted, ALL units within that Melee Combat are targeted. Resolve each target separately, following the usual rules for Ranged Attacks. This weapon ignores cover.
+Select a point within line-of-sight and within this weapon's range. Target ALL units within 1.5" of this point that are in line-of-sight. If any unit Engaged in Melee Combat is targeted, ALL units within that Melee Combat are targeted, even if they are not within line-of-sight. Resolve each target separately, following the usual rules for Ranged Attacks and Blackpowder. This weapon ignores cover.
 
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |
