@@ -17,10 +17,22 @@ def generate_faction_agents():
     out_data += "---\n"
     out_data += f"# Faction Agents\n"
 
-    for agent_name in global_faction_agents.keys():
+    sorted_faction_agents = dict(sorted(global_faction_agents.items(), key=lambda x: (x[1]['Faction'], x[1]['Type'])))
+    prev_type = ""
+    prev_faction = ""
+    for agent_name in sorted_faction_agents.keys():
         faction_agent = global_faction_agents[agent_name]
+
+        if prev_faction != faction_agent['Faction']:
+            out_data += f"# {faction_agent['Faction']}\n"
+            out_data += f"## {faction_agent['Faction']} Faction {faction_agent['Type']}s\n"
+        elif prev_type != faction_agent['Type']:
+            out_data += f"## {faction_agent['Faction']} Faction {faction_agent['Type']}\n"
+        prev_type = faction_agent['Type']
+        prev_faction = faction_agent['Faction']
+
         out_data += f"### {agent_name} ({faction_agent['Faction']})\n"
-        out_data += f"_{faction_agent['Species']} {faction_agent['Position']}_\n\n"
+        out_data += f"*{faction_agent['Type']}:* _{faction_agent['Species']} {faction_agent['Position']}_\n\n"
         out_data += f"{faction_agent['About']}\n\n"
         out_data += f"| Mov | Run | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Prc | Inj | Cost | Skills |\n"
         out_data += "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n"

@@ -10,7 +10,8 @@ from reportlab.lib.enums import TA_CENTER, TA_LEFT
 def load_agents(json_file):
     """Load agent data from JSON file."""
     with open(json_file, 'r') as f:
-        return json.load(f)
+        faction_agents = json.load(f)
+    return dict(sorted(faction_agents.items(), key=lambda x: (x[1]['Faction'], x[1]['Type'])))
 
 
 def load_skills(skills_file):
@@ -85,7 +86,7 @@ def create_card_content(name, agent_data, skills_db):
 
     # Title section
     title = Paragraph(f"<b>{name}</b> ({agent_data['Faction']})", title_style)
-    subtitle = Paragraph(f"<i>{agent_data['Species']} {agent_data['Position']}</i>", subtitle_style)
+    subtitle = Paragraph(f"<b>{agent_data['Type']}: </b><i>{agent_data['Species']} {agent_data['Position']}</i>", subtitle_style)
     card_data.append(title)
     card_data.append(subtitle)
 
