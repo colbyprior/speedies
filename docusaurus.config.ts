@@ -52,10 +52,48 @@ const config: Config = {
   ],
 
 
-  plugins: [[ require.resolve('docusaurus-lunr-search'), {
-    languages: ['en'],
-    maxHits: 10
-  }]],
+//  plugins: [[ require.resolve('docusaurus-lunr-search'), {
+//    languages: ['en'],
+//    maxHits: 10
+//  }]],
+
+
+  plugins: [
+    [
+      require.resolve('docusaurus-lunr-search'),
+      {
+        languages: ['en'],
+        maxHits: 10,
+        indexBaseUrl: true,
+        // Custom Lunr builder
+        lunrBuilder: (builder) => {
+          // Register an edge n-gram token filter
+          lunr.Pipeline.registerFunction(
+            function (token) {
+              const minGram = 3;
+              const maxGram = 10;
+              const grams = [];
+              
+              if (token.toString().length < minGram) {
+                return token;
+              }
+              
+              for (let i = minGram; i <= Math.min(maxGram, token.toString().length); i++) {
+                grams.push(token.toString().slice(0, i));
+              }
+              
+              return grams.map(gram => token.clone().update(() => gram));
+            },
+            'edgeNgram'
+          );
+          
+          // Add the edge n-gram function to the pipeline
+          builder.pipeline.before(lunr.stemmer, lunr.edgeNgram);
+          builder.searchPipeline.before(lunr.stemmer, lunr.edgeNgram);
+        },
+      },
+    ],
+  ],
 
 
   themeConfig: {
