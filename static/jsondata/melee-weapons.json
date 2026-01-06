@@ -64,7 +64,7 @@
   },
   "Shield": {
     "Name": "Shield",
-    "Effect": "+4 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon.",
+    "Effect": "+4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon.",
     "Cost": "5",
     "Injury": "0",
     "Piercing": "0",
@@ -73,7 +73,7 @@
   },
   "Tower Shield": {
     "Name": "Tower Shield",
-    "Effect": "+6 Def. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon.",
+    "Effect": "+6 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon.",
     "Cost": "15",
     "Injury": "0",
     "Piercing": "0",
