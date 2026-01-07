@@ -41,7 +41,7 @@
   },
   "egg1": {
     "Type": "Agent",
-    "Faction": "Underworld",
+    "Faction": "Law",
     "Move": "8",
     "Piercing": "0",
     "Injury": "0",
@@ -81,7 +81,7 @@
   },
   "egg3": {
     "Type": "Henchman",
-    "Faction": "Underworld",
+    "Faction": "Chaos",
     "Move": "8",
     "Piercing": "0",
     "Injury": "0",
@@ -100,8 +100,8 @@
     "Event": "Attacks immediately. Disengages at the end of each of his combats. On his turn, 50/50 whether he attacks or wanders randomly."
   },
   "egg4": {
-    "Type": "Agent",
-    "Faction": "Underworld",
+    "Type": "Henchman",
+    "Faction": "Law",
     "Move": "8",
     "Piercing": "0",
     "Injury": "0",
