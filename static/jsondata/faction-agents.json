@@ -237,7 +237,7 @@
     "About": "This knight wanders about.",
     "Species": "Human",
     "Position": "Wandering Knight",
-    "Event": "Starts on board edge. Moves across board. Must make this check if you come within 6"". Will turn hostile if you fail. Law has advantage to convince the knight to fight for them. Chaos does not have adv. Make a morale check."
+    "Event": "Starts on board edge. Moves across board. Must make this check if you come within 6\". Will turn hostile if you fail. Law has advantage to convince the knight to fight for them. Chaos does not have adv. Make a morale check."
   },
   "Revenant": {
     "Type": "Agent",
