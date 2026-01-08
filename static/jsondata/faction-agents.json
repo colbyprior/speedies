@@ -139,9 +139,9 @@
     "Position": "High Priest",
     "Event": "Would try and cure the plague for anyone that comes within 6\"."
   },
-  "Revolution Leader": {
+  "Rebel Leader": {
     "Type": "Agent",
-    "Faction": "Underworld",
+    "Faction": "Chaos",
     "Move": "8",
     "Piercing": "0",
     "Injury": "0",
@@ -156,12 +156,12 @@
     "Faction Support Cost": "5",
     "About": "This gobbo does stuff.",
     "Species": "Goblin",
-    "Position": "Revolution Leader",
+    "Position": "Rebel Leader",
     "Event": "Spawn with rabble. Maybe recruits more and attack everyone. Could rout when enough are defeated. May try to steal the treasure."
   },
-  "Wealthy Merchant": {
+  "Black Market Dealer": {
     "Type": "Agent",
-    "Faction": "Law",
+    "Faction": "Underworld",
     "Move": "8",
     "Piercing": "0",
     "Injury": "0",
@@ -174,9 +174,9 @@
     "Morale": "10",
     "Skills": "Deadly",
     "Faction Support Cost": "5",
-    "About": "This wealthy merchant robs you blind, legally.",
+    "About": "This black market dealer can procure goods for you, for a fee.",
     "Species": "Human",
-    "Position": "Merchant",
+    "Position": "Black Market Dealer",
     "Event": "Will have the treasure. Will turn hostile if attacked. Will trade another treasure for an automatic roll on the magic table."
   },
   "Mercenary": {
@@ -198,6 +198,26 @@
     "Species": "Troll",
     "Position": "Mercenary",
     "Event": "Can be bribed when within 6\" to join you for the fight (10g?). Opponent can then do the same."
+  },
+  "Grand Inquisitor": {
+    "Type": "Agent",
+    "Faction": "Law",
+    "Move": "8",
+    "Piercing": "0",
+    "Injury": "0",
+    "Melee": "14",
+    "Ranged": "14",
+    "Defense": "18",
+    "Wounds": "1",
+    "Agility": "8",
+    "Attacks": "1",
+    "Morale": "10",
+    "Skills": "Deadly",
+    "Faction Support Cost": "5",
+    "About": "As the head of the inqusition, blah's job is to stamp out the evil, corruption, and rot from the city. He does so through bribery, extortion, and other forms of coercion.",
+    "Species": "Human",
+    "Position": "Grand Inquisitor",
+    "Event": "Will do xyz."
   },
   "Hero": {
     "Type": "Agent",
@@ -261,7 +281,7 @@
   },
   "Necromancer": {
     "Type": "Agent",
-    "Faction": "Chaos",
+    "Faction": "Underworld",
     "Move": "8",
     "Piercing": "0",
     "Injury": "0",
@@ -299,7 +319,7 @@
     "Position": "Berserker",
     "Event": "Comes from off the board in random direction. Attacks any in sight."
   },
-  "Ratling": {
+  "Gang Member": {
     "Type": "Henchman",
     "Faction": "Underworld",
     "Move": "8",
@@ -316,7 +336,7 @@
     "Faction Support Cost": "5",
     "About": "Outcast by society, Ratlings are forced into the edges of the city where they make ends meet by any means necessary. This incentivises them to skirt the law and find creative ways to feed themselves and their families.",
     "Species": "Ratling",
-    "Position": " ",
+    "Position": "Gang Member",
     "Event": ""
   },
   "City Guard": {
@@ -335,7 +355,7 @@
     "Skills": "Deadly",
     "Faction Support Cost": "5",
     "About": "A guard of the city.",
-    "Species": " ",
+    "Species": "Human",
     "Position": "City Guard",
     "Event": ""
   },
@@ -355,7 +375,7 @@
     "Skills": "Deadly",
     "Faction Support Cost": "5",
     "About": "A faithful servant of the Blight.",
-    "Species": " ",
+    "Species": "Human",
     "Position": "Blightchosen",
     "Event": ""
   }
