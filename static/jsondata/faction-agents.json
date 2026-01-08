@@ -315,9 +315,7 @@
     "Skills": "Deadly",
     "Faction Support Cost": "5",
     "About": "Outcast by society, Ratlings are forced into the edges of the city where they make ends meet by any means necessary. This incentivises them to skirt the law and find creative ways to feed themselves and their families.",
-    "Species": "Ratling",
-    "Position": "",
-    "Event": ""
+    "Species": "Ratling"
   },
   "City Guard": {
     "Type": "Henchman",
@@ -355,7 +353,6 @@
     "Skills": "Deadly",
     "Faction Support Cost": "5",
     "About": "A faithful servant of the Blight.",
-    "Species": "",
     "Position": "Blightchosen",
     "Event": ""
   }
