@@ -17,7 +17,7 @@
     "About": "Some say Snikit went mad after being hit in the head with a stray projectile. Others say he went mad after cracking his skull on a slippery sewer floor. Either way, this crazy Ratling rules the Assassins Guild with an iron claw (when he's lucid enough).",
     "Species": "Ratling",
     "Position": "Master Assassin",
-    "Event": "**Immediately:** Place Snikit 1\" away from the triggering unit. He makes a Morale Check. On a success, Snikit Engages the unit that picked up the Treasure.\n \n**Neutral Turn:** Snikit makes a Morale Check. On a success, he acts as normal, otherwise he does nothing. \n \n**Other Behaviours:** Snikit Disengages at the end of every Melee Combat."
+    "Event": "**Immediately:** Place Snikit 1\" away from the triggering unit. He makes a Morale Check. On a success, Snikit Engages the unit that picked up the Treasure.\n \n**Neutral Turn:** Snikit acts as normal. He makes Stupor Checks when attempting to Engage.\n \n**Other Behaviours:** Snikit Disengages at the end of every Melee Combat."
   },
   "XYZ the Vampire Count": {
     "Type": "Agent",
@@ -37,7 +37,7 @@
     "About": "Big vamps",
     "Species": "Vampire",
     "Position": "Count",
-    "Event": "xyz"
+    "Event": "**Immediately:** Place XYZ 1\" away from the triggering unit.\n \n**Neutral Turn:** XYZ acts as normal. Once he has Incapacitated a unit that is not Large, Undead, or an Animal, he will attempt to Retreat.\n \n**Other Behaviours:** XYZ does not target Large, Undead, and Animal units."
   },
   "XYZ the Bounty Hunter": {
     "Type": "Agent",
@@ -57,7 +57,7 @@
     "About": "This unit has a Blowpipe. The most feared Bounty Hunter in the city. XYZ rushes from the shadows and captures her targets before they're aware she's even there.",
     "Species": "Human",
     "Position": "Bounty Hunter",
-    "Event": "Appears on nearest board edge and hunts the target."
+    "Event": "**Immediately:** Place XYZ on the nearest board edge. The triggering unit is the target for the purposes of the 'Bounty Hunter' skill.\n \n**Neutral Turn:** XYZ moves toward the target, Engaging if possible, otherwise making a Ranged Attack if possible. Once her target is Incapacitated, she will attempt to Retreat.\n \n**Other Behaviours:** XYZ uses her Disengage skill at the start of her turn if she is not Engaged with her target."
   },
   "XYZ the Thief": {
     "Type": "Agent",
@@ -77,7 +77,7 @@
     "About": "Frustratingly agile, XYZ is always one step ahead of everyone else. A thief notorious amongst the nobility, she is the mastermind behind numerous high-profile heists.",
     "Species": "Elvish",
     "Position": "Thief",
-    "Event": "Immediately takes the treasure and tries to move towards the nearest board edge."
+    "Event": "**Immediately:** Place XYZ 1\" away from the triggering unit. She is holding the Treasure. She immediately makes a Move action toward the nearest board edge.\n \n**Neutral Turn:** XYZ attempts to Retreat.\n \n**Other Behaviours:** XYZ will attempt any Agility Check that shortens the path to the nearest board edge."
   },
   "XYZ the Pit Fighter": {
     "Type": "Agent",
@@ -94,10 +94,12 @@
     "Morale": "7",
     "Skills": "Pit Fighter",
     "Faction Support Cost": "-",
-    "About": "The current champion of the Pits, blah has won the last fifteen matches against largely unwilling opponents. His presence is preceded by the chanting of his adoring fans.",
+    "About": "The current champion of the Pits, this person's presence is preceded by the chanting of their adoring fans.",
     "Species": "Human",
     "Position": "Pit Fighter",
-    "Event": "Turns into a 1v1 duel. Winner gets two treasures."
+    "Event": "**If the Pit Fighter was originally a member of the triggering unit's warband:**\n \n**Immediately:**You found your old ally in the Pits. Time to break them out! Place the Pit Fighter 1\" away from the triggering unit. Place four Fans (use the Peasant stat block from the Inquisitors warband) in a rough circle surrounding the Pit Fighter and the triggering unit. The Pit Fighter immediately comes under the control of the triggering unit's warband and the Fans are immediately hostile to that warband.\n \n**Neutral Turn:** The Fans act as normal.\n \n**Other Behaviours:**At the end of the game, the Pit Fighter returns to its original warband. The original, neutral Pit Fighter returns to become the new Pit Fighter.\n \n**Otherwise:**\n \n**Immediately:**Your unit stumbled into a Pit Fight! Place the Pit Fighter 1\" away from the triggering unit. Give it an additional Treasure (in addition to the one that the triggering unit picked up). Place four Fans (use the Peasant stat block from the Inquisitors warband) in a rough circle surrounding the Pit Fighter and the triggering unit.\n \n**Neutral Turn:** The Pit Fighter acts as normal, targeting the triggering unit. The Fans do nothing, unless they have become hostile to someone (then they act as normal).\n \n**Other Behaviours:** If the triggering unit moves away from the Pit Fighter before the Pit Fighter is Incapacitated, or if any other unit attempts to attack or cast a Spell on the Pit Fighter or a Fan, they all become hostile toward the warband of that unit.\n \n**End of the Pit Fight:** If the Pit Fighter Incapacitates the triggering unit, they do nothing from then on (unless they have become hostile to a warband, then they target that warband). At the end of the game, if the triggering unit was a hero, it becomes the Pit Fighter, otherwise it dies. If the triggering unit Incapacitates the Pit Fighter, the Fans come under the triggering player's control for the rest of the battle."
+	
+	
   },
   "XYZ the Blight Prophet": {
     "Type": "Agent",
