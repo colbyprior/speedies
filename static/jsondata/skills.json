@@ -4,12 +4,57 @@
     "Type": "Melee", 
     "Description": "+2 to injury rolls in melee"
   },
+  "Hard to Kill": { 
+    "Name": "Hard to Kill", 
+    "Type": "Inherent", 
+    "Description": "This unit has a -2 to Injury rolls made against it (eg. an unmodified roll of 19 would count as a 17, Stunning rather than Incapacitating the unit)."
+  },
+  "Divine Cure": { 
+    "Name": "Divine Cure", 
+    "Type": "Inherent", 
+    "Description": "Once at the end of the game, if this unit was not Incapacitated, it may attempt to cure someone of the Blight. After making Scar and Blight rolls, this unit makes a Morale Check. On a success, select a unit that has the Blight. It no longer has the Blight."
+  },
+  "Turncloak": { 
+    "Name": "Turncloak",
+    "Type": "Inherent", 
+    "Description": "At the end of your opponent's Move Phase, if this unit is not carrying a Treasure, it can be bribed to switch sides. If your opponent has a unit with Treasure within 2\" of this unit, your opponent can make this unit make a Morale Check. On a failure, this unit takes the Treasure and is now under your opponent's conrol for the remainder of the battle. If it was Engaged with an enemy unit, it is no longer Engaged with them. If this unit has a Treasure at the end of the battle, it is lost."
+  },
+  "Stupor": { 
+    "Name": "Stupor", 
+    "Type": "Inherent", 
+    "Description": "When this unit attempts to Engage, make a Morale Check. On a failure, the Engage fails and the unit moves 5\" away from the target."
+  },
+  "Temporary Ally": { 
+    "Name": "Temporary Ally", 
+    "Type": "Inherent", 
+    "Description": "This unit eventually becomes hostile to all other units. At the end of your Upkeep Phase, if at least one of your units was Incapaciated last turn, your Leader makes a Morale Check. On a failure, this unit becomes hostile. From now on, it will act during the Neutral Step of the next player's Upkeep Phase. It uses the usual rules for Neutral Units."
+  },
+  "Fence": { 
+    "Name": "Fence", 
+    "Type": "Inherent", 
+    "Description": "If this unit ends the game with a Treasure, the player can forgo rolling for Income for this Treasure. If they do so, roll on the Loot table and gain that Loot."
+  },
+  "Thief": { 
+    "Name": "Thief", 
+    "Type": "Inherent", 
+    "Description": "This unit can Run while carrying Treasure."
+  },
+  "Disengage": { 
+    "Name": "Disengage", 
+    "Type": "Inherent", 
+    "Description": "At the end of your Upkeep Phase, if this unit is Engaged it may make a Morale Check. If it succeeds, it may move 1\" to get out of the Engage. It may not Engage this turn."
+  },
+  "Bounty Hunter": { 
+    "Name": "Bounty Hunter", 
+    "Type": "Inherent", 
+    "Description": "At the start of the game, select an enemy hero at random to be the target. This unit may not Engage, Intercept, or make Ranged Attacks against any other units until the target is Incapacitated. If Engaged, this unit will fight back as usual. This unit has Advantage on attacks against the target. When the target is Incapacitated, it drops a Treasure as if it was holding one."
+  },
   "Shove": { 
     "Name": "Shove", 
     "Type": "Melee", 
     "Description": "This unit may declare it is replacing one or more of its attacks with shoves before attacking. If it does, make a Melee check for each shove without modifiers. On a success, the target may not make a Defence check and is immediately pushed back 2\", moving it out of Melee. This may not be used on Large units and the unit may not attack a unit they are also shoving."
   },
-  "Fencing Specialist": { 
+  "Fencing Specialist": {
     "Name": "Fencing Specialist", 
     "Type": "Agility", 
     "Description": "If this unit is using a one-handed weapon and no Shield, they have Advantage on Defence Checks in Melee."
@@ -99,8 +144,8 @@
     "Type": "Agility", 
     "Description": "You ignore the effects of Difficult terrain."
   },
-  "Coup De Grace": { 
-    "Name": "Coup De Grace", 
+  "Coup de Grace": { 
+    "Name": "Coup de Grace", 
     "Type": "Agility", 
     "Description": "This unit may target Dazed or Stunned enemies, even if a non-Stunned or Dazed enemy is Engaged with them."
   },
@@ -112,7 +157,7 @@
   "Protector": { 
     "Name": "Protector", 
     "Type": "Defence", 
-    "Description": "You have Advantage on Morale checks to Protect other units from Ranged Attacks and always count as being in Cover."
+    "Description": "You have Advantage on Morale checks to Protect other units from Ranged Attacks and always count as being in Cover when doing so."
   },
   "Gunner": { 
     "Name": "Gunner", 
@@ -124,8 +169,8 @@
     "Type": "Ranged", 
     "Description": "This unit may roll Ranged Attacks with Disadvantage. If it does, the enemy cannot make Defence checks."
   },
-  "Jumper": { 
-    "Name": "Jumper", 
+  "Leap": { 
+    "Name": "Leap", 
     "Type": "Agility", 
     "Description": "This unit's max jump distance is increased by 3\"."
   },
@@ -309,15 +354,30 @@
     "Type": "Inherent",
     "Description": "If this unit Incapacitates or is Incapacitated by an enemy in Melee, that unit must make a Morale Check. If they fail it, they immediately contract the Blight. This unit is immune to the Blight."
   },
-   "Spread Blight (Minor)": {
+  "Blight for the Blight God": {
+    "Name": "Blight for the Blight God",
+    "Type": "Inherent",
+    "Description": "This unit is immune to the Blight. At the start of the game, select an ally unit that does not have the Blight. It contracts the Blight."
+  },
+  "Spread Blight (Minor)": {
     "Name": "Spread Blight (Minor)",
     "Type": "Inherent",
     "Description": "If this unit Incapacitates an enemy in Melee, that unit must make a Morale Check. If they fail it, they immediately contract the Blight. This unit is immune to the Blight. If this unit is Incapacitated in Melee, nothing happens."
   },
-   "Pit Fighter": {
+  "Pit Fighter": {
     "Name": "Pit Fighter",
     "Type": "Inherent",
     "Description": "This unit treats Dazed results against it as Staggered instead."
+  },
+  "Raise Ally": {
+    "Name": "Raise Ally",
+    "Type": "Inherent",
+    "Description": "This unit can cast the 'Raise Ally' spell: One allied unit that was Incapacitated after the end of your last turn immediately returns to the battle as a Zombie (use the same stats as the Undead warband Zombie). It no longer counts towards your Rout Threshold. Place the model within 5\" of the Caster. The model cannot be placed such that it is Engaged with an enemy."
+  },
+  "Unholy Presence": {
+    "Name": "Unholy Presence",
+    "Type": "Inherent",
+    "Description": "Any allies of this unit have Disadvantage on all Morale Checks."
   },
   "Ethereal": {
     "Name": "Ethereal",
@@ -422,7 +482,7 @@
   "Vampire": {
     "Name": "Vampire",
     "Type": "Inherent",
-    "Description": "If there is a non-Undead, non-Animal ally within 2\" at the start of the Engage Phase, you may immediately Incapacitate that ally to remove Staggered from this unit and gain one Wound, up to the unit's maximum Wounds."
+    "Description": "If there is a non-Undead, non-Animal ally within 2\" at the end of your Upkeep Phase and this unit has less than their maximum Wounds, you must immediately Incapacitate that ally to remove Staggered from this unit and gain one Wound."
   },
   "Vanguard": {
     "Name": "Vanguard",

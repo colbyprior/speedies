@@ -9,7 +9,7 @@
     },
     "Heroes": [
         {
-            "Name": "Grand Inquisitor",
+            "Name": "High Inquisitor",
             "Type": "Leader",
             "Type Cap": "1",
             "Move": "6",
@@ -164,7 +164,7 @@
     "Promotion Options": {
     },
     "Available Skills": {
-        "Grand Inquisitor": {
+        "High Inquisitor": {
             "Mel": "X",
             "Rng": "X",
             "Def": "X",
@@ -223,7 +223,7 @@
     },
     "Equipment": {
         "Inquisitors": {
-            "Aliases": ["Grand Inquisitor", "Inquisitor", "Doomsayer"],
+            "Aliases": ["High Inquisitor", "Inquisitor", "Doomsayer"],
             "Melee Weapons": ["Dagger", "Hammer", "Sword / Axe", "Torch", "Great Hammer", "Great Sword / Axe", "Pike"],
             "Ranged Weapons": ["Crossbow", "Hand Crossbow", "Pistol", "Rifle"],
             "Armour": ["Light Armour", "Heavy Armour"]
