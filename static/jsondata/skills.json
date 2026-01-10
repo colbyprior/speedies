@@ -27,7 +27,7 @@
   "Temporary Ally": { 
     "Name": "Temporary Ally", 
     "Type": "Inherent", 
-    "Description": "This unit eventually becomes hostile to all other units. At the end of your Upkeep Phase, if at least one of your units was Incapaciated last turn, your Leader makes a Morale Check. On a failure, this unit becomes hostile. From now on, it will act during the Neutral Step of the next player's Upkeep Phase. It uses the usual rules for Neutral Units."
+    "Description": "This unit eventually becomes hostile to all other units. At the end of your Upkeep Phase, if at least one of your units was Incapacitated last turn, your Leader makes a Morale Check. On a failure, this unit becomes hostile. From now on, it will act during the Neutral Step of the next player's Upkeep Phase. It uses the usual rules for Neutral Units."
   },
   "Fence": { 
     "Name": "Fence", 
