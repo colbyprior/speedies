@@ -5,7 +5,7 @@ sidebar_position: 7
 
 Grand Total Cost: 499
 
-A somewhat greedy build focused on starting with the three strongest Vampires. The Thralls are willing to sacrifice themselves to keep the Vampires alive. The warband should focus on getting more units potentially some armour for its Vampires.
+A somewhat greedy build focused on starting with the three strongest Vampires. The Thralls are willing to sacrifice themselves to keep the Vampires alive. The warband should focus on getting more units and potentially some armour for its Vampires.
 ## Heroes
 
 Total Cost: 427
