@@ -449,6 +449,11 @@
     "Type": "Inherent",
     "Description": "This unit can use the morale of the Doomsayer if they are within 5\" of it."
   },
+  "Mob Mentality": {
+    "Name": "Mob Mentality",
+    "Type": "Inherent",
+    "Description": "This unit cannot pick up Treasure. If this unit is not within 5\" of a Peasant or Doomsayer at the end of the Upkeep Phase, it must make a Morale Check. If it fails, it is immediately Incapacitated."
+  },
   "Pack Tactics": {
     "Name": "Pack Tactics",
     "Type": "Inherent",
