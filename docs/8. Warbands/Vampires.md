@@ -41,7 +41,7 @@ This unit causes Fear.
 ### Vampire
 *Inherent*
 
-If there is a non-Undead, non-Animal ally within 2" at the start of the Engage Phase, you may immediately Incapacitate that ally to remove Staggered from this unit and gain one Wound, up to the unit's maximum Wounds.
+If there is a non-Undead, non-Animal ally within 2" at the end of your Upkeep Phase and this unit has less than their maximum Wounds, you must immediately Incapacitate that ally to remove Staggered from this unit and gain one Wound.
 ### Vampiric Magic
 *Spellcasting*
 

@@ -46,7 +46,7 @@ def generate_reference_pages():
     return
 
 def generate_factions():
-    with (open("docs/7. Factions List/4. Faction Agents.md", "w") as f):
+    with (open("docs/9. Reference/5. Faction Units.md", "w") as f):
         out_data = faction_helper.generate_faction_agents()
         f.write(out_data)
         f.close()

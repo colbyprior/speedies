@@ -15,7 +15,7 @@ An order of paladins and others that seek to advance a holy agenda.
 | Justicar | 6 | 13 | 13 | 16 | 8| 7 | 1 | 1 | 0 | 0 | [Leader](#leader), [Divine Magic](#divine-magic) | 95 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Morale) |
 | Paladin | 6 | 13 | 14 | 16 | 10| 10 | 1 | 1 | 0 | 0 |  | 50 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Morale) |
 | Cleric | 6 | 14 | 14 | 17 | 10| 10 | 1 | 1 | 0 | 0 | [Healer](#healer) | 50 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
-| Standard Bearer | 6 | 7 | - | 17 | 10| 7 | 1 | 1 | 3 | 0 | [Holy Standard](#holy-standard), [Fixed Equipment (Holy Standard)](#fixed-equipment-(holy-standard)) | 55 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
+| Standard Bearer | 6 | 7 | - | 17 | 10| 7 | 1 | 1 | 3 | 0 | [Rally the Troops](#rally-the-troops), [Fixed Equipment (Holy Standard)](#fixed-equipment-(holy-standard)) | 55 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
@@ -38,7 +38,7 @@ This unit is capable of casting Divine Magic. See the relevant spell list for a 
 *Inherent*
 
 This unit can use the 'Heal' Divine Magic spell.
-### Holy Standard
+### Rally the Troops
 *Inherent*
 
 Allied units within 5" of this unit can roll Morale Checks with Advantage. Rout Checks cannot gain Advantage in this way.
