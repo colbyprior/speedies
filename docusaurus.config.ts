@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Speedies',
+  title: 'Blightmeer',
   tagline: 'A fast paced campaign skirmish wargame',
   favicon: 'img/favicon.ico',
 
@@ -52,49 +52,30 @@ const config: Config = {
   ],
 
 
-//  plugins: [[ require.resolve('docusaurus-lunr-search'), {
-//    languages: ['en'],
-//    maxHits: 10
-//  }]],
+  plugins: [[ require.resolve('docusaurus-lunr-search'), {
+    languages: ['en'],
+    maxHits: 10
+  }]],
 
 
-  plugins: [
-    [
-      require.resolve('docusaurus-lunr-search'),
-      {
-        languages: ['en'],
-        maxHits: 10,
-        indexBaseUrl: true,
-        // Custom Lunr builder
-        lunrBuilder: (builder) => {
-          // Register an edge n-gram token filter
-          lunr.Pipeline.registerFunction(
-            function (token) {
-              const minGram = 3;
-              const maxGram = 10;
-              const grams = [];
-              
-              if (token.toString().length < minGram) {
-                return token;
-              }
-              
-              for (let i = minGram; i <= Math.min(maxGram, token.toString().length); i++) {
-                grams.push(token.toString().slice(0, i));
-              }
-              
-              return grams.map(gram => token.clone().update(() => gram));
-            },
-            'edgeNgram'
-          );
-          
-          // Add the edge n-gram function to the pipeline
-          builder.pipeline.before(lunr.stemmer, lunr.edgeNgram);
-          builder.searchPipeline.before(lunr.stemmer, lunr.edgeNgram);
-        },
-      },
-    ],
-  ],
-
+//  themes: [
+//    [
+//      require.resolve("@easyops-cn/docusaurus-search-local"),
+//      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+//      ({
+//        // `hashed` is recommended as long-term-cache of index file is possible.
+//        hashed: true,
+//        language: ["en"],
+//
+//        // Customize the keyboard shortcut to focus search bar (default is "mod+k"):
+//        // searchBarShortcutKeymap: "s", // Use 'S' key
+//        // searchBarShortcutKeymap: "ctrl+shift+f", // Use Ctrl+Shift+F
+//
+//        // If you're using `noIndex: true`, set `forceIgnoreNoIndex` to enable local index:
+//        // forceIgnoreNoIndex: true,
+//      }),
+//    ],
+//  ],
 
   themeConfig: {
     // Replace with your project's social card
@@ -104,9 +85,9 @@ const config: Config = {
         disableSwitch: true
     },
     navbar: {
-      title: 'Speedies',
+      title: 'Blightmeer',
       logo: {
-        alt: 'Speedies',
+        alt: 'Blightmeer',
         src: 'img/logo.svg',
       },
       items: [
@@ -152,38 +133,29 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Speedies',
+          title: 'Blightmeer',
           items: [
             {
-              label: 'Speedies',
-              to: '/Intro/Speedheim%20Overview',
+              label: 'Blightmeer',
+              to: '/Intro/Blightmeer%20Overview',
             },
             {
               label: 'Rulez',
-              to: '/Intro/Speedheim%20Overview',
+              to: '/Intro/Blightmeer%20Overview',
             }
           ],
-        },
-        {
-          title: 'Egg',
-          items: [
-            {
-              label: 'Egg',
-              to: '/Intro/Speedheim%20Overview',
-            }
-          ],
-        },
+        }
       ]
     },
     footer: {
       style: 'dark',
       links: [
         {
-          title: 'Speedies',
+          title: 'Blightmeer',
           items: [
             {
-              label: 'Speedies',
-              to: '/Intro/Speedheim%20Overview',
+              label: 'Blightmeer',
+              to: '/Intro/Blightmeer%20Overview',
             },
             {
               to: '/Quick%20Reference',
