@@ -97,7 +97,7 @@
         "Slots": "1",
         "Injury": "0",
         "Piercing": "0"
-      }
+      },
       "Blowpipe": { 
         "Name": "Blowpipe", 
         "Range": "15\"",
@@ -106,5 +106,5 @@
         "Slots": "1",
         "Injury": "-3",
         "Piercing": "0"
-      },  
+      }
 }

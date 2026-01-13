@@ -83,10 +83,10 @@ def generate_faction_agents():
                 else:
                     out_data += f"| {weapon_data.get('Name')} | {weapon_data.get('Range')} | {weapon_data.get('Injury')} | {weapon_data.get('Piercing')} | {effects_str} |\n"
 
-            for effect_name in ranged_weapon_effects:
-                effect = global_ranged_weapon_effects[effect_name]
-                out_data += f"##### {effect_name} \n"
-                out_data += f"{effect}\n"
+                for effect_name in ranged_weapon_effects:
+                    effect = global_ranged_weapon_effects[effect_name]
+                    out_data += f"##### {effect_name} \n"
+                    out_data += f"{effect}\n"
 
             for skill in faction_agent['Skills'].split(", "):
                 if skill == "":

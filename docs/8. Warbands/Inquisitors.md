@@ -25,7 +25,7 @@ At the start of each game make a Morale Check once per hero. For each success, a
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
 | Fanatic | 6 | 13 | - | 16 | 10| 10 | 1 | 1 | 0 | 0 | [Fear](#fear) | 50 | 5 |
 | Zealot | 6 | 16 | 16 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 20 | - |
-| Peasant | 6 | 17 | - | - | 12| 16 | 1 | 1 | 0 | 0 | [Heed the Scripture](#heed-the-scripture), [Fixed Equipment (Farm Tools)](#fixed-equipment-(farm-tools)) | - | See Incite the Mob skill |
+| Peasant | 6 | 17 | - | - | 12| 16 | 1 | 1 | 0 | 0 | [Heed the Scripture](#heed-the-scripture), [Mob Mentality](#mob-mentality), [Fixed Equipment (Farm Tools)](#fixed-equipment-(farm-tools)) | - | See Incite the Mob skill |
 | Hound | 8 | 14 | - | 18 | 8| 16 | 1 | 1 | 0 | 0 | [Animal](#animal), [Pack Tactics](#pack-tactics) | 20 | 5 |
 
 ## Skills 
@@ -53,6 +53,10 @@ This unit causes Fear.
 *Inherent*
 
 This unit can use the morale of the Doomsayer if they are within 5" of it.
+### Mob Mentality
+*Inherent*
+
+This unit cannot pick up Treasure. If this unit is not within 5" of a Peasant or Doomsayer at the end of the Upkeep Phase, it must make a Morale Check. If it fails, it is immediately Incapacitated.
 ### Fixed Equipment (Farm Tools)
 *Inherent*
 
@@ -165,7 +169,5 @@ Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately 
 | Priest |  |  | X |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
 | Inquisitor | X | X |  |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
 | Doomsayer | X | X |  |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
-| Fanatic | X |  |  |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee) |
+| Fanatic | X |  | X |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence) |
 | Zealot | X | X |  |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
-| Peasant |  |  |  |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Morale) |
-| Hound | X |  |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |

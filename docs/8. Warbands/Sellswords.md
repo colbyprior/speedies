@@ -147,5 +147,5 @@ Select a point within line-of-sight and within this weapon's range. Target ALL u
 | Knight |  |  | X |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
 | Infantry | X | X | X |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
 | Marksman |  | X |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
-| Man-at-Arms | X |  | X |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence) |
+| Man-at-Arms | X | X | X |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
 | Defender |  |  | X |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
