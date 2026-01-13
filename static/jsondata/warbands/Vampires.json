@@ -215,20 +215,6 @@
             "Def": "X",
             "Agi": "",
             "Mrl": ""
-        },
-        "Dire Wolf": {
-            "Mel": "X",
-            "Rng": "",
-            "Def": "",
-            "Agi": "X",
-            "Mrl": ""
-        },
-        "Giant Bat": {
-            "Mel": "X",
-            "Rng": "",
-            "Def": "",
-            "Agi": "X",
-            "Mrl": ""
         }
     },
     "Equipment": {

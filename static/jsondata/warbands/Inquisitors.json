@@ -206,20 +206,6 @@
             "Def": "",
             "Agi": "",
             "Mrl": ""
-        },
-        "Peasant": {
-            "Mel": "",
-            "Rng": "",
-            "Def": "",
-            "Agi": "",
-            "Mrl": "X"
-        },
-        "Hound": {
-            "Mel": "X",
-            "Rng": "",
-            "Def": "",
-            "Agi": "X",
-            "Mrl": ""
         }
     },
     "Equipment": {
