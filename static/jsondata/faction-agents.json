@@ -370,8 +370,7 @@
     "Species": "Ratling",
     "Position": "Gang Member",
     "Melee Weapon": "Dual Clubs",
-    "Ranged Weapon": "",
-    "Event": ""
+    "Ranged Weapon": ""
   },
   "City Guard": {
     "Type": "Henchman",
@@ -392,8 +391,7 @@
     "Species": "Human",
     "Position": "City Guard",
     "Melee Weapon": "Spear and Shield",
-    "Ranged Weapon": "",
-    "Event": ""
+    "Ranged Weapon": ""
   },
   "Blightchosen": {
     "Type": "Henchman",
@@ -414,7 +412,6 @@
     "Species": "Human",
     "Position": "Blightchosen",
     "Melee Weapon": "Dual Swords",
-    "Ranged Weapon": "",
-    "Event": ""
+    "Ranged Weapon": ""
   }
 }
