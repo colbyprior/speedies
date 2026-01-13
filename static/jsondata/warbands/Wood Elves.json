@@ -171,14 +171,14 @@
         },
         "Mage": {
             "Mel": "",
-            "Rng": "X",
+            "Rng": "",
             "Def": "",
             "Agi": "X",
-            "Mrl": ""
+            "Mrl": "X"
         },
         "Honour Guard": {
             "Mel": "X",
-            "Rng": "",
+            "Rng": "X",
             "Def": "",
             "Agi": "X",
             "Mrl": ""
@@ -191,14 +191,14 @@
             "Mrl": ""
         },
         "Citizen": {
-            "Mel": "",
+            "Mel": "X",
             "Rng": "X",
             "Def": "",
             "Agi": "X",
             "Mrl": ""
         },
         "Scout": {
-            "Mel": "",
+            "Mel": "X",
             "Rng": "X",
             "Def": "",
             "Agi": "X",

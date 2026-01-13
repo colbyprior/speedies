@@ -173,7 +173,7 @@
             "Rng": "",
             "Def": "",
             "Agi": "X",
-            "Mrl": ""
+            "Mrl": "X"
         },
         "Enforcer": {
             "Mel": "X",
@@ -206,7 +206,7 @@
     },
     "Equipment": {
         "Heroes": {
-            "Aliases": ["Guildmaster", "Ratlock", "Enforcer", "Assassin"],
+            "Aliases": ["All heroes, including Promoted henchman"],
             "Melee Weapons": ["Dagger", "Hammer / Club", "Sword / Axe", "Spear / Staff", "Glaive", "Flail", "Fighting Claws"],
             "Ranged Weapons": ["Throwing Stars", "Pistol"],
             "Armour": ["Light Armour"]
