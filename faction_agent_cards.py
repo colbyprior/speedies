@@ -1,10 +1,14 @@
 import json
+import sys
+
 from reportlab.lib.pagesizes import letter, landscape
 from reportlab.lib.units import inch
 from reportlab.lib import colors
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer, PageBreak, KeepTogether
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.enums import TA_CENTER, TA_LEFT
+
+from helpers.global_data import global_ranged_weapons_data, global_aliases, global_ranged_weapon_effects
 from helpers.run_helper import minimalNumber
 
 
@@ -158,6 +162,64 @@ def create_card_content(name, agent_data, skills_db):
     card_data.append(stats_table)
     card_data.append(Spacer(1, 0.03 * inch))
 
+    if agent_data.get('Melee Weapon'):
+        a = " a"
+        if agent_data.get('Melee Weapon')[-1] == "s":
+            a = ""
+        card_data.append(Paragraph(f"This unit is equipped with{a} {agent_data.get('Melee Weapon')}. This is already included in the stat table above.", body_style))
+    if agent_data.get('Ranged Weapon'):
+        ranged_weapon_name = agent_data.get('Ranged Weapon')
+        weapon_data = global_ranged_weapons_data.get(ranged_weapon_name)
+        # Get all ranged weapon effects
+        ranged_weapon_effects = []
+        weapon_effects = weapon_data.get('Effect').split(", ")
+        effects_str = ""
+        if weapon_effects != [""]:
+            effects = []
+            for weapon_effect in weapon_effects:
+                weapon_effect = weapon_effect.strip()
+                effects += [f"{weapon_effect}"]
+                if weapon_effect not in ranged_weapon_effects:
+                    ranged_weapon_effects += [weapon_effect]
+            effects_str = ", ".join(effects)
+        weapon_alias = ""
+        if not weapon_data:
+            weapon_alias = global_aliases.get("Ranged Weapons").get(ranged_weapon_name)
+            if not weapon_alias:
+                sys.stderr.write(f"Can't find weapon: {ranged_weapon_name}")
+                sys.exit(1)
+            weapon_data = global_ranged_weapons_data.get(weapon_alias)
+        ranged_weapon_values = [weapon_data.get('Name'), weapon_data.get('Range'), weapon_data.get('Injury'), weapon_data.get('Piercing'), effects_str]
+        if weapon_alias:
+            ranged_weapon_values = [ranged_weapon_name, weapon_data.get('Range'), weapon_data.get('Injury'), weapon_data.get('Piercing'), effects_str]
+
+        ranged_weapon_header = ["Ranged Weapon", "Rng", "Inj", "Prc", "Special Rules"]
+        ranged_weapon_table = Table([ranged_weapon_header, ranged_weapon_values], colWidths=[None, None, None])
+        ranged_weapon_table.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#34495e')),
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+            ('FONTSIZE', (0, 0), (-1, 0), 6),
+            ('FONTSIZE', (0, 1), (-1, 1), 7),
+            ('BOTTOMPADDING', (0, 0), (-1, 0), 2),
+            ('TOPPADDING', (0, 0), (-1, 0), 2),
+            ('BOTTOMPADDING', (0, 1), (-1, 1), 2),
+            ('TOPPADDING', (0, 1), (-1, 1), 2),
+            ('GRID', (0, 0), (-1, -1), 0.5, colors.grey),
+            ('BACKGROUND', (0, 1), (-1, 1), colors.HexColor('#ecf0f1'))
+        ]))
+
+        card_data.append(Spacer(1, 0.03 * inch))
+        card_data.append(ranged_weapon_table)
+        card_data.append(Spacer(1, 0.03 * inch))
+
+
+        for effect_name in ranged_weapon_effects:
+            effect = global_ranged_weapon_effects[effect_name]
+            card_data.append(Paragraph(f"<b>{effect_name}</b>: {effect}\n", body_style))
+    card_data.append(Spacer(1, 0.03 * inch))
+
     # Skills section
     if agent_data.get('Skills'):
         skills_header = Paragraph("<b>Skills</b>", section_style)
@@ -171,13 +233,13 @@ def create_card_content(name, agent_data, skills_db):
             if skill_name in skills_db:
                 skill_info = skills_db[skill_name]
                 skill_desc = Paragraph(
-                    f"<i>{skill_info['Name']}:</i> {skill_info['Description']}",
+                    f"<b>{skill_info['Name']}:</b> {skill_info['Description']}",
                     body_style
                 )
                 card_data.append(skill_desc)
             else:
                 # Fallback if skill not found in database
-                skill_desc = Paragraph(f"<i>{skill_name}</i>", body_style)
+                skill_desc = Paragraph(f"<b>{skill_name}</b>", body_style)
                 card_data.append(skill_desc)
 
     # Event section
@@ -185,7 +247,7 @@ def create_card_content(name, agent_data, skills_db):
         event_header = Paragraph("<b>Event</b>", section_style)
         card_data.append(event_header)
 
-        event_text = agent_data['Event'].replace('\n\n', '<br/><br/>').replace('\n', '<br/>')
+        event_text = agent_data['Event'].replace('\n**', '<br/><b>').replace(':**', ':</b>').replace('**', '<b>').replace('\n\n', '<br/><br/>').replace('\n', '<br/>')
         event_desc = Paragraph(event_text, body_style)
         card_data.append(event_desc)
 
