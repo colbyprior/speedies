@@ -1,5 +1,9 @@
-from helpers.global_data import (global_faction_agents, global_skills_data)
+import sys
+
+from helpers.global_data import (global_faction_agents, global_skills_data, global_ranged_weapons_data, global_aliases,
+                                 global_ranged_weapon_effects)
 from helpers.run_helper import minimalNumber
+from helpers.warband_helper import clean_link
 
 
 def generate_faction_agents():
@@ -36,11 +40,54 @@ def generate_faction_agents():
             out_data += "\n\n"
             out_data += f"*Cost:* {faction_agent['Faction Support Cost']}\n\n"
             out_data += f"{faction_agent['About']}\n\n"
-            out_data += f"| Mov | Run | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Prc | Inj | Skills |\n"
-            out_data += "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n"
-            out_data += f"| {faction_agent['Move']} | {minimalNumber(float(faction_agent['Move'])*1.5)}| {faction_agent['Melee']}| {faction_agent['Ranged']} "
+            out_data += f"| Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Prc | Inj | Skills |\n"
+            out_data += "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n"
+            out_data += f"| {faction_agent['Move']}| {faction_agent['Melee']}| {faction_agent['Ranged']} "
             out_data += f"| {faction_agent['Defense']}| {faction_agent['Agility']}| {faction_agent['Morale']}| {faction_agent['Attacks']} "
             out_data += f"| {faction_agent['Wounds']}| {faction_agent['Piercing']}| {faction_agent['Injury']}| {faction_agent['Skills']}\n\n"
+
+            if faction_agent.get('Melee Weapon'):
+                a=" a"
+                if faction_agent.get('Melee Weapon')[-1] == "s":
+                    a = ""
+                out_data += f"This unit is equipped with{a} {faction_agent.get('Melee Weapon')}. This is already included in the stat table above.\n\n"
+
+            if faction_agent.get('Ranged Weapon'):
+                ranged_weapon_name = faction_agent.get('Ranged Weapon')
+                out_data += f"| Ranged Weapon | Rng | Inj | Prc | Special Rules |\n"
+                out_data += f"| ------------- | --- | --- | --- | ------ |\n"
+                weapon_data = global_ranged_weapons_data.get(ranged_weapon_name)
+
+                # Get all ranged weapon effects
+                ranged_weapon_effects = []
+                weapon_effects = weapon_data.get('Effect').split(", ")
+                effects_str = ""
+                if weapon_effects != [""]:
+                    effects = []
+                    for weapon_effect in weapon_effects:
+                        weapon_effect = weapon_effect.strip()
+                        effects += [f"{weapon_effect}"]
+                        if weapon_effect not in ranged_weapon_effects:
+                            ranged_weapon_effects += [weapon_effect]
+                    effects_str = ", ".join(effects)
+
+                weapon_alias = ""
+                if not weapon_data:
+                    weapon_alias = global_aliases.get("Ranged Weapons").get(ranged_weapon_name)
+                    if not weapon_alias:
+                        sys.stderr.write(f"Can't find weapon: {ranged_weapon_name}")
+                        sys.exit(1)
+                    weapon_data = global_ranged_weapons_data.get(weapon_alias)
+                if weapon_alias:
+                    out_data += f"| {ranged_weapon_name} | {weapon_data.get('Range')} | {weapon_data.get('Injury')} | {weapon_data.get('Piercing')} | {effects_str} |\n"
+                else:
+                    out_data += f"| {weapon_data.get('Name')} | {weapon_data.get('Range')} | {weapon_data.get('Injury')} | {weapon_data.get('Piercing')} | {effects_str} |\n"
+
+            for effect_name in ranged_weapon_effects:
+                effect = global_ranged_weapon_effects[effect_name]
+                out_data += f"##### {effect_name} \n"
+                out_data += f"{effect}\n"
+
             for skill in faction_agent['Skills'].split(", "):
                 if skill == "":
                     continue

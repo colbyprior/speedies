@@ -17,6 +17,8 @@
     "About": "Some say Snikit went mad after being hit in the head with a stray projectile. Others say he went mad after cracking his skull on a slippery sewer floor. Either way, this crazy Ratling rules the Assassins Guild with an iron claw (when he's lucid enough).",
     "Species": "Ratling",
     "Position": "Master Assassin",
+    "Melee Weapon": "",
+    "Ranged Weapon": "",
     "Event": "**Immediately:** Snikit is hostile to everyone. Place Snikit 1\" away from the triggering unit. He makes a Morale Check. On a success, Snikit Engages the unit that picked up the Treasure.\n \n**Neutral Turn:** Snikit performs normal actions. He makes Morale Checks for Stupor when attempting to Engage.\n \n**Other Behaviours:** Snikit Disengages at the end of every Melee Combat."
   },
   "XYZ the Vampire Count": {
@@ -37,6 +39,8 @@
     "About": "Big vamps",
     "Species": "Vampire",
     "Position": "Count",
+    "Melee Weapon": "",
+    "Ranged Weapon": "",
     "Event": "**Immediately:** XYZ is hostile to everyone. Place XYZ 1\" away from the triggering unit.\n \n**Neutral Turn:** XYZ performs normal actions. Once he has Incapacitated a unit that is not Large, Undead, or an Animal, he will attempt to Retreat.\n \n**Other Behaviours:** XYZ does not target Large, Undead, and Animal units. Willing to ally with Chaos warbands."
   },
   "XYZ the Bounty Hunter": {
@@ -57,6 +61,8 @@
     "About": "This unit has a Blowpipe. The most feared Bounty Hunter in the city. XYZ rushes from the shadows and captures her targets before they're aware she's even there.",
     "Species": "Human",
     "Position": "Bounty Hunter",
+    "Melee Weapon": "",
+    "Ranged Weapon": "",
     "Event": "**Immediately:** Place XYZ on the nearest board edge. The triggering unit is the target for the purposes of the 'Bounty Hunter' skill.\n \n**Neutral Turn:** XYZ moves toward the target, Engaging if possible, otherwise making a Ranged Attack if possible. Once her target is Incapacitated, she will attempt to Retreat.\n \n**Other Behaviours:** XYZ uses her Disengage skill at the start of her turn if she is not Engaged with her target."
   },
   "XYZ the Thief": {
@@ -77,6 +83,8 @@
     "About": "Frustratingly agile, XYZ is always one step ahead of everyone else. A thief notorious amongst the nobility, she is the mastermind behind numerous high-profile heists.",
     "Species": "Elvish",
     "Position": "Thief",
+    "Melee Weapon": "",
+    "Ranged Weapon": "",
     "Event": "**Immediately:** Place XYZ 1\" away from the triggering unit. She is holding the Treasure. She immediately makes a Move action toward the nearest board edge.\n \n**Neutral Turn:** XYZ attempts to Retreat.\n \n**Other Behaviours:** XYZ will attempt any Agility Check that shortens the path to the nearest board edge."
   },
   "XYZ the Pit Fighter": {
@@ -97,9 +105,9 @@
     "About": "The current champion of the Pits, this person's presence is preceded by the chanting of their adoring fans.",
     "Species": "Human",
     "Position": "Pit Fighter",
+    "Melee Weapon": "",
+    "Ranged Weapon": "",
     "Event": "#### If the Pit Fighter was originally a member of the triggering unit's warband:\n \n**Immediately:** You found your old ally in the Pits. Time to break them out! Place the Pit Fighter 1\" away from the triggering unit. Place four Fans (use the Peasant stat block from the Inquisitors warband) in a rough circle surrounding the Pit Fighter and the triggering unit. The Pit Fighter immediately comes under the control of the triggering unit's warband and the Fans are immediately hostile to that warband.\n \n**Neutral Turn:** The Fans act as normal.\n \n**Other Behaviours:** At the end of the game, the Pit Fighter returns to its original warband. The original, neutral Pit Fighter returns to become the new Pit Fighter.\n \n#### Otherwise:\n \n**Immediately:** Your unit stumbled into a Pit Fight! Place the Pit Fighter 1\" away from the triggering unit. Give it an additional Treasure (in addition to the one that the triggering unit picked up). Place four Fans (use the Peasant stat block from the Inquisitors warband) in a rough circle surrounding the Pit Fighter and the triggering unit.\n \n**Neutral Turn:** The Pit Fighter performs normal actions, targeting the triggering unit. The Fans do nothing, unless they have become hostile to someone (then they act as normal).\n \n**Other Behaviours:** If the triggering unit moves away from the Pit Fighter before the Pit Fighter is Incapacitated, the Pit Fighter and Fans become hostile toward the warband of that unit.\n \n**End of the Pit Fight:** If the Pit Fighter Incapacitates the triggering unit, they do nothing from then on (unless they have become hostile to a warband, then they target that warband). At the end of the game, if the triggering unit was a hero, it becomes the Pit Fighter, otherwise it dies. If the triggering unit Incapacitates the Pit Fighter, the Fans come under the triggering player's control for the rest of the battle."
-	
-	
   },
   "XYZ the Blight Prophet": {
     "Type": "Agent",
@@ -119,6 +127,8 @@
     "About": "This self-proclaimed 'Prophet of the Blight God' has supposedly been sent by greater powers to spread the gift of the Blight to all who will listen, and to all who won't. Blah's sermons, and those of his followers, bring a sense of foreboding to all those unlucky enough to hear them.",
     "Species": "Human",
     "Position": "Blight Prophet",
+    "Melee Weapon": "",
+    "Ranged Weapon": "",
     "Event": "**Immediately:** XYZ and his Henchmen are hostile to everyone. Place XYZ 1\" away from the triggering unit, with two Chaos Henchmen, one on each side of him. The triggering unit must make a Morale Check. If it fails, it contracts the Blight.\n \n**Neutral Turn:** XYZ and his Henchmen act as normal.\n \n**Other Behaviours:** Willing to ally with Chaos warbands."
   },
   "XYZ the Archbishop": {
@@ -139,6 +149,8 @@
     "About": "As the (now disgraced) head of the church within the city, blah has been heavily criticised for allowing the Blight to spread to all corners of the city. He is commonly seen throughout the city doing his best to heal the diseased and occasionally smite the forces of Chaos.",
     "Species": "Human",
     "Position": "Archbishop",
+    "Melee Weapon": "Dual Swords",
+    "Ranged Weapon": "Crossbow",
     "Event": "**Immediately:** XYZ and his henchmen are hostile to Chaos warbands. Place XYZ 1\" away from the triggering unit, with two Law Henchmen, one on either side of him.\n \n**Neutral Turn:** XYZ performs normal actions. Once per game, if XYZ ends his move within 5\" of a unit with the Blight, he makes a Morale Check. On a success, the unit is cured of the Blight. Retreats if there are no enemies and no units with Blight (or he has already attempted to cure someone).\n \n**Other Behaviours:** Willing to ally with Law warbands."
   },
   "XYZ the Rebel Captain": {
@@ -159,6 +171,8 @@
     "About": "This elf does stuff.",
     "Species": "Elf",
     "Position": "Rebel Captain",
+    "Melee Weapon": "",
+    "Ranged Weapon": "",
     "Event": "**Immediately:** XYZ is hostile to Law warbands. Place XYZ 1\" away from the triggering unit, with one Chaos Henchmen either side of him. He is holding the Treasure.\n \n**Neutral Turn:** XYZ performs normal actions.\n \n**Other Behaviours:** Willing to ally with Chaos and Underworld warbands."
   },
   "XYZ the Shady Merchant": {
@@ -179,6 +193,8 @@
     "About": "Has a Crossbow. This shady mercant can procure goods for you, for a fee.",
     "Species": "Human",
     "Position": "Shady Merchant",
+    "Melee Weapon": "",
+    "Ranged Weapon": "",
     "Event": "**Immediately:** Place XYZ 1\" away from the triggering unit, with one Underworld Henchmen either side of him. He is holding the Treasure.\n \n**Neutral Turn:** If either of the henchmen start their turn next to a Treasure, they pick it up, even if another unit is contesting it. Then XYZ and his Henchmen move towards the nearest unclaimed Treasure. If they become hostile, they instead act as normal.\n \n**Other Behaviours:** If XYZ and his henchmen each have a Treasure (or are Incapacitated), they will attempt to Retreat, even if they are hostile. If one of XYZ's henchmen does not have a Treasure and a non-hostile unit from an Underworld warband ends its Move within 2\" of them, it can give up the Treasure it's holding to that henchman. If the unit does so, that unit's warband can roll on the Loot table at the end of the game."
   },
   "XYZ the Sellsword": {
@@ -199,6 +215,8 @@
     "About": "This sellsword can be convinced to fight for you and just as equally be convinced to fight against you.",
     "Species": "Ratling",
     "Position": "Sellsword",
+    "Melee Weapon": "Sword",
+    "Ranged Weapon": "",
     "Event": "**Immediately:** Place XYZ 1\" away from the triggering unit. He is holding the Treasure. He is an ally to the warband of the triggering unit and is hostile to all other warbands.\n \n**Neutral Turn:** XYZ performs normal actions.\n \n**Other Behaviours:** If an enemy unit ends its Move within 2\" of XYZ, it can give up the Treasure it's holding to XYZ. If the unit does so, that treasure is removed from the game. XYZ is now an ally to that unit's warband and is hostile to all other warbands."
   },
   "XYZ the Grand Inquisitor": {
@@ -219,6 +237,8 @@
     "About": "As the head of the inqusition, blah's job is to stamp out the evil, corruption, and rot from the city. He does so through bribery, extortion, and other forms of coercion.",
     "Species": "Human",
     "Position": "Grand Inquisitor",
+    "Melee Weapon": "",
+    "Ranged Weapon": "",
     "Event": "**Immediately:** XYZ and his henchmen are hostile to everyone. Place XYZ on the nearest board edge with two Law henchmen, one on either side of him.\n \n**Neutral Turn:** XYZ and his henchmen perform normal actions.\n \n**Other Behaviours:** XYZ does not target units that are not Arcane Casters or carrying Treasure, unless there are no other targets. Willing to ally with any warband."
   },
   "XYZ the Folk Hero": {
@@ -239,6 +259,8 @@
     "About": "This dwarf is a hero of the people.",
     "Species": "Dwarf",
     "Position": "Folk Hero",
+    "Melee Weapon": "",
+    "Ranged Weapon": "",
     "Event": "**Immediately:** Place XYZ 1\" away from the triggering unit. He is holding the Treasure. Place three Peasants around him (use the Peasant stat block from the Inquisitors warband) and give them each a Treasure.\n \n**Neutral Turn:** XYZ and the Peasants attempt to Retreat. If they have become hostile to anyone, the Peasants continue to Retreat, but XYZ performs normal actions instead.\n \n**Other Behaviours:** None."
   },
   "XYZ the Wandering Knight": {
@@ -259,6 +281,8 @@
     "About": "This knight wanders about.",
     "Species": "Human",
     "Position": "Wandering Knight",
+    "Melee Weapon": "",
+    "Ranged Weapon": "",
     "Event": "**Immediately:** Place XYZ in the middle of a random board edge.\n \n**Neutral Turn:** XYZ moves towards the middle of the opposite board edge from where he started. If he ends the move within 10\" of a unit, that unit must make a Morale Check. If the unit fails, XYZ becomes hostile toward that unit's warband and performs normal actions from this point onward. This check only needs to be made once per warband. Law warbands have Advantage on this Morale Check.\n \n**Other Behaviours:** None."
   },
   "XYZ the Demon Lord": {
@@ -279,6 +303,8 @@
     "About": "This demon lord's motives are unknown.",
     "Species": "Demon",
     "Position": "Lord",
+    "Melee Weapon": "",
+    "Ranged Weapon": "",
     "Event": "**Immediately:** Place XYZ 1\" away from the triggering unit.\n \n**Neutral Turn:** XYZ performs normal actions. \n \n**Other Behaviours:** Willing to ally with Chaos warbands, although the 'Temporary Ally' rules will apply if they do."
   },
   "XYZ the Necromancer": {
@@ -299,6 +325,8 @@
     "About": "A filthy necromancer.",
     "Species": "Human",
     "Position": "Necromancer",
+    "Melee Weapon": "",
+    "Ranged Weapon": "",
     "Event": "**Immediately:** XYZ and his Zombies are hostile to everyone. Place XYZ 1\" away from the triggering unit. He is holding the Treasure. Place two Zombies, one on either side of him. XYZ immediately moves so that he maximises the distance between himself and the closest enemy.\n \n**Neutral Turn:** All Zombies act as normal. A Zombie is then summoned next to XYZ. Finally, XYZ moves so that he maximises the distance between himself and the closest enemy.\n \n**Other Behaviours:** Willing to ally with Underworld warbands."
   },
   "XYZ the Berserker": {
@@ -319,6 +347,8 @@
     "About": "A terrifying berserker.",
     "Species": "Dwarf",
     "Position": "Berserker",
+    "Melee Weapon": "",
+    "Ranged Weapon": "",
     "Event": "**Immediately:** XYZ is hostile to everyone. Place XYZ at the nearest board edge.\n \n**Neutral Turn:** XYZ performs normal actions.\n \n**Other Behaviours:** Willing to ally with Chaos warbands."
   },
   "Gang Member": {
@@ -339,6 +369,8 @@
     "About": "Outcast by society, Ratlings are forced into the edges of the city where they make ends meet by any means necessary. This incentivises them to skirt the law and find creative ways to feed themselves and their families.",
     "Species": "Ratling",
     "Position": "Gang Member",
+    "Melee Weapon": "",
+    "Ranged Weapon": "",
     "Event": ""
   },
   "City Guard": {
@@ -359,6 +391,8 @@
     "About": "A guard of the city.",
     "Species": "Human",
     "Position": "City Guard",
+    "Melee Weapon": "",
+    "Ranged Weapon": "",
     "Event": ""
   },
   "Blightchosen": {
@@ -379,6 +413,8 @@
     "About": "A faithful servant of the Blight.",
     "Species": "Human",
     "Position": "Blightchosen",
+    "Melee Weapon": "",
+    "Ranged Weapon": "",
     "Event": ""
   }
 }
