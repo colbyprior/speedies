@@ -115,7 +115,7 @@ def create_card_content(name, agent_data, skills_db):
     # Checkbox table for Blight and Plaguetouched
     checkbox_table = Table(
         [['Blight', 'Plaguetouched'], ['', '']],
-        colWidths=[0.7 * inch, 0.9 * inch]
+        colWidths=[0.7 * inch, 0.8 * inch]
     )
     checkbox_table.setStyle(TableStyle([
         ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
