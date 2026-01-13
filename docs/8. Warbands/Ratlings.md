@@ -13,7 +13,7 @@ RAT
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
 | Guildmaster | 8 | 12 | 12 | 18 | 6| 10 | 1 | 1 | 0 | 0 | [Leader](#leader) | 80 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale) |
-| Ratlock | 8 | 14 | - | 18 | 8| 13 | 1 | 1 | 0 | 0 | [Blight Magic](#blight-magic) | 55 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
+| Ratlock | 8 | 14 | - | 18 | 8| 13 | 1 | 1 | 0 | 0 | [Blight Magic](#blight-magic) | 55 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
 | Enforcer | 8 | 13 | 14 | 18 | 8| 13 | 1 | 1 | 0 | 0 |  | 55 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
 | Assassin | 8 | 14 | 14 | 18 | 6| 13 | 1 | 1 | 0 | 2 | [Vanguard](#vanguard) | 60 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
 
@@ -62,7 +62,7 @@ This unit may not be purchased at warband creation. It counts as two units for t
 ## Equipment
 
 ### Heroes Equipment 
-Heroes equipment for the unit types: Guildmaster, Ratlock, Enforcer, Assassin
+Heroes equipment for the unit types: All heroes, including Promoted henchman
 
 | Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
@@ -117,7 +117,7 @@ Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately 
 | ---- | ------ | ---- |
 | Blight Bolt | 12 | Cast Attack. Target one unit you can see within 10" and perform a Cast Attack against them. On a success, the target makes a Plague Check. |
 | Swarm of Rats | 15 | Cast Attack. Choose the closest enemy within 10". Make a Cast Attack against the target. If you succeed, make an Injury Roll against all units within 1.5" of it. |
-| Sewer Filth | 10 | Basic. Target one unit you can see within 20". The target is Dazed. |
+| Sewer Filth | 12 | Basic. Target one unit you can see within 20". The target is Dazed. |
 | Pounce | 10 | The caster gains 2 Attacks and +3 Injury until the end of this turn. They may immediately make an Engage action, unless they are already Engaged. |
 | Rat Rage | 7 | Ongoing. Upon casting and at the start of each turn, any Giant Rats within 5" of the caster gain Fear for the round. |
 
@@ -126,9 +126,8 @@ Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately 
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Guildmaster | X | X |  | X | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale) |
-| Ratlock | X |  |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
+| Ratlock | X |  |  | X | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
 | Enforcer | X | X |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
 | Assassin | X | X |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
 | Underrat | X | X |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
 | Blight Host | X |  |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
-| Giant Rat | X |  |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |

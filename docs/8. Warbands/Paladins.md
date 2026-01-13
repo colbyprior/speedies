@@ -121,6 +121,6 @@ This weapon may be used with a Shield.
 | Cleric |  |  | X |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
 | Standard Bearer |  |  | X |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
 | Squire | X |  | X |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Morale) |
-| Initiate | X |  | X |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence) |
+| Initiate | X |  |  |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee) |
 | Monk | X |  |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
 | Cavalier | X |  |  |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale) |
