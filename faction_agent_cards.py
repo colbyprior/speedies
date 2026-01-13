@@ -91,7 +91,14 @@ def create_card_content(name, agent_data, skills_db):
 
     # Title section
     title = Paragraph(f"<b>{name}</b> ({agent_data['Faction']})", title_style)
-    subtitle = Paragraph(f"<b>{agent_data['Type']}: </b><i>{agent_data['Species']} {agent_data['Position']}</i>", subtitle_style)
+    subtitle_text = f"<b>{agent_data['Type']}"
+    if agent_data.get("Species") and agent_data.get("Position"):
+        subtitle_text += f":</b> <i>{agent_data['Species']} {agent_data['Position']}</i>"
+    elif agent_data.get("Species"):
+        subtitle_text += f":</b> <i>{agent_data['Species']}</i>"
+    else:
+        subtitle_text += f":</b> <i>{agent_data['Position']}</i>"
+    subtitle = Paragraph(subtitle_text, subtitle_style)
     card_data.append(title)
     card_data.append(subtitle)
 
