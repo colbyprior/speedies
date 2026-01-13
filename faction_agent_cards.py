@@ -254,14 +254,15 @@ def create_card_content(name, agent_data, skills_db):
         event_header = Paragraph("<b>Event</b>", section_style)
         card_data.append(event_header)
 
-        event_text = agent_data['Event'].replace('\n**', '<br/><b>').replace(':**', ':</b>').replace('**', '<b>').replace('\n\n', '<br/><br/>').replace('\n', '<br/>')
+        event_text = (agent_data['Event'].replace('\n**', '<br/><b>').replace(':**', ':</b>').replace('**', '<b>').replace('\n\n', '<br/><br/>').replace('\n', '<br/>')
+                      .replace('#### Otherwise:', '<b><i>Otherwise:</i></b>').replace('#### If the Pit Fighter was originally a member of the triggering unit\'s warband:', '<b><i>If the Pit Fighter was originally a member of the triggering unit\'s warband:</i></b>'))
         event_desc = Paragraph(event_text, body_style)
         card_data.append(event_desc)
 
     return card_data
 
 
-def generate_pdf(json_file, output_pdf='faction_agents.pdf', cards_per_row=2, cards_per_col=2,
+def generate_pdf(json_file, output_pdf='faction_agents.pdf', cards_per_row=1, cards_per_col=1,
                  skills_file='static/jsondata/skills.json'):
     """Generate PDF with multiple agent cards per page.
 
@@ -284,7 +285,8 @@ def generate_pdf(json_file, output_pdf='faction_agents.pdf', cards_per_row=2, ca
 
     # Calculate card dimensions based on number of cards per page
     card_width = (page_width - 2 * margin - (cards_per_row - 1) * gap) / cards_per_row
-    card_height = (page_height - 2 * margin - (cards_per_col - 1) * gap) / cards_per_col
+    card_height = 450
+#    card_height = (page_height - 2 * margin - (cards_per_col - 1) * gap) / cards_per_col
 
     # Create PDF
     doc = SimpleDocTemplate(
@@ -325,7 +327,7 @@ def generate_pdf(json_file, output_pdf='faction_agents.pdf', cards_per_row=2, ca
         page_table = Table(
             rows,
             colWidths=[card_width] * cards_per_row,
-            rowHeights=None  # Let it auto-calculate heights
+            rowHeights=card_height
         )
 
         # Build style with borders for each card
