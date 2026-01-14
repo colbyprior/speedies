@@ -8,7 +8,6 @@ RAT
 | ---- | ---- |
 | Complexity | ★☆☆ |
 | Rout Threshold | 7 |
-
 | Play Style | Fast and agile swarm |
 
 ## Heroes

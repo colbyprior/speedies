@@ -8,7 +8,6 @@ Magic never expects us.
 | ---- | ---- |
 | Complexity | ★☆☆ |
 | Rout Threshold | 6 |
-
 | Play Style | Powerful heroes with minions |
 
 ## Special Rules

@@ -8,7 +8,6 @@ Let me off this wild ride Mr. Bones
 | ---- | ---- |
 | Complexity | ★★☆ |
 | Rout Threshold | 7 |
-
 | Play Style | Slow and Skelly |
 
 ## Special Rules

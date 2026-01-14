@@ -8,7 +8,6 @@ Elves, bleh!
 | ---- | ---- |
 | Complexity | ★★★ |
 | Rout Threshold | 6 |
-
 | Play Style | Agile and Fragile |
 
 ## Special Rules

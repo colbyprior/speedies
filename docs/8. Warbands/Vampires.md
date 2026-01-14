@@ -8,7 +8,6 @@ This team sucks... your blood!
 | ---- | ---- |
 | Complexity | ★★★ |
 | Rout Threshold | 6 |
-
 | Play Style | Powerful leader with minions |
 
 ## Heroes

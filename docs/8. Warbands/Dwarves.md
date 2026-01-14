@@ -8,7 +8,6 @@ These chonkers go bonkers.
 | ---- | ---- |
 | Complexity | ★★☆ |
 | Rout Threshold | 6 |
-
 | Play Style | Rough and Tough |
 
 ## Special Rules

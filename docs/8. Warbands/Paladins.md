@@ -8,7 +8,6 @@ An order of paladins and others that seek to advance a holy agenda.
 | ---- | ---- |
 | Complexity | ★★☆ |
 | Rout Threshold | 6 |
-
 | Play Style | Defensive |
 
 ## Heroes

@@ -8,7 +8,6 @@ sidebar_label: Sellswords
 | ---- | ---- |
 | Complexity | ★☆☆ |
 | Rout Threshold | 6 |
-
 | Play Style | Balanced |
 
 ## Heroes
