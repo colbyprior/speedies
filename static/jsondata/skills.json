@@ -2,7 +2,7 @@
   "Deadly": { 
     "Name": "Deadly", 
     "Type": "Melee", 
-    "Description": "+2 to injury rolls in melee"
+    "Description": "This unit has Advantage on Injury Checks in Melee. This means that, if this unit hits, roll a d20 and use that as the Injury value if it is higher than the Melee Check result (before modifiers)."
   },
   "Hard to Kill": { 
     "Name": "Hard to Kill", 
@@ -52,12 +52,12 @@
   "Shove": { 
     "Name": "Shove", 
     "Type": "Melee", 
-    "Description": "This unit may declare it is replacing one or more of its attacks with shoves before attacking. If it does, make a Melee check for each shove without modifiers. On a success, the target may not make a Defence check and is immediately pushed back 2\", moving it out of Melee. This may not be used on Large units and the unit may not attack a unit they are also shoving."
+    "Description": "At the end of Melee combat, if this unit is not Dazed, Stunned, or Incapacitated, it can attempt to Shove an enemy it is Engaged with. That unit must make an Agility Check. If it fails, it is pushed directly back 2\"."
   },
   "Fencing Specialist": {
     "Name": "Fencing Specialist", 
     "Type": "Agility", 
-    "Description": "If this unit is using a one-handed weapon and no Shield, they have Advantage on Defence Checks in Melee."
+    "Description": "If this unit is using a one-handed weapon and no Shield, they have Advantage on Melee Checks and Defence Checks in Melee."
   },
   "Great Weapon Specialist": { 
     "Name": "Great Weapon Specialist", 
@@ -74,11 +74,6 @@
     "Type": "Defence", 
     "Description": "If this unit is using a Shield, it gains one additional Attack in Melee."
   },
-  "Grapple": { 
-    "Name": "Grapple", 
-    "Type": "Melee", 
-    "Description": "This unit may declare it is replacing all of its attacks with a single grapple before attacking. If it does, make a Melee check without modifiers. On a success, the target may not make a Defence check and both this unit and its target immediately become Dazed. This may not be used on Large units."
-  },
   "Drag You Down": { 
     "Name": "Drag You Down", 
     "Type": "Defence", 
@@ -87,7 +82,7 @@
   "Taunt": { 
     "Name": "Taunt", 
     "Type": "Defence", 
-    "Description": "If an enemy attempts to Engage an ally within 5\" of this unit, this unit may make a Morale Check. On a success, the enemy attempts to Engage this unit instead."
+    "Description": "Once per turn, if an enemy attempts to Engage an ally within 5\" of this unit, this unit may make a Morale Check. On a success, the enemy attempts to Engage this unit instead."
   },
   "Hero Killer": { 
     "Name": "Hero Killer", 
@@ -119,15 +114,10 @@
     "Type": "Morale", 
     "Description": "This unit's Cast Attack spells have their range increased by 5\"."
   },
-  "Dread Aura": { 
-    "Name": "Dread Aura", 
-    "Type": "Morale", 
-    "Description": "Enemy units within 5\" of this unit have Disadvantage on Morale Checks."
-  },
   "Sneaky": { 
     "Name": "Sneaky", 
     "Type": "Agility", 
-    "Description": "Out-of-Sight rolls against this unit are rolled with Disadvantage."
+    "Description": "This unit makes Out-of-Sight Rolls with Advantage."
   },
   "Thief": { 
     "Name": "Thief", 
@@ -139,11 +129,6 @@
     "Type": "Morale", 
     "Description": "This unit may make a Morale Check against an Animal within 5\" during the Ranged Phase (instead of a Ranged Attack). If the unit passes, the Animal cannot Engage or Move on its following turn."
   },
-  "Surefooted": { 
-    "Name": "Surefooted", 
-    "Type": "Agility", 
-    "Description": "You ignore the effects of Difficult terrain."
-  },
   "Coup de Grace": { 
     "Name": "Coup de Grace", 
     "Type": "Agility", 
@@ -152,7 +137,7 @@
   "Defensive Stance": { 
     "Name": "Defensive Stance", 
     "Type": "Defence", 
-    "Description": "Enemies don't get to automatically attack first in Melee on the turn they Engage. Resolve it based on Agility instead."
+    "Description": "Enemies don't get to automatically attack first in Melee on the turn they Engage. Instead, this unit makes an Agility Check. If it succeeds, it instead attacks first."
   },
   "Protector": { 
     "Name": "Protector", 
@@ -172,7 +157,7 @@
   "Leap": { 
     "Name": "Leap", 
     "Type": "Agility", 
-    "Description": "This unit's max jump distance is increased by 3\"."
+    "Description": "This unit's max jump distance is increased by 3\". It also has Advantage on Jump Across Checks."
   },
    "Arbalist": { 
     "Name": "Arbalist", 
@@ -199,55 +184,30 @@
     "Type": "Defence", 
     "Description": "This unit cannot be Staggered."
   },
-  "Blade Defence": { 
-    "Name": "Blade Defence", 
-    "Type": "Defence", 
-    "Description": "This unit gains +2 Defence when not wearing Armour or wielding a Shield in melee"
-  },
-   "Tough": { 
-    "Name": "Tough", 
-    "Type": "Defence", 
-    "Description": "When this unit is Injured, the opponent rolls again and takes the lower result."
-  },
   "Sniper": { 
     "Name": "Sniper", 
     "Type": "Ranged", 
     "Description": "This unit gains +5\" range to all Ranged weapons."
   },
-  "Quick Reload": { 
-    "Name": "Quick Reload", 
+  "Run and Gun": { 
+    "Name": "Run and Gun", 
     "Type": "Ranged", 
-    "Description": "This unit ignores the Long Reload special rule for weapons."
-  },
-  "Precise": { 
-    "Name": "Precise", 
-    "Type": "Ranged", 
-    "Description": "This unit can ignore cover penalties when firing at enemies"
-  },
-  "Master Thrower": { 
-    "Name": "Master Thrower", 
-    "Type": "Ranged", 
-    "Description": "This unit can throw a number of projectiles up to their attack value. This may target multiple targets."
+    "Description": "This unit can make a Ranged Attack on its turn even if it had Run during the Move Phase."
   },
   "Agile": { 
     "Name": "Agile", 
     "Type": "Agility",
-    "Description": "This unit gets Advantage on all Agility checks."
-  },
-  "Strike First": { 
-    "Name": "Strike First", 
-    "Type": "Agility", 
-    "Description": "This unit will always strike first in the first round of combat. If the enemy unit also has this then they cancel out."
-  },
-  "Dodge": { 
-    "Name": "Dodge", 
-    "Type": "Agility", 
-    "Description": "Ranged attacks cannot have Advantage against this unit."
+    "Description": "This unit gets Advantage on all Climb checks."
   },
   "Iron Will": { 
     "Name": "Iron Will", 
     "Type": "Morale", 
-    "Description": "If a leader takes this skill they may extend their 'Leader' skill's range by 5\""
+    "Description": "If a leader takes this skill they may extend their 'Leader' skill's range by 5\"."
+  },
+  "Favourable Encounter": { 
+    "Name": "Favourable Encounter", 
+    "Type": "Morale", 
+    "Description": "If a unit from your warband triggers an Event, you may draw an additional Faction Agent card and choose which Faction Agent will be used for the Event."
   },
   "Treasure Hunter": {
 	"Name": "Treasure Hunter", 
@@ -257,22 +217,7 @@
   "Spell Master": { 
     "Name": "Spell Master", 
     "Type": "Morale", 
-    "Description": "This unit gets a +2 to their spellcasting checks."
-  },
-  "Haggle": { 
-    "Name": "Haggle", 
-    "Type": "Morale", 
-    "Description": "This unit may reduce the cost of a piece of equipment by 1d20 rolled with disadvantage once after each game."
-  },
-  "Magic Initiate": { 
-    "Name": "Magic Initiate", 
-    "Type": "Morale", 
-    "Description": "This unit may learn basic magic. Immediately pick one spell from the basic spells list."
-  },
-  "Battle Caster": { 
-    "Name": "Battle Caster", 
-    "Type": "Morale", 
-    "Description": "This unit may wear armour and use a shield while casting spells."
+    "Description": "This unit lowers the Difficulty of Spells by 1."
   },
   "War Caster": { 
     "Name": "War Caster", 
@@ -282,7 +227,7 @@
   "Hoarder": { 
     "Name": "Hoarder", 
     "Type": "Morale", 
-    "Description": "When a unit of your warband dies you can keep one piece of equipment from that unit. This skill can be used once per battle."
+    "Description": "When a unit of your warband dies you can keep one piece of equipment from that unit. This skill can be used once per battle and cannot be used on Rare Consumables, Oddments, Armour, or Weapons."
   },
   "Fear": { 
     "Name": "Fear", 
