@@ -7,6 +7,8 @@ This team sucks... your blood!
 | Max Units | 12 |
 | ---- | ---- |
 | Complexity | ★★★ |
+| Rout Threshold | 6 |
+
 | Play Style | Powerful leader with minions |
 
 ## Heroes
@@ -22,7 +24,7 @@ This team sucks... your blood!
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
 | Thrall | 6 | 16 | 16 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 20 | - |
 | Ghoul | 6 | 13 | - | - | 10| 16 | 2 | 1 | 2 | 0 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment) | 60 | - |
-| Dire Wolf | 8 | 10 | - | 18 | 10| 18 | 1 | 1 | 2 | 0 | [Ambush](#ambush), [Animal](#animal) | 35 | 3 |
+| Dire Wolf | 8 | 10 | - | 18 | 10| 16 | 1 | 1 | 2 | 0 | [Ambush](#ambush), [Animal](#animal) | 35 | 3 |
 | Giant Bat | 8 | 16 | - | - | 8| 16 | 1 | 1 | 0 | 0 | [Flying](#flying), [Animal](#animal) | 15 | 3 |
 
 ## Skills 

@@ -2,6 +2,7 @@
     "Name": "Dwarves",
     "Complexity": "★★☆",
     "Max Units": "12",
+    "Rout Threshold": "6",
     "Play Style": "Rough and Tough",
     "Preamble": "These chonkers go bonkers.",
     "Special Rules": {

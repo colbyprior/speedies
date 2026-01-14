@@ -7,6 +7,8 @@ Let me off this wild ride Mr. Bones
 | Max Units | 18 |
 | ---- | ---- |
 | Complexity | ★★☆ |
+| Rout Threshold | 7 |
+
 | Play Style | Slow and Skelly |
 
 ## Special Rules

@@ -7,6 +7,8 @@ Elves, bleh!
 | Max Units | 12 |
 | ---- | ---- |
 | Complexity | ★★★ |
+| Rout Threshold | 6 |
+
 | Play Style | Agile and Fragile |
 
 ## Special Rules

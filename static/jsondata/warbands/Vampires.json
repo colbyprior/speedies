@@ -2,6 +2,7 @@
     "Name": "Vampires",
     "Complexity": "★★★",
     "Max Units": "12",
+    "Rout Threshold": "6",
     "Play Style": "Powerful leader with minions",
     "Preamble": "This team sucks... your blood!",
     "Special Rules": {

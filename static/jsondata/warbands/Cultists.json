@@ -2,6 +2,7 @@
     "Name": "Cultists",
     "Complexity": "️★★☆",
     "Max Units": "12",
+    "Rout Threshold": "6",
     "Play Style": "Weak units mutate into monstrosities",
     "Preamble": "Embrace the mutations for power",
     "Special Rules": {

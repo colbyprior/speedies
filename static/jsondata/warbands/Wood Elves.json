@@ -2,6 +2,7 @@
     "Name": "Wood Elves",
     "Complexity": "★★★",
     "Max Units": "12",
+    "Rout Threshold": "6",
     "Play Style": "Agile and Fragile",
     "Preamble": "Elves, bleh!",
     "Special Rules": {

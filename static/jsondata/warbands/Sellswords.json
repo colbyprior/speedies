@@ -2,6 +2,7 @@
     "Name": "Sellswords",
     "Complexity": "★☆☆",
     "Max Units": "15",
+    "Rout Threshold": "6",
     "Play Style": "Balanced",
     "Preamble": "",
     "Special Rules": {

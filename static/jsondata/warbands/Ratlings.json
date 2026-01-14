@@ -2,6 +2,7 @@
     "Name": "Ratlings",
     "Complexity": "★☆☆",
     "Max Units": "18",
+    "Rout Threshold": "7",
     "Play Style": "Fast and agile swarm",
     "Preamble": "RAT",
     "Special Rules": {

@@ -7,6 +7,8 @@ sidebar_label: Sellswords
 | Max Units | 15 |
 | ---- | ---- |
 | Complexity | ★☆☆ |
+| Rout Threshold | 6 |
+
 | Play Style | Balanced |
 
 ## Heroes

@@ -2,6 +2,7 @@
     "Name": "Inquisitors",
     "Complexity": "★☆☆",
     "Max Units": "12",
+    "Rout Threshold": "6",
     "Play Style": "Powerful heroes with minions",
     "Preamble": "Magic never expects us.",
     "Special Rules": {
