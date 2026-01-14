@@ -137,7 +137,7 @@ You may purchase this weapon up to two times and wield both at once without usin
 #### Blackpowder 
 Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately make an Injury Roll against yourself (applying the weapon's Injury modifier). You may no longer use the weapon for the rest of the game (resolving any remaining targets from the current attack first). After the game, it is repaired at no cost. If you have Advantage and either dice rolls a 1 you still misfire. If the higher roll still hits the enemy, resolve it as normal.
 #### Buckshot 
-Select a point within line-of-sight and within this weapon's range. Target ALL units within 1.5" of this point that are in line-of-sight. If any unit Engaged in Melee Combat is targeted, ALL units within that Melee Combat are targeted, even if they are not within line-of-sight. Resolve each target separately, following the usual rules for Ranged Attacks and Blackpowder. This weapon ignores cover.
+Select a point within line-of-sight. If it is within range, target ALL units within 1.5" of this point that are in line-of-sight. If any unit Engaged in Melee Combat is targeted, ALL units within that Melee Combat are targeted, even if they are not within line-of-sight. Resolve each target separately, following the usual rules for Ranged Attacks and Blackpowder. This weapon ignores cover. If the selected point is out of range, use the closest point to the original point that is within range instead.
 
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |
