@@ -19,7 +19,7 @@
     "Position": "Master Assassin",
     "Melee Weapon": "Dual Fighting Claws",
     "Ranged Weapon": "",
-    "Event": "**Immediately:** Slygar is hostile to everyone. Place Slygar 1\" away from the triggering unit. He makes a Morale Check. On a success, Slygar Engages the unit that picked up the Treasure.\n \n**Neutral Turn:** Slygar performs normal actions. He makes Morale Checks for Stupor when attempting to Engage.\n \n**Other Behaviours:** Slygar Disengages at the end of every Melee Combat."
+    "Event": "**Disposition:** Slygar is Hostile to everyone.\n \n**Immediately:** Place Slygar 1\" away from the triggering unit. He makes a Morale Check. On a success, Slygar Engages the unit that picked up the Treasure.\n \n**Neutral Turn:** Slygar performs normal actions. \n \n**Other Behaviours:** Slygar Disengages at the end of every Melee Combat. He makes Morale Checks for Stupor when attempting to Engage."
   },
   "XYZ the Vampire Count": {
     "Type": "Agent",
@@ -41,7 +41,7 @@
     "Position": "Count",
     "Melee Weapon": "Sword",
     "Ranged Weapon": "",
-    "Event": "**Immediately:** XYZ is hostile to everyone. Place XYZ 1\" away from the triggering unit.\n \n**Neutral Turn:** XYZ performs normal actions. Once he has Incapacitated a unit that is not Large, Undead, or an Animal, he will attempt to Retreat.\n \n**Other Behaviours:** XYZ does not target Large, Undead, and Animal units. Willing to ally with Chaos warbands."
+    "Event": "**Disposition:**XYZ is Hostile to everyone, but willing to Ally with Chaos warbands.\n \n**Immediately:** Place XYZ 1\" away from the triggering unit.\n \n**Neutral Turn:** XYZ performs normal actions.\n \n**Other Behaviours:** XYZ does not target Large, Undead, and Animal units."
   },
   "XYZ the Bounty Hunter": {
     "Type": "Agent",
@@ -63,7 +63,7 @@
     "Position": "Bounty Hunter",
     "Melee Weapon": "Dual Hammers",
     "Ranged Weapon": "Blowpipe",
-    "Event": "**Immediately:** Place XYZ on the nearest board edge. The triggering unit is the target for the purposes of the 'Bounty Hunter' skill.\n \n**Neutral Turn:** XYZ moves toward the target, Engaging if possible, otherwise making a Ranged Attack if possible. Once her target is Incapacitated, she will attempt to Retreat.\n \n**Other Behaviours:** XYZ uses her Disengage skill at the start of her turn if she is not Engaged with her target."
+    "Event": "**Disposition:** XYZ is Hostile to the triggering unit.\n \n**Immediately:** Place XYZ on the nearest board edge. The triggering unit is the target for the purposes of the 'Bounty Hunter' skill.\n \n**Neutral Turn:** XYZ moves toward the target, Engaging if possible, otherwise making a Ranged Attack if possible. Once her target is Incapacitated, she will attempt to Retreat.\n \n**Other Behaviours:** XYZ uses her Disengage skill at the start of her turn if she is not Engaged with her target."
   },
   "Echo the Thief": {
     "Type": "Agent",
@@ -85,7 +85,7 @@
     "Position": "Thief",
     "Melee Weapon": "Dagger",
     "Ranged Weapon": "",
-    "Event": "**Immediately:** Place Echo 1\" away from the triggering unit. She is holding the Treasure. She immediately makes a Move action toward the nearest board edge.\n \n**Neutral Turn:** Echo attempts to Retreat.\n \n**Other Behaviours:** Echo will attempt any Agility Check that shortens the path to the nearest board edge. Echo uses her Disengage skill at the start of her turn if she is Engaged."
+    "Event": "**Disposition:** Echo is Neutral to everyone.\n \n**Immediately:** Place Echo 1\" away from the triggering unit. She is holding the Treasure. She immediately makes a Move action toward the nearest board edge.\n \n**Neutral Turn:** Echo attempts to Retreat.\n \n**Other Behaviours:** Echo will attempt any Agility Check that shortens the path to the nearest board edge. Echo uses her Disengage skill at the start of her turn if she is Engaged."
   },
   "Filippo the Pit Fighter": {
     "Type": "Agent",
@@ -107,7 +107,7 @@
     "Position": "Pit Fighter",
     "Melee Weapon": "Dual Axes",
     "Ranged Weapon": "",
-    "Event": "**Immediately:** Place the Pit Fighter so that it is Engaged with the triggering unit. The triggering unit counts as having Engaged the Pit Fighter this turn. Give the Pit Fighter the Treasure that the triggering unit was attempting to pick up. If the Pit Fighter was originally a member of the triggering unit's warband, it immediately comes under that warband's control and will return to that warband permanently at the end of the game. The original, neutral Pit Fighter will return to become the new Pit Fighter. If this occurs, ignore the rest of the Event rules.\n \n**Neutral Turn:** The Pit Fighter performs normal actions, targeting the triggering unit. If the triggering unit is Incapacitated, it will Retreat instead.\n \n**Other Behaviours:** No one else can target the Pit Fighter or triggering unit for any purpose, until either unit is Incapacitated."
+    "Event": "**Disposition:** The Pit Fighter is Hostile to the triggering unit.\n \n**Immediately:** Place the Pit Fighter so that it is Engaged with the triggering unit. The triggering unit counts as having Engaged the Pit Fighter this turn. The Pit Fighter is holding the Treasure. If the Pit Fighter was originally a member of the triggering unit's warband, it immediately comes under that warband's control and will return to that warband permanently at the end of the game. The original, neutral Pit Fighter will return to become the new Pit Fighter. If this occurs, ignore the rest of the Event rules.\n \n**Neutral Turn:** The Pit Fighter performs normal actions, targeting the triggering unit. If the triggering unit is Incapacitated, it will Retreat instead.\n \n**Other Behaviours:** No one else can target the Pit Fighter or triggering unit for any purpose, until either unit is Incapacitated."
   },
   "Camfak the Blight Prophet": {
     "Type": "Agent",
@@ -129,7 +129,7 @@
     "Position": "Blight Prophet",
     "Melee Weapon": "Dual Swords",
     "Ranged Weapon": "",
-    "Event": "**Immediately:** Camfak and his Henchmen are hostile to everyone. Place Camfak 1\" away from the triggering unit, with two Chaos Henchmen, one on each side of him. The triggering unit must make a Morale Check. If it fails, it contracts the Blight.\n \n**Neutral Turn:** Camfak and his Henchmen act as normal.\n \n**Other Behaviours:** Willing to ally with Chaos warbands."
+    "Event": "**Disposition:** Camfak and his Henchmen are Hostile to everyone, but are willing to Ally with Chaos warbands.\n \n**Immediately:** Place Camfak 1\" away from the triggering unit. Place two Chaos Henchmen, one on either side of him. The triggering unit must make a Morale Check. If it fails, it contracts the Blight.\n \n**Neutral Turn:** Camfak and his Henchmen peform normal actions."
   },
   "Hirkel the Archbishop": {
     "Type": "Agent",
@@ -151,7 +151,7 @@
     "Position": "Archbishop",
     "Melee Weapon": "Hammer and Shield",
     "Ranged Weapon": "",
-    "Event": "**Immediately:** Hirkel and his henchmen are hostile to Chaos warbands. Place Hirkel 1\" away from the triggering unit, with two Law Henchmen, one on either side of him.\n \n**Neutral Turn:** Hirkel performs normal actions. Once per game, if Hirkel ends his move within 5\" of a unit with the Blight, he makes a Morale Check. On a success, the unit is cured of the Blight. Retreats if there are no enemies and no units with Blight (or he has already attempted to cure someone).\n \n**Other Behaviours:** Willing to ally with Law warbands."
+    "Event": "**Disposition:** Hirkel and his Henchmen are Hostile to Chaos warbands and are willing to Ally with Law warbands.\n \n**Immediately:** Place Hirkel 1\" away from the triggering unit. Place two Law Henchmen, one on either side of him.\n \n**Neutral Turn:** Hirkel and his Henchmen performs normal actions. They Retreat if there are no enemies.\n \n**Other Behaviours:** Once per game, if Hirkel starts his turn within 5\" of a unit with the Blight, he makes a Morale Check. On a success, the unit is cured of the Blight."
   },
   "Ivaran the Rebel Captain": {
     "Type": "Agent",
@@ -173,7 +173,7 @@
     "Position": "Rebel Captain",
     "Melee Weapon": "Spear",
     "Ranged Weapon": "Bow",
-    "Event": "**Immediately:** Ivaran is hostile to Law warbands. Place Ivaran 1\" away from the triggering unit, with one Chaos Henchmen either side of him. He is holding the Treasure.\n \n**Neutral Turn:** Ivaran performs normal actions.\n \n**Other Behaviours:** Willing to ally with Chaos and Underworld warbands."
+    "Event": "**Disposition:** Ivaran and his Henchmen are Hostile to Law warbands and are willing to Ally with non-Law warbands.\n \n**Immediately:** Place Ivaran 1\" away from the triggering unit Place two Chaos Henchmen, one on either side of him. He is holding the Treasure.\n \n**Neutral Turn:** Ivaran and his Henchmen performs normal actions. They Retreat if there are no enemies."
   },
   "Ember the Shady Merchant": {
     "Type": "Agent",
@@ -195,7 +195,7 @@
     "Position": "Shady Merchant",
     "Melee Weapon": "Dagger",
     "Ranged Weapon": "Crossbow",
-    "Event": "**Immediately:** Place Ember 1\" away from the triggering unit, with one Underworld Henchmen either side of him. He is holding the Treasure.\n \n**Neutral Turn:** If either of the henchmen start their turn next to a Treasure, they pick it up, even if another unit is contesting it. Then Ember and his Henchmen move towards the nearest unclaimed Treasure. If they become hostile, they instead act as normal.\n \n**Other Behaviours:** If Ember and his henchmen each have a Treasure (or are Incapacitated), they will attempt to Retreat, even if they are hostile. If one of Ember's henchmen does not have a Treasure and a non-hostile unit from an Underworld warband ends its Move within 2\" of them, it can give up the Treasure it's holding to that henchman. If the unit does so, that unit's warband can roll on the Loot table at the end of the game."
+    "Event": "**Disposition:** Ember and his Henchmen are Neutral to everyone.\n \n**Immediately:** Place Ember 1\" away from the triggering unit. Place two Underworld Henchmen, one on either side of him. He is holding the Treasure.\n \n**Neutral Turn:** If either of the henchmen start their turn next to a Treasure, they pick it up, even if another unit is contesting it. Then Ember and his Henchmen move towards the nearest unclaimed Treasure. If they become Hostile to anyone, Ember will attempt to Retreat and the Underworld Henchman will instead perform normal actions.\n \n**Other Behaviours:** If Ember and his henchmen each have a Treasure (or are Incapacitated), they will instead all attempt to Retreat, even if they are hostile. If one of Ember's henchmen does not have a Treasure and a non-hostile unit from an Underworld warband ends its Move within 2\" of them, it can give up the Treasure it's holding to that henchman. If the unit does so, that unit's warband can make a roll on the Loot table at the end of the game."
   },
   "XYZ the Sellsword": {
     "Type": "Agent",
@@ -217,7 +217,7 @@
     "Position": "Sellsword",
     "Melee Weapon": "Great Hammer",
     "Ranged Weapon": "",
-    "Event": "**Immediately:** Place XYZ 1\" away from the triggering unit. He is holding the Treasure. He is an ally to the warband of the triggering unit and is hostile to all other warbands.\n \n**Neutral Turn:** XYZ performs normal actions.\n \n**Other Behaviours:** If an enemy unit ends its Move within 2\" of XYZ, it can give up the Treasure it's holding to XYZ. If the unit does so, that treasure is removed from the game. XYZ is now an ally to that unit's warband and is hostile to all other warbands."
+    "Event": "**Disposition:** XYZ is Neutral to the warband of the triggering unit and is Hostile to all other warbands, but is willing to Ally with any warband at any time. Warbands can make one attempt per turn to Ally with him, rather than once per game.\n \n**Immediately:** Place XYZ 1\" away from the triggering unit. He is holding the Treasure. \n \n**Neutral Turn:** XYZ performs normal actions."
   },
   "XYZ the Grand Inquisitor": {
     "Type": "Agent",
@@ -239,7 +239,7 @@
     "Position": "Grand Inquisitor",
     "Melee Weapon": "Great Sword",
     "Ranged Weapon": "",
-    "Event": "**Immediately:** XYZ and his henchmen are hostile to everyone. Place XYZ on the nearest board edge with two Law henchmen, one on either side of him.\n \n**Neutral Turn:** XYZ and his henchmen perform normal actions.\n \n**Other Behaviours:** XYZ does not target units that are not Arcane Casters or carrying Treasure, unless there are no other targets. Willing to ally with any warband."
+    "Event": "**Disposition:** XYZ and his Henchmen are Hostile to non-Law warbands. If there are only Law warbands in the game, they are instead Hostile to everyone. They are willing to Ally with any warband.\n \n**Immediately:** Place XYZ on the nearest board edge. Place two Law henchmen, one on either side of him.\n \n**Neutral Turn:** XYZ and his henchmen perform normal actions.\n \n**Other Behaviours:** XYZ does not target units that are not Arcane Casters or carrying Treasure, unless there are no other targets."
   },
   "Skagneal the Folk Hero": {
     "Type": "Agent",
@@ -261,7 +261,7 @@
     "Position": "Folk Hero",
     "Melee Weapon": "Sword and Shield",
     "Ranged Weapon": "",
-    "Event": "**Immediately:** Place Skagneal 1\" away from the triggering unit. He is holding the Treasure. Place two Peasants around him (use the Peasant stat block from the Inquisitors warband) and give them each a Treasure.\n \n**Neutral Turn:** Skagneal and the Peasants attempt to Retreat. If they have become hostile to anyone, the Peasants continue to Retreat, but Skagneal performs normal actions instead.\n \n**Other Behaviours:** None."
+    "Event": "**Disposition:** Skagneal and the Peasants are Neutral to everyone.\n \n**Immediately:** Place Skagneal 1\" away from the triggering unit. He is holding the Treasure. Place two Peasants (use the Peasant stat block from the Inquisitors warband), one on either side of him and give them each a Treasure.\n \n**Neutral Turn:** Skagneal and the Peasants Retreat. If they have become hostile to anyone, the Peasants continue to Retreat, but Skagneal performs normal actions instead."
   },
   "Roland the Wandering Knight": {
     "Type": "Agent",
@@ -283,7 +283,7 @@
     "Position": "Wandering Knight",
     "Melee Weapon": "Pike",
     "Ranged Weapon": "",
-    "Event": "**Immediately:** Place Roland in the middle of a random board edge.\n \n**Neutral Turn:** Roland moves towards the middle of the opposite board edge from where he started. If he ends the move within 10\" of a unit, that unit must make a Morale Check. If the unit fails, Roland becomes hostile toward that unit's warband and performs normal actions from this point onward. This check only needs to be made once per warband. Law warbands have Advantage on this Morale Check.\n \n**Other Behaviours:** None."
+    "Event": "**Disposition:** Roland is Neutral to everyone.\n \n**Immediately:** Place Roland in the middle of a random board edge.\n \n**Neutral Turn:** Roland moves towards the middle of the opposite board edge from where he started. If he ends the move within 10\" of a unit, that unit must make a Morale Check. If the unit fails, Roland becomes hostile toward that unit's warband and performs normal actions from this point onward. This check only needs to be made once per warband. Law warbands have Advantage on this Morale Check."
   },
   "Kravix the Demon Lord": {
     "Type": "Agent",
@@ -305,7 +305,7 @@
     "Position": "Lord",
     "Melee Weapon": "nothing, since it needs no weapons like puny mortals.",
     "Ranged Weapon": "",
-    "Event": "**Immediately:** Kravix is hostile to all warbands. Place Kravix 1\" away from the triggering unit.\n \n**Neutral Turn:** Kravix performs normal actions. \n \n**Other Behaviours:** Willing to ally with Chaos warbands, although the 'Temporary Ally' rules will apply if they do (at which point, Kravix becomes hostile to all warbands again)."
+    "Event": "**Disposition:** Kravix is Hostile to everyone. It is willing to Ally with Chaos warbands, although the 'Temporary Ally' rules will apply as if they were allies.\n \n**Immediately:** Place Kravix 1\" away from the triggering unit.\n \n**Neutral Turn:** Kravix performs normal actions."
   },
   "Acolyte the Necromancer": {
     "Type": "Agent",
@@ -327,7 +327,7 @@
     "Position": "Necromancer",
     "Melee Weapon": "Dagger",
     "Ranged Weapon": "",
-    "Event": "**Immediately:** Acolyte and his Zombies are hostile to everyone. Place Acolyte 1\" away from the triggering unit. He is holding the Treasure. Place two Zombies, one on either side of him. Acolyte immediately moves so that he maximises the distance between himself and the closest enemy.\n \n**Neutral Turn:** All Zombies act as normal. If there are less than three Zombies on the board, a Zombie is placed next to Acolyte. Finally, Acolyte moves so that he maximises the distance between himself and the closest enemy.\n \n**Other Behaviours:** Willing to ally with Underworld warbands."
+    "Event": "**Disposition:** Acolyte and his Zombies are Hostile to everyone, but are willing to Ally with Underworld warbands.\n \n**Immediately:** Place Acolyte 1\" away from the triggering unit. He is holding the Treasure. Place two Zombies, one on either side of him. Acolyte immediately moves so that he maximises the distance between himself and the closest enemy.\n \n**Neutral Turn:** All Zombies act as normal. If there are less than three Zombies on the board, a Zombie is placed next to Acolyte. Finally, Acolyte moves so that he maximises the distance between himself and the closest enemy."
   },
   "XYZ the Berserker": {
     "Type": "Agent",
@@ -349,7 +349,7 @@
     "Position": "Berserker",
     "Melee Weapon": "Great Axe",
     "Ranged Weapon": "",
-    "Event": "**Immediately:** XYZ is hostile to everyone. Place XYZ at the nearest board edge.\n \n**Neutral Turn:** XYZ performs normal actions.\n \n**Other Behaviours:** Willing to ally with Chaos warbands."
+    "Event": "**Disposition:** XYZ is Hostile to everyone, but is willing to Ally with Chaos warbands.\n \n**Immediately:** Place XYZ at the nearest board edge.\n \n**Neutral Turn:** XYZ performs normal actions."
   },
   "Gang Member": {
     "Type": "Henchman",
