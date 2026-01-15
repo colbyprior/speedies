@@ -239,7 +239,7 @@
     "Position": "Grand Inquisitor",
     "Melee Weapon": "Great Sword",
     "Ranged Weapon": "",
-    "Event": "**Disposition:** XYZ and his Henchmen are Hostile to non-Law warbands. If there are only Law warbands in the game, they are instead Hostile to everyone. They are willing to Ally with any warband.\n \n**Immediately:** Place XYZ on the nearest board edge. Place two Law henchmen, one on either side of him.\n \n**Neutral Turn:** XYZ and his henchmen perform normal actions.\n \n**Other Behaviours:** XYZ does not target units that are not Arcane Casters or carrying Treasure, unless there are no other targets."
+    "Event": "**Disposition:** XYZ and his Henchmen are Hostile to non-Law warbands. If there are only Law warbands in the game, they are instead Hostile to everyone. They are willing to Ally with any warband.\n \n**Immediately:** Place XYZ on the nearest board edge. Place two Law henchmen, one on either side of him.\n \n**Neutral Turn:** XYZ and his henchmen perform normal actions.\n \n**Other Behaviours:** XYZ and his Henchmen do not target units that are not Arcane Casters or carrying Treasure, unless there are no such targets."
   },
   "Skagneal the Folk Hero": {
     "Type": "Agent",
@@ -261,7 +261,7 @@
     "Position": "Folk Hero",
     "Melee Weapon": "Sword and Shield",
     "Ranged Weapon": "",
-    "Event": "**Disposition:** Skagneal and the Peasants are Neutral to everyone.\n \n**Immediately:** Place Skagneal 1\" away from the triggering unit. He is holding the Treasure. Place two Peasants (use the Peasant stat block from the Inquisitors warband), one on either side of him and give them each a Treasure.\n \n**Neutral Turn:** Skagneal and the Peasants Retreat. If they have become hostile to anyone, the Peasants continue to Retreat, but Skagneal performs normal actions instead."
+    "Event": "**Disposition:** Skagneal and the Peasants are Neutral to everyone.\n \n**Immediately:** Place Skagneal 1\" away from the triggering unit. He is holding the Treasure. Place two Peasants (use the Peasant stat block from the Inquisitors warband), one on either side of him and give them each a Treasure.\n \n**Neutral Turn:** Skagneal and the Peasants Retreat. If they become hostile to anyone, the Peasants continue to Retreat, but Skagneal performs normal actions instead."
   },
   "Roland the Wandering Knight": {
     "Type": "Agent",
@@ -283,7 +283,7 @@
     "Position": "Wandering Knight",
     "Melee Weapon": "Pike",
     "Ranged Weapon": "",
-    "Event": "**Disposition:** Roland is Neutral to everyone.\n \n**Immediately:** Place Roland in the middle of a random board edge.\n \n**Neutral Turn:** Roland moves towards the middle of the opposite board edge from where he started. If he ends the move within 10\" of a unit, that unit must make a Morale Check. If the unit fails, Roland becomes hostile toward that unit's warband and performs normal actions from this point onward. This check only needs to be made once per warband. Law warbands have Advantage on this Morale Check."
+    "Event": "**Disposition:** Roland is Neutral to everyone.\n \n**Immediately:** Place Roland in the middle of a random board edge.\n \n**Neutral Turn:** Roland moves towards the middle of the opposite board edge from where he started. If he ends the move within 10\" of a unit, that unit must make a Morale Check. If the unit fails, Roland becomes hostile toward that unit's warband and performs normal actions from this point onward. This check only needs to be made once per warband. Law warbands have Advantage on this Morale Check.\n \n**Other Behaviours:** If Roland reaches the other side of the board, he is removed from the game."
   },
   "Kravix the Demon Lord": {
     "Type": "Agent",
