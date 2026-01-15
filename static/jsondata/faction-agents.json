@@ -65,7 +65,7 @@
     "Ranged Weapon": "Blowpipe",
     "Event": "**Immediately:** Place XYZ on the nearest board edge. The triggering unit is the target for the purposes of the 'Bounty Hunter' skill.\n \n**Neutral Turn:** XYZ moves toward the target, Engaging if possible, otherwise making a Ranged Attack if possible. Once her target is Incapacitated, she will attempt to Retreat.\n \n**Other Behaviours:** XYZ uses her Disengage skill at the start of her turn if she is not Engaged with her target."
   },
-  "XYZ the Thief": {
+  "Echo the Thief": {
     "Type": "Agent",
     "Faction": "Underworld",
 	"Move": "7",
@@ -80,12 +80,12 @@
 	"Morale": "7",
     "Skills": "Leap, Agile, Thief, Disengage",
     "Faction Support Cost": "35",
-    "About": "Frustratingly agile, XYZ is always one step ahead of everyone else. A thief notorious amongst the nobility, she is the mastermind behind numerous high-profile heists.",
-    "Species": "Elvish",
+    "About": "Frustratingly agile, Echo is always one step ahead of everyone else. A thief notorious amongst the nobility, she is the mastermind behind numerous high-profile heists.",
+    "Species": "Elf",
     "Position": "Thief",
     "Melee Weapon": "Dagger",
     "Ranged Weapon": "",
-    "Event": "**Immediately:** Place XYZ 1\" away from the triggering unit. She is holding the Treasure. She immediately makes a Move action toward the nearest board edge.\n \n**Neutral Turn:** XYZ attempts to Retreat.\n \n**Other Behaviours:** XYZ will attempt any Agility Check that shortens the path to the nearest board edge. XYZ uses her Disengage skill at the start of her turn if she is Engaged."
+    "Event": "**Immediately:** Place Echo 1\" away from the triggering unit. She is holding the Treasure. She immediately makes a Move action toward the nearest board edge.\n \n**Neutral Turn:** Echo attempts to Retreat.\n \n**Other Behaviours:** Echo will attempt any Agility Check that shortens the path to the nearest board edge. Echo uses her Disengage skill at the start of her turn if she is Engaged."
   },
   "Filippo the Pit Fighter": {
     "Type": "Agent",
@@ -109,7 +109,7 @@
     "Ranged Weapon": "",
     "Event": "#### If the Pit Fighter was originally a member of the triggering unit's warband:\n \n**Immediately:** You found your old ally in the Pits. Time to break them out! Place the Pit Fighter 1\" away from the triggering unit. Place four Fans (use the Peasant stat block from the Inquisitors warband) in a rough circle surrounding the Pit Fighter and the triggering unit. The Pit Fighter immediately comes under the control of the triggering unit's warband and the Fans are immediately hostile to that warband.\n \n**Neutral Turn:** The Fans act as normal.\n \n**Other Behaviours:** At the end of the game, the Pit Fighter returns to its original warband. The original, neutral Pit Fighter returns to become the new Pit Fighter.\n \n#### Otherwise:\n \n**Immediately:** Your unit stumbled into a Pit Fight! Place the Pit Fighter 1\" away from the triggering unit. Give it an additional Treasure (in addition to the one that the triggering unit picked up). Place four Fans (use the Peasant stat block from the Inquisitors warband) in a rough circle surrounding the Pit Fighter and the triggering unit.\n \n**Neutral Turn:** The Pit Fighter performs normal actions, targeting the triggering unit. The Fans do nothing, unless they have become hostile to someone (then they act as normal).\n \n**Other Behaviours:** If the triggering unit moves away from the Pit Fighter before the Pit Fighter is Incapacitated, the Pit Fighter and Fans become hostile toward the warband of that unit.\n \n**End of the Pit Fight:** If the Pit Fighter Incapacitates the triggering unit, they do nothing from then on (unless they have become hostile to a warband, then they target that warband). At the end of the game, if the triggering unit was a hero, it becomes the Pit Fighter, otherwise it dies. If the triggering unit Incapacitates the Pit Fighter, the Fans come under the triggering player's control for the rest of the battle."
   },
-  "XYZ the Blight Prophet": {
+  "Camfak the Blight Prophet": {
     "Type": "Agent",
     "Faction": "Chaos",
     "Move": "6",
@@ -124,12 +124,12 @@
     "Morale": "7",
     "Skills": "Spread Blight (Major), Blight for the Blight God",
     "Faction Support Cost": "35",
-    "About": "This self-proclaimed 'Prophet of the Blight God' has supposedly been sent by greater powers to spread the gift of the Blight to all who will listen, and to all who won't. Blah's sermons, and those of his followers, bring a sense of foreboding to all those unlucky enough to hear them.",
+    "About": "This self-proclaimed 'Prophet of the Blight God' has supposedly been sent by greater powers to spread the gift of the Blight to all who will listen, and to all who won't. Camfak's sermons, and those of his followers, bring a sense of foreboding to all unlucky enough to hear them.",
     "Species": "Human",
     "Position": "Blight Prophet",
     "Melee Weapon": "Dual Swords",
     "Ranged Weapon": "",
-    "Event": "**Immediately:** XYZ and his Henchmen are hostile to everyone. Place XYZ 1\" away from the triggering unit, with two Chaos Henchmen, one on each side of him. The triggering unit must make a Morale Check. If it fails, it contracts the Blight.\n \n**Neutral Turn:** XYZ and his Henchmen act as normal.\n \n**Other Behaviours:** Willing to ally with Chaos warbands."
+    "Event": "**Immediately:** Camfak and his Henchmen are hostile to everyone. Place Camfak 1\" away from the triggering unit, with two Chaos Henchmen, one on each side of him. The triggering unit must make a Morale Check. If it fails, it contracts the Blight.\n \n**Neutral Turn:** Camfak and his Henchmen act as normal.\n \n**Other Behaviours:** Willing to ally with Chaos warbands."
   },
   "Hirkel the Archbishop": {
     "Type": "Agent",
@@ -307,7 +307,7 @@
     "Ranged Weapon": "",
     "Event": "**Immediately:** Kravix is hostile to all warbands. Place Kravix 1\" away from the triggering unit.\n \n**Neutral Turn:** Kravix performs normal actions. \n \n**Other Behaviours:** Willing to ally with Chaos warbands, although the 'Temporary Ally' rules will apply if they do (at which point, Kravix becomes hostile to all warbands again)."
   },
-  "XYZ the Necromancer": {
+  "Acolyte the Necromancer": {
     "Type": "Agent",
     "Faction": "Underworld",
     "Move": "6",
@@ -327,7 +327,7 @@
     "Position": "Necromancer",
     "Melee Weapon": "Dagger",
     "Ranged Weapon": "",
-    "Event": "**Immediately:** XYZ and his Zombies are hostile to everyone. Place XYZ 1\" away from the triggering unit. He is holding the Treasure. Place two Zombies, one on either side of him. XYZ immediately moves so that he maximises the distance between himself and the closest enemy.\n \n**Neutral Turn:** All Zombies act as normal. A Zombie is then summoned next to XYZ. Finally, XYZ moves so that he maximises the distance between himself and the closest enemy.\n \n**Other Behaviours:** Willing to ally with Underworld warbands."
+    "Event": "**Immediately:** Acolyte and his Zombies are hostile to everyone. Place Acolyte 1\" away from the triggering unit. He is holding the Treasure. Place two Zombies, one on either side of him. Acolyte immediately moves so that he maximises the distance between himself and the closest enemy.\n \n**Neutral Turn:** All Zombies act as normal. A Zombie is then summoned next to Acolyte. Finally, Acolyte moves so that he maximises the distance between himself and the closest enemy.\n \n**Other Behaviours:** Willing to ally with Underworld warbands."
   },
   "XYZ the Berserker": {
     "Type": "Agent",
