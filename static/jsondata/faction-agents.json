@@ -107,7 +107,7 @@
     "Position": "Pit Fighter",
     "Melee Weapon": "Dual Axes",
     "Ranged Weapon": "",
-    "Event": "#### If the Pit Fighter was originally a member of the triggering unit's warband:\n \n**Immediately:** You found your old ally in the Pits. Time to break them out! Place the Pit Fighter 1\" away from the triggering unit. Place four Fans (use the Peasant stat block from the Inquisitors warband) in a rough circle surrounding the Pit Fighter and the triggering unit. The Pit Fighter immediately comes under the control of the triggering unit's warband and the Fans are immediately hostile to that warband.\n \n**Neutral Turn:** The Fans act as normal.\n \n**Other Behaviours:** At the end of the game, the Pit Fighter returns to its original warband. The original, neutral Pit Fighter returns to become the new Pit Fighter.\n \n#### Otherwise:\n \n**Immediately:** Your unit stumbled into a Pit Fight! Place the Pit Fighter 1\" away from the triggering unit. Give it an additional Treasure (in addition to the one that the triggering unit picked up). Place four Fans (use the Peasant stat block from the Inquisitors warband) in a rough circle surrounding the Pit Fighter and the triggering unit.\n \n**Neutral Turn:** The Pit Fighter performs normal actions, targeting the triggering unit. The Fans do nothing, unless they have become hostile to someone (then they act as normal).\n \n**Other Behaviours:** If the triggering unit moves away from the Pit Fighter before the Pit Fighter is Incapacitated, the Pit Fighter and Fans become hostile toward the warband of that unit.\n \n**End of the Pit Fight:** If the Pit Fighter Incapacitates the triggering unit, they do nothing from then on (unless they have become hostile to a warband, then they target that warband). At the end of the game, if the triggering unit was a hero, it becomes the Pit Fighter, otherwise it dies. If the triggering unit Incapacitates the Pit Fighter, the Fans come under the triggering player's control for the rest of the battle."
+    "Event": "**Immediately:** Place the Pit Fighter so that it is Engaged with the triggering unit. The triggering unit counts as having Engaged the Pit Fighter this turn. Give the Pit Fighter the Treasure that the triggering unit was attempting to pick up. If the Pit Fighter was originally a member of the triggering unit's warband, it immediately comes under that warband's control and will return to that warband permanently at the end of the game. The original, neutral Pit Fighter will return to become the new Pit Fighter. If this occurs, ignore the rest of the Event rules.\n \n**Neutral Turn:** The Pit Fighter performs normal actions, targeting the triggering unit. If the triggering unit is Incapacitated, it will Retreat instead.\n \n**Other Behaviours:** No one else can target the Pit Fighter or triggering unit for any purpose, until either unit is Incapacitated."
   },
   "Camfak the Blight Prophet": {
     "Type": "Agent",
@@ -261,7 +261,7 @@
     "Position": "Folk Hero",
     "Melee Weapon": "Sword and Shield",
     "Ranged Weapon": "",
-    "Event": "**Immediately:** Place Skagneal 1\" away from the triggering unit. He is holding the Treasure. Place three Peasants around him (use the Peasant stat block from the Inquisitors warband) and give them each a Treasure.\n \n**Neutral Turn:** Skagneal and the Peasants attempt to Retreat. If they have become hostile to anyone, the Peasants continue to Retreat, but Skagneal performs normal actions instead.\n \n**Other Behaviours:** None."
+    "Event": "**Immediately:** Place Skagneal 1\" away from the triggering unit. He is holding the Treasure. Place two Peasants around him (use the Peasant stat block from the Inquisitors warband) and give them each a Treasure.\n \n**Neutral Turn:** Skagneal and the Peasants attempt to Retreat. If they have become hostile to anyone, the Peasants continue to Retreat, but Skagneal performs normal actions instead.\n \n**Other Behaviours:** None."
   },
   "Roland the Wandering Knight": {
     "Type": "Agent",
@@ -327,7 +327,7 @@
     "Position": "Necromancer",
     "Melee Weapon": "Dagger",
     "Ranged Weapon": "",
-    "Event": "**Immediately:** Acolyte and his Zombies are hostile to everyone. Place Acolyte 1\" away from the triggering unit. He is holding the Treasure. Place two Zombies, one on either side of him. Acolyte immediately moves so that he maximises the distance between himself and the closest enemy.\n \n**Neutral Turn:** All Zombies act as normal. A Zombie is then summoned next to Acolyte. Finally, Acolyte moves so that he maximises the distance between himself and the closest enemy.\n \n**Other Behaviours:** Willing to ally with Underworld warbands."
+    "Event": "**Immediately:** Acolyte and his Zombies are hostile to everyone. Place Acolyte 1\" away from the triggering unit. He is holding the Treasure. Place two Zombies, one on either side of him. Acolyte immediately moves so that he maximises the distance between himself and the closest enemy.\n \n**Neutral Turn:** All Zombies act as normal. If there are less than three Zombies on the board, a Zombie is placed next to Acolyte. Finally, Acolyte moves so that he maximises the distance between himself and the closest enemy.\n \n**Other Behaviours:** Willing to ally with Underworld warbands."
   },
   "XYZ the Berserker": {
     "Type": "Agent",
