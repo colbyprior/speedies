@@ -137,7 +137,7 @@
   "Defensive Stance": { 
     "Name": "Defensive Stance", 
     "Type": "Defence", 
-    "Description": "Enemies don't get to automatically attack first in Melee on the turn they Engage. Instead, this unit makes an Agility Check. If it succeeds, it instead attacks first."
+    "Description": "Enemies don't automatically attack first in Melee on the turn they Engage this unit. Instead, unless this unit is already Engaged, it makes an Agility Check. If it succeeds, it instead attacks before all Engaged enemies this turn."
   },
   "Protector": { 
     "Name": "Protector", 
