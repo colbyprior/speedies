@@ -39,7 +39,7 @@
     "Name": "Divine Fervour", 
     "School": "Divine Magic",
     "Check": "11",
-    "Description": "Reduce any Injury results against allies within 5\" of the caster (including themselves) by 3 until the end of the turn."
+    "Description": "Reduce any Injury results against allies within 5\" of the caster (including themselves) by 3 until the start of your next turn."
   },
   "Holy Smite": {
     "Name": "Holy Smite", 
@@ -57,7 +57,7 @@
     "Name": "Control Earth", 
     "School": "Life Magic",
     "Check": "10",
-    "Description": "Choose a point within 10\". Place a piece of natural terrain (a wood, mesa, etc.) at that point. The terrain cannot be larger than 3\" in any dimension. Some leniency should be made if it fits the spirit of the spell. The terrain must fit within the space. If this is cast on a unit, move that unit to the closest space that it can be safely placed (this may be within or on the new terrain)."
+    "Description": "Ongoing. Choose a point within 10\". Place a solid platform measuring roughly 2\" by 2\" by 3\" at that point (in any orientation). The terrain must fit within the space. If this is cast on a unit, move that unit directly up to the top of the platform. When the spell ends, the platform slowly recedes and units are placed directly down, back on the ground unharmed."
   },
    "Root": {
     "Name": "Root", 
@@ -93,7 +93,7 @@
     "Name": "Lure",
     "School": "Vampiric Magic",
     "Check": "12",
-    "Description": "Basic. Target one unit you can see within 15\". The target immediately moves towards the Caster by the most direct path, including by Jumping Down. If the target is able to reach the Caster, it is placed in base contact and the Caster is considered to have Engaged it."
+    "Description": "Basic. Target one unit you can see within 15\" that is not Engaged. The target immediately moves towards the Caster by the most direct path, including by Jumping Down. If the target is able to reach the Caster, it is placed in base contact and the Caster is considered to have Engaged it."
   },
   "Blight Bolt": {
     "Name": "Blight Bolt",

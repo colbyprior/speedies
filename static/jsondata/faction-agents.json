@@ -41,7 +41,7 @@
     "Position": "Count",
     "Melee Weapon": "Sword",
     "Ranged Weapon": "",
-    "Event": "**Disposition:**XYZ is Hostile to everyone, but willing to Ally with Chaos warbands.\n \n**Immediately:** Place XYZ 1\" away from the triggering unit.\n \n**Neutral Turn:** XYZ performs normal actions.\n \n**Other Behaviours:** XYZ does not target Large, Undead, and Animal units."
+    "Event": "**Disposition:** XYZ is Hostile to everyone, but willing to Ally with Chaos warbands.\n \n**Immediately:** Place XYZ 1\" away from the triggering unit.\n \n**Neutral Turn:** XYZ performs normal actions.\n \n**Other Behaviours:** XYZ does not target Large, Undead, and Animal units."
   },
   "XYZ the Bounty Hunter": {
     "Type": "Agent",
@@ -98,7 +98,7 @@
     "Defense": "16",
     "Wounds": "1",
     "Agility": "10",
-    "Attacks": "3",
+    "Attacks": "2",
     "Morale": "7",
     "Skills": "Pit Fighter",
     "Faction Support Cost": "-",
@@ -151,7 +151,7 @@
     "Position": "Archbishop",
     "Melee Weapon": "Hammer and Shield",
     "Ranged Weapon": "",
-    "Event": "**Disposition:** Hirkel and his Henchmen are Hostile to Chaos warbands and are willing to Ally with Law warbands.\n \n**Immediately:** Place Hirkel 1\" away from the triggering unit. Place two Law Henchmen, one on either side of him.\n \n**Neutral Turn:** Hirkel and his Henchmen performs normal actions. They Retreat if there are no enemies.\n \n**Other Behaviours:** Once per game, if Hirkel starts his turn within 5\" of a unit with the Blight, he makes a Morale Check. On a success, the unit is cured of the Blight."
+    "Event": "**Disposition:** Hirkel is Hostile to Chaos warbands and is willing to Ally with Law warbands.\n \n**Immediately:** Place Hirkel 1\" away from the triggering unit.\n \n**Neutral Turn:** Hirkel performs normal actions. He Retreats if there are no enemies.\n \n**Other Behaviours:** Once per game, if Hirkel starts his turn within 5\" of a unit with the Blight, he makes a Morale Check. On a success, the unit is cured of the Blight."
   },
   "Ivaran the Rebel Captain": {
     "Type": "Agent",
@@ -195,7 +195,7 @@
     "Position": "Shady Merchant",
     "Melee Weapon": "Dagger",
     "Ranged Weapon": "Crossbow",
-    "Event": "**Disposition:** Ember and his Henchmen are Neutral to everyone.\n \n**Immediately:** Place Ember 1\" away from the triggering unit. Place two Underworld Henchmen, one on either side of him. He is holding the Treasure.\n \n**Neutral Turn:** If either of the henchmen start their turn next to a Treasure, they pick it up, even if another unit is contesting it. Then Ember and his Henchmen move towards the nearest unclaimed Treasure. If they become Hostile to anyone, Ember will attempt to Retreat and the Underworld Henchman will instead perform normal actions.\n \n**Other Behaviours:** If Ember and his henchmen each have a Treasure (or are Incapacitated), they will instead all attempt to Retreat, even if they are hostile. If one of Ember's henchmen does not have a Treasure and a non-hostile unit from an Underworld warband ends its Move within 2\" of them, it can give up the Treasure it's holding to that henchman. If the unit does so, that unit's warband can make a roll on the Loot table at the end of the game."
+    "Event": "**Disposition:** Ember is Neutral to everyone.\n \n**Immediately:** Place Ember 1\" away from the triggering unit. He is holding the Treasure.\n \n**Neutral Turn:** If Ember starts his turn next to a Treasure, he picks it up, even if another unit is contesting it. Then Ember moves towards the nearest unclaimed Treasure. If Ember becomes Hostile to anyone, he will Retreat while making Ranged Attacks.\n \n**Other Behaviours:** Ember can hold any number of Treasures (not just one). If a non-hostile unit from an Underworld warband ends its Move within 2\" of Ember, it can give up the Treasure it's holding to him. If the unit does so, that unit's warband can make a roll on the Loot table at the end of the game."
   },
   "XYZ the Sellsword": {
     "Type": "Agent",
@@ -327,7 +327,7 @@
     "Position": "Necromancer",
     "Melee Weapon": "Dagger",
     "Ranged Weapon": "",
-    "Event": "**Disposition:** Acolyte and his Zombies are Hostile to everyone, but are willing to Ally with Underworld warbands.\n \n**Immediately:** Place Acolyte 1\" away from the triggering unit. He is holding the Treasure. Place two Zombies, one on either side of him. Acolyte immediately moves so that he maximises the distance between himself and the closest enemy.\n \n**Neutral Turn:** All Zombies act as normal. If there are less than three Zombies on the board, a Zombie is placed next to Acolyte. Finally, Acolyte moves so that he maximises the distance between himself and the closest enemy."
+    "Event": "**Disposition:** Acolyte and his Zombies are Hostile to everyone, but are willing to Ally with Underworld warbands.\n \n**Immediately:** Place Acolyte 1\" away from the triggering unit. He is holding the Treasure. Place two Zombies, one on either side of him. The Acolyte immediately moves so that he maximises the distance between himself and the target.\n \n**Neutral Turn:** All Zombies act as normal. If there are less than three Zombies on the board, a Zombie is placed next to Acolyte. Finally, Acolyte moves so that he maximises the distance between himself and the target."
   },
   "XYZ the Berserker": {
     "Type": "Agent",

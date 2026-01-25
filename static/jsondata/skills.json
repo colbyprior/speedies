@@ -92,7 +92,7 @@
   "Cleave": { 
     "Name": "Cleave", 
     "Type": "Melee", 
-    "Description": "If this unit Incapacitates an enemy in Melee, they may immediately make another Attack."
+    "Description": "If this unit hits an enemy in Melee and that enemy does not succeed on a Defence Check, this unit may immediately make another Attack."
   },
    "Magebane": { 
     "Name": "Magebane", 
