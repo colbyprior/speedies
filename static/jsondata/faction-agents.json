@@ -21,7 +21,7 @@
     "Ranged Weapon": "",
     "Event": "**Disposition:** Slygar is Hostile to everyone.\n \n**Immediately:** Place Slygar 1\" away from the triggering unit. He makes a Morale Check. On a success, Slygar Engages the unit that picked up the Treasure.\n \n**Neutral Turn:** Slygar performs normal actions. \n \n**Other Behaviours:** Slygar Disengages at the end of every Melee Combat. He makes Morale Checks for Stupor when attempting to Engage."
   },
-  "XYZ the Vampire Count": {
+  "Wilfred the Vampire Count": {
     "Type": "Agent",
     "Faction": "Chaos",
 	"Move": "8",
@@ -41,7 +41,7 @@
     "Position": "Count",
     "Melee Weapon": "Sword",
     "Ranged Weapon": "",
-    "Event": "**Disposition:** XYZ is Hostile to everyone, but willing to Ally with Chaos warbands.\n \n**Immediately:** Place XYZ 1\" away from the triggering unit.\n \n**Neutral Turn:** XYZ performs normal actions.\n \n**Other Behaviours:** XYZ does not target Large, Undead, and Animal units."
+    "Event": "**Disposition:** Wilfred is Hostile to everyone, but willing to Ally with Chaos warbands.\n \n**Immediately:** Place Wilfred 1\" away from the triggering unit.\n \n**Neutral Turn:** Wilfred performs normal actions.\n \n**Other Behaviours:** Wilfred does not target Large, Undead, and Animal units."
   },
   "XYZ the Bounty Hunter": {
     "Type": "Agent",
