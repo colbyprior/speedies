@@ -223,7 +223,7 @@
         },
         "Cavalier": {
             "Aliases": ["Cavalier"],
-            "Melee Weapons": ["Hammer", "Divine Hammer", "Sword", "Pike", "Shield"],
+            "Melee Weapons": ["Hammer", "Divine Hammer", "Sword", "Great Hammer", "Great Sword", "Pike", "Shield"],
             "Ranged Weapons": [],
             "Armour": ["Light Armour", "Heavy Armour"]
         }

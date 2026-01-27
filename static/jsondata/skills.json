@@ -57,7 +57,7 @@
   "Fencing Specialist": {
     "Name": "Fencing Specialist", 
     "Type": "Agility", 
-    "Description": "If this unit is using a one-handed weapon and no Shield, they have Advantage on Melee Checks and Defence Checks in Melee."
+    "Description": "If this unit is using a single one-handed weapon and no Shield, they have Advantage on Melee Checks and Defence Checks in Melee."
   },
   "Great Weapon Specialist": { 
     "Name": "Great Weapon Specialist", 
