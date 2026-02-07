@@ -45,7 +45,7 @@
     "Name": "Holy Smite", 
     "School": "Divine Magic",
     "Check": "14",
-    "Description": "Make an Injury Roll against all enemies within 5\". Add +2 to the Check if the enemy is Undead."
+    "Description": "Make an Injury Roll against all enemies within 4\". Add +2 to the Check if the enemy is Undead."
   },
    "Invisibility": {
     "Name": "Invisibility", 
