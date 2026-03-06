@@ -12,7 +12,7 @@
             "Name": "Vampire Noble",
             "Type": "Leader",
             "Type Cap": "1",
-            "Move": "8",
+            "Move": "7",
             "Piercing": "0",
             "Injury": "0",
             "Melee": "14",
@@ -26,15 +26,14 @@
             "Skills": [
                 "Leader",
                 "Undead",
-				"Fear",
-				"Vampire"
+				"Fear"
             ]
         },
         {
             "Name": "Vampire Seductor",
             "Type": "Hero",
             "Type Cap": "1",
-            "Move": "8",
+            "Move": "7",
             "Piercing": "0",
             "Injury": "0",
             "Melee": "14",
@@ -48,15 +47,14 @@
             "Skills": [
 				"Vampiric Magic",
                 "Undead",
-				"Fear",
-				"Vampire"
+				"Fear"
             ]
         },
 		{
             "Name": "Nosferatu",
             "Type": "Hero",
             "Type Cap": "1",
-            "Move": "8",
+            "Move": "7",
             "Piercing": "0",
             "Injury": "0",
             "Melee": "12",
@@ -70,15 +68,14 @@
             "Skills": [
                 "No Equipment",
                 "Undead",
-				"Fear",
-				"Vampire"
+				"Fear"
             ]
         },
         {
             "Name": "Vampire Spawn",
             "Type": "Hero",
             "Type Cap": "-",
-            "Move": "8",
+            "Move": "7",
             "Piercing": "0",
             "Injury": "0",
             "Melee": "14",
@@ -91,8 +88,7 @@
             "Cost": 85,
             "Skills": [
                 "Undead",
-				"Fear",
-				"Vampire"
+				"Fear"
             ]
         }
     ],
