@@ -1,5 +1,6 @@
 {
     "Name": "Cultists",
+    "Status": "Draft",
     "Complexity": "️★★☆",
     "Max Units": "12",
     "Rout Threshold": "6",
@@ -120,20 +121,9 @@
             "Morale": "12",
             "Cost": 90,
             "Skills": [
-                "Mutation"
             ]
         }
     ],
-    "Promotion Options": {
-        "Brute": {
-            "Stat Ups": "+1 Mel, +1 Def",
-            "Gained Skills": ""
-        },
-        "Seeker": {
-            "Stat Ups": "+1 Mel, +1 Ran, +2 Agi",
-            "Gained Skills": ""
-        }
-    },
     "Available Skills": {
         "Prophet": {
             "Mel": "X",

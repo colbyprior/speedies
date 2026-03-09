@@ -34,11 +34,6 @@
     "Type": "Inherent", 
     "Description": "If this unit ends the game with a Treasure, the player can forgo rolling for Income for this Treasure. If they do so, roll on the Loot table and gain that Loot."
   },
-  "Thief": { 
-    "Name": "Thief", 
-    "Type": "Inherent", 
-    "Description": "This unit can Run while carrying Treasure."
-  },
   "Disengage": { 
     "Name": "Disengage", 
     "Type": "Inherent", 
@@ -122,7 +117,7 @@
   "Thief": { 
     "Name": "Thief", 
     "Type": "Agility", 
-    "Description": "This unit may pick up Treasure, even when it is contested."
+    "Description": "This unit can Run while carrying Treasure. This unit may pick up Treasure, even when it is contested."
   },
   "Animal Handler": { 
     "Name": "Animal Handler", 
@@ -222,7 +217,7 @@
   "War Caster": { 
     "Name": "War Caster", 
     "Type": "Morale", 
-    "Description": "This unit has Advantage on Moracle checks for Ongoing Spells."
+    "Description": "This unit has Advantage on Morale checks for Ongoing Spells."
   },
   "Hoarder": { 
     "Name": "Hoarder", 
@@ -434,9 +429,44 @@
     "Type": "Agility",
     "Description": "This unit may never pick up Treasure tokens. After unit deployment, but before any player takes their first turn, this unit may perform a Move (but not a Run). If multiple players have units with this skill, resolve it in turn order."
   },
-    "Madness": {
+  "Madness": {
     "Name": "Madness",
     "Type": "Inherent",
     "Description": "This unit makes all Morale Checks with Disadvantage."
+  },
+  "Cult Magic": {
+    "Name": "Cult Magic",
+    "Type": "Draft",
+    "Description": "This unit can cast Cult Magic."
+  },
+  "Sorcery": {
+    "Name": "Sorcery",
+    "Type": "Draft",
+    "Description": "This unit can cast Sorcery."
+  },
+  "Rage": {
+    "Name": "Rage",
+    "Type": "Draft",
+    "Description": "After causing a critical melee or ranged attack: Immediately make a melee attack roll against a random unit within 1\", friend or foe."
+  },
+  "Regeneration": {
+    "Name": "Regeneration",
+    "Type": "Draft",
+    "Description": "After a successful defence roll against a melee attack, regain 1 wound."
+  },
+  "Recovery": {
+    "Name": "Recovery",
+    "Type": "Draft",
+    "Description": "In the recovery phase, this unit recovers straight from Stunned to Staggered."
+  },
+  "Runner": {
+    "Name": "Runner",
+    "Type": "Draft",
+    "Description": "This unit has +4 run speed instead of the deafult +3 run speed."
+  },
+  "Whirlwind": {
+    "Name": "Whirlwind",
+    "Type": "Draft",
+    "Description": "When making a melee attack, each unit within 1\" of this unit are also attacked, friend or foe. Roll separately for each attack."
   }
 }

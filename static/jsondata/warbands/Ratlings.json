@@ -1,5 +1,6 @@
 {
     "Name": "Ratlings",
+    "Status": "Released",
     "Complexity": "★☆☆",
     "Max Units": "18",
     "Rout Threshold": "7",
@@ -159,8 +160,6 @@
             ]
         }
     ],
-    "Promotion Options": {
-    },
     "Available Skills": {
         "Guildmaster": {
             "Mel": "X",
