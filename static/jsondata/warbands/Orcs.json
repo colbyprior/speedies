@@ -1,10 +1,10 @@
 {
-    "Name": "Orcs and Goblins",
+    "Name": "Orcs",
     "Status": "Draft",
-    "Complexity": "★★☆",
-    "Max Units": "15",
+    "Complexity": "★☆☆",
+    "Max Units": "12",
     "Rout Threshold": "6",
-    "Play Style": "Strong Orcs with Sneaky Goblins",
+    "Play Style": "Strong Orcs",
     "Preamble": "",
     "Special Rules": {
     },
@@ -30,23 +30,21 @@
             ]
         },
         {
-            "Name": "Goblin Shaman",
+            "Name": "Orc Shaman",
             "Type": "Hero",
             "Type Cap": "1",
-            "Move": "5",
+            "Move": "6",
             "Piercing": "0",
             "Injury": "0",
             "Melee": "14",
             "Ranged": "-",
-            "Defense": "19",
+            "Defense": "14",
             "Wounds": "1",
-            "Agility": "10",
+            "Agility": "12",
             "Attacks": "1",
-            "Morale": "11",
+            "Morale": "10",
             "Cost": 0,
             "Skills": [
-                "Recovery",
-                "Runner",
                 "Rage",
                 "Green Magic"
             ]
@@ -54,7 +52,7 @@
         {
             "Name": "Orc Bonehead",
             "Type": "Hero",
-            "Type Cap": "2",
+            "Type Cap": "-",
             "Move": "6",
             "Piercing": "0",
             "Injury": "0",
@@ -71,51 +69,30 @@
             ]
         },
         {
-            "Name": "Goblin Assassin",
+            "Name": "Orc Barbarian",
             "Type": "Hero",
-            "Type Cap": "-",
-            "Move": "5",
+            "Type Cap": "2",
+            "Move": "6",
             "Piercing": "0",
             "Injury": "0",
             "Melee": "13",
-            "Ranged": "13",
-            "Defense": "19",
+            "Ranged": "-",
+            "Defense": "14",
             "Wounds": "1",
-            "Agility": "8",
+            "Agility": "12",
             "Attacks": "1",
-            "Morale": "11",
+            "Morale": "10",
             "Cost": 0,
             "Skills": [
-                "Recovery",
-                "Runner",
-                "Rage"
+                "Rage",
+                "Whirlwind"
             ]
         }
     ],
     "Henchmen": [
         {
-            "Name": "Goblin",
-            "Type Cap": "-",
-            "Move": "5",
-            "Piercing": "0",
-            "Injury": "0",
-            "Melee": "15",
-            "Ranged": "14",
-            "Defense": "-",
-            "Wounds": "1",
-            "Agility": "10",
-            "Attacks": "1",
-            "Morale": "14",
-            "Cost": 0,
-            "Skills": [
-                "Recovery",
-                "Runner",
-                "Rage"
-            ]
-        },
-        {
             "Name": "Orc Charger",
-            "Type Cap": "4",
+            "Type Cap": "-",
             "Move": "6",
             "Piercing": "0",
             "Injury": "0",
@@ -133,23 +110,40 @@
             ]
         },
         {
-            "Name": "Orc Cleaver",
+            "Name": "Orc Boar Rider",
             "Type Cap": "2",
-            "Move": "6",
+            "Move": "8",
             "Piercing": "0",
             "Injury": "0",
             "Melee": "13",
-            "Ranged": "15",
+            "Ranged": "-",
+            "Defense": "14",
+            "Wounds": "2",
+            "Agility": "12",
+            "Attacks": "1",
+            "Morale": "12",
+            "Cost": 0,
+            "Skills": [
+                "Mounted",
+                "Rage"
+            ]
+        },
+        {
+            "Name": "Orc Sniper",
+            "Type Cap": "4",
+            "Move": "6",
+            "Piercing": "0",
+            "Injury": "0",
+            "Melee": "14",
+            "Ranged": "14",
             "Defense": "14",
             "Wounds": "1",
             "Agility": "12",
             "Attacks": "1",
             "Morale": "12",
-            "Cost": 45,
+            "Cost": 0,
             "Skills": [
-                "Rage",
-                "Berserker",
-                "Whirlwind"
+                "Rage"
             ]
         },
         {
@@ -162,7 +156,7 @@
             "Ranged": "-",
             "Defense": "14",
             "Wounds": "3",
-            "Agility": "14",
+            "Agility": "8",
             "Attacks": "2",
             "Morale": "14",
             "Cost": 0,
@@ -183,7 +177,7 @@
             "Agi": "",
             "Mrl": ""
         },
-        "Goblin Shaman": {
+        "Orc Shaman": {
             "Mel": "",
             "Rng": "",
             "Def": "",
@@ -197,14 +191,7 @@
             "Agi": "",
             "Mrl": ""
         },
-        "Goblin Assassin": {
-            "Mel": "",
-            "Rng": "",
-            "Def": "",
-            "Agi": "",
-            "Mrl": ""
-        },
-        "Goblin": {
+        "Orc Barbarian": {
             "Mel": "",
             "Rng": "",
             "Def": "",
@@ -218,7 +205,14 @@
             "Agi": "",
             "Mrl": ""
         },
-        "Orc Cleaver": {
+        "Orc Board Rider": {
+            "Mel": "",
+            "Rng": "",
+            "Def": "",
+            "Agi": "",
+            "Mrl": ""
+        },
+        "Orc Sniper": {
             "Mel": "",
             "Rng": "",
             "Def": "",
@@ -232,12 +226,6 @@
             "Melee Weapons": ["Dagger", "Hammer", "Sword / Axe", "Spear", "Great Hammer", "Great Sword / Axe", "Pike", "Shield"],
             "Ranged Weapons": ["Bow", "Crossbow"],
             "Armour": ["Light Armour", "Heavy Armour"]
-        },
-        "Goblins": {
-            "Aliases": ["Goblins"],
-            "Melee Weapons": ["Dagger", "Hammer", "Sword / Axe", "Spear", "Shield"],
-            "Ranged Weapons": ["Throwing Stars", "Short Bow"],
-            "Armour": ["Light Armour"]
         }
     }
 }

@@ -444,6 +444,11 @@
     "Type": "Draft",
     "Description": "This unit can cast Sorcery."
   },
+  "Green Magic": {
+    "Name": "Green Magic",
+    "Type": "Draft",
+    "Description": "This unit can cast Green Magic."
+  },
   "Rage": {
     "Name": "Rage",
     "Type": "Draft",
@@ -468,5 +473,20 @@
     "Name": "Whirlwind",
     "Type": "Draft",
     "Description": "When making a melee attack, each unit within 1\" of this unit are also attacked, friend or foe. Roll separately for each attack."
+  },
+  "Animal Leader": {
+    "Name": "Animal Leader",
+    "Type": "Draft",
+    "Description": "Allied, animal units within 5\" of this unit can use this unit's Morale stat for Checks instead of their own."
+  },
+  "Bumbling Movement": {
+    "Name": "Bumbling Movement",
+    "Type": "Draft",
+    "Description": "Decide which direction this unit should move when moving or engaging. Roll 1d20 to determine how far this unit should move: 1-5 move 6, 6-10 move 8, 11-15 move 10, 16-20 move 12. This unit may only move in straight lines. If they touch a enemy units base while moving, immediately stop movement, this unit counts as engaged."
+  },
+  "Goblin Fanatic": {
+    "Name": "Goblin Fanatic",
+    "Type": "Draft",
+    "Description": "**Mushroom Totem:** This unit may only use Ball and Chain.\n\n**Goblin Dog Totem:** This unit can only use Axes. They gain a leap distance of 6\", they roll leap checks with advantage.\n\n**Spider Totem:** This unit may only use Poisoned Daggers. They roll climb checks with advantage."
   }
 }

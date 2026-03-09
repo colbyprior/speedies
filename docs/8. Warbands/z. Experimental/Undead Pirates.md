@@ -1,7 +1,7 @@
 ---
-sidebar_label: 
+sidebar_label: Undead Pirates
 ---
-# 
+# Undead Pirates
 
 
 | Max Units | 15 |
