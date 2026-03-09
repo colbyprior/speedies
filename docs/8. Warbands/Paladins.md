@@ -92,6 +92,8 @@ Cavalier equipment for the unit types: Cavalier
 | Hammer | 0 | 4 | 0 |  | 5 | 1 |
 | Divine Hammer | 0 | 4 | 3 | Advantage against Undead. Only heroes can dual-wield. | 15 | 1 |
 | Sword | 0 | 0 | 3 |  | 5 | 1 |
+| Great Hammer | 5 | 7 | 0 |  | 10 | 2 |
+| Great Sword | 5 | 3 | 3 |  | 10 | 2 |
 | Pike | 7 | 3 | 0 |  | 10 | 2 |
 | Shield | 0 | 0 | 0 | +4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
@@ -109,9 +111,9 @@ This weapon may be used with a Shield.
 | Name | Difficulty | Description |
 | ---- | ------ | ---- |
 | Bless Weapon | 7 | Ongoing. The caster gains Advantage on all Melee Checks. |
-| Divine Fervour | 11 | Reduce any Injury results against allies within 5" of the caster (including themselves) by 3 until the end of the turn. |
-| Holy Smite | 14 | Make an Injury Roll against all enemies within 5". Add +2 to the Check if the enemy is Undead. |
-| Heal | 5 | Any ally within 2" of the caster (including themselves) removes Dazed or Staggered and regains 1 Wound, up to their maximum. |
+| Divine Fervour | 11 | Reduce any Injury results against allies within 5" of the caster (including themselves) by 3 until the start of your next turn. |
+| Holy Smite | 14 | Make an Injury Roll against all enemies within 3". Add +2 to the Check if the enemy is Undead. |
+| Heal | 5 | Any ally within 5" of the caster (including themselves) removes Dazed or Staggered and regains 1 Wound, up to their maximum. |
 
 
 ## Skill Table

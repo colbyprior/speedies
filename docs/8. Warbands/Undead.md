@@ -119,8 +119,8 @@ This weapon may be used with a Shield.
 
 | Name | Difficulty | Description |
 | ---- | ------ | ---- |
-| Raise Dead | 7 | One allied Zombie or Skeleton that was Incapacitated after the end of your last turn immediately returns to the battle, no longer counting towards your Rout Threshold. Place the model within 5" of the Caster. The model cannot be placed such that it is Engaged with an enemy. |
-| Soul Rend | 12 | Basic. Cast Attack. Target one unit you can see within 15" and perform a Cast Attack against them. If this spell Incapacitates the target, create a Zombie where it was Incapacitated. It is an ally to you and will count towards your Rout Threshold. |
+| Raise Dead | 7 | Basic. One allied Zombie or Skeleton that was Incapacitated after the end of your last turn immediately returns to the battle, no longer counting towards your Rout Threshold. Place the model within 5" of the Caster. The model cannot be placed such that it is Engaged with an enemy. |
+| Soul Rend | 12 | Cast Attack. Target one non-Undead, non-Animal unit you can see within 15" and perform a Cast Attack against them. If this spell Incapacitates the target, create a Zombie where it was Incapacitated. It is an ally to you and will count towards your Rout Threshold. |
 | Control Dead | 10 | Choose a point within 5" of the caster. Any allied Zombies or Skeletons within 1.5" of that point may immediately move again up to their Move. If this moves them into base contact with an enemy unit, they count as Engaging. |
 | Lifestealer | 16 | Choose a single unit within 5". The target suffers a Wound (no check required) and is automatically Incapacitated if this is its last Wound. The caster gains an extra Wound for the duration of the battle. This may take the caster's Wounds above its maximum value. This spell does not affect Undead units. |
 | Hex | 13 | Ongoing. Choose a single enemy within 10". The target has Disadvantage on all Checks it makes. |

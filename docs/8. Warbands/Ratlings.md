@@ -38,7 +38,7 @@ This unit is capable of casting Arcane Magic. See the relevant spell list for a 
 ### Vanguard
 *Agility*
 
-After unit deployment, but before any player takes their first turn, this unit may perform a Run. If multiple players have units with this skill, resolve it in turn order. This unit may never pick up Treasure tokens.
+This unit may never pick up Treasure tokens. After unit deployment, but before any player takes their first turn, this unit may perform a Move (but not a Run). If multiple players have units with this skill, resolve it in turn order.
 ### Spread Blight (Minor)
 *Inherent*
 

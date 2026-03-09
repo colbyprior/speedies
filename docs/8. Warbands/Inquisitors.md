@@ -158,9 +158,9 @@ Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately 
 | Name | Difficulty | Description |
 | ---- | ------ | ---- |
 | Bless Weapon | 7 | Ongoing. The caster gains Advantage on all Melee Checks. |
-| Divine Fervour | 11 | Reduce any Injury results against allies within 5" of the caster (including themselves) by 3 until the end of the turn. |
-| Holy Smite | 14 | Make an Injury Roll against all enemies within 5". Add +2 to the Check if the enemy is Undead. |
-| Heal | 5 | Any ally within 2" of the caster (including themselves) removes Dazed or Staggered and regains 1 Wound, up to their maximum. |
+| Divine Fervour | 11 | Reduce any Injury results against allies within 5" of the caster (including themselves) by 3 until the start of your next turn. |
+| Holy Smite | 14 | Make an Injury Roll against all enemies within 3". Add +2 to the Check if the enemy is Undead. |
+| Heal | 5 | Any ally within 5" of the caster (including themselves) removes Dazed or Staggered and regains 1 Wound, up to their maximum. |
 
 
 ## Skill Table

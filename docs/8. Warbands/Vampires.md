@@ -13,10 +13,10 @@ This team sucks... your blood!
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| Vampire Noble | 8 | 14 | - | 18 | 7| 7 | 2 | 2 | 0 | 0 | [Leader](#leader), [Undead](#undead), [Fear](#fear), [Vampire](#vampire) | 165 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility,Morale) |
-| Vampire Seductor | 8 | 14 | - | 18 | 10| 10 | 2 | 2 | 0 | 0 | [Vampiric Magic](#vampiric-magic), [Undead](#undead), [Fear](#fear), [Vampire](#vampire) | 125 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
-| Nosferatu | 8 | 12 | - | 18 | 8| 10 | 2 | 2 | 0 | 0 | [No Equipment](#no-equipment), [Undead](#undead), [Fear](#fear), [Vampire](#vampire) | 125 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility) |
-| Vampire Spawn | 8 | 14 | - | 18 | 10| 10 | 1 | 2 | 0 | 0 | [Undead](#undead), [Fear](#fear), [Vampire](#vampire) | 85 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
+| Vampire Noble | 7 | 14 | - | 18 | 7| 7 | 2 | 2 | 0 | 0 | [Leader](#leader), [Undead](#undead), [Fear](#fear) | 165 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility,Morale) |
+| Vampire Seductor | 7 | 14 | - | 18 | 10| 10 | 2 | 2 | 0 | 0 | [Vampiric Magic](#vampiric-magic), [Undead](#undead), [Fear](#fear) | 125 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
+| Nosferatu | 7 | 12 | - | 18 | 8| 10 | 2 | 2 | 0 | 0 | [No Equipment](#no-equipment), [Undead](#undead), [Fear](#fear) | 125 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility) |
+| Vampire Spawn | 7 | 14 | - | 18 | 10| 10 | 1 | 2 | 0 | 0 | [Undead](#undead), [Fear](#fear) | 85 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
@@ -39,10 +39,6 @@ This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move). I
 *Morale*
 
 This unit causes Fear.
-### Vampire
-*Inherent*
-
-If there is a non-Undead, non-Animal ally within 2" at the end of your Upkeep Phase and this unit has less than their maximum Wounds, you must immediately Incapacitate that ally to remove Staggered from this unit and gain one Wound.
 ### Vampiric Magic
 *Spellcasting*
 
@@ -116,7 +112,7 @@ You may not use this weapon if it was fired in the previous turn.
 | Name | Difficulty | Description |
 | ---- | ------ | ---- |
 | Blood Frenzy | 7 | Ongoing. Choose one unit within 5", including the caster. It gains the Berserk and Ambush skills. |
-| Lure | 12 | Basic. Target one unit you can see within 15". The target immediately moves towards the Caster by the most direct path, including by Jumping Down. If the target is able to reach the Caster, it is placed in base contact and the Caster is considered to have Engaged it. |
+| Lure | 12 | Basic. Target one unit you can see within 15" that is not Engaged. The target immediately moves towards the Caster by the most direct path, including by Jumping Down. If the target is able to reach the Caster, it is placed in base contact and the Caster is considered to have Engaged it. |
 | Bat wings | 5 | Ongoing. Choose one ally within 5", including the caster. That unit gains the Flying skill. |
 | Hex | 13 | Ongoing. Choose a single enemy within 10". The target has Disadvantage on all Checks it makes. |
 | Death Visage | 12 | All enemies in base contact with the caster that are not Stunned or Dazed make an immediate Morale check. If they fail, the caster makes an attack against the target, which then perfoms a Move directly away from the caster, if able. |
