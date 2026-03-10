@@ -1,5 +1,6 @@
 {
     "Name": "Wood Elves",
+    "Status": "Released",
     "Complexity": "★★★",
     "Max Units": "12",
     "Rout Threshold": "6",
@@ -160,8 +161,6 @@
             ]
         }
     ],
-    "Promotion Options": {
-    },
     "Available Skills": {
         "Commander": {
             "Mel": "X",

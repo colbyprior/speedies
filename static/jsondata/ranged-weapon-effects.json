@@ -5,5 +5,6 @@
   "Dual-Wield": "You may purchase this weapon up to two times and wield both at once without using an additional weapon slot. If you do, you have Advantage on attacks with the weapon.",
   "Light": "This weapon may be used with a Shield.",
   "Buckshot": "Select a point within line-of-sight. If it is within range, target ALL units within 1.5\" of this point that are in line-of-sight. If any unit Engaged in Melee Combat is targeted, ALL units within that Melee Combat are targeted, even if they are not within line-of-sight. Resolve each target separately, following the usual rules for Ranged Attacks and Blackpowder. This weapon ignores cover. If the selected point is out of range, use the closest point to the original point that is within range instead.",
-  "Precise": "Opponent cannot make Defence Checks when hit."
+  "Precise": "Opponent cannot make Defence Checks when hit.",
+  "Scatter": "Roll 1d20 and take note of the direction the d20 is pointing when firing. 1-5 target point drifts 6\" in direction of d20. 6-10 target point drifts 4\" in direction of d20. 11-15 target point drifts 2\" in direction of d20. 16-20 shot is on target."
 }

@@ -115,5 +115,23 @@
     "Piercing": "0",
     "Melee": "0",
     "Slots": "1"
+  },
+  "Poisoned Dagger": {
+    "Name": "Poisoned Dagger",
+    "Effect": "Enemies roll defence with disadvantage.",
+    "Cost": "10",
+    "Injury": "0",
+    "Piercing": "0",
+    "Melee": "0",
+    "Slots": "1"
+  },
+  "Ball and Chain": {
+    "Name": "Ball and Chain",
+    "Effect": "TBD: Decide which direction this unit should move when moving or engaging. Roll 1d20 to determine how far this unit should move: 1-5 move 6, 6-10 move 8, 11-15 move 10, 16-20 move 12. This unit may only move in straight lines.",
+    "Cost": "25",
+    "Injury": "4",
+    "Piercing": "3",
+    "Melee": "0",
+    "Slots": "2"
   }
 }

@@ -34,11 +34,6 @@
     "Type": "Inherent", 
     "Description": "If this unit ends the game with a Treasure, the player can forgo rolling for Income for this Treasure. If they do so, roll on the Loot table and gain that Loot."
   },
-  "Thief": { 
-    "Name": "Thief", 
-    "Type": "Inherent", 
-    "Description": "This unit can Run while carrying Treasure."
-  },
   "Disengage": { 
     "Name": "Disengage", 
     "Type": "Inherent", 
@@ -122,7 +117,7 @@
   "Thief": { 
     "Name": "Thief", 
     "Type": "Agility", 
-    "Description": "This unit may pick up Treasure, even when it is contested."
+    "Description": "This unit can Run while carrying Treasure. This unit may pick up Treasure, even when it is contested."
   },
   "Animal Handler": { 
     "Name": "Animal Handler", 
@@ -222,7 +217,7 @@
   "War Caster": { 
     "Name": "War Caster", 
     "Type": "Morale", 
-    "Description": "This unit has Advantage on Moracle checks for Ongoing Spells."
+    "Description": "This unit has Advantage on Morale checks for Ongoing Spells."
   },
   "Hoarder": { 
     "Name": "Hoarder", 
@@ -434,9 +429,74 @@
     "Type": "Agility",
     "Description": "This unit may never pick up Treasure tokens. After unit deployment, but before any player takes their first turn, this unit may perform a Move (but not a Run). If multiple players have units with this skill, resolve it in turn order."
   },
-    "Madness": {
+  "Madness": {
     "Name": "Madness",
     "Type": "Inherent",
     "Description": "This unit makes all Morale Checks with Disadvantage."
+  },
+  "Cult Magic": {
+    "Name": "Cult Magic",
+    "Type": "Draft",
+    "Description": "This unit can cast Cult Magic."
+  },
+  "Sorcery": {
+    "Name": "Sorcery",
+    "Type": "Draft",
+    "Description": "This unit can cast Sorcery."
+  },
+  "Green Magic": {
+    "Name": "Green Magic",
+    "Type": "Draft",
+    "Description": "This unit can cast Green Magic."
+  },
+  "Rage": {
+    "Name": "Rage",
+    "Type": "Draft",
+    "Description": "After causing a critical melee or ranged attack: Immediately make a melee attack roll against a random unit within 1\", friend or foe."
+  },
+  "Regeneration": {
+    "Name": "Regeneration",
+    "Type": "Draft",
+    "Description": "After a successful defence roll against a melee attack, regain 1 wound."
+  },
+  "Recovery": {
+    "Name": "Recovery",
+    "Type": "Draft",
+    "Description": "In the recovery phase, this unit recovers straight from Stunned to Staggered."
+  },
+  "Runner": {
+    "Name": "Runner",
+    "Type": "Draft",
+    "Description": "This unit has +4 run speed instead of the deafult +3 run speed."
+  },
+  "Whirlwind": {
+    "Name": "Whirlwind",
+    "Type": "Draft",
+    "Description": "When making a melee attack, each unit within 1\" of this unit are also attacked, friend or foe. Roll separately for each attack."
+  },
+  "Animal Leader": {
+    "Name": "Animal Leader",
+    "Type": "Draft",
+    "Description": "Allied, animal units within 5\" of this unit can use this unit's Morale stat for Checks instead of their own."
+  },
+  "Bumbling Movement": {
+    "Name": "Bumbling Movement",
+    "Type": "Draft",
+    "Description": "Decide which direction this unit should move when moving or engaging. Roll 1d20 to determine how far this unit should move: 1-5 move 6, 6-10 move 8, 11-15 move 10, 16-20 move 12. This unit may only move in straight lines. If they touch a enemy units base while moving, immediately stop movement, this unit counts as engaged."
+  },
+  "Goblin Fanatic": {
+    "Name": "Goblin Fanatic",
+    "Type": "Draft",
+    "Description": "**Mushroom Totem:** This unit may only use Ball and Chain.\n\n**Goblin Dog Totem:** This unit can only use Axes. They gain a leap distance of 6\", they roll leap checks with advantage.\n\n**Spider Totem:** This unit may only use Poisoned Daggers. They roll climb checks with advantage."
+  },
+  "Lobber": {
+    "Name": "Lobber",
+    "Type": "Draft",
+    "Description": "This unit may throw a unit within 1\" that has the Bomber skill as a ranged attack. Units can be thrown up to 15\" within line of sight. The unit thrown can be placed into melee, if so they count as having Engaged this turn. The thrown unit makes a drop down check as though they are dropping down 2\", this counts as a Jump Attack."
+  },
+  "Bomber": {
+    "Name": "Bomber",
+    "Type": "Draft",
+    "Description": "This unit can be thrown using the Lobber skill. See the Lobber skill for more information."
   }
 }

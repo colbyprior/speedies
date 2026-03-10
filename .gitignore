@@ -25,3 +25,4 @@ yarn-error.log*
 .obsidian/workspace-mobile.json
 .idea/misc.xml
 .idea
+static/img/faction_agents.pdf

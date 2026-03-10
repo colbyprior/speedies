@@ -106,5 +106,14 @@
         "Slots": "1",
         "Injury": "-3",
         "Piercing": "0"
+      },
+      "Mortar": {
+        "Name": "Mortar",
+        "Range": "20\"",
+        "Effect": "Long Reload, Buckshot, Blackpowder, Scatter",
+        "Cost": "0",
+        "Slots": "1",
+        "Injury": "0",
+        "Piercing": "0"
       }
 }

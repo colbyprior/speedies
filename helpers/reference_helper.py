@@ -57,6 +57,8 @@ def skills_block():
     }
     for skill_name in global_skills_data:
         skill_data = global_skills_data[skill_name]
+        if skill_data.get('Type') == "Draft":
+            continue
         if skill_data.get('Type') not in skill_types_data:
             skill_types_data[skill_data.get('Type')] = [skill_data]
         else:
