@@ -12,7 +12,7 @@
         {
             "Name": "Orc Chief",
             "Type": "Leader",
-            "Type Cap": "-",
+            "Type Cap": "1",
             "Move": "6",
             "Piercing": "0",
             "Injury": "0",

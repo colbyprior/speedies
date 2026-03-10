@@ -13,7 +13,7 @@
         {
             "Name": "Goblin Chief",
             "Type": "Leader",
-            "Type Cap": "-",
+            "Type Cap": "1",
             "Move": "5",
             "Piercing": "0",
             "Injury": "0",
@@ -312,10 +312,16 @@
             "Ranged Weapons": ["Throwing Stars", "Short Bow"],
             "Armour": ["Light Armour"]
         },
-        "Goblins": {
-            "Aliases": ["Goblins"],
-            "Melee Weapons": ["Dagger", "Hammer", "Sword / Axe", "Spear", "Shield"],
+        "Goblin Assassin": {
+            "Aliases": ["Goblin Assassin"],
+            "Melee Weapons": ["Dagger", "Hammer", "Sword / Axe"],
             "Ranged Weapons": ["Throwing Stars", "Short Bow"],
+            "Armour": ["Light Armour"]
+        },
+        "Goblin": {
+            "Aliases": ["Goblin"],
+            "Melee Weapons": ["Dagger", "Hammer", "Sword / Axe", "Spear", "Shield"],
+            "Ranged Weapons": ["Short Bow"],
             "Armour": ["Light Armour"]
         },
         "Goblin Fanatics": {

@@ -1,73 +1,72 @@
 {
-    "Name": "Orcs and Goblins",
+    "Name": "Ogres",
     "Status": "Draft",
-    "Complexity": "★★☆",
+    "Complexity": "★★★",
     "Max Units": "15",
     "Rout Threshold": "6",
-    "Play Style": "Strong Orcs with Sneaky Goblins",
+    "Play Style": "Massive Ogres with Sneaky Goblins",
     "Preamble": "",
     "Special Rules": {
     },
     "Heroes": [
         {
-            "Name": "Orc Chief",
+            "Name": "Head Ogre",
             "Type": "Leader",
             "Type Cap": "1",
             "Move": "6",
             "Piercing": "0",
-            "Injury": "0",
+            "Injury": "2",
             "Melee": "12",
             "Ranged": "12",
-            "Defense": "14",
-            "Wounds": "1",
-            "Agility": "12",
-            "Attacks": "1",
-            "Morale": "8",
-            "Cost": 0,
-            "Skills": [
-                "Leader",
-                "Rage"
-            ]
-        },
-        {
-            "Name": "Goblin Shaman",
-            "Type": "Hero",
-            "Type Cap": "1",
-            "Move": "5",
-            "Piercing": "0",
-            "Injury": "0",
-            "Melee": "14",
-            "Ranged": "-",
-            "Defense": "19",
-            "Wounds": "1",
-            "Agility": "10",
-            "Attacks": "1",
-            "Morale": "11",
-            "Cost": 0,
-            "Skills": [
-                "Recovery",
-                "Runner",
-                "Rage",
-                "Green Magic"
-            ]
-        },
-        {
-            "Name": "Orc Bonehead",
-            "Type": "Hero",
-            "Type Cap": "2",
-            "Move": "6",
-            "Piercing": "0",
-            "Injury": "0",
-            "Melee": "13",
-            "Ranged": "14",
-            "Defense": "14",
-            "Wounds": "1",
-            "Agility": "12",
+            "Defense": "16",
+            "Wounds": "2",
+            "Agility": "14",
             "Attacks": "1",
             "Morale": "10",
             "Cost": 0,
             "Skills": [
-                "Rage"
+                "Leader",
+                "Large",
+                "Lobber"
+            ]
+        },
+        {
+            "Name": "Ogre Gunner",
+            "Type": "Hero",
+            "Type Cap": "1",
+            "Move": "6",
+            "Piercing": "0",
+            "Injury": "2",
+            "Melee": "14",
+            "Ranged": "13",
+            "Defense": "16",
+            "Wounds": "2",
+            "Agility": "14",
+            "Attacks": "1",
+            "Morale": "12",
+            "Cost": 0,
+            "Skills": [
+                "Large",
+                "Lobber"
+            ]
+        },
+        {
+            "Name": "Ogre Big Gut",
+            "Type Cap": "1",
+            "Move": "6",
+            "Piercing": "0",
+            "Injury": "2",
+            "Melee": "13",
+            "Ranged": "14",
+            "Defense": "16",
+            "Wounds": "2",
+            "Agility": "14",
+            "Attacks": "1",
+            "Morale": "10",
+            "Cost": 0,
+            "Skills": [
+                "Large",
+                "Lobber"
             ]
         },
         {
@@ -114,83 +113,81 @@
             ]
         },
         {
-            "Name": "Orc Charger",
+            "Name": "Goblin Bomber",
+            "Type Cap": "3",
+            "Move": "5",
+            "Piercing": "0",
+            "Injury": "0",
+            "Melee": "15",
+            "Ranged": "-",
+            "Defense": "-",
+            "Wounds": "1",
+            "Agility": "8",
+            "Attacks": "1",
+            "Morale": "14",
+            "Cost": 0,
+            "Skills": [
+                "Recovery",
+                "Runner",
+                "Rage",
+                "Bomber"
+            ]
+        },
+        {
+            "Name": "Goblin Trapper",
             "Type Cap": "4",
-            "Move": "6",
+            "Move": "5",
             "Piercing": "0",
             "Injury": "0",
-            "Melee": "13",
-            "Ranged": "15",
-            "Defense": "14",
+            "Melee": "15",
+            "Ranged": "14",
+            "Defense": "-",
             "Wounds": "1",
-            "Agility": "12",
+            "Agility": "10",
             "Attacks": "1",
-            "Morale": "12",
-            "Cost": 45,
+            "Morale": "14",
+            "Cost": 0,
             "Skills": [
-                "Rage",
-                "Berserker"
+                "Recovery",
+                "Runner",
+                "Rage"
             ]
         },
         {
-            "Name": "Orc Cleaver",
+            "Name": "Sabertusk",
             "Type Cap": "2",
-            "Move": "6",
-            "Piercing": "0",
-            "Injury": "0",
-            "Melee": "13",
-            "Ranged": "15",
-            "Defense": "14",
-            "Wounds": "1",
-            "Agility": "12",
-            "Attacks": "1",
-            "Morale": "12",
-            "Cost": 45,
-            "Skills": [
-                "Rage",
-                "Berserker",
-                "Whirlwind"
-            ]
-        },
-        {
-            "Name": "Troll",
-            "Type Cap": "1",
-            "Move": "6",
+            "Move": "7",
             "Piercing": "3",
             "Injury": "0",
-            "Melee": "13",
+            "Melee": "14",
             "Ranged": "-",
-            "Defense": "14",
-            "Wounds": "3",
+            "Defense": "18",
+            "Wounds": "1",
             "Agility": "14",
             "Attacks": "2",
             "Morale": "14",
             "Cost": 0,
             "Skills": [
-                "Cowardly",
-                "Fear",
-                "Large",
-                "Regeneration",
-                "No Equipment"
+                "Animal"
             ]
         }
     ],
     "Available Skills": {
-        "Orc Chief": {
+        "Head Ogre": {
             "Mel": "",
             "Rng": "",
             "Def": "",
             "Agi": "",
             "Mrl": ""
         },
-        "Goblin Shaman": {
+        "Ogre Gunner": {
             "Mel": "",
             "Rng": "",
             "Def": "",
             "Agi": "",
             "Mrl": ""
         },
-        "Orc Bonehead": {
+        "Ogre Big Gut": {
             "Mel": "",
             "Rng": "",
             "Def": "",
@@ -211,14 +208,14 @@
             "Agi": "",
             "Mrl": ""
         },
-        "Orc Charger": {
+        "Goblin Bomber": {
             "Mel": "",
             "Rng": "",
             "Def": "",
             "Agi": "",
             "Mrl": ""
         },
-        "Orc Cleaver": {
+        "Goblin Trapper": {
             "Mel": "",
             "Rng": "",
             "Def": "",
@@ -227,11 +224,17 @@
         }
     },
     "Equipment": {
-        "Orcs": {
-            "Aliases": ["Orcs"],
-            "Melee Weapons": ["Dagger", "Hammer", "Sword / Axe", "Spear", "Great Hammer", "Great Sword / Axe", "Pike", "Shield"],
-            "Ranged Weapons": ["Bow", "Crossbow"],
+        "Ogres": {
+            "Aliases": ["Head Ogre", "Ogre Big Gut"],
+            "Melee Weapons": ["Hammer", "Sword / Axe", "Spear", "Great Hammer", "Great Sword / Axe", "Pike"],
+            "Ranged Weapons": ["Pistol"],
             "Armour": ["Light Armour", "Heavy Armour"]
+        },
+        "Ogre Gunner": {
+            "Aliases": ["Ogre Gunner"],
+            "Melee Weapons": ["Hammer", "Sword / Axe"],
+            "Ranged Weapons": ["Mortar", "Rifle"],
+            "Armour": []
         },
         "Goblin Assassin": {
             "Aliases": ["Goblin Assassin"],
@@ -243,6 +246,12 @@
             "Aliases": ["Goblin"],
             "Melee Weapons": ["Dagger", "Hammer", "Sword / Axe", "Spear", "Shield"],
             "Ranged Weapons": ["Short Bow"],
+            "Armour": ["Light Armour"]
+        },
+        "Goblin Trapper": {
+            "Aliases": ["Goblin Trapper"],
+            "Melee Weapons": ["Dagger", "Poisoned Dagger"],
+            "Ranged Weapons": ["Throwing Stars"],
             "Armour": ["Light Armour"]
         }
     }

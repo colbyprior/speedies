@@ -488,5 +488,15 @@
     "Name": "Goblin Fanatic",
     "Type": "Draft",
     "Description": "**Mushroom Totem:** This unit may only use Ball and Chain.\n\n**Goblin Dog Totem:** This unit can only use Axes. They gain a leap distance of 6\", they roll leap checks with advantage.\n\n**Spider Totem:** This unit may only use Poisoned Daggers. They roll climb checks with advantage."
+  },
+  "Lobber": {
+    "Name": "Lobber",
+    "Type": "Draft",
+    "Description": "This unit may throw a unit within 1\" that has the Bomber skill as a ranged attack. Units can be thrown up to 15\" within line of sight. The unit thrown can be placed into melee, if so they count as having Engaged this turn. The thrown unit makes a drop down check as though they are dropping down 2\", this counts as a Jump Attack."
+  },
+  "Bomber": {
+    "Name": "Bomber",
+    "Type": "Draft",
+    "Description": "This unit can be thrown using the Lobber skill. See the Lobber skill for more information."
   }
 }

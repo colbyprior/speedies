@@ -16,7 +16,7 @@ Pick a totem from Mushroom, Goblin Dog and Spider at warband creation. This will
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| Goblin Chief | 5 | 13 | 13 | 19 | 10| 10 | 1 | 1 | 0 | 0 | [Leader](#leader), [Rage](#rage), [Recovery](#recovery), [Runner](#runner) | 0 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=) |
+| Goblin Chief | 5 | 13 | 13 | 19 | 10| 10 | 1 | 1 | 0 | 0 | [Leader](#leader), [Rage](#rage), [Recovery](#recovery), [Runner](#runner) | 0 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=) |
 | Goblin Shaman | 5 | 14 | - | 19 | 10| 11 | 1 | 1 | 0 | 0 | [Recovery](#recovery), [Runner](#runner), [Rage](#rage), [Green Magic](#green-magic) | 0 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=) |
 | Goblin Stickboss | 5 | 13 | - | 19 | 10| 10 | 1 | 1 | 0 | 0 | [Recovery](#recovery), [Runner](#runner), [Rage](#rage), [Animal Leader](#animal-leader) | 0 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=) |
 | Goblin Assassin | 5 | 13 | 13 | 19 | 8| 11 | 1 | 1 | 0 | 0 | [Recovery](#recovery), [Runner](#runner), [Rage](#rage) | 0 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=) |
@@ -124,8 +124,26 @@ Goblin Heroes equipment for the unit types: Goblin Heroes
 | ------ | --- | ---- |
 | Light Armour | 1 | 10 |
 
-### Goblins Equipment 
-Goblins equipment for the unit types: Goblins
+### Goblin Assassin Equipment 
+Goblin Assassin equipment for the unit types: Goblin Assassin
+
+| Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
+| ------------ | --- | --- | --- | ------ | ---- | ----- |
+| Dagger | 0 | 0 | 0 |  | 2 | 1 |
+| Hammer | 0 | 4 | 0 |  | 5 | 1 |
+| Sword / Axe | 0 | 0 | 3 |  | 5 | 1 |
+
+| Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |
+| ------------- | --- | --- | --- | ------ | ---- | ----- |
+| Throwing Stars | 10" | 0 | 0 | [Light](#light), [Close Quarters](#close-quarters) | 10 | 1 |
+| Short Bow | 20" | 0 | 0 | [Light](#light) | 5 | 1 |
+
+| Armour | Def | Cost |
+| ------ | --- | ---- |
+| Light Armour | 1 | 10 |
+
+### Goblin Equipment 
+Goblin equipment for the unit types: Goblin
 
 | Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
@@ -137,7 +155,6 @@ Goblins equipment for the unit types: Goblins
 
 | Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |
 | ------------- | --- | --- | --- | ------ | ---- | ----- |
-| Throwing Stars | 10" | 0 | 0 | [Light](#light), [Close Quarters](#close-quarters) | 10 | 1 |
 | Short Bow | 20" | 0 | 0 | [Light](#light) | 5 | 1 |
 
 | Armour | Def | Cost |
