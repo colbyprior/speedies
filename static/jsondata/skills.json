@@ -222,7 +222,7 @@
   "War Caster": { 
     "Name": "War Caster", 
     "Type": "Morale", 
-    "Description": "This unit has Advantage on Moracle checks for Ongoing Spells."
+    "Description": "This unit has Advantage on Morale checks for Ongoing Spells."
   },
   "Hoarder": { 
     "Name": "Hoarder", 
