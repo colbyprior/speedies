@@ -269,15 +269,15 @@
     "Type": "Inherent",
     "Description": "When fighting Unarmed, targets roll their Defence Check with Disadvantage."
   },
-  "Weaponsmith": {
-    "Name": "Weaponsmith",
+  "Builder": {
+    "Name": "Builder",
     "Type": "Inherent",
-    "Description": "If a warband starts a game with a unit with this Skill, all Ranged Weapons have their Range increased by 10\", except for Pistols whose Range is incrased by 5\". Blunderbuss range is unaffected."
+    "Description": "This unit has the ability to place down three items, each once per game. This happens during the Cast Phase. If this unit does so, place the item within 1\" of it. It cannot make a Ranged Attack this turn. One can be placed per turn and cannot be moved afterwards, unless noted otherwise. Ladder: This unit may place a 3\" ladder down. Barricade: This unit may place a 1.5\" high, 3\" wide barricade down. It should block line of sight and not be too thick. Ballista: This unit may place a ballista down. Once per turn during the Ranged Phase, an ally (including this unit) adjacent to the ballista may fire it instead of making its usual Ranged Attack. The ballista has the stats of a Crossbow, but is always rolled with Advantage. During the Cast Phase, this unit may pack up the ballista if it is within 1\" of it. If it does so, no other item can be placed down this turn. The ballista can then be placed down again in a future turn."
   },
-  "Armoursmith": {
-    "Name": "Armoursmith",
+  "Apprentice Builder": {
+    "Name": "Apprentice Builder",
     "Type": "Inherent",
-    "Description": "If a warband contains a unit with this Skill, it gains the ability to purchase Mithril Armour."
+    "Description": "This unit has the ability to place down a 3\" ladder once per game. This happens during the Cast Phase. If this unit does so, place the ladder within 1\" of it. It cannot make a Ranged Attack this turn. The ladder cannot be moved afterwards."
   },
   "Berserker": {
     "Name": "Berserker",
@@ -373,11 +373,6 @@
     "Name": "Large",
     "Type": "Inherent",
     "Description": "This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It cannot pick up Treasure. This unit is immune to the Blight. It cannot Promote."
-  },
-  "Inquisitor": {
-    "Name": "Inquisitor",
-    "Type": "Inherent",
-    "Description": "This unit gets a +2 Pierce modifier against all enemy heroes for melee attacks."
   },
   "The Rapture is Nigh": {
     "Name": "The Rapture is Nigh",
