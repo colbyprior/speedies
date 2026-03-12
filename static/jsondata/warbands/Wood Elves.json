@@ -73,7 +73,7 @@
             "Piercing": "0",
             "Injury": "0",
             "Melee": "13",
-            "Ranged": "10",
+            "Ranged": "12",
             "Defense": "18",
             "Wounds": "1",
             "Agility": "6",
@@ -81,6 +81,7 @@
             "Morale": "7",
             "Cost": 75,
             "Skills": [
+			"Vanguard"
             ]
         }
     ],

@@ -34,11 +34,6 @@
     "Type": "Inherent", 
     "Description": "If this unit ends the game with a Treasure, the player can forgo rolling for Income for this Treasure. If they do so, roll on the Loot table and gain that Loot."
   },
-  "Thief": { 
-    "Name": "Thief", 
-    "Type": "Inherent", 
-    "Description": "This unit can Run while carrying Treasure."
-  },
   "Disengage": { 
     "Name": "Disengage", 
     "Type": "Inherent", 
@@ -122,7 +117,7 @@
   "Thief": { 
     "Name": "Thief", 
     "Type": "Agility", 
-    "Description": "This unit may pick up Treasure, even when it is contested."
+    "Description": "This unit has Advantage on Morale Checks to pick up contested Treasure. It may also Run while carrying Treasure."
   },
   "Animal Handler": { 
     "Name": "Animal Handler", 
@@ -177,7 +172,7 @@
   "Sprint": { 
     "Name": "Sprint", 
     "Type": "Agility", 
-    "Description": "This unit's Run speed is double its base Move."
+    "Description": "This unit's Run speed is +6\" rather than the usual +3\"."
   },
   "Sturdy": { 
     "Name": "Sturdy", 
@@ -312,7 +307,7 @@
   "Pit Fighter": {
     "Name": "Pit Fighter",
     "Type": "Inherent",
-    "Description": "This unit treats Dazed results against it as Staggered instead."
+    "Description": "When recovering, this unit goes from Stunned straight to Staggered."
   },
   "Raise Ally": {
     "Name": "Raise Ally",
