@@ -6,7 +6,6 @@
     "Play Style": "Slow and Skelly",
     "Preamble": "Let me off this wild ride Mr. Bones",
     "Special Rules": {
-        "Undead Horde": "If any enemy unit you just fought dies from a Scar or Blight Roll, they are raised and added to your warband as a Zombie. If this would take you past the maximum number of units for your warband (after completing your own Scar and Blight Rolls), the Zombie is not added to your warband."
     },
     "Heroes": [
         {
@@ -104,11 +103,12 @@
             "Agility": "16",
             "Attacks": "1",
             "Morale": "13",
-            "Cost": 20,
+            "Cost": 25,
             "Skills": [
                 "Undead",
                 "Fear",
-                "No Equipment"
+                "No Equipment",
+				"Spread Blight (Minor)"
             ]
         },
         {
@@ -178,7 +178,7 @@
     "Available Skills": {
         "Necromancer": {
             "Mel": "X",
-            "Rng": "X",
+            "Rng": "",
             "Def": "",
             "Agi": "",
             "Mrl": "X"
