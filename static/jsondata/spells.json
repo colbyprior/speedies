@@ -3,7 +3,7 @@
     "Name": "Raise Dead", 
     "School": "Necromantic Magic",
     "Check": "7",
-    "Description": "Basic. One allied Zombie or Skeleton that was Incapacitated after the end of your last turn immediately returns to the battle, no longer counting towards your Rout Threshold. Place the model within 5\" of the Caster. The model cannot be placed such that it is Engaged with an enemy."
+    "Description": "Basic. One allied Zombie or Skeleton henchman that was Incapacitated after the end of your last turn immediately returns to the battle, no longer counting towards your Rout Threshold. Place the model within 5\" of the Caster. The model cannot be placed such that it is Engaged with an enemy. The unit may not make Ranged Attacks this turn."
   },
   "Soul Rend": {
     "Name": "Soul Rend", 

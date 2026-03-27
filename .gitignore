@@ -26,3 +26,6 @@ yarn-error.log*
 .idea/misc.xml
 .idea
 static/img/faction_agents.pdf
+
+venv
+yarn.lock

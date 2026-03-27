@@ -26,8 +26,7 @@
             "Morale": "7",
             "Cost": 85,
             "Skills": [
-                "Leader",
-                "Inquisitor"
+                "Leader"
             ]
         },
         {
@@ -65,7 +64,6 @@
             "Morale": "10",
             "Cost": 55,
             "Skills": [
-                "Inquisitor"
             ]
         },
         {
@@ -85,7 +83,6 @@
             "Cost": 65,
             "Skills": [
                 "The Rapture is Nigh",
-                "Inquisitor"
             ]
         }
     ],
