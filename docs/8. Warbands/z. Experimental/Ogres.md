@@ -13,9 +13,9 @@ sidebar_label: Ogres
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| Head Ogre | 6 | 12 | 12 | 16 | 14| 10 | 1 | 2 | 2 | 0 | [Leader](#leader), [Large](#large), [Lobber](#lobber) | 0 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=) |
-| Ogre Gunner | 6 | 14 | 13 | 16 | 14| 12 | 1 | 2 | 2 | 0 | [Large](#large), [Lobber](#lobber) | 0 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=) |
-| Ogre Big Gut | 6 | 13 | 14 | 16 | 14| 10 | 1 | 2 | 2 | 0 | [Large](#large), [Lobber](#lobber) | 0 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=) |
+| Head Ogre | 6 | 12 | 12 | 16 | 14| 7 | 1 | 3 | 2 | 0 | [Leader](#leader), [Large](#large), [Lobber](#lobber) | 0 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=) |
+| Ogre Gunner | 6 | 14 | 13 | 16 | 14| 10 | 1 | 3 | 2 | 0 | [Large](#large), [Lobber](#lobber) | 0 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=) |
+| Ogre Big Gut | 6 | 13 | 14 | 16 | 14| 10 | 1 | 3 | 2 | 0 | [Large](#large), [Lobber](#lobber) | 0 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=) |
 | Goblin Assassin | 5 | 13 | 13 | 19 | 8| 11 | 1 | 1 | 0 | 0 | [Recovery](#recovery), [Runner](#runner), [Rage](#rage) | 0 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=) |
 
 ## Henchmen
