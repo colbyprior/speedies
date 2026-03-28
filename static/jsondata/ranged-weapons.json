@@ -109,6 +109,7 @@
       },
       "Mortar": {
         "Name": "Mortar",
+        "DRAFT": "TRUE",
         "Range": "20\"",
         "Effect": "Long Reload, Buckshot, Blackpowder, Scatter",
         "Cost": "0",

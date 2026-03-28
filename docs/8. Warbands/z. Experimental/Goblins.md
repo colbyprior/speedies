@@ -39,27 +39,27 @@ Pick a totem from Mushroom, Goblin Dog and Spider at warband creation. This will
 
 Allied, non-animal units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
 ### Rage
-*Draft*
+*Inherent*
 
 After causing a critical melee or ranged attack: Immediately make a melee attack roll against a random unit within 1", friend or foe.
 ### Recovery
-*Draft*
+*Inherent*
 
 In the recovery phase, this unit recovers straight from Stunned to Staggered.
 ### Runner
-*Draft*
+*Inherent*
 
-This unit has +4 run speed instead of the deafult +3 run speed.
+This unit has +4 run speed instead of the default +3 run speed.
 ### Green Magic
-*Draft*
+*Spellcasting*
 
 This unit can cast Green Magic.
 ### Animal Leader
-*Draft*
+*Inherent*
 
 Allied, animal units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
 ### Goblin Fanatic
-*Draft*
+*Inherent*
 
 **Mushroom Totem:** This unit may only use Ball and Chain.
 
@@ -71,7 +71,7 @@ Allied, animal units within 5" of this unit can use this unit's Morale stat for 
 
 This unit cannot Promote, use ladders (except by making a full Climb Check), pick up Treasure, benefit from the 'Leader' skill or use equipment (but is not penalised for fighting Unarmed).
 ### Bumbling Movement
-*Draft*
+*Inherent*
 
 Decide which direction this unit should move when moving or engaging. Roll 1d20 to determine how far this unit should move: 1-5 move 6, 6-10 move 8, 11-15 move 10, 16-20 move 12. This unit may only move in straight lines. If they touch a enemy units base while moving, immediately stop movement, this unit counts as engaged.
 ### Pack Tactics
@@ -91,7 +91,7 @@ This unit causes Fear.
 
 This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It cannot pick up Treasure. This unit is immune to the Blight. It cannot Promote.
 ### Regeneration
-*Draft*
+*Inherent*
 
 After a successful defence roll against a melee attack, regain 1 wound.
 ### No Equipment
@@ -175,6 +175,17 @@ Goblin Fanatics equipment for the unit types: Goblin Fanatics
 This weapon may be used with a Shield.
 #### Close Quarters 
 Your target does not receive a bonus to their Defence if you Moved before Shooting this turn.
+
+## Green Magic 
+
+| Name | Difficulty | Description |
+| ---- | ------ | ---- |
+| Zap | 12 | Basic. Cast Attack. Target one unit you can see within 10" and perform a Cast Attack. Then target a second unit with a Cast Attack within 3" that is closest to that unit. Use the target for line of sight |
+| Drums of War | 10 | All friendly units within 3" may move their base move again. Units may engage as part of this movement. |
+| Burst | 12 | All units within 5" of the caster are pushed up to 5" away. If they come into contact with an obstacle they make an injury check. Engaged units move together as a blob and if one contacts and obstacle they all make the injury check |
+| Totem | 8 | Ongoing. Summon a totem within 10". All friendly units crit on a 18+ when within 5" of the totem. The totem is destroyed if an enemy makes a successful melee attack against it. |
+| Harden | 8 | Ongoing. Target one friendly unit within 10". This unit has advantage on defence rolls |
+
 
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |

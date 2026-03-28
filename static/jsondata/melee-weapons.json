@@ -109,6 +109,7 @@
   },
   "Torch": {
     "Name": "Torch",
+    "DRAFT": "TRUE",
     "Effect": "This unit has Advantage on Out-Of-Sight Rolls when attempting to Engage.",
     "Cost": "10",
     "Injury": "0",
@@ -118,6 +119,7 @@
   },
   "Poisoned Dagger": {
     "Name": "Poisoned Dagger",
+    "DRAFT": "TRUE",
     "Effect": "Enemies roll defence with disadvantage.",
     "Cost": "10",
     "Injury": "0",
@@ -127,6 +129,7 @@
   },
   "Ball and Chain": {
     "Name": "Ball and Chain",
+    "DRAFT": "TRUE",
     "Effect": "TBD: Decide which direction this unit should move when moving or engaging. Roll 1d20 to determine how far this unit should move: 1-5 move 6, 6-10 move 8, 11-15 move 10, 16-20 move 12. This unit may only move in straight lines.",
     "Cost": "25",
     "Injury": "4",

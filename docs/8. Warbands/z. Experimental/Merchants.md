@@ -35,7 +35,7 @@ Wagon, units can move onto the wagon if they fit. A maximum of 4 units can be on
 
 Allied, non-animal units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
 ### Sorcery
-*Draft*
+*Spellcasting*
 
 This unit can cast Sorcery.
 ### Large
@@ -49,7 +49,7 @@ This unit cannot use ladders or make Climb Checks. It gains +3 Mov and +1 Wnd, w
 ### Thief
 *Agility*
 
-This unit can Run while carrying Treasure. This unit may pick up Treasure, even when it is contested.
+This unit has Advantage on Morale Checks to pick up contested Treasure. It may also Run while carrying Treasure.
 
 ## Equipment
 
@@ -116,6 +116,17 @@ You may not use this weapon if it was fired in the previous turn.
 You may purchase this weapon up to two times and wield both at once without using an additional weapon slot. If you do, you have Advantage on attacks with the weapon.
 #### Blackpowder 
 Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately make an Injury Roll against yourself (applying the weapon's Injury modifier). You may no longer use the weapon for the rest of the game (resolving any remaining targets from the current attack first). After the game, it is repaired at no cost. If you have Advantage and either dice rolls a 1 you still misfire. If the higher roll still hits the enemy, resolve it as normal.
+
+## Sorcery 
+
+| Name | Difficulty | Description |
+| ---- | ------ | ---- |
+| Magic Bolt | 12 | Basic. Cast Attack. Target one unit you can see within 15" and perform a Cast Attack. When struck, before rolling defence the unit is moved away from the caster up to 5" |
+| Fireball | 14 | Target a point within 4". All units within 2" of that point must make an Agi check or suffer an Injury Check |
+| Far Seeing Eye | 5 | Ongoing. Select a point within 20" and summon the Far Seeing Eye. You may now cast spells using the range and line of sight from the Far Seeing Eye |
+| Smokescreen | 8 | Ongoing. Create a 1" deep, 3" tall and 4" wide smokescreen. This smokescreen does not block any movement but it blocks all line of sight |
+| Teleport | 10 | The caster or a friendly unit within 5" may teleport to a position you can see within 10" |
+
 
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |

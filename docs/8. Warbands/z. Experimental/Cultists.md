@@ -41,7 +41,7 @@ Melee skill improved to at least 14. Gain one extra wound. Gains one extra attac
 
 Allied, non-animal units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
 ### Cult Magic
-*Draft*
+*Spellcasting*
 
 This unit can cast Cult Magic.
 
@@ -99,6 +99,17 @@ Seeker & Initiates equipment for the unit types: Seeker, Initiate
 ### Ranged Weapon Effects
 #### Light 
 This weapon may be used with a Shield.
+
+## Cult Magic 
+
+| Name | Difficulty | Description |
+| ---- | ------ | ---- |
+| Unleash Power | 11 | Caster gains +1 attack this turn and if they charged this turn their target must make an immediate fear check. |
+| Bend Flesh | 11 | A unit other than the caster within 10" gains +4 defence this turn. |
+| Spew Bile | 13 | Range 10" covering a 2" diameter area effect from point. Roll an attack with the target 14 per unit in the area of effect. Can hit allies and units in melee. If a unit is hit that is in melee, all connected units are also hit. |
+| Reach into the Void | 13 | Ongoing. Summon a tentacle from the void within 10". It may perform a Cast Attack each turn (including this turn) during the spellcasting phase at any unit within 10". It has no defence and one wound. If it becomes stunned or dazed, it is instead incapacitated. |
+| Touch of Madness | 12 | Basic. Target you are in melee with. The target is Dazed |
+
 
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |

@@ -36,23 +36,23 @@ Allied, non-animal units within 5" of this unit can use this unit's Morale stat 
 
 This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It cannot pick up Treasure. This unit is immune to the Blight. It cannot Promote.
 ### Lobber
-*Draft*
+*Inherent*
 
 This unit may throw a unit within 1" that has the Bomber skill as a ranged attack. Units can be thrown up to 15" within line of sight. The unit thrown can be placed into melee, if so they count as having Engaged this turn. The thrown unit makes a drop down check as though they are dropping down 2", this counts as a Jump Attack.
 ### Recovery
-*Draft*
+*Inherent*
 
 In the recovery phase, this unit recovers straight from Stunned to Staggered.
 ### Runner
-*Draft*
+*Inherent*
 
-This unit has +4 run speed instead of the deafult +3 run speed.
+This unit has +4 run speed instead of the default +3 run speed.
 ### Rage
-*Draft*
+*Inherent*
 
 After causing a critical melee or ranged attack: Immediately make a melee attack roll against a random unit within 1", friend or foe.
 ### Bomber
-*Draft*
+*Inherent*
 
 This unit can be thrown using the Lobber skill. See the Lobber skill for more information.
 ### Animal

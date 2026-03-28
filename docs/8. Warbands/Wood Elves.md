@@ -19,7 +19,7 @@ Elves can Jump Across to a maximum distance of 6", instead of the usual 3".
 | Commander | 7 | 12 | 12 | 16 | 6| 5 | 1 | 1 | 0 | 0 | [Leader](#leader) | 95 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Agility,Morale) |
 | Mage | 7 | 13 | - | 18 | 6| 7 | 1 | 1 | 0 | 0 | [Life Magic](#life-magic) | 70 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Agility,Morale) |
 | Honour Guard | 7 | 12 | 13 | 16 | 6| 7 | 1 | 1 | 0 | 0 |  | 80 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
-| Ranger | 7 | 13 | 10 | 18 | 6| 7 | 1 | 1 | 0 | 0 |  | 75 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
+| Ranger | 7 | 13 | 12 | 18 | 6| 7 | 1 | 1 | 0 | 0 | [Vanguard](#vanguard) | 75 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
@@ -38,6 +38,10 @@ Allied, non-animal units within 5" of this unit can use this unit's Morale stat 
 *Spellcasting*
 
 This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate 'Basic' spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield.
+### Vanguard
+*Agility*
+
+This unit may never pick up Treasure tokens. After unit deployment, but before any player takes their first turn, this unit may perform a Move (but not a Run). If multiple players have units with this skill, resolve it in turn order.
 ### Mark Target
 *Inherent*
 
