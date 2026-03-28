@@ -290,21 +290,23 @@ function toggleEquip(unitId, itemName, category) {
       })
     }
   } else if (category === 'melee') {
-    const equipped = eq.melee.includes(itemName)
-    if (equipped) {
-      mutateWarband(wb => {
-        const u = wb.units.find(u => u.id === unitId)
-        u.equipment.melee = u.equipment.melee.filter(m => m !== itemName)
-      })
-    } else {
-      const limits = getSlotLimits(unitDef, unit.category, eq)
-      const used = getMeleeUsed(eq)
-      const slots = getMeleeSlots(itemName)
-      if (used + slots > limits.meleeMax) return
-      const cost = getEquipCost(itemName, 'melee')
-      if (goldRemaining(wb) < cost) return
+    const limits = getSlotLimits(unitDef, unit.category, eq)
+    const used = getMeleeUsed(eq)
+    const slots = getMeleeSlots(itemName)
+    const count = eq.melee.filter(m => m === itemName).length
+    const canAdd = (used + slots) <= limits.meleeMax && goldRemaining(wb) >= getEquipCost(itemName, 'melee')
+
+    if (canAdd) {
+      // Add one instance (supports dual-wielding single-handed weapons)
       mutateWarband(wb => {
         wb.units.find(u => u.id === unitId).equipment.melee.push(itemName)
+      })
+    } else if (count > 0) {
+      // Slots full or can't afford — remove one instance instead
+      mutateWarband(wb => {
+        const u = wb.units.find(u => u.id === unitId)
+        const idx = u.equipment.melee.indexOf(itemName)
+        if (idx !== -1) u.equipment.melee.splice(idx, 1)
       })
     }
   } else if (category === 'ranged') {
@@ -708,18 +710,21 @@ function renderEquipModal(wb, wbData) {
     const stats = getMeleeStats(displayName)
     const slots = getMeleeSlots(displayName)
     const cost = stats ? (parseInt(stats.Cost) || 0) : 0
-    const equipped = eq.melee.includes(displayName)
-    const slotsOk = equipped || (meleeUsed + slots <= limits.meleeMax)
-    const affordable = equipped || (rem >= cost)
-    const disabled = !slotsOk || !affordable
-    const reason = !slotsOk ? 'No slots' : !affordable ? "Can't afford" : ''
+    const count = eq.melee.filter(m => m === displayName).length
+    const canAdd = (meleeUsed + slots) <= limits.meleeMax && rem >= cost
+    const disabled = !canAdd && count === 0
+    const checkLabel = count === 0 ? '' : count === 1 ? '✓' : `×${count}`
+    const hint = canAdd && count > 0 ? 'Click to add another (dual wield)'
+      : !canAdd && count > 0 ? 'Click to remove one'
+      : !canAdd ? 'No slots available'
+      : ''
 
     return `
-      <div class="equip-row ${equipped ? 'equip-row--on' : ''} ${disabled ? 'equip-row--off' : ''}"
+      <div class="equip-row ${count > 0 ? 'equip-row--on' : ''} ${disabled ? 'equip-row--off' : ''}"
         ${!disabled ? `data-action="toggle-equip" data-unit-id="${unitId}" data-item="${esc(displayName)}" data-cat="melee"` : ''}
-        title="${reason}"
+        title="${hint}"
       >
-        <span class="equip-row-check">${equipped ? '✓' : ''}</span>
+        <span class="equip-row-check">${checkLabel}</span>
         <div class="equip-row-info">
           <span class="equip-row-name">${esc(displayName)}</span>
           ${stats?.Effect ? `<span class="equip-row-effect">${esc(stats.Effect)}</span>` : ''}
