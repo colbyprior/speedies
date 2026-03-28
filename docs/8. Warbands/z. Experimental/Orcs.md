@@ -14,7 +14,7 @@ sidebar_label: Orcs
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
 | Orc Chief | 6 | 12 | 12 | 14 | 12| 8 | 1 | 1 | 0 | 0 | [Leader](#leader), [Rage](#rage) | 0 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=) |
-| Orc Shaman | 6 | 14 | - | 14 | 12| 10 | 1 | 1 | 0 | 0 | [Rage](#rage), [Green Magic](#green-magic) | 0 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=) |
+| Orc Shaman | 6 | 14 | - | 14 | 12| 10 | 1 | 1 | 0 | 0 | [Rage](#rage), [Green Magic](#green-magic), [Apprentice Spellcaster](#apprentice-spellcaster) | 0 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=) |
 | Orc Bonehead | 6 | 13 | 14 | 14 | 12| 10 | 1 | 1 | 0 | 0 | [Rage](#rage) | 0 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=) |
 | Orc Barbarian | 6 | 13 | - | 14 | 12| 10 | 1 | 1 | 0 | 0 | [Rage](#rage), [Whirlwind](#whirlwind) | 0 | 2 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=) |
 
@@ -39,6 +39,10 @@ After causing a critical melee or ranged attack: Immediately make a melee attack
 *Spellcasting*
 
 This unit can cast Green Magic.
+### Apprentice Spellcaster
+*Inherent*
+
+This unit makes all spellcasting checks with a -2 to the roll.
 ### Whirlwind
 *Inherent*
 

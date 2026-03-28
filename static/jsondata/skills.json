@@ -506,5 +506,17 @@
     "DRAFT": "TRUE",
     "Type": "Inherent",
     "Description": "This unit can be thrown using the Lobber skill. See the Lobber skill for more information."
+  },
+  "Free mutation": {
+    "Name": "Free mutation",
+    "DRAFT": "TRUE",
+    "Type": "Inherent",
+    "Description": "This unit gets one mutation of choice for free."
+  },
+  "Apprentice Spellcaster": {
+    "Name": "Apprentice Spellcaster",
+    "DRAFT": "TRUE",
+    "Type": "Inherent",
+    "Description": "This unit makes all spellcasting checks with a -2 to the roll."
   }
 }
