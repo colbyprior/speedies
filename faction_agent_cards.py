@@ -112,9 +112,9 @@ def create_card_content(name, agent_data, skills_db):
         about = Paragraph(agent_data['About'], body_style)
         card_data.append(about)
 
-    # Checkbox table for Blight and Plaguetouched
+    # Checkbox table for Blight and Deathtouched
     checkbox_table = Table(
-        [['Blight', 'Plaguetouched'], ['', '']],
+        [['Blight', 'Deathtouched'], ['', '']],
         colWidths=[0.7 * inch, 0.8 * inch]
     )
     checkbox_table.setStyle(TableStyle([
