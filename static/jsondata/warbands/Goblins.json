@@ -1,0 +1,334 @@
+{
+    "Name": "Goblins",
+    "Status": "Draft",
+    "Complexity": "★★☆",
+    "Max Units": "18",
+    "Rout Threshold": "7",
+    "Play Style": "Sneaky Goblins",
+    "Preamble": "",
+    "Special Rules": {
+        "Totem": "Pick a totem from Mushroom, Goblin Dog and Spider at warband creation. This will impact unit and equipment availability."
+    },
+    "Heroes": [
+        {
+            "Name": "Goblin Chief",
+            "Type": "Leader",
+            "Type Cap": "1",
+            "Move": "5",
+            "Piercing": "0",
+            "Injury": "0",
+            "Melee": "13",
+            "Ranged": "13",
+            "Defense": "19",
+            "Wounds": "1",
+            "Agility": "10",
+            "Attacks": "1",
+            "Morale": "10",
+            "Cost": 0,
+            "Skills": [
+                "Leader",
+                "Rage",
+                "Recovery",
+                "Runner"
+            ]
+        },
+        {
+            "Name": "Goblin Shaman",
+            "Type": "Hero",
+            "Type Cap": "1",
+            "Move": "5",
+            "Piercing": "0",
+            "Injury": "0",
+            "Melee": "14",
+            "Ranged": "-",
+            "Defense": "19",
+            "Wounds": "1",
+            "Agility": "10",
+            "Attacks": "1",
+            "Morale": "11",
+            "Cost": 0,
+            "Skills": [
+                "Recovery",
+                "Runner",
+                "Rage",
+                "Green Magic"
+            ]
+        },
+        {
+            "Name": "Goblin Stickboss",
+            "Type": "Hero",
+            "Type Cap": "1",
+            "Move": "5",
+            "Piercing": "0",
+            "Injury": "0",
+            "Melee": "13",
+            "Ranged": "-",
+            "Defense": "19",
+            "Wounds": "1",
+            "Agility": "10",
+            "Attacks": "1",
+            "Morale": "10",
+            "Cost": 0,
+            "Skills": [
+                "Recovery",
+                "Runner",
+                "Rage",
+                "Animal Leader"
+            ]
+        },
+        {
+            "Name": "Goblin Assassin",
+            "Type": "Hero",
+            "Type Cap": "-",
+            "Move": "5",
+            "Piercing": "0",
+            "Injury": "0",
+            "Melee": "13",
+            "Ranged": "13",
+            "Defense": "19",
+            "Wounds": "1",
+            "Agility": "8",
+            "Attacks": "1",
+            "Morale": "11",
+            "Cost": 0,
+            "Skills": [
+                "Recovery",
+                "Runner",
+                "Rage"
+            ]
+        }
+    ],
+    "Henchmen": [
+        {
+            "Name": "Goblin",
+            "Type Cap": "-",
+            "Move": "5",
+            "Piercing": "0",
+            "Injury": "0",
+            "Melee": "15",
+            "Ranged": "14",
+            "Defense": "-",
+            "Wounds": "1",
+            "Agility": "10",
+            "Attacks": "1",
+            "Morale": "14",
+            "Cost": 0,
+            "Skills": [
+                "Recovery",
+                "Runner",
+                "Rage"
+            ]
+        },
+        {
+            "Name": "Goblin Fanatic",
+            "Type Cap": "4",
+            "Move": "5",
+            "Piercing": "0",
+            "Injury": "0",
+            "Melee": "13",
+            "Ranged": "-",
+            "Defense": "-",
+            "Wounds": "1",
+            "Agility": "10",
+            "Attacks": "1",
+            "Morale": "12",
+            "Cost": 0,
+            "Skills": [
+                "Recovery",
+                "Runner",
+                "Rage",
+                "Goblin Fanatic"
+            ]
+        },
+        {
+            "Name": "Small Mushroom Monster (Mushroom Totem Only)",
+            "Type Cap": "5",
+            "Move": "6-12",
+            "Piercing": "0",
+            "Injury": "0",
+            "Melee": "14",
+            "Ranged": "-",
+            "Defense": "16",
+            "Wounds": "1",
+            "Agility": "8",
+            "Attacks": "1",
+            "Morale": "16",
+            "Cost": 0,
+            "Skills": [
+				"Animal",
+                "Bumbling Movement"
+            ]
+        },
+        {
+            "Name": "Giant Spider (Spider Totem Only)",
+            "Type Cap": "5",
+            "Move": "7",
+            "Piercing": "0",
+            "Injury": "0",
+            "Melee": "14",
+            "Ranged": "-",
+            "Defense": "18",
+            "Wounds": "1",
+            "Agility": "6",
+            "Attacks": "1",
+            "Morale": "16",
+            "Cost": 0,
+            "Skills": [
+				"Animal"
+            ]
+        },
+        {
+            "Name": "Goblin Dog (Goblin Dog Totem Only)",
+            "Type Cap": "5",
+            "Move": "7",
+            "Piercing": "0",
+            "Injury": "0",
+            "Melee": "14",
+            "Ranged": "-",
+            "Defense": "18",
+            "Wounds": "1",
+            "Agility": "10",
+            "Attacks": "1",
+            "Morale": "16",
+            "Cost": 0,
+            "Skills": [
+				"Animal",
+                "Pack Tactics"
+            ]
+        },
+        {
+            "Name": "Giant Mushroom Monster (Mushroom Totem Only)",
+            "Type Cap": "1",
+            "Move": "6-12",
+            "Piercing": "3",
+            "Injury": "0",
+            "Melee": "13",
+            "Ranged": "-",
+            "Defense": "14",
+            "Wounds": "2",
+            "Agility": "12",
+            "Attacks": "3",
+            "Morale": "14",
+            "Cost": 0,
+            "Skills": [
+                "Cowardly",
+                "Fear",
+                "Large",
+                "Animal",
+                "Bumbling Movement"
+            ]
+        },
+        {
+            "Name": "Troll (Goblin Dog Totem Only)",
+            "Type Cap": "1",
+            "Move": "6",
+            "Piercing": "3",
+            "Injury": "0",
+            "Melee": "13",
+            "Ranged": "-",
+            "Defense": "14",
+            "Wounds": "3",
+            "Agility": "14",
+            "Attacks": "2",
+            "Morale": "14",
+            "Cost": 0,
+            "Skills": [
+                "Cowardly",
+                "Fear",
+                "Large",
+                "Regeneration",
+                "No Equipment"
+            ]
+        },
+        {
+            "Name": "Giant Spider (Spider Totem Only)",
+            "Type Cap": "1",
+            "Move": "7",
+            "Piercing": "3",
+            "Injury": "0",
+            "Melee": "13",
+            "Ranged": "-",
+            "Defense": "14",
+            "Wounds": "2",
+            "Agility": "8",
+            "Attacks": "3",
+            "Morale": "14",
+            "Cost": 0,
+            "Skills": [
+                "Fear",
+                "Large",
+                "Animal"
+            ]
+        }
+    ],
+    "Available Skills": {
+        "Goblin Chief": {
+            "Mel": "",
+            "Rng": "",
+            "Def": "",
+            "Agi": "",
+            "Mrl": ""
+        },
+        "Goblin Shaman": {
+            "Mel": "",
+            "Rng": "",
+            "Def": "",
+            "Agi": "",
+            "Mrl": ""
+        },
+        "Goblin Stickboss": {
+            "Mel": "",
+            "Rng": "",
+            "Def": "",
+            "Agi": "",
+            "Mrl": ""
+        },
+        "Goblin Assassin": {
+            "Mel": "",
+            "Rng": "",
+            "Def": "",
+            "Agi": "",
+            "Mrl": ""
+        },
+        "Goblin": {
+            "Mel": "",
+            "Rng": "",
+            "Def": "",
+            "Agi": "",
+            "Mrl": ""
+        },
+        "Goblin Fanatic": {
+            "Mel": "",
+            "Rng": "",
+            "Def": "",
+            "Agi": "",
+            "Mrl": ""
+        }
+    },
+    "Equipment": {
+        "Goblin Heroes": {
+            "Aliases": ["Goblin Heroes"],
+            "Melee Weapons": ["Dagger", "Hammer", "Sword / Axe", "Spear", "Great Hammer", "Great Sword / Axe", "Pike", "Shield"],
+            "Ranged Weapons": ["Throwing Stars", "Short Bow"],
+            "Armour": ["Light Armour"]
+        },
+        "Goblin Assassin": {
+            "Aliases": ["Goblin Assassin"],
+            "Melee Weapons": ["Dagger", "Hammer", "Sword / Axe"],
+            "Ranged Weapons": ["Throwing Stars", "Short Bow"],
+            "Armour": ["Light Armour"]
+        },
+        "Goblin": {
+            "Aliases": ["Goblin"],
+            "Melee Weapons": ["Dagger", "Hammer", "Sword / Axe", "Spear", "Shield"],
+            "Ranged Weapons": ["Short Bow"],
+            "Armour": ["Light Armour"]
+        },
+        "Goblin Fanatics": {
+            "Aliases": ["Goblin Fanatics"],
+            "Melee Weapons": ["Ball and Chain", "Sword / Axe" ,"Poisoned Dagger"],
+            "Ranged Weapons": [],
+            "Armour": []
+        }
+    }
+}

@@ -1,0 +1,249 @@
+{
+    "Name": "Orcs and Goblins",
+    "Status": "Draft",
+    "Complexity": "★★☆",
+    "Max Units": "15",
+    "Rout Threshold": "6",
+    "Play Style": "Strong Orcs with Sneaky Goblins",
+    "Preamble": "",
+    "Special Rules": {
+    },
+    "Heroes": [
+        {
+            "Name": "Orc Chief",
+            "Type": "Leader",
+            "Type Cap": "1",
+            "Move": "6",
+            "Piercing": "0",
+            "Injury": "0",
+            "Melee": "12",
+            "Ranged": "12",
+            "Defense": "14",
+            "Wounds": "1",
+            "Agility": "12",
+            "Attacks": "1",
+            "Morale": "8",
+            "Cost": 0,
+            "Skills": [
+                "Leader",
+                "Rage"
+            ]
+        },
+        {
+            "Name": "Goblin Shaman",
+            "Type": "Hero",
+            "Type Cap": "1",
+            "Move": "5",
+            "Piercing": "0",
+            "Injury": "0",
+            "Melee": "14",
+            "Ranged": "-",
+            "Defense": "19",
+            "Wounds": "1",
+            "Agility": "10",
+            "Attacks": "1",
+            "Morale": "11",
+            "Cost": 0,
+            "Skills": [
+                "Recovery",
+                "Runner",
+                "Rage",
+                "Green Magic"
+            ]
+        },
+        {
+            "Name": "Orc Bonehead",
+            "Type": "Hero",
+            "Type Cap": "2",
+            "Move": "6",
+            "Piercing": "0",
+            "Injury": "0",
+            "Melee": "13",
+            "Ranged": "14",
+            "Defense": "14",
+            "Wounds": "1",
+            "Agility": "12",
+            "Attacks": "1",
+            "Morale": "10",
+            "Cost": 0,
+            "Skills": [
+                "Rage"
+            ]
+        },
+        {
+            "Name": "Goblin Assassin",
+            "Type": "Hero",
+            "Type Cap": "-",
+            "Move": "5",
+            "Piercing": "0",
+            "Injury": "0",
+            "Melee": "13",
+            "Ranged": "13",
+            "Defense": "19",
+            "Wounds": "1",
+            "Agility": "8",
+            "Attacks": "1",
+            "Morale": "11",
+            "Cost": 0,
+            "Skills": [
+                "Recovery",
+                "Runner",
+                "Rage"
+            ]
+        }
+    ],
+    "Henchmen": [
+        {
+            "Name": "Goblin",
+            "Type Cap": "-",
+            "Move": "5",
+            "Piercing": "0",
+            "Injury": "0",
+            "Melee": "15",
+            "Ranged": "14",
+            "Defense": "-",
+            "Wounds": "1",
+            "Agility": "10",
+            "Attacks": "1",
+            "Morale": "14",
+            "Cost": 0,
+            "Skills": [
+                "Recovery",
+                "Runner",
+                "Rage"
+            ]
+        },
+        {
+            "Name": "Orc Charger",
+            "Type Cap": "4",
+            "Move": "6",
+            "Piercing": "0",
+            "Injury": "0",
+            "Melee": "13",
+            "Ranged": "15",
+            "Defense": "14",
+            "Wounds": "1",
+            "Agility": "12",
+            "Attacks": "1",
+            "Morale": "12",
+            "Cost": 45,
+            "Skills": [
+                "Rage",
+                "Berserker"
+            ]
+        },
+        {
+            "Name": "Orc Cleaver",
+            "Type Cap": "2",
+            "Move": "6",
+            "Piercing": "0",
+            "Injury": "0",
+            "Melee": "13",
+            "Ranged": "15",
+            "Defense": "14",
+            "Wounds": "1",
+            "Agility": "12",
+            "Attacks": "1",
+            "Morale": "12",
+            "Cost": 45,
+            "Skills": [
+                "Rage",
+                "Berserker",
+                "Whirlwind"
+            ]
+        },
+        {
+            "Name": "Troll",
+            "Type Cap": "1",
+            "Move": "6",
+            "Piercing": "3",
+            "Injury": "0",
+            "Melee": "13",
+            "Ranged": "-",
+            "Defense": "14",
+            "Wounds": "3",
+            "Agility": "14",
+            "Attacks": "2",
+            "Morale": "14",
+            "Cost": 0,
+            "Skills": [
+                "Cowardly",
+                "Fear",
+                "Large",
+                "Regeneration",
+                "No Equipment"
+            ]
+        }
+    ],
+    "Available Skills": {
+        "Orc Chief": {
+            "Mel": "",
+            "Rng": "",
+            "Def": "",
+            "Agi": "",
+            "Mrl": ""
+        },
+        "Goblin Shaman": {
+            "Mel": "",
+            "Rng": "",
+            "Def": "",
+            "Agi": "",
+            "Mrl": ""
+        },
+        "Orc Bonehead": {
+            "Mel": "",
+            "Rng": "",
+            "Def": "",
+            "Agi": "",
+            "Mrl": ""
+        },
+        "Goblin Assassin": {
+            "Mel": "",
+            "Rng": "",
+            "Def": "",
+            "Agi": "",
+            "Mrl": ""
+        },
+        "Goblin": {
+            "Mel": "",
+            "Rng": "",
+            "Def": "",
+            "Agi": "",
+            "Mrl": ""
+        },
+        "Orc Charger": {
+            "Mel": "",
+            "Rng": "",
+            "Def": "",
+            "Agi": "",
+            "Mrl": ""
+        },
+        "Orc Cleaver": {
+            "Mel": "",
+            "Rng": "",
+            "Def": "",
+            "Agi": "",
+            "Mrl": ""
+        }
+    },
+    "Equipment": {
+        "Orcs": {
+            "Aliases": ["Orcs"],
+            "Melee Weapons": ["Dagger", "Hammer", "Sword / Axe", "Spear", "Great Hammer", "Great Sword / Axe", "Pike", "Shield"],
+            "Ranged Weapons": ["Bow", "Crossbow"],
+            "Armour": ["Light Armour", "Heavy Armour"]
+        },
+        "Goblin Assassin": {
+            "Aliases": ["Goblin Assassin"],
+            "Melee Weapons": ["Dagger", "Hammer", "Sword / Axe"],
+            "Ranged Weapons": ["Throwing Stars", "Short Bow"],
+            "Armour": ["Light Armour"]
+        },
+        "Goblin": {
+            "Aliases": ["Goblin"],
+            "Melee Weapons": ["Dagger", "Hammer", "Sword / Axe", "Spear", "Shield"],
+            "Ranged Weapons": ["Short Bow"],
+            "Armour": ["Light Armour"]
+        }
+    }
+}

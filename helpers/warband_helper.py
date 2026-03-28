@@ -121,19 +121,6 @@ def henchmen_table(warband):
     return out_data
 
 
-def warband_promotion_options(warband):
-    out_data = "\n## Promotion Table\n"
-    #Removing the following lines now that we are changing promotion options
-    #Removing the following lines now that we are changing promotion options
-    out_data += "Coming Soon!" #Adding placeholder
-    #out_data += f"| Unit | Stat Ups | Gained Skills |\n"
-    #out_data += f"| ---- | ---- | ---- |\n"
-    for unit in warband.get("Promotion Options"):
-        promotion_data = warband.get("Promotion Options").get(unit)
-        out_data += f"| {unit} | {promotion_data.get('Stat Ups')} | {promotion_data.get('Gained Skills')} |\n"
-    return out_data
-
-
 def equipment_block(warband):
     ranged_weapon_effects = []
     out_data = "\n## Equipment\n"

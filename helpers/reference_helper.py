@@ -10,6 +10,8 @@ def melee_weapons_block():
     out_data += f"| ---- | ------ | -------- | ----- | ------ | ---- | ----- |\n"
     for weapon_key in global_melee_weapons_data:
         weapon_data = global_melee_weapons_data.get(weapon_key)
+        if weapon_data.get("DRAFT") == "TRUE":
+            continue
         out_data += f"| {weapon_data.get('Name')} | {weapon_data.get('Melee')} | {weapon_data.get('Injury')} |{weapon_data.get('Piercing')} |{weapon_data.get('Effect')} | {weapon_data.get('Cost')} | {weapon_data.get('Slots')} |\n"
     return out_data
 
@@ -20,6 +22,8 @@ def ranged_weapons_block():
     out_data += f"| ---- | ----- | ------ | -------- | ------ | ---- | ----- |\n"
     for weapon_key in global_ranged_weapons_data:
         weapon_data = global_ranged_weapons_data.get(weapon_key)
+        if weapon_data.get("DRAFT") == "TRUE":
+            continue
         effects = []
         for weapon_effect in weapon_data.get('Effect').split(','):
             weapon_effect = weapon_effect.strip()
@@ -40,6 +44,8 @@ def armour_block():
     out_data += f"| ---- | --- | ---- |\n"
     for armour_key in global_armour_data:
         armour_data = global_armour_data.get(armour_key)
+        if armour_data.get("DRAFT") == "TRUE":
+            continue
         out_data += f"| {armour_data.get('Name')} | {armour_data.get('Defense')} | {armour_data.get('Cost')} |\n"
     return out_data
 
@@ -57,6 +63,8 @@ def skills_block():
     }
     for skill_name in global_skills_data:
         skill_data = global_skills_data[skill_name]
+        if skill_data.get('DRAFT') == "TRUE":
+            continue
         if skill_data.get('Type') not in skill_types_data:
             skill_types_data[skill_data.get('Type')] = [skill_data]
         else:
@@ -79,7 +87,7 @@ def spells_block():
     spell_schools_data = {}
     for spell_name in global_spells_data:
         spell_data = global_spells_data[spell_name]
-        if spell_data.get('School') == "Cult Magic":
+        if spell_data.get('DRAFT') == "TRUE":
           continue
         if spell_data.get('School') not in spell_schools_data:
             spell_schools_data[spell_data.get('School')] = [spell_data]

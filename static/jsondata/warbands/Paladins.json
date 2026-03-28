@@ -1,5 +1,6 @@
 {
     "Name": "Paladins",
+    "Status": "Released",
     "Complexity": "★★☆",
     "Max Units": "15",
     "Rout Threshold": "6",
@@ -150,12 +151,6 @@
             "Skills": ["Mounted"]
         }
     ],
-    "Promotion Options": {
-    },
-    "Henchmen Upgrades": {
-        "Squire": "Normal",
-        "Novice": "Normal"
-    },
     "Available Skills": {
         "Justicar": {
             "Mel": "X",

@@ -8,8 +8,6 @@ from faction_agent_cards import generate_pdf
 
 def generate_warbands():
     for path in Path('static/jsondata/warbands').rglob('*.json'):
-        if "Cultists" in path.name:
-            continue # Skip Cultists
         with (open(str(path)) as f):
             warband = json5.load(f)
             all_skills, spell_schools = warband_helper.get_all_skills_and_spells(warband)
@@ -25,9 +23,13 @@ def generate_warbands():
             out_data += warband_helper.warband_available_skills(warband)
 
             # print(out_data)
-            f = open(f"docs/8. Warbands/{warband.get('Name')}.md", "w")
+            path = "docs/8. Warbands/"
+            if warband["Status"] != "Released":
+                path = "docs/8. Warbands/z. Experimental/"
+            f = open(f"{path}{warband.get('Name')}.md", "w")
             f.write(out_data)
             f.close()
+
 
 
 def generate_reference_pages():
