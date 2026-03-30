@@ -49,7 +49,7 @@ jobs:
           path: build
 
   deploy:
-#    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
     name: Deploy to GitHub Pages
     needs: build
 

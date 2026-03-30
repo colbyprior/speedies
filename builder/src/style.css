@@ -841,6 +841,24 @@ ul, ol { list-style: none; }
 
 .no-equip-msg { color: var(--text-muted); font-style: italic; text-align: center; padding: 20px 0; }
 
+.equip-remove-btn {
+  flex-shrink: 0;
+  background: transparent;
+  border: 1px solid var(--border2);
+  color: var(--text-muted);
+  border-radius: var(--radius-xs);
+  padding: 2px 7px;
+  font-size: 11px;
+  line-height: 1.6;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+.equip-remove-btn:hover {
+  background: var(--red-dim);
+  border-color: var(--red);
+  color: var(--red-light);
+}
+
 /* ─────────────────────────────────────────────────────────────
    VIEW WARBAND
 ───────────────────────────────────────────────────────────── */

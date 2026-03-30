@@ -10,13 +10,10 @@ Let me off this wild ride Mr. Bones
 | Rout Threshold | 7 |
 | Play Style | Slow and Skelly |
 
-## Special Rules
-### Undead Horde
-If any enemy unit you just fought dies from a Scar or Blight Roll, they are raised and added to your warband as a Zombie. If this would take you past the maximum number of units for your warband (after completing your own Scar and Blight Rolls), the Zombie is not added to your warband.
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| Necromancer | 6 | 14 | - | 18 | 10| 7 | 1 | 1 | 0 | 0 | [Leader](#leader), [Necromantic Magic](#necromantic-magic) | 65 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
+| Necromancer | 6 | 14 | - | 18 | 10| 7 | 1 | 1 | 0 | 0 | [Leader](#leader), [Necromantic Magic](#necromantic-magic) | 65 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale) |
 | Blight Cultist | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 | [Spread Blight (Major)](#spread-blight-(major)) | 45 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
 | Death Knight | 7 | 14 | 14 | 16 | 14| 13 | 1 | 2 | 0 | 0 | [Undead](#undead), [Fear](#fear) | 75 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
 | Reaper | 9 | 10 | - | - | 14| 13 | 2 | 1 | 3 | 3 | [Undead](#undead), [Fear](#fear), [Fixed Equipment (Scythe)](#fixed-equipment-(scythe)) | 85 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
@@ -24,7 +21,7 @@ If any enemy unit you just fought dies from a Scar or Blight Roll, they are rais
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
-| Zombie | 6 | 13 | - | - | 16| 13 | 1 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment) | 20 | - |
+| Zombie | 6 | 13 | - | - | 16| 13 | 1 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment), [Spread Blight (Minor)](#spread-blight-(minor)) | 25 | - |
 | Skeleton | 7 | 15 | 15 | - | 14| 13 | 1 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear) | 30 | - |
 | Ghost | 6 | 13 | - | 13 | 10| 13 | 1 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment), [Ethereal](#ethereal) | 40 | 3 |
 | Bone Giant | 7 | 9 | - | 13 | 14| 13 | 2 | 3 | 3 | 3 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment), [Large](#large) | 200 | 1 |
@@ -58,6 +55,10 @@ This unit has fixed equipment that cannot be lost. The equipment modifers are in
 *Inherent*
 
 This unit may not have any equipment, but does not suffer the penalties for fighting Unarmed.
+### Spread Blight (Minor)
+*Inherent*
+
+If this unit Incapacitates an enemy in Melee, that unit must make a Morale Check. If they fail it, they immediately contract the Blight. This unit is immune to the Blight. If this unit is Incapacitated in Melee, nothing happens.
 ### Ethereal
 *Inherent*
 
@@ -119,7 +120,7 @@ This weapon may be used with a Shield.
 
 | Name | Difficulty | Description |
 | ---- | ------ | ---- |
-| Raise Dead | 7 | Basic. One allied Zombie or Skeleton that was Incapacitated after the end of your last turn immediately returns to the battle, no longer counting towards your Rout Threshold. Place the model within 5" of the Caster. The model cannot be placed such that it is Engaged with an enemy. |
+| Raise Dead | 7 | Basic. One allied Zombie or Skeleton henchman that was Incapacitated after the end of your last turn immediately returns to the battle, no longer counting towards your Rout Threshold. Place the model within 5" of the Caster. The model cannot be placed such that it is Engaged with an enemy. The unit may not make Ranged Attacks this turn. |
 | Soul Rend | 12 | Cast Attack. Target one non-Undead, non-Animal unit you can see within 15" and perform a Cast Attack against them. If this spell Incapacitates the target, create a Zombie where it was Incapacitated. It is an ally to you and will count towards your Rout Threshold. |
 | Control Dead | 10 | Choose a point within 5" of the caster. Any allied Zombies or Skeletons within 1.5" of that point may immediately move again up to their Move. If this moves them into base contact with an enemy unit, they count as Engaging. |
 | Lifestealer | 16 | Choose a single unit within 5". The target suffers a Wound (no check required) and is automatically Incapacitated if this is its last Wound. The caster gains an extra Wound for the duration of the battle. This may take the caster's Wounds above its maximum value. This spell does not affect Undead units. |
@@ -129,7 +130,7 @@ This weapon may be used with a Shield.
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Necromancer | X | X |  |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
+| Necromancer | X |  |  |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale) |
 | Blight Cultist | X | X |  |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
 | Death Knight | X | X | X |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
 | Reaper | X |  |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |

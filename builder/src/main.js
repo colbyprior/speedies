@@ -290,42 +290,41 @@ function toggleEquip(unitId, itemName, category) {
       })
     }
   } else if (category === 'melee') {
+    // toggleEquip only adds — removal is handled by removeEquip via the ✕ button
     const limits = getSlotLimits(unitDef, unit.category, eq)
     const used = getMeleeUsed(eq)
     const slots = getMeleeSlots(itemName)
-    const count = eq.melee.filter(m => m === itemName).length
-    const canAdd = (used + slots) <= limits.meleeMax && goldRemaining(wb) >= getEquipCost(itemName, 'melee')
-
-    if (canAdd) {
-      // Add one instance (supports dual-wielding single-handed weapons)
-      mutateWarband(wb => {
-        wb.units.find(u => u.id === unitId).equipment.melee.push(itemName)
-      })
-    } else if (count > 0) {
-      // Slots full or can't afford — remove one instance instead
-      mutateWarband(wb => {
-        const u = wb.units.find(u => u.id === unitId)
-        const idx = u.equipment.melee.indexOf(itemName)
-        if (idx !== -1) u.equipment.melee.splice(idx, 1)
-      })
-    }
+    if ((used + slots) > limits.meleeMax) return
+    if (goldRemaining(wb) < getEquipCost(itemName, 'melee')) return
+    mutateWarband(wb => {
+      wb.units.find(u => u.id === unitId).equipment.melee.push(itemName)
+    })
   } else if (category === 'ranged') {
-    const equipped = eq.ranged.includes(itemName)
-    if (equipped) {
-      mutateWarband(wb => {
-        const u = wb.units.find(u => u.id === unitId)
-        u.equipment.ranged = u.equipment.ranged.filter(r => r !== itemName)
-      })
-    } else {
-      const limits = getSlotLimits(unitDef, unit.category, eq)
-      if (eq.ranged.length >= limits.rangedMax) return
-      const cost = getEquipCost(itemName, 'ranged')
-      if (goldRemaining(wb) < cost) return
-      mutateWarband(wb => {
-        wb.units.find(u => u.id === unitId).equipment.ranged.push(itemName)
-      })
-    }
+    const limits = getSlotLimits(unitDef, unit.category, eq)
+    if (eq.ranged.includes(itemName)) return  // already equipped; use ✕ to remove
+    if (eq.ranged.length >= limits.rangedMax) return
+    if (goldRemaining(wb) < getEquipCost(itemName, 'ranged')) return
+    mutateWarband(wb => {
+      wb.units.find(u => u.id === unitId).equipment.ranged.push(itemName)
+    })
   }
+}
+
+function removeEquip(unitId, itemName, category) {
+  const wb = currentWarband()
+  if (!wb) return
+  mutateWarband(wb => {
+    const u = wb.units.find(u => u.id === unitId)
+    if (!u) return
+    if (category === 'melee') {
+      const idx = u.equipment.melee.indexOf(itemName)
+      if (idx !== -1) u.equipment.melee.splice(idx, 1)
+    } else if (category === 'ranged') {
+      u.equipment.ranged = u.equipment.ranged.filter(r => r !== itemName)
+    } else if (category === 'armour') {
+      u.equipment.armour = null
+    }
+  })
 }
 
 function deleteWarband(id) {
@@ -706,6 +705,10 @@ function renderEquipModal(wb, wbData) {
     return `<div class="slot-bar">Weapon slots: ${totalWeaponSlots}/2 used · ${eq.armour ? '🔰 armoured' : '🔰 no armour'}</div>`
   }
 
+  function removeBtn(displayName, cat) {
+    return `<button class="equip-remove-btn" data-action="remove-equip" data-unit-id="${unitId}" data-item="${esc(displayName)}" data-cat="${cat}" title="Remove">✕</button>`
+  }
+
   function meleeItem(displayName) {
     const stats = getMeleeStats(displayName)
     const slots = getMeleeSlots(displayName)
@@ -713,18 +716,15 @@ function renderEquipModal(wb, wbData) {
     const count = eq.melee.filter(m => m === displayName).length
     const canAdd = (meleeUsed + slots) <= limits.meleeMax && rem >= cost
     const disabled = !canAdd && count === 0
-    const checkLabel = count === 0 ? '' : count === 1 ? '✓' : `×${count}`
-    const hint = canAdd && count > 0 ? 'Click to add another (dual wield)'
-      : !canAdd && count > 0 ? 'Click to remove one'
-      : !canAdd ? 'No slots available'
-      : ''
+    const countLabel = count === 0 ? '' : count === 1 ? '✓' : `×${count}`
+    const hint = canAdd && count > 0 ? 'Add another (dual wield)' : !canAdd ? 'No slots available' : ''
 
     return `
       <div class="equip-row ${count > 0 ? 'equip-row--on' : ''} ${disabled ? 'equip-row--off' : ''}"
         ${!disabled ? `data-action="toggle-equip" data-unit-id="${unitId}" data-item="${esc(displayName)}" data-cat="melee"` : ''}
         title="${hint}"
       >
-        <span class="equip-row-check">${checkLabel}</span>
+        <span class="equip-row-check">${countLabel}</span>
         <div class="equip-row-info">
           <span class="equip-row-name">${esc(displayName)}</span>
           ${stats?.Effect ? `<span class="equip-row-effect">${esc(stats.Effect)}</span>` : ''}
@@ -733,6 +733,7 @@ function renderEquipModal(wb, wbData) {
           <span class="equip-row-slot">${slots}-slot</span>
           <span class="equip-row-cost">${cost === 0 ? 'Free' : `${cost}g`}</span>
         </div>
+        ${count > 0 ? removeBtn(displayName, 'melee') : ''}
       </div>
     `
   }
@@ -741,14 +742,13 @@ function renderEquipModal(wb, wbData) {
     const stats = getRangedStats(displayName)
     const cost = stats ? (parseInt(stats.Cost) || 0) : 0
     const equipped = (eq.ranged || []).includes(displayName)
-    const slotsOk = equipped || (eq.ranged || []).length < limits.rangedMax
-    const affordable = equipped || (rem >= cost)
-    const disabled = !slotsOk || !affordable
-    const reason = !slotsOk ? 'No ranged slot' : !affordable ? "Can't afford" : ''
+    const canAdd = !equipped && (eq.ranged || []).length < limits.rangedMax && rem >= cost
+    const disabled = !canAdd && !equipped
+    const reason = !canAdd && !equipped ? (limits.rangedMax === 0 ? 'No ranged slot' : "Can't afford") : ''
 
     return `
       <div class="equip-row ${equipped ? 'equip-row--on' : ''} ${disabled ? 'equip-row--off' : ''}"
-        ${!disabled ? `data-action="toggle-equip" data-unit-id="${unitId}" data-item="${esc(displayName)}" data-cat="ranged"` : ''}
+        ${canAdd ? `data-action="toggle-equip" data-unit-id="${unitId}" data-item="${esc(displayName)}" data-cat="ranged"` : ''}
         title="${reason}"
       >
         <span class="equip-row-check">${equipped ? '✓' : ''}</span>
@@ -759,6 +759,7 @@ function renderEquipModal(wb, wbData) {
         <div class="equip-row-meta">
           <span class="equip-row-cost">${cost === 0 ? 'Free' : `${cost}g`}</span>
         </div>
+        ${equipped ? removeBtn(displayName, 'ranged') : ''}
       </div>
     `
   }
@@ -767,14 +768,13 @@ function renderEquipModal(wb, wbData) {
     const stats = getArmourStats(displayName)
     const cost = stats ? (parseInt(stats.Cost) || 0) : 0
     const equipped = eq.armour === displayName
-    const slotsOk = limits.armourMax > 0
-    const affordable = equipped || (rem >= cost)
-    const disabled = (!slotsOk || !affordable) && !equipped
-    const reason = !slotsOk ? 'No armour slot' : !affordable ? "Can't afford" : ''
+    const canAdd = !equipped && limits.armourMax > 0 && rem >= cost
+    const disabled = !canAdd && !equipped
+    const reason = !canAdd && !equipped ? (limits.armourMax === 0 ? 'No armour slot' : "Can't afford") : ''
 
     return `
       <div class="equip-row ${equipped ? 'equip-row--on' : ''} ${disabled ? 'equip-row--off' : ''}"
-        ${!disabled ? `data-action="toggle-equip" data-unit-id="${unitId}" data-item="${esc(displayName)}" data-cat="armour"` : ''}
+        ${canAdd ? `data-action="toggle-equip" data-unit-id="${unitId}" data-item="${esc(displayName)}" data-cat="armour"` : ''}
         title="${reason}"
       >
         <span class="equip-row-check">${equipped ? '✓' : ''}</span>
@@ -785,6 +785,7 @@ function renderEquipModal(wb, wbData) {
         <div class="equip-row-meta">
           <span class="equip-row-cost">${cost === 0 ? 'Free' : `${cost}g`}</span>
         </div>
+        ${equipped ? removeBtn(displayName, 'armour') : ''}
       </div>
     `
   }
@@ -1073,6 +1074,10 @@ document.addEventListener('click', e => {
 
     case 'toggle-equip':
       toggleEquip(el.dataset.unitId, el.dataset.item, el.dataset.cat)
+      break
+
+    case 'remove-equip':
+      removeEquip(el.dataset.unitId, el.dataset.item, el.dataset.cat)
       break
   }
 })
