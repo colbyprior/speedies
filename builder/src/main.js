@@ -1012,6 +1012,17 @@ function renderViewWarband() {
     return rows.join('')
   }
 
+  function skillLink(name) {
+    const anchor = name.toLowerCase().replace(/\s+/g, '-')
+    return `<a class="skill-tag" href="/Reference/Skill%20List#${anchor}" target="_blank" rel="noopener">${esc(name)}</a>`
+  }
+
+  function skillsHtml(unitDef) {
+    const skills = unitDef?.Skills || []
+    if (!skills.length) return ''
+    return `<div class="view-unit-skills">${skills.map(skillLink).join('')}</div>`
+  }
+
   function unitRow(unit) {
     const unitDef = findUnitDef(wbData, unit.typeName, unit.category)
     const cost = calcUnitCost(unit, wbData)
@@ -1020,6 +1031,7 @@ function renderViewWarband() {
       <tr>
         <td class="view-unit-cell">
           <div class="view-unit-name">${esc(unit.typeName)}</div>
+          ${skillsHtml(unitDef)}
         </td>
         ${unitDef ? (() => {
           const mov = parseInt(unitDef.Move) || 0
@@ -1122,6 +1134,7 @@ function renderViewWarband() {
           <span class="unit-card-cost">${cost}g</span>
         </div>
         <div class="unit-card-stats">${statsHtml}</div>
+        ${skillsHtml(unitDef) ? `<div class="unit-card-skills">${(unitDef?.Skills || []).map(skillLink).join('')}</div>` : ''}
         ${equipLines.length ? `<div class="unit-card-equip">${equipLines.join('')}</div>` : ''}
       </div>
     `

@@ -995,6 +995,22 @@ ul, ol { list-style: none; }
 .view-unit-name { font-weight: 700; }
 .view-cost-cell { font-weight: 700; color: var(--gold); white-space: nowrap; }
 
+.view-unit-skills { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px; }
+.skill-tag {
+  display: inline-block;
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 20px;
+  background: var(--bg4);
+  color: var(--text-muted);
+  text-decoration: none;
+  white-space: nowrap;
+  border: 1px solid var(--border);
+}
+.skill-tag:hover { color: var(--gold-light); border-color: var(--gold); }
+
+.unit-card-skills { display: flex; flex-wrap: wrap; gap: 4px; padding: 8px 14px; border-top: 1px solid var(--border); }
+
 .equip-row-view td { border-bottom: none; padding-top: 3px; padding-bottom: 3px; }
 .equip-row-view:last-child td { border-bottom: 1px solid var(--border); }
 .unit-table tr:hover.equip-row-view td { background: var(--bg3); }
