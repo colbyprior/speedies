@@ -277,11 +277,12 @@ function canAddUnit(warband, unitDef, category) {
     return { ok: false, reason: 'No Hero Slots' }
   }
 
+  const baseCost = parseInt(unitDef.Cost) || 0
   const cap = getUnitCap(unitDef)
   const count = warband.units.filter(u => u.typeName === unitDef.Name).length
+  if (baseCost === 0 && count >= 1) return { ok: false, reason: 'Free units limited to one' }
   if (cap !== Infinity && count >= cap) return { ok: false, reason: 'At Cap' }
 
-  const baseCost = parseInt(unitDef.Cost) || 0
   if (goldRemaining(warband) < baseCost) return { ok: false, reason: "Can't Afford" }
 
   return { ok: true }
