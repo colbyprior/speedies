@@ -89,8 +89,10 @@ function getEquipmentForUnit(wbData, unitTypeName) {
   return { melee: [], ranged: [], armour: [] }
 }
 
+// Only arcane schools restrict equipment (1 melee slot, no ranged, no armour).
+// Divine Magic is a divine school — those units keep full equipment slots.
 function isSpellcaster(unitDef) {
-  return (unitDef.Skills || []).some(s => s.includes('Magic'))
+  return (unitDef.Skills || []).some(s => s.includes('Magic') && s !== 'Divine Magic')
 }
 
 function hasNoEquipment(unitDef) {
