@@ -977,7 +977,7 @@ function renderViewWarband() {
       }
       rows.push(`<tr class="equip-row-view">
         <td class="equip-row-name-cell" colspan="2">⚔ ${esc(name)}</td>
-        <td colspan="6" class="equip-row-stats-cell">${parts.length ? parts.join(' · ') : '—'}</td>
+        <td colspan="10" class="equip-row-stats-cell">${parts.length ? parts.join(' · ') : '—'}</td>
         <td></td>
       </tr>`)
     }
@@ -994,7 +994,7 @@ function renderViewWarband() {
       if (stats.Effect) parts.push(esc(stats.Effect))
       rows.push(`<tr class="equip-row-view">
         <td class="equip-row-name-cell" colspan="2">🏹 ${esc(name)}</td>
-        <td colspan="6" class="equip-row-stats-cell">${parts.length ? parts.join(' · ') : '—'}</td>
+        <td colspan="10" class="equip-row-stats-cell">${parts.length ? parts.join(' · ') : '—'}</td>
         <td></td>
       </tr>`)
     }
@@ -1021,15 +1021,22 @@ function renderViewWarband() {
         <td class="view-unit-cell">
           <div class="view-unit-name">${esc(unit.typeName)}</div>
         </td>
-        ${unitDef ? `
-          <td>${statVal(unitDef.Move)}"</td>
-          <td>${statVal(unitDef.Melee)}</td>
-          <td>${statVal(unitDef.Ranged)}</td>
-          <td>${statVal(unitDef.Defense)}</td>
-          <td>${statVal(unitDef.Agility)}</td>
-          <td>${statVal(unitDef.Attacks)}</td>
-          <td>${statVal(unitDef.Wounds)}</td>
-        ` : `<td colspan="7">—</td>`}
+        ${unitDef ? (() => {
+          const mov = parseInt(unitDef.Move) || 0
+          return `
+            <td>${statVal(unitDef.Move)}"</td>
+            <td>${mov + 3}"</td>
+            <td>${statVal(unitDef.Melee)}</td>
+            <td>${statVal(unitDef.Ranged)}</td>
+            <td>${statVal(unitDef.Defense)}</td>
+            <td>${statVal(unitDef.Agility)}</td>
+            <td>${statVal(unitDef.Morale)}</td>
+            <td>${statVal(unitDef.Attacks)}</td>
+            <td>${statVal(unitDef.Wounds)}</td>
+            <td>${statVal(unitDef.Injury)}</td>
+            <td>${statVal(unitDef.Piercing)}</td>
+          `
+        })() : `<td colspan="11">—</td>`}
         <td class="view-cost-cell">${cost}g</td>
       </tr>
       ${equipRows(eq)}
@@ -1038,8 +1045,8 @@ function renderViewWarband() {
 
   const thead = `
     <thead><tr>
-      <th>Unit</th><th>Mov</th><th>Mel</th><th>Rng</th>
-      <th>Def</th><th>Agi</th><th>Atk</th><th>Wnd</th><th>Cost</th>
+      <th>Unit</th><th>Mov</th><th>Run</th><th>Mel</th><th>Rgd</th>
+      <th>Def</th><th>Agi</th><th>Mrl</th><th>Atk</th><th>Wnd</th><th>Inj</th><th>Prc</th><th>Cost</th>
     </tr></thead>
   `
 
