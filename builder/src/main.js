@@ -312,6 +312,32 @@ function removeUnit(unitId) {
   })
 }
 
+function duplicateUnit(unitId) {
+  const wb = currentWarband()
+  if (!wb) return
+  const unit = wb.units.find(u => u.id === unitId)
+  if (!unit) return
+  const wbData = WARBANDS[wb.type]
+  const unitDef = findUnitDef(wbData, unit.typeName, unit.category)
+  if (!unitDef) return
+  const check = canAddUnit(wb, unitDef, unit.category)
+  if (!check.ok) return
+  const equipCost = calcUnitCost(unit, wbData) - (parseInt(unitDef.Cost) || 0)
+  if (goldRemaining(wb) < (parseInt(unitDef.Cost) || 0) + equipCost) return
+  mutateWarband(wb => {
+    wb.units.push({
+      id: uid(),
+      typeName: unit.typeName,
+      category: unit.category,
+      equipment: {
+        melee: [...unit.equipment.melee],
+        ranged: [...unit.equipment.ranged],
+        armour: unit.equipment.armour,
+      },
+    })
+  })
+}
+
 function toggleEquip(unitId, itemName, category) {
   const wb = currentWarband()
   if (!wb) return
@@ -346,6 +372,7 @@ function toggleEquip(unitId, itemName, category) {
     if ((used + slots) > limits.meleeMax) return
     const resolvedName = resolveAlias(itemName, 'Melee Weapons')
     const isShield = resolvedName === 'Shield' || resolvedName === 'Tower Shield'
+    if (isShield && hasShield(eq)) return
     if (isShield && (eq.ranged || []).some(r => !isLightRanged(r))) return
     if (goldRemaining(wb) < getEquipCost(itemName, 'melee')) return
     mutateWarband(wb => {
@@ -719,6 +746,7 @@ function renderRosterUnit(unit, wb, wbData) {
         </div>
         <div class="roster-unit-right">
           <span class="roster-unit-cost">${cost}g</span>
+          <button class="btn btn-ghost btn-xs" data-action="duplicate-unit" data-unit-id="${unit.id}" title="Duplicate unit">⧉</button>
           <button class="btn btn-danger btn-xs" data-action="remove-unit" data-unit-id="${unit.id}" title="Remove unit">✕</button>
         </div>
       </div>
@@ -786,11 +814,12 @@ function renderEquipModal(wb, wbData) {
     const count = eq.melee.filter(m => m === displayName).length
     const resolvedMelee = resolveAlias(displayName, 'Melee Weapons')
     const isShieldItem = resolvedMelee === 'Shield' || resolvedMelee === 'Tower Shield'
+    const shieldBlockedByShield = isShieldItem && hasShield(eq)
     const shieldBlockedByRanged = isShieldItem && (eq.ranged || []).some(r => !isLightRanged(r))
-    const canAdd = (meleeUsed + slots) <= limits.meleeMax && rem >= cost && !shieldBlockedByRanged
+    const canAdd = (meleeUsed + slots) <= limits.meleeMax && rem >= cost && !shieldBlockedByShield && !shieldBlockedByRanged
     const disabled = !canAdd && count === 0
     const countLabel = count === 0 ? '' : count === 1 ? '✓' : `×${count}`
-    const hint = canAdd && count > 0 ? 'Add another (dual wield)' : shieldBlockedByRanged ? 'Incompatible with non-light ranged weapon' : !canAdd ? 'No slots available' : ''
+    const hint = canAdd && count > 0 ? 'Add another (dual wield)' : shieldBlockedByShield ? 'Already carrying a shield' : shieldBlockedByRanged ? 'Incompatible with non-light ranged weapon' : !canAdd ? 'No slots available' : ''
 
     return `
       <div class="equip-row ${count > 0 ? 'equip-row--on' : ''} ${disabled ? 'equip-row--off' : ''}"
@@ -1137,6 +1166,10 @@ document.addEventListener('click', e => {
 
     case 'remove-unit':
       removeUnit(el.dataset.unitId)
+      break
+
+    case 'duplicate-unit':
+      duplicateUnit(el.dataset.unitId)
       break
 
     case 'set-tab':
