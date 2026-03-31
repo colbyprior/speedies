@@ -141,6 +141,18 @@ function getMeleeUsed(eq) {
   return (eq.melee || []).reduce((sum, name) => sum + getMeleeSlots(name), 0)
 }
 
+function sortUnits(units, wbData) {
+  const heroOrder = (wbData.Heroes || []).map(h => h.Name)
+  const henchOrder = (wbData.Henchmen || []).map(h => h.Name)
+  return [...units].sort((a, b) => {
+    const aHero = a.category === 'hero'
+    const bHero = b.category === 'hero'
+    if (aHero !== bHero) return aHero ? -1 : 1
+    const order = aHero ? heroOrder : henchOrder
+    return order.indexOf(a.typeName) - order.indexOf(b.typeName)
+  })
+}
+
 function hasShield(eq) {
   return (eq.melee || []).some(name => {
     const key = resolveAlias(name, 'Melee Weapons')
@@ -674,7 +686,7 @@ function renderRosterPanel(wb, wbData) {
 
   return `
     <div class="roster-list">
-      ${wb.units.map(unit => renderRosterUnit(unit, wb, wbData)).join('')}
+      ${sortUnits(wb.units, wbData).map(unit => renderRosterUnit(unit, wb, wbData)).join('')}
     </div>
   `
 }
@@ -908,8 +920,9 @@ function renderViewWarband() {
   const spent = calcTotalSpent(wb)
   const rem = STARTING_GOLD - spent
 
-  const heroes = wb.units.filter(u => u.category === 'hero')
-  const henchmen = wb.units.filter(u => u.category === 'henchman')
+  const sorted = sortUnits(wb.units, wbData)
+  const heroes = sorted.filter(u => u.category === 'hero')
+  const henchmen = sorted.filter(u => u.category === 'henchman')
 
   function unitRow(unit) {
     const unitDef = findUnitDef(wbData, unit.typeName, unit.category)
