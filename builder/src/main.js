@@ -1050,6 +1050,98 @@ function renderViewWarband() {
     </tr></thead>
   `
 
+  function statChip(label, value) {
+    return `<div class="unit-card-stat"><span class="unit-card-stat-label">${label}</span><span class="unit-card-stat-value">${value}</span></div>`
+  }
+
+  function viewUnitCard(unit) {
+    const unitDef = findUnitDef(wbData, unit.typeName, unit.category)
+    const cost = calcUnitCost(unit, wbData)
+    const eq = unit.equipment
+
+    const statsHtml = unitDef ? (() => {
+      const mov = parseInt(unitDef.Move) || 0
+      return [
+        statChip('Mov', `${statVal(unitDef.Move)}"`),
+        statChip('Run', `${mov + 3}"`),
+        statChip('Mel', statVal(unitDef.Melee)),
+        statChip('Rgd', statVal(unitDef.Ranged)),
+        statChip('Def', statVal(unitDef.Defense)),
+        statChip('Agi', statVal(unitDef.Agility)),
+        statChip('Mrl', statVal(unitDef.Morale)),
+        statChip('Atk', statVal(unitDef.Attacks)),
+        statChip('Wnd', statVal(unitDef.Wounds)),
+        statChip('Inj', statVal(unitDef.Injury)),
+        statChip('Prc', statVal(unitDef.Piercing)),
+      ].join('')
+    })() : '<span class="text-muted">—</span>'
+
+    const equipLines = []
+    for (const name of (eq.melee || [])) {
+      const stats = getMeleeStats(name)
+      if (!stats) continue
+      const resolvedKey = resolveAlias(name, 'Melee Weapons')
+      const isShieldItem = resolvedKey === 'Shield' || resolvedKey === 'Tower Shield'
+      const parts = []
+      if (isShieldItem) {
+        const m = (stats.Effect || '').match(/\+(\d+)\s*Def/)
+        if (m) parts.push(`Def +${m[1]}`)
+      } else {
+        const mel = parseInt(stats.Melee) || 0
+        const inj = parseInt(stats.Injury) || 0
+        const prc = parseInt(stats.Piercing) || 0
+        if (mel !== 0) parts.push(`Mel ${mel > 0 ? '+' : ''}${mel}`)
+        if (inj !== 0) parts.push(`Inj ${inj > 0 ? '+' : ''}${inj}`)
+        if (prc !== 0) parts.push(`Prc ${prc > 0 ? '+' : ''}${prc}`)
+        if (stats.Effect) parts.push(esc(stats.Effect))
+      }
+      equipLines.push(`<div class="unit-card-equip-line">⚔ ${esc(name)}${parts.length ? `<span class="unit-card-equip-stats"> · ${parts.join(' · ')}</span>` : ''}</div>`)
+    }
+    for (const name of (eq.ranged || [])) {
+      const stats = getRangedStats(name)
+      if (!stats) continue
+      const parts = []
+      if (stats.Range) parts.push(`Rng ${esc(stats.Range)}`)
+      const inj = parseInt(stats.Injury) || 0
+      const prc = parseInt(stats.Piercing) || 0
+      if (inj !== 0) parts.push(`Inj ${inj > 0 ? '+' : ''}${inj}`)
+      if (prc !== 0) parts.push(`Prc ${prc > 0 ? '+' : ''}${prc}`)
+      if (stats.Effect) parts.push(esc(stats.Effect))
+      equipLines.push(`<div class="unit-card-equip-line">🏹 ${esc(name)}${parts.length ? `<span class="unit-card-equip-stats"> · ${parts.join(' · ')}</span>` : ''}</div>`)
+    }
+    if (eq.armour) {
+      const stats = getArmourStats(eq.armour)
+      const def = parseInt(stats?.Defense) || 0
+      equipLines.push(`<div class="unit-card-equip-line">🔰 ${esc(eq.armour)}${def ? `<span class="unit-card-equip-stats"> · Def +${def}</span>` : ''}</div>`)
+    }
+
+    return `
+      <div class="unit-card">
+        <div class="unit-card-header">
+          <span class="unit-card-name">${esc(unit.typeName)}</span>
+          <span class="unit-card-cost">${cost}g</span>
+        </div>
+        <div class="unit-card-stats">${statsHtml}</div>
+        ${equipLines.length ? `<div class="unit-card-equip">${equipLines.join('')}</div>` : ''}
+      </div>
+    `
+  }
+
+  function viewUnitSection(label, units) {
+    if (!units.length) return ''
+    return `
+      <section class="view-unit-section">
+        <h2>${label}</h2>
+        <div class="table-wrap view-desktop">
+          <table class="unit-table">${thead}<tbody>${units.map(unitRow).join('')}</tbody></table>
+        </div>
+        <div class="view-mobile unit-card-list">
+          ${units.map(viewUnitCard).join('')}
+        </div>
+      </section>
+    `
+  }
+
   return `
     <div class="view-warband">
       <header class="view-header">
@@ -1080,23 +1172,8 @@ function renderViewWarband() {
         </div>
       </div>
 
-      ${heroes.length > 0 ? `
-        <section class="view-unit-section">
-          <h2>Heroes</h2>
-          <div class="table-wrap">
-            <table class="unit-table">${thead}<tbody>${heroes.map(unitRow).join('')}</tbody></table>
-          </div>
-        </section>
-      ` : ''}
-
-      ${henchmen.length > 0 ? `
-        <section class="view-unit-section">
-          <h2>Henchmen</h2>
-          <div class="table-wrap">
-            <table class="unit-table">${thead}<tbody>${henchmen.map(unitRow).join('')}</tbody></table>
-          </div>
-        </section>
-      ` : ''}
+      ${viewUnitSection('Heroes', heroes)}
+      ${viewUnitSection('Henchmen', henchmen)}
 
       ${wb.units.length === 0 ? `
         <div class="view-empty">
