@@ -28,6 +28,8 @@ for (const rawStr of Object.values(rawWarbandStrings)) {
 
 const STARTING_GOLD = 500
 const STORAGE_KEY = 'blightmeer-builder-v1'
+const BASE_HERO_SLOTS = 3
+const HERO_SLOT_COSTS = [50, 75, 100]
 
 // ─────────────────────────────────────────────────────────────
 // EQUIPMENT UTILITIES
@@ -153,10 +155,25 @@ function calcUnitCost(unit, wbData) {
   return cost
 }
 
+function getHeroSlots(wb) {
+  return BASE_HERO_SLOTS + (wb.heroSlotsPurchased || 0)
+}
+
+function getNextHeroSlotCost(wb) {
+  const purchased = wb.heroSlotsPurchased || 0
+  return purchased < HERO_SLOT_COSTS.length ? HERO_SLOT_COSTS[purchased] : null
+}
+
+function heroCount(wb) {
+  return wb.units.filter(u => u.category === 'hero').length
+}
+
 function calcTotalSpent(warband) {
   const wbData = WARBANDS[warband.type]
   if (!wbData) return 0
-  return warband.units.reduce((sum, u) => sum + calcUnitCost(u, wbData), 0)
+  const unitCosts = warband.units.reduce((sum, u) => sum + calcUnitCost(u, wbData), 0)
+  const slotCosts = HERO_SLOT_COSTS.slice(0, warband.heroSlotsPurchased || 0).reduce((s, c) => s + c, 0)
+  return unitCosts + slotCosts
 }
 
 function goldRemaining(warband) {
@@ -216,6 +233,7 @@ function createWarband(typeName, name) {
     type: typeName,
     createdAt: Date.now(),
     units: [],
+    heroSlotsPurchased: 0,
   }
   state.savedWarbands.push(wb)
   state.currentId = wb.id
@@ -225,10 +243,14 @@ function createWarband(typeName, name) {
   render()
 }
 
-function canAddUnit(warband, unitDef) {
+function canAddUnit(warband, unitDef, category) {
   const wbData = WARBANDS[warband.type]
   const maxUnits = parseInt(wbData?.['Max Units']) || 15
   if (warband.units.length >= maxUnits) return { ok: false, reason: 'Full' }
+
+  if (category === 'hero' && heroCount(warband) >= getHeroSlots(warband)) {
+    return { ok: false, reason: 'No Hero Slots' }
+  }
 
   const cap = getUnitCap(unitDef)
   const count = warband.units.filter(u => u.typeName === unitDef.Name).length
@@ -552,7 +574,7 @@ function renderHirePanel(wb, wbData) {
   function unitCard(unitDef, category) {
     const count = wb.units.filter(u => u.typeName === unitDef.Name).length
     const cap = getUnitCap(unitDef)
-    const check = canAddUnit(wb, unitDef)
+    const check = canAddUnit(wb, unitDef, category)
     const isLeader = unitDef.Type === 'Leader'
     const cost = parseInt(unitDef.Cost) || 0
 
@@ -591,10 +613,27 @@ function renderHirePanel(wb, wbData) {
     `
   }
 
+  const heroSlots = getHeroSlots(wb)
+  const heroesHired = heroCount(wb)
+  const nextSlotCost = getNextHeroSlotCost(wb)
+  const canBuySlot = nextSlotCost !== null && goldRemaining(wb) >= nextSlotCost
+
   return `
     <div class="hire-inner">
       <div class="hire-section">
-        <h3 class="hire-section-title">Heroes</h3>
+        <div class="hire-section-header">
+          <h3 class="hire-section-title">Heroes</h3>
+          <div class="hero-slots-info">
+            <span class="hero-slots-count">${heroesHired} / ${heroSlots} slots</span>
+            ${nextSlotCost !== null ? `
+              <button
+                class="btn btn-sm ${canBuySlot ? 'btn-gold' : 'btn-ghost'}"
+                data-action="buy-hero-slot"
+                ${!canBuySlot ? 'disabled' : ''}
+              >+ Slot (${nextSlotCost}g)</button>
+            ` : `<span class="hero-slots-max">Max slots</span>`}
+          </div>
+        </div>
         ${(wbData.Heroes || []).map(h => unitCard(h, 'hero')).join('')}
       </div>
       <div class="hire-section">
@@ -1048,6 +1087,15 @@ document.addEventListener('click', e => {
       render()
       window.scrollTo(0, 0)
       break
+
+    case 'buy-hero-slot': {
+      const wb = currentWarband()
+      if (!wb) break
+      const cost = getNextHeroSlotCost(wb)
+      if (cost === null || goldRemaining(wb) < cost) break
+      mutateWarband(wb => { wb.heroSlotsPurchased = (wb.heroSlotsPurchased || 0) + 1 })
+      break
+    }
 
     case 'add-unit':
       addUnit(el.dataset.unitName, el.dataset.unitCat)

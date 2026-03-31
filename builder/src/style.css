@@ -549,14 +549,56 @@ ul, ol { list-style: none; }
   gap: 20px;
 }
 
+.hire-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+
 .hire-section-title {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: var(--text-muted);
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* standalone title (Henchmen) gets bottom border + spacing directly */
+.hire-section > .hire-section-title {
   margin-bottom: 10px;
   padding-bottom: 6px;
   border-bottom: 1px solid var(--border);
+}
+
+.hero-slots-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-slots-count {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.hero-slots-max {
+  font-size: 11px;
+  color: var(--gold-dark);
+}
+
+.btn-gold {
+  background: var(--gold-dim);
+  color: var(--gold-light);
+  border: 1px solid var(--gold-dark);
+}
+.btn-gold:hover:not(:disabled) {
+  background: var(--gold-dark);
+  color: var(--gold-light);
 }
 
 .hire-card {
