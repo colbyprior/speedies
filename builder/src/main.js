@@ -141,6 +141,19 @@ function getMeleeUsed(eq) {
   return (eq.melee || []).reduce((sum, name) => sum + getMeleeSlots(name), 0)
 }
 
+function hasShield(eq) {
+  return (eq.melee || []).some(name => {
+    const key = resolveAlias(name, 'Melee Weapons')
+    return key === 'Shield' || key === 'Tower Shield'
+  })
+}
+
+function isLightRanged(displayName) {
+  const stats = getRangedStats(displayName)
+  if (!stats || !stats.Effect) return false
+  return stats.Effect.split(',').map(s => s.trim()).includes('Light')
+}
+
 // ─────────────────────────────────────────────────────────────
 // COST CALCULATION
 // ─────────────────────────────────────────────────────────────
@@ -319,6 +332,9 @@ function toggleEquip(unitId, itemName, category) {
     const used = getMeleeUsed(eq)
     const slots = getMeleeSlots(itemName)
     if ((used + slots) > limits.meleeMax) return
+    const resolvedName = resolveAlias(itemName, 'Melee Weapons')
+    const isShield = resolvedName === 'Shield' || resolvedName === 'Tower Shield'
+    if (isShield && (eq.ranged || []).some(r => !isLightRanged(r))) return
     if (goldRemaining(wb) < getEquipCost(itemName, 'melee')) return
     mutateWarband(wb => {
       wb.units.find(u => u.id === unitId).equipment.melee.push(itemName)
@@ -327,6 +343,7 @@ function toggleEquip(unitId, itemName, category) {
     const limits = getSlotLimits(unitDef, unit.category, eq)
     if (eq.ranged.includes(itemName)) return  // already equipped; use ✕ to remove
     if (eq.ranged.length >= limits.rangedMax) return
+    if (hasShield(eq) && !isLightRanged(itemName)) return
     if (goldRemaining(wb) < getEquipCost(itemName, 'ranged')) return
     mutateWarband(wb => {
       wb.units.find(u => u.id === unitId).equipment.ranged.push(itemName)
@@ -755,10 +772,13 @@ function renderEquipModal(wb, wbData) {
     const slots = getMeleeSlots(displayName)
     const cost = stats ? (parseInt(stats.Cost) || 0) : 0
     const count = eq.melee.filter(m => m === displayName).length
-    const canAdd = (meleeUsed + slots) <= limits.meleeMax && rem >= cost
+    const resolvedMelee = resolveAlias(displayName, 'Melee Weapons')
+    const isShieldItem = resolvedMelee === 'Shield' || resolvedMelee === 'Tower Shield'
+    const shieldBlockedByRanged = isShieldItem && (eq.ranged || []).some(r => !isLightRanged(r))
+    const canAdd = (meleeUsed + slots) <= limits.meleeMax && rem >= cost && !shieldBlockedByRanged
     const disabled = !canAdd && count === 0
     const countLabel = count === 0 ? '' : count === 1 ? '✓' : `×${count}`
-    const hint = canAdd && count > 0 ? 'Add another (dual wield)' : !canAdd ? 'No slots available' : ''
+    const hint = canAdd && count > 0 ? 'Add another (dual wield)' : shieldBlockedByRanged ? 'Incompatible with non-light ranged weapon' : !canAdd ? 'No slots available' : ''
 
     return `
       <div class="equip-row ${count > 0 ? 'equip-row--on' : ''} ${disabled ? 'equip-row--off' : ''}"
@@ -783,9 +803,10 @@ function renderEquipModal(wb, wbData) {
     const stats = getRangedStats(displayName)
     const cost = stats ? (parseInt(stats.Cost) || 0) : 0
     const equipped = (eq.ranged || []).includes(displayName)
-    const canAdd = !equipped && (eq.ranged || []).length < limits.rangedMax && rem >= cost
+    const shieldBlocked = hasShield(eq) && !isLightRanged(displayName)
+    const canAdd = !equipped && (eq.ranged || []).length < limits.rangedMax && rem >= cost && !shieldBlocked
     const disabled = !canAdd && !equipped
-    const reason = !canAdd && !equipped ? (limits.rangedMax === 0 ? 'No ranged slot' : "Can't afford") : ''
+    const reason = !canAdd && !equipped ? (shieldBlocked ? 'Incompatible with shield' : limits.rangedMax === 0 ? 'No ranged slot' : "Can't afford") : ''
 
     return `
       <div class="equip-row ${equipped ? 'equip-row--on' : ''} ${disabled ? 'equip-row--off' : ''}"
