@@ -74,7 +74,7 @@ This unit may not have any equipment, but does not suffer the penalties for figh
 ## Equipment
 
 ### Wood Elf Equipment 
-Wood Elf equipment for the unit types: All
+Wood Elf equipment for the unit types: Commander, Mage, Honour Guard, Ranger, Citizen, Scout
 
 | Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
