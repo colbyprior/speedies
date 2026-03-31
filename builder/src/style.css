@@ -993,8 +993,13 @@ ul, ol { list-style: none; }
 
 .view-unit-cell { text-align: left !important; }
 .view-unit-name { font-weight: 700; }
-.view-unit-equip { font-size: 12px; color: var(--text-muted); margin-top: 3px; }
 .view-cost-cell { font-weight: 700; color: var(--gold); white-space: nowrap; }
+
+.equip-row-view td { border-bottom: none; padding-top: 3px; padding-bottom: 3px; }
+.equip-row-view:last-child td { border-bottom: 1px solid var(--border); }
+.unit-table tr:hover.equip-row-view td { background: var(--bg3); }
+.equip-row-name-cell { text-align: left !important; padding-left: 24px !important; font-size: 12px; color: var(--text-muted); }
+.equip-row-stats-cell { text-align: left !important; font-size: 12px; color: var(--text-muted); }
 
 .view-empty {
   text-align: center;
@@ -1053,8 +1058,8 @@ ul, ol { list-style: none; }
   .unit-table tr:hover td { background: none; }
 
   .view-unit-name { color: #000; }
-  .view-unit-equip { color: #555; }
   .view-cost-cell { color: #000; }
+  .equip-row-name-cell, .equip-row-stats-cell { color: #555; }
   .view-special-rule { border-left-color: #555; background: #f9f9f9; }
 }
 

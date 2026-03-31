@@ -954,20 +954,72 @@ function renderViewWarband() {
   const heroes = sorted.filter(u => u.category === 'hero')
   const henchmen = sorted.filter(u => u.category === 'henchman')
 
+  function equipRows(eq) {
+    const rows = []
+
+    for (const name of (eq.melee || [])) {
+      const stats = getMeleeStats(name)
+      if (!stats) continue
+      const resolvedKey = resolveAlias(name, 'Melee Weapons')
+      const isShieldItem = resolvedKey === 'Shield' || resolvedKey === 'Tower Shield'
+      const parts = []
+      if (isShieldItem) {
+        const m = (stats.Effect || '').match(/\+(\d+)\s*Def/)
+        if (m) parts.push(`Def +${m[1]}`)
+      } else {
+        const mel = parseInt(stats.Melee) || 0
+        const inj = parseInt(stats.Injury) || 0
+        const prc = parseInt(stats.Piercing) || 0
+        if (mel !== 0) parts.push(`Mel ${mel > 0 ? '+' : ''}${mel}`)
+        if (inj !== 0) parts.push(`Inj ${inj > 0 ? '+' : ''}${inj}`)
+        if (prc !== 0) parts.push(`Prc ${prc > 0 ? '+' : ''}${prc}`)
+        if (stats.Effect) parts.push(esc(stats.Effect))
+      }
+      rows.push(`<tr class="equip-row-view">
+        <td class="equip-row-name-cell" colspan="2">⚔ ${esc(name)}</td>
+        <td colspan="6" class="equip-row-stats-cell">${parts.length ? parts.join(' · ') : '—'}</td>
+        <td></td>
+      </tr>`)
+    }
+
+    for (const name of (eq.ranged || [])) {
+      const stats = getRangedStats(name)
+      if (!stats) continue
+      const parts = []
+      if (stats.Range) parts.push(`Rng ${esc(stats.Range)}`)
+      const inj = parseInt(stats.Injury) || 0
+      const prc = parseInt(stats.Piercing) || 0
+      if (inj !== 0) parts.push(`Inj ${inj > 0 ? '+' : ''}${inj}`)
+      if (prc !== 0) parts.push(`Prc ${prc > 0 ? '+' : ''}${prc}`)
+      if (stats.Effect) parts.push(esc(stats.Effect))
+      rows.push(`<tr class="equip-row-view">
+        <td class="equip-row-name-cell" colspan="2">🏹 ${esc(name)}</td>
+        <td colspan="6" class="equip-row-stats-cell">${parts.length ? parts.join(' · ') : '—'}</td>
+        <td></td>
+      </tr>`)
+    }
+
+    if (eq.armour) {
+      const stats = getArmourStats(eq.armour)
+      const def = parseInt(stats?.Defense) || 0
+      rows.push(`<tr class="equip-row-view">
+        <td class="equip-row-name-cell" colspan="2">🔰 ${esc(eq.armour)}</td>
+        <td colspan="6" class="equip-row-stats-cell">${def ? `Def +${def}` : '—'}</td>
+        <td></td>
+      </tr>`)
+    }
+
+    return rows.join('')
+  }
+
   function unitRow(unit) {
     const unitDef = findUnitDef(wbData, unit.typeName, unit.category)
     const cost = calcUnitCost(unit, wbData)
     const eq = unit.equipment
-    const allEquip = [
-      ...(eq.melee || []).map(m => `⚔ ${m}`),
-      ...(eq.ranged || []).map(r => `🏹 ${r}`),
-      ...(eq.armour ? [`🔰 ${eq.armour}`] : []),
-    ]
     return `
       <tr>
         <td class="view-unit-cell">
           <div class="view-unit-name">${esc(unit.typeName)}</div>
-          ${allEquip.length ? `<div class="view-unit-equip">${allEquip.map(esc).join('  ·  ')}</div>` : ''}
         </td>
         ${unitDef ? `
           <td>${statVal(unitDef.Move)}"</td>
@@ -980,6 +1032,7 @@ function renderViewWarband() {
         ` : `<td colspan="7">—</td>`}
         <td class="view-cost-cell">${cost}g</td>
       </tr>
+      ${equipRows(eq)}
     `
   }
 
