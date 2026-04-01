@@ -1,8 +1,11 @@
 # Dependencies
 /node_modules
+builder/node_modules
+venv
 
 # Production
 /build
+/static/builder
 
 # Generated files
 .docusaurus

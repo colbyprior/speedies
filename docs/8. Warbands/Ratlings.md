@@ -10,6 +10,9 @@ RAT
 | Rout Threshold | 7 |
 | Play Style | Fast and agile swarm |
 
+## Special Rules
+### Special Promotion
+When a henchmen promotes they gain the ability to use any piece of equipment that the other heroes can use.
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
@@ -63,7 +66,7 @@ This unit may not be purchased at warband creation. It counts as two units for t
 ## Equipment
 
 ### Heroes Equipment 
-Heroes equipment for the unit types: All heroes, including Promoted henchman
+Heroes equipment for the unit types: Assassin, Enforcer, Ratlock, Guildmaster
 
 | Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
