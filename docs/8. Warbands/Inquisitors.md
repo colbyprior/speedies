@@ -16,10 +16,10 @@ At the start of each game make a Morale Check once per hero. For each success, a
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| High Inquisitor | 6 | 13 | 12 | 17 | 8| 7 | 1 | 1 | 0 | 0 | [Leader](#leader), [Inquisitor](#inquisitor) | 85 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Agility,Morale) |
+| High Inquisitor | 6 | 13 | 12 | 17 | 8| 7 | 1 | 1 | 0 | 0 | [Leader](#leader) | 85 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Agility,Morale) |
 | Priest | 6 | 14 | - | 18 | 10| 10 | 1 | 1 | 0 | 0 | [Divine Magic](#divine-magic) | 80 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
-| Inquisitor | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 | [Inquisitor](#inquisitor) | 55 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
-| Doomsayer | 6 | 15 | 15 | 18 | 10| 10 | 1 | 1 | 0 | 0 | [The Rapture is Nigh](#the-rapture-is-nigh), [Inquisitor](#inquisitor) | 65 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
+| Inquisitor | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 55 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
+| Doomsayer | 6 | 15 | 15 | 18 | 10| 10 | 1 | 1 | 0 | 0 | [The Rapture is Nigh](#the-rapture-is-nigh) | 65 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
@@ -34,10 +34,6 @@ At the start of each game make a Morale Check once per hero. For each success, a
 *Inherent*
 
 Allied, non-animal units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
-### Inquisitor
-*Inherent*
-
-This unit gets a +2 Pierce modifier against all enemy heroes for melee attacks.
 ### Divine Magic
 *Spellcasting*
 

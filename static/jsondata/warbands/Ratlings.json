@@ -1,11 +1,13 @@
 {
     "Name": "Ratlings",
+    "Status": "Released",
     "Complexity": "★☆☆",
     "Max Units": "18",
     "Rout Threshold": "7",
     "Play Style": "Fast and agile swarm",
     "Preamble": "RAT",
     "Special Rules": {
+        "Special Promotion": "When a henchmen promotes they gain the ability to use any piece of equipment that the other heroes can use."
     },
     "Heroes": [
         {
@@ -207,7 +209,7 @@
     },
     "Equipment": {
         "Heroes": {
-            "Aliases": ["All heroes, including Promoted henchman"],
+            "Aliases": ["Assassin", "Enforcer", "Ratlock", "Guildmaster"],
             "Melee Weapons": ["Dagger", "Hammer / Club", "Sword / Axe", "Spear / Staff", "Glaive", "Flail", "Fighting Claws"],
             "Ranged Weapons": ["Throwing Stars", "Pistol"],
             "Armour": ["Light Armour"]

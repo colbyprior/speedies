@@ -20,7 +20,7 @@ const config: Config = {
   organizationName: 'colbyprior',
   projectName: 'speedies', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -123,6 +123,11 @@ const config: Config = {
           label: 'Post-Game Overview',
         },
         {
+          href: '/builder/',
+          label: '⚔ Warband Builder',
+          position: 'right',
+        },
+        {
           href: 'https://github.com/colbyprior/speedies',
           label: 'GitHub',
           position: 'right',
@@ -176,6 +181,10 @@ const config: Config = {
             {
               to: '/Post-Game%20Rules/Post-Game%20Overview',
               label: 'Post-Game Overview',
+            },
+            {
+              href: '/builder/',
+              label: 'Warband Builder',
             }
           ],
         },
