@@ -73,20 +73,19 @@
             "Type": "Hero",
             "Type Cap": "1",
             "Move": "9",
-            "Piercing": "3",
-            "Injury": "3",
-            "Melee": "10",
+            "Piercing": "0",
+            "Injury": "0",
+            "Melee": "15",
             "Ranged": "-",
             "Defense": "-",
             "Wounds": "1",
             "Agility": "14",
             "Attacks": "2",
             "Morale": "13",
-            "Cost":85,
+            "Cost":70,
             "Skills": [
                 "Undead",
-                "Fear",
-				"Fixed Equipment (Scythe)"
+                "Fear"
             ]
         }
     ],
@@ -239,6 +238,12 @@
             "Melee Weapons": ["Dagger", "Spear / Staff", "Sword"],
             "Ranged Weapons": ["Short Bow", "Bow"],
             "Armour": ["Light Armour"]
+        },
+        "Reaper": {
+            "Aliases": ["Reaper"],
+            "Melee Weapons": ["Scythe"],
+            "Ranged Weapons": [],
+            "Armour": []
         }
     }
 }

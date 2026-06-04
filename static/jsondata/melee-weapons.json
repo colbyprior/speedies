@@ -115,5 +115,32 @@
     "Piercing": "0",
     "Melee": "0",
     "Slots": "1"
+  },
+  "Banner of Bravery": {
+    "Name": "Banner of Bravery",
+    "Effect": "Allies within this Banner's aura can make Morale Checks with Advantage. Banners cannot be used to attack.",
+    "Cost": "10",
+    "Injury": "0",
+    "Piercing": "0",
+    "Melee": "0",
+    "Slots": "1"
+  },
+  "Banner of Marching": {
+    "Name": "Banner of Marching",
+    "Effect": "Allies within this Banner's aura at the start of the turn gain +1 Move for the turn. Banners cannot be used to attack.",
+    "Cost": "10",
+    "Injury": "0",
+    "Piercing": "0",
+    "Melee": "0",
+    "Slots": "1"
+  },
+  "Banner of Protection": {
+    "Name": "Banner of Protection",
+    "Effect": "Allies within this Banner's aura have +1 Def. Banners cannot be used to attack.",
+    "Cost": "10",
+    "Injury": "0",
+    "Piercing": "0",
+    "Melee": "0",
+    "Slots": "1"
   }
 }

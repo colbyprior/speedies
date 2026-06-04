@@ -247,7 +247,7 @@
   "Mounted": {
     "Name": "Mounted",
     "Type": "Inherent",
-    "Description": "This unit cannot use ladders or make Climb Checks. It gains +3 Mov and +1 Wnd, which are already reflected in its stat block."
+    "Description": "This unit cannot use ladders or make Climb Checks. It gains +3 Mov and +1 Wnd, which are already reflected in its stat block. The +1 Wnd does not count towards the stat cap (so this unit has an effective max of 4 Wounds)."
   },
   "Divine Magic": {
     "Name": "Divine Magic",
@@ -344,10 +344,10 @@
     "Type": "Inherent",
     "Description": "This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move)."
   },
-  "Rally the Troops": {
-    "Name": "Rally the Troops",
+  "Standard Bearer": {
+    "Name": "Standard Bearer",
     "Type": "Inherent",
-    "Description": "Allied units within 5\" of this unit can roll Morale Checks with Advantage. Rout Checks cannot gain Advantage in this way."
+    "Description": "Allied units within 5\" of this unit (including the unit itself) gain the benefits of an equipped Banner. This unit can only have one Banner equipped at a time. It cannot be used as a weapon, but takes up one Melee Weapon Slot."
   },
   "Vampiric Magic": {
     "Name": "Vampiric Magic",
@@ -357,7 +357,7 @@
   "Flying": {
     "Name": "Flying",
     "Type": "Inherent",
-    "Description": "This unit can move through the air in any direction. They must not end their movement in the air."
+    "Description": "This unit can move through the air in any direction. They must not end their movement in the air. They cannot be Intercepted when Engaging, nor can they make Jump Attacks. If they fail an Engage and end their movement in the air, they safely drop straight down to the ground below."
   },
   "Blight Magic": {
     "Name": "Blight Magic",
@@ -393,21 +393,6 @@
     "Name": "Pack Tactics",
     "Type": "Inherent",
     "Description": "If this unit attacks an enemy that is also in base contact with an ally that also has Pack Tactics, this unit has advantage on the attack."
-  },
-  "Fixed Equipment (Scythe)": {
-    "Name": "Fixed Equipment (Scythe)",
-    "Type": "Inherent",
-    "Description": "This unit has fixed equipment that cannot be lost. The equipment modifers are included in the unit's stats and cost."
-  },
-  "Fixed Equipment (Farm Tools)": {
-    "Name": "Fixed Equipment (Farm Tools)",
-    "Type": "Inherent",
-    "Description": "This unit has fixed equipment that cannot be lost or changed. The equipment modifers are included in the unit's stats and cost."
-  },
-  "Fixed Equipment (Holy Standard)": {
-    "Name": "Fixed Equipment (Holy Standard)",
-    "Type": "Inherent",
-    "Description": "This unit has fixed equipment that cannot be lost or changed. The equipment modifers are included in the unit's stats and cost."
   },
   "Hatred": {
     "Name": "Hatred",

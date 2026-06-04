@@ -151,7 +151,7 @@
     "Position": "Archbishop",
     "Melee Weapon": "Hammer and Shield",
     "Ranged Weapon": "",
-    "Event": "**Disposition:** Hirkel is Hostile to Chaos warbands and is willing to Ally with Law warbands.\n \n**Immediately:** Place Hirkel 1\" away from the triggering unit.\n \n**Neutral Turn:** Hirkel performs normal actions. He Retreats if there are no enemies.\n \n**Other Behaviours:** Once per game, if Hirkel starts his turn within 5\" of a unit with the Blight, he makes a Morale Check. On a success, the unit is cured of the Blight."
+    "Event": "**Disposition:** Hirkel is Hostile to Chaos warbands and is willing to Ally with Law warbands.\n \n**Immediately:** Place Hirkel 1\" away from the triggering unit.\n \n**Neutral Turn:** Hirkel performs normal actions. He Retreats if there are no enemies.\n \n**Other Behaviours:** Once per game, if Hirkel starts his turn within 5\" of a unit with the Blight that he can see, he makes a Morale Check. On a success, the unit is cured of the Blight."
   },
   "Ivaran the Rebel Captain": {
     "Type": "Agent",

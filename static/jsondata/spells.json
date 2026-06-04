@@ -56,8 +56,8 @@
    "Control Earth": {
     "Name": "Control Earth", 
     "School": "Life Magic",
-    "Check": "10",
-    "Description": "Ongoing. Choose a point within 10\". Place a solid platform measuring roughly 2\" by 2\" by 3\" at that point (in any orientation). The terrain must fit within the space. If this is cast on a unit, move that unit directly up to the top of the platform. When the spell ends, the platform slowly recedes and units are placed directly down, back on the ground unharmed."
+    "Check": "8 (or higher)",
+    "Description": "Ongoing. Declare a point within 10\". Place a solid platform measuring 2\" by 2\" by 3\" at that point (in any orientation). The terrain must fit within the space. If this is cast on a unit, move that unit directly up to the top of the platform. They must make an immediate Agility Check, falling off of the platform on a fail. The difficulty of the Cast Check increases by 2 for every unit (enemy or ally) that would be moved onto the platform when it is created.  When the spell ends, the platform slowly recedes and units are placed directly down on the ground unharmed."
   },
    "Root": {
     "Name": "Root", 
