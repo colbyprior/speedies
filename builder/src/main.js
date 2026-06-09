@@ -651,7 +651,7 @@ function renderHirePanel(wb, wbData) {
           <span title="Move">Mov ${statVal(unitDef.Move)}</span>
           <span title="Melee">Mel ${statVal(unitDef.Melee)}</span>
           <span title="Ranged">Rng ${statVal(unitDef.Ranged)}</span>
-          <span title="Defense">Def ${statVal(unitDef.Defense)}</span>
+          <span title="Defence">Def ${statVal(unitDef.Defence)}</span>
           <span title="Agility">Agi ${statVal(unitDef.Agility)}</span>
           <span title="Attacks">Atk ${statVal(unitDef.Attacks)}</span>
           <span title="Wounds">Wnd ${statVal(unitDef.Wounds)}</span>
@@ -884,7 +884,7 @@ function renderEquipModal(wb, wbData) {
         <span class="equip-row-check">${equipped ? '✓' : ''}</span>
         <div class="equip-row-info">
           <span class="equip-row-name">${esc(displayName)}</span>
-          ${stats ? `<span class="equip-row-effect">+${stats.Defense} Defense</span>` : ''}
+          ${stats ? `<span class="equip-row-effect">+${stats.Defence} Defence</span>` : ''}
         </div>
         <div class="equip-row-meta">
           <span class="equip-row-cost">${cost === 0 ? 'Free' : `${cost}g`}</span>
@@ -1001,7 +1001,7 @@ function renderViewWarband() {
 
     if (eq.armour) {
       const stats = getArmourStats(eq.armour)
-      const def = parseInt(stats?.Defense) || 0
+      const def = parseInt(stats?.Defence) || 0
       rows.push(`<tr class="equip-row-view">
         <td class="equip-row-name-cell" colspan="2">🔰 ${esc(eq.armour)}</td>
         <td colspan="6" class="equip-row-stats-cell">${def ? `Def +${def}` : '—'}</td>
@@ -1040,7 +1040,7 @@ function renderViewWarband() {
             <td>${mov + 3}"</td>
             <td>${statVal(unitDef.Melee)}</td>
             <td>${statVal(unitDef.Ranged)}</td>
-            <td>${statVal(unitDef.Defense)}</td>
+            <td>${statVal(unitDef.Defence)}</td>
             <td>${statVal(unitDef.Agility)}</td>
             <td>${statVal(unitDef.Morale)}</td>
             <td>${statVal(unitDef.Attacks)}</td>
@@ -1078,7 +1078,7 @@ function renderViewWarband() {
         statChip('Run', `${mov + 3}"`),
         statChip('Mel', statVal(unitDef.Melee)),
         statChip('Rgd', statVal(unitDef.Ranged)),
-        statChip('Def', statVal(unitDef.Defense)),
+        statChip('Def', statVal(unitDef.Defence)),
         statChip('Agi', statVal(unitDef.Agility)),
         statChip('Mrl', statVal(unitDef.Morale)),
         statChip('Atk', statVal(unitDef.Attacks)),
@@ -1123,7 +1123,7 @@ function renderViewWarband() {
     }
     if (eq.armour) {
       const stats = getArmourStats(eq.armour)
-      const def = parseInt(stats?.Defense) || 0
+      const def = parseInt(stats?.Defence) || 0
       equipLines.push(`<div class="unit-card-equip-line">🔰 ${esc(eq.armour)}${def ? `<span class="unit-card-equip-stats"> · Def +${def}</span>` : ''}</div>`)
     }
 

@@ -43,7 +43,7 @@ def generate_faction_agents():
             out_data += f"| Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Prc | Inj | Skills |\n"
             out_data += "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n"
             out_data += f"| {faction_agent['Move']}| {faction_agent['Melee']}| {faction_agent['Ranged']} "
-            out_data += f"| {faction_agent['Defense']}| {faction_agent['Agility']}| {faction_agent['Morale']}| {faction_agent['Attacks']} "
+            out_data += f"| {faction_agent['Defence']}| {faction_agent['Agility']}| {faction_agent['Morale']}| {faction_agent['Attacks']} "
             out_data += f"| {faction_agent['Wounds']}| {faction_agent['Piercing']}| {faction_agent['Injury']}| {faction_agent['Skills']}\n\n"
 
             if faction_agent.get('Melee Weapon'):
