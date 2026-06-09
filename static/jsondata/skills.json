@@ -202,7 +202,7 @@
   "Favourable Encounter": { 
     "Name": "Favourable Encounter", 
     "Type": "Morale", 
-    "Description": "If a unit from your warband triggers an Event, you may draw an additional Faction Agent card and choose which Faction Agent will be used for the Event."
+    "Description": "If a unit from your warband triggers an Event, you may draw an additional Faction Hero card and choose which Faction Hero will be used for the Event."
   },
   "Treasure Hunter": {
 	"Name": "Treasure Hunter", 
