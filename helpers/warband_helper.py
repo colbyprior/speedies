@@ -101,7 +101,7 @@ def heroes_table(warband):
         if skill_link == "ERROR":
             sys.stderr.write(f"\nFailed to find level up options for {hero.get('Name')}")
             sys.exit(1)
-        out_data += f"| {hero.get('Name')} | {hero.get('Move')} | {hero.get('Melee')} | {hero.get('Ranged')} | {hero.get('Defense')} | {hero.get('Agility')}| {hero.get('Morale')} | {hero.get('Attacks')} | {hero.get('Wounds')} | {hero.get('Injury')} | {hero.get('Piercing')} | {skills_str} | {hero.get('Cost')} | {type_cap} | {skill_link} |\n"
+        out_data += f"| {hero.get('Name')} | {hero.get('Move')} | {hero.get('Melee')} | {hero.get('Ranged')} | {hero.get('Defence')} | {hero.get('Agility')}| {hero.get('Morale')} | {hero.get('Attacks')} | {hero.get('Wounds')} | {hero.get('Injury')} | {hero.get('Piercing')} | {skills_str} | {hero.get('Cost')} | {type_cap} | {skill_link} |\n"
     return out_data
 
 
@@ -117,7 +117,7 @@ def henchmen_table(warband):
         type_cap = henchmen.get('Type Cap')
         if not type_cap:
             type_cap = "None"
-        out_data += f"| {henchmen.get('Name')} | {henchmen.get('Move')} | {henchmen.get('Melee')} | {henchmen.get('Ranged')} | {henchmen.get('Defense')} | {henchmen.get('Agility')}| {henchmen.get('Morale')} | {henchmen.get('Attacks')} | {henchmen.get('Wounds')} | {henchmen.get('Injury')} | {henchmen.get('Piercing')} | {skills_str} | {henchmen.get('Cost')} | {type_cap} |\n"
+        out_data += f"| {henchmen.get('Name')} | {henchmen.get('Move')} | {henchmen.get('Melee')} | {henchmen.get('Ranged')} | {henchmen.get('Defence')} | {henchmen.get('Agility')}| {henchmen.get('Morale')} | {henchmen.get('Attacks')} | {henchmen.get('Wounds')} | {henchmen.get('Injury')} | {henchmen.get('Piercing')} | {skills_str} | {henchmen.get('Cost')} | {type_cap} |\n"
     return out_data
 
 
@@ -208,9 +208,9 @@ def equipment_block(warband):
                     sys.exit(1)
                 armour_data = global_armour_data.get(armour_alias)
             if armour_alias:
-                out_data += f"| {armour_name} | {armour_data.get('Defense')} | {armour_data.get('Cost')} |\n"
+                out_data += f"| {armour_name} | {armour_data.get('Defence')} | {armour_data.get('Cost')} |\n"
             else:
-                out_data += f"| {armour_data.get('Name')} | {armour_data.get('Defense')} | {armour_data.get('Cost')} |\n"
+                out_data += f"| {armour_data.get('Name')} | {armour_data.get('Defence')} | {armour_data.get('Cost')} |\n"
 
     out_data += "\n### Ranged Weapon Effects\n"
     for effect_name in ranged_weapon_effects:

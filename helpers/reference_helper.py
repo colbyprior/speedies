@@ -40,7 +40,7 @@ def armour_block():
     out_data += f"| ---- | --- | ---- |\n"
     for armour_key in global_armour_data:
         armour_data = global_armour_data.get(armour_key)
-        out_data += f"| {armour_data.get('Name')} | {armour_data.get('Defense')} | {armour_data.get('Cost')} |\n"
+        out_data += f"| {armour_data.get('Name')} | {armour_data.get('Defence')} | {armour_data.get('Cost')} |\n"
     return out_data
 
 

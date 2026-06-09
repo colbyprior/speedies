@@ -58,7 +58,7 @@ This unit cannot Promote, use ladders (except by making a full Climb Check), pic
 ### Flying
 *Inherent*
 
-This unit can move through the air in any direction. They must not end their movement in the air.
+This unit can move through the air in any direction. They must not end their movement in the air. They cannot be Intercepted when Engaging, nor can they make Jump Attacks. If they fail an Engage and end their movement in the air, they safely drop straight down to the ground below.
 
 ## Equipment
 

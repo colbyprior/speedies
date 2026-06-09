@@ -1,17 +1,17 @@
 {
       "Light Armour": { 
         "Name": "Light Armour", 
-        "Defense": "1",
+        "Defence": "1",
         "Cost": "10"
       }, 
       "Heavy Armour": { 
         "Name": "Heavy Armour", 
-        "Defense": "2",
+        "Defence": "2",
         "Cost": "20"
       },
       "Mithril Armour": { 
         "Name": "Mithril Armour", 
-        "Defense": "3",
+        "Defence": "3",
         "Cost": "40"
       }
 }

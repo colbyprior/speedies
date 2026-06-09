@@ -140,7 +140,7 @@ def create_card_content(name, agent_data, skills_db):
         run_value,
         agent_data['Melee'],
         agent_data['Ranged'],
-        agent_data['Defense'],
+        agent_data['Defence'],
         agent_data['Agility'],
         agent_data['Morale'],
         agent_data['Attacks'],

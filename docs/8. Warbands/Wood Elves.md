@@ -65,7 +65,7 @@ This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move).
 ### Large
 *Inherent*
 
-This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It cannot pick up Treasure. This unit is immune to the Blight. It cannot Promote.
+This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It cannot pick up Treasure. This unit is immune to the Blight.
 ### No Equipment
 *Inherent*
 
@@ -104,7 +104,7 @@ This weapon may be used with a Shield.
 | Name | Difficulty | Description |
 | ---- | ------ | ---- |
 | Invisibility | 12 | Ongoing. Choose one ally within 5" (including themselves). This unit is treated as no longer existing for the purposes of targeting or blocking Movement, line-of-sight or picking up Treasure. If it is Engaged, it is no longer Engaged and moves 1". If this unit Engages, casts a Spell, or makes a Ranged attack, the spell ends. |
-| Control Earth | 10 | Ongoing. Choose a point within 10". Place a solid platform measuring roughly 2" by 2" by 3" at that point (in any orientation). The terrain must fit within the space. If this is cast on a unit, move that unit directly up to the top of the platform. When the spell ends, the platform slowly recedes and units are placed directly down, back on the ground unharmed. |
+| Control Earth | 8 (or higher) | Ongoing. Declare a point within 10". Place a solid platform measuring 2" by 2" by 3" at that point (in any orientation). The terrain must fit within the space. If this is cast on a unit, move that unit directly up to the top of the platform. They must make an immediate Agility Check, falling off of the platform on a fail. The difficulty of the Cast Check increases by 2 for every unit (enemy or ally) that would be moved onto the platform when it is created.  When the spell ends, the platform slowly recedes and units are placed directly down on the ground unharmed. |
 | Root | 11 | Ongoing. Choose one unit within 20". That unit cannot Engage, Move, or Run. |
 | Earthquake | 13 | All units within 10" must make an Agility check or become Dazed. |
 | Magic Arrow | 12 | Basic. Cast Attack. Target one unit you can see within 30" and perform a Cast Attack. |

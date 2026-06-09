@@ -16,7 +16,7 @@ Let me off this wild ride Mr. Bones
 | Necromancer | 6 | 14 | - | 18 | 10| 7 | 1 | 1 | 0 | 0 | [Leader](#leader), [Necromantic Magic](#necromantic-magic) | 65 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale) |
 | Blight Cultist | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 | [Spread Blight (Major)](#spread-blight-(major)) | 45 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
 | Death Knight | 7 | 14 | 14 | 16 | 14| 13 | 1 | 2 | 0 | 0 | [Undead](#undead), [Fear](#fear) | 75 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
-| Reaper | 9 | 10 | - | - | 14| 13 | 2 | 1 | 3 | 3 | [Undead](#undead), [Fear](#fear), [Fixed Equipment (Scythe)](#fixed-equipment-(scythe)) | 85 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
+| Reaper | 9 | 15 | - | - | 14| 13 | 2 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear) | 70 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
@@ -47,10 +47,6 @@ This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move). I
 *Morale*
 
 This unit causes Fear.
-### Fixed Equipment (Scythe)
-*Inherent*
-
-This unit has fixed equipment that cannot be lost. The equipment modifers are included in the unit's stats and cost.
 ### No Equipment
 *Inherent*
 
@@ -66,7 +62,7 @@ This unit may move through terrain and other units as if they weren't there, but
 ### Large
 *Inherent*
 
-This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It cannot pick up Treasure. This unit is immune to the Blight. It cannot Promote.
+This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It cannot pick up Treasure. This unit is immune to the Blight.
 
 ## Equipment
 
@@ -111,6 +107,13 @@ Cultist equipment for the unit types: Necromancer, Blight Cultist
 | Armour | Def | Cost |
 | ------ | --- | ---- |
 | Light Armour | 1 | 10 |
+
+### Reaper Equipment 
+Reaper equipment for the unit types: Reaper
+
+| Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
+| ------------ | --- | --- | --- | ------ | ---- | ----- |
+| Scythe | 5 | 3 | 3 |  | 10 | 2 |
 
 ### Ranged Weapon Effects
 #### Light 
