@@ -26,7 +26,7 @@ At the start of each game make a Morale Check once per hero. For each success, a
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
 | Fanatic | 6 | 13 | - | 16 | 10| 10 | 1 | 1 | 0 | 0 | [Fear](#fear) | 50 | 5 |
 | Zealot | 6 | 16 | 16 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 20 | - |
-| Peasant | 6 | 17 | - | - | 12| 16 | 1 | 1 | 0 | 0 | [Heed the Scripture](#heed-the-scripture), [Mob Mentality](#mob-mentality), [Fixed Equipment (Farm Tools)](#fixed-equipment-(farm-tools)) | - | See Incite the Mob skill |
+| Peasant | 6 | 17 | - | - | 12| 16 | 1 | 1 | 0 | 0 | [Heed the Scripture](#heed-the-scripture), [Mob Mentality](#mob-mentality), [No Equipment](#no-equipment) | - | See Incite the Mob skill |
 | Hound | 8 | 14 | - | 18 | 8| 16 | 1 | 1 | 0 | 0 | [Animal](#animal), [Pack Tactics](#pack-tactics) | 20 | 5 |
 
 ## Skills 
@@ -54,10 +54,10 @@ This unit can use the morale of the Doomsayer if they are within 5" of it.
 *Inherent*
 
 This unit cannot pick up Treasure. If this unit is not within 5" of a Peasant or Doomsayer at the end of the Upkeep Phase, it must make a Morale Check. If it fails, it is immediately Incapacitated.
-### Fixed Equipment (Farm Tools)
+### No Equipment
 *Inherent*
 
-This unit has fixed equipment that cannot be lost or changed. The equipment modifers are included in the unit's stats and cost.
+This unit may not have any equipment, but does not suffer the penalties for fighting Unarmed.
 ### Animal
 *Inherent*
 
@@ -147,7 +147,7 @@ You may purchase this weapon up to two times and wield both at once without usin
 #### Light 
 This weapon may be used with a Shield.
 #### Blackpowder 
-Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately make an Injury Roll against yourself (applying the weapon's Injury modifier). You may no longer use the weapon for the rest of the game (resolving any remaining targets from the current attack first). After the game, it is repaired at no cost. If you have Advantage and either dice rolls a 1 you still misfire. If the higher roll still hits the enemy, resolve it as normal.
+Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately make a Mishap Roll against yourself (applying the weapon's Injury modifier). You may no longer use the weapon for the rest of the game (resolving any remaining targets from the current attack first). After the game, it is repaired at no cost. If you have Advantage and either dice rolls a 1 you still misfire. If the higher roll still hits the enemy, resolve it as normal.
 
 ## Divine Magic 
 
@@ -155,7 +155,7 @@ Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately 
 | ---- | ------ | ---- |
 | Bless Weapon | 7 | Ongoing. The caster gains Advantage on all Melee Checks. |
 | Divine Fervour | 11 | Reduce any Injury results against allies within 5" of the caster (including themselves) by 3 until the start of your next turn. |
-| Holy Smite | 14 | Make an Injury Roll against all enemies within 3". Add +2 to the Check if the enemy is Undead. |
+| Holy Smite | 14 | Make a Mishap Roll against all enemies within 3". Add +2 to the Check if the enemy is Undead. |
 | Heal | 5 | Any ally within 5" of the caster (including themselves) removes Dazed or Staggered and regains 1 Wound, up to their maximum. |
 
 

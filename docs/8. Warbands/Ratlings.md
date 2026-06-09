@@ -61,7 +61,7 @@ This unit causes Fear.
 ### Large
 *Inherent*
 
-This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It cannot pick up Treasure. This unit is immune to the Blight. It cannot Promote.
+This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It cannot pick up Treasure. This unit is immune to the Blight.
 
 ## Equipment
 
@@ -113,14 +113,14 @@ You may not use this weapon if it was fired in the previous turn.
 #### Dual-Wield 
 You may purchase this weapon up to two times and wield both at once without using an additional weapon slot. If you do, you have Advantage on attacks with the weapon.
 #### Blackpowder 
-Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately make an Injury Roll against yourself (applying the weapon's Injury modifier). You may no longer use the weapon for the rest of the game (resolving any remaining targets from the current attack first). After the game, it is repaired at no cost. If you have Advantage and either dice rolls a 1 you still misfire. If the higher roll still hits the enemy, resolve it as normal.
+Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately make a Mishap Roll against yourself (applying the weapon's Injury modifier). You may no longer use the weapon for the rest of the game (resolving any remaining targets from the current attack first). After the game, it is repaired at no cost. If you have Advantage and either dice rolls a 1 you still misfire. If the higher roll still hits the enemy, resolve it as normal.
 
 ## Blight Magic 
 
 | Name | Difficulty | Description |
 | ---- | ------ | ---- |
 | Blight Bolt | 12 | Cast Attack. Target one unit you can see within 10" and perform a Cast Attack against them. On a success, the target makes a Plague Check. |
-| Swarm of Rats | 15 | Cast Attack. Choose the closest enemy within 10". Make a Cast Attack against the target. If you succeed, make an Injury Roll against all units within 1.5" of it. |
+| Swarm of Rats | 15 | Cast Attack. Choose the closest enemy within 10". Make a Cast Attack against the target. If you succeed, make a Mishap Roll against all units within 1.5" of it. |
 | Sewer Filth | 12 | Basic. Target one unit you can see within 20". The target is Dazed. |
 | Pounce | 10 | The caster gains 2 Attacks and +3 Injury until the end of this turn. They may immediately make an Engage action, unless they are already Engaged. |
 | Rat Rage | 7 | Ongoing. Upon casting and at the start of each turn, any Giant Rats within 5" of the caster gain Fear for the round. |

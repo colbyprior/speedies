@@ -16,7 +16,7 @@ An order of paladins and others that seek to advance a holy agenda.
 | Justicar | 6 | 13 | 13 | 16 | 8| 7 | 1 | 1 | 0 | 0 | [Leader](#leader), [Divine Magic](#divine-magic) | 95 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Morale) |
 | Paladin | 6 | 13 | 14 | 16 | 10| 10 | 1 | 1 | 0 | 0 |  | 50 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Morale) |
 | Cleric | 6 | 14 | 14 | 17 | 10| 10 | 1 | 1 | 0 | 0 | [Healer](#healer) | 50 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
-| Standard Bearer | 6 | 7 | - | 17 | 10| 7 | 1 | 1 | 3 | 0 | [Rally the Troops](#rally-the-troops), [Fixed Equipment (Holy Standard)](#fixed-equipment-(holy-standard)) | 55 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
+| Standard Bearer | 6 | 14 | - | 18 | 10| 7 | 1 | 1 | 0 | 0 | [Standard Bearer](#standard-bearer) | 40 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
@@ -39,14 +39,10 @@ This unit is capable of casting Divine Magic. See the relevant spell list for a 
 *Inherent*
 
 This unit can use the 'Heal' Divine Magic spell.
-### Rally the Troops
+### Standard Bearer
 *Inherent*
 
-Allied units within 5" of this unit can roll Morale Checks with Advantage. Rout Checks cannot gain Advantage in this way.
-### Fixed Equipment (Holy Standard)
-*Inherent*
-
-This unit has fixed equipment that cannot be lost or changed. The equipment modifers are included in the unit's stats and cost.
+Allied units within 5" of this unit (including the unit itself) gain the benefits of an equipped Banner. This unit can only have one Banner equipped at a time. It cannot be used as a weapon, but takes up one Melee Weapon Slot.
 ### Ki Strike
 *Inherent*
 
@@ -58,7 +54,7 @@ This unit may not have any equipment, but does not suffer the penalties for figh
 ### Mounted
 *Inherent*
 
-This unit cannot use ladders or make Climb Checks. It gains +3 Mov and +1 Wnd, which are already reflected in its stat block.
+This unit cannot use ladders or make Climb Checks. It gains +3 Mov and +1 Wnd, which are already reflected in its stat block. The +1 Wnd does not count towards the stat cap (so this unit has an effective max of 4 Wounds).
 
 ## Equipment
 
@@ -78,6 +74,23 @@ Paladins equipment for the unit types: Justicar, Paladin, Cleric, Initiate, Squi
 | Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |
 | ------------- | --- | --- | --- | ------ | ---- | ----- |
 | Sling | 15" | 0 | 0 | [Light](#light) | 5 | 1 |
+
+| Armour | Def | Cost |
+| ------ | --- | ---- |
+| Light Armour | 1 | 10 |
+| Heavy Armour | 2 | 20 |
+
+### Standard Bearer Equipment 
+Standard Bearer equipment for the unit types: Standard Bearer
+
+| Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
+| ------------ | --- | --- | --- | ------ | ---- | ----- |
+| Hammer | 0 | 4 | 0 |  | 5 | 1 |
+| Divine Hammer | 0 | 4 | 3 | Advantage against Undead. Only heroes can dual-wield. | 15 | 1 |
+| Sword | 0 | 0 | 3 |  | 5 | 1 |
+| Banner of Protection | 0 | 0 | 0 | Allies within this Banner's aura have +1 Def. Banners cannot be used to attack. | 10 | 1 |
+| Banner of Marching | 0 | 0 | 0 | Allies within this Banner's aura at the start of the turn gain +1 Move for the turn. Banners cannot be used to attack. | 10 | 1 |
+| Banner of Bravery | 0 | 0 | 0 | Allies within this Banner's aura can make Morale Checks with Advantage. Banners cannot be used to attack. | 10 | 1 |
 
 | Armour | Def | Cost |
 | ------ | --- | ---- |
@@ -112,7 +125,7 @@ This weapon may be used with a Shield.
 | ---- | ------ | ---- |
 | Bless Weapon | 7 | Ongoing. The caster gains Advantage on all Melee Checks. |
 | Divine Fervour | 11 | Reduce any Injury results against allies within 5" of the caster (including themselves) by 3 until the start of your next turn. |
-| Holy Smite | 14 | Make an Injury Roll against all enemies within 3". Add +2 to the Check if the enemy is Undead. |
+| Holy Smite | 14 | Make a Mishap Roll against all enemies within 3". Add +2 to the Check if the enemy is Undead. |
 | Heal | 5 | Any ally within 5" of the caster (including themselves) removes Dazed or Staggered and regains 1 Wound, up to their maximum. |
 
 

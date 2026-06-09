@@ -12,7 +12,7 @@ These chonkers go bonkers.
 
 ## Special Rules
 ### Hard to Kill
-Dwarves have a -2 to Injury rolls made against them (eg. an unmodified roll of 19 would count as a 17, Stunning rather than Incapacitating the Dwarf).
+Dwarves have a -2 when checking for Injury for attacks made against them (eg. an unmodified roll of 19 would count as a 17, Stunning rather than Incapacitating the Dwarf).
 ### Dwarven Firearms
 The range of Pistols is increased by 5". The range of all other Ranged Weapons (except Blunderbusses) are increased by 10". Dwarf Heroes may use any Ranged weapon with a Shield.
 ## Heroes
@@ -118,7 +118,7 @@ Your target does not receive a bonus to their Defence if you Moved before Shooti
 #### Dual-Wield 
 You may purchase this weapon up to two times and wield both at once without using an additional weapon slot. If you do, you have Advantage on attacks with the weapon.
 #### Blackpowder 
-Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately make an Injury Roll against yourself (applying the weapon's Injury modifier). You may no longer use the weapon for the rest of the game (resolving any remaining targets from the current attack first). After the game, it is repaired at no cost. If you have Advantage and either dice rolls a 1 you still misfire. If the higher roll still hits the enemy, resolve it as normal.
+Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately make a Mishap Roll against yourself (applying the weapon's Injury modifier). You may no longer use the weapon for the rest of the game (resolving any remaining targets from the current attack first). After the game, it is repaired at no cost. If you have Advantage and either dice rolls a 1 you still misfire. If the higher roll still hits the enemy, resolve it as normal.
 #### Light 
 This weapon may be used with a Shield.
 #### Buckshot 
