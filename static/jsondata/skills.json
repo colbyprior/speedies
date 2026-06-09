@@ -7,7 +7,7 @@
   "Hard to Kill": { 
     "Name": "Hard to Kill", 
     "Type": "Inherent", 
-    "Description": "This unit has a -2 to Injury rolls made against it (eg. an unmodified roll of 19 would count as a 17, Stunning rather than Incapacitating the unit)."
+    "Description": "This unit has a -2 to Mishap Rolls made against it (eg. an unmodified roll of 19 would count as a 17, Stunning rather than Incapacitating the unit)."
   },
   "Divine Cure": { 
     "Name": "Divine Cure", 
@@ -72,7 +72,7 @@
   "Drag You Down": { 
     "Name": "Drag You Down", 
     "Type": "Defence", 
-    "Description": "If this unit is Incapacitated in Melee, the Incapacitator makes an Injury Roll after resolving its Melee Attacks."
+    "Description": "If this unit is Incapacitated in Melee, the Incapacitator makes an Mishap Roll after resolving its Melee Attacks."
   },
   "Taunt": { 
     "Name": "Taunt", 
@@ -372,7 +372,7 @@
   "Large": {
     "Name": "Large",
     "Type": "Inherent",
-    "Description": "This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It cannot pick up Treasure. This unit is immune to the Blight. It cannot Promote."
+    "Description": "This unit may not be purchased at warband creation. It counts as two units for the purpose of Rout Checks. It cannot pick up Treasure. This unit is immune to the Blight."
   },
   "The Rapture is Nigh": {
     "Name": "The Rapture is Nigh",

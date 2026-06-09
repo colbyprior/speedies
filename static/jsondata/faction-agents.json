@@ -41,7 +41,7 @@
     "Position": "Count",
     "Melee Weapon": "Sword",
     "Ranged Weapon": "",
-    "Event": "**Disposition:** Wilfred is Hostile to everyone, but willing to Ally with Chaos warbands.\n \n**Immediately:** Place Wilfred 1\" away from the triggering unit.\n \n**Neutral Turn:** Wilfred performs normal actions.\n \n**Other Behaviours:** Wilfred does not target Large, Undead, and Animal units."
+    "Event": "**Disposition:** Wilfred is Hostile to everyone, but willing to Ally with Chaos warbands.\n \n**Immediately:** Place Wilfred at the nearest point along the board edge to the triggering unit.\n \n**Neutral Turn:** Wilfred performs normal actions.\n \n**Other Behaviours:** Wilfred does not target Large, Undead, and Animal units."
   },
   "XYZ the Bounty Hunter": {
     "Type": "Agent",
