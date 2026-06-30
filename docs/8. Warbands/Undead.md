@@ -14,14 +14,14 @@ Let me off this wild ride Mr. Bones
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
 | Necromancer | 6 | 14 | - | 18 | 10| 7 | 1 | 1 | 0 | 0 | [Leader](#leader), [Necromantic Magic](#necromantic-magic) | 65 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale) |
-| Blight Cultist | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 | [Spread Blight (Major)](#spread-blight-(major)) | 45 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
-| Death Knight | 7 | 14 | 14 | 16 | 14| 13 | 1 | 2 | 0 | 0 | [Undead](#undead), [Fear](#fear) | 75 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
-| Reaper | 9 | 15 | - | - | 14| 13 | 2 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear) | 70 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
+| Blight Cultist | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 | [Spread Blight (Major)](#spread-blight-major) | 45 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
+| Death Knight | 7 | 14 | 14 | 16 | 14| 13 | 1 | 2 | 0 | 0 | [Undead](#undead-1), [Fear](#fear) | 75 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
+| Reaper | 9 | 15 | - | - | 14| 13 | 2 | 1 | 0 | 0 | [Undead](#undead-1), [Fear](#fear) | 70 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
-| Zombie | 6 | 13 | - | - | 16| 13 | 1 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment), [Spread Blight (Minor)](#spread-blight-(minor)) | 25 | - |
+| Zombie | 6 | 13 | - | - | 16| 13 | 1 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment), [Spread Blight (Minor)](#spread-blight-minor) | 25 | - |
 | Skeleton | 7 | 15 | 15 | - | 14| 13 | 1 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear) | 30 | - |
 | Ghost | 6 | 13 | - | 13 | 10| 13 | 1 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment), [Ethereal](#ethereal) | 40 | 3 |
 | Bone Giant | 7 | 9 | - | 13 | 14| 13 | 2 | 3 | 3 | 3 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment), [Large](#large) | 200 | 1 |

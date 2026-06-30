@@ -2,8 +2,6 @@ import sys
 
 from helpers.global_data import (global_faction_agents, global_skills_data, global_ranged_weapons_data, global_aliases,
                                  global_ranged_weapon_effects)
-from helpers.run_helper import minimalNumber
-from helpers.warband_helper import clean_link
 
 
 def generate_faction_agents():
