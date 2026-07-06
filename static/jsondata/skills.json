@@ -349,6 +349,11 @@
     "Type": "Inherent",
     "Description": "Allied units within 5\" of this unit (including the unit itself) gain the benefits of an equipped Banner. This unit can only have one Banner equipped at a time. It cannot be used as a weapon, but takes up one Melee Weapon Slot."
   },
+  "Guardian": {
+    "Name": "Guardian",
+    "Type": "Inherent",
+    "Description": "Once per turn, if this unit is Engaged in combat, it may make a Morale Check. On a success, all units it is Engaged with must target it for this combat. If it becomes Dazed, Stunned, or Incapacitated, this effect ends."
+  },
   "Vampiric Magic": {
     "Name": "Vampiric Magic",
     "Type": "Spellcasting",

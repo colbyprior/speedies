@@ -226,7 +226,7 @@
             "Aliases": ["Marksman", "Sniper"],
             "Melee Weapons": ["Dagger", "Hammer", "Sword / Axe"],
             "Ranged Weapons": ["Short Bow", "Bow", "Long Bow", "Crossbow", "Pistol", "Rifle", "Blunderbuss"],
-            "Armour": ["Light Armour"]
+            "Armour": ["Light Armour", "Heavy Armour"]
         },
         "Defender": {
             "Aliases": ["Knight", "Defender"],

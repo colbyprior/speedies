@@ -43,7 +43,7 @@
             "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 80,
+            "Cost": 85,
             "Skills": [
                 "Divine Magic"
             ]
@@ -80,9 +80,9 @@
             "Agility": "10",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 65,
+            "Cost": 60,
             "Skills": [
-                "The Rapture is Nigh",
+                "The Rapture is Nigh"
             ]
         }
     ],
@@ -228,7 +228,7 @@
         },
         "Zealots": {
             "Aliases": ["Zealot"],
-            "Melee Weapons": ["Dagger", "Hammer / Club", "Sword / Axe", "Spear", "Torch", "Shield"],
+            "Melee Weapons": ["Dagger / Club", "Hammer", "Sword / Axe", "Spear", "Torch", "Shield"],
             "Ranged Weapons": ["Crossbow"],
             "Armour": ["Light Armour"]
         }

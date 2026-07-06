@@ -113,12 +113,12 @@
         {
             "Name": "Ghoul",
             "Type Cap": "-",
-            "Move": "6",
+            "Move": "7",
             "Piercing": "0",
             "Injury": "2",
             "Melee": "13",
             "Ranged": "-",
-            "Defence": "-",
+            "Defence": "18",
             "Wounds": "1",
             "Agility": "10",
             "Attacks": "2",
@@ -224,7 +224,7 @@
         },
         "Thralls": {
             "Aliases": ["Thrall"],
-            "Melee Weapons": ["Dagger", "Hammer / Club", "Sword", "Spear", "Great Hammer / Club", "Great Sword", "Pike", "Shield"],
+            "Melee Weapons": ["Dagger / Club", "Hammer", "Sword", "Spear", "Great Hammer", "Great Sword", "Pike", "Shield"],
             "Ranged Weapons": ["Short Bow", "Bow", "Crossbow"],
             "Armour": ["Light Armour", "Heavy Armour"]
         }
