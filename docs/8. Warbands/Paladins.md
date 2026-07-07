@@ -13,18 +13,18 @@ An order of paladins and others that seek to advance a holy agenda.
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| Justicar | 6 | 13 | 13 | 16 | 8| 7 | 1 | 1 | 0 | 0 | [Leader](#leader), [Divine Magic](#divine-magic) | 95 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Morale) |
+| Justicar | 6 | 13 | 13 | 16 | 8| 8 | 1 | 1 | 0 | 0 | [Leader](#leader), [Divine Magic](#divine-magic) | 95 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Morale) |
 | Paladin | 6 | 13 | 14 | 16 | 10| 10 | 1 | 1 | 0 | 0 |  | 50 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Morale) |
 | Cleric | 6 | 14 | 14 | 17 | 10| 10 | 1 | 1 | 0 | 0 | [Healer](#healer) | 50 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
-| Standard Bearer | 6 | 14 | - | 18 | 10| 7 | 1 | 1 | 0 | 0 | [Standard Bearer](#standard-bearer) | 40 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
+| Standard Bearer | 6 | 14 | 14 | 18 | 10| 8 | 1 | 1 | 0 | 0 | [Standard Bearer](#standard-bearer) | 35 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
 | Squire | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 30 | - |
-| Initiate | 6 | 16 | 16 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 20 | - |
-| Monk | 7 | 14 | - | 18 | 8| 10 | 2 | 1 | 2 | 0 | [Ki Strike](#ki-strike), [No Equipment](#no-equipment) | 55 | 3 |
-| Cavalier | 9 | 13 | - | 17 | 10| 10 | 1 | 2 | 0 | 0 | [Mounted](#mounted) | 50 | 2 |
+| Guardian | 6 | 14 | - | 16 | 14| 10 | 1 | 1 | 0 | 0 | [Guardian](#guardian) | 35 | - |
+| Monk | 7 | 14 | - | 18 | 8| 10 | 2 | 1 | 2 | 0 | [Ki Strike](#ki-strike), [No Equipment](#no-equipment) | 55 | - |
+| Cavalier | 8 | 13 | - | 17 | 10| 10 | 1 | 2 | 0 | 0 | [Mounted](#mounted) | 50 | 2 |
 
 ## Skills 
 ### Leader
@@ -43,6 +43,10 @@ This unit can use the 'Heal' Divine Magic spell.
 *Inherent*
 
 Allied units within 5" of this unit (including the unit itself) gain the benefits of an equipped Banner. This unit can only have one Banner equipped at a time. It cannot be used as a weapon, but takes up one Melee Weapon Slot.
+### Guardian
+*Inherent*
+
+Once per turn, if this unit is Engaged in combat, it may make a Morale Check. On a success, all units it is Engaged with must target it for this combat. If it becomes Dazed, Stunned, or Incapacitated, this effect ends.
 ### Ki Strike
 *Inherent*
 
@@ -54,12 +58,12 @@ This unit may not have any equipment, but does not suffer the penalties for figh
 ### Mounted
 *Inherent*
 
-This unit cannot use ladders or make Climb Checks. It gains +3 Mov and +1 Wnd, which are already reflected in its stat block. The +1 Wnd does not count towards the stat cap (so this unit has an effective max of 4 Wounds).
+This unit cannot use ladders or make Climb Checks. It gains +2 Mov and +1 Wnd, which are already reflected in its stat block. The +1 Wnd does not count towards the stat cap (so this unit has an effective max of 4 Wounds).
 
 ## Equipment
 
 ### Paladins Equipment 
-Paladins equipment for the unit types: Justicar, Paladin, Cleric, Initiate, Squire
+Paladins equipment for the unit types: Justicar, Paladin, Cleric, Guardian, Squire
 
 | Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
@@ -91,6 +95,10 @@ Standard Bearer equipment for the unit types: Standard Bearer
 | Banner of Protection | 0 | 0 | 0 | Allies within this Banner's aura have +1 Def. Banners cannot be used to attack. | 10 | 1 |
 | Banner of Marching | 0 | 0 | 0 | Allies within this Banner's aura at the start of the turn gain +1 Move for the turn. Banners cannot be used to attack. | 10 | 1 |
 | Banner of Bravery | 0 | 0 | 0 | Allies within this Banner's aura can make Morale Checks with Advantage. Banners cannot be used to attack. | 10 | 1 |
+
+| Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |
+| ------------- | --- | --- | --- | ------ | ---- | ----- |
+| Sling | 15" | 0 | 0 | [Light](#light) | 5 | 1 |
 
 | Armour | Def | Cost |
 | ------ | --- | ---- |

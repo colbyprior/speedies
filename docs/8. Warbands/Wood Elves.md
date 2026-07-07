@@ -16,7 +16,7 @@ Elves can Jump Across to a maximum distance of 6", instead of the usual 3".
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| Commander | 7 | 12 | 12 | 16 | 6| 5 | 1 | 1 | 0 | 0 | [Leader](#leader) | 95 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Agility,Morale) |
+| Commander | 7 | 12 | 12 | 16 | 5| 6 | 1 | 1 | 0 | 0 | [Leader](#leader) | 95 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Agility,Morale) |
 | Mage | 7 | 13 | - | 18 | 6| 7 | 1 | 1 | 0 | 0 | [Life Magic](#life-magic) | 70 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Agility,Morale) |
 | Honour Guard | 7 | 12 | 13 | 16 | 6| 7 | 1 | 1 | 0 | 0 |  | 80 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
 | Ranger | 7 | 13 | 12 | 18 | 6| 7 | 1 | 1 | 0 | 0 | [Vanguard](#vanguard) | 75 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
@@ -24,10 +24,10 @@ Elves can Jump Across to a maximum distance of 6", instead of the usual 3".
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
-| Citizen | 7 | 13 | 13 | 18 | 6| 7 | 1 | 1 | 0 | 0 |  | 45 | - |
-| Scout | 7 | 13 | 13 | 18 | 6| 7 | 1 | 1 | 0 | 0 | [Mark Target](#mark-target) | 60 | 2 |
+| Citizen | 7 | 13 | 13 | 18 | 6| 8 | 1 | 1 | 0 | 0 |  | 45 | - |
+| Scout | 7 | 13 | 13 | 18 | 6| 8 | 1 | 1 | 0 | 0 | [Mark Target](#mark-target) | 60 | 2 |
 | Woodland Creature | 8 | 14 | - | 18 | 8| 16 | 1 | 1 | 0 | 0 | [Follower](#follower), [Animal](#animal) | 15 | 3 |
-| Treant | 6 | 12 | - | 9 | 16| 7 | 2 | 3 | 4 | 4 | [Fear](#fear), [Slow](#slow), [Large](#large), [No Equipment](#no-equipment) | 175 | 1 |
+| Treant | 6 | 12 | - | 9 | 16| 8 | 2 | 3 | 4 | 4 | [Fear](#fear), [Slow](#slow), [Large](#large), [No Equipment](#no-equipment) | 175 | 1 |
 
 ## Skills 
 ### Leader
