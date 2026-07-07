@@ -4,10 +4,10 @@
     "Type": "Melee", 
     "Description": "This unit has Advantage on Injury Checks in Melee. This means that, if this unit hits, roll a d20 and use that as the Injury value if it is higher than the Melee Check result (before modifiers)."
   },
-  "Hard to Kill": { 
-    "Name": "Hard to Kill", 
+  "Dwarf": { 
+    "Name": "Dwarf", 
     "Type": "Inherent", 
-    "Description": "This unit has a -2 to Mishap Rolls made against it (eg. an unmodified roll of 19 would count as a 17, Stunning rather than Incapacitating the unit)."
+    "Description": "This unit has a -2 to Injury and Mishap Rolls made against it (eg. an unmodified roll of 19 would count as a 17, Stunning rather than Incapacitating the unit)."
   },
   "Divine Cure": { 
     "Name": "Divine Cure", 
@@ -72,7 +72,7 @@
   "Drag You Down": { 
     "Name": "Drag You Down", 
     "Type": "Defence", 
-    "Description": "If this unit is Incapacitated in Melee, the Incapacitator makes an Mishap Roll after resolving its Melee Attacks."
+    "Description": "If this unit is Incapacitated in Melee, the Incapacitator makes a Mishap Roll after resolving its Melee Attacks."
   },
   "Taunt": { 
     "Name": "Taunt", 
@@ -247,7 +247,7 @@
   "Mounted": {
     "Name": "Mounted",
     "Type": "Inherent",
-    "Description": "This unit cannot use ladders or make Climb Checks. It gains +3 Mov and +1 Wnd, which are already reflected in its stat block. The +1 Wnd does not count towards the stat cap (so this unit has an effective max of 4 Wounds)."
+    "Description": "This unit cannot use ladders or make Climb Checks. It gains +2 Mov and +1 Wnd, which are already reflected in its stat block. The +1 Wnd does not count towards the stat cap (so this unit has an effective max of 4 Wounds)."
   },
   "Divine Magic": {
     "Name": "Divine Magic",

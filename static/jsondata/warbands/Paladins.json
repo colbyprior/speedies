@@ -20,7 +20,7 @@
             "Wounds": "1",
             "Agility": "8",
             "Attacks": "1",
-            "Morale": "7",
+            "Morale": "8",
             "Cost": 95,
             "Skills": [
                 "Leader",
@@ -74,7 +74,7 @@
             "Wounds": "1",
             "Agility": "10",
             "Attacks": "1",
-            "Morale": "7",
+            "Morale": "8",
             "Cost": 35,
             "Skills": [
 			"Standard Bearer"
@@ -136,7 +136,7 @@
         {
             "Name": "Cavalier",
             "Type Cap": "2",
-            "Move": "9",
+            "Move": "8",
             "Piercing": "0",
             "Injury": "0",
             "Melee": "13",

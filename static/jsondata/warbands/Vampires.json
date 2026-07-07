@@ -43,7 +43,7 @@
             "Wounds": "2",
             "Agility": "10",
             "Attacks": "2",
-            "Morale": "10",
+            "Morale": "8",
             "Cost": 125,
             "Skills": [
 				"Vampiric Magic",
@@ -122,7 +122,7 @@
             "Wounds": "1",
             "Agility": "10",
             "Attacks": "2",
-            "Morale": "16",
+            "Morale": "12",
             "Cost": 60,
             "Skills": [
                 "Undead",

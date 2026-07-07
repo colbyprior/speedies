@@ -21,9 +21,9 @@
             "Ranged": "12",
             "Defence": "16",
             "Wounds": "1",
-            "Agility": "6",
+            "Agility": "5",
             "Attacks": "1",
-            "Morale": "5",
+            "Morale": "6",
             "Cost": 95,
             "Skills": [
                 "Leader"
@@ -99,7 +99,7 @@
             "Wounds": "1",
             "Agility": "6",
             "Attacks": "1",
-            "Morale": "7",
+            "Morale": "8",
             "Cost": 45,
             "Skills": []
         },
@@ -115,7 +115,7 @@
             "Wounds": "1",
             "Agility": "6",
             "Attacks": "1",
-            "Morale": "7",
+            "Morale": "8",
             "Cost": 60,
             "Skills": [
 				"Mark Target"
@@ -152,7 +152,7 @@
             "Wounds": "3",
             "Agility": "16",
             "Attacks": "2",
-            "Morale": "7",
+            "Morale": "8",
             "Cost": 175,
             "Skills": [
                 "Fear",
