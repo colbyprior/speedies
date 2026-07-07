@@ -14,7 +14,7 @@ This team sucks... your blood!
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
 | Vampire Noble | 7 | 14 | - | 18 | 7| 7 | 2 | 2 | 0 | 0 | [Leader](#leader), [Undead](#undead), [Fear](#fear) | 165 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility,Morale) |
-| Vampire Seductor | 7 | 14 | - | 18 | 10| 10 | 2 | 2 | 0 | 0 | [Vampiric Magic](#vampiric-magic), [Undead](#undead), [Fear](#fear) | 125 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
+| Vampire Seductor | 7 | 14 | - | 18 | 10| 8 | 2 | 2 | 0 | 0 | [Vampiric Magic](#vampiric-magic), [Undead](#undead), [Fear](#fear) | 125 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
 | Nosferatu | 7 | 12 | - | 18 | 8| 10 | 2 | 2 | 0 | 0 | [No Equipment](#no-equipment), [Undead](#undead), [Fear](#fear) | 125 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility) |
 | Vampire Spawn | 7 | 14 | - | 18 | 10| 10 | 1 | 2 | 0 | 0 | [Undead](#undead), [Fear](#fear) | 85 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
 
@@ -22,7 +22,7 @@ This team sucks... your blood!
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
 | Thrall | 6 | 16 | 16 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 20 | - |
-| Ghoul | 6 | 13 | - | - | 10| 16 | 2 | 1 | 2 | 0 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment) | 60 | - |
+| Ghoul | 7 | 13 | - | 18 | 10| 12 | 2 | 1 | 2 | 0 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment) | 60 | - |
 | Dire Wolf | 8 | 10 | - | 18 | 10| 16 | 1 | 1 | 2 | 0 | [Ambush](#ambush), [Animal](#animal) | 35 | 3 |
 | Giant Bat | 8 | 16 | - | - | 8| 16 | 1 | 1 | 0 | 0 | [Flying](#flying), [Animal](#animal) | 15 | 3 |
 
@@ -81,11 +81,11 @@ Thralls equipment for the unit types: Thrall
 
 | Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
-| Dagger | 0 | 0 | 0 |  | 2 | 1 |
-| Hammer / Club | 0 | 4 | 0 |  | 5 | 1 |
+| Dagger / Club | 0 | 0 | 0 |  | 2 | 1 |
+| Hammer | 0 | 4 | 0 |  | 5 | 1 |
 | Sword | 0 | 0 | 3 |  | 5 | 1 |
 | Spear | 2 | 0 | 0 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
-| Great Hammer / Club | 5 | 7 | 0 |  | 10 | 2 |
+| Great Hammer | 5 | 7 | 0 |  | 10 | 2 |
 | Great Sword | 5 | 3 | 3 |  | 10 | 2 |
 | Pike | 7 | 3 | 0 |  | 10 | 2 |
 | Shield | 0 | 0 | 0 | +4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |

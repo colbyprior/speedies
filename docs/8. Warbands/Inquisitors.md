@@ -16,18 +16,18 @@ At the start of each game make a Morale Check once per hero. For each success, a
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| High Inquisitor | 6 | 13 | 12 | 17 | 8| 7 | 1 | 1 | 0 | 0 | [Leader](#leader) | 85 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Agility,Morale) |
-| Priest | 6 | 14 | - | 18 | 10| 10 | 1 | 1 | 0 | 0 | [Divine Magic](#divine-magic) | 80 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
+| High Inquisitor | 6 | 13 | 12 | 17 | 8| 8 | 1 | 1 | 0 | 0 | [Leader](#leader) | 85 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Agility,Morale) |
+| Priest | 6 | 14 | - | 18 | 10| 10 | 1 | 1 | 0 | 0 | [Divine Magic](#divine-magic) | 85 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
 | Inquisitor | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 55 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
-| Doomsayer | 6 | 15 | 15 | 18 | 10| 10 | 1 | 1 | 0 | 0 | [The Rapture is Nigh](#the-rapture-is-nigh) | 65 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
+| Doomsayer | 6 | 15 | 15 | 18 | 10| 10 | 1 | 1 | 0 | 0 | [The Rapture is Nigh](#the-rapture-is-nigh) | 60 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
-| Fanatic | 6 | 13 | - | 16 | 10| 10 | 1 | 1 | 0 | 0 | [Fear](#fear) | 50 | 5 |
+| Fanatic | 6 | 13 | - | 16 | 10| 10 | 1 | 1 | 0 | 0 | [Fear](#fear) | 50 | - |
 | Zealot | 6 | 16 | 16 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 20 | - |
 | Peasant | 6 | 17 | - | - | 12| 16 | 1 | 1 | 0 | 0 | [Heed the Scripture](#heed-the-scripture), [Mob Mentality](#mob-mentality), [No Equipment](#no-equipment) | - | See Incite the Mob skill |
-| Hound | 8 | 14 | - | 18 | 8| 16 | 1 | 1 | 0 | 0 | [Animal](#animal), [Pack Tactics](#pack-tactics) | 20 | 5 |
+| Hound | 8 | 14 | - | 18 | 8| 16 | 1 | 1 | 0 | 0 | [Animal](#animal), [Pack Tactics](#pack-tactics) | 20 | 6 |
 
 ## Skills 
 ### Leader
@@ -122,8 +122,8 @@ Zealots equipment for the unit types: Zealot
 
 | Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
-| Dagger | 0 | 0 | 0 |  | 2 | 1 |
-| Hammer / Club | 0 | 4 | 0 |  | 5 | 1 |
+| Dagger / Club | 0 | 0 | 0 |  | 2 | 1 |
+| Hammer | 0 | 4 | 0 |  | 5 | 1 |
 | Sword / Axe | 0 | 0 | 3 |  | 5 | 1 |
 | Spear | 2 | 0 | 0 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
 | Torch | 0 | 0 | 0 | This unit has Advantage on Out-Of-Sight Rolls when attempting to Engage. | 10 | 1 |

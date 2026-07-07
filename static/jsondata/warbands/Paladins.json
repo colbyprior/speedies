@@ -20,7 +20,7 @@
             "Wounds": "1",
             "Agility": "8",
             "Attacks": "1",
-            "Morale": "7",
+            "Morale": "8",
             "Cost": 95,
             "Skills": [
                 "Leader",
@@ -69,13 +69,13 @@
             "Piercing": "0",
             "Injury": "0",
             "Melee": "14",
-            "Ranged": "-",
+            "Ranged": "14",
             "Defence": "18",
             "Wounds": "1",
             "Agility": "10",
             "Attacks": "1",
-            "Morale": "7",
-            "Cost": 40,
+            "Morale": "8",
+            "Cost": 35,
             "Skills": [
 			"Standard Bearer"
 			]
@@ -99,24 +99,24 @@
             "Skills": []
         },
         {
-            "Name": "Initiate",
+            "Name": "Guardian",
             "Type Cap": "-",
             "Move": "6",
             "Piercing": "0",
             "Injury": "0",
-            "Melee": "16",
-            "Ranged": "16",
-            "Defence": "18",
+            "Melee": "14",
+            "Ranged": "-",
+            "Defence": "16",
             "Wounds": "1",
-            "Agility": "10",
+            "Agility": "14",
             "Attacks": "1",
             "Morale": "10",
-            "Cost": 20,
-            "Skills": []
+            "Cost": 35,
+            "Skills": ["Guardian"]
         },
         {
             "Name": "Monk",
-            "Type Cap": "3",
+            "Type Cap": "-",
             "Move": "7",
             "Piercing": "0",
             "Injury": "2",
@@ -136,7 +136,7 @@
         {
             "Name": "Cavalier",
             "Type Cap": "2",
-            "Move": "9",
+            "Move": "8",
             "Piercing": "0",
             "Injury": "0",
             "Melee": "13",
@@ -216,7 +216,7 @@
     },
     "Equipment": {
         "Paladins": {
-            "Aliases": ["Justicar", "Paladin", "Cleric", "Initiate", "Squire"],
+            "Aliases": ["Justicar", "Paladin", "Cleric", "Guardian", "Squire"],
             "Melee Weapons": ["Hammer", "Flail / Great Hammer", "Divine Hammer", "Divine Great Hammer", "Sword", "Great Sword", "Shield"],
             "Ranged Weapons": ["Sling"],
             "Armour": ["Light Armour", "Heavy Armour"]
@@ -224,7 +224,7 @@
         "Standard Bearer": {
             "Aliases": ["Standard Bearer"],
             "Melee Weapons": ["Hammer", "Divine Hammer", "Sword", "Banner of Protection", "Banner of Marching", "Banner of Bravery"],
-            "Ranged Weapons": [],
+            "Ranged Weapons": ["Sling"],
             "Armour": ["Light Armour", "Heavy Armour"]
         },
         "Cavalier": {

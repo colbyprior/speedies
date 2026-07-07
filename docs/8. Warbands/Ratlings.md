@@ -25,7 +25,7 @@ When a henchmen promotes they gain the ability to use any piece of equipment tha
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
 | Underrat | 8 | 15 | 15 | 18 | 8| 16 | 1 | 1 | 0 | 0 |  | 30 | - |
-| Blight Host | 8 | 14 | 14 | - | 8| 16 | 1 | 1 | 0 | 0 | [Spread Blight (Minor)](#spread-blight-minor) | 40 | 2 |
+| Blight Host | 8 | 14 | - | - | 8| 16 | 1 | 1 | 0 | 0 | [Spread Blight (Minor)](#spread-blight-minor) | 40 | 6 |
 | Giant Rat | 8 | 15 | - | - | 6| 18 | 1 | 1 | 0 | 0 | [Animal](#animal) | 15 | 4 |
 | Rat Monstrosity | 8 | 13 | - | 12 | 8| 18 | 3 | 3 | 0 | 3 | [Cowardly](#cowardly), [Fear](#fear), [Large](#large), [Animal](#animal) | 205 | 1 |
 
@@ -70,8 +70,8 @@ Heroes equipment for the unit types: Assassin, Enforcer, Ratlock, Guildmaster
 
 | Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
-| Dagger | 0 | 0 | 0 |  | 2 | 1 |
-| Hammer / Club | 0 | 4 | 0 |  | 5 | 1 |
+| Dagger / Club | 0 | 0 | 0 |  | 2 | 1 |
+| Hammer | 0 | 4 | 0 |  | 5 | 1 |
 | Sword / Axe | 0 | 0 | 3 |  | 5 | 1 |
 | Spear / Staff | 2 | 0 | 0 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
 | Glaive | 5 | 3 | 3 |  | 10 | 2 |
@@ -92,8 +92,8 @@ Rat Underlings equipment for the unit types: Underrat, Blight Host
 
 | Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
-| Dagger | 0 | 0 | 0 |  | 2 | 1 |
-| Hammer / Club | 0 | 4 | 0 |  | 5 | 1 |
+| Dagger / Club | 0 | 0 | 0 |  | 2 | 1 |
+| Hammer | 0 | 4 | 0 |  | 5 | 1 |
 | Sword / Axe | 0 | 0 | 3 |  | 5 | 1 |
 | Spear | 2 | 0 | 0 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
 | Pike | 7 | 3 | 0 |  | 10 | 2 |
@@ -119,7 +119,7 @@ Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately 
 
 | Name | Difficulty | Description |
 | ---- | ------ | ---- |
-| Blight Bolt | 12 | Cast Attack. Target one unit you can see within 10" and perform a Cast Attack against them. On a success, the target makes a Plague Check. |
+| Blight Bolt | 12 | Cast Attack. Target one unit you can see within 10" and perform a Cast Attack against them. On a success, the target makes a Blight Check. |
 | Swarm of Rats | 15 | Cast Attack. Choose the closest enemy within 10". Make a Cast Attack against the target. If you succeed, make a Mishap Roll against all units within 1.5" of it. |
 | Sewer Filth | 12 | Basic. Target one unit you can see within 20". The target is Dazed. |
 | Pounce | 10 | The caster gains 2 Attacks and +3 Injury until the end of this turn. They may immediately make an Engage action, unless they are already Engaged. |

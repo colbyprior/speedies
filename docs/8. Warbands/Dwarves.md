@@ -11,22 +11,22 @@ These chonkers go bonkers.
 | Play Style | Rough and Tough |
 
 ## Special Rules
-### Hard to Kill
+### Dwarf
 Dwarves have a -2 when checking for Injury for attacks made against them (eg. an unmodified roll of 19 would count as a 17, Stunning rather than Incapacitating the Dwarf).
 ### Dwarven Firearms
 The range of Pistols is increased by 5". The range of all other Ranged Weapons (except Blunderbusses) are increased by 10". Dwarf Heroes may use any Ranged weapon with a Shield.
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| Chieftain | 5 | 12 | 12 | 13 | 14| 5 | 1 | 1 | 0 | 0 | [Leader](#leader) | 90 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Morale) |
+| Chieftain | 5 | 12 | 12 | 13 | 14| 6 | 1 | 1 | 0 | 0 | [Leader](#leader) | 90 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Morale) |
 | Builder | 5 | 13 | 13 | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Builder](#builder) | 70 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Defence) |
-| Hellion | 5 | 13 | - | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Berserker](#berserker), [Deathwish](#deathwish), [Fear](#fear) | 75 | 2 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility) |
-| Veteran | 5 | 13 | 14 | 14 | 14| 7 | 1 | 1 | 0 | 0 |  | 60 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
+| Hellion | 5 | 13 | - | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Berserker](#berserker), [Deathwish](#deathwish), [Fear](#fear) | 60 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility) |
+| Veteran | 5 | 13 | 14 | 14 | 14| 7 | 1 | 1 | 0 | 0 |  | 55 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
-| Berserker | 5 | 13 | - | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Berserker](#berserker), [Deathwish](#deathwish), [Fear](#fear) | 55 | 2 |
+| Berserker | 5 | 13 | - | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Berserker](#berserker), [Deathwish](#deathwish), [Fear](#fear) | 55 | - |
 | Youngling | 5 | 15 | 15 | 14 | 14| 7 | 1 | 1 | 0 | 0 |  | 30 | - |
 | Miner | 5 | 13 | 14 | 14 | 14| 7 | 1 | 1 | 0 | 0 |  | 45 | - |
 | Runner | 5 | 13 | 14 | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Vanguard](#vanguard), [Apprentice Builder](#apprentice-builder) | 55 | 2 |

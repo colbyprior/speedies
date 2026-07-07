@@ -22,7 +22,7 @@
             "Wounds": "1",
             "Agility": "10",
             "Attacks": "1",
-            "Morale": "7",
+            "Morale": "8",
             "Cost": 65,
             "Skills": [
                 "Leader",
@@ -61,7 +61,7 @@
             "Wounds": "2",
             "Agility": "14",
             "Attacks": "1",
-            "Morale": "13",
+            "Morale": "12",
             "Cost": 75,
             "Skills": [
                 "Undead",
@@ -81,8 +81,8 @@
             "Wounds": "1",
             "Agility": "14",
             "Attacks": "2",
-            "Morale": "13",
-            "Cost":70,
+            "Morale": "12",
+            "Cost":55,
             "Skills": [
                 "Undead",
                 "Fear"
@@ -102,7 +102,7 @@
             "Wounds": "1",
             "Agility": "16",
             "Attacks": "1",
-            "Morale": "13",
+            "Morale": "16",
             "Cost": 25,
             "Skills": [
                 "Undead",
@@ -123,7 +123,7 @@
             "Wounds": "1",
             "Agility": "14",
             "Attacks": "1",
-            "Morale": "13",
+            "Morale": "14",
             "Cost": 30,
             "Skills": [
                 "Undead",
@@ -142,7 +142,7 @@
             "Wounds": "1",
             "Agility": "10",
             "Attacks": "1",
-            "Morale": "13",
+            "Morale": "12",
             "Cost": 40,
             "Skills": [
                 "Undead",
@@ -163,7 +163,7 @@
             "Wounds": "3",
             "Agility": "14",
             "Attacks": "2",
-            "Morale": "13",
+            "Morale": "14",
             "Cost": 200,
             "Skills": [
                 "Undead",

@@ -22,7 +22,7 @@
             "Wounds": "1",
             "Agility": "8",
             "Attacks": "1",
-            "Morale": "7",
+            "Morale": "8",
             "Cost": 75,
             "Skills": [
                 "Leader"
@@ -49,7 +49,7 @@
         {
             "Name": "Sniper",
             "Type": "Hero",
-            "Type Cap": "2",
+            "Type Cap": "-",
             "Move": "6",
             "Piercing": "0",
             "Injury": "0",
@@ -67,7 +67,7 @@
         {
             "Name": "Knight",
             "Type": "Hero",
-            "Type Cap": "2",
+            "Type Cap": "-",
             "Move": "8",
             "Piercing": "0",
             "Injury": "0",
@@ -101,7 +101,7 @@
         },
         {
             "Name": "Marksman",
-            "Type Cap": "6",
+            "Type Cap": "-",
             "Move": "6",
             "Piercing": "0",
             "Injury": "0",
@@ -117,7 +117,7 @@
         },
         {
             "Name": "Man-at-Arms",
-            "Type Cap": "3",
+            "Type Cap": "-",
             "Move": "6",
             "Piercing": "2",
             "Injury": "2",
@@ -134,7 +134,7 @@
         },
         {
             "Name": "Defender",
-            "Type Cap": "3",
+            "Type Cap": "-",
             "Move": "6",
             "Piercing": "0",
             "Injury": "0",
@@ -226,7 +226,7 @@
             "Aliases": ["Marksman", "Sniper"],
             "Melee Weapons": ["Dagger", "Hammer", "Sword / Axe"],
             "Ranged Weapons": ["Short Bow", "Bow", "Long Bow", "Crossbow", "Pistol", "Rifle", "Blunderbuss"],
-            "Armour": ["Light Armour"]
+            "Armour": ["Light Armour", "Heavy Armour"]
         },
         "Defender": {
             "Aliases": ["Knight", "Defender"],
