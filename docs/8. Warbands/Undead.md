@@ -15,8 +15,8 @@ Let me off this wild ride Mr. Bones
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
 | Necromancer | 6 | 14 | - | 18 | 10| 7 | 1 | 1 | 0 | 0 | [Leader](#leader), [Necromantic Magic](#necromantic-magic) | 65 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale) |
 | Blight Cultist | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 | [Spread Blight (Major)](#spread-blight-major) | 45 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
-| Death Knight | 7 | 14 | 14 | 16 | 14| 13 | 1 | 2 | 0 | 0 | [Undead](#undead-1), [Fear](#fear) | 75 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
-| Reaper | 9 | 15 | - | - | 14| 13 | 2 | 1 | 0 | 0 | [Undead](#undead-1), [Fear](#fear) | 70 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
+| Death Knight | 7 | 14 | 14 | 16 | 14| 13 | 1 | 2 | 0 | 0 | [Undead](#clean_link(Undead)-1), [Fear](#fear) | 75 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
+| Reaper | 9 | 15 | - | - | 14| 13 | 2 | 1 | 0 | 0 | [Undead](#clean_link(Undead)-1), [Fear](#fear) | 70 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |

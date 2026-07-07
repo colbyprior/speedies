@@ -92,8 +92,9 @@ def heroes_table(warband):
     for hero in warband.get("Heroes"):
         skills = []
         for skill in hero.get("Skills"):
-            if skill == "Undead" and warband.get("Name") == "Undead":
-                skills += [f"[{skill}](#undead-1)"]
+            if skill == warband.get("Name"):
+                link = f"clean_link({skill})-1"
+                skills += [f"[{skill}](#{link})"]
             else:
                 skills += [f"[{skill}](#{clean_link(skill)})"]
         skills_str = ", ".join(skills)
