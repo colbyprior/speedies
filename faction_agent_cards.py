@@ -9,7 +9,6 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.enums import TA_CENTER, TA_LEFT
 
 from helpers.global_data import global_ranged_weapons_data, global_aliases, global_ranged_weapon_effects
-from helpers.run_helper import minimalNumber
 
 
 def load_agents(json_file):
@@ -134,7 +133,7 @@ def create_card_content(name, agent_data, skills_db):
 
     # Stats table - without Cost column
     stats_header = ['Mov', 'Run', 'Mel', 'Rgd', 'Def', 'Agi', 'Mrl', 'Atk', 'Wnd', 'Prc', 'Inj']
-    run_value = str(minimalNumber(float(agent_data['Move'])*1.5))
+    run_value = int(agent_data['Move']) + 3
     stats_values = [
         agent_data['Move'],
         run_value,

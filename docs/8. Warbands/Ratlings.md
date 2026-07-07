@@ -25,7 +25,7 @@ When a henchmen promotes they gain the ability to use any piece of equipment tha
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
 | Underrat | 8 | 15 | 15 | 18 | 8| 16 | 1 | 1 | 0 | 0 |  | 30 | - |
-| Blight Host | 8 | 14 | - | - | 8| 16 | 1 | 1 | 0 | 0 | [Spread Blight (Minor)](#spread-blight-(minor)) | 40 | 6 |
+| Blight Host | 8 | 14 | - | - | 8| 16 | 1 | 1 | 0 | 0 | [Spread Blight (Minor)](#spread-blight-minor) | 40 | 6 |
 | Giant Rat | 8 | 15 | - | - | 6| 18 | 1 | 1 | 0 | 0 | [Animal](#animal) | 15 | 4 |
 | Rat Monstrosity | 8 | 13 | - | 12 | 8| 18 | 3 | 3 | 0 | 3 | [Cowardly](#cowardly), [Fear](#fear), [Large](#large), [Animal](#animal) | 205 | 1 |
 

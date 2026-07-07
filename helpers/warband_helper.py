@@ -18,7 +18,7 @@ def get_skills_link(warband_name, skill_data):
 
 
 def clean_link(name):
-    return name.lower().replace(" ", "-").replace("\"", "")
+    return name.lower().replace(" ", "-").replace("\"", "").replace("(", "").replace(")", "")
 
 
 def short_to_long(name, warband_name):
@@ -92,7 +92,11 @@ def heroes_table(warband):
     for hero in warband.get("Heroes"):
         skills = []
         for skill in hero.get("Skills"):
-            skills += [f"[{skill}](#{clean_link(skill)})"]
+            if skill == warband.get("Name"):
+                link = f"clean_link({skill})-1"
+                skills += [f"[{skill}](#{link})"]
+            else:
+                skills += [f"[{skill}](#{clean_link(skill)})"]
         skills_str = ", ".join(skills)
         type_cap = hero.get('Type Cap')
         if not type_cap:
