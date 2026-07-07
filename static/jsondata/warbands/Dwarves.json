@@ -52,7 +52,7 @@
         {
             "Name": "Hellion",
             "Type": "Hero",
-            "Type Cap": "2",
+            "Type Cap": "-",
             "Move": "5",
             "Piercing": "0",
             "Injury": "0",
@@ -92,7 +92,7 @@
     "Henchmen": [
         {
             "Name": "Berserker",
-            "Type Cap": "2",
+            "Type Cap": "-",
             "Move": "5",
             "Piercing": "0",
             "Injury": "0",

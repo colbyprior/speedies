@@ -99,7 +99,7 @@
     "Name": "Blight Bolt",
     "School": "Blight Magic",
     "Check": "12",
-    "Description": "Cast Attack. Target one unit you can see within 10\" and perform a Cast Attack against them. On a success, the target makes a Plague Check."
+    "Description": "Cast Attack. Target one unit you can see within 10\" and perform a Cast Attack against them. On a success, the target makes a Blight Check."
   },
   "Bat wings": {
     "Name": "Bat wings",
