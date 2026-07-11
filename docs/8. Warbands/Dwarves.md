@@ -13,7 +13,7 @@ These chonkers go bonkers.
 ## Special Rules
 ### Dwarf
 Dwarves have a -2 when checking for Injury for attacks made against them (eg. an unmodified roll of 19 would count as a 17, Stunning rather than Incapacitating the Dwarf).
-### Dwarven Firearms
+### Firearm Specialist
 The range of Pistols is increased by 5". The range of all other Ranged Weapons (except Blunderbusses) are increased by 10". Dwarf Heroes may use any Ranged weapon with a Shield.
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |

@@ -11,7 +11,7 @@ Elves, bleh!
 | Play Style | Agile and Fragile |
 
 ## Special Rules
-### Elven Agility
+### Elf
 Elves can Jump Across to a maximum distance of 6", instead of the usual 3".
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |

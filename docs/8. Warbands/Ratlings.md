@@ -11,7 +11,7 @@ RAT
 | Play Style | Fast and agile swarm |
 
 ## Special Rules
-### Special Promotion
+### Ratling Initiation
 When a henchmen promotes they gain the ability to use any piece of equipment that the other heroes can use.
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
