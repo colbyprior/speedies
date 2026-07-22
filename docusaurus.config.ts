@@ -123,7 +123,7 @@ const config: Config = {
           label: 'Post-Game Overview',
         },
         {
-          href: '/builder/',
+          to: '/warband-builder',
           label: '⚔ Warband Builder',
           position: 'right',
         },
@@ -183,7 +183,7 @@ const config: Config = {
               label: 'Post-Game Overview',
             },
             {
-              href: '/builder/',
+              to: '/warband-builder',
               label: 'Warband Builder',
             }
           ],
