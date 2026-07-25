@@ -1,9 +1,4 @@
 {
-  "Deadly": { 
-    "Name": "Deadly", 
-    "Type": "Melee", 
-    "Description": "This unit has Advantage on Injury Checks in Melee. This means that, if this unit hits, roll a d20 and use that as the Injury value if it is higher than the Melee Check result (before modifiers)."
-  },
   "Dwarf": { 
     "Name": "Dwarf", 
     "Type": "Inherent", 
@@ -52,7 +47,7 @@
   "Fencing Specialist": {
     "Name": "Fencing Specialist", 
     "Type": "Agility", 
-    "Description": "If this unit is using a single one-handed weapon and no Shield, they have Advantage on Melee Checks and Defence Checks in Melee."
+    "Description": "If this unit is using a single one-handed weapon and no Shield, they have Advantage on Melee Checks and Defence Checks in Melee. This can be used by all Magic users."
   },
   "Great Weapon Specialist": { 
     "Name": "Great Weapon Specialist", 
@@ -62,7 +57,7 @@
  "Dual Wielding Specialist": { 
     "Name": "Dual Wielding Specialist", 
     "Type": "Melee", 
-    "Description": "If this unit is dual wielding Melee weapons, it double its Attacks in Melee instead of gaining the usual one additional Attack."
+    "Description": "If this unit is dual wielding Melee weapons, it has Advantage on Injury Checks in Melee. This means that, if this unit hits, roll a second d20 and use that as the Injury value if it is higher than the Melee Check result (before modifiers)."
   },
  "Shield Specialist": { 
     "Name": "Shield Specialist", 
@@ -71,33 +66,23 @@
   },
   "Drag You Down": { 
     "Name": "Drag You Down", 
-    "Type": "Defence", 
-    "Description": "If this unit is Incapacitated in Melee, the Incapacitator makes a Mishap Roll after resolving its Melee Attacks."
+    "Type": "Melee", 
+    "Description": "If this unit is Incapacitated in Melee, all enemies Engaged with this unit must make a Mishap Roll immediately after the current attacker finishes resolving their attacks`."
   },
   "Taunt": { 
     "Name": "Taunt", 
     "Type": "Defence", 
     "Description": "Once per turn, if an enemy attempts to Engage an ally within 5\" of this unit, this unit may make a Morale Check. On a success, the enemy attempts to Engage this unit instead."
   },
-  "Hero Killer": { 
-    "Name": "Hero Killer", 
-    "Type": "Melee", 
-    "Description": "If this unit rolls an unmodified Melee Attack of 18-20, the target automatically fails its Defence Check."
-  },
   "Cleave": { 
     "Name": "Cleave", 
     "Type": "Melee", 
-    "Description": "If this unit hits an enemy in Melee and that enemy does not succeed on a Defence Check, this unit may immediately make another Attack."
-  },
-   "Magebane": { 
-    "Name": "Magebane", 
-    "Type": "Melee", 
-    "Description": "This unit has Advantage against Casters in Melee."
+    "Description": "This unit gains +1 Atk when Engaged with more than one enemy. To gain this benefit, the unit must spread their attacks across at least two enemies."
   },
   "Improved Critical": { 
     "Name": "Improved Critical", 
     "Type": "Melee", 
-    "Description": "This unit can trigger a critical strike on a 19-20"
+    "Description": "This unit can trigger a critical strike on a 18-20."
   },
   "Ambush": { 
     "Name": "Ambush", 
@@ -107,7 +92,7 @@
   "Spell Sniper": { 
     "Name": "Spell Sniper", 
     "Type": "Morale", 
-    "Description": "This unit's Cast Attack spells have their range increased by 5\"."
+    "Description": "This unit's single target Spells have their range increased by 5\"."
   },
   "Sneaky": { 
     "Name": "Sneaky", 
@@ -118,11 +103,6 @@
     "Name": "Thief", 
     "Type": "Agility", 
     "Description": "This unit has Advantage on Morale Checks to pick up contested Treasure. It may also Run while carrying Treasure."
-  },
-  "Animal Handler": { 
-    "Name": "Animal Handler", 
-    "Type": "Morale", 
-    "Description": "This unit may make a Morale Check against an Animal within 5\" during the Ranged Phase (instead of a Ranged Attack). If the unit passes, the Animal cannot Engage or Move on its following turn."
   },
   "Coup de Grace": { 
     "Name": "Coup de Grace", 
@@ -142,7 +122,7 @@
   "Gunner": { 
     "Name": "Gunner", 
     "Type": "Ranged", 
-    "Description": "This unit cannot misfire with Blackpowder weapons (the Blunderbuss can still misfire)."
+    "Description": "Blackpowder weapons used by this unit have Advantage up to their full range while elevated, rather than half range."
   },
   "Piercing Shot": { 
     "Name": "Piercing Shot", 
@@ -152,7 +132,7 @@
   "Leap": { 
     "Name": "Leap", 
     "Type": "Agility", 
-    "Description": "This unit's max jump distance is increased by 3\". It also has Advantage on Jump Across Checks."
+    "Description": "This unit's max jump distance is increased by 3\". It also has Advantage on all Jump Checks. This includes Jump Attacks."
   },
    "Arbalist": { 
     "Name": "Arbalist", 
@@ -174,10 +154,30 @@
     "Type": "Agility", 
     "Description": "This unit's Run speed is +6\" rather than the usual +3\"."
   },
-  "Sturdy": { 
-    "Name": "Sturdy", 
+  "Stand Firm": { 
+    "Name": "Stand Firm", 
     "Type": "Defence", 
-    "Description": "This unit cannot be Staggered."
+    "Description": "This unit cannot be Staggered and is immune to Fear."
+  },
+  "Guardian": { 
+    "Name": "Guardian", 
+    "Type": "Defence", 
+    "Description": "Once per turn, if this unit is Engaged in combat, it may make a Morale Check. On a success, all units it is Engaged with must target it for this combat. If it becomes Dazed, Stunned, or Incapacitated, this effect ends."
+  },
+  "Countercharge": { 
+    "Name": "Countercharge", 
+    "Type": "Defence", 
+    "Description": "Once per turn, after an enemy Engages an ally within 5\" of this unit, this unit may make a Morale Check. On a success, this unit becomes Engaged with the enemy unit. The enemy still counts as Engaging for the purpose of attack order."
+  },
+  "Stout": { 
+    "Name": "Stout", 
+    "Type": "Defence", 
+    "Description": "This unit gains -2 when checking for Injury for attacks made against them (eg. an unmodified roll of 19 would count as a 17, Stunning rather than Incapacitating the unit)."
+  },
+  "Lucky": { 
+    "Name": "Lucky", 
+    "Type": "Defence", 
+    "Description": "This unit will always treat Mishap Rolls as if it rolled a 1."
   },
   "Sniper": { 
     "Name": "Sniper", 
@@ -187,12 +187,17 @@
   "Run and Gun": { 
     "Name": "Run and Gun", 
     "Type": "Ranged", 
-    "Description": "This unit can make a Ranged Attack on its turn even if it had Run during the Move Phase."
+    "Description": "This unit can make a Ranged Attack on its turn even if it had Ran during the Move Phase."
   },
   "Agile": { 
     "Name": "Agile", 
     "Type": "Agility",
-    "Description": "This unit gets Advantage on all Climb checks."
+    "Description": "This unit gets Advantage on all Climb and Jump checks. This includes Jump Attacks."
+  },
+  "Animal Leader": { 
+    "Name": "Animal Leader", 
+    "Type": "Morale", 
+    "Description": "Allied, animal units within 5\" of this unit can use this unit's Morale stat for Checks instead of their own."
   },
   "Iron Will": { 
     "Name": "Iron Will", 
@@ -203,11 +208,6 @@
     "Name": "Favourable Encounter", 
     "Type": "Morale", 
     "Description": "If a unit from your warband triggers an Event, you may draw an additional Faction Hero card and choose which Faction Hero will be used for the Event."
-  },
-  "Treasure Hunter": {
-	"Name": "Treasure Hunter", 
-    "Type": "Morale", 
-    "Description": "If any unit in the your warband has this skill, you can roll on the Loot table when rolling a 19-20 on a Treasure Roll, rather than the usual 20."
   },
   "Spell Master": { 
     "Name": "Spell Master", 
@@ -222,7 +222,7 @@
   "Hoarder": { 
     "Name": "Hoarder", 
     "Type": "Morale", 
-    "Description": "When a unit of your warband dies you can keep one piece of equipment from that unit. This skill can be used once per battle and cannot be used on Rare Consumables, Oddments, Armour, or Weapons."
+    "Description": "When a unit of your warband dies you can keep one piece of equipment from that unit. This skill can be used once per game and cannot be used on Artifacts."
   },
   "Fear": { 
     "Name": "Fear", 
@@ -348,11 +348,6 @@
     "Name": "Standard Bearer",
     "Type": "Inherent",
     "Description": "Allied units within 5\" of this unit (including the unit itself) gain the benefits of an equipped Banner. This unit can only have one Banner equipped at a time. It cannot be used as a weapon, but takes up one Melee Weapon Slot."
-  },
-  "Guardian": {
-    "Name": "Guardian",
-    "Type": "Inherent",
-    "Description": "Once per turn, if this unit is Engaged in combat, it may make a Morale Check. On a success, all units it is Engaged with must target it for this combat. If it becomes Dazed, Stunned, or Incapacitated, this effect ends."
   },
   "Vampiric Magic": {
     "Name": "Vampiric Magic",
