@@ -17,8 +17,8 @@ Elves can Jump Across to a maximum distance of 6", instead of the usual 3".
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
 | Commander | 7 | 12 | 12 | 16 | 5| 6 | 1 | 1 | 0 | 0 | [Leader](#leader) | 95 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Agility,Morale) |
-| Mage | 7 | 13 | - | 18 | 6| 7 | 1 | 1 | 0 | 0 | [Life Magic](#life-magic) | 70 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Agility,Morale) |
-| Honour Guard | 7 | 12 | 13 | 16 | 6| 7 | 1 | 1 | 0 | 0 |  | 80 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
+| Mage | 7 | 13 | - | 18 | 6| 7 | 1 | 1 | 0 | 0 | [Arcane Magic](#arcane-magic) | 70 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Agility,Morale) |
+| Honour Guard | 7 | 12 | 13 | 16 | 6| 7 | 1 | 1 | 0 | 0 |  | 80 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale) |
 | Ranger | 7 | 13 | 12 | 18 | 6| 7 | 1 | 1 | 0 | 0 | [Vanguard](#vanguard) | 75 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
 
 ## Henchmen
@@ -26,15 +26,15 @@ Elves can Jump Across to a maximum distance of 6", instead of the usual 3".
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
 | Citizen | 7 | 13 | 13 | 18 | 6| 8 | 1 | 1 | 0 | 0 |  | 45 | - |
 | Scout | 7 | 13 | 13 | 18 | 6| 8 | 1 | 1 | 0 | 0 | [Mark Target](#mark-target) | 60 | 2 |
-| Woodland Creature | 8 | 14 | - | 18 | 8| 16 | 1 | 1 | 0 | 0 | [Follower](#follower), [Animal](#animal) | 15 | 3 |
-| Treant | 6 | 12 | - | 9 | 16| 8 | 2 | 3 | 4 | 4 | [Fear](#fear), [Slow](#slow), [Large](#large), [No Equipment](#no-equipment) | 175 | 1 |
+| Woodland Creature | 8 | 14 | - | 18 | 8| 16 | 1 | 1 | 0 | 0 | [Follower](#follower), <br/>[Animal](#animal) | 15 | 3 |
+| Treant | 6 | 12 | - | 9 | 16| 8 | 2 | 3 | 4 | 4 | [Fear](#fear), <br/>[Slow](#slow), <br/>[Large](#large), <br/>[No Equipment](#no-equipment) | 175 | 1 |
 
 ## Skills 
 ### Leader
 *Inherent*
 
 Allied, non-animal units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
-### Life Magic
+### Arcane Magic
 *Spellcasting*
 
 This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate 'Basic' spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield.
@@ -115,7 +115,7 @@ This weapon may be used with a Shield.
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | Commander | X | X | X | X | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Agility,Morale) |
 | Mage |  |  |  | X | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Agility,Morale) |
-| Honour Guard | X | X |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
+| Honour Guard | X | X |  | X | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale) |
 | Ranger |  | X |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
 | Citizen | X | X |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
 | Scout | X | X |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
