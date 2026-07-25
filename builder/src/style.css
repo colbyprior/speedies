@@ -1102,6 +1102,20 @@ ul, ol { list-style: none; }
   margin-bottom: 8px;
 }
 
+.spell-table {
+  table-layout: fixed;
+  width: 100%;
+}
+.spell-table th:nth-child(1),
+.spell-table td:nth-child(1) { width: 15%; }
+.spell-table th:nth-child(2),
+.spell-table td:nth-child(2) { width: 8%; text-align: center; }
+.spell-table th:nth-child(3),
+.spell-table td:nth-child(3) { width: 77%; }
+.spell-check-cell { text-align: center; }
+.spell-desc-cell { white-space: normal; font-size: 12px; }
+.view-page-break { display: none; }
+
 /* ─────────────────────────────────────────────────────────────
    PRINT STYLES
 ───────────────────────────────────────────────────────────── */
@@ -1136,6 +1150,10 @@ ul, ol { list-style: none; }
   .equip-row-name-cell, .equip-row-stats-cell { color: #555; }
   .view-special-rule { border-left-color: #555; background: #f9f9f9; }
   .view-skills-glossary { display: block; }
+  .view-page-break { display: block; page-break-after: always; break-after: page; }
+  .spell-table { font-size: 9px; }
+  .spell-table td { white-space: normal; overflow: visible; text-overflow: clip; }
+  .spell-desc-cell { font-size: 9px; white-space: normal; }
 }
 
 /* ─────────────────────────────────────────────────────────────

@@ -5,6 +5,7 @@ import rangedData from '../../static/jsondata/ranged-weapons.json'
 import armourData from '../../static/jsondata/armour.json'
 import aliasData from '../../static/jsondata/aliases.json'
 import skillsData from '../../static/jsondata/skills.json'
+import spellsData from '../../static/jsondata/spells.json'
 import rangedEffectsData from '../../static/jsondata/ranged-weapon-effects.json'
 
 // ─────────────────────────────────────────────────────────────
@@ -1194,6 +1195,8 @@ function renderViewWarband() {
       ${viewUnitSection('Heroes', heroes)}
       ${viewUnitSection('Henchmen', henchmen)}
 
+      <div class="view-page-break"></div>
+
       ${wb.units.length === 0 ? `
         <div class="view-empty">
           <p>No units in this warband.</p>
@@ -1252,6 +1255,32 @@ function renderViewWarband() {
             `).join('')}
           </section>
         `
+      })()}
+
+      ${(() => {
+        const magicTables = wbData?.['Magic Tables'] || []
+        if (!magicTables.length) return ''
+        return magicTables.map(school => {
+          const spells = Object.values(spellsData).filter(s => s.School === school)
+          if (!spells.length) return ''
+          return `
+            <section class="view-special-rules">
+              <h2>${esc(school)}</h2>
+              <table class="unit-table spell-table">
+                <thead><tr><th>Name</th><th>Difficulty</th><th>Description</th></tr></thead>
+                <tbody>
+                  ${spells.map(s => `
+                    <tr>
+                      <td class="spell-name-cell">${esc(s.Name)}</td>
+                      <td class="spell-check-cell">${esc(s.Check)}</td>
+                      <td class="spell-desc-cell">${esc(s.Description)}</td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </section>
+          `
+        }).join('')
       })()}
     </div>
   `
