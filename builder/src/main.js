@@ -4,6 +4,8 @@ import meleeData from '../../static/jsondata/melee-weapons.json'
 import rangedData from '../../static/jsondata/ranged-weapons.json'
 import armourData from '../../static/jsondata/armour.json'
 import aliasData from '../../static/jsondata/aliases.json'
+import skillsData from '../../static/jsondata/skills.json'
+import rangedEffectsData from '../../static/jsondata/ranged-weapon-effects.json'
 
 // ─────────────────────────────────────────────────────────────
 // DATA LOADING
@@ -954,59 +956,63 @@ function renderViewWarband() {
   const heroes = sorted.filter(u => u.category === 'hero')
   const henchmen = sorted.filter(u => u.category === 'henchman')
 
-  function equipRows(eq) {
+  function equipRows(eq, unitDef) {
     const rows = []
+    const baseMel = parseInt(unitDef?.Melee) || 0
+    const baseDef = parseInt(unitDef?.Defence) || 0
+    const baseInj = parseInt(unitDef?.Injury) || 0
+    const basePrc = parseInt(unitDef?.Piercing) || 0
+
+    // cols: Unit(0) Mov(1) Run(2) Mel(3) Rgd(4) Def(5) Agi(6) Mrl(7) Atk(8) Wnd(9) Inj(10) Prc(11) Cost(12)
+    function equipRow(icon, name, cells) {
+      const cols = Array(13).fill('')
+      cols[0] = `${icon} ${esc(name)}`
+      Object.assign(cols, cells)
+      return `<tr class="equip-row-view">${cols.map((v, i) =>
+        `<td class="${i === 0 ? 'equip-row-name-cell' : 'equip-row-stats-cell'}">${v}</td>`
+      ).join('')}</tr>`
+    }
 
     for (const name of (eq.melee || [])) {
       const stats = getMeleeStats(name)
       if (!stats) continue
       const resolvedKey = resolveAlias(name, 'Melee Weapons')
       const isShieldItem = resolvedKey === 'Shield' || resolvedKey === 'Tower Shield'
-      const parts = []
+      const cells = {}
       if (isShieldItem) {
         const m = (stats.Effect || '').match(/\+(\d+)\s*Def/)
-        if (m) parts.push(`Def +${m[1]}`)
+        if (m) cells[5] = baseDef - parseInt(m[1])
       } else {
         const mel = parseInt(stats.Melee) || 0
         const inj = parseInt(stats.Injury) || 0
         const prc = parseInt(stats.Piercing) || 0
-        if (mel !== 0) parts.push(`Mel ${mel > 0 ? '+' : ''}${mel}`)
-        if (inj !== 0) parts.push(`Inj ${inj > 0 ? '+' : ''}${inj}`)
-        if (prc !== 0) parts.push(`Prc ${prc > 0 ? '+' : ''}${prc}`)
-        if (stats.Effect) parts.push(esc(stats.Effect))
+        if (mel !== 0) cells[3] = baseMel - mel
+        if (inj !== 0) cells[10] = baseInj + inj
+        if (prc !== 0) cells[11] = basePrc + prc
       }
-      rows.push(`<tr class="equip-row-view">
-        <td class="equip-row-name-cell" colspan="2">⚔ ${esc(name)}</td>
-        <td colspan="10" class="equip-row-stats-cell">${parts.length ? parts.join(' · ') : '—'}</td>
-        <td></td>
-      </tr>`)
+      rows.push(equipRow('⚔', name, cells))
     }
 
     for (const name of (eq.ranged || [])) {
       const stats = getRangedStats(name)
       if (!stats) continue
-      const parts = []
-      if (stats.Range) parts.push(`Rng ${esc(stats.Range)}`)
+      const cells = {}
       const inj = parseInt(stats.Injury) || 0
       const prc = parseInt(stats.Piercing) || 0
-      if (inj !== 0) parts.push(`Inj ${inj > 0 ? '+' : ''}${inj}`)
-      if (prc !== 0) parts.push(`Prc ${prc > 0 ? '+' : ''}${prc}`)
-      if (stats.Effect) parts.push(esc(stats.Effect))
-      rows.push(`<tr class="equip-row-view">
-        <td class="equip-row-name-cell" colspan="2">🏹 ${esc(name)}</td>
-        <td colspan="10" class="equip-row-stats-cell">${parts.length ? parts.join(' · ') : '—'}</td>
-        <td></td>
-      </tr>`)
+      if (inj !== 0) cells[10] = baseInj + inj
+      if (prc !== 0) cells[11] = basePrc + prc
+      const label = stats.Range ? `${esc(name)} (${esc(stats.Range)})` : esc(name)
+      const effect = stats.Effect ? `<div class="equip-row-effect">${esc(stats.Effect)}</div>` : ''
+      rows.push(`<tr class="equip-row-view">${Array(13).fill('').map((_, i) => {
+        if (i === 0) return `<td class="equip-row-name-cell">🏹 ${label}${effect}</td>`
+        return `<td class="equip-row-stats-cell">${cells[i] ?? ''}</td>`
+      }).join('')}</tr>`)
     }
 
     if (eq.armour) {
       const stats = getArmourStats(eq.armour)
       const def = parseInt(stats?.Defence) || 0
-      rows.push(`<tr class="equip-row-view">
-        <td class="equip-row-name-cell" colspan="2">🔰 ${esc(eq.armour)}</td>
-        <td colspan="6" class="equip-row-stats-cell">${def ? `Def +${def}` : '—'}</td>
-        <td></td>
-      </tr>`)
+      rows.push(equipRow('🔰', eq.armour, def ? { 5: baseDef - def } : {}))
     }
 
     return rows.join('')
@@ -1014,13 +1020,13 @@ function renderViewWarband() {
 
   function skillLink(name) {
     const anchor = name.toLowerCase().replace(/\s+/g, '-')
-    return `<a class="skill-tag" href="/Reference/Skill%20List#${anchor}" target="_blank" rel="noopener">${esc(name)}</a>`
+    return `<a class="skill-link" href="/Reference/Skill%20List#${anchor}" target="_blank" rel="noopener">${esc(name)}</a>`
   }
 
   function skillsHtml(unitDef) {
     const skills = unitDef?.Skills || []
     if (!skills.length) return ''
-    return `<div class="view-unit-skills">${skills.map(skillLink).join('')}</div>`
+    return `<div class="view-unit-skills">${skills.map(skillLink).join(', ')}</div>`
   }
 
   function unitRow(unit) {
@@ -1031,7 +1037,6 @@ function renderViewWarband() {
       <tr>
         <td class="view-unit-cell">
           <div class="view-unit-name">${esc(unit.typeName)}</div>
-          ${skillsHtml(unitDef)}
         </td>
         ${unitDef ? (() => {
           const mov = parseInt(unitDef.Move) || 0
@@ -1051,7 +1056,8 @@ function renderViewWarband() {
         })() : `<td colspan="11">—</td>`}
         <td class="view-cost-cell">${cost}g</td>
       </tr>
-      ${equipRows(eq)}
+      ${equipRows(eq, unitDef)}
+      ${skillsHtml(unitDef) ? `<tr class="equip-row-view skills-row-view"><td class="equip-row-name-cell" colspan="13">${skillsHtml(unitDef)}</td></tr>` : ''}
     `
   }
 
@@ -1134,7 +1140,7 @@ function renderViewWarband() {
           <span class="unit-card-cost">${cost}g</span>
         </div>
         <div class="unit-card-stats">${statsHtml}</div>
-        ${skillsHtml(unitDef) ? `<div class="unit-card-skills">${(unitDef?.Skills || []).map(skillLink).join('')}</div>` : ''}
+        ${skillsHtml(unitDef) ? `<div class="unit-card-skills">${(unitDef?.Skills || []).map(skillLink).join(', ')}</div>` : ''}
         ${equipLines.length ? `<div class="unit-card-equip">${equipLines.join('')}</div>` : ''}
       </div>
     `
@@ -1195,6 +1201,29 @@ function renderViewWarband() {
         </div>
       ` : ''}
 
+      ${(() => {
+        const allEffects = new Set()
+        wb.units.forEach(unit => {
+          for (const name of (unit.equipment?.ranged || [])) {
+            const stats = getRangedStats(name)
+            if (stats?.Effect) stats.Effect.split(',').map(e => e.trim()).filter(Boolean).forEach(e => allEffects.add(e))
+          }
+        })
+        const entries = [...allEffects]
+          .map(name => ({ name, desc: rangedEffectsData[name] }))
+          .filter(e => e.desc)
+          .sort((a, b) => a.name.localeCompare(b.name))
+        if (!entries.length) return ''
+        return `
+          <section class="view-special-rules">
+            <h2>Ranged Properties</h2>
+            ${entries.map(e => `
+              <div class="view-special-rule"><strong>${esc(e.name)}:</strong> ${esc(e.desc)}</div>
+            `).join('')}
+          </section>
+        `
+      })()}
+
       ${wbData?.['Special Rules'] && Object.keys(wbData['Special Rules']).length > 0 ? `
         <section class="view-special-rules">
           <h2>Special Rules</h2>
@@ -1203,6 +1232,27 @@ function renderViewWarband() {
           `).join('')}
         </section>
       ` : ''}
+
+      ${(() => {
+        const allSkills = new Set()
+        wb.units.forEach(unit => {
+          const unitDef = findUnitDef(wbData, unit.typeName, unit.category)
+          ;(unitDef?.Skills || []).forEach(s => allSkills.add(s))
+        })
+        const entries = [...allSkills]
+          .map(name => ({ name, desc: skillsData[name]?.Description }))
+          .filter(e => e.desc)
+          .sort((a, b) => a.name.localeCompare(b.name))
+        if (!entries.length) return ''
+        return `
+          <section class="view-skills-glossary">
+            <h2>Skills Reference</h2>
+            ${entries.map(e => `
+              <div class="view-special-rule"><strong>${esc(e.name)}:</strong> ${esc(e.desc)}</div>
+            `).join('')}
+          </section>
+        `
+      })()}
     </div>
   `
 }

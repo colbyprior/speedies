@@ -995,7 +995,9 @@ ul, ol { list-style: none; }
 .view-unit-name { font-weight: 700; }
 .view-cost-cell { font-weight: 700; color: var(--gold); white-space: nowrap; }
 
-.view-unit-skills { display: flex; flex-direction: column; gap: 4px; margin-top: 5px; }
+.view-unit-skills { margin-top: 4px; font-size: 11px; color: var(--text-muted); }
+.skill-link { color: var(--text-muted); text-decoration: none; }
+.skill-link:hover { color: var(--gold-light); }
 .skill-tag {
   display: inline-block;
   font-size: 11px;
@@ -1014,8 +1016,9 @@ ul, ol { list-style: none; }
 .equip-row-view td { border-bottom: none; padding-top: 3px; padding-bottom: 3px; }
 .equip-row-view:last-child td { border-bottom: 1px solid var(--border); }
 .unit-table tr:hover.equip-row-view td { background: var(--bg3); }
-.equip-row-name-cell { text-align: left !important; padding-left: 24px !important; font-size: 12px; color: var(--text-muted); }
-.equip-row-stats-cell { text-align: left !important; font-size: 12px; color: var(--text-muted); }
+.equip-row-name-cell { text-align: left !important; padding-left: 24px !important; font-size: 12px; color: var(--text-muted); white-space: nowrap; }
+.equip-row-effect { font-size: 11px; color: var(--text-dim); font-style: italic; white-space: normal; }
+.equip-row-stats-cell { text-align: center !important; font-size: 12px; color: var(--text-muted); }
 
 /* Responsive: desktop table / mobile cards */
 .view-desktop { display: block; }
@@ -1074,6 +1077,10 @@ ul, ol { list-style: none; }
   gap: 14px;
 }
 
+.view-skills-glossary {
+  display: block;
+}
+
 .view-special-rules {
   padding: 0 16px;
 }
@@ -1116,14 +1123,19 @@ ul, ol { list-style: none; }
   .view-title { color: #000; }
   .view-type { color: #555; }
 
-  .unit-table th { background: #eee; color: #555; }
-  .unit-table td { border-bottom: 1px solid #ddd; }
+  .table-wrap { overflow: visible; }
+  .unit-table { min-width: 0; width: 100%; font-size: 9px; table-layout: fixed; }
+  .unit-table th { background: #eee; color: #555; white-space: normal; padding: 3px 2px; width: 5.5%; }
+  .unit-table th:first-child { width: auto; }
+  .unit-table td { border-bottom: 1px solid #ddd; padding: 3px 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .unit-table td:first-child { white-space: normal; }
   .unit-table tr:hover td { background: none; }
 
   .view-unit-name { color: #000; }
   .view-cost-cell { color: #000; }
   .equip-row-name-cell, .equip-row-stats-cell { color: #555; }
   .view-special-rule { border-left-color: #555; background: #f9f9f9; }
+  .view-skills-glossary { display: block; }
 }
 
 /* ─────────────────────────────────────────────────────────────

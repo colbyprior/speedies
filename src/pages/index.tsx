@@ -11,20 +11,6 @@ export default function Home() {
   const docsData = allDocsData['default'];
   const docs = docsData?.versions?.[0]?.docs || [];
 
-  // Hardcoded folder order - modify this array to set your desired order
-  const folderOrder = [
-    'Intro',
-    'Game Concepts',
-    'Pre-Game Rules',
-    'Game Rules',
-    'Post-Game Rules',
-    'Campaign Rules',
-    'Factions List',
-    'Warbands',
-    'Reference',
-    'Sample Warbands',
-  ];
-
   // Extract number from string like "1. Intro" -> 1
   const extractNumber = (str: string): number => {
     const match = str.match(/^(\d+)\.\s*/);
@@ -82,16 +68,23 @@ export default function Home() {
   };
 
   const structure = organizeByFolder(docs);
-  
-  // Sort folders based on hardcoded order
-  const sortedFolders = folderOrder.filter(folder => structure[folder]);
-  
-  // Add any folders not in the hardcoded list at the end
-  const remainingFolders = Object.keys(structure)
-    .filter(key => key !== '_root' && !folderOrder.includes(key))
-    .sort();
-  
-  const allFolders = [...sortedFolders, ...remainingFolders];
+
+  const folderOrder = [
+    'Intro', 'Game Concepts', 'Pre-Game Rules', 'Game Rules',
+    'Post-Game Rules', 'Campaign Rules', 'Factions List',
+    'Warbands', 'Reference', 'Sample Warbands',
+  ];
+
+  const allFolders = Object.keys(structure)
+    .filter(key => key !== '_root')
+    .sort((a, b) => {
+      const ai = folderOrder.indexOf(a);
+      const bi = folderOrder.indexOf(b);
+      if (ai === -1 && bi === -1) return a.localeCompare(b);
+      if (ai === -1) return 1;
+      if (bi === -1) return -1;
+      return ai - bi;
+    });
 
   return (
     <Layout
