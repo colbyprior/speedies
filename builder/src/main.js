@@ -76,8 +76,12 @@ function getMeleeSlots(displayName) {
 // ─────────────────────────────────────────────────────────────
 
 function findUnitDef(wbData, typeName, category) {
-  const arr = category === 'hero' ? (wbData.Heroes || []) : (wbData.Henchmen || [])
-  return arr.find(u => u.Name === typeName) || null
+  const primaryArr = category === 'hero' ? (wbData.Heroes || []) : (wbData.Henchmen || [])
+  const found = primaryArr.find(u => u.Name === typeName)
+  if (found) return found
+  // Fallback for promoted henchmen (category='hero' but name in Henchmen list)
+  const otherArr = category === 'hero' ? (wbData.Henchmen || []) : (wbData.Heroes || [])
+  return otherArr.find(u => u.Name === typeName) || null
 }
 
 function getEquipmentForUnit(wbData, unitTypeName) {
@@ -184,7 +188,7 @@ function calcUnitCost(unit, wbData) {
 }
 
 function getHeroSlots(wb) {
-  return BASE_HERO_SLOTS + (wb.heroSlotsPurchased || 0)
+  return BASE_HERO_SLOTS + (wb.heroSlotsPurchased || 0) + (wb.promotedHeroSlots || 0)
 }
 
 function getNextHeroSlotCost(wb) {
@@ -286,7 +290,7 @@ function canAddUnit(warband, unitDef, category) {
   if (baseCost === 0 && count >= 1) return { ok: false, reason: 'Free units limited to one' }
   if (cap !== Infinity && count >= cap) return { ok: false, reason: 'At Cap' }
 
-  if (goldRemaining(warband) < baseCost) return { ok: false, reason: "Can't Afford" }
+  if (!warband.campaignMode && goldRemaining(warband) < baseCost) return { ok: false, reason: "Can't Afford" }
 
   return { ok: true }
 }
@@ -327,7 +331,7 @@ function duplicateUnit(unitId) {
   const check = canAddUnit(wb, unitDef, unit.category)
   if (!check.ok) return
   const equipCost = calcUnitCost(unit, wbData) - (parseInt(unitDef.Cost) || 0)
-  if (goldRemaining(wb) < (parseInt(unitDef.Cost) || 0) + equipCost) return
+  if (!wb.campaignMode && goldRemaining(wb) < (parseInt(unitDef.Cost) || 0) + equipCost) return
   mutateWarband(wb => {
     wb.units.push({
       id: uid(),
@@ -363,7 +367,7 @@ function toggleEquip(unitId, itemName, category) {
     } else {
       const cost = getEquipCost(itemName, 'armour')
       const oldCost = eq.armour ? getEquipCost(eq.armour, 'armour') : 0
-      if (goldRemaining(wb) < cost - oldCost) return
+      if (!wb.campaignMode && goldRemaining(wb) < cost - oldCost) return
       mutateWarband(wb => {
         wb.units.find(u => u.id === unitId).equipment.armour = itemName
       })
@@ -378,7 +382,7 @@ function toggleEquip(unitId, itemName, category) {
     const isShield = resolvedName === 'Shield' || resolvedName === 'Tower Shield'
     if (isShield && hasShield(eq)) return
     if (isShield && (eq.ranged || []).some(r => !isLightRanged(r))) return
-    if (goldRemaining(wb) < getEquipCost(itemName, 'melee')) return
+    if (!wb.campaignMode && goldRemaining(wb) < getEquipCost(itemName, 'melee')) return
     mutateWarband(wb => {
       wb.units.find(u => u.id === unitId).equipment.melee.push(itemName)
     })
@@ -387,7 +391,7 @@ function toggleEquip(unitId, itemName, category) {
     if (eq.ranged.includes(itemName)) return  // already equipped; use ✕ to remove
     if (eq.ranged.length >= limits.rangedMax) return
     if (hasShield(eq) && !isLightRanged(itemName)) return
-    if (goldRemaining(wb) < getEquipCost(itemName, 'ranged')) return
+    if (!wb.campaignMode && goldRemaining(wb) < getEquipCost(itemName, 'ranged')) return
     mutateWarband(wb => {
       wb.units.find(u => u.id === unitId).equipment.ranged.push(itemName)
     })
@@ -415,6 +419,142 @@ function deleteWarband(id) {
   state.savedWarbands = state.savedWarbands.filter(w => w.id !== id)
   persistState()
   render()
+}
+
+function exportWarband(id) {
+  const wb = state.savedWarbands.find(w => w.id === id)
+  if (!wb) return
+  const blob = new Blob([JSON.stringify(wb, null, 2)], { type: 'application/json' })
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = `${wb.name.replace(/[^a-z0-9]/gi, '_')}.json`
+  a.click()
+  URL.revokeObjectURL(url)
+}
+
+function importWarband(file) {
+  const reader = new FileReader()
+  reader.onload = e => {
+    try {
+      const wb = JSON.parse(e.target.result)
+      if (!wb.name || !wb.type || !Array.isArray(wb.units)) {
+        alert('Invalid warband file.')
+        return
+      }
+      if (!WARBANDS[wb.type]) {
+        alert(`Unknown warband type: "${wb.type}". Make sure this file is for this version of the game.`)
+        return
+      }
+      wb.id = uid()
+      wb.createdAt = Date.now()
+      state.savedWarbands.push(wb)
+      persistState()
+      render()
+    } catch {
+      alert('Could not read file. Make sure it is a valid warband JSON.')
+    }
+  }
+  reader.readAsText(file)
+}
+
+// ─────────────────────────────────────────────────────────────
+// CAMPAIGN MODE
+// ─────────────────────────────────────────────────────────────
+
+function enableCampaignMode() {
+  mutateWarband(wb => { wb.campaignMode = true })
+}
+
+function updateUnitStat(unitId, stat, value) {
+  const wb = currentWarband()
+  if (!wb) return
+  const u = wb.units.find(u => u.id === unitId)
+  if (!u) return
+  if (!u.statOverrides) u.statOverrides = {}
+  if (value === '') delete u.statOverrides[stat]
+  else u.statOverrides[stat] = value
+  persistState()
+  // No render() — preserves input focus while typing
+}
+
+function updateUnitNotes(unitId, notes) {
+  const wb = currentWarband()
+  if (!wb) return
+  const u = wb.units.find(u => u.id === unitId)
+  if (!u) return
+  u.notes = notes
+  persistState()
+}
+
+function toggleUnitFlag(unitId, flag) {
+  const wb = currentWarband()
+  if (!wb) return
+  const u = wb.units.find(u => u.id === unitId)
+  if (!u) return
+  u[flag] = !u[flag]
+  persistState()
+  render()
+}
+
+function updateUnitCustomName(unitId, name) {
+  const wb = currentWarband()
+  if (!wb) return
+  const u = wb.units.find(u => u.id === unitId)
+  if (!u) return
+  u.customName = name.trim() || undefined
+  persistState()
+}
+
+function addExtraSkill(unitId, skillName) {
+  mutateWarband(wb => {
+    const u = wb.units.find(u => u.id === unitId)
+    if (!u) return
+    if (!u.extraSkills) u.extraSkills = []
+    if (!u.extraSkills.includes(skillName)) u.extraSkills.push(skillName)
+  })
+}
+
+function removeExtraSkill(unitId, skillName) {
+  mutateWarband(wb => {
+    const u = wb.units.find(u => u.id === unitId)
+    if (!u) return
+    u.extraSkills = (u.extraSkills || []).filter(s => s !== skillName)
+  })
+}
+
+function promoteToHero(unitId) {
+  mutateWarband(wb => {
+    const u = wb.units.find(u => u.id === unitId)
+    if (!u || u.category !== 'henchman') return
+    u.category = 'hero'
+    u.promoted = true
+    wb.promotedHeroSlots = (wb.promotedHeroSlots || 0) + 1
+  })
+}
+
+function getAvailableSkillsForUnit(wbData, unit) {
+  const availSkills = wbData['Available Skills']?.[unit.typeName] || {}
+  const categoryMap = {
+    Mel: 'Melee', Rng: 'Ranged', Def: 'Defence',
+    Agi: 'Agility', Mrl: 'Morale', Special: wbData.Name,
+  }
+  const allowedTypes = new Set()
+  for (const [short, val] of Object.entries(availSkills)) {
+    if (String(val).toLowerCase() === 'x') {
+      const type = categoryMap[short]
+      if (type) allowedTypes.add(type)
+    }
+  }
+  const unitDef = findUnitDef(wbData, unit.typeName, unit.category)
+  const existingSkills = new Set([
+    ...(unitDef?.Skills || []),
+    ...(unit.extraSkills || []),
+  ])
+  return Object.entries(skillsData)
+    .filter(([name, data]) => allowedTypes.has(data.Type) && !existingSkills.has(name))
+    .map(([name]) => name)
+    .sort((a, b) => a.localeCompare(b))
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -461,7 +601,13 @@ function renderHome() {
 
   const savedSection = saved.length > 0 ? `
     <section class="home-section">
-      <h2 class="section-title">Your Warbands</h2>
+      <div class="section-title-row">
+        <h2 class="section-title">Your Warbands</h2>
+        <label class="btn btn-ghost btn-sm import-btn" title="Import warband from file">
+          ↑ Import
+          <input type="file" accept=".json" data-action="import-warband" style="display:none" />
+        </label>
+      </div>
       <div class="saved-list">
         ${saved.map(wb => {
           const spent = calcTotalSpent(wb)
@@ -475,6 +621,7 @@ function renderHome() {
               <div class="saved-card-actions">
                 <button class="btn btn-primary btn-sm" data-action="open-builder" data-id="${wb.id}">Edit</button>
                 <button class="btn btn-ghost btn-sm" data-action="open-view" data-id="${wb.id}">View</button>
+                <button class="btn btn-ghost btn-sm" data-action="export-warband" data-id="${wb.id}" title="Export as file">↓</button>
                 <button class="btn btn-danger btn-sm" data-action="delete-warband" data-id="${wb.id}">✕</button>
               </div>
             </div>
@@ -495,6 +642,18 @@ function renderHome() {
       </header>
 
       ${savedSection}
+
+      ${saved.length === 0 ? `
+        <section class="home-section">
+          <div class="section-title-row">
+            <h2 class="section-title">Your Warbands</h2>
+            <label class="btn btn-ghost btn-sm import-btn" title="Import warband from file">
+              ↑ Import
+              <input type="file" accept=".json" data-action="import-warband" style="display:none" />
+            </label>
+          </div>
+        </section>
+      ` : ''}
 
       <section class="home-section">
         <h2 class="section-title">Choose a Warband</h2>
@@ -582,6 +741,7 @@ function renderBuilder() {
   const maxUnits = parseInt(wbData?.['Max Units']) || 15
   const unitCount = wb.units.length
   const overBudget = rem < 0
+  const isCampaign = !!wb.campaignMode
 
   return `
     <div class="builder-view">
@@ -589,18 +749,26 @@ function renderBuilder() {
         <button class="btn btn-ghost btn-back" data-action="nav-home">← Back</button>
         <div class="builder-header-center">
           <div class="builder-wb-name">${esc(wb.name)}</div>
-          <div class="builder-wb-type">${esc(wb.type)}</div>
+          <div class="builder-wb-type">${esc(wb.type)}${isCampaign ? ' <span class="campaign-badge">⚔ Campaign</span>' : ''}</div>
         </div>
         <div class="builder-stats-row">
-          <div class="stat-chip ${overBudget ? 'stat-chip--danger' : rem < 50 ? 'stat-chip--warn' : ''}">
-            <span class="stat-chip-label">Gold</span>
-            <span class="stat-chip-value">${rem}g</span>
-          </div>
+          ${isCampaign ? `
+            <div class="stat-chip">
+              <span class="stat-chip-label">Total</span>
+              <span class="stat-chip-value">${spent}g</span>
+            </div>
+          ` : `
+            <div class="stat-chip ${overBudget ? 'stat-chip--danger' : rem < 50 ? 'stat-chip--warn' : ''}">
+              <span class="stat-chip-label">Gold</span>
+              <span class="stat-chip-value">${rem}g</span>
+            </div>
+          `}
           <div class="stat-chip ${unitCount >= maxUnits ? 'stat-chip--danger' : ''}">
             <span class="stat-chip-label">Units</span>
             <span class="stat-chip-value">${unitCount}/${maxUnits}</span>
           </div>
         </div>
+        ${isCampaign ? '' : `<button class="btn btn-outline btn-sm" data-action="enable-campaign">⚔ Campaign Mode</button>`}
         <button class="btn btn-ghost btn-sm" data-action="open-view" data-id="${wb.id}">View ↗</button>
       </header>
 
@@ -676,7 +844,7 @@ function renderHirePanel(wb, wbData) {
   const heroSlots = getHeroSlots(wb)
   const heroesHired = heroCount(wb)
   const nextSlotCost = getNextHeroSlotCost(wb)
-  const canBuySlot = nextSlotCost !== null && goldRemaining(wb) >= nextSlotCost
+  const canBuySlot = nextSlotCost !== null && (wb.campaignMode || goldRemaining(wb) >= nextSlotCost)
 
   return `
     <div class="hire-inner">
@@ -729,9 +897,11 @@ function renderRosterUnit(unit, wb, wbData) {
   const cost = calcUnitCost(unit, wbData)
   const eq = unit.equipment
   const noEquip = hasNoEquipment(unitDef)
+  const isCampaign = !!wb.campaignMode
+  const isHero = unit.category === 'hero'
 
   const meleeItems = (eq.melee || []).map(m => ({
-    name: m, icon: '⚔', cat: 'melee', cost: getEquipCost(m, 'melee'), slots: getMeleeSlots(m),
+    name: m, icon: '⚔', cat: 'melee', cost: getEquipCost(m, 'melee'),
   }))
   const rangedItems = (eq.ranged || []).map(r => ({
     name: r, icon: '🏹', cat: 'ranged', cost: getEquipCost(r, 'ranged'),
@@ -741,19 +911,93 @@ function renderRosterUnit(unit, wb, wbData) {
   }] : []
   const allEquip = [...meleeItems, ...rangedItems, ...armourItem]
 
+  const STATS = ['Move','Melee','Ranged','Defence','Agility','Morale','Attacks','Wounds','Injury','Piercing']
+  const SHORT = ['Mov','Mel','Rgd','Def','Agi','Mrl','Atk','Wnd','Inj','Prc']
+
+  const statOverridesSection = isCampaign ? `
+    <div class="campaign-stat-overrides">
+      ${STATS.map((stat, i) => {
+        const base = unitDef[stat] ?? ''
+        const current = unit.statOverrides?.[stat] ?? base
+        const changed = unit.statOverrides?.[stat] !== undefined
+        return `<label class="stat-override-item${changed ? ' stat-override--changed' : ''}">
+          <span class="stat-override-label">${SHORT[i]}</span>
+          <input class="stat-override-input" type="text" value="${esc(String(current))}"
+            data-action="stat-override" data-unit-id="${unit.id}" data-stat="${stat}" />
+        </label>`
+      }).join('')}
+    </div>
+  ` : ''
+
+  const extraSkills = unit.extraSkills || []
+  const availableSkills = isCampaign && isHero ? getAvailableSkillsForUnit(wbData, unit) : []
+
+  const skillManagerSection = isCampaign && isHero ? `
+    <div class="campaign-skill-manager">
+      ${extraSkills.length > 0 ? `
+        <div class="campaign-extra-skills">
+          ${extraSkills.map(s => `
+            <span class="campaign-skill-tag">
+              ${esc(s)}
+              <button class="skill-remove-btn" data-action="remove-extra-skill" data-unit-id="${unit.id}" data-skill="${esc(s)}">✕</button>
+            </span>
+          `).join('')}
+        </div>
+      ` : ''}
+      ${availableSkills.length > 0 ? `
+        <select class="campaign-skill-select" data-action="add-extra-skill" data-unit-id="${unit.id}">
+          <option value="">+ Learn skill...</option>
+          ${availableSkills.map(name => `<option value="${esc(name)}">${esc(name)}</option>`).join('')}
+        </select>
+      ` : (extraSkills.length > 0 ? '' : '<span class="campaign-no-skills">No learnable skills</span>')}
+    </div>
+  ` : ''
+
+  const notesSection = isCampaign && isHero ? `
+    <input class="campaign-notes-input" type="text"
+      placeholder="Notes (injuries, blight...)"
+      value="${esc(unit.notes || '')}"
+      data-action="unit-notes" data-unit-id="${unit.id}" />
+  ` : ''
+
+  const promoteBtn = isCampaign && !isHero ? `
+    <button class="btn btn-outline btn-xs" data-action="promote-hero" data-unit-id="${unit.id}" title="Promote to Hero">↑ Promote</button>
+  ` : ''
+
   return `
-    <div class="roster-unit">
+    <div class="roster-unit${isCampaign ? ' roster-unit--campaign' : ''}">
       <div class="roster-unit-header">
         <div class="roster-unit-left">
           <span class="roster-unit-name">${esc(unit.typeName)}</span>
+          ${unit.promoted ? '<span class="promoted-badge">promoted</span>' : ''}
           <span class="roster-unit-cat roster-cat--${unit.category}">${unit.category}</span>
         </div>
         <div class="roster-unit-right">
           <span class="roster-unit-cost">${cost}g</span>
+          ${promoteBtn}
           <button class="btn btn-ghost btn-xs" data-action="duplicate-unit" data-unit-id="${unit.id}" title="Duplicate unit">⧉</button>
           <button class="btn btn-danger btn-xs" data-action="remove-unit" data-unit-id="${unit.id}" title="Remove unit">✕</button>
         </div>
       </div>
+      <input class="unit-custom-name-input" type="text"
+        placeholder="Name this unit (optional)"
+        value="${esc(unit.customName || '')}"
+        data-action="unit-custom-name" data-unit-id="${unit.id}" />
+      <div class="unit-flags">
+        <label class="unit-flag${unit.blight ? ' unit-flag--active' : ''}">
+          <input type="checkbox" ${unit.blight ? 'checked' : ''}
+            data-action="toggle-flag" data-unit-id="${unit.id}" data-flag="blight" />
+          Blight
+        </label>
+        ${isHero ? `
+          <label class="unit-flag${unit.deathtouched ? ' unit-flag--active unit-flag--death' : ''}">
+            <input type="checkbox" ${unit.deathtouched ? 'checked' : ''}
+              data-action="toggle-flag" data-unit-id="${unit.id}" data-flag="deathtouched" />
+            Deathtouched
+          </label>
+        ` : ''}
+      </div>
+      ${statOverridesSection}
       ${allEquip.length > 0 ? `
         <ul class="equip-list">
           ${allEquip.map(e => `
@@ -770,6 +1014,8 @@ function renderRosterUnit(unit, wb, wbData) {
           ✚ Manage Equipment
         </button>
       ` : '<div class="no-equip-tag">No Equipment</div>'}
+      ${skillManagerSection}
+      ${notesSection}
     </div>
   `
 }
@@ -820,7 +1066,7 @@ function renderEquipModal(wb, wbData) {
     const isShieldItem = resolvedMelee === 'Shield' || resolvedMelee === 'Tower Shield'
     const shieldBlockedByShield = isShieldItem && hasShield(eq)
     const shieldBlockedByRanged = isShieldItem && (eq.ranged || []).some(r => !isLightRanged(r))
-    const canAdd = (meleeUsed + slots) <= limits.meleeMax && rem >= cost && !shieldBlockedByShield && !shieldBlockedByRanged
+    const canAdd = (meleeUsed + slots) <= limits.meleeMax && (wb.campaignMode || rem >= cost) && !shieldBlockedByShield && !shieldBlockedByRanged
     const disabled = !canAdd && count === 0
     const countLabel = count === 0 ? '' : count === 1 ? '✓' : `×${count}`
     const hint = canAdd && count > 0 ? 'Add another (dual wield)' : shieldBlockedByShield ? 'Already carrying a shield' : shieldBlockedByRanged ? 'Incompatible with non-light ranged weapon' : !canAdd ? 'No slots available' : ''
@@ -849,7 +1095,7 @@ function renderEquipModal(wb, wbData) {
     const cost = stats ? (parseInt(stats.Cost) || 0) : 0
     const equipped = (eq.ranged || []).includes(displayName)
     const shieldBlocked = hasShield(eq) && !isLightRanged(displayName)
-    const canAdd = !equipped && (eq.ranged || []).length < limits.rangedMax && rem >= cost && !shieldBlocked
+    const canAdd = !equipped && (eq.ranged || []).length < limits.rangedMax && (wb.campaignMode || rem >= cost) && !shieldBlocked
     const disabled = !canAdd && !equipped
     const reason = !canAdd && !equipped ? (shieldBlocked ? 'Incompatible with shield' : limits.rangedMax === 0 ? 'No ranged slot' : "Can't afford") : ''
 
@@ -875,7 +1121,7 @@ function renderEquipModal(wb, wbData) {
     const stats = getArmourStats(displayName)
     const cost = stats ? (parseInt(stats.Cost) || 0) : 0
     const equipped = eq.armour === displayName
-    const canAdd = !equipped && limits.armourMax > 0 && rem >= cost
+    const canAdd = !equipped && limits.armourMax > 0 && (wb.campaignMode || rem >= cost)
     const disabled = !canAdd && !equipped
     const reason = !canAdd && !equipped ? (limits.armourMax === 0 ? 'No armour slot' : "Can't afford") : ''
 
@@ -1024,41 +1270,58 @@ function renderViewWarband() {
     return `<a class="skill-link" href="/Reference/Skill%20List#${anchor}" target="_blank" rel="noopener">${esc(name)}</a>`
   }
 
-  function skillsHtml(unitDef) {
-    const skills = unitDef?.Skills || []
+  function allSkillsForUnit(unit, unitDef) {
+    return [...(unitDef?.Skills || []), ...(unit.extraSkills || [])]
+  }
+
+  function skillsHtml(unit, unitDef) {
+    const skills = allSkillsForUnit(unit, unitDef)
     if (!skills.length) return ''
     return `<div class="view-unit-skills">${skills.map(skillLink).join(', ')}</div>`
+  }
+
+  function getStat(unit, unitDef, stat) {
+    return unit.statOverrides?.[stat] ?? unitDef?.[stat]
   }
 
   function unitRow(unit) {
     const unitDef = findUnitDef(wbData, unit.typeName, unit.category)
     const cost = calcUnitCost(unit, wbData)
     const eq = unit.equipment
+    const s = (stat) => getStat(unit, unitDef, stat)
     return `
       <tr>
         <td class="view-unit-cell">
-          <div class="view-unit-name">${esc(unit.typeName)}</div>
+          <div class="view-unit-name">
+            ${unit.customName ? `<span class="view-unit-custom-name">${esc(unit.customName)}</span> <span class="view-unit-type">(${esc(unit.typeName)})</span>` : esc(unit.typeName)}
+            ${unit.promoted ? ' <span class="view-promoted-badge">promoted</span>' : ''}
+          </div>
+          ${unit.blight || unit.deathtouched || unit.notes ? `<div class="view-unit-notes">
+            ${unit.blight ? '<span class="view-flag view-flag--blight">Blight</span>' : ''}
+            ${unit.deathtouched ? '<span class="view-flag view-flag--death">Deathtouched</span>' : ''}
+            ${unit.notes ? esc(unit.notes) : ''}
+          </div>` : ''}
         </td>
         ${unitDef ? (() => {
-          const mov = parseInt(unitDef.Move) || 0
+          const mov = parseInt(s('Move')) || 0
           return `
-            <td>${statVal(unitDef.Move)}"</td>
+            <td>${statVal(s('Move'))}"</td>
             <td>${mov + 3}"</td>
-            <td>${statVal(unitDef.Melee)}</td>
-            <td>${statVal(unitDef.Ranged)}</td>
-            <td>${statVal(unitDef.Defence)}</td>
-            <td>${statVal(unitDef.Agility)}</td>
-            <td>${statVal(unitDef.Morale)}</td>
-            <td>${statVal(unitDef.Attacks)}</td>
-            <td>${statVal(unitDef.Wounds)}</td>
-            <td>${statVal(unitDef.Injury)}</td>
-            <td>${statVal(unitDef.Piercing)}</td>
+            <td>${statVal(s('Melee'))}</td>
+            <td>${statVal(s('Ranged'))}</td>
+            <td>${statVal(s('Defence'))}</td>
+            <td>${statVal(s('Agility'))}</td>
+            <td>${statVal(s('Morale'))}</td>
+            <td>${statVal(s('Attacks'))}</td>
+            <td>${statVal(s('Wounds'))}</td>
+            <td>${statVal(s('Injury'))}</td>
+            <td>${statVal(s('Piercing'))}</td>
           `
         })() : `<td colspan="11">—</td>`}
         <td class="view-cost-cell">${cost}g</td>
       </tr>
       ${equipRows(eq, unitDef)}
-      ${skillsHtml(unitDef) ? `<tr class="equip-row-view skills-row-view"><td class="equip-row-name-cell" colspan="13">${skillsHtml(unitDef)}</td></tr>` : ''}
+      ${skillsHtml(unit, unitDef) ? `<tr class="equip-row-view skills-row-view"><td class="equip-row-name-cell" colspan="13">${skillsHtml(unit, unitDef)}</td></tr>` : ''}
     `
   }
 
@@ -1077,21 +1340,22 @@ function renderViewWarband() {
     const unitDef = findUnitDef(wbData, unit.typeName, unit.category)
     const cost = calcUnitCost(unit, wbData)
     const eq = unit.equipment
+    const s = (stat) => getStat(unit, unitDef, stat)
 
     const statsHtml = unitDef ? (() => {
-      const mov = parseInt(unitDef.Move) || 0
+      const mov = parseInt(s('Move')) || 0
       return [
-        statChip('Mov', `${statVal(unitDef.Move)}"`),
+        statChip('Mov', `${statVal(s('Move'))}"`),
         statChip('Run', `${mov + 3}"`),
-        statChip('Mel', statVal(unitDef.Melee)),
-        statChip('Rgd', statVal(unitDef.Ranged)),
-        statChip('Def', statVal(unitDef.Defence)),
-        statChip('Agi', statVal(unitDef.Agility)),
-        statChip('Mrl', statVal(unitDef.Morale)),
-        statChip('Atk', statVal(unitDef.Attacks)),
-        statChip('Wnd', statVal(unitDef.Wounds)),
-        statChip('Inj', statVal(unitDef.Injury)),
-        statChip('Prc', statVal(unitDef.Piercing)),
+        statChip('Mel', statVal(s('Melee'))),
+        statChip('Rgd', statVal(s('Ranged'))),
+        statChip('Def', statVal(s('Defence'))),
+        statChip('Agi', statVal(s('Agility'))),
+        statChip('Mrl', statVal(s('Morale'))),
+        statChip('Atk', statVal(s('Attacks'))),
+        statChip('Wnd', statVal(s('Wounds'))),
+        statChip('Inj', statVal(s('Injury'))),
+        statChip('Prc', statVal(s('Piercing'))),
       ].join('')
     })() : '<span class="text-muted">—</span>'
 
@@ -1137,11 +1401,19 @@ function renderViewWarband() {
     return `
       <div class="unit-card">
         <div class="unit-card-header">
-          <span class="unit-card-name">${esc(unit.typeName)}</span>
+          <span class="unit-card-name">
+            ${unit.customName ? `${esc(unit.customName)} <span class="view-unit-type">(${esc(unit.typeName)})</span>` : esc(unit.typeName)}
+            ${unit.promoted ? ' <span class="view-promoted-badge">promoted</span>' : ''}
+          </span>
           <span class="unit-card-cost">${cost}g</span>
         </div>
+        ${unit.blight || unit.deathtouched || unit.notes ? `<div class="unit-card-notes">
+          ${unit.blight ? '<span class="view-flag view-flag--blight">Blight</span>' : ''}
+          ${unit.deathtouched ? '<span class="view-flag view-flag--death">Deathtouched</span>' : ''}
+          ${unit.notes ? esc(unit.notes) : ''}
+        </div>` : ''}
         <div class="unit-card-stats">${statsHtml}</div>
-        ${skillsHtml(unitDef) ? `<div class="unit-card-skills">${(unitDef?.Skills || []).map(skillLink).join(', ')}</div>` : ''}
+        ${skillsHtml(unit, unitDef) ? `<div class="unit-card-skills">${allSkillsForUnit(unit, unitDef).map(skillLink).join(', ')}</div>` : ''}
         ${equipLines.length ? `<div class="unit-card-equip">${equipLines.join('')}</div>` : ''}
       </div>
     `
@@ -1240,7 +1512,7 @@ function renderViewWarband() {
         const allSkills = new Set()
         wb.units.forEach(unit => {
           const unitDef = findUnitDef(wbData, unit.typeName, unit.category)
-          ;(unitDef?.Skills || []).forEach(s => allSkills.add(s))
+          allSkillsForUnit(unit, unitDef).forEach(s => allSkills.add(s))
         })
         const entries = [...allSkills]
           .map(name => ({ name, desc: skillsData[name]?.Description }))
@@ -1361,6 +1633,10 @@ document.addEventListener('click', e => {
       window.scrollTo(0, 0)
       break
 
+    case 'export-warband':
+      exportWarband(el.dataset.id)
+      break
+
     case 'delete-warband':
       if (confirm('Delete this warband? This cannot be undone.')) {
         deleteWarband(el.dataset.id)
@@ -1385,10 +1661,30 @@ document.addEventListener('click', e => {
       const wb = currentWarband()
       if (!wb) break
       const cost = getNextHeroSlotCost(wb)
-      if (cost === null || goldRemaining(wb) < cost) break
+      if (cost === null || (!wb.campaignMode && goldRemaining(wb) < cost)) break
       mutateWarband(wb => { wb.heroSlotsPurchased = (wb.heroSlotsPurchased || 0) + 1 })
       break
     }
+
+    case 'enable-campaign':
+      if (confirm('Switch to Campaign Mode?\n\nThis removes the gold budget limit and allows editing stats, adding skills, and promoting henchmen. This cannot be undone.')) {
+        enableCampaignMode()
+      }
+      break
+
+    case 'promote-hero':
+      if (confirm('Promote this unit to Hero?\n\nThey will count as a hero and gain hero equipment slots.')) {
+        promoteToHero(el.dataset.unitId)
+      }
+      break
+
+    case 'remove-extra-skill':
+      removeExtraSkill(el.dataset.unitId, el.dataset.skill)
+      break
+
+    case 'toggle-flag':
+      toggleUnitFlag(el.dataset.unitId, el.dataset.flag)
+      break
 
     case 'add-unit':
       addUnit(el.dataset.unitName, el.dataset.unitCat)
@@ -1426,6 +1722,26 @@ document.addEventListener('click', e => {
     case 'remove-equip':
       removeEquip(el.dataset.unitId, el.dataset.item, el.dataset.cat)
       break
+  }
+})
+
+document.addEventListener('change', e => {
+  const el = e.target
+  const action = el.dataset?.action
+  if (!action) return
+
+  if (action === 'stat-override') {
+    updateUnitStat(el.dataset.unitId, el.dataset.stat, el.value.trim())
+  } else if (action === 'unit-notes') {
+    updateUnitNotes(el.dataset.unitId, el.value)
+  } else if (action === 'add-extra-skill') {
+    if (el.value) addExtraSkill(el.dataset.unitId, el.value)
+  } else if (action === 'unit-custom-name') {
+    updateUnitCustomName(el.dataset.unitId, el.value)
+  } else if (action === 'import-warband') {
+    const file = el.files?.[0]
+    if (file) importWarband(file)
+    el.value = ''  // reset so same file can be re-imported
   }
 })
 
