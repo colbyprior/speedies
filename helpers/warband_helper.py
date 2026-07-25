@@ -93,11 +93,11 @@ def heroes_table(warband):
         skills = []
         for skill in hero.get("Skills"):
             if skill == warband.get("Name"):
-                link = f"clean_link({skill})-1"
+                link = f"{clean_link(skill)}-1"
                 skills += [f"[{skill}](#{link})"]
             else:
                 skills += [f"[{skill}](#{clean_link(skill)})"]
-        skills_str = ", ".join(skills)
+        skills_str = ", <br/>".join(skills)
         type_cap = hero.get('Type Cap')
         if not type_cap:
             type_cap = "None"
@@ -116,8 +116,12 @@ def henchmen_table(warband):
     for henchmen in warband.get("Henchmen"):
         skills = []
         for skill in henchmen.get("Skills"):
-            skills += [f"[{skill}](#{clean_link(skill)})"]
-        skills_str = ", ".join(skills)
+            if skill == warband.get("Name"):
+                link = f"{clean_link(skill)}-1"
+                skills += [f"[{skill}](#{link})"]
+            else:
+                skills += [f"[{skill}](#{clean_link(skill)})"]
+        skills_str = ", <br/>".join(skills)
         type_cap = henchmen.get('Type Cap')
         if not type_cap:
             type_cap = "None"

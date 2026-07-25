@@ -1,6 +1,7 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import remarkBreaks from 'remark-breaks';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -40,6 +41,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           routeBasePath: '/', // Optional: makes docs the root
+          remarkPlugins: [remarkBreaks],
     //      sidebarPath: false, // Disable manual sidebar
           editUrl:
             'https://github.com/colbyprior/speedies/tree/main/packages/create-docusaurus/templates/shared/',
