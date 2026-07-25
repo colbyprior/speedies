@@ -11,20 +11,6 @@ export default function Home() {
   const docsData = allDocsData['default'];
   const docs = docsData?.versions?.[0]?.docs || [];
 
-  // Hardcoded folder order - modify this array to set your desired order
-  const folderOrder = [
-    'Intro',
-    'Game Concepts',
-    'Pre-Game Rules',
-    'Game Rules',
-    'Post-Game Rules',
-    'Campaign Rules',
-    'Factions List',
-    'Warbands',
-    'Reference',
-    'Sample Warbands',
-  ];
-
   // Extract number from string like "1. Intro" -> 1
   const extractNumber = (str: string): number => {
     const match = str.match(/^(\d+)\.\s*/);
@@ -65,15 +51,16 @@ export default function Home() {
           return a.id.localeCompare(b.id);
         });
       } else {
+        const order = docOrder[key] || [];
         structure[key].docs.sort((a: any, b: any) => {
-          const fileA = a.id.split('/').pop() || '';
-          const fileB = b.id.split('/').pop() || '';
-          const numA = extractNumber(fileA);
-          const numB = extractNumber(fileB);
-          if (numA !== Infinity && numB !== Infinity) {
-            return numA - numB;
-          }
-          return fileA.localeCompare(fileB);
+          const nameA = a.id.split('/').pop() || '';
+          const nameB = b.id.split('/').pop() || '';
+          const ai = order.indexOf(nameA);
+          const bi = order.indexOf(nameB);
+          if (ai === -1 && bi === -1) return nameA.localeCompare(nameB);
+          if (ai === -1) return 1;
+          if (bi === -1) return -1;
+          return ai - bi;
         });
       }
     });
@@ -81,17 +68,34 @@ export default function Home() {
     return structure;
   };
 
+  const docOrder: Record<string, string[]> = {
+    'Intro': ['Blightmeer Overview', 'Quick Start Guide', 'Blightmeer Setting', 'General Wargaming'],
+    'Game Concepts': ['Stats, Checks & Rolls', 'Injury', 'Warbands & Unit Types', 'Equipment', 'Improvement & Promotion', 'Treasure'],
+    'Pre-Game Rules': ['Pre-Game Overview', 'Faction Support', 'Map Setup and Deployment', 'The First Turn'],
+    'Game Rules': ['Turn Overview', 'Upkeep Phase', 'Engage Phase', 'Move Phase', 'Cast Phase', 'Ranged Phase', 'Melee Phase', 'Multiplayer Games'],
+    'Post-Game Rules': ['Post-Game Overview', 'Income & Loot', 'Resolve Promotions', 'Scars & the Blight', 'Free Improvement Attempts', 'Learn Skills & Spells', 'Spend Gold', 'Retirement'],
+    'Campaign Rules': ['Campaign Creation', 'Warband Creation', 'Factions', 'Special Scenarios', 'Playing a Campaign'],
+    'Reference': ['Equipment List', 'Skill List', 'Spell List', 'Skill Search', 'Faction Units', 'Special Scenarios List'],
+  };
+
   const structure = organizeByFolder(docs);
-  
-  // Sort folders based on hardcoded order
-  const sortedFolders = folderOrder.filter(folder => structure[folder]);
-  
-  // Add any folders not in the hardcoded list at the end
-  const remainingFolders = Object.keys(structure)
-    .filter(key => key !== '_root' && !folderOrder.includes(key))
-    .sort();
-  
-  const allFolders = [...sortedFolders, ...remainingFolders];
+
+  const folderOrder = [
+    'Intro', 'Game Concepts', 'Pre-Game Rules', 'Game Rules',
+    'Post-Game Rules', 'Campaign Rules', 'Factions List',
+    'Warbands', 'Reference', 'Sample Warbands',
+  ];
+
+  const allFolders = Object.keys(structure)
+    .filter(key => key !== '_root')
+    .sort((a, b) => {
+      const ai = folderOrder.indexOf(a);
+      const bi = folderOrder.indexOf(b);
+      if (ai === -1 && bi === -1) return a.localeCompare(b);
+      if (ai === -1) return 1;
+      if (bi === -1) return -1;
+      return ai - bi;
+    });
 
   return (
     <Layout

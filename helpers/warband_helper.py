@@ -49,14 +49,12 @@ def get_all_skills_and_spells(warband):
             all_skills.append(skill)
     all_skills = get_unit_skills(all_skills, warband.get("Heroes"))
     all_skills = get_unit_skills(all_skills, warband.get("Henchmen"))
-    spell_schools = []
     for skill in all_skills:
         skill_data = global_skills_data.get(skill)
         if not skill_data:
             sys.stderr.write(f"Failed to find skill: {skill}")
             sys.exit(1)
-        if skill_data.get("Type") == "Spellcasting":
-            spell_schools.append(skill)
+    spell_schools = warband.get("Magic Tables", [])
     return all_skills, spell_schools
 
 
@@ -93,11 +91,11 @@ def heroes_table(warband):
         skills = []
         for skill in hero.get("Skills"):
             if skill == warband.get("Name"):
-                link = f"clean_link({skill})-1"
+                link = f"{clean_link(skill)}-1"
                 skills += [f"[{skill}](#{link})"]
             else:
                 skills += [f"[{skill}](#{clean_link(skill)})"]
-        skills_str = ", ".join(skills)
+        skills_str = ", <br/>".join(skills)
         type_cap = hero.get('Type Cap')
         if not type_cap:
             type_cap = "None"
@@ -116,8 +114,12 @@ def henchmen_table(warband):
     for henchmen in warband.get("Henchmen"):
         skills = []
         for skill in henchmen.get("Skills"):
-            skills += [f"[{skill}](#{clean_link(skill)})"]
-        skills_str = ", ".join(skills)
+            if skill == warband.get("Name"):
+                link = f"{clean_link(skill)}-1"
+                skills += [f"[{skill}](#{link})"]
+            else:
+                skills += [f"[{skill}](#{clean_link(skill)})"]
+        skills_str = ", <br/>".join(skills)
         type_cap = henchmen.get('Type Cap')
         if not type_cap:
             type_cap = "None"

@@ -1,6 +1,7 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import remarkBreaks from 'remark-breaks';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -40,6 +41,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           routeBasePath: '/', // Optional: makes docs the root
+          remarkPlugins: [remarkBreaks],
     //      sidebarPath: false, // Disable manual sidebar
           editUrl:
             'https://github.com/colbyprior/speedies/tree/main/packages/create-docusaurus/templates/shared/',
@@ -52,30 +54,19 @@ const config: Config = {
   ],
 
 
-  plugins: [[ require.resolve('docusaurus-lunr-search'), {
-    languages: ['en'],
-    maxHits: 10
-  }]],
+  plugins: [],
 
-
-//  themes: [
-//    [
-//      require.resolve("@easyops-cn/docusaurus-search-local"),
-//      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-//      ({
-//        // `hashed` is recommended as long-term-cache of index file is possible.
-//        hashed: true,
-//        language: ["en"],
-//
-//        // Customize the keyboard shortcut to focus search bar (default is "mod+k"):
-//        // searchBarShortcutKeymap: "s", // Use 'S' key
-//        // searchBarShortcutKeymap: "ctrl+shift+f", // Use Ctrl+Shift+F
-//
-//        // If you're using `noIndex: true`, set `forceIgnoreNoIndex` to enable local index:
-//        // forceIgnoreNoIndex: true,
-//      }),
-//    ],
-//  ],
+  themes: [
+    [
+      "@easyops-cn/docusaurus-search-local",
+      {
+        hashed: true,
+        language: ["en"],
+        docsRouteBasePath: "/",
+        removeDefaultStemmer: true,
+      },
+    ],
+  ],
 
   themeConfig: {
     // Replace with your project's social card
@@ -123,7 +114,7 @@ const config: Config = {
           label: 'Post-Game Overview',
         },
         {
-          href: '/builder/',
+          to: '/warband-builder',
           label: '⚔ Warband Builder',
           position: 'right',
         },
@@ -183,7 +174,7 @@ const config: Config = {
               label: 'Post-Game Overview',
             },
             {
-              href: '/builder/',
+              to: '/warband-builder',
               label: 'Warband Builder',
             }
           ],
