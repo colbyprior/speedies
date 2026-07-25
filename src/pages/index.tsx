@@ -51,20 +51,31 @@ export default function Home() {
           return a.id.localeCompare(b.id);
         });
       } else {
+        const order = docOrder[key] || [];
         structure[key].docs.sort((a: any, b: any) => {
-          const fileA = a.id.split('/').pop() || '';
-          const fileB = b.id.split('/').pop() || '';
-          const numA = extractNumber(fileA);
-          const numB = extractNumber(fileB);
-          if (numA !== Infinity && numB !== Infinity) {
-            return numA - numB;
-          }
-          return fileA.localeCompare(fileB);
+          const nameA = a.id.split('/').pop() || '';
+          const nameB = b.id.split('/').pop() || '';
+          const ai = order.indexOf(nameA);
+          const bi = order.indexOf(nameB);
+          if (ai === -1 && bi === -1) return nameA.localeCompare(nameB);
+          if (ai === -1) return 1;
+          if (bi === -1) return -1;
+          return ai - bi;
         });
       }
     });
     
     return structure;
+  };
+
+  const docOrder: Record<string, string[]> = {
+    'Intro': ['Blightmeer Overview', 'Quick Start Guide', 'Blightmeer Setting', 'General Wargaming'],
+    'Game Concepts': ['Stats, Checks & Rolls', 'Injury', 'Warbands & Unit Types', 'Equipment', 'Improvement & Promotion', 'Treasure'],
+    'Pre-Game Rules': ['Pre-Game Overview', 'Faction Support', 'Map Setup and Deployment', 'The First Turn'],
+    'Game Rules': ['Turn Overview', 'Upkeep Phase', 'Engage Phase', 'Move Phase', 'Cast Phase', 'Ranged Phase', 'Melee Phase', 'Multiplayer Games'],
+    'Post-Game Rules': ['Post-Game Overview', 'Income & Loot', 'Resolve Promotions', 'Scars & the Blight', 'Free Improvement Attempts', 'Learn Skills & Spells', 'Spend Gold', 'Retirement'],
+    'Campaign Rules': ['Campaign Creation', 'Warband Creation', 'Factions', 'Special Scenarios', 'Playing a Campaign'],
+    'Reference': ['Equipment List', 'Skill List', 'Spell List', 'Skill Search', 'Faction Units', 'Special Scenarios List'],
   };
 
   const structure = organizeByFolder(docs);

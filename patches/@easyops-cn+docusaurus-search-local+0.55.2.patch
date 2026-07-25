@@ -1,0 +1,12 @@
+diff --git a/node_modules/@easyops-cn/docusaurus-search-local/dist/server/server/utils/buildIndex.js b/node_modules/@easyops-cn/docusaurus-search-local/dist/server/server/utils/buildIndex.js
+index 821d58f..5687f29 100644
+--- a/node_modules/@easyops-cn/docusaurus-search-local/dist/server/server/utils/buildIndex.js
++++ b/node_modules/@easyops-cn/docusaurus-search-local/dist/server/server/utils/buildIndex.js
+@@ -65,6 +65,7 @@ function buildIndex(allDocuments, { language, removeDefaultStopWordFilter, remov
+             }
+             if (removeDefaultStemmer) {
+                 this.pipeline.remove(lunr_1.default.stemmer);
++                this.searchPipeline.remove(lunr_1.default.stemmer);
+             }
+             // Override tokenizer when language `zh` is enabled.
+             if (language.includes("zh")) {

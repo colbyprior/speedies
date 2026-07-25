@@ -54,30 +54,19 @@ const config: Config = {
   ],
 
 
-  plugins: [[ require.resolve('docusaurus-lunr-search'), {
-    languages: ['en'],
-    maxHits: 10
-  }]],
+  plugins: [],
 
-
-//  themes: [
-//    [
-//      require.resolve("@easyops-cn/docusaurus-search-local"),
-//      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-//      ({
-//        // `hashed` is recommended as long-term-cache of index file is possible.
-//        hashed: true,
-//        language: ["en"],
-//
-//        // Customize the keyboard shortcut to focus search bar (default is "mod+k"):
-//        // searchBarShortcutKeymap: "s", // Use 'S' key
-//        // searchBarShortcutKeymap: "ctrl+shift+f", // Use Ctrl+Shift+F
-//
-//        // If you're using `noIndex: true`, set `forceIgnoreNoIndex` to enable local index:
-//        // forceIgnoreNoIndex: true,
-//      }),
-//    ],
-//  ],
+  themes: [
+    [
+      "@easyops-cn/docusaurus-search-local",
+      {
+        hashed: true,
+        language: ["en"],
+        docsRouteBasePath: "/",
+        removeDefaultStemmer: true,
+      },
+    ],
+  ],
 
   themeConfig: {
     // Replace with your project's social card
