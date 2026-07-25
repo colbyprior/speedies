@@ -1,7 +1,7 @@
 {
     "Name": "Paladins",
     "Status": "Released",
-    "Complexity": "★★☆",
+    "Complexity": "★☆☆",
     "Max Units": "15",
     "Rout Threshold": "6",
     "Play Style": "Defensive",
@@ -193,12 +193,12 @@
             "Agi": "",
             "Mrl": "X"
         },
-        "Initiate": {
+        "Guardian": {
             "Mel": "X",
             "Rng": "",
-            "Def": "",
+            "Def": "X",
             "Agi": "",
-            "Mrl": ""
+            "Mrl": "X"
         },
         "Monk": {
             "Mel": "X",

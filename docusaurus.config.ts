@@ -64,6 +64,7 @@ const config: Config = {
         language: ["en"],
         docsRouteBasePath: "/",
         removeDefaultStemmer: true,
+        ignoreFiles: [/Version History/],
       },
     ],
   ],

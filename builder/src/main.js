@@ -32,7 +32,7 @@ for (const rawStr of Object.values(rawWarbandStrings)) {
 const STARTING_GOLD = 500
 const STORAGE_KEY = 'blightmeer-builder-v1'
 const BASE_HERO_SLOTS = 3
-const HERO_SLOT_COSTS = [50, 75, 100]
+const HERO_SLOT_COSTS = [60, 100, 140]
 
 // ─────────────────────────────────────────────────────────────
 // EQUIPMENT UTILITIES

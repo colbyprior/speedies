@@ -6,7 +6,7 @@ Magic never expects us.
 
 | Max Units | 12 |
 | ---- | ---- |
-| Complexity | ★☆☆ |
+| Complexity | ★★☆ |
 | Rout Threshold | 6 |
 | Play Style | Powerful heroes with minions |
 
@@ -16,18 +16,18 @@ At the start of each game make a Morale Check once per hero. For each success, a
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| High Inquisitor | 6 | 13 | 12 | 17 | 8| 8 | 1 | 1 | 0 | 0 | [Leader](#leader) | 85 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Agility,Morale) |
-| Priest | 6 | 14 | - | 18 | 10| 10 | 1 | 1 | 0 | 0 | [Divine Magic](#divine-magic) | 85 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
-| Inquisitor | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 55 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
-| Doomsayer | 6 | 15 | 15 | 18 | 10| 10 | 1 | 1 | 0 | 0 | [The Rapture is Nigh](#the-rapture-is-nigh) | 60 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
+| High Inquisitor | 6 | 13 | 12 | 17 | 8| 8 | 1 | 1 | 0 | 0 | [Leader](#leader) | 85 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Agility,Morale) |
+| Priest | 6 | 14 | - | 18 | 10| 10 | 1 | 1 | 0 | 0 | [Divine Magic](#divine-magic) | 85 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
+| Inquisitor | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 55 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
+| Doomsayer | 6 | 15 | 15 | 18 | 10| 10 | 1 | 1 | 0 | 0 | [The Rapture is Nigh](#the-rapture-is-nigh) | 60 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
 | Fanatic | 6 | 13 | - | 16 | 10| 10 | 1 | 1 | 0 | 0 | [Fear](#fear) | 50 | - |
 | Zealot | 6 | 16 | 16 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 20 | - |
-| Peasant | 6 | 17 | - | - | 12| 16 | 1 | 1 | 0 | 0 | [Heed the Scripture](#heed-the-scripture), [Mob Mentality](#mob-mentality), [No Equipment](#no-equipment) | - | See Incite the Mob skill |
-| Hound | 8 | 14 | - | 18 | 8| 16 | 1 | 1 | 0 | 0 | [Animal](#animal), [Pack Tactics](#pack-tactics) | 20 | 6 |
+| Peasant | 6 | 17 | - | - | 12| 16 | 1 | 1 | 0 | 0 | [Heed the Scripture](#heed-the-scripture), <br/>[Mob Mentality](#mob-mentality), <br/>[No Equipment](#no-equipment) | - | See Incite the Mob skill |
+| Hound | 8 | 14 | - | 18 | 8| 16 | 1 | 1 | 0 | 0 | [Animal](#animal), <br/>[Pack Tactics](#pack-tactics) | 20 | 6 |
 
 ## Skills 
 ### Leader
@@ -77,7 +77,7 @@ Inquisitors equipment for the unit types: High Inquisitor, Inquisitor, Doomsayer
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
 | Hammer | 0 | 4 | 0 |  | 5 | 1 |
 | Sword / Axe | 0 | 0 | 3 |  | 5 | 1 |
-| Torch | 0 | 0 | 0 | This unit has Advantage on Out-Of-Sight Rolls when attempting to Engage. | 10 | 1 |
+| Torch | 0 | 0 | 0 | This unit has Advantage on Out-Of-Sight Rolls when attempting to Engage. | 5 | 1 |
 | Great Hammer | 5 | 7 | 0 |  | 10 | 2 |
 | Great Sword / Axe | 5 | 3 | 3 |  | 10 | 2 |
 | Pike | 7 | 3 | 0 |  | 10 | 2 |
@@ -126,7 +126,7 @@ Zealots equipment for the unit types: Zealot
 | Hammer | 0 | 4 | 0 |  | 5 | 1 |
 | Sword / Axe | 0 | 0 | 3 |  | 5 | 1 |
 | Spear | 2 | 0 | 0 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
-| Torch | 0 | 0 | 0 | This unit has Advantage on Out-Of-Sight Rolls when attempting to Engage. | 10 | 1 |
+| Torch | 0 | 0 | 0 | This unit has Advantage on Out-Of-Sight Rolls when attempting to Engage. | 5 | 1 |
 | Shield | 0 | 0 | 0 | +4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
 | Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |
@@ -162,9 +162,9 @@ Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately 
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| High Inquisitor | X | X | X | X | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Agility,Morale) |
-| Priest |  |  | X |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
-| Inquisitor | X | X |  |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
-| Doomsayer | X | X |  |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
-| Fanatic | X |  | X |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence) |
-| Zealot | X | X |  |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
+| High Inquisitor | X | X | X | X | X | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Agility,Morale) |
+| Priest |  |  | X |  | X | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
+| Inquisitor | X | X |  |  |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
+| Doomsayer | X | X |  |  | X | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
+| Fanatic | X |  | X |  |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence) |
+| Zealot | X | X |  |  |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |

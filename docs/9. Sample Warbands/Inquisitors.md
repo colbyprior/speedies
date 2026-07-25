@@ -12,10 +12,10 @@ Total Cost: 400
 
 | Unit             | Melee Slot 1 | Melee Slot 2 | Ranged Slot | Unit Cost | Equipment Cost | Total Cost |
 | ---------------- | ------------ | ------------ | ----------- | --------- | -------------- | ---------- |
-| Grand Inquisitor | Sword        | Sword        | Crossbow    | 85        | 30             | 115        |
+| Grand Inquisitor | Sword        | Torch        | Pistol      | 85        | 25             | 110        |
 | Priest           | Hammer       | Hammer       | -           | 85        | 10             | 95         |
 | Doomsayer        | Pike         | -            | -           | 60        | 10             | 70         |
-| Inquisitor       | Sword        | Torch        | -           | 105       | 15             | 120        |
+| Inquisitor       | Sword        | Torch        | -           | 115       | 10             | 125        |
 
 
 ## Henchman

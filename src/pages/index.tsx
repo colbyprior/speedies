@@ -83,7 +83,7 @@ export default function Home() {
   const folderOrder = [
     'Intro', 'Game Concepts', 'Pre-Game Rules', 'Game Rules',
     'Post-Game Rules', 'Campaign Rules', 'Factions List',
-    'Warbands', 'Reference', 'Sample Warbands',
+    'Warbands', 'Sample Warbands', 'Reference',
   ];
 
   const allFolders = Object.keys(structure)

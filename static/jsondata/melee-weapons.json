@@ -110,7 +110,7 @@
   "Torch": {
     "Name": "Torch",
     "Effect": "This unit has Advantage on Out-Of-Sight Rolls when attempting to Engage.",
-    "Cost": "10",
+    "Cost": "5",
     "Injury": "0",
     "Piercing": "0",
     "Melee": "0",

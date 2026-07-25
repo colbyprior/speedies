@@ -13,25 +13,25 @@ Let me off this wild ride Mr. Bones
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| Necromancer | 6 | 14 | - | 18 | 10| 8 | 1 | 1 | 0 | 0 | [Leader](#leader), [Necromantic Magic](#necromantic-magic) | 65 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale) |
-| Blight Cultist | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 | [Spread Blight (Major)](#spread-blight-major) | 45 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
-| Death Knight | 7 | 14 | 14 | 16 | 14| 12 | 1 | 2 | 0 | 0 | [Undead](#clean_link(Undead)-1), [Fear](#fear) | 75 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
-| Reaper | 9 | 15 | - | - | 14| 12 | 2 | 1 | 0 | 0 | [Undead](#clean_link(Undead)-1), [Fear](#fear) | 55 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
+| Necromancer | 6 | 14 | - | 18 | 10| 8 | 1 | 1 | 0 | 0 | [Leader](#leader), <br/>[Arcane Magic](#arcane-magic) | 65 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale) |
+| Blight Cultist | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 | [Spread Blight (Major)](#spread-blight-major) | 45 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
+| Death Knight | 7 | 14 | 14 | 16 | 14| 12 | 1 | 2 | 0 | 0 | [Undead](#undead-1), <br/>[Fear](#fear) | 75 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
+| Reaper | 9 | 15 | - | - | 14| 12 | 2 | 1 | 0 | 0 | [Undead](#undead-1), <br/>[Fear](#fear) | 55 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
-| Zombie | 6 | 13 | - | - | 16| 16 | 1 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment), [Spread Blight (Minor)](#spread-blight-minor) | 25 | - |
-| Skeleton | 7 | 15 | 15 | - | 14| 14 | 1 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear) | 30 | - |
-| Ghost | 6 | 13 | - | 13 | 10| 12 | 1 | 1 | 0 | 0 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment), [Ethereal](#ethereal) | 40 | 3 |
-| Bone Giant | 7 | 9 | - | 13 | 14| 14 | 2 | 3 | 3 | 3 | [Undead](#undead), [Fear](#fear), [No Equipment](#no-equipment), [Large](#large) | 200 | 1 |
+| Zombie | 6 | 13 | - | - | 16| 16 | 1 | 1 | 0 | 0 | [Undead](#undead-1), <br/>[Fear](#fear), <br/>[No Equipment](#no-equipment), <br/>[Spread Blight (Minor)](#spread-blight-minor) | 25 | - |
+| Skeleton | 7 | 15 | 15 | - | 14| 14 | 1 | 1 | 0 | 0 | [Undead](#undead-1), <br/>[Fear](#fear) | 30 | - |
+| Ghost | 6 | 13 | - | 13 | 10| 12 | 1 | 1 | 0 | 0 | [Undead](#undead-1), <br/>[Fear](#fear), <br/>[No Equipment](#no-equipment), <br/>[Ethereal](#ethereal) | 40 | 3 |
+| Bone Giant | 7 | 9 | - | 13 | 14| 14 | 2 | 3 | 3 | 3 | [Undead](#undead-1), <br/>[Fear](#fear), <br/>[No Equipment](#no-equipment), <br/>[Large](#large) | 200 | 1 |
 
 ## Skills 
 ### Leader
 *Inherent*
 
 Allied, non-animal units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
-### Necromantic Magic
+### Arcane Magic
 *Spellcasting*
 
 This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate 'Basic' spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield.
@@ -133,10 +133,10 @@ This weapon may be used with a Shield.
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Necromancer | X |  |  |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale) |
-| Blight Cultist | X | X |  |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
-| Death Knight | X | X | X |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
-| Reaper | X |  |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
-| Zombie | X |  |  |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee) |
-| Skeleton | X | X |  |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
-| Ghost | X |  |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
+| Necromancer | X |  |  |  | X | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale) |
+| Blight Cultist | X | X |  |  | X | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
+| Death Knight | X | X | X |  |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
+| Reaper | X |  |  | X |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
+| Zombie | X |  |  |  |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee) |
+| Skeleton | X | X |  |  |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
+| Ghost | X |  |  | X |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |

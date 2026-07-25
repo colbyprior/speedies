@@ -11,15 +11,15 @@ RAT
 | Play Style | Fast and agile swarm |
 
 ## Special Rules
-### Special Promotion
+### Ratling Initiation
 When a henchmen promotes they gain the ability to use any piece of equipment that the other heroes can use.
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| Guildmaster | 8 | 12 | 12 | 18 | 6| 10 | 1 | 1 | 0 | 0 | [Leader](#leader) | 80 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale) |
-| Ratlock | 8 | 14 | - | 18 | 8| 13 | 1 | 1 | 0 | 0 | [Blight Magic](#blight-magic) | 55 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
-| Enforcer | 8 | 13 | 14 | 18 | 8| 13 | 1 | 1 | 0 | 0 |  | 55 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
-| Assassin | 8 | 14 | 14 | 18 | 6| 13 | 1 | 1 | 0 | 2 | [Vanguard](#vanguard) | 60 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
+| Guildmaster | 8 | 12 | 12 | 18 | 6| 10 | 1 | 1 | 0 | 0 | [Leader](#leader) | 80 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale) |
+| Ratlock | 8 | 14 | - | 18 | 8| 13 | 1 | 1 | 0 | 0 | [Arcane Magic](#arcane-magic) | 55 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
+| Enforcer | 8 | 13 | 14 | 18 | 8| 13 | 1 | 1 | 0 | 0 |  | 55 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
+| Assassin | 8 | 14 | 14 | 18 | 6| 13 | 1 | 1 | 0 | 2 | [Vanguard](#vanguard) | 60 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
@@ -27,14 +27,14 @@ When a henchmen promotes they gain the ability to use any piece of equipment tha
 | Underrat | 8 | 15 | 15 | 18 | 8| 16 | 1 | 1 | 0 | 0 |  | 30 | - |
 | Blight Host | 8 | 14 | - | - | 8| 16 | 1 | 1 | 0 | 0 | [Spread Blight (Minor)](#spread-blight-minor) | 40 | 6 |
 | Giant Rat | 8 | 15 | - | - | 6| 18 | 1 | 1 | 0 | 0 | [Animal](#animal) | 15 | 4 |
-| Rat Monstrosity | 8 | 13 | - | 12 | 8| 18 | 3 | 3 | 0 | 3 | [Cowardly](#cowardly), [Fear](#fear), [Large](#large), [Animal](#animal) | 205 | 1 |
+| Rat Monstrosity | 8 | 13 | - | 12 | 8| 18 | 3 | 3 | 0 | 3 | [Cowardly](#cowardly), <br/>[Fear](#fear), <br/>[Large](#large), <br/>[Animal](#animal) | 205 | 1 |
 
 ## Skills 
 ### Leader
 *Inherent*
 
 Allied, non-animal units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
-### Blight Magic
+### Arcane Magic
 *Spellcasting*
 
 This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate 'Basic' spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield.
@@ -129,9 +129,9 @@ Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately 
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Guildmaster | X | X |  | X | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale) |
-| Ratlock | X |  |  | X | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
-| Enforcer | X | X |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
-| Assassin | X | X |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
-| Underrat | X | X |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
-| Blight Host | X |  |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
+| Guildmaster | X | X |  | X | X | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale) |
+| Ratlock | X |  |  | X | X | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
+| Enforcer | X | X |  | X |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
+| Assassin | X | X |  | X |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
+| Underrat | X | X |  | X |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
+| Blight Host | X |  |  | X |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |

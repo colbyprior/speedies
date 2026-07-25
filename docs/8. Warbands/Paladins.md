@@ -6,24 +6,24 @@ An order of paladins and others that seek to advance a holy agenda.
 
 | Max Units | 15 |
 | ---- | ---- |
-| Complexity | ★★☆ |
+| Complexity | ★☆☆ |
 | Rout Threshold | 6 |
 | Play Style | Defensive |
 
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| Justicar | 6 | 13 | 13 | 16 | 8| 8 | 1 | 1 | 0 | 0 | [Leader](#leader), [Divine Magic](#divine-magic) | 95 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Morale) |
-| Paladin | 6 | 13 | 14 | 16 | 10| 10 | 1 | 1 | 0 | 0 |  | 50 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Morale) |
-| Cleric | 6 | 14 | 14 | 17 | 10| 10 | 1 | 1 | 0 | 0 | [Healer](#healer) | 50 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
-| Standard Bearer | 6 | 14 | 14 | 18 | 10| 8 | 1 | 1 | 0 | 0 | [Standard Bearer](#standard-bearer) | 35 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
+| Justicar | 6 | 13 | 13 | 16 | 8| 8 | 1 | 1 | 0 | 0 | [Leader](#leader), <br/>[Divine Magic](#divine-magic) | 95 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Morale) |
+| Paladin | 6 | 13 | 14 | 16 | 10| 10 | 1 | 1 | 0 | 0 |  | 50 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Morale) |
+| Cleric | 6 | 14 | 14 | 17 | 10| 10 | 1 | 1 | 0 | 0 | [Healer](#healer) | 50 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
+| Standard Bearer | 6 | 14 | 14 | 18 | 10| 8 | 1 | 1 | 0 | 0 | [Standard Bearer](#standard-bearer) | 35 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
 | Squire | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 30 | - |
 | Guardian | 6 | 14 | - | 16 | 14| 10 | 1 | 1 | 0 | 0 | [Guardian](#guardian) | 35 | - |
-| Monk | 7 | 14 | - | 18 | 8| 10 | 2 | 1 | 2 | 0 | [Ki Strike](#ki-strike), [No Equipment](#no-equipment) | 55 | - |
+| Monk | 7 | 14 | - | 18 | 8| 10 | 2 | 1 | 2 | 0 | [Ki Strike](#ki-strike), <br/>[No Equipment](#no-equipment) | 55 | - |
 | Cavalier | 8 | 13 | - | 17 | 10| 10 | 1 | 2 | 0 | 0 | [Mounted](#mounted) | 50 | 2 |
 
 ## Skills 
@@ -140,11 +140,11 @@ This weapon may be used with a Shield.
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Justicar | X |  | X |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Morale) |
-| Paladin | X |  | X |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Morale) |
-| Cleric |  |  | X |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
-| Standard Bearer |  |  | X |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
-| Squire | X |  | X |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Morale) |
-| Initiate | X |  |  |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee) |
-| Monk | X |  |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
-| Cavalier | X |  |  |  | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale) |
+| Justicar | X |  | X |  | X | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Morale) |
+| Paladin | X |  | X |  | X | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Morale) |
+| Cleric |  |  | X |  | X | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
+| Standard Bearer |  |  | X |  | X | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
+| Squire | X |  | X |  | X | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Morale) |
+| Guardian | X |  | X |  | X | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Morale) |
+| Monk | X |  |  | X |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
+| Cavalier | X |  |  |  | X | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale) |

@@ -8,7 +8,7 @@
     "Preamble": "Elves, bleh!",
     "Magic Tables": ["Life Magic"],
     "Special Rules": {
-        "Elven Agility": "Elves can Jump Across to a maximum distance of 6\", instead of the usual 3\"."
+        "Elf": "Elves can Jump Across to a maximum distance of 6\", instead of the usual 3\"."
     },
     "Heroes": [
         {
@@ -185,7 +185,7 @@
             "Rng": "X",
             "Def": "",
             "Agi": "X",
-            "Mrl": ""
+            "Mrl": "X"
         },
         "Ranger": {
             "Mel": "",
