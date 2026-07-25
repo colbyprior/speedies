@@ -13,10 +13,10 @@ This team sucks... your blood!
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| Vampire Noble | 7 | 14 | - | 18 | 7| 7 | 2 | 2 | 0 | 0 | [Leader](#leader), <br/>[Undead](#undead), <br/>[Fear](#fear) | 165 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility,Morale) |
-| Vampire Seductor | 7 | 14 | - | 18 | 10| 8 | 2 | 2 | 0 | 0 | [Arcane Magic](#arcane-magic), <br/>[Undead](#undead), <br/>[Fear](#fear) | 125 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
-| Nosferatu | 7 | 12 | - | 18 | 8| 10 | 2 | 2 | 0 | 0 | [No Equipment](#no-equipment), <br/>[Undead](#undead), <br/>[Fear](#fear) | 125 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility) |
-| Vampire Spawn | 7 | 14 | - | 18 | 10| 10 | 1 | 2 | 0 | 0 | [Undead](#undead), <br/>[Fear](#fear) | 85 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
+| Vampire Noble | 7 | 14 | - | 18 | 7| 7 | 2 | 2 | 0 | 0 | [Leader](#leader), <br/>[Undead](#undead), <br/>[Fear](#fear) | 165 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility,Morale) |
+| Vampire Seductor | 7 | 14 | - | 18 | 10| 8 | 2 | 2 | 0 | 0 | [Arcane Magic](#arcane-magic), <br/>[Undead](#undead), <br/>[Fear](#fear) | 125 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
+| Nosferatu | 7 | 12 | - | 18 | 8| 10 | 2 | 2 | 0 | 0 | [No Equipment](#no-equipment), <br/>[Undead](#undead), <br/>[Fear](#fear) | 125 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility) |
+| Vampire Spawn | 7 | 14 | - | 18 | 10| 10 | 1 | 2 | 0 | 0 | [Undead](#undead), <br/>[Fear](#fear) | 85 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
@@ -121,9 +121,9 @@ You may not use this weapon if it was fired in the previous turn.
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Vampire Noble | X |  | X | X | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility,Morale) |
-| Vampire Seductor | X |  |  | X | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
-| Vampire Spawn | X |  |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
-| Nosferatu | X |  | X | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility) |
-| Thrall | X | X |  |  |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
-| Ghoul | X |  | X | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility) |
+| Vampire Noble | X |  | X | X | X | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility,Morale) |
+| Vampire Seductor | X |  |  | X | X | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
+| Vampire Spawn | X |  |  | X |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
+| Nosferatu | X |  | X | X |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility) |
+| Thrall | X | X |  |  |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
+| Ghoul | X |  | X | X |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility) |

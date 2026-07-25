@@ -31,22 +31,22 @@ def generate_warbands():
 
 
 def generate_reference_pages():
-    with (open("docs/9. Reference/1. Equipment List.md", "w") as f):
+    with (open("docs/10. Reference/1. Equipment List.md", "w") as f):
         out_data = reference_helper.generate_equipment_page()
         f.write(out_data)
         f.close()
-    with (open("docs/9. Reference/2. Skill List.md", "w") as f):
+    with (open("docs/10. Reference/2. Skill List.md", "w") as f):
         out_data = reference_helper.generate_skills_page()
         f.write(out_data)
         f.close()
-    with (open("docs/9. Reference/3. Spell List.md", "w") as f):
+    with (open("docs/10. Reference/3. Spell List.md", "w") as f):
         out_data = reference_helper.generate_spells_page()
         f.write(out_data)
         f.close()
     return
 
 def generate_factions():
-    with (open("docs/9. Reference/5. Faction Units.md", "w") as f):
+    with (open("docs/10. Reference/5. Faction Units.md", "w") as f):
         out_data = faction_helper.generate_faction_agents()
         f.write(out_data)
         f.close()

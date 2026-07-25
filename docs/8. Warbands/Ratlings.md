@@ -16,10 +16,10 @@ When a henchmen promotes they gain the ability to use any piece of equipment tha
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| Guildmaster | 8 | 12 | 12 | 18 | 6| 10 | 1 | 1 | 0 | 0 | [Leader](#leader) | 80 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale) |
-| Ratlock | 8 | 14 | - | 18 | 8| 13 | 1 | 1 | 0 | 0 | [Arcane Magic](#arcane-magic) | 55 | 1 | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
-| Enforcer | 8 | 13 | 14 | 18 | 8| 13 | 1 | 1 | 0 | 0 |  | 55 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
-| Assassin | 8 | 14 | 14 | 18 | 6| 13 | 1 | 1 | 0 | 2 | [Vanguard](#vanguard) | 60 | - | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
+| Guildmaster | 8 | 12 | 12 | 18 | 6| 10 | 1 | 1 | 0 | 0 | [Leader](#leader) | 80 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale) |
+| Ratlock | 8 | 14 | - | 18 | 8| 13 | 1 | 1 | 0 | 0 | [Arcane Magic](#arcane-magic) | 55 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
+| Enforcer | 8 | 13 | 14 | 18 | 8| 13 | 1 | 1 | 0 | 0 |  | 55 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
+| Assassin | 8 | 14 | 14 | 18 | 6| 13 | 1 | 1 | 0 | 2 | [Vanguard](#vanguard) | 60 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
@@ -129,9 +129,9 @@ Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately 
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Guildmaster | X | X |  | X | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale) |
-| Ratlock | X |  |  | X | X | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
-| Enforcer | X | X |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
-| Assassin | X | X |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
-| Underrat | X | X |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
-| Blight Host | X |  |  | X |  | [\[Link\]](9.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
+| Guildmaster | X | X |  | X | X | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale) |
+| Ratlock | X |  |  | X | X | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
+| Enforcer | X | X |  | X |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
+| Assassin | X | X |  | X |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
+| Underrat | X | X |  | X |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
+| Blight Host | X |  |  | X |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
