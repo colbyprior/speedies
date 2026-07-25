@@ -6,6 +6,7 @@
     "Rout Threshold": "6",
     "Play Style": "Powerful leader with minions",
     "Preamble": "This team sucks... your blood!",
+    "Magic Tables": ["Vampiric Magic"],
     "Special Rules": {
     },
     "Heroes": [
@@ -46,7 +47,7 @@
             "Morale": "8",
             "Cost": 125,
             "Skills": [
-				"Vampiric Magic",
+				"Arcane Magic",
                 "Undead",
 				"Fear"
             ]

@@ -49,14 +49,12 @@ def get_all_skills_and_spells(warband):
             all_skills.append(skill)
     all_skills = get_unit_skills(all_skills, warband.get("Heroes"))
     all_skills = get_unit_skills(all_skills, warband.get("Henchmen"))
-    spell_schools = []
     for skill in all_skills:
         skill_data = global_skills_data.get(skill)
         if not skill_data:
             sys.stderr.write(f"Failed to find skill: {skill}")
             sys.exit(1)
-        if skill_data.get("Type") == "Spellcasting":
-            spell_schools.append(skill)
+    spell_schools = warband.get("Magic Tables", [])
     return all_skills, spell_schools
 
 

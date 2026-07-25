@@ -6,6 +6,7 @@
     "Rout Threshold": "7",
     "Play Style": "Slow and Skelly",
     "Preamble": "Let me off this wild ride Mr. Bones",
+    "Magic Tables": ["Necromantic Magic"],
     "Special Rules": {
     },
     "Heroes": [
@@ -26,7 +27,7 @@
             "Cost": 65,
             "Skills": [
                 "Leader",
-                "Necromantic Magic"
+                "Arcane Magic"
             ]
         },
         {

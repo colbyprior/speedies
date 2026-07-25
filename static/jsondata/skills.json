@@ -249,20 +249,15 @@
     "Type": "Inherent",
     "Description": "This unit cannot use ladders or make Climb Checks. It gains +2 Mov and +1 Wnd, which are already reflected in its stat block. The +1 Wnd does not count towards the stat cap (so this unit has an effective max of 4 Wounds)."
   },
+  "Arcane Magic": {
+    "Name": "Arcane Magic",
+    "Type": "Spellcasting",
+    "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate 'Basic' spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
+  },
   "Divine Magic": {
     "Name": "Divine Magic",
     "Type": "Spellcasting",
     "Description": "This unit is capable of casting Divine Magic. See the relevant spell list for a list of learnable spells. As a Divine Caster, this unit has the usual three slots for weapons and can use armour and shields as normal."
-  },
-  "Necromantic Magic": {
-    "Name": "Necromantic Magic",
-    "Type": "Spellcasting",
-    "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate 'Basic' spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
-  },
-   "Life Magic": {
-    "Name": "Life Magic",
-    "Type": "Spellcasting",
-    "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate 'Basic' spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
   },
   "Ki Strike": {
     "Name": "Ki Strike",
@@ -354,20 +349,10 @@
     "Type": "Inherent",
     "Description": "Once per turn, if this unit is Engaged in combat, it may make a Morale Check. On a success, all units it is Engaged with must target it for this combat. If it becomes Dazed, Stunned, or Incapacitated, this effect ends."
   },
-  "Vampiric Magic": {
-    "Name": "Vampiric Magic",
-    "Type": "Spellcasting",
-    "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate 'Basic' spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
-  },
   "Flying": {
     "Name": "Flying",
     "Type": "Inherent",
     "Description": "This unit can move through the air in any direction. They must not end their movement in the air. They cannot be Intercepted when Engaging, nor can they make Jump Attacks. If they fail an Engage and end their movement in the air, they safely drop straight down to the ground below."
-  },
-  "Blight Magic": {
-    "Name": "Blight Magic",
-    "Type": "Spellcasting",
-    "Description": "This unit is capable of casting Arcane Magic. See the relevant spell list for a list of learnable spells. As an Arcane Caster, this unit has an innate 'Basic' spell that is always castable and is in addition to other spells learnt. It also only has a single weapon slot which must be a melee weapon and is unable to use armour or a shield."
   },
   "Cowardly": {
     "Name": "Cowardly",

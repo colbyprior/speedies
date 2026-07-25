@@ -6,6 +6,7 @@
     "Rout Threshold": "7",
     "Play Style": "Fast and agile swarm",
     "Preamble": "RAT",
+    "Magic Tables": ["Blight Magic"],
     "Special Rules": {
         "Special Promotion": "When a henchmen promotes they gain the ability to use any piece of equipment that the other heroes can use."
     },
@@ -45,7 +46,7 @@
             "Morale": "13",
             "Cost": 55,
             "Skills": [
-                "Blight Magic"
+                "Arcane Magic"
             ]
         },
         {
