@@ -1,4 +1,4 @@
-from helpers.global_data import (global_henchmen_upgrade_paths, global_skills_data, global_melee_weapons_data,
+from helpers.global_data import (global_skills_data, global_melee_weapons_data,
                                  global_ranged_weapons_data, global_armour_data, global_spells_data, global_aliases,
                                  global_ranged_weapon_effects)
 import sys

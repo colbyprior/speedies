@@ -403,5 +403,30 @@
     "Name": "Madness",
     "Type": "Inherent",
     "Description": "This unit makes all Morale Checks with Disadvantage."
+  },
+  "Hunger": {
+    "Name": "Hunger",
+    "Type": "Inherent",
+    "Description": "Count how many wounds / incapacitations this unit causes this battle. When it reaches 2, they will disappear from the board."
+  },
+  "Gift of Blight": {
+    "Name": "Gift of Blight",
+    "Type": "Inherent",
+    "Description": "As a difficulty 10 spell, the Blight Prophet will cause a 5\" AOE of blight. Each unit in range must make a morale check or they will contract the blight. The Blight Prophet will attempt to cast this spell every turn even if it would target allies only. If he is ever Incapacitated, he automatically casts this spell."
+  },
+  "Cure Blight": {
+    "Name": "Cure Blight",
+    "Type": "Inherent",
+    "Description": "Once per battle this unit can attempt the Cure Blight spell. Difficulty 10, range 10\". The target unit is cured of the Blight."
+  },
+  "Steal": {
+    "Name": "Steal",
+    "Type": "Inherent",
+    "Description": "If this unit ends its Move within 1\" of an enemy carrying Treasure, it may make an Agility Check. On a success, it takes the Treasure from that unit."
+  },
+  "Slippery": {
+    "Name": "Slippery",
+    "Type": "Inherent",
+    "Description": "Enemy units have Disadvantage on Agility Checks made to Intercept this unit."
   }
 }
