@@ -68,11 +68,11 @@ Paladins equipment for the unit types: Justicar, Paladin, Cleric, Guardian, Squi
 | Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Hammer | 0 | 4 | 0 |  | 5 | 1 |
-| Flail / Great Hammer | 5 | 7 | 0 |  | 10 | 2 |
+| Flail / Great Hammer | 4 | 7 | 0 |  | 10 | 2 |
 | Divine Hammer | 0 | 4 | 3 | Advantage against Undead. Only heroes can dual-wield. | 15 | 1 |
-| Divine Great Hammer | 5 | 7 | 3 | Advantage against Undead. Only heroes can wield. | 30 | 2 |
+| Divine Great Hammer | 4 | 7 | 3 | Advantage against Undead. Only heroes can wield. | 30 | 2 |
 | Sword | 0 | 0 | 3 |  | 5 | 1 |
-| Great Sword | 5 | 3 | 3 |  | 10 | 2 |
+| Great Sword | 4 | 3 | 3 |  | 10 | 2 |
 | Shield | 0 | 0 | 0 | +4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
 | Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |
@@ -113,9 +113,9 @@ Cavalier equipment for the unit types: Cavalier
 | Hammer | 0 | 4 | 0 |  | 5 | 1 |
 | Divine Hammer | 0 | 4 | 3 | Advantage against Undead. Only heroes can dual-wield. | 15 | 1 |
 | Sword | 0 | 0 | 3 |  | 5 | 1 |
-| Great Hammer | 5 | 7 | 0 |  | 10 | 2 |
-| Great Sword | 5 | 3 | 3 |  | 10 | 2 |
-| Pike | 7 | 3 | 0 |  | 10 | 2 |
+| Great Hammer | 4 | 7 | 0 |  | 10 | 2 |
+| Great Sword | 4 | 3 | 3 |  | 10 | 2 |
+| Pike | 6 | 3 | 0 |  | 10 | 2 |
 | Shield | 0 | 0 | 0 | +4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
 | Armour | Def | Cost |

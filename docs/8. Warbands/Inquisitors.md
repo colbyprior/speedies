@@ -78,9 +78,9 @@ Inquisitors equipment for the unit types: High Inquisitor, Inquisitor, Doomsayer
 | Hammer | 0 | 4 | 0 |  | 5 | 1 |
 | Sword / Axe | 0 | 0 | 3 |  | 5 | 1 |
 | Torch | 0 | 0 | 0 | This unit has Advantage on Out-Of-Sight Rolls when attempting to Engage. | 5 | 1 |
-| Great Hammer | 5 | 7 | 0 |  | 10 | 2 |
-| Great Sword / Axe | 5 | 3 | 3 |  | 10 | 2 |
-| Pike | 7 | 3 | 0 |  | 10 | 2 |
+| Great Hammer | 4 | 7 | 0 |  | 10 | 2 |
+| Great Sword / Axe | 4 | 3 | 3 |  | 10 | 2 |
+| Pike | 6 | 3 | 0 |  | 10 | 2 |
 
 | Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |
 | ------------- | --- | --- | --- | ------ | ---- | ----- |
@@ -100,7 +100,7 @@ Priest equipment for the unit types: Priest
 | Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
 | Hammer | 0 | 4 | 0 |  | 5 | 1 |
-| Flail / Great Hammer | 5 | 7 | 0 |  | 10 | 2 |
+| Flail / Great Hammer | 4 | 7 | 0 |  | 10 | 2 |
 | Shield | 0 | 0 | 0 | +4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
 | Armour | Def | Cost |
@@ -113,9 +113,9 @@ Fanatics equipment for the unit types: Fanatic
 
 | Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
-| Great Sword / Axe | 5 | 3 | 3 |  | 10 | 2 |
-| Flail | 5 | 7 | 0 |  | 10 | 2 |
-| Pike | 7 | 3 | 0 |  | 10 | 2 |
+| Great Sword / Axe | 4 | 3 | 3 |  | 10 | 2 |
+| Flail | 4 | 7 | 0 |  | 10 | 2 |
+| Pike | 6 | 3 | 0 |  | 10 | 2 |
 
 ### Zealots Equipment 
 Zealots equipment for the unit types: Zealot

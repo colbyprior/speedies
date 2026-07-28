@@ -43,9 +43,9 @@ Hero equipment for the unit types: Captain, Champion
 | Hammer | 0 | 4 | 0 |  | 5 | 1 |
 | Sword / Axe | 0 | 0 | 3 |  | 5 | 1 |
 | Spear | 2 | 0 | 0 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
-| Great Hammer | 5 | 7 | 0 |  | 10 | 2 |
-| Great Sword / Axe | 5 | 3 | 3 |  | 10 | 2 |
-| Pike | 7 | 3 | 0 |  | 10 | 2 |
+| Great Hammer | 4 | 7 | 0 |  | 10 | 2 |
+| Great Sword / Axe | 4 | 3 | 3 |  | 10 | 2 |
+| Pike | 6 | 3 | 0 |  | 10 | 2 |
 | Shield | 0 | 0 | 0 | +4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
 | Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |
@@ -69,9 +69,9 @@ Infantry equipment for the unit types: Infantry, Man-at-Arms
 | Hammer | 0 | 4 | 0 |  | 5 | 1 |
 | Sword / Axe | 0 | 0 | 3 |  | 5 | 1 |
 | Spear | 2 | 0 | 0 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
-| Great Hammer | 5 | 7 | 0 |  | 10 | 2 |
-| Great Sword / Axe | 5 | 3 | 3 |  | 10 | 2 |
-| Pike | 7 | 3 | 0 |  | 10 | 2 |
+| Great Hammer | 4 | 7 | 0 |  | 10 | 2 |
+| Great Sword / Axe | 4 | 3 | 3 |  | 10 | 2 |
+| Pike | 6 | 3 | 0 |  | 10 | 2 |
 | Shield | 0 | 0 | 0 | +4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
 | Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |
