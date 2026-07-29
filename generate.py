@@ -3,7 +3,7 @@ from pathlib import Path
 import helpers.warband_helper as warband_helper
 import helpers.reference_helper as reference_helper
 import helpers.faction_helper as faction_helper
-from faction_agent_cards import generate_pdf
+from neutral_hero_cards import generate_pdf
 
 
 def generate_warbands():
@@ -45,14 +45,14 @@ def generate_reference_pages():
         f.close()
     return
 
-def generate_factions():
-    with (open("docs/10. Reference/5. Faction Units.md", "w") as f):
-        out_data = faction_helper.generate_faction_agents()
+def generate_neutral_heroes():
+    with (open("docs/10. Reference/5. Neutral Heroes.md", "w") as f):
+        out_data = faction_helper.generate_neutral_heroes()
         f.write(out_data)
         f.close()
 
 
 generate_warbands()
 generate_reference_pages()
-generate_factions()
-generate_pdf('static/jsondata/faction-agents.json', 'static/img/faction_agents.pdf', cards_per_row=2, cards_per_col=2)
+generate_neutral_heroes()
+generate_pdf('static/jsondata/neutral_heroes.json', 'static/img/neutral_heroes.pdf', cards_per_row=3, cards_per_col=2, playing_card=True)

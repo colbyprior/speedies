@@ -2,9 +2,6 @@ import json5
 
 path="static/jsondata"
 
-with (open(f"{path}/henchmen-upgrade-paths.json") as f):
-    global_henchmen_upgrade_paths = json5.load(f)
-
 with (open(f"{path}/melee-weapons.json") as f):
     global_melee_weapons_data = json5.load(f)
 
@@ -26,5 +23,5 @@ with (open(f"{path}/ranged-weapon-effects.json") as f):
 with (open(f"{path}/aliases.json") as f):
     global_aliases = json5.load(f)
 
-with (open(f"{path}/faction-agents.json") as f):
-    global_faction_agents = json5.load(f)
+with (open(f"{path}/neutral_heroes.json") as f):
+    global_neutral_heroes = json5.load(f)

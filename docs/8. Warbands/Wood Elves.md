@@ -81,7 +81,7 @@ Wood Elf equipment for the unit types: Commander, Mage, Honour Guard, Ranger, Ci
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
 | Spear / Staff | 2 | 0 | 0 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
 | Sword | 0 | 0 | 3 |  | 5 | 1 |
-| Glaive | 5 | 3 | 3 |  | 10 | 2 |
+| Glaive | 4 | 3 | 3 |  | 10 | 2 |
 | Shield | 0 | 0 | 0 | +4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
 | Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |

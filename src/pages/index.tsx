@@ -75,7 +75,7 @@ export default function Home() {
     'Game Rules': ['Turn Overview', 'Upkeep Phase', 'Engage Phase', 'Move Phase', 'Cast Phase', 'Ranged Phase', 'Melee Phase', 'Multiplayer Games'],
     'Post-Game Rules': ['Post-Game Overview', 'Income & Loot', 'Resolve Promotions', 'Scars & the Blight', 'Free Improvement Attempts', 'Learn Skills & Spells', 'Spend Gold', 'Retirement'],
     'Campaign Rules': ['Campaign Creation', 'Warband Creation', 'Factions', 'Special Scenarios', 'Playing a Campaign'],
-    'Reference': ['Equipment List', 'Skill List', 'Spell List', 'Skill Search', 'Faction Units', 'Special Scenarios List'],
+    'Reference': ['Equipment List', 'Skill List', 'Spell List', 'Skill Search', 'Neutral Heroes', 'Special Scenarios List'],
   };
 
   const structure = organizeByFolder(docs);
