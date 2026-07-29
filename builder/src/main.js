@@ -1,5 +1,6 @@
 import './style.css'
 import JSON5 from 'json5'
+import { generateWarbandPDF } from './pdf-export.js'
 import meleeData from '../../static/jsondata/melee-weapons.json'
 import rangedData from '../../static/jsondata/ranged-weapons.json'
 import armourData from '../../static/jsondata/armour.json'
@@ -1188,6 +1189,193 @@ function renderEquipModal(wb, wbData) {
 }
 
 // ─────────────────────────────────────────────────────────────
+// PDF EXPORT
+// ─────────────────────────────────────────────────────────────
+
+function buildUnitStats(unitDef, unit) {
+  const get = s => unit?.statOverrides?.[s] ?? unitDef?.[s]
+  const stats = {}
+  const add = (key, s) => {
+    const raw = get(s)
+    if (raw != null && String(raw) !== '-') stats[key] = String(raw)
+  }
+  add('mov', 'Move')
+  const mov = parseInt(get('Move'))
+  if (!isNaN(mov)) stats.run = String(mov + 3)
+  add('mel', 'Melee')
+  add('rgd', 'Ranged')
+  add('def', 'Defence')
+  add('agi', 'Agility')
+  add('mrl', 'Morale')
+  add('atk', 'Attacks')
+  add('wnd', 'Wounds')
+  add('inj', 'Injury')
+  add('prc', 'Piercing')
+  return stats
+}
+
+// Build weapon rows with calculated stats — mirrors the equipRows logic in renderViewWarband.
+function buildWeaponRows(unitDef, unit, eq, maxRows) {
+  const get = s => unit?.statOverrides?.[s] ?? unitDef?.[s]
+  const baseMel = parseInt(get('Melee'))    || 0
+  const baseDef = parseInt(get('Defence'))  || 0
+  const baseInj = parseInt(get('Injury'))   || 0
+  const basePrc = parseInt(get('Piercing')) || 0
+
+  const rows = []
+  for (const name of (eq.melee || [])) {
+    if (rows.length >= maxRows) break
+    const stats = getMeleeStats(name)
+    const resolved = resolveAlias(name, 'Melee Weapons')
+    const isShield = resolved === 'Shield' || resolved === 'Tower Shield'
+    const s = {}
+    if (stats) {
+      if (isShield) {
+        const m = (stats.Effect || '').match(/\+(\d+)\s*Def/)
+        if (m) s.def = String(baseDef - parseInt(m[1]))
+      } else {
+        const mel = parseInt(stats.Melee) || 0
+        const inj = parseInt(stats.Injury) || 0
+        const prc = parseInt(stats.Piercing) || 0
+        if (mel !== 0) s.mel = String(baseMel - mel)
+        if (inj !== 0) s.inj = String(baseInj + inj)
+        if (prc !== 0) s.prc = String(basePrc + prc)
+      }
+    }
+    const effect = (stats?.Effect && !isShield) ? stats.Effect : ''
+    rows.push({ label: name, stats: s, effect })
+  }
+  for (const name of (eq.ranged || [])) {
+    if (rows.length >= maxRows) break
+    const stats = getRangedStats(name)
+    const s = {}
+    if (stats) {
+      const inj = parseInt(stats.Injury) || 0
+      const prc = parseInt(stats.Piercing) || 0
+      if (inj !== 0) s.inj = String(baseInj + inj)
+      if (prc !== 0) s.prc = String(basePrc + prc)
+    }
+    const effectParts = [stats?.Range, stats?.Effect].filter(Boolean)
+    rows.push({ label: name, stats: s, effect: effectParts.join(', ') })
+  }
+  return rows
+}
+
+function buildPDFPayload(wb, wbData) {
+  const sorted    = sortUnits(wb.units, wbData)
+  const heroUnits = sorted.filter(u => u.category === 'hero')
+  const henchUnits = sorted.filter(u => u.category === 'henchman')
+
+  const heroes = heroUnits.map(unit => {
+    const def = findUnitDef(wbData, unit.typeName, unit.category)
+    const wRows = buildWeaponRows(def, unit, unit.equipment, 2)
+    const skills = [...(def?.Skills || []), ...(unit.extraSkills || [])].join(', ')
+    return {
+      name:           unit.typeName,
+      type:           def?.Type || '',
+      deathtouched:   unit.deathtouched ? 'Yes' : '',
+      blight:         unit.blight ? 'Yes' : '',
+      base_stats:     buildUnitStats(def, unit),
+      advances:       wRows.map(w => w.stats),
+      advance_labels: wRows.map(w => w.label),
+      // special[2] = skills (Base row), special[3+] = weapon effects
+      special: ['', '', skills, ...wRows.map(w => w.effect)],
+    }
+  })
+
+  // Group henchmen by type, count duplicates
+  const henchGroups = {}
+  for (const unit of henchUnits) {
+    if (!henchGroups[unit.typeName]) {
+      const def = findUnitDef(wbData, unit.typeName, unit.category)
+      const wRows = buildWeaponRows(def, unit, unit.equipment, 3)
+      const skills = [...(def?.Skills || []), ...(unit.extraSkills || [])].join(', ')
+      henchGroups[unit.typeName] = {
+        name:           unit.typeName,
+        type:           def?.Type || '',
+        cap:            def?.['Type Cap'] || '',
+        count:          0,
+        base_stats:     buildUnitStats(def, unit),
+        advances:       wRows.map(w => w.stats),
+        advance_labels: wRows.map(w => w.label),
+        special: ['', '', skills, ...wRows.map(w => w.effect)],
+      }
+    }
+    henchGroups[unit.typeName].count++
+  }
+
+  // Reference page: skills, ranged properties, special rules, spells
+  const allSkills  = new Set()
+  const allEffects = new Set()
+  wb.units.forEach(unit => {
+    const def = findUnitDef(wbData, unit.typeName, unit.category)
+    ;[...(def?.Skills || []), ...(unit.extraSkills || [])].forEach(s => allSkills.add(s))
+    for (const name of (unit.equipment?.ranged || [])) {
+      const stats = getRangedStats(name)
+      if (stats?.Effect)
+        stats.Effect.split(',').map(e => e.trim()).filter(Boolean).forEach(e => allEffects.add(e))
+    }
+  })
+
+  const skills = [...allSkills]
+    .map(name => ({ name, desc: skillsData[name]?.Description }))
+    .filter(e => e.desc)
+    .sort((a, b) => a.name.localeCompare(b.name))
+
+  const ranged_properties = [...allEffects]
+    .map(name => ({ name, desc: rangedEffectsData[name] }))
+    .filter(e => e.desc)
+    .sort((a, b) => a.name.localeCompare(b.name))
+
+  const special_rules = Object.entries(wbData?.['Special Rules'] || {})
+    .map(([name, desc]) => ({ name, desc }))
+
+  const spell_tables = (wbData?.['Magic Tables'] || [])
+    .map(school => ({
+      school,
+      spells: Object.values(spellsData)
+        .filter(s => s.School === school)
+        .map(s => ({ name: s.Name, check: s.Check, description: s.Description })),
+    }))
+    .filter(t => t.spells.length > 0)
+
+  return {
+    warband_name:   wb.name,
+    warband_type:   wb.type,
+    gold:           String(goldRemaining(wb)),
+    rout_threshold: String(wbData?.['Rout Threshold'] || ''),
+    max_units:      String(wbData?.['Max Units'] || ''),
+    hero_slots:     String(getHeroSlots(wb)),
+    heroes,
+    henchmen: Object.values(henchGroups).map(h => ({ ...h, count: String(h.count) })),
+    skills,
+    ranged_properties,
+    special_rules,
+    spell_tables,
+  }
+}
+
+function exportToPDF() {
+  const wb = currentWarband()
+  if (!wb) return
+  const wbData = WARBANDS[wb.type]
+
+  const btn = document.querySelector('[data-action="export-pdf"]')
+  if (btn) { btn.disabled = true; btn.textContent = 'Generating…' }
+
+  try {
+    const doc = generateWarbandPDF(buildPDFPayload(wb, wbData))
+    const url = doc.output('bloburl')
+    window.open(url, '_blank')
+  } catch (e) {
+    console.error('PDF generation failed:', e)
+    alert('PDF generation failed — see browser console for details.')
+  } finally {
+    if (btn) { btn.disabled = false; btn.textContent = '📄 Export PDF' }
+  }
+}
+
+// ─────────────────────────────────────────────────────────────
 // VIEW: VIEW WARBAND (read-only summary)
 // ─────────────────────────────────────────────────────────────
 
@@ -1443,6 +1631,7 @@ function renderViewWarband() {
           <div class="view-type">${esc(wb.type)}</div>
         </div>
         <button class="btn btn-ghost" onclick="window.print()">🖨 Print</button>
+        <button class="btn btn-primary" data-action="export-pdf">📄 Export PDF</button>
       </header>
 
       <div class="view-summary-bar">
@@ -1721,6 +1910,10 @@ document.addEventListener('click', e => {
 
     case 'remove-equip':
       removeEquip(el.dataset.unitId, el.dataset.item, el.dataset.cat)
+      break
+
+    case 'export-pdf':
+      exportToPDF()
       break
   }
 })
