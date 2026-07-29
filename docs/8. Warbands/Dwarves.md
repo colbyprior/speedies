@@ -71,8 +71,8 @@ Melee-Focused equipment for the unit types: Chieftain, Builder, Hellion, Berserk
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
 | Sword / Axe | 0 | 0 | 3 |  | 5 | 1 |
 | Hammer | 0 | 4 | 0 |  | 5 | 1 |
-| Great Sword / Axe | 5 | 3 | 3 |  | 10 | 2 |
-| Great Hammer | 5 | 7 | 0 |  | 10 | 2 |
+| Great Sword / Axe | 4 | 3 | 3 |  | 10 | 2 |
+| Great Hammer | 4 | 7 | 0 |  | 10 | 2 |
 | Shield | 0 | 0 | 0 | +4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
 | Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |
@@ -93,8 +93,8 @@ General Warriors equipment for the unit types: Miner, Veteran
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
 | Sword / Axe | 0 | 0 | 3 |  | 5 | 1 |
 | Hammer | 0 | 4 | 0 |  | 5 | 1 |
-| Great Sword / Axe | 5 | 3 | 3 |  | 10 | 2 |
-| Great Hammer | 5 | 7 | 0 |  | 10 | 2 |
+| Great Sword / Axe | 4 | 3 | 3 |  | 10 | 2 |
+| Great Hammer | 4 | 7 | 0 |  | 10 | 2 |
 | Shield | 0 | 0 | 0 | +4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
 | Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |

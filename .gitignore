@@ -28,3 +28,5 @@ yarn-error.log*
 .obsidian/workspace-mobile.json
 .idea/misc.xml
 .idea
+
+__pycache__
