@@ -41,7 +41,7 @@
     "Cost": "10",
     "Injury": "3",
     "Piercing": "0",
-    "Melee": "5",
+    "Melee": "6",
     "Slots": "2"
   },
   "Great Sword": {
@@ -50,7 +50,7 @@
     "Cost": "10",
     "Injury": "3",
     "Piercing": "3",
-    "Melee": "3",
+    "Melee": "4",
     "Slots": "2"
   },
   "Great Hammer": {
@@ -59,7 +59,7 @@
     "Cost": "10",
     "Injury": "7",
     "Piercing": "0",
-    "Melee": "3",
+    "Melee": "4",
     "Slots": "2"
   },
   "Shield": {
