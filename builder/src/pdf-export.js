@@ -419,8 +419,14 @@ const CC_ML   = (210 - CC_COLS * CC_W) / 2   // 10.5mm left margin
 const CC_MT   = (297 - CC_ROWS * CC_H) / 2   // 16.5mm top margin
 const CC_PAD  = 2.5   // inner horizontal/vertical padding mm
 
-// Stat col width for 11-column stat rows
+// Stat col width for 11-column stat rows (warband sheet)
 const CC_SC = CC_W / 11
+
+// Two-column card body: left = stats, right = skills
+const CC_LSTATS_W = 26      // stats column width
+const CC_VSTEP    = 3.0     // height per stat row in vertical layout
+const CC_VLBL_W   = 13      // label cell width within stats column
+const CC_VVAL_W   = CC_LSTATS_W - CC_VLBL_W  // value cell width
 
 // ── Card primitives ───────────────────────────────────────────────────────────
 
@@ -474,6 +480,102 @@ function ccStatValueRow(doc, x, y, h, stats) {
   }
 }
 
+// Vertical base stats — stacked label|value rows in left stats column
+function ccVertStats(doc, x, cy, maxY, stats, headerColor) {
+  if (cy + 3 <= maxY) {
+    doc.setFillColor(headerColor[0], headerColor[1], headerColor[2])
+    setStroke(doc)
+    doc.rect(x, cy, CC_LSTATS_W, 3, 'FD')
+    doc.setFont('times', 'bold')
+    doc.setFontSize(5)
+    doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+    doc.text('Base Stats', x + CC_PAD, cy + 1.5, { baseline: 'middle' })
+    cy += 3
+  }
+  for (let i = 0; i < 11; i++) {
+    if (cy + CC_VSTEP > maxY) break
+    const tint = i % 2 === 0
+      ? headerColor
+      : headerColor.map(c => Math.round(c * 0.6 + 255 * 0.4))
+    doc.setFillColor(tint[0], tint[1], tint[2])
+    setStroke(doc)
+    doc.rect(x, cy, CC_VLBL_W, CC_VSTEP, 'FD')
+    doc.setFont('times', 'bold')
+    doc.setFontSize(5)
+    doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+    doc.text(STAT_LABELS[i], x + CC_VLBL_W / 2, cy + CC_VSTEP / 2, { align: 'center', baseline: 'middle' })
+    doc.setFillColor(WHITE[0], WHITE[1], WHITE[2])
+    doc.rect(x + CC_VLBL_W, cy, CC_VVAL_W, CC_VSTEP, 'FD')
+    doc.setFont('times', 'normal')
+    doc.setFontSize(5.5)
+    doc.text(String(stats[STAT_KEYS[i]] || '—'), x + CC_VLBL_W + CC_VVAL_W / 2, cy + CC_VSTEP / 2, { align: 'center', baseline: 'middle' })
+    cy += CC_VSTEP
+  }
+  return cy
+}
+
+// Compact weapon section in left column: tinted header + 2-per-row stat pairs
+function ccWeaponCompact(doc, x, cy, maxY, label, advStats, headerColor) {
+  if (cy + 3 > maxY) return cy
+  doc.setFillColor(headerColor[0], headerColor[1], headerColor[2])
+  setStroke(doc)
+  doc.rect(x, cy, CC_LSTATS_W, 3, 'FD')
+  doc.setFont('times', 'bold')
+  doc.setFontSize(5)
+  doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+  doc.text(doc.splitTextToSize(label, CC_LSTATS_W - CC_PAD)[0], x + CC_PAD, cy + 1.5, { baseline: 'middle' })
+  cy += 3
+
+  const nonEmpty = STAT_KEYS
+    .map((k, i) => ({ label: STAT_LABELS[i], val: advStats[k] }))
+    .filter(e => e.val)
+
+  const halfW   = CC_LSTATS_W / 2
+  const cLblW   = halfW * 0.55
+  const cValW   = halfW - cLblW
+
+  for (let i = 0; i < nonEmpty.length; i += 2) {
+    if (cy + CC_VSTEP > maxY) break
+    const a = nonEmpty[i]
+    const b = nonEmpty[i + 1]
+    const tint = (i / 2) % 2 === 0
+      ? headerColor
+      : headerColor.map(c => Math.round(c * 0.6 + 255 * 0.4))
+
+    // Left stat pair
+    doc.setFillColor(tint[0], tint[1], tint[2])
+    setStroke(doc)
+    doc.rect(x, cy, cLblW, CC_VSTEP, 'FD')
+    doc.setFont('times', 'bold')
+    doc.setFontSize(4.5)
+    doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+    doc.text(a.label, x + cLblW / 2, cy + CC_VSTEP / 2, { align: 'center', baseline: 'middle' })
+    doc.setFillColor(WHITE[0], WHITE[1], WHITE[2])
+    doc.rect(x + cLblW, cy, cValW, CC_VSTEP, 'FD')
+    doc.setFont('times', 'normal')
+    doc.setFontSize(5)
+    doc.text(String(a.val), x + cLblW + cValW / 2, cy + CC_VSTEP / 2, { align: 'center', baseline: 'middle' })
+
+    // Right stat pair
+    if (b) {
+      doc.setFillColor(tint[0], tint[1], tint[2])
+      doc.rect(x + halfW, cy, cLblW, CC_VSTEP, 'FD')
+      doc.setFont('times', 'bold')
+      doc.text(b.label, x + halfW + cLblW / 2, cy + CC_VSTEP / 2, { align: 'center', baseline: 'middle' })
+      doc.setFillColor(WHITE[0], WHITE[1], WHITE[2])
+      doc.rect(x + halfW + cLblW, cy, cValW, CC_VSTEP, 'FD')
+      doc.setFont('times', 'normal')
+      doc.text(String(b.val), x + halfW + cLblW + cValW / 2, cy + CC_VSTEP / 2, { align: 'center', baseline: 'middle' })
+    } else {
+      doc.setFillColor(WHITE[0], WHITE[1], WHITE[2])
+      setStroke(doc)
+      doc.rect(x + halfW, cy, halfW, CC_VSTEP, 'FD')
+    }
+    cy += CC_VSTEP
+  }
+  return cy
+}
+
 // Weapon displayed as two rows matching the warband sheet style:
 //   Row 1: tinted label bar with weapon name
 //   Row 2: 11 stat columns showing modified values (blank = unchanged)
@@ -525,10 +627,11 @@ function ccTextBlock(doc, x, cy, maxY, text, fontSize) {
 }
 
 // Render a list of "Name: description" lines with the name in bold, return new cy
-function ccSpecialBlock(doc, x, cy, maxY, lines, fontSize) {
+// colW defaults to full card width; pass a narrower value for split-column layouts
+function ccSpecialBlock(doc, x, cy, maxY, lines, fontSize, colW = CC_W) {
   const lineH = fontSize * PT * 1.3
   const textX = x + CC_PAD
-  const maxW = CC_W - 2 * CC_PAD
+  const maxW = colW - 2 * CC_PAD
   doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
 
   for (const line of lines) {
@@ -546,39 +649,26 @@ function ccSpecialBlock(doc, x, cy, maxY, lines, fontSize) {
         cy += lineH
       }
     } else {
-      const boldPart = line.slice(0, colonIdx + 2)  // "Name: "
-      const restPart = line.slice(colonIdx + 2)      // "Description..."
+      const boldPart = line.slice(0, colonIdx)   // "Name" (no colon)
+      const restPart = line.slice(colonIdx + 2)  // "Description..."
 
+      // Skill name as its own bold heading line
+      if (cy + lineH > maxY) break
       doc.setFont('times', 'bold')
       doc.setFontSize(fontSize)
-      const boldW = doc.getTextWidth(boldPart)
-
-      doc.setFont('times', 'normal')
-      const contIndent = Math.min(boldW, maxW * 0.4)
-      const firstLineW = maxW - boldW
-      const contW = maxW - contIndent
-
-      const firstWrapped = firstLineW > 5 ? doc.splitTextToSize(restPart, firstLineW) : [restPart]
-      const firstLine = firstWrapped[0] || ''
-      const overflow = firstWrapped.length > 1
-        ? firstWrapped.slice(1).join(' ')
-        : ''
-      const fullOverflow = overflow
-        ? doc.splitTextToSize(overflow, contW)
-        : []
-
-      // First line: bold name + beginning of description
-      doc.setFont('times', 'bold')
       doc.text(boldPart, textX, cy + lineH / 2, { baseline: 'middle' })
-      doc.setFont('times', 'normal')
-      if (firstLine) doc.text(firstLine, textX + boldW, cy + lineH / 2, { baseline: 'middle' })
       cy += lineH
 
-      // Continuation lines indented to align with description start
-      for (const wl of fullOverflow) {
-        if (cy + lineH > maxY) break
-        doc.text(wl, textX + contIndent, cy + lineH / 2, { baseline: 'middle' })
-        cy += lineH
+      // Description on subsequent lines, slightly indented
+      if (restPart) {
+        doc.setFont('times', 'normal')
+        const descW = maxW - 2
+        const wrapped = doc.splitTextToSize(restPart, descW)
+        for (const wl of wrapped) {
+          if (cy + lineH > maxY) break
+          doc.text(wl, textX + 2, cy + lineH / 2, { baseline: 'middle' })
+          cy += lineH
+        }
       }
     }
   }
@@ -747,8 +837,9 @@ function renderUnitCard(doc, x, y, unit, isHero) {
 
   const name = unit.name || unit.type || '—'
   const headerColor = isHero ? BLUE : PURPLE
+  const maxY = y + CC_H - CC_PAD
 
-  // Name header
+  // Name header (full width, 8mm)
   ccHeader(doc, x, y, name, headerColor, 8)
   let cy = y + 8
 
@@ -761,11 +852,9 @@ function renderUnitCard(doc, x, y, unit, isHero) {
   doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
   doc.text(unit.type || '', x + CC_PAD, cy + 2.5, { baseline: 'middle' })
   if (isHero) {
-    // Draw DT/Blt as small squares + text (Unicode chars unsupported in Times font)
     const flagMidY = cy + 2.5
     let fx = x + CC_W - CC_PAD
     const sqSz = 1.5
-    // Blt flag (rightmost)
     fx -= 5
     doc.setFont('times', 'bold')
     doc.setFontSize(5.5)
@@ -795,26 +884,31 @@ function renderUnitCard(doc, x, y, unit, isHero) {
   }
   cy += 5
 
-  // Stat labels
-  ccStatLabelRow(doc, x, cy, 3.5, headerColor)
-  cy += 3.5
+  // Two-column body: left = stats, right = skills
+  const bodyY = cy
+  const rightX = x + CC_LSTATS_W
+  const rightW = CC_W - CC_LSTATS_W
 
-  // Base stats
-  ccStatValueRow(doc, x, cy, 4.5, unit.base_stats || {})
-  cy += 4.5
+  // Vertical separator between columns
+  doc.setDrawColor(BORDER[0], BORDER[1], BORDER[2])
+  doc.setLineWidth(0.2)
+  doc.line(rightX, bodyY, rightX, y + CC_H)
 
-  // Weapon rows — label bar + 11 stat columns, same style as warband sheet
+  // Left column: base stats (vertical)
+  let lcy = ccVertStats(doc, x, bodyY, maxY, unit.base_stats || {}, headerColor)
+
+  // Left column: weapon sections (compact)
   const maxWeapons = isHero ? 2 : 3
   for (let i = 0; i < maxWeapons; i++) {
     const label = (unit.advance_labels || [])[i]
     if (!label) continue
-    cy = ccWeaponRows(doc, x, cy, label, (unit.advances || [])[i] || {}, headerColor)
+    lcy = ccWeaponCompact(doc, x, lcy, maxY, label, (unit.advances || [])[i] || {}, headerColor)
   }
 
-  // Special / skills text (skill names bold, descriptions normal)
+  // Right column: skills/special text (bold names, normal descriptions)
   const specLines = (unit.special || []).filter(Boolean)
   if (specLines.length > 0) {
-    ccSpecialBlock(doc, x, cy, y + CC_H - CC_PAD, specLines, 5)
+    ccSpecialBlock(doc, rightX, bodyY + CC_PAD, maxY, specLines, 7, rightW)
   }
 }
 
