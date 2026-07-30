@@ -78,14 +78,18 @@ function cell(doc, x, y, w, h, bg, text, fontSize, bold, align = 'left', vAlign 
   drawText(doc, x, y, w, h, text, fontSize, bold, align, vAlign)
 }
 
-// Draw n small checkbox squares centred inside a cell (already drawn separately)
-function drawCheckboxes(doc, x, y, w, h, n = 10) {
-  const size = 2, gap = 0.7
+// Draw n small checkbox squares centred inside a cell. First `filled` are filled dark.
+function drawCheckboxes(doc, x, y, w, h, n = 12, filled = 0) {
+  const size = 2, gap = 0.5
   const totalW = n * size + (n - 1) * gap
   let bx = x + (w - totalW) / 2
   const by = y + (h - size) / 2
   for (let i = 0; i < n; i++) {
-    doc.setFillColor(WHITE[0], WHITE[1], WHITE[2])
+    if (i < filled) {
+      doc.setFillColor(TEXT[0], TEXT[1], TEXT[2])
+    } else {
+      doc.setFillColor(WHITE[0], WHITE[1], WHITE[2])
+    }
     setStroke(doc)
     doc.rect(bx, by, size, size, 'FD')
     bx += size + gap
@@ -331,17 +335,21 @@ export function generateWarbandPDF(data) {
     rx += hCols[i]
   }
 
-  // Row 2: values (cols 0–5) + checkboxes (col 6)
+  const nh = data.neutral_heroes || [{}, {}, {}]
+
+  // Row 2: values (cols 0–4) + NH hero 1 name (col 5) + NH hero 1 progress (col 6)
   rx = MARGIN_X
-  const r2Vals = [data.player_name||'', data.warband_name||'', data.warband_type||'', data.max_units||'', data.hero_slots||'', '']
-  for (let i = 0; i < 6; i++) {
+  const r2Vals = [data.player_name||'', data.warband_name||'', data.warband_type||'', data.max_units||'', data.hero_slots||'']
+  for (let i = 0; i < 5; i++) {
     cell(doc, rx, y + hRows[0], hCols[i], hRows[1], WHITE, r2Vals[i], 6.5, false)
     rx += hCols[i]
   }
+  cell(doc, rx, y + hRows[0], hCols[5], hRows[1], WHITE, nh[0]?.name || '', 6.5, false)
+  rx += hCols[5]
   cell(doc, rx, y + hRows[0], hCols[6], hRows[1], WHITE, '', 6.5, false)
-  drawCheckboxes(doc, rx, y + hRows[0], hCols[6], hRows[1])
+  drawCheckboxes(doc, rx, y + hRows[0], hCols[6], hRows[1], 12, nh[0]?.progress || 0)
 
-  // Row 3: labels (cols 0–4) + blank (col 5) + checkboxes (col 6)
+  // Row 3: labels (cols 0–4) + NH hero 2 name (col 5) + NH hero 2 progress (col 6)
   const r3y = y + hRows[0] + hRows[1]
   rx = MARGIN_X
   const r3Labels = ['Stored Equipment','Rout Threshold','Gold','Wins','Losses']
@@ -349,12 +357,12 @@ export function generateWarbandPDF(data) {
     cell(doc, rx, r3y, hCols[i], hRows[2], BLUE, r3Labels[i], 5.2, true)
     rx += hCols[i]
   }
-  cell(doc, rx, r3y, hCols[5], hRows[2], WHITE, '', 5.2, false)
+  cell(doc, rx, r3y, hCols[5], hRows[2], WHITE, nh[1]?.name || '', 5.2, false)
   rx += hCols[5]
   cell(doc, rx, r3y, hCols[6], hRows[2], WHITE, '', 5.2, false)
-  drawCheckboxes(doc, rx, r3y, hCols[6], hRows[2])
+  drawCheckboxes(doc, rx, r3y, hCols[6], hRows[2], 12, nh[1]?.progress || 0)
 
-  // Row 4: values (cols 0–4) + blank (col 5) + checkboxes (col 6)
+  // Row 4: values (cols 0–4) + NH hero 3 name (col 5) + NH hero 3 progress (col 6)
   const r4y = r3y + hRows[2]
   rx = MARGIN_X
   const r4Vals = [data.stored_equipment||'', data.rout_threshold||'', data.gold||'', data.wins||'', data.losses||'']
@@ -362,10 +370,10 @@ export function generateWarbandPDF(data) {
     cell(doc, rx, r4y, hCols[i], hRows[3], WHITE, r4Vals[i], 6.5, false)
     rx += hCols[i]
   }
-  cell(doc, rx, r4y, hCols[5], hRows[3], WHITE, '', 6.5, false)
+  cell(doc, rx, r4y, hCols[5], hRows[3], WHITE, nh[2]?.name || '', 6.5, false)
   rx += hCols[5]
   cell(doc, rx, r4y, hCols[6], hRows[3], WHITE, '', 6.5, false)
-  drawCheckboxes(doc, rx, r4y, hCols[6], hRows[3])
+  drawCheckboxes(doc, rx, r4y, hCols[6], hRows[3], 12, nh[2]?.progress || 0)
 
   y = r4y + hRows[3]
 

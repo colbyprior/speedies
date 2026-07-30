@@ -8,6 +8,7 @@ import aliasData from '../../static/jsondata/aliases.json'
 import skillsData from '../../static/jsondata/skills.json'
 import spellsData from '../../static/jsondata/spells.json'
 import rangedEffectsData from '../../static/jsondata/ranged-weapon-effects.json'
+import neutralHeroesData from '../../static/jsondata/neutral_heroes.json'
 
 // ─────────────────────────────────────────────────────────────
 // DATA LOADING
@@ -481,6 +482,31 @@ function enableCampaignMode() {
   mutateWarband(wb => { wb.campaignMode = true })
 }
 
+function updateCampaignField(field, value) {
+  mutateWarband(wb => {
+    if (!wb.campaign) wb.campaign = {}
+    wb.campaign[field] = value
+  })
+}
+
+function updateNeutralHeroName(idx, name) {
+  mutateWarband(wb => {
+    if (!wb.campaign) wb.campaign = {}
+    if (!wb.campaign.neutralHeroes) wb.campaign.neutralHeroes = [{}, {}, {}]
+    wb.campaign.neutralHeroes[idx] = { ...wb.campaign.neutralHeroes[idx], name }
+  })
+}
+
+function updateNeutralHeroProgress(idx, delta) {
+  mutateWarband(wb => {
+    if (!wb.campaign) wb.campaign = {}
+    if (!wb.campaign.neutralHeroes) wb.campaign.neutralHeroes = [{}, {}, {}]
+    const nh = wb.campaign.neutralHeroes[idx] || {}
+    nh.progress = Math.max(0, Math.min(12, (nh.progress || 0) + delta))
+    wb.campaign.neutralHeroes[idx] = nh
+  })
+}
+
 function updateUnitStat(unitId, stat, value) {
   const wb = currentWarband()
   if (!wb) return
@@ -488,7 +514,7 @@ function updateUnitStat(unitId, stat, value) {
   if (!u) return
   if (!u.statOverrides) u.statOverrides = {}
   if (value === '') delete u.statOverrides[stat]
-  else u.statOverrides[stat] = value
+  else u.statOverrides[stat] = clampStat(stat, value)
   persistState()
   // No render() — preserves input focus while typing
 }
@@ -586,6 +612,15 @@ function esc(str) {
 
 function statVal(v) {
   return v === '-' || v == null ? '—' : v
+}
+
+// Stats that have a minimum value of 5 in the game rules
+const STAT_MIN5 = new Set(['Melee', 'Ranged', 'Defence', 'Agility', 'Morale'])
+
+function clampStat(statName, value) {
+  if (!STAT_MIN5.has(statName)) return value
+  const n = parseInt(value)
+  return isNaN(n) ? value : String(Math.max(5, n))
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -796,6 +831,8 @@ function renderBuilder() {
         </button>
       </nav>
 
+      ${isCampaign ? renderCampaignInfo(wb) : ''}
+
       <div class="builder-panels">
         <aside class="panel hire-panel ${state.mobileTab === 'hire' ? 'panel--active' : ''}">
           ${renderHirePanel(wb, wbData)}
@@ -882,6 +919,63 @@ function renderHirePanel(wb, wbData) {
       <div class="hire-section">
         <h3 class="hire-section-title">Henchmen</h3>
         ${(wbData.Henchmen || []).map(h => unitCard(h, 'henchman')).join('')}
+      </div>
+    </div>
+  `
+}
+
+function renderCampaignInfo(wb) {
+  const c = wb.campaign || {}
+  const neutralHeroes = c.neutralHeroes || [{}, {}, {}]
+  const heroNames = Object.keys(neutralHeroesData)
+
+  return `
+    <div class="campaign-info">
+      <div class="campaign-fields">
+        <label class="campaign-field">
+          <span class="campaign-field-label">Player</span>
+          <input class="campaign-field-input" type="text" value="${esc(c.playerName || '')}"
+            data-action="campaign-field" data-field="playerName" placeholder="Player name" />
+        </label>
+        <label class="campaign-field">
+          <span class="campaign-field-label">Wins</span>
+          <input class="campaign-field-input campaign-field-input--num" type="number" min="0" value="${c.wins || 0}"
+            data-action="campaign-field" data-field="wins" />
+        </label>
+        <label class="campaign-field">
+          <span class="campaign-field-label">Losses</span>
+          <input class="campaign-field-input campaign-field-input--num" type="number" min="0" value="${c.losses || 0}"
+            data-action="campaign-field" data-field="losses" />
+        </label>
+        <label class="campaign-field">
+          <span class="campaign-field-label">Gold Reserve</span>
+          <input class="campaign-field-input campaign-field-input--num" type="number" min="0" value="${c.goldReserve || 0}"
+            data-action="campaign-field" data-field="goldReserve" />
+        </label>
+        <label class="campaign-field campaign-field--wide">
+          <span class="campaign-field-label">Stored Equipment</span>
+          <input class="campaign-field-input" type="text" value="${esc(c.storedEquipment || '')}"
+            data-action="campaign-field" data-field="storedEquipment" placeholder="Items in storage..." />
+        </label>
+      </div>
+      <div class="campaign-neutral-heroes">
+        <div class="campaign-nh-title">Aligned Neutral Heroes</div>
+        ${neutralHeroes.slice(0, 3).map((nh, i) => `
+          <div class="campaign-nh-row">
+            <select class="campaign-nh-select" data-action="neutral-hero-select" data-idx="${i}">
+              <option value="">— None —</option>
+              ${heroNames.map(name => `<option value="${esc(name)}" ${nh.name === name ? 'selected' : ''}>${esc(name)}</option>`).join('')}
+            </select>
+            <div class="campaign-nh-progress">
+              <button class="btn btn-xs btn-ghost" data-action="neutral-hero-progress" data-idx="${i}" data-delta="-1">−</button>
+              <div class="campaign-nh-pips">
+                ${Array.from({length: 12}, (_, j) => `<span class="nh-pip${j < (nh.progress || 0) ? ' nh-pip--filled' : ''}"></span>`).join('')}
+              </div>
+              <span class="campaign-nh-count">${nh.progress || 0}/12</span>
+              <button class="btn btn-xs btn-ghost" data-action="neutral-hero-progress" data-idx="${i}" data-delta="1">+</button>
+            </div>
+          </div>
+        `).join('')}
       </div>
     </div>
   `
@@ -1211,7 +1305,7 @@ function buildUnitStats(unitDef, unit) {
   const stats = {}
   const add = (key, s) => {
     const raw = get(s)
-    if (raw != null && raw !== '') stats[key] = String(raw)
+    if (raw != null && raw !== '') stats[key] = clampStat(s, String(raw))
   }
   add('mov', 'Move')
   const mov = parseInt(get('Move'))
@@ -1231,8 +1325,8 @@ function buildUnitStats(unitDef, unit) {
 // Build weapon rows with calculated stats — mirrors the equipRows logic in renderViewWarband.
 function buildWeaponRows(unitDef, unit, eq, maxRows) {
   const get = s => unit?.statOverrides?.[s] ?? unitDef?.[s]
-  const baseMel = parseInt(get('Melee'))    || 0
-  const baseDef = parseInt(get('Defence'))  || 0
+  const baseMel = Math.max(5, parseInt(get('Melee'))    || 0)
+  const baseDef = Math.max(5, parseInt(get('Defence'))  || 0)
   const baseInj = parseInt(get('Injury'))   || 0
   const basePrc = parseInt(get('Piercing')) || 0
 
@@ -1250,12 +1344,12 @@ function buildWeaponRows(unitDef, unit, eq, maxRows) {
     if (stats) {
       if (isShield) {
         const m = (stats.Effect || '').match(/\+(\d+)\s*Def/)
-        if (m) s.def = String(baseDef - parseInt(m[1]))
+        if (m) s.def = String(Math.max(5, baseDef - parseInt(m[1])))
       } else {
         const mel = parseInt(stats.Melee) || 0
         const inj = parseInt(stats.Injury) || 0
         const prc = parseInt(stats.Piercing) || 0
-        if (mel !== 0) s.mel = String(baseMel - mel)
+        if (mel !== 0) s.mel = String(Math.max(5, baseMel - mel))
         if (inj !== 0) s.inj = String(baseInj + inj)
         if (prc !== 0) s.prc = String(basePrc + prc)
       }
@@ -1372,13 +1466,21 @@ function buildPDFPayload(wb, wbData) {
     }))
     .filter(t => t.spells.length > 0)
 
+  const c = wb.campaign || {}
+  const nhSlots = (c.neutralHeroes || [{}, {}, {}]).slice(0, 3)
+
   return {
-    warband_name:   wb.name,
-    warband_type:   wb.type,
-    gold:           String(goldRemaining(wb)),
-    rout_threshold: String(wbData?.['Rout Threshold'] || ''),
-    max_units:      String(wbData?.['Max Units'] || ''),
-    hero_slots:     String(getHeroSlots(wb)),
+    player_name:       c.playerName || '',
+    warband_name:      wb.name,
+    warband_type:      wb.type,
+    gold:              c.goldReserve != null ? String(c.goldReserve) : String(goldRemaining(wb)),
+    rout_threshold:    String(wbData?.['Rout Threshold'] || ''),
+    max_units:         String(wbData?.['Max Units'] || ''),
+    hero_slots:        String(getHeroSlots(wb)),
+    wins:              c.wins != null ? String(c.wins) : '',
+    losses:            c.losses != null ? String(c.losses) : '',
+    stored_equipment:  c.storedEquipment || '',
+    neutral_heroes:    nhSlots.map(nh => ({ name: nh.name || '', progress: nh.progress || 0 })),
     heroes,
     henchmen: Object.values(henchGroups).map(h => ({ ...h, count: String(h.count) })),
     skills,
@@ -1424,12 +1526,13 @@ function renderViewWarband() {
   const heroes = sorted.filter(u => u.category === 'hero')
   const henchmen = sorted.filter(u => u.category === 'henchman')
 
-  function equipRows(eq, unitDef) {
+  function equipRows(eq, unitDef, unit) {
     const rows = []
-    const baseMel = parseInt(unitDef?.Melee) || 0
-    const baseDef = parseInt(unitDef?.Defence) || 0
-    const baseInj = parseInt(unitDef?.Injury) || 0
-    const basePrc = parseInt(unitDef?.Piercing) || 0
+    const get = s => unit?.statOverrides?.[s] ?? unitDef?.[s]
+    const baseMel = Math.max(5, parseInt(get('Melee'))    || 0)
+    const baseDef = Math.max(5, parseInt(get('Defence'))  || 0)
+    const baseInj = parseInt(get('Injury'))   || 0
+    const basePrc = parseInt(get('Piercing')) || 0
 
     // cols: Unit(0) Mov(1) Run(2) Mel(3) Rgd(4) Def(5) Agi(6) Mrl(7) Atk(8) Wnd(9) Inj(10) Prc(11) Cost(12)
     function equipRow(icon, name, cells) {
@@ -1449,12 +1552,12 @@ function renderViewWarband() {
       const cells = {}
       if (isShieldItem) {
         const m = (stats.Effect || '').match(/\+(\d+)\s*Def/)
-        if (m) cells[5] = baseDef - parseInt(m[1])
+        if (m) cells[5] = Math.max(5, baseDef - parseInt(m[1]))
       } else {
         const mel = parseInt(stats.Melee) || 0
         const inj = parseInt(stats.Injury) || 0
         const prc = parseInt(stats.Piercing) || 0
-        if (mel !== 0) cells[3] = baseMel - mel
+        if (mel !== 0) cells[3] = Math.max(5, baseMel - mel)
         if (inj !== 0) cells[10] = baseInj + inj
         if (prc !== 0) cells[11] = basePrc + prc
       }
@@ -1480,7 +1583,7 @@ function renderViewWarband() {
     if (eq.armour) {
       const stats = getArmourStats(eq.armour)
       const def = parseInt(stats?.Defence) || 0
-      rows.push(equipRow('🔰', eq.armour, def ? { 5: baseDef - def } : {}))
+      rows.push(equipRow('🔰', eq.armour, def ? { 5: Math.max(5, baseDef - def) } : {}))
     }
 
     return rows.join('')
@@ -1528,11 +1631,11 @@ function renderViewWarband() {
           return `
             <td>${statVal(s('Move'))}"</td>
             <td>${mov + 3}"</td>
-            <td>${statVal(s('Melee'))}</td>
-            <td>${statVal(s('Ranged'))}</td>
-            <td>${statVal(s('Defence'))}</td>
-            <td>${statVal(s('Agility'))}</td>
-            <td>${statVal(s('Morale'))}</td>
+            <td>${statVal(clampStat('Melee',   s('Melee')))}</td>
+            <td>${statVal(clampStat('Ranged',  s('Ranged')))}</td>
+            <td>${statVal(clampStat('Defence', s('Defence')))}</td>
+            <td>${statVal(clampStat('Agility', s('Agility')))}</td>
+            <td>${statVal(clampStat('Morale',  s('Morale')))}</td>
             <td>${statVal(s('Attacks'))}</td>
             <td>${statVal(s('Wounds'))}</td>
             <td>${statVal(s('Injury'))}</td>
@@ -1541,7 +1644,7 @@ function renderViewWarband() {
         })() : `<td colspan="11">—</td>`}
         <td class="view-cost-cell">${cost}g</td>
       </tr>
-      ${equipRows(eq, unitDef)}
+      ${equipRows(eq, unitDef, unit)}
       ${skillsHtml(unit, unitDef) ? `<tr class="equip-row-view skills-row-view"><td class="equip-row-name-cell" colspan="13">${skillsHtml(unit, unitDef)}</td></tr>` : ''}
     `
   }
@@ -1634,7 +1737,7 @@ function renderViewWarband() {
           ${unit.notes ? esc(unit.notes) : ''}
         </div>` : ''}
         <div class="unit-card-stats">${statsHtml}</div>
-        ${skillsHtml(unit, unitDef) ? `<div class="unit-card-skills">${allSkillsForUnit(unit, unitDef).map(skillLink).join(', ')}</div>` : ''}
+        ${skillsHtml(unit, unitDef) ? `<div class="unit-card-skills">${allSkillsForUnit(unit, unitDef).map(s => `<span class="unit-card-skill">${skillLink(s)}</span>`).join('')}</div>` : ''}
         ${equipLines.length ? `<div class="unit-card-equip">${equipLines.join('')}</div>` : ''}
       </div>
     `
@@ -1663,7 +1766,6 @@ function renderViewWarband() {
           <h1 class="view-title">${esc(wb.name)}</h1>
           <div class="view-type">${esc(wb.type)}</div>
         </div>
-        <button class="btn btn-ghost" onclick="window.print()">🖨 Print</button>
         <button class="btn btn-primary" data-action="export-pdf">📄 Export PDF</button>
       </header>
 
@@ -1908,6 +2010,10 @@ document.addEventListener('click', e => {
       toggleUnitFlag(el.dataset.unitId, el.dataset.flag)
       break
 
+    case 'neutral-hero-progress':
+      updateNeutralHeroProgress(parseInt(el.dataset.idx), parseInt(el.dataset.delta))
+      break
+
     case 'add-unit':
       addUnit(el.dataset.unitName, el.dataset.unitCat)
       break
@@ -1964,6 +2070,10 @@ document.addEventListener('change', e => {
     if (el.value) addExtraSkill(el.dataset.unitId, el.value)
   } else if (action === 'unit-custom-name') {
     updateUnitCustomName(el.dataset.unitId, el.value)
+  } else if (action === 'campaign-field') {
+    updateCampaignField(el.dataset.field, el.value)
+  } else if (action === 'neutral-hero-select') {
+    updateNeutralHeroName(parseInt(el.dataset.idx), el.value)
   } else if (action === 'import-warband') {
     const file = el.files?.[0]
     if (file) importWarband(file)

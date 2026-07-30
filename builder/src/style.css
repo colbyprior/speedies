@@ -785,6 +785,116 @@ ul, ol { list-style: none; }
 /* ─────────────────────────────────────────────────────────────
    CAMPAIGN MODE
 ───────────────────────────────────────────────────────────── */
+/* ── Campaign info panel ── */
+.campaign-info {
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.campaign-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.campaign-field {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.campaign-field--wide { flex: 1 1 160px; }
+
+.campaign-field-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+}
+
+.campaign-field-input {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: 13px;
+  padding: 4px 7px;
+  min-width: 90px;
+}
+
+.campaign-field-input--num { width: 64px; }
+
+.campaign-field-input:focus { outline: none; border-color: var(--amber); }
+
+.campaign-neutral-heroes {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1 1 260px;
+}
+
+.campaign-nh-title {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+}
+
+.campaign-nh-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.campaign-nh-select {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: 12px;
+  padding: 3px 6px;
+  min-width: 130px;
+}
+
+.campaign-nh-select:focus { outline: none; border-color: var(--amber); }
+
+.campaign-nh-progress {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.campaign-nh-pips {
+  display: flex;
+  gap: 2px;
+}
+
+.nh-pip {
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--border2);
+  border-radius: 2px;
+  background: var(--bg3);
+  display: inline-block;
+}
+
+.nh-pip--filled {
+  background: var(--amber);
+  border-color: var(--amber);
+}
+
+.campaign-nh-count {
+  font-size: 11px;
+  color: var(--text-muted);
+  min-width: 28px;
+}
+
 .campaign-badge {
   font-size: 11px;
   font-weight: 600;
@@ -1260,7 +1370,8 @@ ul, ol { list-style: none; }
 }
 .skill-tag:hover { color: var(--gold-light); border-color: var(--gold); }
 
-.unit-card-skills { display: flex; flex-direction: column; gap: 4px; padding: 8px 14px; border-top: 1px solid var(--border); }
+.unit-card-skills { display: flex; flex-wrap: wrap; gap: 4px; padding: 8px 14px; border-top: 1px solid var(--border); }
+.unit-card-skill { font-size: 11px; background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius-xs); padding: 1px 6px; }
 
 .equip-row-view td { border-bottom: none; padding-top: 3px; padding-bottom: 3px; }
 .equip-row-view:last-child td { border-bottom: 1px solid var(--border); }
