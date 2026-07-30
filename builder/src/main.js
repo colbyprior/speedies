@@ -1,5 +1,6 @@
 import './style.css'
 import JSON5 from 'json5'
+import { generateWarbandPDF, generateCardsPDF, generateBigCardsPDF } from './pdf-export.js'
 import meleeData from '../../static/jsondata/melee-weapons.json'
 import rangedData from '../../static/jsondata/ranged-weapons.json'
 import armourData from '../../static/jsondata/armour.json'
@@ -7,6 +8,7 @@ import aliasData from '../../static/jsondata/aliases.json'
 import skillsData from '../../static/jsondata/skills.json'
 import spellsData from '../../static/jsondata/spells.json'
 import rangedEffectsData from '../../static/jsondata/ranged-weapon-effects.json'
+import neutralHeroesData from '../../static/jsondata/neutral_heroes.json'
 
 // ─────────────────────────────────────────────────────────────
 // DATA LOADING
@@ -380,7 +382,21 @@ function toggleEquip(unitId, itemName, category) {
     if ((used + slots) > limits.meleeMax) return
     const resolvedName = resolveAlias(itemName, 'Melee Weapons')
     const isShield = resolvedName === 'Shield' || resolvedName === 'Tower Shield'
-    if (isShield && hasShield(eq)) return
+    if (isShield && hasShield(eq)) {
+      // Swap shields: remove the existing shield and add the new one
+      const existingShield = eq.melee.find(n => {
+        const r = resolveAlias(n, 'Melee Weapons')
+        return r === 'Shield' || r === 'Tower Shield'
+      })
+      if (!existingShield || existingShield === itemName) return
+      if (!wb.campaignMode && goldRemaining(wb) < getEquipCost(itemName, 'melee') - getEquipCost(existingShield, 'melee')) return
+      mutateWarband(wb => {
+        const u = wb.units.find(u => u.id === unitId)
+        u.equipment.melee = u.equipment.melee.filter(n => n !== existingShield)
+        u.equipment.melee.push(itemName)
+      })
+      return
+    }
     if (isShield && (eq.ranged || []).some(r => !isLightRanged(r))) return
     if (!wb.campaignMode && goldRemaining(wb) < getEquipCost(itemName, 'melee')) return
     mutateWarband(wb => {
@@ -466,6 +482,31 @@ function enableCampaignMode() {
   mutateWarband(wb => { wb.campaignMode = true })
 }
 
+function updateCampaignField(field, value) {
+  mutateWarband(wb => {
+    if (!wb.campaign) wb.campaign = {}
+    wb.campaign[field] = value
+  })
+}
+
+function updateNeutralHeroName(idx, name) {
+  mutateWarband(wb => {
+    if (!wb.campaign) wb.campaign = {}
+    if (!wb.campaign.neutralHeroes) wb.campaign.neutralHeroes = [{}, {}, {}]
+    wb.campaign.neutralHeroes[idx] = { ...wb.campaign.neutralHeroes[idx], name }
+  })
+}
+
+function updateNeutralHeroProgress(idx, delta) {
+  mutateWarband(wb => {
+    if (!wb.campaign) wb.campaign = {}
+    if (!wb.campaign.neutralHeroes) wb.campaign.neutralHeroes = [{}, {}, {}]
+    const nh = wb.campaign.neutralHeroes[idx] || {}
+    nh.progress = Math.max(0, Math.min(12, (nh.progress || 0) + delta))
+    wb.campaign.neutralHeroes[idx] = nh
+  })
+}
+
 function updateUnitStat(unitId, stat, value) {
   const wb = currentWarband()
   if (!wb) return
@@ -473,7 +514,7 @@ function updateUnitStat(unitId, stat, value) {
   if (!u) return
   if (!u.statOverrides) u.statOverrides = {}
   if (value === '') delete u.statOverrides[stat]
-  else u.statOverrides[stat] = value
+  else u.statOverrides[stat] = clampStat(stat, value)
   persistState()
   // No render() — preserves input focus while typing
 }
@@ -571,6 +612,15 @@ function esc(str) {
 
 function statVal(v) {
   return v === '-' || v == null ? '—' : v
+}
+
+// Stats that have a minimum value of 5 in the game rules
+const STAT_MIN5 = new Set(['Melee', 'Ranged', 'Defence', 'Agility', 'Morale'])
+
+function clampStat(statName, value) {
+  if (!STAT_MIN5.has(statName)) return value
+  const n = parseInt(value)
+  return isNaN(n) ? value : String(Math.max(5, n))
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -781,6 +831,8 @@ function renderBuilder() {
         </button>
       </nav>
 
+      ${isCampaign ? renderCampaignInfo(wb) : ''}
+
       <div class="builder-panels">
         <aside class="panel hire-panel ${state.mobileTab === 'hire' ? 'panel--active' : ''}">
           ${renderHirePanel(wb, wbData)}
@@ -867,6 +919,63 @@ function renderHirePanel(wb, wbData) {
       <div class="hire-section">
         <h3 class="hire-section-title">Henchmen</h3>
         ${(wbData.Henchmen || []).map(h => unitCard(h, 'henchman')).join('')}
+      </div>
+    </div>
+  `
+}
+
+function renderCampaignInfo(wb) {
+  const c = wb.campaign || {}
+  const neutralHeroes = c.neutralHeroes || [{}, {}, {}]
+  const heroNames = Object.keys(neutralHeroesData)
+
+  return `
+    <div class="campaign-info">
+      <div class="campaign-fields">
+        <label class="campaign-field">
+          <span class="campaign-field-label">Player</span>
+          <input class="campaign-field-input" type="text" value="${esc(c.playerName || '')}"
+            data-action="campaign-field" data-field="playerName" placeholder="Player name" />
+        </label>
+        <label class="campaign-field">
+          <span class="campaign-field-label">Wins</span>
+          <input class="campaign-field-input campaign-field-input--num" type="number" min="0" value="${c.wins || 0}"
+            data-action="campaign-field" data-field="wins" />
+        </label>
+        <label class="campaign-field">
+          <span class="campaign-field-label">Losses</span>
+          <input class="campaign-field-input campaign-field-input--num" type="number" min="0" value="${c.losses || 0}"
+            data-action="campaign-field" data-field="losses" />
+        </label>
+        <label class="campaign-field">
+          <span class="campaign-field-label">Gold Reserve</span>
+          <input class="campaign-field-input campaign-field-input--num" type="number" min="0" value="${c.goldReserve || 0}"
+            data-action="campaign-field" data-field="goldReserve" />
+        </label>
+        <label class="campaign-field campaign-field--wide">
+          <span class="campaign-field-label">Stored Equipment</span>
+          <input class="campaign-field-input" type="text" value="${esc(c.storedEquipment || '')}"
+            data-action="campaign-field" data-field="storedEquipment" placeholder="Items in storage..." />
+        </label>
+      </div>
+      <div class="campaign-neutral-heroes">
+        <div class="campaign-nh-title">Aligned Neutral Heroes</div>
+        ${neutralHeroes.slice(0, 3).map((nh, i) => `
+          <div class="campaign-nh-row">
+            <select class="campaign-nh-select" data-action="neutral-hero-select" data-idx="${i}">
+              <option value="">— None —</option>
+              ${heroNames.map(name => `<option value="${esc(name)}" ${nh.name === name ? 'selected' : ''}>${esc(name)}</option>`).join('')}
+            </select>
+            <div class="campaign-nh-progress">
+              <button class="btn btn-xs btn-ghost" data-action="neutral-hero-progress" data-idx="${i}" data-delta="-1">−</button>
+              <div class="campaign-nh-pips">
+                ${Array.from({length: 12}, (_, j) => `<span class="nh-pip${j < (nh.progress || 0) ? ' nh-pip--filled' : ''}"></span>`).join('')}
+              </div>
+              <span class="campaign-nh-count">${nh.progress || 0}/12</span>
+              <button class="btn btn-xs btn-ghost" data-action="neutral-hero-progress" data-idx="${i}" data-delta="1">+</button>
+            </div>
+          </div>
+        `).join('')}
       </div>
     </div>
   `
@@ -1188,6 +1297,286 @@ function renderEquipModal(wb, wbData) {
 }
 
 // ─────────────────────────────────────────────────────────────
+// PDF EXPORT
+// ─────────────────────────────────────────────────────────────
+
+function buildUnitStats(unitDef, unit) {
+  const get = s => unit?.statOverrides?.[s] ?? unitDef?.[s]
+  const stats = {}
+  const add = (key, s) => {
+    const raw = get(s)
+    if (raw != null && raw !== '') stats[key] = clampStat(s, String(raw))
+  }
+  add('mov', 'Move')
+  const mov = parseInt(get('Move'))
+  if (!isNaN(mov)) stats.run = String(mov + 3)
+  add('mel', 'Melee')
+  add('rgd', 'Ranged')
+  add('def', 'Defence')
+  add('agi', 'Agility')
+  add('mrl', 'Morale')
+  add('atk', 'Attacks')
+  add('wnd', 'Wounds')
+  add('inj', 'Injury')
+  add('prc', 'Piercing')
+  return stats
+}
+
+// Build weapon rows with calculated stats — mirrors the equipRows logic in renderViewWarband.
+function buildWeaponRows(unitDef, unit, eq, maxRows) {
+  const get = s => unit?.statOverrides?.[s] ?? unitDef?.[s]
+  const baseMel = Math.max(5, parseInt(get('Melee'))    || 0)
+  const baseDef = Math.max(5, parseInt(get('Defence'))  || 0)
+  const baseInj = parseInt(get('Injury'))   || 0
+  const basePrc = parseInt(get('Piercing')) || 0
+
+  // Group melee weapons by name to collapse dual-wield into one row
+  const meleeGroups = {}
+  for (const name of (eq.melee || [])) meleeGroups[name] = (meleeGroups[name] || 0) + 1
+
+  const rows = []
+  for (const [name, count] of Object.entries(meleeGroups)) {
+    if (rows.length >= maxRows) break
+    const stats = getMeleeStats(name)
+    const resolved = resolveAlias(name, 'Melee Weapons')
+    const isShield = resolved === 'Shield' || resolved === 'Tower Shield'
+    const s = {}
+    if (stats) {
+      if (isShield) {
+        const m = (stats.Effect || '').match(/\+(\d+)\s*Def/)
+        if (m) s.def = String(Math.max(5, baseDef - parseInt(m[1])))
+      } else {
+        const mel = parseInt(stats.Melee) || 0
+        const inj = parseInt(stats.Injury) || 0
+        const prc = parseInt(stats.Piercing) || 0
+        if (mel !== 0) s.mel = String(Math.max(5, baseMel - mel))
+        if (inj !== 0) s.inj = String(baseInj + inj)
+        if (prc !== 0) s.prc = String(basePrc + prc)
+      }
+    }
+    if (count > 1) {
+      const baseAtk = parseInt(get('Attacks')) || 0
+      s.atk = String(baseAtk + 1)
+    }
+    const label = count > 1 ? `2x ${name}` : name
+    const effect = (stats?.Effect && !isShield) ? stats.Effect : ''
+    rows.push({ label, stats: s, effect })
+  }
+  for (const name of (eq.ranged || [])) {
+    if (rows.length >= maxRows) break
+    const stats = getRangedStats(name)
+    const s = {}
+    if (stats) {
+      const inj = parseInt(stats.Injury) || 0
+      const prc = parseInt(stats.Piercing) || 0
+      if (inj !== 0) s.inj = String(inj)
+      if (prc !== 0) s.prc = String(prc)
+    }
+    const effectParts = [stats?.Range, stats?.Effect].filter(Boolean)
+    const effectDesc = effectParts.length ? `${name}: ${effectParts.join(', ')}` : name
+    rows.push({ label: name, stats: s, effect: effectDesc })
+  }
+  return rows
+}
+
+function buildPDFPayload(wb, wbData) {
+  const sorted    = sortUnits(wb.units, wbData)
+  const heroUnits = sorted.filter(u => u.category === 'hero')
+  const henchUnits = sorted.filter(u => u.category === 'henchman')
+
+  const heroes = heroUnits.map(unit => {
+    const def = findUnitDef(wbData, unit.typeName, unit.category)
+    const wRows = buildWeaponRows(def, unit, unit.equipment, 2)
+    const skillNames = [...(def?.Skills || []), ...(unit.extraSkills || [])]
+    const skillLines = skillNames.map(name => {
+      const desc = skillsData[name]?.Description
+      return desc ? `${name}: ${desc}` : name
+    })
+    return {
+      name:           unit.customName || '',
+      type:           unit.typeName,
+      deathtouched:   unit.deathtouched ? 'Yes' : '',
+      blight:         unit.blight ? 'Yes' : '',
+      base_stats:     buildUnitStats(def, unit),
+      advances:       wRows.map(w => w.stats),
+      advance_labels: wRows.map(w => w.label),
+      special:        [...skillLines, ...wRows.map(w => w.effect)].filter(Boolean),
+      special_sheet:  [...skillNames, ...wRows.map(w => w.effect)].filter(Boolean),
+    }
+  })
+
+  // Group henchmen by type; collect all unique equipment loadouts
+  const henchGroups = {}
+  for (const unit of henchUnits) {
+    const eq = unit.equipment || {}
+    const eqKey = [...(eq.melee || []).slice().sort(), (eq.armour || ''), ...(eq.ranged || []).slice().sort()].join('|')
+
+    if (!henchGroups[unit.typeName]) {
+      const def = findUnitDef(wbData, unit.typeName, unit.category)
+      const wRows = buildWeaponRows(def, unit, unit.equipment, 3)
+      const skillNames = [...(def?.Skills || []), ...(unit.extraSkills || [])]
+      const skillLines = skillNames.map(name => {
+        const desc = skillsData[name]?.Description
+        return desc ? `${name}: ${desc}` : name
+      })
+      henchGroups[unit.typeName] = {
+        name:           unit.customName || '',
+        type:           unit.typeName,
+        cap:            def?.['Type Cap'] || '',
+        count:          0,
+        base_stats:     buildUnitStats(def, unit),
+        advances:       wRows.map(w => w.stats),
+        advance_labels: wRows.map(w => w.label),
+        loadout_starts: [0],
+        special:        skillLines.filter(Boolean),
+        special_sheet:  skillNames.filter(Boolean),
+        _seenEqKeys:    new Set([eqKey]),
+      }
+    } else {
+      const group = henchGroups[unit.typeName]
+      if (!group._seenEqKeys.has(eqKey)) {
+        group._seenEqKeys.add(eqKey)
+        const def = findUnitDef(wbData, unit.typeName, unit.category)
+        const wRows = buildWeaponRows(def, unit, unit.equipment, 3)
+        group.loadout_starts.push(group.advance_labels.length)
+        group.advances.push(...wRows.map(w => w.stats))
+        group.advance_labels.push(...wRows.map(w => w.label))
+      }
+    }
+    henchGroups[unit.typeName].count++
+  }
+  Object.values(henchGroups).forEach(g => delete g._seenEqKeys)
+
+  // Reference page: skills, ranged properties, special rules, spells
+  const allSkills = new Set()
+  const rangedWeapons = new Map()  // weapon display name → { range, effects[] }
+  wb.units.forEach(unit => {
+    const def = findUnitDef(wbData, unit.typeName, unit.category)
+    ;[...(def?.Skills || []), ...(unit.extraSkills || [])].forEach(s => allSkills.add(s))
+    for (const name of (unit.equipment?.ranged || [])) {
+      if (!rangedWeapons.has(name)) {
+        const stats = getRangedStats(name)
+        if (stats) {
+          const effects = stats.Effect
+            ? stats.Effect.split(',').map(e => e.trim()).filter(Boolean)
+            : []
+          rangedWeapons.set(name, { range: stats.Range || '', effects })
+        }
+      }
+    }
+  })
+
+  const skills = [...allSkills]
+    .map(name => ({ name, desc: skillsData[name]?.Description }))
+    .filter(e => e.desc)
+    .sort((a, b) => a.name.localeCompare(b.name))
+
+  const ranged_properties = [...rangedWeapons.entries()].map(([weaponName, { range, effects }]) => {
+    const header = [range, ...effects].filter(Boolean).join(', ')
+    const effectDescs = effects
+      .map(e => rangedEffectsData[e] ? `${e}: ${rangedEffectsData[e]}` : null)
+      .filter(Boolean)
+      .join(' ')
+    return { name: `${weaponName}: ${header}`, desc: effectDescs || undefined }
+  })
+
+  const special_rules = Object.entries(wbData?.['Special Rules'] || {})
+    .map(([name, desc]) => ({ name, desc }))
+
+  const spell_tables = (wbData?.['Magic Tables'] || [])
+    .map(school => ({
+      school,
+      spells: Object.values(spellsData)
+        .filter(s => s.School === school)
+        .map(s => ({ name: s.Name, check: s.Check, description: s.Description })),
+    }))
+    .filter(t => t.spells.length > 0)
+
+  const c = wb.campaign || {}
+  const nhSlots = (c.neutralHeroes || [{}, {}, {}]).slice(0, 3)
+
+  return {
+    player_name:       c.playerName || '',
+    warband_name:      wb.name,
+    warband_type:      wb.type,
+    gold:              c.goldReserve != null ? String(c.goldReserve) : String(goldRemaining(wb)),
+    rout_threshold:    String(wbData?.['Rout Threshold'] || ''),
+    max_units:         String(wbData?.['Max Units'] || ''),
+    hero_slots:        String(getHeroSlots(wb)),
+    wins:              c.wins != null ? String(c.wins) : '',
+    losses:            c.losses != null ? String(c.losses) : '',
+    stored_equipment:  c.storedEquipment || '',
+    neutral_heroes:    nhSlots.map(nh => ({ name: nh.name || '', progress: nh.progress || 0 })),
+    heroes,
+    henchmen: Object.values(henchGroups).map(h => ({ ...h, count: String(h.count) })),
+    skills,
+    ranged_properties,
+    special_rules,
+    spell_tables,
+  }
+}
+
+function exportToPDF() {
+  const wb = currentWarband()
+  if (!wb) return
+  const wbData = WARBANDS[wb.type]
+
+  const btn = document.querySelector('[data-action="export-pdf"]')
+  if (btn) { btn.disabled = true; btn.textContent = 'Generating…' }
+
+  try {
+    const doc = generateWarbandPDF(buildPDFPayload(wb, wbData))
+    const url = doc.output('bloburl')
+    window.open(url, '_blank')
+  } catch (e) {
+    console.error('PDF generation failed:', e)
+    alert('PDF generation failed — see browser console for details.')
+  } finally {
+    if (btn) { btn.disabled = false; btn.textContent = '📄 Export PDF' }
+  }
+}
+
+function exportToCards() {
+  const wb = currentWarband()
+  if (!wb) return
+  const wbData = WARBANDS[wb.type]
+
+  const btn = document.querySelector('[data-action="export-cards"]')
+  if (btn) { btn.disabled = true; btn.textContent = 'Generating…' }
+
+  try {
+    const doc = generateCardsPDF(buildPDFPayload(wb, wbData))
+    const url = doc.output('bloburl')
+    window.open(url, '_blank')
+  } catch (e) {
+    console.error('Card PDF generation failed:', e)
+    alert('Card PDF generation failed — see browser console for details.')
+  } finally {
+    if (btn) { btn.disabled = false; btn.textContent = '🃏 Export Cards' }
+  }
+}
+
+function exportToBigCards() {
+  const wb = currentWarband()
+  if (!wb) return
+  const wbData = WARBANDS[wb.type]
+
+  const btn = document.querySelector('[data-action="export-big-cards"]')
+  if (btn) { btn.disabled = true; btn.textContent = 'Generating…' }
+
+  try {
+    const doc = generateBigCardsPDF(buildPDFPayload(wb, wbData))
+    const url = doc.output('bloburl')
+    window.open(url, '_blank')
+  } catch (e) {
+    console.error('Big card PDF generation failed:', e)
+    alert('Big card PDF generation failed — see browser console for details.')
+  } finally {
+    if (btn) { btn.disabled = false; btn.textContent = '🃏 Export Big Cards' }
+  }
+}
+
+// ─────────────────────────────────────────────────────────────
 // VIEW: VIEW WARBAND (read-only summary)
 // ─────────────────────────────────────────────────────────────
 
@@ -1203,12 +1592,13 @@ function renderViewWarband() {
   const heroes = sorted.filter(u => u.category === 'hero')
   const henchmen = sorted.filter(u => u.category === 'henchman')
 
-  function equipRows(eq, unitDef) {
+  function equipRows(eq, unitDef, unit) {
     const rows = []
-    const baseMel = parseInt(unitDef?.Melee) || 0
-    const baseDef = parseInt(unitDef?.Defence) || 0
-    const baseInj = parseInt(unitDef?.Injury) || 0
-    const basePrc = parseInt(unitDef?.Piercing) || 0
+    const get = s => unit?.statOverrides?.[s] ?? unitDef?.[s]
+    const baseMel = Math.max(5, parseInt(get('Melee'))    || 0)
+    const baseDef = Math.max(5, parseInt(get('Defence'))  || 0)
+    const baseInj = parseInt(get('Injury'))   || 0
+    const basePrc = parseInt(get('Piercing')) || 0
 
     // cols: Unit(0) Mov(1) Run(2) Mel(3) Rgd(4) Def(5) Agi(6) Mrl(7) Atk(8) Wnd(9) Inj(10) Prc(11) Cost(12)
     function equipRow(icon, name, cells) {
@@ -1228,12 +1618,12 @@ function renderViewWarband() {
       const cells = {}
       if (isShieldItem) {
         const m = (stats.Effect || '').match(/\+(\d+)\s*Def/)
-        if (m) cells[5] = baseDef - parseInt(m[1])
+        if (m) cells[5] = Math.max(5, baseDef - parseInt(m[1]))
       } else {
         const mel = parseInt(stats.Melee) || 0
         const inj = parseInt(stats.Injury) || 0
         const prc = parseInt(stats.Piercing) || 0
-        if (mel !== 0) cells[3] = baseMel - mel
+        if (mel !== 0) cells[3] = Math.max(5, baseMel - mel)
         if (inj !== 0) cells[10] = baseInj + inj
         if (prc !== 0) cells[11] = basePrc + prc
       }
@@ -1246,8 +1636,8 @@ function renderViewWarband() {
       const cells = {}
       const inj = parseInt(stats.Injury) || 0
       const prc = parseInt(stats.Piercing) || 0
-      if (inj !== 0) cells[10] = baseInj + inj
-      if (prc !== 0) cells[11] = basePrc + prc
+      if (inj !== 0) cells[10] = inj
+      if (prc !== 0) cells[11] = prc
       const label = stats.Range ? `${esc(name)} (${esc(stats.Range)})` : esc(name)
       const effect = stats.Effect ? `<div class="equip-row-effect">${esc(stats.Effect)}</div>` : ''
       rows.push(`<tr class="equip-row-view">${Array(13).fill('').map((_, i) => {
@@ -1259,7 +1649,7 @@ function renderViewWarband() {
     if (eq.armour) {
       const stats = getArmourStats(eq.armour)
       const def = parseInt(stats?.Defence) || 0
-      rows.push(equipRow('🔰', eq.armour, def ? { 5: baseDef - def } : {}))
+      rows.push(equipRow('🔰', eq.armour, def ? { 5: Math.max(5, baseDef - def) } : {}))
     }
 
     return rows.join('')
@@ -1307,11 +1697,11 @@ function renderViewWarband() {
           return `
             <td>${statVal(s('Move'))}"</td>
             <td>${mov + 3}"</td>
-            <td>${statVal(s('Melee'))}</td>
-            <td>${statVal(s('Ranged'))}</td>
-            <td>${statVal(s('Defence'))}</td>
-            <td>${statVal(s('Agility'))}</td>
-            <td>${statVal(s('Morale'))}</td>
+            <td>${statVal(clampStat('Melee',   s('Melee')))}</td>
+            <td>${statVal(clampStat('Ranged',  s('Ranged')))}</td>
+            <td>${statVal(clampStat('Defence', s('Defence')))}</td>
+            <td>${statVal(clampStat('Agility', s('Agility')))}</td>
+            <td>${statVal(clampStat('Morale',  s('Morale')))}</td>
             <td>${statVal(s('Attacks'))}</td>
             <td>${statVal(s('Wounds'))}</td>
             <td>${statVal(s('Injury'))}</td>
@@ -1320,7 +1710,7 @@ function renderViewWarband() {
         })() : `<td colspan="11">—</td>`}
         <td class="view-cost-cell">${cost}g</td>
       </tr>
-      ${equipRows(eq, unitDef)}
+      ${equipRows(eq, unitDef, unit)}
       ${skillsHtml(unit, unitDef) ? `<tr class="equip-row-view skills-row-view"><td class="equip-row-name-cell" colspan="13">${skillsHtml(unit, unitDef)}</td></tr>` : ''}
     `
   }
@@ -1413,7 +1803,7 @@ function renderViewWarband() {
           ${unit.notes ? esc(unit.notes) : ''}
         </div>` : ''}
         <div class="unit-card-stats">${statsHtml}</div>
-        ${skillsHtml(unit, unitDef) ? `<div class="unit-card-skills">${allSkillsForUnit(unit, unitDef).map(skillLink).join(', ')}</div>` : ''}
+        ${skillsHtml(unit, unitDef) ? `<div class="unit-card-skills">${allSkillsForUnit(unit, unitDef).map(s => `<span class="unit-card-skill">${skillLink(s)}</span>`).join('')}</div>` : ''}
         ${equipLines.length ? `<div class="unit-card-equip">${equipLines.join('')}</div>` : ''}
       </div>
     `
@@ -1442,7 +1832,9 @@ function renderViewWarband() {
           <h1 class="view-title">${esc(wb.name)}</h1>
           <div class="view-type">${esc(wb.type)}</div>
         </div>
-        <button class="btn btn-ghost" onclick="window.print()">🖨 Print</button>
+        <button class="btn btn-primary" data-action="export-pdf">📄 Export PDF</button>
+        <button class="btn btn-outline" data-action="export-cards">🃏 Export Cards</button>
+        <button class="btn btn-outline" data-action="export-big-cards">🃏 Export Big Cards</button>
       </header>
 
       <div class="view-summary-bar">
@@ -1686,6 +2078,10 @@ document.addEventListener('click', e => {
       toggleUnitFlag(el.dataset.unitId, el.dataset.flag)
       break
 
+    case 'neutral-hero-progress':
+      updateNeutralHeroProgress(parseInt(el.dataset.idx), parseInt(el.dataset.delta))
+      break
+
     case 'add-unit':
       addUnit(el.dataset.unitName, el.dataset.unitCat)
       break
@@ -1722,6 +2118,18 @@ document.addEventListener('click', e => {
     case 'remove-equip':
       removeEquip(el.dataset.unitId, el.dataset.item, el.dataset.cat)
       break
+
+    case 'export-pdf':
+      exportToPDF()
+      break
+
+    case 'export-cards':
+      exportToCards()
+      break
+
+    case 'export-big-cards':
+      exportToBigCards()
+      break
   }
 })
 
@@ -1738,6 +2146,10 @@ document.addEventListener('change', e => {
     if (el.value) addExtraSkill(el.dataset.unitId, el.value)
   } else if (action === 'unit-custom-name') {
     updateUnitCustomName(el.dataset.unitId, el.value)
+  } else if (action === 'campaign-field') {
+    updateCampaignField(el.dataset.field, el.value)
+  } else if (action === 'neutral-hero-select') {
+    updateNeutralHeroName(parseInt(el.dataset.idx), el.value)
   } else if (action === 'import-warband') {
     const file = el.files?.[0]
     if (file) importWarband(file)

@@ -5,7 +5,7 @@ sidebar_label: Inquisitors
 Magic never expects us.
 
 | Max Units | 12 |
-| ---- | ---- |
+| :---- | :---- |
 | Complexity | ★★☆ |
 | Rout Threshold | 6 |
 | Play Style | Powerful heroes with minions |

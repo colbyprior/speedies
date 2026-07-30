@@ -8,7 +8,6 @@ export default defineConfig({
   },
   server: {
     fs: {
-      // Allow serving files from the parent project directory during dev
       allow: ['..'],
     },
   },

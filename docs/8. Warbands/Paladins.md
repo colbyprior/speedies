@@ -5,7 +5,7 @@ sidebar_label: Paladins
 An order of paladins and others that seek to advance a holy agenda.
 
 | Max Units | 15 |
-| ---- | ---- |
+| :---- | :---- |
 | Complexity | ★☆☆ |
 | Rout Threshold | 6 |
 | Play Style | Defensive |
