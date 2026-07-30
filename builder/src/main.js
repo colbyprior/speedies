@@ -1,6 +1,6 @@
 import './style.css'
 import JSON5 from 'json5'
-import { generateWarbandPDF } from './pdf-export.js'
+import { generateWarbandPDF, generateCardsPDF } from './pdf-export.js'
 import meleeData from '../../static/jsondata/melee-weapons.json'
 import rangedData from '../../static/jsondata/ranged-weapons.json'
 import armourData from '../../static/jsondata/armour.json'
@@ -1387,7 +1387,11 @@ function buildPDFPayload(wb, wbData) {
   const heroes = heroUnits.map(unit => {
     const def = findUnitDef(wbData, unit.typeName, unit.category)
     const wRows = buildWeaponRows(def, unit, unit.equipment, 2)
-    const skills = [...(def?.Skills || []), ...(unit.extraSkills || [])].join(', ')
+    const skillNames = [...(def?.Skills || []), ...(unit.extraSkills || [])]
+    const skillLines = skillNames.map(name => {
+      const desc = skillsData[name]?.Description
+      return desc ? `${name}: ${desc}` : name
+    })
     return {
       name:           unit.customName || '',
       type:           unit.typeName,
@@ -1396,7 +1400,7 @@ function buildPDFPayload(wb, wbData) {
       base_stats:     buildUnitStats(def, unit),
       advances:       wRows.map(w => w.stats),
       advance_labels: wRows.map(w => w.label),
-      special: [skills, ...wRows.map(w => w.effect)].filter(Boolean),
+      special: [...skillLines, ...wRows.map(w => w.effect)].filter(Boolean),
     }
   })
 
@@ -1406,7 +1410,11 @@ function buildPDFPayload(wb, wbData) {
     if (!henchGroups[unit.typeName]) {
       const def = findUnitDef(wbData, unit.typeName, unit.category)
       const wRows = buildWeaponRows(def, unit, unit.equipment, 3)
-      const skills = [...(def?.Skills || []), ...(unit.extraSkills || [])].join(', ')
+      const skillNames = [...(def?.Skills || []), ...(unit.extraSkills || [])]
+      const skillLines = skillNames.map(name => {
+        const desc = skillsData[name]?.Description
+        return desc ? `${name}: ${desc}` : name
+      })
       henchGroups[unit.typeName] = {
         name:           unit.customName || '',
         type:           unit.typeName,
@@ -1415,7 +1423,7 @@ function buildPDFPayload(wb, wbData) {
         base_stats:     buildUnitStats(def, unit),
         advances:       wRows.map(w => w.stats),
         advance_labels: wRows.map(w => w.label),
-        special: [skills, ...wRows.map(w => w.effect)].filter(Boolean),
+        special: [...skillLines, ...wRows.map(w => w.effect)].filter(Boolean),
       }
     }
     henchGroups[unit.typeName].count++
@@ -1507,6 +1515,26 @@ function exportToPDF() {
     alert('PDF generation failed — see browser console for details.')
   } finally {
     if (btn) { btn.disabled = false; btn.textContent = '📄 Export PDF' }
+  }
+}
+
+function exportToCards() {
+  const wb = currentWarband()
+  if (!wb) return
+  const wbData = WARBANDS[wb.type]
+
+  const btn = document.querySelector('[data-action="export-cards"]')
+  if (btn) { btn.disabled = true; btn.textContent = 'Generating…' }
+
+  try {
+    const doc = generateCardsPDF(buildPDFPayload(wb, wbData))
+    const url = doc.output('bloburl')
+    window.open(url, '_blank')
+  } catch (e) {
+    console.error('Card PDF generation failed:', e)
+    alert('Card PDF generation failed — see browser console for details.')
+  } finally {
+    if (btn) { btn.disabled = false; btn.textContent = '🃏 Export Cards' }
   }
 }
 
@@ -1767,6 +1795,7 @@ function renderViewWarband() {
           <div class="view-type">${esc(wb.type)}</div>
         </div>
         <button class="btn btn-primary" data-action="export-pdf">📄 Export PDF</button>
+        <button class="btn btn-outline" data-action="export-cards">🃏 Export Cards</button>
       </header>
 
       <div class="view-summary-bar">
@@ -2053,6 +2082,10 @@ document.addEventListener('click', e => {
 
     case 'export-pdf':
       exportToPDF()
+      break
+
+    case 'export-cards':
+      exportToCards()
       break
   }
 })
