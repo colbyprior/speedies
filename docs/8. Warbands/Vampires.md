@@ -5,7 +5,7 @@ sidebar_label: Vampires
 This team sucks... your blood!
 
 | Max Units | 12 |
-| ---- | ---- |
+| :---- | :---- |
 | Complexity | ★★★ |
 | Rout Threshold | 6 |
 | Play Style | Powerful leader with minions |

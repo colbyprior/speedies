@@ -101,7 +101,7 @@ function drawCheckboxes(doc, x, y, w, h, n = 12, filled = 0) {
 function heroCard(doc, x, y, hero = {}) {
   const bs     = hero.base_stats     || {}
   const adv    = hero.advances       || []
-  const sp     = hero.special        || []
+  const sp     = hero.special_sheet  || hero.special || []
   const advLbl = hero.advance_labels || []
   const rh     = HERO_ROWS
   const specX  = x + COL_L + 11 * COL_S
@@ -161,7 +161,7 @@ function heroCard(doc, x, y, hero = {}) {
 function henchmanCard(doc, x, y, henchman = {}) {
   const bs     = henchman.base_stats     || {}
   const adv    = henchman.advances       || []
-  const sp     = henchman.special        || []
+  const sp     = henchman.special_sheet  || henchman.special || []
   const advLbl = henchman.advance_labels || []
   const rh     = HENCH_ROWS
   const specX  = x + COL_L + 11 * COL_S
@@ -422,11 +422,13 @@ const CC_PAD  = 2.5   // inner horizontal/vertical padding mm
 // Stat col width for 11-column stat rows (warband sheet)
 const CC_SC = CC_W / 11
 
-// Two-column card body: left = stats, right = skills
-const CC_LSTATS_W = 26      // stats column width
-const CC_VSTEP    = 3.0     // height per stat row in vertical layout
-const CC_VLBL_W   = 13      // label cell width within stats column
-const CC_VVAL_W   = CC_LSTATS_W - CC_VLBL_W  // value cell width
+// Card stat rows: top 5 (passive) and bottom 6 (combat, also used for weapon rows)
+const CC_TOP_KEYS   = ['mov', 'run', 'agi', 'mrl', 'wnd']
+const CC_TOP_LABELS = ['Mov', 'Run', 'Agi', 'Mrl', 'Wnd']
+const CC_BTM_KEYS   = ['mel', 'rgd', 'def', 'atk', 'inj', 'prc']
+const CC_BTM_LABELS = ['Mel', 'Rgd', 'Def', 'Atk', 'Inj', 'Prc']
+const CC_TOP_COL = CC_W / CC_TOP_KEYS.length   // 12.6mm
+const CC_BTM_COL = CC_W / CC_BTM_KEYS.length   // 10.5mm
 
 // ── Card primitives ───────────────────────────────────────────────────────────
 
@@ -480,100 +482,71 @@ function ccStatValueRow(doc, x, y, h, stats) {
   }
 }
 
-// Vertical base stats — stacked label|value rows in left stats column
-function ccVertStats(doc, x, cy, maxY, stats, headerColor) {
-  if (cy + 3 <= maxY) {
+// Horizontal stat block: label row + value row for a given set of keys/labels
+// colW = width of each column (CC_W / n)
+function ccHorizStatBlock(doc, x, cy, keys, labels, colW, stats, headerColor, lblH, valH) {
+  for (let i = 0; i < keys.length; i++) {
     doc.setFillColor(headerColor[0], headerColor[1], headerColor[2])
     setStroke(doc)
-    doc.rect(x, cy, CC_LSTATS_W, 3, 'FD')
+    doc.rect(x + i * colW, cy, colW, lblH, 'FD')
     doc.setFont('times', 'bold')
     doc.setFontSize(5)
     doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
-    doc.text('Base Stats', x + CC_PAD, cy + 1.5, { baseline: 'middle' })
-    cy += 3
+    doc.text(labels[i], x + i * colW + colW / 2, cy + lblH / 2, { align: 'center', baseline: 'middle' })
   }
-  for (let i = 0; i < 11; i++) {
-    if (cy + CC_VSTEP > maxY) break
-    const tint = i % 2 === 0
-      ? headerColor
-      : headerColor.map(c => Math.round(c * 0.6 + 255 * 0.4))
-    doc.setFillColor(tint[0], tint[1], tint[2])
-    setStroke(doc)
-    doc.rect(x, cy, CC_VLBL_W, CC_VSTEP, 'FD')
-    doc.setFont('times', 'bold')
-    doc.setFontSize(5)
-    doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
-    doc.text(STAT_LABELS[i], x + CC_VLBL_W / 2, cy + CC_VSTEP / 2, { align: 'center', baseline: 'middle' })
+  cy += lblH
+  for (let i = 0; i < keys.length; i++) {
     doc.setFillColor(WHITE[0], WHITE[1], WHITE[2])
-    doc.rect(x + CC_VLBL_W, cy, CC_VVAL_W, CC_VSTEP, 'FD')
+    setStroke(doc)
+    doc.rect(x + i * colW, cy, colW, valH, 'FD')
     doc.setFont('times', 'normal')
-    doc.setFontSize(5.5)
-    doc.text(String(stats[STAT_KEYS[i]] || '—'), x + CC_VLBL_W + CC_VVAL_W / 2, cy + CC_VSTEP / 2, { align: 'center', baseline: 'middle' })
-    cy += CC_VSTEP
+    doc.setFontSize(6)
+    doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+    doc.text(String(stats[keys[i]] || '—'), x + i * colW + colW / 2, cy + valH / 2, { align: 'center', baseline: 'middle' })
   }
-  return cy
+  return cy + valH
 }
 
-// Compact weapon section in left column: tinted header + 2-per-row stat pairs
-function ccWeaponCompact(doc, x, cy, maxY, label, advStats, headerColor) {
-  if (cy + 3 > maxY) return cy
+// Weapon row: tinted full-width label bar + 6-col value row (bottom combat stats only)
+function ccWeaponHoriz(doc, x, cy, label, advStats, headerColor, lblH, valH) {
+  // Weapon name bar
   doc.setFillColor(headerColor[0], headerColor[1], headerColor[2])
   setStroke(doc)
-  doc.rect(x, cy, CC_LSTATS_W, 3, 'FD')
+  doc.rect(x, cy, CC_W, lblH, 'FD')
   doc.setFont('times', 'bold')
   doc.setFontSize(5)
   doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
-  doc.text(doc.splitTextToSize(label, CC_LSTATS_W - CC_PAD)[0], x + CC_PAD, cy + 1.5, { baseline: 'middle' })
-  cy += 3
+  doc.text(doc.splitTextToSize(label, CC_W - 2 * CC_PAD)[0], x + CC_PAD, cy + lblH / 2, { baseline: 'middle' })
+  cy += lblH
 
-  const nonEmpty = STAT_KEYS
-    .map((k, i) => ({ label: STAT_LABELS[i], val: advStats[k] }))
-    .filter(e => e.val)
-
-  const halfW   = CC_LSTATS_W / 2
-  const cLblW   = halfW * 0.55
-  const cValW   = halfW - cLblW
-
-  for (let i = 0; i < nonEmpty.length; i += 2) {
-    if (cy + CC_VSTEP > maxY) break
-    const a = nonEmpty[i]
-    const b = nonEmpty[i + 1]
-    const tint = (i / 2) % 2 === 0
-      ? headerColor
-      : headerColor.map(c => Math.round(c * 0.6 + 255 * 0.4))
-
-    // Left stat pair
+  // Stat label row (lighter tint)
+  const statLblH = 2.5
+  const tint = headerColor.map(c => Math.round(c * 0.65 + 255 * 0.35))
+  for (let i = 0; i < CC_BTM_KEYS.length; i++) {
     doc.setFillColor(tint[0], tint[1], tint[2])
     setStroke(doc)
-    doc.rect(x, cy, cLblW, CC_VSTEP, 'FD')
+    doc.rect(x + i * CC_BTM_COL, cy, CC_BTM_COL, statLblH, 'FD')
     doc.setFont('times', 'bold')
-    doc.setFontSize(4.5)
+    doc.setFontSize(4)
     doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
-    doc.text(a.label, x + cLblW / 2, cy + CC_VSTEP / 2, { align: 'center', baseline: 'middle' })
-    doc.setFillColor(WHITE[0], WHITE[1], WHITE[2])
-    doc.rect(x + cLblW, cy, cValW, CC_VSTEP, 'FD')
-    doc.setFont('times', 'normal')
-    doc.setFontSize(5)
-    doc.text(String(a.val), x + cLblW + cValW / 2, cy + CC_VSTEP / 2, { align: 'center', baseline: 'middle' })
-
-    // Right stat pair
-    if (b) {
-      doc.setFillColor(tint[0], tint[1], tint[2])
-      doc.rect(x + halfW, cy, cLblW, CC_VSTEP, 'FD')
-      doc.setFont('times', 'bold')
-      doc.text(b.label, x + halfW + cLblW / 2, cy + CC_VSTEP / 2, { align: 'center', baseline: 'middle' })
-      doc.setFillColor(WHITE[0], WHITE[1], WHITE[2])
-      doc.rect(x + halfW + cLblW, cy, cValW, CC_VSTEP, 'FD')
-      doc.setFont('times', 'normal')
-      doc.text(String(b.val), x + halfW + cLblW + cValW / 2, cy + CC_VSTEP / 2, { align: 'center', baseline: 'middle' })
-    } else {
-      doc.setFillColor(WHITE[0], WHITE[1], WHITE[2])
-      setStroke(doc)
-      doc.rect(x + halfW, cy, halfW, CC_VSTEP, 'FD')
-    }
-    cy += CC_VSTEP
+    doc.text(CC_BTM_LABELS[i], x + i * CC_BTM_COL + CC_BTM_COL / 2, cy + statLblH / 2, { align: 'center', baseline: 'middle' })
   }
-  return cy
+  cy += statLblH
+
+  // Stat values row
+  for (let i = 0; i < CC_BTM_KEYS.length; i++) {
+    const val = advStats[CC_BTM_KEYS[i]] || ''
+    doc.setFillColor(WHITE[0], WHITE[1], WHITE[2])
+    setStroke(doc)
+    doc.rect(x + i * CC_BTM_COL, cy, CC_BTM_COL, valH, 'FD')
+    if (val) {
+      doc.setFont('times', 'normal')
+      doc.setFontSize(6)
+      doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+      doc.text(String(val), x + i * CC_BTM_COL + CC_BTM_COL / 2, cy + valH / 2, { align: 'center', baseline: 'middle' })
+    }
+  }
+  return cy + valH
 }
 
 // Weapon displayed as two rows matching the warband sheet style:
@@ -652,23 +625,24 @@ function ccSpecialBlock(doc, x, cy, maxY, lines, fontSize, colW = CC_W) {
       const boldPart = line.slice(0, colonIdx)   // "Name" (no colon)
       const restPart = line.slice(colonIdx + 2)  // "Description..."
 
-      // Skill name as its own bold heading line
-      if (cy + lineH > maxY) break
-      doc.setFont('times', 'bold')
+      // Pre-measure full entry height — don't render partial entries
+      doc.setFont('times', 'normal')
       doc.setFontSize(fontSize)
+      const descW = maxW - 2
+      const wrapped = restPart ? doc.splitTextToSize(restPart, descW) : []
+      const entryH = (1 + wrapped.length) * lineH
+      if (cy + entryH > maxY) break  // won't fit entirely — stop here
+
+      // Heading
+      doc.setFont('times', 'bold')
       doc.text(boldPart, textX, cy + lineH / 2, { baseline: 'middle' })
       cy += lineH
 
-      // Description on subsequent lines, slightly indented
-      if (restPart) {
-        doc.setFont('times', 'normal')
-        const descW = maxW - 2
-        const wrapped = doc.splitTextToSize(restPart, descW)
-        for (const wl of wrapped) {
-          if (cy + lineH > maxY) break
-          doc.text(wl, textX + 2, cy + lineH / 2, { baseline: 'middle' })
-          cy += lineH
-        }
+      // Description
+      doc.setFont('times', 'normal')
+      for (const wl of wrapped) {
+        doc.text(wl, textX + 2, cy + lineH / 2, { baseline: 'middle' })
+        cy += lineH
       }
     }
   }
@@ -796,9 +770,10 @@ function renderWarbandCard(doc, x, y, data) {
   }
   cy += 5.5
 
-  // Aligned neutral heroes
-  const nhList = (data.neutral_heroes || []).filter(nh => nh.name)
-  if (nhList.length > 0) {
+  // Aligned neutral heroes — always show 3 slots
+  {
+    const nhRaw = (data.neutral_heroes || []).filter(nh => nh.name)
+    const nhList = [...nhRaw, ...Array(Math.max(0, 3 - nhRaw.length)).fill({})]
     doc.setFillColor(BLUE[0], BLUE[1], BLUE[2])
     doc.rect(x, cy, CC_W, 3.5, 'F')
     doc.setFont('times', 'bold')
@@ -810,16 +785,18 @@ function renderWarbandCard(doc, x, y, data) {
       doc.setFillColor(WHITE[0], WHITE[1], WHITE[2])
       setStroke(doc)
       doc.rect(x, cy, CC_W, 5, 'FD')
-      doc.setFont('times', 'normal')
-      doc.setFontSize(5.5)
-      doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
-      doc.text(nh.name, x + CC_PAD, cy + 2.5, { baseline: 'middle' })
-      ccProgressPips(doc, x, cy, 5, nh.progress || 0)
+      if (nh.name) {
+        doc.setFont('times', 'normal')
+        doc.setFontSize(5.5)
+        doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+        doc.text(nh.name, x + CC_PAD, cy + 2.5, { baseline: 'middle' })
+        ccProgressPips(doc, x, cy, 5, nh.progress || 0)
+      }
       cy += 5
     }
   }
 
-  // Stored equipment (fill rest of card)
+  // Stored equipment
   if (data.stored_equipment) {
     doc.setFillColor(BLUE[0], BLUE[1], BLUE[2])
     doc.rect(x, cy, CC_W, 3.5, 'F')
@@ -828,22 +805,37 @@ function renderWarbandCard(doc, x, y, data) {
     doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
     doc.text('Stored Equipment', x + CC_PAD, cy + 1.75, { baseline: 'middle' })
     cy += 3.5
-    ccTextBlock(doc, x, cy, y + CC_H - CC_PAD, data.stored_equipment, 5.5)
+    cy = ccTextBlock(doc, x, cy, y + CC_H - CC_PAD, data.stored_equipment, 5.5)
+  }
+
+  // Special rules
+  const specRules = (data.special_rules || []).filter(r => r.name)
+  if (specRules.length > 0) {
+    const maxY = y + CC_H - CC_PAD
+    if (cy + 3.5 < maxY) {
+      doc.setFillColor(TITLE[0], TITLE[1], TITLE[2])
+      doc.rect(x, cy, CC_W, 3.5, 'F')
+      doc.setFont('times', 'bold')
+      doc.setFontSize(4)
+      doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+      doc.text('Special Rules', x + CC_PAD, cy + 1.75, { baseline: 'middle' })
+      cy += 3.5
+    }
+    const lines = specRules.map(r => r.desc ? `${r.name}: ${r.desc}` : r.name)
+    ccSpecialBlock(doc, x, cy, maxY, lines, 5.5)
   }
 }
 
-function renderUnitCard(doc, x, y, unit, isHero) {
-  ccBorder(doc, x, y)
-
+// Draws the stats/weapons portion of a unit card and returns the cy after weapons
+// (used by both the main card and to measure available space for skills)
+function drawUnitCardStats(doc, x, y, unit, isHero) {
   const name = unit.name || unit.type || '—'
   const headerColor = isHero ? BLUE : PURPLE
-  const maxY = y + CC_H - CC_PAD
 
-  // Name header (full width, 8mm)
   ccHeader(doc, x, y, name, headerColor, 8)
   let cy = y + 8
 
-  // Identity row: type | DT/Blight (hero) or Count | Cap | Blight (henchman)
+  // Identity row
   doc.setFillColor(WHITE[0], WHITE[1], WHITE[2])
   setStroke(doc)
   doc.rect(x, cy, CC_W, 5, 'FD')
@@ -884,60 +876,191 @@ function renderUnitCard(doc, x, y, unit, isHero) {
   }
   cy += 5
 
-  // Two-column body: left = stats, right = skills
-  const bodyY = cy
-  const rightX = x + CC_LSTATS_W
-  const rightW = CC_W - CC_LSTATS_W
+  const LBL_H = 3.0
+  const VAL_H = 3.5
 
-  // Vertical separator between columns
-  doc.setDrawColor(BORDER[0], BORDER[1], BORDER[2])
-  doc.setLineWidth(0.2)
-  doc.line(rightX, bodyY, rightX, y + CC_H)
+  cy = ccHorizStatBlock(doc, x, cy, CC_TOP_KEYS, CC_TOP_LABELS, CC_TOP_COL, unit.base_stats || {}, headerColor, LBL_H, VAL_H)
+  cy = ccHorizStatBlock(doc, x, cy, CC_BTM_KEYS, CC_BTM_LABELS, CC_BTM_COL, unit.base_stats || {}, headerColor, LBL_H, VAL_H)
 
-  // Left column: base stats (vertical)
-  let lcy = ccVertStats(doc, x, bodyY, maxY, unit.base_stats || {}, headerColor)
-
-  // Left column: weapon sections (compact)
-  const maxWeapons = isHero ? 2 : 3
-  for (let i = 0; i < maxWeapons; i++) {
-    const label = (unit.advance_labels || [])[i]
+  const advLabels = unit.advance_labels || []
+  const loadoutStarts = new Set(isHero ? [] : (unit.loadout_starts || []))
+  for (let i = 0; i < advLabels.length; i++) {
+    const label = advLabels[i]
     if (!label) continue
-    lcy = ccWeaponCompact(doc, x, lcy, maxY, label, (unit.advances || [])[i] || {}, headerColor)
+    if (!isHero && i > 0 && loadoutStarts.has(i)) {
+      const sortedStartsArr = [...loadoutStarts].sort((a, b) => a - b)
+      const startIdx = sortedStartsArr.indexOf(i)
+      const nextStart = sortedStartsArr[startIdx + 1] ?? advLabels.length
+      const eqNames = advLabels.slice(i, nextStart).filter(Boolean).join(', ')
+      doc.setFillColor(BORDER[0], BORDER[1], BORDER[2])
+      setStroke(doc)
+      doc.rect(x, cy, CC_W, 3, 'FD')
+      doc.setFont('times', 'bolditalic')
+      doc.setFontSize(4.5)
+      doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+      doc.text(eqNames || `Option ${startIdx + 2}`, x + CC_PAD, cy + 1.5, { baseline: 'middle' })
+      cy += 3
+    }
+    cy = ccWeaponHoriz(doc, x, cy, label, (unit.advances || [])[i] || {}, headerColor, LBL_H, VAL_H)
   }
 
-  // Right column: skills/special text (bold names, normal descriptions)
+  return cy
+}
+
+// Calculate how tall the stats+weapons section is for a given unit (in mm, relative to card top)
+function statsBlockHeight(unit, isHero) {
+  const LBL_H = 3.0, VAL_H = 3.5, STAT_LBL_H = 2.5
+  const WEAPON_H = LBL_H + STAT_LBL_H + VAL_H   // 9.0mm per weapon row
+  const SEP_H    = 3.0                             // loadout separator bar
+
+  const advLabels    = (unit.advance_labels || []).filter(Boolean)
+  const loadoutStarts = isHero ? [] : (unit.loadout_starts || [])
+  const extraSeps    = loadoutStarts.filter(s => s > 0).length
+
+  // header(8) + identity(5) + top stats(6.5) + bottom stats(6.5)
+  return 8 + 5 + (LBL_H + VAL_H) + (LBL_H + VAL_H) +
+         advLabels.length * WEAPON_H +
+         extraSeps * SEP_H
+}
+
+// Returns an array of draw-functions: main card + any overflow skill cards
+function buildUnitCardDrawFns(unit, isHero) {
+  const headerColor = isHero ? BLUE : PURPLE
+  const name = unit.name || unit.type || '—'
   const specLines = (unit.special || []).filter(Boolean)
-  if (specLines.length > 0) {
-    ccSpecialBlock(doc, rightX, bodyY + CC_PAD, maxY, specLines, 7, rightW)
+
+  const SKILL_FS = 6.5
+  const SKILL_LH = SKILL_FS * PT * 1.3
+
+  // Available height for skills on the main card
+  const statsH   = statsBlockHeight(unit, isHero)
+  const mainAvail = CC_H - CC_PAD - statsH - CC_PAD  // bottom pad + gap before skills
+
+  // Simulate ccSpecialBlock rendering to find accurate split points.
+  // Must exactly mirror the pre-measure logic in ccSpecialBlock.
+  const measDoc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' })
+  const maxW = CC_W - 2 * CC_PAD
+  const descW = maxW - 2
+
+  const entryHeight = (line) => {
+    const colonIdx = line.indexOf(': ')
+    if (colonIdx === -1) {
+      measDoc.setFont('times', 'normal')
+      measDoc.setFontSize(SKILL_FS)
+      return measDoc.splitTextToSize(line, maxW).length * SKILL_LH
+    }
+    const rest = line.slice(colonIdx + 2)
+    measDoc.setFont('times', 'normal')
+    measDoc.setFontSize(SKILL_FS)
+    const descLines = rest ? measDoc.splitTextToSize(rest, descW).length : 0
+    return (1 + descLines) * SKILL_LH
   }
+
+  // Split into chunks: first chunk fits on main card (never force), overflow chunks get the rest
+  const chunks = []
+  let remaining = [...specLines]
+
+  // Main card chunk — stop as soon as an entry won't fit, even if chunk is empty
+  {
+    const chunk = []
+    let used = 0
+    for (const line of remaining) {
+      const h = entryHeight(line)
+      if (used + h > mainAvail) break
+      chunk.push(line)
+      used += h
+    }
+    chunks.push(chunk)
+    remaining = remaining.slice(chunk.length)
+  }
+
+  // Overflow chunks — force at least one entry per card so we never loop forever
+  const overflowAvail = CC_H - 8 - CC_PAD * 2
+  while (remaining.length > 0) {
+    const chunk = []
+    let used = 0
+    for (const line of remaining) {
+      const h = entryHeight(line)
+      if (used + h > overflowAvail && chunk.length > 0) break
+      chunk.push(line)
+      used += h
+    }
+    if (chunk.length === 0) chunk.push(remaining[0])  // entry taller than card — force it
+    chunks.push(chunk)
+    remaining = remaining.slice(chunk.length)
+  }
+
+  const drawFns = []
+
+  // Main card
+  const firstChunk = chunks[0] || []
+  drawFns.push((doc, x, y) => {
+    ccBorder(doc, x, y)
+    const cy = drawUnitCardStats(doc, x, y, unit, isHero)
+    if (firstChunk.length > 0) {
+      ccSpecialBlock(doc, x, cy + CC_PAD, y + CC_H - CC_PAD, firstChunk, SKILL_FS)
+    }
+    if (chunks.length > 1) {
+      doc.setFont('times', 'italic')
+      doc.setFontSize(4.5)
+      doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+      doc.text('cont. \u2192', x + CC_W - CC_PAD, y + CC_H - CC_PAD, { align: 'right', baseline: 'bottom' })
+    }
+  })
+
+  // Overflow cards
+  for (let i = 1; i < chunks.length; i++) {
+    const chunk = chunks[i]
+    const cardTitle = `${name} (cont.)`
+    drawFns.push((doc, x, y) => {
+      ccBorder(doc, x, y)
+      ccHeader(doc, x, y, cardTitle, headerColor, 8)
+      ccSpecialBlock(doc, x, y + 8 + CC_PAD, y + CC_H - CC_PAD, chunk, SKILL_FS)
+    })
+  }
+
+  return drawFns
 }
 
 function renderSpellCards(data) {
   // Returns an array of draw-functions, one per card needed
   const drawFns = []
-  const lineH = 5.5 * PT * 1.3
-  const maxY = CC_H - CC_PAD
+
+  const NAME_FS   = 6
+  const DESC_FS   = 5
+  const NAME_LH   = NAME_FS * PT * 1.3
+  const DESC_LH   = DESC_FS * PT * 1.3
+  const GAP       = 1.5
+  const HEADER_H  = 8
+  const DESC_W    = CC_W - 2 * CC_PAD - 2  // indented 2mm
+  const AVAIL_H   = CC_H - HEADER_H - CC_PAD
+
+  // Use a temporary doc for accurate line measurement
+  const measDoc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' })
+  measDoc.setFont('times', 'normal')
+
+  const spellHeight = (spell) => {
+    measDoc.setFontSize(DESC_FS)
+    const descLines = spell.description
+      ? measDoc.splitTextToSize(String(spell.description), DESC_W).length
+      : 0
+    return NAME_LH + descLines * DESC_LH + GAP
+  }
 
   for (const table of (data.spell_tables || [])) {
     if (!table.spells?.length) continue
 
-    // Measure how many spells fit on one card and split accordingly
     let remaining = [...table.spells]
     let cardNum = 0
     while (remaining.length > 0) {
-      const captured = []
       const school = table.school
-      const headerH = 8
-      // Available height after header
-      let avail = CC_H - headerH - CC_PAD
+      const captured = []
+      let avail = AVAIL_H
       for (const spell of remaining) {
-        const nameH = lineH + 1   // name + check line
-        const descLines = Math.ceil(String(spell.description || '').length / 38)  // rough estimate
-        const descH = descLines * lineH
-        const spellH = nameH + descH + 2
-        if (avail < spellH && captured.length > 0) break
+        const h = spellHeight(spell)
+        if (avail < h && captured.length > 0) break
         captured.push(spell)
-        avail -= spellH
+        avail -= h
       }
       remaining = remaining.slice(captured.length)
       const cardTitle = cardNum === 0 ? school : `${school} (cont.)`
@@ -945,36 +1068,59 @@ function renderSpellCards(data) {
       const spellsForCard = captured
       drawFns.push((doc, x, y) => {
         ccBorder(doc, x, y)
-        ccHeader(doc, x, y, cardTitle, TITLE, 8)
-        let cy = y + 8 + CC_PAD / 2
+        ccHeader(doc, x, y, cardTitle, TITLE, HEADER_H)
+        let cy = y + HEADER_H + CC_PAD / 2
+        const maxY = y + CC_H - CC_PAD
 
         for (const spell of spellsForCard) {
-          if (cy + lineH > y + CC_H - CC_PAD) break
+          if (cy + NAME_LH > maxY) break
           // Spell name + check
           doc.setFont('times', 'bold')
-          doc.setFontSize(6)
+          doc.setFontSize(NAME_FS)
           doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
-          const nameText = `${spell.name}  (${spell.check})`
-          doc.text(nameText, x + CC_PAD, cy + lineH / 2, { baseline: 'middle' })
-          cy += lineH
+          doc.text(`${spell.name}  (${spell.check})`, x + CC_PAD, cy + NAME_LH / 2, { baseline: 'middle' })
+          cy += NAME_LH
 
           // Description
           if (spell.description) {
             doc.setFont('times', 'normal')
-            doc.setFontSize(5)
-            const lines = doc.splitTextToSize(String(spell.description), CC_W - 2 * CC_PAD)
+            doc.setFontSize(DESC_FS)
+            const lines = doc.splitTextToSize(String(spell.description), DESC_W)
             for (const line of lines) {
-              if (cy + lineH * 0.85 > y + CC_H - CC_PAD) break
-              doc.text(line, x + CC_PAD + 2, cy + lineH * 0.85 / 2, { baseline: 'middle' })
-              cy += lineH * 0.85
+              if (cy + DESC_LH > maxY) break
+              doc.text(line, x + CC_PAD + 2, cy + DESC_LH / 2, { baseline: 'middle' })
+              cy += DESC_LH
             }
           }
-          cy += 1.5  // gap between spells
+          cy += GAP
         }
       })
     }
   }
   return drawFns
+}
+
+// ── CardScaleProxy ────────────────────────────────────────────────────────────
+// Wraps a jsPDF instance and scales all drawing calls by `scale`, offset by (dx, dy).
+// This lets all card draw functions be reused unchanged for big-card export.
+
+class CardScaleProxy {
+  constructor(doc, scale, dx, dy) {
+    this._doc = doc; this._s = scale; this._dx = dx; this._dy = dy
+  }
+  setFont(...a)        { return this._doc.setFont(...a) }
+  setFillColor(...a)   { return this._doc.setFillColor(...a) }
+  setDrawColor(...a)   { return this._doc.setDrawColor(...a) }
+  setTextColor(...a)   { return this._doc.setTextColor(...a) }
+  setFontSize(s)       { return this._doc.setFontSize(s * this._s) }
+  setLineWidth(w)      { return this._doc.setLineWidth(w * this._s) }
+  rect(x, y, w, h, st) { return this._doc.rect(x*this._s+this._dx, y*this._s+this._dy, w*this._s, h*this._s, st) }
+  text(t, x, y, o)    { return this._doc.text(t, x*this._s+this._dx, y*this._s+this._dy, o) }
+  line(x1, y1, x2, y2) { return this._doc.line(x1*this._s+this._dx, y1*this._s+this._dy, x2*this._s+this._dx, y2*this._s+this._dy) }
+  splitTextToSize(t, w) { return this._doc.splitTextToSize(t, w * this._s) }
+  // getTextWidth returns a value in card-space (unscaled), so callers that use it
+  // for layout comparisons continue to work correctly.
+  getTextWidth(t)      { return this._doc.getTextWidth(t) / this._s }
 }
 
 /**
@@ -991,11 +1137,11 @@ export function generateCardsPDF(data) {
   drawFns.push((doc, x, y) => renderWarbandCard(doc, x, y, data))
 
   for (const hero of (data.heroes || [])) {
-    if (hero.type) drawFns.push((doc, x, y) => renderUnitCard(doc, x, y, hero, true))
+    if (hero.type) drawFns.push(...buildUnitCardDrawFns(hero, true))
   }
 
   for (const hench of (data.henchmen || [])) {
-    if (hench.type) drawFns.push((doc, x, y) => renderUnitCard(doc, x, y, hench, false))
+    if (hench.type) drawFns.push(...buildUnitCardDrawFns(hench, false))
   }
 
   drawFns.push(...renderSpellCards(data))
@@ -1015,6 +1161,72 @@ export function generateCardsPDF(data) {
     if (slot === 0) ccCutGuides(doc)
 
     drawFns[i](doc, cx, cy)
+  }
+
+  return doc
+}
+
+/**
+ * Generate a big-card PDF (cards scaled ~1.5×) for printing and cutting.
+ * 2×2 grid of 94.5×132mm cards on A4 portrait.
+ */
+export function generateBigCardsPDF(data) {
+  const SCALE = 1.5
+  const BIG_COLS = 2
+  const BIG_ROWS = 2
+  const BIG_W = CC_W * SCALE   // 94.5mm
+  const BIG_H = CC_H * SCALE   // 132mm
+  const BIG_ML = (210 - BIG_COLS * BIG_W) / 2  // 10.5mm
+  const BIG_MT = (297 - BIG_ROWS * BIG_H) / 2  // 16.5mm
+
+  const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' })
+  doc.setFont('times', 'normal')
+
+  // Collect same draw functions as regular cards
+  const drawFns = []
+  drawFns.push((d, x, y) => renderWarbandCard(d, x, y, data))
+  for (const hero  of (data.heroes   || [])) { if (hero.type)  drawFns.push(...buildUnitCardDrawFns(hero, true)) }
+  for (const hench of (data.henchmen || [])) { if (hench.type) drawFns.push(...buildUnitCardDrawFns(hench, false)) }
+  drawFns.push(...renderSpellCards(data))
+
+  // Draw cut guides for big cards
+  function bigCutGuides() {
+    doc.setDrawColor(160, 160, 160)
+    doc.setLineWidth(0.1)
+    const dash = [1.5, 2]
+    for (let c = 0; c <= BIG_COLS; c++) {
+      const lx = BIG_ML + c * BIG_W
+      let ly = 0; let on = true
+      while (ly < 297) {
+        const seg = on ? dash[0] : dash[1]
+        if (on) doc.line(lx, ly, lx, Math.min(ly + seg, 297))
+        ly += seg; on = !on
+      }
+    }
+    for (let r = 0; r <= BIG_ROWS; r++) {
+      const ly = BIG_MT + r * BIG_H
+      let lx = 0; let on = true
+      while (lx < 210) {
+        const seg = on ? dash[0] : dash[1]
+        if (on) doc.line(lx, ly, Math.min(lx + seg, 210), ly)
+        lx += seg; on = !on
+      }
+    }
+  }
+
+  const perPage = BIG_COLS * BIG_ROWS
+  for (let i = 0; i < drawFns.length; i++) {
+    const slot = i % perPage
+    if (i > 0 && slot === 0) doc.addPage()
+    if (slot === 0) bigCutGuides()
+
+    const col = slot % BIG_COLS
+    const row = Math.floor(slot / BIG_COLS)
+    // Proxy translates card-space (0,0) origin to page position (dx, dy)
+    const dx = BIG_ML + col * BIG_W
+    const dy = BIG_MT + row * BIG_H
+    const proxy = new CardScaleProxy(doc, SCALE, dx, dy)
+    drawFns[i](proxy, 0, 0)
   }
 
   return doc

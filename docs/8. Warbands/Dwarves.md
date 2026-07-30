@@ -5,7 +5,7 @@ sidebar_label: Dwarves
 These chonkers go bonkers.
 
 | Max Units | 12 |
-| ---- | ---- |
+| :---- | :---- |
 | Complexity | ★★☆ |
 | Rout Threshold | 6 |
 | Play Style | Rough and Tough |

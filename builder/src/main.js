@@ -1,6 +1,6 @@
 import './style.css'
 import JSON5 from 'json5'
-import { generateWarbandPDF, generateCardsPDF } from './pdf-export.js'
+import { generateWarbandPDF, generateCardsPDF, generateBigCardsPDF } from './pdf-export.js'
 import meleeData from '../../static/jsondata/melee-weapons.json'
 import rangedData from '../../static/jsondata/ranged-weapons.json'
 import armourData from '../../static/jsondata/armour.json'
@@ -1400,13 +1400,17 @@ function buildPDFPayload(wb, wbData) {
       base_stats:     buildUnitStats(def, unit),
       advances:       wRows.map(w => w.stats),
       advance_labels: wRows.map(w => w.label),
-      special: [...skillLines, ...wRows.map(w => w.effect)].filter(Boolean),
+      special:        [...skillLines, ...wRows.map(w => w.effect)].filter(Boolean),
+      special_sheet:  [...skillNames, ...wRows.map(w => w.effect)].filter(Boolean),
     }
   })
 
-  // Group henchmen by type, count duplicates
+  // Group henchmen by type; collect all unique equipment loadouts
   const henchGroups = {}
   for (const unit of henchUnits) {
+    const eq = unit.equipment || {}
+    const eqKey = [...(eq.melee || []).slice().sort(), (eq.armour || ''), ...(eq.ranged || []).slice().sort()].join('|')
+
     if (!henchGroups[unit.typeName]) {
       const def = findUnitDef(wbData, unit.typeName, unit.category)
       const wRows = buildWeaponRows(def, unit, unit.equipment, 3)
@@ -1423,11 +1427,25 @@ function buildPDFPayload(wb, wbData) {
         base_stats:     buildUnitStats(def, unit),
         advances:       wRows.map(w => w.stats),
         advance_labels: wRows.map(w => w.label),
-        special: [...skillLines, ...wRows.map(w => w.effect)].filter(Boolean),
+        loadout_starts: [0],
+        special:        skillLines.filter(Boolean),
+        special_sheet:  skillNames.filter(Boolean),
+        _seenEqKeys:    new Set([eqKey]),
+      }
+    } else {
+      const group = henchGroups[unit.typeName]
+      if (!group._seenEqKeys.has(eqKey)) {
+        group._seenEqKeys.add(eqKey)
+        const def = findUnitDef(wbData, unit.typeName, unit.category)
+        const wRows = buildWeaponRows(def, unit, unit.equipment, 3)
+        group.loadout_starts.push(group.advance_labels.length)
+        group.advances.push(...wRows.map(w => w.stats))
+        group.advance_labels.push(...wRows.map(w => w.label))
       }
     }
     henchGroups[unit.typeName].count++
   }
+  Object.values(henchGroups).forEach(g => delete g._seenEqKeys)
 
   // Reference page: skills, ranged properties, special rules, spells
   const allSkills = new Set()
@@ -1535,6 +1553,26 @@ function exportToCards() {
     alert('Card PDF generation failed — see browser console for details.')
   } finally {
     if (btn) { btn.disabled = false; btn.textContent = '🃏 Export Cards' }
+  }
+}
+
+function exportToBigCards() {
+  const wb = currentWarband()
+  if (!wb) return
+  const wbData = WARBANDS[wb.type]
+
+  const btn = document.querySelector('[data-action="export-big-cards"]')
+  if (btn) { btn.disabled = true; btn.textContent = 'Generating…' }
+
+  try {
+    const doc = generateBigCardsPDF(buildPDFPayload(wb, wbData))
+    const url = doc.output('bloburl')
+    window.open(url, '_blank')
+  } catch (e) {
+    console.error('Big card PDF generation failed:', e)
+    alert('Big card PDF generation failed — see browser console for details.')
+  } finally {
+    if (btn) { btn.disabled = false; btn.textContent = '🃏 Export Big Cards' }
   }
 }
 
@@ -1796,6 +1834,7 @@ function renderViewWarband() {
         </div>
         <button class="btn btn-primary" data-action="export-pdf">📄 Export PDF</button>
         <button class="btn btn-outline" data-action="export-cards">🃏 Export Cards</button>
+        <button class="btn btn-outline" data-action="export-big-cards">🃏 Export Big Cards</button>
       </header>
 
       <div class="view-summary-bar">
@@ -2086,6 +2125,10 @@ document.addEventListener('click', e => {
 
     case 'export-cards':
       exportToCards()
+      break
+
+    case 'export-big-cards':
+      exportToBigCards()
       break
   }
 })
