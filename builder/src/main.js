@@ -381,7 +381,21 @@ function toggleEquip(unitId, itemName, category) {
     if ((used + slots) > limits.meleeMax) return
     const resolvedName = resolveAlias(itemName, 'Melee Weapons')
     const isShield = resolvedName === 'Shield' || resolvedName === 'Tower Shield'
-    if (isShield && hasShield(eq)) return
+    if (isShield && hasShield(eq)) {
+      // Swap shields: remove the existing shield and add the new one
+      const existingShield = eq.melee.find(n => {
+        const r = resolveAlias(n, 'Melee Weapons')
+        return r === 'Shield' || r === 'Tower Shield'
+      })
+      if (!existingShield || existingShield === itemName) return
+      if (!wb.campaignMode && goldRemaining(wb) < getEquipCost(itemName, 'melee') - getEquipCost(existingShield, 'melee')) return
+      mutateWarband(wb => {
+        const u = wb.units.find(u => u.id === unitId)
+        u.equipment.melee = u.equipment.melee.filter(n => n !== existingShield)
+        u.equipment.melee.push(itemName)
+      })
+      return
+    }
     if (isShield && (eq.ranged || []).some(r => !isLightRanged(r))) return
     if (!wb.campaignMode && goldRemaining(wb) < getEquipCost(itemName, 'melee')) return
     mutateWarband(wb => {
@@ -1197,7 +1211,7 @@ function buildUnitStats(unitDef, unit) {
   const stats = {}
   const add = (key, s) => {
     const raw = get(s)
-    if (raw != null && String(raw) !== '-') stats[key] = String(raw)
+    if (raw != null && raw !== '') stats[key] = String(raw)
   }
   add('mov', 'Move')
   const mov = parseInt(get('Move'))
@@ -1222,8 +1236,12 @@ function buildWeaponRows(unitDef, unit, eq, maxRows) {
   const baseInj = parseInt(get('Injury'))   || 0
   const basePrc = parseInt(get('Piercing')) || 0
 
+  // Group melee weapons by name to collapse dual-wield into one row
+  const meleeGroups = {}
+  for (const name of (eq.melee || [])) meleeGroups[name] = (meleeGroups[name] || 0) + 1
+
   const rows = []
-  for (const name of (eq.melee || [])) {
+  for (const [name, count] of Object.entries(meleeGroups)) {
     if (rows.length >= maxRows) break
     const stats = getMeleeStats(name)
     const resolved = resolveAlias(name, 'Melee Weapons')
@@ -1242,8 +1260,13 @@ function buildWeaponRows(unitDef, unit, eq, maxRows) {
         if (prc !== 0) s.prc = String(basePrc + prc)
       }
     }
+    if (count > 1) {
+      const baseAtk = parseInt(get('Attacks')) || 0
+      s.atk = String(baseAtk + 1)
+    }
+    const label = count > 1 ? `2x ${name}` : name
     const effect = (stats?.Effect && !isShield) ? stats.Effect : ''
-    rows.push({ label: name, stats: s, effect })
+    rows.push({ label, stats: s, effect })
   }
   for (const name of (eq.ranged || [])) {
     if (rows.length >= maxRows) break
@@ -1252,11 +1275,12 @@ function buildWeaponRows(unitDef, unit, eq, maxRows) {
     if (stats) {
       const inj = parseInt(stats.Injury) || 0
       const prc = parseInt(stats.Piercing) || 0
-      if (inj !== 0) s.inj = String(baseInj + inj)
-      if (prc !== 0) s.prc = String(basePrc + prc)
+      if (inj !== 0) s.inj = String(inj)
+      if (prc !== 0) s.prc = String(prc)
     }
     const effectParts = [stats?.Range, stats?.Effect].filter(Boolean)
-    rows.push({ label: name, stats: s, effect: effectParts.join(', ') })
+    const effectDesc = effectParts.length ? `${name}: ${effectParts.join(', ')}` : name
+    rows.push({ label: name, stats: s, effect: effectDesc })
   }
   return rows
 }
@@ -1271,15 +1295,14 @@ function buildPDFPayload(wb, wbData) {
     const wRows = buildWeaponRows(def, unit, unit.equipment, 2)
     const skills = [...(def?.Skills || []), ...(unit.extraSkills || [])].join(', ')
     return {
-      name:           unit.typeName,
-      type:           def?.Type || '',
+      name:           unit.customName || '',
+      type:           unit.typeName,
       deathtouched:   unit.deathtouched ? 'Yes' : '',
       blight:         unit.blight ? 'Yes' : '',
       base_stats:     buildUnitStats(def, unit),
       advances:       wRows.map(w => w.stats),
       advance_labels: wRows.map(w => w.label),
-      // special[2] = skills (Base row), special[3+] = weapon effects
-      special: ['', '', skills, ...wRows.map(w => w.effect)],
+      special: [skills, ...wRows.map(w => w.effect)].filter(Boolean),
     }
   })
 
@@ -1291,29 +1314,35 @@ function buildPDFPayload(wb, wbData) {
       const wRows = buildWeaponRows(def, unit, unit.equipment, 3)
       const skills = [...(def?.Skills || []), ...(unit.extraSkills || [])].join(', ')
       henchGroups[unit.typeName] = {
-        name:           unit.typeName,
-        type:           def?.Type || '',
+        name:           unit.customName || '',
+        type:           unit.typeName,
         cap:            def?.['Type Cap'] || '',
         count:          0,
         base_stats:     buildUnitStats(def, unit),
         advances:       wRows.map(w => w.stats),
         advance_labels: wRows.map(w => w.label),
-        special: ['', '', skills, ...wRows.map(w => w.effect)],
+        special: [skills, ...wRows.map(w => w.effect)].filter(Boolean),
       }
     }
     henchGroups[unit.typeName].count++
   }
 
   // Reference page: skills, ranged properties, special rules, spells
-  const allSkills  = new Set()
-  const allEffects = new Set()
+  const allSkills = new Set()
+  const rangedWeapons = new Map()  // weapon display name → { range, effects[] }
   wb.units.forEach(unit => {
     const def = findUnitDef(wbData, unit.typeName, unit.category)
     ;[...(def?.Skills || []), ...(unit.extraSkills || [])].forEach(s => allSkills.add(s))
     for (const name of (unit.equipment?.ranged || [])) {
-      const stats = getRangedStats(name)
-      if (stats?.Effect)
-        stats.Effect.split(',').map(e => e.trim()).filter(Boolean).forEach(e => allEffects.add(e))
+      if (!rangedWeapons.has(name)) {
+        const stats = getRangedStats(name)
+        if (stats) {
+          const effects = stats.Effect
+            ? stats.Effect.split(',').map(e => e.trim()).filter(Boolean)
+            : []
+          rangedWeapons.set(name, { range: stats.Range || '', effects })
+        }
+      }
     }
   })
 
@@ -1322,10 +1351,14 @@ function buildPDFPayload(wb, wbData) {
     .filter(e => e.desc)
     .sort((a, b) => a.name.localeCompare(b.name))
 
-  const ranged_properties = [...allEffects]
-    .map(name => ({ name, desc: rangedEffectsData[name] }))
-    .filter(e => e.desc)
-    .sort((a, b) => a.name.localeCompare(b.name))
+  const ranged_properties = [...rangedWeapons.entries()].map(([weaponName, { range, effects }]) => {
+    const header = [range, ...effects].filter(Boolean).join(', ')
+    const effectDescs = effects
+      .map(e => rangedEffectsData[e] ? `${e}: ${rangedEffectsData[e]}` : null)
+      .filter(Boolean)
+      .join(' ')
+    return { name: `${weaponName}: ${header}`, desc: effectDescs || undefined }
+  })
 
   const special_rules = Object.entries(wbData?.['Special Rules'] || {})
     .map(([name, desc]) => ({ name, desc }))
@@ -1434,8 +1467,8 @@ function renderViewWarband() {
       const cells = {}
       const inj = parseInt(stats.Injury) || 0
       const prc = parseInt(stats.Piercing) || 0
-      if (inj !== 0) cells[10] = baseInj + inj
-      if (prc !== 0) cells[11] = basePrc + prc
+      if (inj !== 0) cells[10] = inj
+      if (prc !== 0) cells[11] = prc
       const label = stats.Range ? `${esc(name)} (${esc(stats.Range)})` : esc(name)
       const effect = stats.Effect ? `<div class="equip-row-effect">${esc(stats.Effect)}</div>` : ''
       rows.push(`<tr class="equip-row-view">${Array(13).fill('').map((_, i) => {

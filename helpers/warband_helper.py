@@ -65,7 +65,7 @@ def warband_header(warband):
     out_data += f"# {warband.get('Name')}\n"
     out_data += f"{warband.get('Preamble')}\n\n"
     out_data += f"| Max Units | {warband.get('Max Units')} |\n"
-    out_data += "| ---- | ---- |\n"
+    out_data += "| :---- | :---- |\n"
     out_data += f"| Complexity | {warband.get('Complexity')} |\n"
     out_data += f"| Rout Threshold | {warband.get('Rout Threshold')} |\n"
     out_data += f"| Play Style | {warband.get('Play Style')} |\n\n"
