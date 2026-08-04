@@ -202,6 +202,14 @@ function heroCount(wb) {
   return wb.units.filter(u => u.category === 'hero').length
 }
 
+function warbandHeadcount(wb) {
+  const wbData = WARBANDS[wb.type]
+  return wb.units.filter(u => {
+    const def = findUnitDef(wbData, u.typeName, u.category)
+    return !(def?.Skills || []).includes('Follower')
+  }).length
+}
+
 function calcTotalSpent(warband) {
   const wbData = WARBANDS[warband.type]
   if (!wbData) return 0
@@ -280,7 +288,7 @@ function createWarband(typeName, name) {
 function canAddUnit(warband, unitDef, category) {
   const wbData = WARBANDS[warband.type]
   const maxUnits = parseInt(wbData?.['Max Units']) || 15
-  if (warband.units.length >= maxUnits) return { ok: false, reason: 'Full' }
+  if (warbandHeadcount(warband) >= maxUnits) return { ok: false, reason: 'Full' }
 
   if (category === 'hero' && heroCount(warband) >= getHeroSlots(warband)) {
     return { ok: false, reason: 'No Hero Slots' }
@@ -789,7 +797,7 @@ function renderBuilder() {
   const spent = calcTotalSpent(wb)
   const rem = STARTING_GOLD - spent
   const maxUnits = parseInt(wbData?.['Max Units']) || 15
-  const unitCount = wb.units.length
+  const unitCount = warbandHeadcount(wb)
   const overBudget = rem < 0
   const isCampaign = !!wb.campaignMode
 
@@ -827,7 +835,7 @@ function renderBuilder() {
           Hire Units
         </button>
         <button class="tab-btn ${state.mobileTab === 'roster' ? 'active' : ''}" data-action="set-tab" data-tab="roster">
-          Roster${unitCount > 0 ? ` <span class="tab-count">${unitCount}</span>` : ''}
+          Roster${wb.units.length > 0 ? ` <span class="tab-count">${wb.units.length}</span>` : ''}
         </button>
       </nav>
 
@@ -849,7 +857,7 @@ function renderBuilder() {
 function renderHirePanel(wb, wbData) {
   const rem = goldRemaining(wb)
   const maxUnits = parseInt(wbData['Max Units']) || 15
-  const full = wb.units.length >= maxUnits
+  const full = warbandHeadcount(wb) >= maxUnits
 
   function unitCard(unitDef, category) {
     const count = wb.units.filter(u => u.typeName === unitDef.Name).length
@@ -1840,7 +1848,7 @@ function renderViewWarband() {
       <div class="view-summary-bar">
         <div class="summary-item">
           <span class="summary-label">Units</span>
-          <span class="summary-value">${wb.units.length} / ${wbData?.['Max Units'] || '?'}</span>
+          <span class="summary-value">${warbandHeadcount(wb)} / ${wbData?.['Max Units'] || '?'}</span>
         </div>
         <div class="summary-item">
           <span class="summary-label">Spent</span>
