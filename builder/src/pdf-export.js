@@ -454,29 +454,225 @@ const CC_VAL_FS = 8
 const CC_LBL_H  = 3.4   // header / equipment-name bar
 const CC_VAL_H  = 4.4   // value row
 
-// ── Card primitives ───────────────────────────────────────────────────────────
+// ── Card palette ──────────────────────────────────────────────────────────────
+//
+// Cards only — the warband sheet keeps the original palette, since a full-page
+// tinted fill costs far more ink than a few cut-out cards.
+//
+// The look is built from paper tone, weight and rule, not from dark fills:
+// reversing 6pt type out of a solid is unreadable on a home printer, and the
+// pencil write-in mode needs cells light enough to take graphite.
 
-function ccBorder(doc, x, y) {
-  doc.setFillColor(WHITE[0], WHITE[1], WHITE[2])
-  doc.setDrawColor(BORDER[0], BORDER[1], BORDER[2])
-  doc.setLineWidth(0.35)
-  doc.rect(x, y, CC_W, CC_H, 'FD')
+const CC_PAPER = [255, 255, 255]  // white stock — cheapest to print, no flat tint
+const CC_FIELD = [255, 255, 255]  // value cells
+const CC_INK   = [26,  24,  22 ]  // warm near-black
+const CC_HAIR  = [166, 160, 152]  // hairline rules
+const CC_BONE  = [238, 234, 226]  // type reversed out of the ink band
+
+// Accents must stay readable as a thin rule against CC_INK, so none of them can
+// sit too close to it in value — that rule is the main hero/henchman tell.
+const CC_OXBLOOD = [122, 32,  26 ]  // heroes — dried blood
+const CC_IRON    = [108, 116, 118]  // henchmen — weathered steel
+const CC_SLATE   = [92,  102, 122]  // warband + spell cards
+
+// Accent washed into the paper: ~35% for column headers, ~18% for name bars
+function ccWash(accent, amount) {
+  return accent.map((c, i) => Math.round(c * amount + CC_PAPER[i] * (1 - amount)))
+}
+function ccPalette(accent) {
+  return { accent, head: ccWash(accent, 0.35), bar: ccWash(accent, 0.18) }
 }
 
-function ccHeader(doc, x, y, text, color, h = 8) {
-  doc.setFillColor(color[0], color[1], color[2])
-  doc.rect(x, y, CC_W, h, 'F')
+function ccStroke(doc) {
+  doc.setDrawColor(CC_HAIR[0], CC_HAIR[1], CC_HAIR[2])
+  doc.setLineWidth(0.12)
+}
+
+// ── Warband sigils ────────────────────────────────────────────────────────────
+//
+// Heraldic marks drawn as flat polygons in a 0..1 box (y down), so they stay
+// crisp at any size and add nothing to the file. Deliberately blunt silhouettes:
+// they have to read at ~5mm on the card banner.
+//
+//   fill/parts — filled in the foreground colour
+//   cut        — drawn back in the background colour (eye sockets, a leaf midrib)
+//   circles    — [cx, cy, r] in the same 0..1 space
+
+// A bar of `len`×`wid` centred at (cx,cy), rotated by `ang` radians
+function ccBar(cx, cy, len, wid, ang) {
+  const c = Math.cos(ang), s = Math.sin(ang)
+  const hx = c * len / 2, hy = s * len / 2
+  const wx = -s * wid / 2, wy = c * wid / 2
+  return [[cx - hx - wx, cy - hy - wy], [cx + hx - wx, cy + hy - wy],
+          [cx + hx + wx, cy + hy + wy], [cx - hx + wx, cy - hy + wy]]
+}
+
+// Blade, crossguard and pommel along one diagonal
+function ccSword(ang) {
+  const c = Math.cos(ang), s = Math.sin(ang)
+  return [ccBar(0.5 + c * 0.06, 0.5 + s * 0.06, 0.82, 0.10, ang),
+          ccBar(0.5 - c * 0.10, 0.5 - s * 0.10, 0.11, 0.34, ang),
+          ccBar(0.5 - c * 0.42, 0.5 - s * 0.42, 0.11, 0.15, ang)]
+}
+
+// `n` triangular rays on the diagonals, for a radiant cross
+function ccRays(n, r0, r1, w) {
+  const out = []
+  for (let i = 0; i < n; i++) {
+    const a = -Math.PI / 4 + i * Math.PI / 2
+    out.push([[0.5 + r0 * Math.cos(a - w), 0.5 + r0 * Math.sin(a - w)],
+              [0.5 + r1 * Math.cos(a),     0.5 + r1 * Math.sin(a)],
+              [0.5 + r0 * Math.cos(a + w), 0.5 + r0 * Math.sin(a + w)]])
+  }
+  return out
+}
+
+const CC_STAR8 = (() => {
+  const p = []
+  for (let i = 0; i < 16; i++) {
+    const a = -Math.PI / 2 + i * Math.PI / 8, r = i % 2 ? 0.16 : 0.5
+    p.push([0.5 + r * Math.cos(a), 0.5 + r * Math.sin(a)])
+  }
+  return p
+})()
+
+const CC_SIGILS = {
+  // skull
+  'Undead': {
+    fill: [[0.20,0.34],[0.26,0.12],[0.40,0.03],[0.60,0.03],[0.74,0.12],[0.80,0.34],[0.78,0.55],
+           [0.66,0.64],[0.66,0.80],[0.58,0.88],[0.42,0.88],[0.34,0.80],[0.34,0.64],[0.22,0.55]],
+    cut: [[[0.28,0.34],[0.42,0.34],[0.40,0.50],[0.30,0.50]],
+          [[0.72,0.34],[0.58,0.34],[0.60,0.50],[0.70,0.50]],
+          [[0.50,0.50],[0.56,0.62],[0.44,0.62]]],
+  },
+  // eight-pointed star
+  'Cultists': { fill: CC_STAR8 },
+  // anvil
+  'Dwarves': {
+    fill: [[0.10,0.30],[0.34,0.30],[0.30,0.20],[0.62,0.20],[0.90,0.32],[0.72,0.44],[0.62,0.44],
+           [0.62,0.62],[0.78,0.78],[0.78,0.90],[0.22,0.90],[0.22,0.78],[0.38,0.62],[0.38,0.44],[0.14,0.44]],
+  },
+  // crossed swords
+  'Sellswords': { parts: [...ccSword(-Math.PI / 4), ...ccSword(-3 * Math.PI / 4)] },
+  // shield charged with a cross
+  'Paladins': {
+    fill: [[0.14,0.06],[0.86,0.06],[0.86,0.46],[0.50,0.94],[0.14,0.46]],
+    cut: [[[0.44,0.16],[0.56,0.16],[0.56,0.32],[0.72,0.32],[0.72,0.44],[0.56,0.44],
+           [0.56,0.72],[0.44,0.72],[0.44,0.44],[0.28,0.44],[0.28,0.32],[0.44,0.32]]],
+  },
+  // radiant cross
+  'Inquisitors': {
+    fill: [[0.45,0.04],[0.55,0.04],[0.58,0.28],[0.80,0.31],[0.80,0.41],[0.58,0.44],[0.55,0.96],
+           [0.45,0.96],[0.42,0.44],[0.20,0.41],[0.20,0.31],[0.42,0.28]],
+    parts: ccRays(4, 0.13, 0.42, 0.26),
+  },
+  // bat
+  'Vampires': {
+    fill: [[0.02,0.32],[0.20,0.26],[0.36,0.34],[0.40,0.15],[0.46,0.30],[0.50,0.23],[0.54,0.30],
+           [0.60,0.15],[0.64,0.34],[0.80,0.26],[0.98,0.32],[0.86,0.58],[0.78,0.46],[0.66,0.64],
+           [0.60,0.50],[0.50,0.76],[0.40,0.50],[0.34,0.64],[0.22,0.46],[0.14,0.58]],
+  },
+  // leaf
+  'Wood Elves': {
+    fill: [[0.50,0.02],[0.74,0.24],[0.82,0.54],[0.50,0.96],[0.18,0.54],[0.26,0.24]],
+    cut: [[[0.485,0.22],[0.515,0.22],[0.515,0.90],[0.485,0.90]]],
+  },
+  // rat in profile
+  'Ratlings': {
+    fill: [[0.03,0.63],[0.13,0.54],[0.25,0.46],[0.40,0.41],[0.56,0.39],[0.70,0.44],[0.80,0.54],
+           [0.84,0.66],[0.74,0.75],[0.56,0.78],[0.38,0.77],[0.22,0.72],[0.10,0.68]],
+    parts: [[[0.82,0.60],[0.92,0.46],[0.97,0.28],[0.92,0.26],[0.86,0.44],[0.78,0.56]]],
+    circles: [[0.34,0.36,0.115]],
+    cut: [[[0.15,0.58],[0.21,0.58],[0.21,0.63],[0.15,0.63]]],
+  },
+}
+
+function ccSigil(warbandType) {
+  return CC_SIGILS[String(warbandType || '').trim()] || null
+}
+
+function ccPoly(doc, pts, x, y, size, mirror = false) {
+  const abs = pts.map(([px, py]) => [x + (mirror ? 1 - px : px) * size, y + py * size])
+  const deltas = abs.slice(1).map(([px, py], i) => [px - abs[i][0], py - abs[i][1]])
+  doc.lines(deltas, abs[0][0], abs[0][1], [1, 1], 'F', true)
+}
+
+// Draw a sigil in `size` mm with its top-left at (x, y). `bg` paints the cut-outs.
+function ccDrawSigil(doc, sigil, x, y, size, fg, bg, mirror = false) {
+  if (!sigil) return
+  const mx = cx => mirror ? 1 - cx : cx
+  doc.setFillColor(fg[0], fg[1], fg[2])
+  if (sigil.fill) ccPoly(doc, sigil.fill, x, y, size, mirror)
+  for (const p of (sigil.parts || [])) ccPoly(doc, p, x, y, size, mirror)
+  for (const [cx, cy, r] of (sigil.circles || [])) doc.circle(x + mx(cx) * size, y + cy * size, r * size, 'F')
+  doc.setFillColor(bg[0], bg[1], bg[2])
+  for (const c of (sigil.cut || [])) ccPoly(doc, c, x, y, size, mirror)
+}
+
+// ── Card primitives ───────────────────────────────────────────────────────────
+
+// Paper stock, a heavy ink frame, and an inset hairline keyline
+function ccBorder(doc, x, y) {
+  doc.setFillColor(CC_PAPER[0], CC_PAPER[1], CC_PAPER[2])
+  doc.setDrawColor(CC_INK[0], CC_INK[1], CC_INK[2])
+  doc.setLineWidth(0.5)
+  doc.rect(x, y, CC_W, CC_H, 'FD')
+
+  const inset = 1.1
+  doc.setDrawColor(CC_HAIR[0], CC_HAIR[1], CC_HAIR[2])
+  doc.setLineWidth(0.12)
+  doc.rect(x + inset, y + inset, CC_W - 2 * inset, CC_H - 2 * inset, 'D')
+}
+
+// Solid ink band with the name reversed out in letter-spaced caps, closed by a
+// rule in the unit's accent colour
+// The accent rule sits inside `h` so every caller's existing offsets still hold.
+// `sigil` (optional) is mirrored either side of the title, heraldry-style.
+function ccHeader(doc, x, y, text, accent, h = 8, sigil = null) {
+  const rule = 0.8
+  const band = h - rule
+
+  doc.setFillColor(CC_INK[0], CC_INK[1], CC_INK[2])
+  doc.rect(x, y, CC_W, band, 'F')
+
+  let avail = CC_W - 2 * CC_PAD - 2
+  if (sigil) {
+    const sz = Math.min(band - 1.2, 5.6)
+    const sy = y + (band - sz) / 2
+    ccDrawSigil(doc, sigil, x + CC_PAD, sy, sz, CC_BONE, CC_INK)
+    ccDrawSigil(doc, sigil, x + CC_W - CC_PAD - sz, sy, sz, CC_BONE, CC_INK, true)  // faces inward
+    avail -= 2 * (sz + 1.6)
+  }
+
+  const CS = 0.4
   doc.setFont('times', 'bold')
-  doc.setFontSize(8.5)
-  doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
-  const lines = doc.splitTextToSize(String(text || '—'), CC_W - 2 * CC_PAD)
-  doc.text(lines[0], x + CC_W / 2, y + h / 2, { align: 'center', baseline: 'middle' })
+  doc.setTextColor(CC_BONE[0], CC_BONE[1], CC_BONE[2])
+  doc.setCharSpace(CS)
+  const label = String(text || '—').toUpperCase()
+  // Shrink rather than clip — the sigils leave a narrow slot for long names.
+  // getTextWidth ignores char spacing, so add it back or the title runs long.
+  const widthOf = t => doc.getTextWidth(t) + CS * Math.max(0, t.length - 1)
+  let fs = 8
+  doc.setFontSize(fs)
+  while (fs > 5 && widthOf(label) > avail) {
+    fs = Math.round((fs - 0.2) * 10) / 10
+    doc.setFontSize(fs)
+  }
+  // align:'center' also ignores char spacing and would drift the title right,
+  // into the second sigil — so centre it manually on the spaced width
+  const shown = doc.splitTextToSize(label, avail)[0]
+  doc.text(shown, x + (CC_W - widthOf(shown)) / 2, y + band / 2, { baseline: 'middle' })
+  doc.setCharSpace(0)
+
+  doc.setFillColor(accent[0], accent[1], accent[2])
+  doc.rect(x, y + band, CC_W, rule, 'F')
+  return y + h
 }
 
 function ccText(doc, x, y, text, fontSize, bold, color) {
   doc.setFont('times', bold ? 'bold' : 'normal')
   doc.setFontSize(fontSize)
-  doc.setTextColor((color || TEXT)[0], (color || TEXT)[1], (color || TEXT)[2])
+  doc.setTextColor((color || CC_INK)[0], (color || CC_INK)[1], (color || CC_INK)[2])
   doc.text(String(text), x, y, { baseline: 'middle' })
 }
 
@@ -484,11 +680,11 @@ function ccStatLabelRow(doc, x, y, h, color) {
   const bg = color || BLUE
   for (let i = 0; i < 11; i++) {
     doc.setFillColor(bg[0], bg[1], bg[2])
-    setStroke(doc)
+    ccStroke(doc)
     doc.rect(x + i * CC_SC, y, CC_SC, h, 'FD')
     doc.setFont('times', 'bold')
     doc.setFontSize(4.5)
-    doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+    doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
     doc.text(STAT_LABELS[i], x + i * CC_SC + CC_SC / 2, y + h / 2, { align: 'center', baseline: 'middle' })
   }
 }
@@ -496,12 +692,12 @@ function ccStatLabelRow(doc, x, y, h, color) {
 function ccStatValueRow(doc, x, y, h, stats) {
   for (let i = 0; i < 11; i++) {
     const val = stats[STAT_KEYS[i]] || ''
-    doc.setFillColor(WHITE[0], WHITE[1], WHITE[2])
-    setStroke(doc)
+    doc.setFillColor(CC_FIELD[0], CC_FIELD[1], CC_FIELD[2])
+    ccStroke(doc)
     doc.rect(x + i * CC_SC, y, CC_SC, h, 'FD')
     doc.setFont('times', 'normal')
     doc.setFontSize(5.5)
-    doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+    doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
     doc.text(String(val || '—'), x + i * CC_SC + CC_SC / 2, y + h / 2, { align: 'center', baseline: 'middle' })
   }
 }
@@ -512,8 +708,8 @@ function ccStatValueRow(doc, x, y, h, stats) {
 function ccStatRow(doc, x, cy, stats, blankEmpty, textColor) {
   const col = textColor || TEXT
   for (let i = 0; i < CC_STAT_KEYS.length; i++) {
-    doc.setFillColor(WHITE[0], WHITE[1], WHITE[2])
-    setStroke(doc)
+    doc.setFillColor(CC_FIELD[0], CC_FIELD[1], CC_FIELD[2])
+    ccStroke(doc)
     doc.rect(x + i * CC_STAT_COL, cy, CC_STAT_COL, CC_VAL_H, 'FD')
     const val = stats[CC_STAT_KEYS[i]] || ''
     if (!val && blankEmpty) continue
@@ -535,11 +731,11 @@ function ccBlankStatRow(doc, x, cy) {
 function ccStatHeader(doc, x, cy, headerColor) {
   for (let i = 0; i < CC_STAT_LABELS.length; i++) {
     doc.setFillColor(headerColor[0], headerColor[1], headerColor[2])
-    setStroke(doc)
+    ccStroke(doc)
     doc.rect(x + i * CC_STAT_COL, cy, CC_STAT_COL, CC_LBL_H, 'FD')
     doc.setFont('times', 'bold')
     doc.setFontSize(CC_LBL_FS)
-    doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+    doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
     doc.text(CC_STAT_LABELS[i], x + i * CC_STAT_COL + CC_STAT_COL / 2, cy + CC_LBL_H / 2,
              { align: 'center', baseline: 'middle' })
   }
@@ -549,10 +745,10 @@ function ccStatHeader(doc, x, cy, headerColor) {
 // Equipment row: tinted full-width name bar + a value row on the shared grid
 function ccWeaponHoriz(doc, x, cy, label, advStats, headerColor, valueColor) {
   doc.setFillColor(headerColor[0], headerColor[1], headerColor[2])
-  setStroke(doc)
+  ccStroke(doc)
   doc.rect(x, cy, CC_W, CC_LBL_H, 'FD')
   doc.setFont('times', 'bold')
-  doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+  doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
   // Only one line fits in the bar, so shrink rather than clip a long combined label
   const avail = CC_W - 2 * CC_PAD
   let fs = CC_LBL_FS
@@ -577,11 +773,11 @@ function ccWeaponRows(doc, x, cy, label, stats, headerColor) {
 
   // Label bar
   doc.setFillColor(headerColor[0], headerColor[1], headerColor[2])
-  setStroke(doc)
+  ccStroke(doc)
   doc.rect(x, cy, CC_W, labelH, 'FD')
   doc.setFont('times', 'bold')
   doc.setFontSize(5)
-  doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+  doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
   const labelLines = doc.splitTextToSize(label || '', CC_W - 2 * CC_PAD)
   doc.text(labelLines[0], x + CC_PAD, cy + labelH / 2, { baseline: 'middle' })
   cy += labelH
@@ -589,13 +785,13 @@ function ccWeaponRows(doc, x, cy, label, stats, headerColor) {
   // Stat columns
   for (let i = 0; i < 11; i++) {
     const val = stats[STAT_KEYS[i]] || ''
-    doc.setFillColor(WHITE[0], WHITE[1], WHITE[2])
-    setStroke(doc)
+    doc.setFillColor(CC_FIELD[0], CC_FIELD[1], CC_FIELD[2])
+    ccStroke(doc)
     doc.rect(x + i * CC_SC, cy, CC_SC, statsH, 'FD')
     if (val) {
       doc.setFont('times', 'normal')
       doc.setFontSize(5.5)
-      doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+      doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
       doc.text(String(val), x + i * CC_SC + CC_SC / 2, cy + statsH / 2, { align: 'center', baseline: 'middle' })
     }
   }
@@ -607,7 +803,7 @@ function ccTextBlock(doc, x, cy, maxY, text, fontSize) {
   const lineH = fontSize * PT * 1.25
   doc.setFont('times', 'normal')
   doc.setFontSize(fontSize)
-  doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+  doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
   const lines = doc.splitTextToSize(String(text || ''), CC_W - 2 * CC_PAD)
   for (const line of lines) {
     if (cy + lineH > maxY) break
@@ -623,7 +819,7 @@ function ccSpecialBlock(doc, x, cy, maxY, lines, fontSize, colW = CC_W) {
   const lineH = fontSize * PT * 1.3
   const textX = x + CC_PAD
   const maxW = colW - 2 * CC_PAD
-  doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+  doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
 
   for (const line of lines) {
     if (!line) continue
@@ -674,7 +870,7 @@ function ccProgressPips(doc, x, y, rowH, progress, total = 12) {
   let px = x + CC_W - CC_PAD - totalW
   const py = y + (rowH - size) / 2
   for (let i = 0; i < total; i++) {
-    doc.setFillColor(i < progress ? TEXT[0] : WHITE[0], i < progress ? TEXT[1] : WHITE[1], i < progress ? TEXT[2] : WHITE[2])
+    doc.setFillColor(i < progress ? CC_INK[0] : CC_FIELD[0], i < progress ? CC_INK[1] : CC_FIELD[1], i < progress ? CC_INK[2] : CC_FIELD[2])
     doc.setDrawColor(BORDER[0], BORDER[1], BORDER[2])
     doc.setLineWidth(0.1)
     doc.rect(px, py, size, size, 'FD')
@@ -716,18 +912,19 @@ function ccCutGuides(doc) {
 // ── Individual card renderers ─────────────────────────────────────────────────
 
 function renderWarbandCard(doc, x, y, data) {
+  const wbPal = ccPalette(CC_SLATE)
   ccBorder(doc, x, y)
 
   // Title
-  ccHeader(doc, x, y, data.warband_name || 'Warband', TITLE, 9)
+  ccHeader(doc, x, y, data.warband_name || 'Warband', CC_SLATE, 9, ccSigil(data.warband_type))
   let cy = y + 9
 
   // Type row
-  doc.setFillColor(BLUE[0], BLUE[1], BLUE[2])
+  doc.setFillColor(wbPal.head[0], wbPal.head[1], wbPal.head[2])
   doc.rect(x, cy, CC_W, 5, 'F')
   doc.setFont('times', 'normal')
   doc.setFontSize(6)
-  doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+  doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
   doc.text(data.warband_type || '', x + CC_PAD, cy + 2.5, { baseline: 'middle' })
   if (data.player_name) {
     doc.setFont('times', 'bold')
@@ -744,22 +941,22 @@ function renderWarbandCard(doc, x, y, data) {
   ]
   const sw = CC_W / 4
   for (let i = 0; i < 4; i++) {
-    doc.setFillColor(BLUE[0], BLUE[1], BLUE[2])
-    setStroke(doc)
+    doc.setFillColor(wbPal.head[0], wbPal.head[1], wbPal.head[2])
+    ccStroke(doc)
     doc.rect(x + i * sw, cy, sw, 4, 'FD')
     doc.setFont('times', 'bold')
     doc.setFontSize(4)
-    doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+    doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
     doc.text(statsRow[i][0], x + i * sw + sw / 2, cy + 2, { align: 'center', baseline: 'middle' })
   }
   cy += 4
   for (let i = 0; i < 4; i++) {
-    doc.setFillColor(WHITE[0], WHITE[1], WHITE[2])
-    setStroke(doc)
+    doc.setFillColor(CC_FIELD[0], CC_FIELD[1], CC_FIELD[2])
+    ccStroke(doc)
     doc.rect(x + i * sw, cy, sw, 5.5, 'FD')
     doc.setFont('times', 'normal')
     doc.setFontSize(7)
-    doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+    doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
     doc.text(String(statsRow[i][1]), x + i * sw + sw / 2, cy + 2.75, { align: 'center', baseline: 'middle' })
   }
   cy += 5.5
@@ -768,22 +965,22 @@ function renderWarbandCard(doc, x, y, data) {
   const unitRow = [['Max Units', data.max_units || '—'], ['Hero Slots', data.hero_slots || '—']]
   const uw = CC_W / 2
   for (let i = 0; i < 2; i++) {
-    doc.setFillColor(BLUE[0], BLUE[1], BLUE[2])
-    setStroke(doc)
+    doc.setFillColor(wbPal.head[0], wbPal.head[1], wbPal.head[2])
+    ccStroke(doc)
     doc.rect(x + i * uw, cy, uw, 4, 'FD')
     doc.setFont('times', 'bold')
     doc.setFontSize(4.5)
-    doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+    doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
     doc.text(unitRow[i][0], x + i * uw + uw / 2, cy + 2, { align: 'center', baseline: 'middle' })
   }
   cy += 4
   for (let i = 0; i < 2; i++) {
-    doc.setFillColor(WHITE[0], WHITE[1], WHITE[2])
-    setStroke(doc)
+    doc.setFillColor(CC_FIELD[0], CC_FIELD[1], CC_FIELD[2])
+    ccStroke(doc)
     doc.rect(x + i * uw, cy, uw, 5.5, 'FD')
     doc.setFont('times', 'normal')
     doc.setFontSize(7)
-    doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+    doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
     doc.text(String(unitRow[i][1]), x + i * uw + uw / 2, cy + 2.75, { align: 'center', baseline: 'middle' })
   }
   cy += 5.5
@@ -792,21 +989,21 @@ function renderWarbandCard(doc, x, y, data) {
   {
     const nhRaw = (data.neutral_heroes || []).filter(nh => nh.name)
     const nhList = [...nhRaw, ...Array(Math.max(0, 3 - nhRaw.length)).fill({})]
-    doc.setFillColor(BLUE[0], BLUE[1], BLUE[2])
+    doc.setFillColor(wbPal.head[0], wbPal.head[1], wbPal.head[2])
     doc.rect(x, cy, CC_W, 3.5, 'F')
     doc.setFont('times', 'bold')
     doc.setFontSize(4)
-    doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+    doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
     doc.text('Aligned Neutral Heroes', x + CC_PAD, cy + 1.75, { baseline: 'middle' })
     cy += 3.5
     for (const nh of nhList) {
-      doc.setFillColor(WHITE[0], WHITE[1], WHITE[2])
-      setStroke(doc)
+      doc.setFillColor(CC_FIELD[0], CC_FIELD[1], CC_FIELD[2])
+      ccStroke(doc)
       doc.rect(x, cy, CC_W, 5, 'FD')
       if (nh.name) {
         doc.setFont('times', 'normal')
         doc.setFontSize(5.5)
-        doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+        doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
         doc.text(nh.name, x + CC_PAD, cy + 2.5, { baseline: 'middle' })
         ccProgressPips(doc, x, cy, 5, nh.progress || 0)
       }
@@ -816,11 +1013,11 @@ function renderWarbandCard(doc, x, y, data) {
 
   // Stored equipment
   if (data.stored_equipment) {
-    doc.setFillColor(BLUE[0], BLUE[1], BLUE[2])
+    doc.setFillColor(wbPal.head[0], wbPal.head[1], wbPal.head[2])
     doc.rect(x, cy, CC_W, 3.5, 'F')
     doc.setFont('times', 'bold')
     doc.setFontSize(4)
-    doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+    doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
     doc.text('Stored Equipment', x + CC_PAD, cy + 1.75, { baseline: 'middle' })
     cy += 3.5
     cy = ccTextBlock(doc, x, cy, y + CC_H - CC_PAD, data.stored_equipment, 5.5)
@@ -831,11 +1028,11 @@ function renderWarbandCard(doc, x, y, data) {
   if (specRules.length > 0) {
     const maxY = y + CC_H - CC_PAD
     if (cy + 3.5 < maxY) {
-      doc.setFillColor(TITLE[0], TITLE[1], TITLE[2])
+      doc.setFillColor(wbPal.bar[0], wbPal.bar[1], wbPal.bar[2])
       doc.rect(x, cy, CC_W, 3.5, 'F')
       doc.setFont('times', 'bold')
       doc.setFontSize(4)
-      doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+      doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
       doc.text('Special Rules', x + CC_PAD, cy + 1.75, { baseline: 'middle' })
       cy += 3.5
     }
@@ -848,18 +1045,18 @@ function renderWarbandCard(doc, x, y, data) {
 // (used by both the main card and to measure available space for skills)
 function drawUnitCardStats(doc, x, y, unit, isHero, opts = {}) {
   const name = unit.name || unit.type || '—'
-  const headerColor = isHero ? BLUE : PURPLE
+  const pal = ccPalette(isHero ? CC_OXBLOOD : CC_IRON)
 
-  ccHeader(doc, x, y, name, headerColor, 8)
+  ccHeader(doc, x, y, name, pal.accent, 8, opts.sigil)
   let cy = y + 8
 
-  // Identity row
-  doc.setFillColor(WHITE[0], WHITE[1], WHITE[2])
-  setStroke(doc)
+  // Identity row — paper stock, so the field cells below read as the writable part
+  doc.setFillColor(CC_PAPER[0], CC_PAPER[1], CC_PAPER[2])
+  ccStroke(doc)
   doc.rect(x, cy, CC_W, 5, 'FD')
-  doc.setFont('times', 'normal')
+  doc.setFont('times', 'italic')
   doc.setFontSize(5.5)
-  doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+  doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
   doc.text(unit.type || '', x + CC_PAD, cy + 2.5, { baseline: 'middle' })
   if (isHero) {
     const flagMidY = cy + 2.5
@@ -870,21 +1067,21 @@ function drawUnitCardStats(doc, x, y, unit, isHero, opts = {}) {
     doc.setFontSize(5.5)
     doc.text('Blt', fx + sqSz + 0.5, flagMidY, { baseline: 'middle' })
     if (unit.blight) {
-      doc.setFillColor(TEXT[0], TEXT[1], TEXT[2])
+      doc.setFillColor(CC_INK[0], CC_INK[1], CC_INK[2])
       doc.rect(fx, flagMidY - sqSz / 2, sqSz, sqSz, 'F')
     } else {
-      doc.setFillColor(WHITE[0], WHITE[1], WHITE[2])
-      setStroke(doc)
+      doc.setFillColor(CC_FIELD[0], CC_FIELD[1], CC_FIELD[2])
+      ccStroke(doc)
       doc.rect(fx, flagMidY - sqSz / 2, sqSz, sqSz, 'FD')
     }
     fx -= 7
     doc.text('DT', fx + sqSz + 0.5, flagMidY, { baseline: 'middle' })
     if (unit.deathtouched) {
-      doc.setFillColor(TEXT[0], TEXT[1], TEXT[2])
+      doc.setFillColor(CC_INK[0], CC_INK[1], CC_INK[2])
       doc.rect(fx, flagMidY - sqSz / 2, sqSz, sqSz, 'F')
     } else {
-      doc.setFillColor(WHITE[0], WHITE[1], WHITE[2])
-      setStroke(doc)
+      doc.setFillColor(CC_FIELD[0], CC_FIELD[1], CC_FIELD[2])
+      ccStroke(doc)
       doc.rect(fx, flagMidY - sqSz / 2, sqSz, sqSz, 'FD')
     }
   } else {
@@ -894,7 +1091,7 @@ function drawUnitCardStats(doc, x, y, unit, isHero, opts = {}) {
   }
   cy += 5
 
-  cy = ccStatHeader(doc, x, cy, headerColor)
+  cy = ccStatHeader(doc, x, cy, pal.head)
   cy = ccStatRow(doc, x, cy, unit.base_stats || {}, false)
   // Pencil mode: an empty row under Base to track the unit's current stats, and
   // greyed equipment modifiers so they can be written over as the unit advances
@@ -913,16 +1110,16 @@ function drawUnitCardStats(doc, x, y, unit, isHero, opts = {}) {
       const startIdx = sortedStartsArr.indexOf(i)
       const nextStart = sortedStartsArr[startIdx + 1] ?? advLabels.length
       const eqNames = advLabels.slice(i, nextStart).filter(Boolean).join(', ')
-      doc.setFillColor(BORDER[0], BORDER[1], BORDER[2])
-      setStroke(doc)
+      doc.setFillColor(pal.head[0], pal.head[1], pal.head[2])
+      ccStroke(doc)
       doc.rect(x, cy, CC_W, 3, 'FD')
       doc.setFont('times', 'bolditalic')
       doc.setFontSize(4.5)
-      doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+      doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
       doc.text(eqNames || `Option ${startIdx + 2}`, x + CC_PAD, cy + 1.5, { baseline: 'middle' })
       cy += 3
     }
-    cy = ccWeaponHoriz(doc, x, cy, label, (unit.advances || [])[i] || {}, headerColor, advColor)
+    cy = ccWeaponHoriz(doc, x, cy, label, (unit.advances || [])[i] || {}, pal.bar, advColor)
   }
 
   return cy
@@ -946,7 +1143,7 @@ function statsBlockHeight(unit, isHero, opts = {}) {
 
 // Returns an array of draw-functions: main card + any overflow skill cards
 function buildUnitCardDrawFns(unit, isHero, opts = {}) {
-  const headerColor = isHero ? BLUE : PURPLE
+  const accent = isHero ? CC_OXBLOOD : CC_IRON
   const name = unit.name || unit.type || '—'
   const specLines = (unit.special || []).filter(Boolean)
 
@@ -1024,7 +1221,7 @@ function buildUnitCardDrawFns(unit, isHero, opts = {}) {
     if (chunks.length > 1) {
       doc.setFont('times', 'italic')
       doc.setFontSize(4.5)
-      doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+      doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
       // ASCII only \u2014 Times' WinAnsi encoding has no arrow glyph
       doc.text('cont. >', x + CC_W - CC_PAD, y + CC_H - CC_PAD, { align: 'right', baseline: 'bottom' })
     }
@@ -1036,7 +1233,7 @@ function buildUnitCardDrawFns(unit, isHero, opts = {}) {
     const cardTitle = `${name} (cont.)`
     drawFns.push((doc, x, y) => {
       ccBorder(doc, x, y)
-      ccHeader(doc, x, y, cardTitle, headerColor, 8)
+      ccHeader(doc, x, y, cardTitle, accent, 8, opts.sigil)
       ccSpecialBlock(doc, x, y + 8 + CC_PAD, y + CC_H - CC_PAD, chunk, SKILL_FS)
     })
   }
@@ -1045,6 +1242,7 @@ function buildUnitCardDrawFns(unit, isHero, opts = {}) {
 }
 
 function renderSpellCards(data) {
+  const sigil = ccSigil(data.warband_type)
   // Returns an array of draw-functions, one per card needed
   const drawFns = []
 
@@ -1091,7 +1289,7 @@ function renderSpellCards(data) {
       const spellsForCard = captured
       drawFns.push((doc, x, y) => {
         ccBorder(doc, x, y)
-        ccHeader(doc, x, y, cardTitle, TITLE, HEADER_H)
+        ccHeader(doc, x, y, cardTitle, CC_SLATE, HEADER_H, sigil)
         let cy = y + HEADER_H + CC_PAD / 2
         const maxY = y + CC_H - CC_PAD
 
@@ -1100,7 +1298,7 @@ function renderSpellCards(data) {
           // Spell name + check
           doc.setFont('times', 'bold')
           doc.setFontSize(NAME_FS)
-          doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+          doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
           doc.text(`${spell.name}  (${spell.check})`, x + CC_PAD, cy + NAME_LH / 2, { baseline: 'middle' })
           cy += NAME_LH
 
@@ -1141,6 +1339,12 @@ class CardScaleProxy {
   text(t, x, y, o)    { return this._doc.text(t, x*this._s+this._dx, y*this._s+this._dy, o) }
   line(x1, y1, x2, y2) { return this._doc.line(x1*this._s+this._dx, y1*this._s+this._dy, x2*this._s+this._dx, y2*this._s+this._dy) }
   splitTextToSize(t, w) { return this._doc.splitTextToSize(t, w * this._s) }
+  setCharSpace(n)      { return this._doc.setCharSpace(n * this._s) }
+  circle(x, y, r, st)  { return this._doc.circle(x*this._s+this._dx, y*this._s+this._dy, r*this._s, st) }
+  lines(l, x, y, sc, st, cl) {
+    return this._doc.lines(l.map(seg => seg.map(v => v * this._s)),
+                           x*this._s+this._dx, y*this._s+this._dy, sc, st, cl)
+  }
   // getTextWidth returns a value in card-space (unscaled), so callers that use it
   // for layout comparisons continue to work correctly.
   getTextWidth(t)      { return this._doc.getTextWidth(t) / this._s }
@@ -1153,6 +1357,7 @@ class CardScaleProxy {
 export function generateCardsPDF(data, opts = {}) {
   const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' })
   doc.setFont('times', 'normal')
+  opts = { ...opts, sigil: ccSigil(data.warband_type) }
 
   // Collect draw functions in order: warband → heroes → henchmen → spells
   const drawFns = []
@@ -1194,6 +1399,7 @@ export function generateCardsPDF(data, opts = {}) {
  * 2×2 grid of 94.5×132mm cards on A4 portrait.
  */
 export function generateBigCardsPDF(data, opts = {}) {
+  opts = { ...opts, sigil: ccSigil(data.warband_type) }
   const SCALE = 1.5
   const BIG_COLS = 2
   const BIG_ROWS = 2
