@@ -22,17 +22,22 @@ const CONTENT_W = PAGE_W - 2 * MARGIN_X  // 285 mm
 const CARD_GUTTER = 10 * PT
 const CARD_W      = (CONTENT_W - CARD_GUTTER) / 2
 
-// Card columns: 1.75fr label | 11×1fr stats | 5.8fr special  (total 18.55fr)
-const TOTAL_FR = 1.75 + 11 + 5.8
-const COL_L    = (1.75 / TOTAL_FR) * CARD_W
+// Card columns: 2.6fr label | 11×1fr stats | 4.95fr special  (total 18.55fr)
+// The label column is wide enough for combined rows like "Shield + Heavy Armour".
+const TOTAL_FR = 2.6 + 11 + 4.95
+const COL_L    = (2.6  / TOTAL_FR) * CARD_W
 const COL_S    = (1    / TOTAL_FR) * CARD_W
-const COL_SPEC = (5.8  / TOTAL_FR) * CARD_W
+const COL_SPEC = (4.95 / TOTAL_FR) * CARD_W
 
 const STAT_KEYS   = ['mov','run','mel','rgd','def','agi','mrl','atk','wnd','inj','prc']
 const STAT_LABELS = ['Mov','Run','Mel','Rgd','Def','Agi','Mrl','Atk','Wnd','Inj','Prc']
 
 // Card row heights in mm (converted from pt)
-const HERO_ROWS  = [12.5, 14, 13, 13, 12.5, 15 ].map(p => p * PT)
+// Hero card: header / values / stat labels / base + 4 equipment rows
+// (2 melee + 1 ranged + 1 armour). Heights are tuned to stay under the old 92.5pt
+// total — the sheet is a fixed single-page layout with only ~3mm of slack. Rows
+// holding 6.5pt text must be at least 11.2pt or drawText's padding check drops it.
+const HERO_ROWS  = [10.5, 12, 10.5, 12, 11.5, 11.5, 11.5, 11.5].map(p => p * PT)
 const HENCH_ROWS = [10, 14, 13, 12.5, 12.5, 12.5, 18.5].map(p => p * PT)
 const HERO_H     = HERO_ROWS .reduce((a, b) => a + b, 0)
 const HENCH_H    = HENCH_ROWS.reduce((a, b) => a + b, 0)
@@ -44,12 +49,22 @@ function setStroke(doc) {
   doc.setLineWidth(0.14)  // 0.4pt ≈ 0.14 mm
 }
 
-function drawText(doc, x, y, w, h, text, fontSize, bold, align = 'left', vAlign = 'middle') {
+function drawText(doc, x, y, w, h, text, fontSize, bold, align = 'left', vAlign = 'middle', fit = false) {
   if (!text) return
   const pad   = 0.71  // 2pt inset
-  const lineH = fontSize * PT * 1.1
   doc.setFont('times', bold ? 'bold' : 'normal')
   doc.setFontSize(fontSize)
+
+  // Single-line cells (equipment labels) shrink to fit rather than being clipped
+  if (fit) {
+    const avail = w - 2 * pad
+    while (fontSize > 4 && doc.getTextWidth(String(text)) > avail) {
+      fontSize = Math.round((fontSize - 0.2) * 10) / 10
+      doc.setFontSize(fontSize)
+    }
+  }
+
+  const lineH = fontSize * PT * 1.1
   doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
 
   const lines    = doc.splitTextToSize(String(text), w - 2 * pad)
@@ -71,11 +86,11 @@ function drawText(doc, x, y, w, h, text, fontSize, bold, align = 'left', vAlign 
   }
 }
 
-function cell(doc, x, y, w, h, bg, text, fontSize, bold, align = 'left', vAlign = 'middle') {
+function cell(doc, x, y, w, h, bg, text, fontSize, bold, align = 'left', vAlign = 'middle', fit = false) {
   doc.setFillColor(bg[0], bg[1], bg[2])
   setStroke(doc)
   doc.rect(x, y, w, h, 'FD')
-  drawText(doc, x, y, w, h, text, fontSize, bold, align, vAlign)
+  drawText(doc, x, y, w, h, text, fontSize, bold, align, vAlign, fit)
 }
 
 // Draw n small checkbox squares centred inside a cell. First `filled` are filled dark.
@@ -115,8 +130,8 @@ function heroCard(doc, x, y, hero = {}) {
   cell(doc, specX,                ry, COL_SPEC,        rh[0], BLUE, 'Special',      5.2, true)
   ry += rh[0]
 
-  // Merged special cell spanning rows 2–6, top-aligned
-  const specH    = rh[1] + rh[2] + rh[3] + rh[4] + rh[5]
+  // Merged special cell spanning rows 2–8, top-aligned
+  const specH    = rh.slice(1).reduce((a, b) => a + b, 0)
   const specText = (Array.isArray(sp) ? sp : [sp]).filter(Boolean).join('\n')
   cell(doc, specX, ry, COL_SPEC, specH, WHITE, specText, 6.5, false, 'left', 'top')
 
@@ -145,10 +160,10 @@ function heroCard(doc, x, y, hero = {}) {
   }
   ry += rh[3]
 
-  // Rows 5–6: weapon rows
-  for (let a = 0; a < 2; a++) {
+  // Rows 5–8: equipment rows (2 melee slots + 1 ranged + 1 armour)
+  for (let a = 0; a < 4; a++) {
     const advData = adv[a] || {}
-    cell(doc, x, ry, COL_L, rh[4 + a], WHITE, advLbl[a] || '', 5.2, false)
+    cell(doc, x, ry, COL_L, rh[4 + a], WHITE, advLbl[a] || '', 5.2, false, 'left', 'middle', true)
     rx = x + COL_L
     for (let i = 0; i < 11; i++) {
       cell(doc, rx, ry, COL_S, rh[4 + a], WHITE, advData[STAT_KEYS[i]] || '', 6.5, false, 'center')
@@ -210,7 +225,7 @@ function henchmanCard(doc, x, y, henchman = {}) {
   // Rows 5–7: weapon rows
   for (let a = 0; a < 3; a++) {
     const advData = adv[a] || {}
-    cell(doc, x, ry, COL_L, rh[4 + a], WHITE, advLbl[a] || '', 5.2, false)
+    cell(doc, x, ry, COL_L, rh[4 + a], WHITE, advLbl[a] || '', 5.2, false, 'left', 'middle', true)
     rx = x + COL_L
     for (let i = 0; i < 11; i++) {
       cell(doc, rx, ry, COL_S, rh[4 + a], WHITE, advData[STAT_KEYS[i]] || '', 6.5, false, 'center')

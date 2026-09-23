@@ -162,11 +162,24 @@ function sortUnits(units, wbData) {
   })
 }
 
+function isShieldName(displayName) {
+  const key = resolveAlias(displayName, 'Melee Weapons')
+  return key === 'Shield' || key === 'Tower Shield'
+}
+
 function hasShield(eq) {
-  return (eq.melee || []).some(name => {
-    const key = resolveAlias(name, 'Melee Weapons')
-    return key === 'Shield' || key === 'Tower Shield'
-  })
+  return (eq.melee || []).some(isShieldName)
+}
+
+// Defence bonuses, as positive numbers. Defence is roll-under, so the final
+// value is max(5, base - bonus).
+function shieldDefBonus(displayName) {
+  const m = (getMeleeStats(displayName)?.Effect || '').match(/\+(\d+)\s*Def/)
+  return m ? parseInt(m[1]) : 0
+}
+
+function armourDefBonus(displayName) {
+  return parseInt(getArmourStats(displayName)?.Defence) || 0
 }
 
 function isLightRanged(displayName) {
@@ -1342,17 +1355,22 @@ function buildWeaponRows(unitDef, unit, eq, maxRows) {
   const meleeGroups = {}
   for (const name of (eq.melee || [])) meleeGroups[name] = (meleeGroups[name] || 0) + 1
 
+  // Shield and armour both only shift Defence, so they share one row showing the
+  // final value — two separate rows would each show a misleading partial total.
+  const armourName = eq.armour || null
+  const armourDef  = armourName ? armourDefBonus(armourName) : 0
+
   const rows = []
+  let armourMerged = false
   for (const [name, count] of Object.entries(meleeGroups)) {
     if (rows.length >= maxRows) break
     const stats = getMeleeStats(name)
-    const resolved = resolveAlias(name, 'Melee Weapons')
-    const isShield = resolved === 'Shield' || resolved === 'Tower Shield'
+    const isShield = isShieldName(name)
     const s = {}
     if (stats) {
       if (isShield) {
-        const m = (stats.Effect || '').match(/\+(\d+)\s*Def/)
-        if (m) s.def = String(Math.max(5, baseDef - parseInt(m[1])))
+        const totalDef = shieldDefBonus(name) + (armourMerged ? 0 : armourDef)
+        if (totalDef) s.def = String(Math.max(5, baseDef - totalDef))
       } else {
         const mel = parseInt(stats.Melee) || 0
         const inj = parseInt(stats.Injury) || 0
@@ -1366,7 +1384,11 @@ function buildWeaponRows(unitDef, unit, eq, maxRows) {
       const baseAtk = parseInt(get('Attacks')) || 0
       s.atk = String(baseAtk + 1)
     }
-    const label = count > 1 ? `2x ${name}` : name
+    let label = count > 1 ? `2x ${name}` : name
+    if (isShield && armourName && !armourMerged) {
+      label = `${label} + ${armourName}`
+      armourMerged = true
+    }
     const effect = (stats?.Effect && !isShield) ? stats.Effect : ''
     rows.push({ label, stats: s, effect })
   }
@@ -1382,7 +1404,14 @@ function buildWeaponRows(unitDef, unit, eq, maxRows) {
     }
     const effectParts = [stats?.Range, stats?.Effect].filter(Boolean)
     const effectDesc = effectParts.length ? `${name}: ${effectParts.join(', ')}` : name
-    rows.push({ label: name, stats: s, effect: effectDesc })
+    // Range sits in the row label so it's readable without the reference block
+    const label = stats?.Range ? `${name} (${stats.Range})` : name
+    rows.push({ label, stats: s, effect: effectDesc })
+  }
+  // Armour on its own row when there was no shield row to fold it into
+  if (armourName && !armourMerged && rows.length < maxRows) {
+    const s = armourDef ? { def: String(Math.max(5, baseDef - armourDef)) } : {}
+    rows.push({ label: armourName, stats: s, effect: '' })
   }
   return rows
 }
@@ -1394,7 +1423,10 @@ function buildPDFPayload(wb, wbData) {
 
   const heroes = heroUnits.map(unit => {
     const def = findUnitDef(wbData, unit.typeName, unit.category)
-    const wRows = buildWeaponRows(def, unit, unit.equipment, 2)
+    // Heroes can fill 2 melee slots + 1 ranged slot + 1 armour slot, so allow 4
+    // rows — rows are emitted melee-first, so a lower cap silently drops the
+    // ranged weapon and the armour.
+    const wRows = buildWeaponRows(def, unit, unit.equipment, 4)
     const skillNames = [...(def?.Skills || []), ...(unit.extraSkills || [])]
     const skillLines = skillNames.map(name => {
       const desc = skillsData[name]?.Description
@@ -1618,15 +1650,26 @@ function renderViewWarband() {
       ).join('')}</tr>`
     }
 
+    // Shield and armour both only shift Defence, so they share one row showing
+    // the final value instead of two rows with misleading partial totals.
+    const armourDef = eq.armour ? armourDefBonus(eq.armour) : 0
+    let armourMerged = false
+
     for (const name of (eq.melee || [])) {
       const stats = getMeleeStats(name)
       if (!stats) continue
-      const resolvedKey = resolveAlias(name, 'Melee Weapons')
-      const isShieldItem = resolvedKey === 'Shield' || resolvedKey === 'Tower Shield'
+      const isShieldItem = isShieldName(name)
       const cells = {}
+      let label = name
+      let mergedHere = false
       if (isShieldItem) {
-        const m = (stats.Effect || '').match(/\+(\d+)\s*Def/)
-        if (m) cells[5] = Math.max(5, baseDef - parseInt(m[1]))
+        const totalDef = shieldDefBonus(name) + (armourMerged ? 0 : armourDef)
+        if (totalDef) cells[5] = Math.max(5, baseDef - totalDef)
+        if (eq.armour && !armourMerged) {
+          label = `${name} + ${eq.armour}`
+          armourMerged = true
+          mergedHere = true
+        }
       } else {
         const mel = parseInt(stats.Melee) || 0
         const inj = parseInt(stats.Injury) || 0
@@ -1635,7 +1678,7 @@ function renderViewWarband() {
         if (inj !== 0) cells[10] = baseInj + inj
         if (prc !== 0) cells[11] = basePrc + prc
       }
-      rows.push(equipRow('⚔', name, cells))
+      rows.push(equipRow(mergedHere ? '🔰' : '⚔', label, cells))
     }
 
     for (const name of (eq.ranged || [])) {
@@ -1654,10 +1697,8 @@ function renderViewWarband() {
       }).join('')}</tr>`)
     }
 
-    if (eq.armour) {
-      const stats = getArmourStats(eq.armour)
-      const def = parseInt(stats?.Defence) || 0
-      rows.push(equipRow('🔰', eq.armour, def ? { 5: Math.max(5, baseDef - def) } : {}))
+    if (eq.armour && !armourMerged) {
+      rows.push(equipRow('🔰', eq.armour, armourDef ? { 5: Math.max(5, baseDef - armourDef) } : {}))
     }
 
     return rows.join('')
