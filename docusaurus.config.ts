@@ -63,7 +63,12 @@ const config: Config = {
         hashed: true,
         language: ["en"],
         docsRouteBasePath: "/",
-        ignoreFiles: [/Version History/],
+        // Routes (url minus baseUrl, no trailing slash) excluded from the search index
+        ignoreFiles: [
+          /^Sample Warbands(\/|$)/,
+          /^Quick Reference$/,
+          /Version History/,
+        ],
         fuzzyMatchingDistance: 0,
       },
     ],
