@@ -11,6 +11,7 @@ const TITLE  = [73,  137, 200]
 const TEXT   = [44,  48,  52 ]
 const BORDER = [191, 191, 191]
 const WHITE  = [255, 255, 255]
+const PENCIL = [130, 130, 130]  // printed values that are meant to be written over
 
 // Page: A4 landscape, margins x=0.6cm y=0.5cm
 const MARGIN_X  = 6
@@ -437,13 +438,21 @@ const CC_PAD  = 2.5   // inner horizontal/vertical padding mm
 // Stat col width for 11-column stat rows (warband sheet)
 const CC_SC = CC_W / 11
 
-// Card stat rows: top 5 (passive) and bottom 6 (combat, also used for weapon rows)
-const CC_TOP_KEYS   = ['mov', 'run', 'agi', 'mrl', 'wnd']
-const CC_TOP_LABELS = ['Mov', 'Run', 'Agi', 'Mrl', 'Wnd']
-const CC_BTM_KEYS   = ['mel', 'rgd', 'def', 'atk', 'inj', 'prc']
-const CC_BTM_LABELS = ['Mel', 'Rgd', 'Def', 'Atk', 'Inj', 'Prc']
-const CC_TOP_COL = CC_W / CC_TOP_KEYS.length   // 12.6mm
-const CC_BTM_COL = CC_W / CC_BTM_KEYS.length   // 10.5mm
+// Card stats: one 10-column grid shared by the base row and every equipment row,
+// so a column can be read straight down to compare base against modified values.
+// Same order as the warband sheet's STAT_KEYS, with one movement column instead
+// of two: it is labelled "Mov" but carries the `run` value (the old Move + 3),
+// since cards print run speed as the unit's only movement stat.
+const CC_STAT_KEYS   = ['run', 'mel', 'rgd', 'def', 'agi', 'mrl', 'atk', 'wnd', 'inj', 'prc']
+const CC_STAT_LABELS = ['Mov', 'Mel', 'Rgd', 'Def', 'Agi', 'Mrl', 'Atk', 'Wnd', 'Inj', 'Prc']
+const CC_STAT_COL    = CC_W / CC_STAT_KEYS.length   // 6.3mm
+
+// Type sizes for the stat grid. Labels at 6pt leave ~1.9mm of slack in a column;
+// values at 8pt are the largest that sit comfortably in CC_VAL_H.
+const CC_LBL_FS = 6
+const CC_VAL_FS = 8
+const CC_LBL_H  = 3.4   // header / equipment-name bar
+const CC_VAL_H  = 4.4   // value row
 
 // ── Card primitives ───────────────────────────────────────────────────────────
 
@@ -497,71 +506,65 @@ function ccStatValueRow(doc, x, y, h, stats) {
   }
 }
 
-// Horizontal stat block: label row + value row for a given set of keys/labels
-// colW = width of each column (CC_W / n)
-function ccHorizStatBlock(doc, x, cy, keys, labels, colW, stats, headerColor, lblH, valH) {
-  for (let i = 0; i < keys.length; i++) {
-    doc.setFillColor(headerColor[0], headerColor[1], headerColor[2])
-    setStroke(doc)
-    doc.rect(x + i * colW, cy, colW, lblH, 'FD')
-    doc.setFont('times', 'bold')
-    doc.setFontSize(5)
-    doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
-    doc.text(labels[i], x + i * colW + colW / 2, cy + lblH / 2, { align: 'center', baseline: 'middle' })
-  }
-  cy += lblH
-  for (let i = 0; i < keys.length; i++) {
+// One row of the 10-column stat grid. `blankEmpty` leaves a cell empty rather
+// than printing an em dash — used by equipment rows, which only fill the stats
+// they change and read their column headers from the base row above.
+function ccStatRow(doc, x, cy, stats, blankEmpty, textColor) {
+  const col = textColor || TEXT
+  for (let i = 0; i < CC_STAT_KEYS.length; i++) {
     doc.setFillColor(WHITE[0], WHITE[1], WHITE[2])
     setStroke(doc)
-    doc.rect(x + i * colW, cy, colW, valH, 'FD')
+    doc.rect(x + i * CC_STAT_COL, cy, CC_STAT_COL, CC_VAL_H, 'FD')
+    const val = stats[CC_STAT_KEYS[i]] || ''
+    if (!val && blankEmpty) continue
     doc.setFont('times', 'normal')
-    doc.setFontSize(6)
-    doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
-    doc.text(String(stats[keys[i]] || '—'), x + i * colW + colW / 2, cy + valH / 2, { align: 'center', baseline: 'middle' })
+    doc.setFontSize(CC_VAL_FS)
+    doc.setTextColor(col[0], col[1], col[2])
+    doc.text(String(val || '—'), x + i * CC_STAT_COL + CC_STAT_COL / 2, cy + CC_VAL_H / 2,
+             { align: 'center', baseline: 'middle' })
   }
-  return cy + valH
+  return cy + CC_VAL_H
 }
 
-// Weapon row: tinted full-width label bar + 6-col value row (bottom combat stats only)
-function ccWeaponHoriz(doc, x, cy, label, advStats, headerColor, lblH, valH) {
-  // Weapon name bar
+// An empty row on the stat grid, for writing current values in by hand
+function ccBlankStatRow(doc, x, cy) {
+  return ccStatRow(doc, x, cy, {}, true)
+}
+
+// Stat grid header: the column labels, drawn once per card above the base row
+function ccStatHeader(doc, x, cy, headerColor) {
+  for (let i = 0; i < CC_STAT_LABELS.length; i++) {
+    doc.setFillColor(headerColor[0], headerColor[1], headerColor[2])
+    setStroke(doc)
+    doc.rect(x + i * CC_STAT_COL, cy, CC_STAT_COL, CC_LBL_H, 'FD')
+    doc.setFont('times', 'bold')
+    doc.setFontSize(CC_LBL_FS)
+    doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
+    doc.text(CC_STAT_LABELS[i], x + i * CC_STAT_COL + CC_STAT_COL / 2, cy + CC_LBL_H / 2,
+             { align: 'center', baseline: 'middle' })
+  }
+  return cy + CC_LBL_H
+}
+
+// Equipment row: tinted full-width name bar + a value row on the shared grid
+function ccWeaponHoriz(doc, x, cy, label, advStats, headerColor, valueColor) {
   doc.setFillColor(headerColor[0], headerColor[1], headerColor[2])
   setStroke(doc)
-  doc.rect(x, cy, CC_W, lblH, 'FD')
+  doc.rect(x, cy, CC_W, CC_LBL_H, 'FD')
   doc.setFont('times', 'bold')
-  doc.setFontSize(5)
   doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
-  doc.text(doc.splitTextToSize(label, CC_W - 2 * CC_PAD)[0], x + CC_PAD, cy + lblH / 2, { baseline: 'middle' })
-  cy += lblH
-
-  // Stat label row (lighter tint)
-  const statLblH = 2.5
-  const tint = headerColor.map(c => Math.round(c * 0.65 + 255 * 0.35))
-  for (let i = 0; i < CC_BTM_KEYS.length; i++) {
-    doc.setFillColor(tint[0], tint[1], tint[2])
-    setStroke(doc)
-    doc.rect(x + i * CC_BTM_COL, cy, CC_BTM_COL, statLblH, 'FD')
-    doc.setFont('times', 'bold')
-    doc.setFontSize(4)
-    doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
-    doc.text(CC_BTM_LABELS[i], x + i * CC_BTM_COL + CC_BTM_COL / 2, cy + statLblH / 2, { align: 'center', baseline: 'middle' })
+  // Only one line fits in the bar, so shrink rather than clip a long combined label
+  const avail = CC_W - 2 * CC_PAD
+  let fs = CC_LBL_FS
+  doc.setFontSize(fs)
+  while (fs > 4.5 && doc.getTextWidth(String(label)) > avail) {
+    fs = Math.round((fs - 0.2) * 10) / 10
+    doc.setFontSize(fs)
   }
-  cy += statLblH
+  doc.text(doc.splitTextToSize(label, avail)[0], x + CC_PAD, cy + CC_LBL_H / 2, { baseline: 'middle' })
+  cy += CC_LBL_H
 
-  // Stat values row
-  for (let i = 0; i < CC_BTM_KEYS.length; i++) {
-    const val = advStats[CC_BTM_KEYS[i]] || ''
-    doc.setFillColor(WHITE[0], WHITE[1], WHITE[2])
-    setStroke(doc)
-    doc.rect(x + i * CC_BTM_COL, cy, CC_BTM_COL, valH, 'FD')
-    if (val) {
-      doc.setFont('times', 'normal')
-      doc.setFontSize(6)
-      doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
-      doc.text(String(val), x + i * CC_BTM_COL + CC_BTM_COL / 2, cy + valH / 2, { align: 'center', baseline: 'middle' })
-    }
-  }
-  return cy + valH
+  return ccStatRow(doc, x, cy, advStats, true, valueColor)
 }
 
 // Weapon displayed as two rows matching the warband sheet style:
@@ -843,7 +846,7 @@ function renderWarbandCard(doc, x, y, data) {
 
 // Draws the stats/weapons portion of a unit card and returns the cy after weapons
 // (used by both the main card and to measure available space for skills)
-function drawUnitCardStats(doc, x, y, unit, isHero) {
+function drawUnitCardStats(doc, x, y, unit, isHero, opts = {}) {
   const name = unit.name || unit.type || '—'
   const headerColor = isHero ? BLUE : PURPLE
 
@@ -891,13 +894,16 @@ function drawUnitCardStats(doc, x, y, unit, isHero) {
   }
   cy += 5
 
-  const LBL_H = 3.0
-  const VAL_H = 3.5
+  cy = ccStatHeader(doc, x, cy, headerColor)
+  cy = ccStatRow(doc, x, cy, unit.base_stats || {}, false)
+  // Pencil mode: an empty row under Base to track the unit's current stats, and
+  // greyed equipment modifiers so they can be written over as the unit advances
+  if (opts.pencil) cy = ccBlankStatRow(doc, x, cy)
+  const advColor = opts.pencil ? PENCIL : TEXT
 
-  cy = ccHorizStatBlock(doc, x, cy, CC_TOP_KEYS, CC_TOP_LABELS, CC_TOP_COL, unit.base_stats || {}, headerColor, LBL_H, VAL_H)
-  cy = ccHorizStatBlock(doc, x, cy, CC_BTM_KEYS, CC_BTM_LABELS, CC_BTM_COL, unit.base_stats || {}, headerColor, LBL_H, VAL_H)
-
-  const advLabels = unit.advance_labels || []
+  // Cards use the full labels ("Sword + Heavy Armour") — the name bar is the full
+  // card width. The warband sheet falls back to the plain names.
+  const advLabels = unit.advance_labels_full || unit.advance_labels || []
   const loadoutStarts = new Set(isHero ? [] : (unit.loadout_starts || []))
   for (let i = 0; i < advLabels.length; i++) {
     const label = advLabels[i]
@@ -916,30 +922,30 @@ function drawUnitCardStats(doc, x, y, unit, isHero) {
       doc.text(eqNames || `Option ${startIdx + 2}`, x + CC_PAD, cy + 1.5, { baseline: 'middle' })
       cy += 3
     }
-    cy = ccWeaponHoriz(doc, x, cy, label, (unit.advances || [])[i] || {}, headerColor, LBL_H, VAL_H)
+    cy = ccWeaponHoriz(doc, x, cy, label, (unit.advances || [])[i] || {}, headerColor, advColor)
   }
 
   return cy
 }
 
 // Calculate how tall the stats+weapons section is for a given unit (in mm, relative to card top)
-function statsBlockHeight(unit, isHero) {
-  const LBL_H = 3.0, VAL_H = 3.5, STAT_LBL_H = 2.5
-  const WEAPON_H = LBL_H + STAT_LBL_H + VAL_H   // 9.0mm per weapon row
-  const SEP_H    = 3.0                             // loadout separator bar
+function statsBlockHeight(unit, isHero, opts = {}) {
+  const WEAPON_H = CC_LBL_H + CC_VAL_H   // 7.8mm per equipment row (name bar + values)
+  const SEP_H    = 3.0                   // loadout separator bar
 
   const advLabels    = (unit.advance_labels || []).filter(Boolean)
   const loadoutStarts = isHero ? [] : (unit.loadout_starts || [])
   const extraSeps    = loadoutStarts.filter(s => s > 0).length
 
-  // header(8) + identity(5) + top stats(6.5) + bottom stats(6.5)
-  return 8 + 5 + (LBL_H + VAL_H) + (LBL_H + VAL_H) +
+  // header(8) + identity(5) + stat header + base row (+ write-in row)
+  return 8 + 5 + CC_LBL_H + CC_VAL_H +
+         (opts.pencil ? CC_VAL_H : 0) +
          advLabels.length * WEAPON_H +
          extraSeps * SEP_H
 }
 
 // Returns an array of draw-functions: main card + any overflow skill cards
-function buildUnitCardDrawFns(unit, isHero) {
+function buildUnitCardDrawFns(unit, isHero, opts = {}) {
   const headerColor = isHero ? BLUE : PURPLE
   const name = unit.name || unit.type || '—'
   const specLines = (unit.special || []).filter(Boolean)
@@ -948,7 +954,7 @@ function buildUnitCardDrawFns(unit, isHero) {
   const SKILL_LH = SKILL_FS * PT * 1.3
 
   // Available height for skills on the main card
-  const statsH   = statsBlockHeight(unit, isHero)
+  const statsH   = statsBlockHeight(unit, isHero, opts)
   const mainAvail = CC_H - CC_PAD - statsH - CC_PAD  // bottom pad + gap before skills
 
   // Simulate ccSpecialBlock rendering to find accurate split points.
@@ -1011,7 +1017,7 @@ function buildUnitCardDrawFns(unit, isHero) {
   const firstChunk = chunks[0] || []
   drawFns.push((doc, x, y) => {
     ccBorder(doc, x, y)
-    const cy = drawUnitCardStats(doc, x, y, unit, isHero)
+    const cy = drawUnitCardStats(doc, x, y, unit, isHero, opts)
     if (firstChunk.length > 0) {
       ccSpecialBlock(doc, x, cy + CC_PAD, y + CC_H - CC_PAD, firstChunk, SKILL_FS)
     }
@@ -1019,7 +1025,8 @@ function buildUnitCardDrawFns(unit, isHero) {
       doc.setFont('times', 'italic')
       doc.setFontSize(4.5)
       doc.setTextColor(TEXT[0], TEXT[1], TEXT[2])
-      doc.text('cont. \u2192', x + CC_W - CC_PAD, y + CC_H - CC_PAD, { align: 'right', baseline: 'bottom' })
+      // ASCII only \u2014 Times' WinAnsi encoding has no arrow glyph
+      doc.text('cont. >', x + CC_W - CC_PAD, y + CC_H - CC_PAD, { align: 'right', baseline: 'bottom' })
     }
   })
 
@@ -1041,8 +1048,9 @@ function renderSpellCards(data) {
   // Returns an array of draw-functions, one per card needed
   const drawFns = []
 
-  const NAME_FS   = 6
-  const DESC_FS   = 5
+  // Match the unit cards' skill block so spell text reads at the same size
+  const NAME_FS   = 6.5
+  const DESC_FS   = 6.5
   const NAME_LH   = NAME_FS * PT * 1.3
   const DESC_LH   = DESC_FS * PT * 1.3
   const GAP       = 1.5
@@ -1142,7 +1150,7 @@ class CardScaleProxy {
  * Generate a card-format PDF for printing and cutting.
  * 3×3 grid of 63×88mm cards on A4 portrait.
  */
-export function generateCardsPDF(data) {
+export function generateCardsPDF(data, opts = {}) {
   const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' })
   doc.setFont('times', 'normal')
 
@@ -1152,11 +1160,11 @@ export function generateCardsPDF(data) {
   drawFns.push((doc, x, y) => renderWarbandCard(doc, x, y, data))
 
   for (const hero of (data.heroes || [])) {
-    if (hero.type) drawFns.push(...buildUnitCardDrawFns(hero, true))
+    if (hero.type) drawFns.push(...buildUnitCardDrawFns(hero, true, opts))
   }
 
   for (const hench of (data.henchmen || [])) {
-    if (hench.type) drawFns.push(...buildUnitCardDrawFns(hench, false))
+    if (hench.type) drawFns.push(...buildUnitCardDrawFns(hench, false, opts))
   }
 
   drawFns.push(...renderSpellCards(data))
@@ -1185,7 +1193,7 @@ export function generateCardsPDF(data) {
  * Generate a big-card PDF (cards scaled ~1.5×) for printing and cutting.
  * 2×2 grid of 94.5×132mm cards on A4 portrait.
  */
-export function generateBigCardsPDF(data) {
+export function generateBigCardsPDF(data, opts = {}) {
   const SCALE = 1.5
   const BIG_COLS = 2
   const BIG_ROWS = 2
@@ -1200,8 +1208,8 @@ export function generateBigCardsPDF(data) {
   // Collect same draw functions as regular cards
   const drawFns = []
   drawFns.push((d, x, y) => renderWarbandCard(d, x, y, data))
-  for (const hero  of (data.heroes   || [])) { if (hero.type)  drawFns.push(...buildUnitCardDrawFns(hero, true)) }
-  for (const hench of (data.henchmen || [])) { if (hench.type) drawFns.push(...buildUnitCardDrawFns(hench, false)) }
+  for (const hero  of (data.heroes   || [])) { if (hero.type)  drawFns.push(...buildUnitCardDrawFns(hero, true, opts)) }
+  for (const hench of (data.henchmen || [])) { if (hench.type) drawFns.push(...buildUnitCardDrawFns(hench, false, opts)) }
   drawFns.push(...renderSpellCards(data))
 
   // Draw cut guides for big cards
