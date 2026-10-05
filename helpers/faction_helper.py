@@ -77,6 +77,16 @@ def generate_neutral_heroes():
             out_data += global_skills_data[skill]["Description"]
             out_data += "\n"
 
+        # How the Hero arrives, how it behaves once it's there, and what the
+        # warband has to do for it — the same three blocks printed on its card.
+        for section in ("Event", "Logic", "Patronage"):
+            points = hero.get(section) or []
+            if not points:
+                continue
+            out_data += f"\n##### {section}\n"
+            for point in points:
+                out_data += f"* {point}\n"
+
         out_data += "\n"
 
     return out_data

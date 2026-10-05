@@ -96,7 +96,7 @@ function cell(doc, x, y, w, h, bg, text, fontSize, bold, align = 'left', vAlign 
 
 // Draw n small checkbox squares centred inside a cell. First `filled` are filled dark.
 function drawCheckboxes(doc, x, y, w, h, n = 12, filled = 0) {
-  const size = 2, gap = 0.5
+  const size = n === 1 ? 3 : 2, gap = 0.5
   const totalW = n * size + (n - 1) * gap
   let bx = x + (w - totalW) / 2
   const by = y + (h - size) / 2
@@ -337,14 +337,14 @@ export function generateWarbandPDF(data) {
   let y = MARGIN_Y
 
   // ── Header table ──────────────────────────────────────────────────────────
-  // 7 columns: Player Name | Warband Name | Warband Type | Max Units | Hero Slots | Aligned Neutral Heroes | Neutral Hero Progression
-  const hFr   = [3, 4, 4, 1.5, 1.5, 2.5, 4]
+  // 7 columns: Player Name | Warband Name | Warband Type | Max Units | Hero Slots | Aligned Neutral Heroes | Patron
+  const hFr   = [3, 4, 4, 1.5, 1.5, 3, 1]
   const hTot  = hFr.reduce((a, b) => a + b, 0)
   const hCols = hFr.map(f => (f / hTot) * CONTENT_W)
   const hRows = [11, 19, 11, 19].map(p => p * PT)
 
   // Row 1: labels
-  const r1Labels = ['Player Name','Warband Name','Warband Type','Max Units','Hero Slots','Aligned Neutral Heroes','Neutral Hero Progression']
+  const r1Labels = ['Player Name','Warband Name','Warband Type','Max Units','Hero Slots','Aligned Neutral Heroes','Patron']
   let rx = MARGIN_X
   for (let i = 0; i < 7; i++) {
     cell(doc, rx, y, hCols[i], hRows[0], BLUE, r1Labels[i], 5.2, true)
@@ -353,7 +353,7 @@ export function generateWarbandPDF(data) {
 
   const nh = data.neutral_heroes || [{}, {}, {}]
 
-  // Row 2: values (cols 0–4) + NH hero 1 name (col 5) + NH hero 1 progress (col 6)
+  // Row 2: values (cols 0–4) + NH hero 1 name (col 5) + NH hero 1 patron box (col 6)
   rx = MARGIN_X
   const r2Vals = [data.player_name||'', data.warband_name||'', data.warband_type||'', data.max_units||'', data.hero_slots||'']
   for (let i = 0; i < 5; i++) {
@@ -363,9 +363,9 @@ export function generateWarbandPDF(data) {
   cell(doc, rx, y + hRows[0], hCols[5], hRows[1], WHITE, nh[0]?.name || '', 6.5, false)
   rx += hCols[5]
   cell(doc, rx, y + hRows[0], hCols[6], hRows[1], WHITE, '', 6.5, false)
-  drawCheckboxes(doc, rx, y + hRows[0], hCols[6], hRows[1], 12, nh[0]?.progress || 0)
+  drawCheckboxes(doc, rx, y + hRows[0], hCols[6], hRows[1], 1, nh[0]?.patron ? 1 : 0)
 
-  // Row 3: labels (cols 0–4) + NH hero 2 name (col 5) + NH hero 2 progress (col 6)
+  // Row 3: labels (cols 0–4) + NH hero 2 name (col 5) + NH hero 2 patron box (col 6)
   const r3y = y + hRows[0] + hRows[1]
   rx = MARGIN_X
   const r3Labels = ['Stored Equipment','Rout Threshold','Gold','Wins','Losses']
@@ -376,9 +376,9 @@ export function generateWarbandPDF(data) {
   cell(doc, rx, r3y, hCols[5], hRows[2], WHITE, nh[1]?.name || '', 5.2, false)
   rx += hCols[5]
   cell(doc, rx, r3y, hCols[6], hRows[2], WHITE, '', 5.2, false)
-  drawCheckboxes(doc, rx, r3y, hCols[6], hRows[2], 12, nh[1]?.progress || 0)
+  drawCheckboxes(doc, rx, r3y, hCols[6], hRows[2], 1, nh[1]?.patron ? 1 : 0)
 
-  // Row 4: values (cols 0–4) + NH hero 3 name (col 5) + NH hero 3 progress (col 6)
+  // Row 4: values (cols 0–4) + NH hero 3 name (col 5) + NH hero 3 patron box (col 6)
   const r4y = r3y + hRows[2]
   rx = MARGIN_X
   const r4Vals = [data.stored_equipment||'', data.rout_threshold||'', data.gold||'', data.wins||'', data.losses||'']
@@ -389,7 +389,7 @@ export function generateWarbandPDF(data) {
   cell(doc, rx, r4y, hCols[5], hRows[3], WHITE, nh[2]?.name || '', 6.5, false)
   rx += hCols[5]
   cell(doc, rx, r4y, hCols[6], hRows[3], WHITE, '', 6.5, false)
-  drawCheckboxes(doc, rx, r4y, hCols[6], hRows[3], 12, nh[2]?.progress || 0)
+  drawCheckboxes(doc, rx, r4y, hCols[6], hRows[3], 1, nh[2]?.patron ? 1 : 0)
 
   y = r4y + hRows[3]
 
@@ -575,6 +575,20 @@ const CC_SIGILS = {
     fill: [[0.50,0.02],[0.74,0.24],[0.82,0.54],[0.50,0.96],[0.18,0.54],[0.26,0.24]],
     cut: [[[0.485,0.22],[0.515,0.22],[0.515,0.90],[0.485,0.90]]],
   },
+  // scales — the brokers, zealots and opportunists who answer to no warband.
+  // Pans carry most of the mass: at 5mm a thin beam-and-post alone reads as a cross.
+  'Faction Agents': {
+    fill: [[0.26,0.96],[0.74,0.96],[0.64,0.80],[0.36,0.80]],   // base
+    parts: [
+      ccBar(0.50, 0.53, 0.54, 0.10, Math.PI / 2),              // post
+      ccBar(0.50, 0.26, 0.92, 0.08, 0),                        // beam
+      ccBar(0.22, 0.36, 0.16, 0.04, Math.PI / 2),              // left hanger
+      ccBar(0.78, 0.36, 0.16, 0.04, Math.PI / 2),              // right hanger
+      [[0.02,0.42],[0.42,0.42],[0.32,0.64],[0.12,0.64]],       // left pan
+      [[0.58,0.42],[0.98,0.42],[0.88,0.64],[0.68,0.64]],       // right pan
+    ],
+    circles: [[0.50, 0.15, 0.085]],                            // finial
+  },
   // rat in profile
   'Ratlings': {
     fill: [[0.03,0.63],[0.13,0.54],[0.25,0.46],[0.40,0.41],[0.56,0.39],[0.70,0.44],[0.80,0.54],
@@ -588,6 +602,10 @@ const CC_SIGILS = {
 function ccSigil(warbandType) {
   return CC_SIGILS[String(warbandType || '').trim()] || null
 }
+
+// The neutral hero deck is not a warband, so it gets a mark of its own rather
+// than borrowing one.
+const NH_SIGIL_KEY = 'Faction Agents'
 
 function ccPoly(doc, pts, x, y, size, mirror = false) {
   const abs = pts.map(([px, py]) => [x + (mirror ? 1 - px : px) * size, y + py * size])
@@ -861,19 +879,19 @@ function ccSpecialBlock(doc, x, cy, maxY, lines, fontSize, colW = CC_W) {
   return cy
 }
 
-// Progress pips (like drawCheckboxes but smaller, right-aligned in a row)
-function ccProgressPips(doc, x, y, rowH, progress, total = 12) {
-  const size = 1.8, gap = 0.3
-  const totalW = total * size + (total - 1) * gap
-  let px = x + CC_W - CC_PAD - totalW
-  const py = y + (rowH - size) / 2
-  for (let i = 0; i < total; i++) {
-    doc.setFillColor(i < progress ? CC_INK[0] : CC_FIELD[0], i < progress ? CC_INK[1] : CC_FIELD[1], i < progress ? CC_INK[2] : CC_FIELD[2])
-    doc.setDrawColor(BORDER[0], BORDER[1], BORDER[2])
-    doc.setLineWidth(0.1)
-    doc.rect(px, py, size, size, 'FD')
-    px += size + gap
-  }
+// Patron tick box with label, right-aligned in a row
+function ccPatronBox(doc, x, y, rowH, patron) {
+  const size = 2.2
+  const bx = x + CC_W - CC_PAD - size
+  const by = y + (rowH - size) / 2
+  doc.setFillColor(patron ? CC_INK[0] : CC_FIELD[0], patron ? CC_INK[1] : CC_FIELD[1], patron ? CC_INK[2] : CC_FIELD[2])
+  doc.setDrawColor(BORDER[0], BORDER[1], BORDER[2])
+  doc.setLineWidth(0.1)
+  doc.rect(bx, by, size, size, 'FD')
+  doc.setFont('times', 'bold')
+  doc.setFontSize(4)
+  doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
+  doc.text('Patron', bx - 1, y + rowH / 2, { align: 'right', baseline: 'middle' })
 }
 
 // Draw cut-guide dashed lines across the full page
@@ -904,6 +922,23 @@ function ccCutGuides(doc) {
       lx += seg
       on = !on
     }
+  }
+}
+
+// Lay card draw-functions out on pages, 3×3 per page, with cut guides
+function ccPaginate(doc, drawFns) {
+  const perPage = CC_COLS * CC_ROWS
+  for (let i = 0; i < drawFns.length; i++) {
+    const slot = i % perPage
+    if (i > 0 && slot === 0) doc.addPage()
+
+    const col = slot % CC_COLS
+    const row = Math.floor(slot / CC_COLS)
+
+    // Cut guides on first card of each page
+    if (slot === 0) ccCutGuides(doc)
+
+    drawFns[i](doc, CC_ML + col * CC_W, CC_MT + row * CC_H)
   }
 }
 
@@ -1003,7 +1038,7 @@ function renderWarbandCard(doc, x, y, data) {
         doc.setFontSize(5.5)
         doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
         doc.text(nh.name, x + CC_PAD, cy + 2.5, { baseline: 'middle' })
-        ccProgressPips(doc, x, cy, 5, nh.progress || 0)
+        ccPatronBox(doc, x, cy, 5, !!nh.patron)
       }
       cy += 5
     }
@@ -1319,6 +1354,239 @@ function renderSpellCards(data) {
   return drawFns
 }
 
+// ── Neutral hero cards ────────────────────────────────────────────────────────
+//
+// Same stock, frame, banner and stat grid as the warband cards, so the two decks
+// shuffle together and read the same way across the table. What differs is what
+// a neutral hero actually needs in play: no Blight / Deathtouched boxes (those
+// are tracked on the campaign roster, not on a shared deck card) and no type
+// line under the name — "Hero: Vampire" only repeats the banner — in exchange for
+// the three blocks that drive the hero when it turns up: Event, Logic, Patronage.
+
+const CC_BRASS = [146, 109, 39]   // neutral heroes — tarnished brass
+
+// Body text is set at the largest of these that keeps a hero on a single card;
+// anything that still won't fit flows onto a continuation card.
+const NH_SIZES   = [6, 5.6, 5.2, 4.8]
+const NH_HEAD_H  = 8                  // name banner
+const NH_COST_H  = 4.4                // hire-cost strip
+const NH_BAR_H   = 3.5                // section bar
+const NH_BAR_FS  = 4.5
+const NH_GAP     = 1.2                // breathing room between blocks
+const NH_IND     = 2.2                // text indent past a bullet marker
+
+// Tinted full-width bar introducing a block of card text
+function ccSectionBar(doc, x, cy, label, bg) {
+  doc.setFillColor(bg[0], bg[1], bg[2])
+  doc.rect(x, cy, CC_W, NH_BAR_H, 'F')
+  doc.setFont('times', 'bold')
+  doc.setFontSize(NH_BAR_FS)
+  doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
+  doc.setCharSpace(0.3)
+  doc.text(String(label).toUpperCase(), x + CC_PAD, cy + NH_BAR_H / 2, { baseline: 'middle' })
+  doc.setCharSpace(0)
+  return cy + NH_BAR_H
+}
+
+// One bullet point, already wrapped. The marker is a drawn square rather than a
+// bullet character — Times' WinAnsi encoding is not worth betting a glyph on.
+function ccBulletEntry(doc, x, cy, lines, fs) {
+  const lh = fs * PT * 1.3
+  const sq = 0.9
+  doc.setFillColor(CC_INK[0], CC_INK[1], CC_INK[2])
+  doc.rect(x + CC_PAD, cy + lh / 2 - sq / 2, sq, sq, 'F')
+  doc.setFont('times', 'normal')
+  doc.setFontSize(fs)
+  doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
+  for (const line of lines) {
+    doc.text(line, x + CC_PAD + NH_IND, cy + lh / 2, { baseline: 'middle' })
+    cy += lh
+  }
+  return cy
+}
+
+// Hire cost strip, directly under the banner
+function nhCostStrip(doc, x, cy, cost, bg) {
+  doc.setFillColor(bg[0], bg[1], bg[2])
+  ccStroke(doc)
+  doc.rect(x, cy, CC_W, NH_COST_H, 'FD')
+  doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
+  doc.setFont('times', 'bold')
+  doc.setFontSize(4.5)
+  doc.setCharSpace(0.3)
+  doc.text('HIRE COST', x + CC_PAD, cy + NH_COST_H / 2, { baseline: 'middle' })
+  doc.setCharSpace(0)
+  doc.setFontSize(7)
+  doc.text(`${cost}g`, x + CC_W - CC_PAD, cy + NH_COST_H / 2, { align: 'right', baseline: 'middle' })
+  return cy + NH_COST_H
+}
+
+// Equipment already folded into the stat row above, named on a single strip so
+// it sits with the grid rather than eating a section of its own
+function nhEquipBar(doc, x, cy, equipment, bg) {
+  doc.setFillColor(bg[0], bg[1], bg[2])
+  ccStroke(doc)
+  doc.rect(x, cy, CC_W, NH_BAR_H, 'FD')
+  doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
+  const avail = CC_W - 2 * CC_PAD
+  const text = `Equipped: ${equipment} (included above)`
+  let fs = NH_BAR_FS
+  doc.setFont('times', 'normal')
+  doc.setFontSize(fs)
+  while (fs > 3.5 && doc.getTextWidth(text) > avail) {
+    fs = Math.round((fs - 0.1) * 10) / 10
+    doc.setFontSize(fs)
+  }
+  doc.text(doc.splitTextToSize(text, avail)[0], x + CC_PAD, cy + NH_BAR_H / 2, { baseline: 'middle' })
+  return cy + NH_BAR_H
+}
+
+// Returns an array of draw-functions: main card + any continuation cards.
+// Content is measured into fixed-height blocks first, then flowed across cards,
+// so a section bar never lands as the last thing on a card.
+function buildNeutralHeroCardDrawFns(hero) {
+  const pal   = ccPalette(CC_BRASS)
+  const sigil = CC_SIGILS[NH_SIGIL_KEY]
+  const meas  = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' })
+
+  const textW   = CC_W - 2 * CC_PAD
+  const bulletW = textW - NH_IND
+  const descW   = textW - 2            // matches ccSpecialBlock's description indent
+
+  // Height of everything printed above the first block on the main card
+  const weaponRows = hero.weapon_rows || []
+  const statsH = NH_HEAD_H + NH_COST_H + CC_LBL_H + CC_VAL_H +
+                 (hero.equipment ? NH_BAR_H : 0) +
+                 weaponRows.length * (CC_LBL_H + CC_VAL_H) + NH_GAP
+
+  const firstAvail = CC_H - CC_PAD - statsH
+  const contAvail  = CC_H - NH_HEAD_H - 2 * CC_PAD
+
+  // Measure the card's text at `fs`, as a list of blocks that can be flowed
+  const layout = (fs) => {
+    const lh = fs * PT * 1.3
+    const wrap = (text, w, style = 'normal') => {
+      meas.setFont('times', style)
+      meas.setFontSize(fs)
+      return meas.splitTextToSize(String(text), w)
+    }
+
+    const blocks = []
+
+    // Flavour text
+    if (hero.about) {
+      const lines = wrap(hero.about, textW, 'italic')
+      blocks.push({ h: lines.length * lh, draw: (doc, x, cy) => {
+        doc.setFont('times', 'italic')
+        doc.setFontSize(fs)
+        doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
+        for (const line of lines) {
+          doc.text(line, x + CC_PAD, cy + lh / 2, { baseline: 'middle' })
+          cy += lh
+        }
+        return cy
+      } })
+    }
+
+    // A section bar carries the gap that precedes it, and is kept with its first
+    // entry so a bar can never be the last thing printed on a card.
+    const sectionBar = label => ({
+      h: NH_GAP + NH_BAR_H,
+      keep: true,
+      draw: (doc, x, cy) => ccSectionBar(doc, x, cy + NH_GAP, label, pal.head),
+    })
+
+    // "Name: description" entries, rendered by the block the warband cards use
+    if ((hero.special || []).length) {
+      blocks.push(sectionBar('Skills'))
+      for (const line of hero.special) {
+        const colon = String(line).indexOf(': ')
+        const h = colon === -1
+          ? wrap(line, textW).length * lh
+          : (1 + wrap(String(line).slice(colon + 2), descW).length) * lh
+        blocks.push({ h, draw: (doc, x, cy) => ccSpecialBlock(doc, x, cy, cy + h + 1, [line], fs) })
+      }
+    }
+
+    for (const [label, key] of [['Event', 'event'], ['Logic', 'logic'], ['Patronage', 'patronage']]) {
+      const entries = (hero[key] || []).filter(Boolean)
+      if (!entries.length) continue
+      blocks.push(sectionBar(label))
+      for (const entry of entries) {
+        const lines = wrap(entry, bulletW)
+        blocks.push({ h: lines.length * lh, draw: (doc, x, cy) => ccBulletEntry(doc, x, cy, lines, fs) })
+      }
+    }
+
+    return blocks
+  }
+
+  // Largest size that keeps the hero on one card, else the largest size outright
+  let blocks = layout(NH_SIZES[0])
+  for (const fs of NH_SIZES) {
+    const candidate = layout(fs)
+    const total = candidate.reduce((sum, b) => sum + b.h, 0)
+    if (total <= firstAvail) { blocks = candidate; break }
+  }
+
+  // Flow the blocks across as many cards as they need
+  const pages = []
+  let chunk = [], avail = firstAvail
+  for (let i = 0; i < blocks.length; i++) {
+    const b = blocks[i]
+    const need = b.keep ? b.h + (blocks[i + 1]?.h || 0) : b.h
+    if (need > avail && chunk.length > 0) {
+      pages.push(chunk)
+      chunk = []
+      avail = contAvail
+    }
+    chunk.push(b)
+    avail -= b.h
+  }
+  if (chunk.length) pages.push(chunk)
+  if (!pages.length) pages.push([])
+
+  return pages.map((pageBlocks, idx) => (doc, x, y) => {
+    ccBorder(doc, x, y)
+    let cy
+    if (idx === 0) {
+      ccHeader(doc, x, y, hero.name, CC_BRASS, NH_HEAD_H, sigil)
+      cy = nhCostStrip(doc, x, y + NH_HEAD_H, hero.cost || '—', pal.head)
+      cy = ccStatHeader(doc, x, cy, pal.head)
+      cy = ccStatRow(doc, x, cy, hero.base_stats || {}, false)
+      if (hero.equipment) cy = nhEquipBar(doc, x, cy, hero.equipment, pal.bar)
+      for (const row of weaponRows) {
+        cy = ccWeaponHoriz(doc, x, cy, row.label, row.stats || {}, pal.bar, TEXT)
+      }
+      cy += NH_GAP
+    } else {
+      ccHeader(doc, x, y, `${hero.name} (cont.)`, CC_BRASS, NH_HEAD_H, sigil)
+      cy = y + NH_HEAD_H + CC_PAD
+    }
+
+    for (const b of pageBlocks) cy = b.draw(doc, x, cy)
+
+    if (idx < pages.length - 1) {
+      doc.setFont('times', 'italic')
+      doc.setFontSize(4.5)
+      doc.setTextColor(CC_INK[0], CC_INK[1], CC_INK[2])
+      doc.text('cont. >', x + CC_W - CC_PAD, y + CC_H - CC_PAD, { align: 'right', baseline: 'bottom' })
+    }
+  })
+}
+
+/**
+ * Generate the neutral hero deck as a card-format PDF.
+ * Same 3x3 grid of 63x88mm cards on A4 portrait as the warband cards.
+ */
+export function generateNeutralHeroCardsPDF(heroes) {
+  const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' })
+  doc.setFont('times', 'normal')
+  const drawFns = (heroes || []).flatMap(hero => buildNeutralHeroCardDrawFns(hero))
+  ccPaginate(doc, drawFns)
+  return doc
+}
+
 // ── CardScaleProxy ────────────────────────────────────────────────────────────
 // Wraps a jsPDF instance and scales all drawing calls by `scale`, offset by (dx, dy).
 // This lets all card draw functions be reused unchanged for big-card export.
@@ -1372,22 +1640,7 @@ export function generateCardsPDF(data, opts = {}) {
 
   drawFns.push(...renderSpellCards(data))
 
-  // Lay cards out on pages, 3×3 per page
-  const perPage = CC_COLS * CC_ROWS
-  for (let i = 0; i < drawFns.length; i++) {
-    const slot = i % perPage
-    if (i > 0 && slot === 0) doc.addPage()
-
-    const col = slot % CC_COLS
-    const row = Math.floor(slot / CC_COLS)
-    const cx  = CC_ML + col * CC_W
-    const cy  = CC_MT + row * CC_H
-
-    // Cut guides on first card of each page
-    if (slot === 0) ccCutGuides(doc)
-
-    drawFns[i](doc, cx, cy)
-  }
+  ccPaginate(doc, drawFns)
 
   return doc
 }

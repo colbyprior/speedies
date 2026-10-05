@@ -17,7 +17,18 @@
     "Species": "",
     "Position": "Vampire",
     "Melee Weapon": "Dual Swords",
-    "Ranged Weapon": ""
+    "Ranged Weapon": "",
+    "Event": [
+      "Spawn in contact with the nearest terrain piece that blocks Line-of-Sight to the Event chest."
+    ],
+    "Logic": [
+      "He Targets the nearest unit that is not Undead and performs Normal Actions.",
+      "If a Target is within Engage distance he will always Engage rather than Move.",
+      "Once Hunger reaches 2, he disappears from the board at the end of his turn."
+    ],
+    "Patronage": [
+      "Ensure the Vampire Incapacitates two units in a single battle."
+    ]
   },
   "Hunter": {
     "Type": "Hero",
@@ -37,7 +48,17 @@
     "Species": "",
     "Position": "Hunter",
     "Melee Weapon": "Dual Swords",
-    "Ranged Weapon": "Crossbow"
+    "Ranged Weapon": "Crossbow",
+    "Event": [
+      "Spawn on the board edge closest to the Event chest."
+    ],
+    "Logic": [
+      "He Targets the nearest Undead or Blighted unit, otherwise the Triggering Unit.",
+      "While he has Line-of-Sight to his Target he holds position and makes Ranged Attacks, only Moving to regain it."
+    ],
+    "Patronage": [
+      "Ensure the Hunter Incapacitates an Undead or Blighted unit."
+    ]
   },
   "Blight Prophet": {
     "Type": "Hero",
@@ -57,13 +78,24 @@
     "Species": "",
     "Position": "Blight Prophet",
     "Melee Weapon": "Dagger",
-    "Ranged Weapon": ""
+    "Ranged Weapon": "",
+    "Event": [
+      "Spawn within 3\" of the Event chest."
+    ],
+    "Logic": [
+      "He casts Gift of Blight every turn, even if it would only catch allies.",
+      "Each turn he Moves towards the largest group of units within 12\".",
+      "If he is Incapacitated he automatically casts Gift of Blight."
+    ],
+    "Patronage": [
+      "Ensure three units contract the Blight from the Blight Prophet."
+    ]
   },
-  "Bishop": {
+  "Inquisitor": {
     "Type": "Hero",
     "Move": "9",
     "Piercing": "3",
-    "Injury": "4",
+    "Injury": "0",
     "Melee": "14",
     "Ranged": "-",
     "Defence": "12",
@@ -75,9 +107,19 @@
     "Neutral Support Cost": "90",
     "About": "A holy warrior of the church, wielding divine power to heal allies and purge the Blight.",
     "Species": "",
-    "Position": "Bishop",
-    "Melee Weapon": "Divine Hammer, Shield, Heavy Armour",
-    "Ranged Weapon": ""
+    "Position": "Inquisitor",
+    "Melee Weapon": "Sword, Shield, Heavy Armour",
+    "Ranged Weapon": "",
+    "Event": [
+      "Spawn on a random edge of the nearest building to the Event chest."
+    ],
+    "Logic": [
+      "If he starts his turn next to a unit with the Blight, he will cast Cure Blight.",
+      "Each turn he will move towards the nearest building and light it on fire."
+    ],
+    "Patronage": [
+      "Ensure the Inquisitor heals the Blight off one unit."
+    ]
   },
   "Shady Merchant": {
     "Type": "Hero",
@@ -97,7 +139,17 @@
     "Species": "",
     "Position": "Shady Merchant",
     "Melee Weapon": "Sword x2",
-    "Ranged Weapon": "Crossbow"
+    "Ranged Weapon": "Crossbow",
+    "Event": [
+      "Spawn on the board edge nearest the Treasure token furthest from the Event chest."
+    ],
+    "Logic": [
+      "Each turn he Moves towards the nearest unit carrying Treasure and attempts to Steal it.",
+      "If he is carrying Treasure he instead Retreats, leaving the game once he reaches a board edge."
+    ],
+    "Patronage": [
+      "Ensure the Shady Merchant leaves the board carrying a Treasure."
+    ]
   },
   "Pit Fighter": {
     "Type": "Hero",
@@ -117,6 +169,16 @@
     "Species": "",
     "Position": "Pit Fighter",
     "Melee Weapon": "Sword x2",
-    "Ranged Weapon": ""
+    "Ranged Weapon": "",
+    "Event": [
+      "Spawn within 3\" of the nearest pair of Engaged units, or the Event chest if none are Engaged."
+    ],
+    "Logic": [
+      "Each turn he Engages the nearest unit, preferring one that is already Engaged.",
+      "He will never pick up Treasure."
+    ],
+    "Patronage": [
+      "Ensure the Pit Fighter wins three rounds of Melee combat."
+    ]
   }
 }

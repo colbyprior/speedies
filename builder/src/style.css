@@ -864,36 +864,24 @@ ul, ol { list-style: none; }
 
 .campaign-nh-select:focus { outline: none; border-color: var(--amber); }
 
-.campaign-nh-progress {
+.campaign-nh-patron {
   display: flex;
   align-items: center;
   gap: 4px;
-}
-
-.campaign-nh-pips {
-  display: flex;
-  gap: 2px;
-}
-
-.nh-pip {
-  width: 8px;
-  height: 8px;
-  border: 1px solid var(--border2);
-  border-radius: 2px;
-  background: var(--bg3);
-  display: inline-block;
-}
-
-.nh-pip--filled {
-  background: var(--amber);
-  border-color: var(--amber);
-}
-
-.campaign-nh-count {
   font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
   color: var(--text-muted);
-  min-width: 28px;
+  cursor: pointer;
 }
+
+.campaign-nh-patron input { accent-color: var(--amber); cursor: pointer; }
+
+.campaign-nh-patron:has(input:checked) { color: var(--amber); font-weight: 600; }
+
+.campaign-nh-patron--off { opacity: 0.4; cursor: default; }
+
+.campaign-nh-patron--off input { cursor: default; }
 
 .campaign-badge {
   font-size: 11px;
