@@ -16,18 +16,18 @@ At the start of each game make a Morale Check once per hero. For each success, a
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| High Inquisitor | 6 | 13 | 12 | 17 | 8| 8 | 1 | 1 | 0 | 0 | [Leader](#leader) | 85 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Agility,Morale) |
-| Priest | 6 | 14 | - | 18 | 10| 10 | 1 | 1 | 0 | 0 | [Divine Magic](#divine-magic) | 85 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
-| Inquisitor | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 55 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
-| Doomsayer | 6 | 15 | 15 | 18 | 10| 10 | 1 | 1 | 0 | 0 | [The Rapture is Nigh](#the-rapture-is-nigh) | 60 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
+| High Inquisitor | 9 | 13 | 12 | 17 | 8| 8 | 1 | 1 | 0 | 0 | [Leader](#leader) | 85 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Agility,Morale) |
+| Priest | 9 | 14 | - | 18 | 10| 10 | 1 | 1 | 0 | 0 | [Divine Magic](#divine-magic) | 85 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
+| Inquisitor | 9 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 55 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged) |
+| Doomsayer | 9 | 15 | 15 | 18 | 10| 10 | 1 | 1 | 0 | 0 | [The Rapture is Nigh](#the-rapture-is-nigh) | 60 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
-| Fanatic | 6 | 13 | - | 16 | 10| 10 | 1 | 1 | 0 | 0 | [Fear](#fear) | 50 | - |
-| Zealot | 6 | 16 | 16 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 20 | - |
-| Peasant | 6 | 17 | - | - | 12| 16 | 1 | 1 | 0 | 0 | [Heed the Scripture](#heed-the-scripture), <br/>[Mob Mentality](#mob-mentality), <br/>[No Equipment](#no-equipment) | - | See Incite the Mob skill |
-| Hound | 8 | 14 | - | 18 | 8| 16 | 1 | 1 | 0 | 0 | [Animal](#animal), <br/>[Pack Tactics](#pack-tactics) | 20 | 6 |
+| Fanatic | 9 | 13 | - | 16 | 10| 10 | 1 | 1 | 0 | 0 | [Fear](#fear) | 50 | - |
+| Zealot | 9 | 16 | 16 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 20 | - |
+| Peasant | 9 | 17 | - | - | 12| 16 | 1 | 1 | 0 | 0 | [Heed the Scripture](#heed-the-scripture), <br/>[Mob Mentality](#mob-mentality), <br/>[No Equipment](#no-equipment) | - | See Incite the Mob skill |
+| Hound | 11 | 14 | - | 18 | 8| 16 | 1 | 1 | 0 | 0 | [Animal](#animal), <br/>[Pack Tactics](#pack-tactics) | 20 | 6 |
 
 ## Skills 
 ### Leader

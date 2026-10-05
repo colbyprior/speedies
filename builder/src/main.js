@@ -162,11 +162,24 @@ function sortUnits(units, wbData) {
   })
 }
 
+function isShieldName(displayName) {
+  const key = resolveAlias(displayName, 'Melee Weapons')
+  return key === 'Shield' || key === 'Tower Shield'
+}
+
 function hasShield(eq) {
-  return (eq.melee || []).some(name => {
-    const key = resolveAlias(name, 'Melee Weapons')
-    return key === 'Shield' || key === 'Tower Shield'
-  })
+  return (eq.melee || []).some(isShieldName)
+}
+
+// Defence bonuses, as positive numbers. Defence is roll-under, so the final
+// value is max(5, base - bonus).
+function shieldDefBonus(displayName) {
+  const m = (getMeleeStats(displayName)?.Effect || '').match(/\+(\d+)\s*Def/)
+  return m ? parseInt(m[1]) : 0
+}
+
+function armourDefBonus(displayName) {
+  return parseInt(getArmourStats(displayName)?.Defence) || 0
 }
 
 function isLightRanged(displayName) {
@@ -200,6 +213,14 @@ function getNextHeroSlotCost(wb) {
 
 function heroCount(wb) {
   return wb.units.filter(u => u.category === 'hero').length
+}
+
+function warbandHeadcount(wb) {
+  const wbData = WARBANDS[wb.type]
+  return wb.units.filter(u => {
+    const def = findUnitDef(wbData, u.typeName, u.category)
+    return !(def?.Skills || []).includes('Follower')
+  }).length
 }
 
 function calcTotalSpent(warband) {
@@ -242,6 +263,7 @@ const state = {
   equipModalUnitId: null,
   selectedType: null,
   mobileTab: 'hire',         // 'hire' | 'roster'
+  pencilCards: false,        // card exports: blank write-in row + greyed modifiers
 }
 
 function currentWarband() {
@@ -280,7 +302,7 @@ function createWarband(typeName, name) {
 function canAddUnit(warband, unitDef, category) {
   const wbData = WARBANDS[warband.type]
   const maxUnits = parseInt(wbData?.['Max Units']) || 15
-  if (warband.units.length >= maxUnits) return { ok: false, reason: 'Full' }
+  if (warbandHeadcount(warband) >= maxUnits) return { ok: false, reason: 'Full' }
 
   if (category === 'hero' && heroCount(warband) >= getHeroSlots(warband)) {
     return { ok: false, reason: 'No Hero Slots' }
@@ -789,7 +811,7 @@ function renderBuilder() {
   const spent = calcTotalSpent(wb)
   const rem = STARTING_GOLD - spent
   const maxUnits = parseInt(wbData?.['Max Units']) || 15
-  const unitCount = wb.units.length
+  const unitCount = warbandHeadcount(wb)
   const overBudget = rem < 0
   const isCampaign = !!wb.campaignMode
 
@@ -827,7 +849,7 @@ function renderBuilder() {
           Hire Units
         </button>
         <button class="tab-btn ${state.mobileTab === 'roster' ? 'active' : ''}" data-action="set-tab" data-tab="roster">
-          Roster${unitCount > 0 ? ` <span class="tab-count">${unitCount}</span>` : ''}
+          Roster${wb.units.length > 0 ? ` <span class="tab-count">${wb.units.length}</span>` : ''}
         </button>
       </nav>
 
@@ -849,7 +871,7 @@ function renderBuilder() {
 function renderHirePanel(wb, wbData) {
   const rem = goldRemaining(wb)
   const maxUnits = parseInt(wbData['Max Units']) || 15
-  const full = wb.units.length >= maxUnits
+  const full = warbandHeadcount(wb) >= maxUnits
 
   function unitCard(unitDef, category) {
     const count = wb.units.filter(u => u.typeName === unitDef.Name).length
@@ -1308,8 +1330,6 @@ function buildUnitStats(unitDef, unit) {
     if (raw != null && raw !== '') stats[key] = clampStat(s, String(raw))
   }
   add('mov', 'Move')
-  const mov = parseInt(get('Move'))
-  if (!isNaN(mov)) stats.run = String(mov + 3)
   add('mel', 'Melee')
   add('rgd', 'Ranged')
   add('def', 'Defence')
@@ -1322,7 +1342,31 @@ function buildUnitStats(unitDef, unit) {
   return stats
 }
 
-// Build weapon rows with calculated stats — mirrors the equipRows logic in renderViewWarband.
+// Shield and armour are the items that only shift Defence. Their bonus applies
+// whichever weapon is in use, so callers fold it into every weapon row rather
+// than giving it a row of its own.
+function protectionItems(eq) {
+  const names = []
+  let def = 0
+  for (const name of (eq.melee || [])) {
+    if (!isShieldName(name)) continue
+    names.push(name)
+    def += shieldDefBonus(name)
+  }
+  if (eq.armour) {
+    names.push(eq.armour)
+    def += armourDefBonus(eq.armour)
+  }
+  return { names, def }
+}
+
+// True when there's a weapon row for protection to fold into. When there isn't,
+// buildWeaponRows falls back to giving protection a row of its own.
+function hasWeaponRow(eq) {
+  return (eq.melee || []).some(n => !isShieldName(n)) || (eq.ranged || []).length > 0
+}
+
+// Build weapon rows with calculated stats.
 function buildWeaponRows(unitDef, unit, eq, maxRows) {
   const get = s => unit?.statOverrides?.[s] ?? unitDef?.[s]
   const baseMel = Math.max(5, parseInt(get('Melee'))    || 0)
@@ -1330,37 +1374,42 @@ function buildWeaponRows(unitDef, unit, eq, maxRows) {
   const baseInj = parseInt(get('Injury'))   || 0
   const basePrc = parseInt(get('Piercing')) || 0
 
-  // Group melee weapons by name to collapse dual-wield into one row
+  // Group melee weapons by name to collapse dual-wield into one row. Shields
+  // carry no attack profile, so they contribute Defence rather than a row.
   const meleeGroups = {}
-  for (const name of (eq.melee || [])) meleeGroups[name] = (meleeGroups[name] || 0) + 1
+  for (const name of (eq.melee || [])) {
+    if (isShieldName(name)) continue
+    meleeGroups[name] = (meleeGroups[name] || 0) + 1
+  }
+
+  const protection = protectionItems(eq)
+  const defValue = protection.def ? String(Math.max(5, baseDef - protection.def)) : null
+  // Cards name the protection on every row, right beside the Def it produces.
+  // The warband sheet's label column is far too narrow for that, so it keeps the
+  // plain name and names the protection in its Special column instead.
+  const withProtection = label =>
+    protection.names.length ? `${label} + ${protection.names.join(', ')}` : label
 
   const rows = []
   for (const [name, count] of Object.entries(meleeGroups)) {
     if (rows.length >= maxRows) break
     const stats = getMeleeStats(name)
-    const resolved = resolveAlias(name, 'Melee Weapons')
-    const isShield = resolved === 'Shield' || resolved === 'Tower Shield'
     const s = {}
     if (stats) {
-      if (isShield) {
-        const m = (stats.Effect || '').match(/\+(\d+)\s*Def/)
-        if (m) s.def = String(Math.max(5, baseDef - parseInt(m[1])))
-      } else {
-        const mel = parseInt(stats.Melee) || 0
-        const inj = parseInt(stats.Injury) || 0
-        const prc = parseInt(stats.Piercing) || 0
-        if (mel !== 0) s.mel = String(Math.max(5, baseMel - mel))
-        if (inj !== 0) s.inj = String(baseInj + inj)
-        if (prc !== 0) s.prc = String(basePrc + prc)
-      }
+      const mel = parseInt(stats.Melee) || 0
+      const inj = parseInt(stats.Injury) || 0
+      const prc = parseInt(stats.Piercing) || 0
+      if (mel !== 0) s.mel = String(Math.max(5, baseMel - mel))
+      if (inj !== 0) s.inj = String(baseInj + inj)
+      if (prc !== 0) s.prc = String(basePrc + prc)
     }
     if (count > 1) {
       const baseAtk = parseInt(get('Attacks')) || 0
       s.atk = String(baseAtk + 1)
     }
+    if (defValue) s.def = defValue
     const label = count > 1 ? `2x ${name}` : name
-    const effect = (stats?.Effect && !isShield) ? stats.Effect : ''
-    rows.push({ label, stats: s, effect })
+    rows.push({ label, labelFull: withProtection(label), stats: s, effect: stats?.Effect || '' })
   }
   for (const name of (eq.ranged || [])) {
     if (rows.length >= maxRows) break
@@ -1372,11 +1421,30 @@ function buildWeaponRows(unitDef, unit, eq, maxRows) {
       if (inj !== 0) s.inj = String(inj)
       if (prc !== 0) s.prc = String(prc)
     }
+    if (defValue) s.def = defValue
     const effectParts = [stats?.Range, stats?.Effect].filter(Boolean)
     const effectDesc = effectParts.length ? `${name}: ${effectParts.join(', ')}` : name
-    rows.push({ label: name, stats: s, effect: effectDesc })
+    // Range sits in the row label so it's readable without the reference block
+    const label = stats?.Range ? `${name} (${stats.Range})` : name
+    rows.push({ label, labelFull: withProtection(label), stats: s, effect: effectDesc })
+  }
+  // No weapon to fold protection into — give it a row of its own
+  if (protection.names.length && !rows.length && maxRows > 0) {
+    const label = protection.names.join(' + ')
+    rows.push({ label, labelFull: label, stats: defValue ? { def: defValue } : {}, effect: '' })
   }
   return rows
+}
+
+// The "Protection: …" line that names the shield/armour folded into the weapon
+// rows. Returns null when there's nothing to name, or when protection already
+// has its own labelled row.
+function protectionLine(eq) {
+  const { names } = protectionItems(eq)
+  if (!names.length || !hasWeaponRow(eq)) return null
+  // Em dash, not "Name: desc" — ccSpecialBlock would split a colon onto a second
+  // indented line, and this needs to cost only the one line it saves elsewhere.
+  return `Protection — ${names.join(', ')}`
 }
 
 function buildPDFPayload(wb, wbData) {
@@ -1386,22 +1454,26 @@ function buildPDFPayload(wb, wbData) {
 
   const heroes = heroUnits.map(unit => {
     const def = findUnitDef(wbData, unit.typeName, unit.category)
-    const wRows = buildWeaponRows(def, unit, unit.equipment, 2)
+    // Heroes fill at most 2 melee + 1 ranged rows now that protection folds into
+    // them; the cap stays at 4 so a future slot can't be silently dropped.
+    const wRows = buildWeaponRows(def, unit, unit.equipment, 4)
     const skillNames = [...(def?.Skills || []), ...(unit.extraSkills || [])]
     const skillLines = skillNames.map(name => {
       const desc = skillsData[name]?.Description
       return desc ? `${name}: ${desc}` : name
     })
+    const protLine = protectionLine(unit.equipment || {})
     return {
       name:           unit.customName || '',
       type:           unit.typeName,
       deathtouched:   unit.deathtouched ? 'Yes' : '',
       blight:         unit.blight ? 'Yes' : '',
       base_stats:     buildUnitStats(def, unit),
-      advances:       wRows.map(w => w.stats),
-      advance_labels: wRows.map(w => w.label),
-      special:        [...skillLines, ...wRows.map(w => w.effect)].filter(Boolean),
-      special_sheet:  [...skillNames, ...wRows.map(w => w.effect)].filter(Boolean),
+      advances:            wRows.map(w => w.stats),
+      advance_labels:      wRows.map(w => w.label),      // warband sheet (narrow column)
+      advance_labels_full: wRows.map(w => w.labelFull),  // cards (full-width name bar)
+      special:             [...skillLines, ...wRows.map(w => w.effect)].filter(Boolean),
+      special_sheet:       [protLine, ...skillNames, ...wRows.map(w => w.effect)].filter(Boolean),
     }
   })
 
@@ -1425,12 +1497,14 @@ function buildPDFPayload(wb, wbData) {
         cap:            def?.['Type Cap'] || '',
         count:          0,
         base_stats:     buildUnitStats(def, unit),
-        advances:       wRows.map(w => w.stats),
-        advance_labels: wRows.map(w => w.label),
+        advances:            wRows.map(w => w.stats),
+        advance_labels:      wRows.map(w => w.label),
+        advance_labels_full: wRows.map(w => w.labelFull),
         loadout_starts: [0],
         special:        skillLines.filter(Boolean),
         special_sheet:  skillNames.filter(Boolean),
         _seenEqKeys:    new Set([eqKey]),
+        _protLines:     [protectionLine(eq)],
       }
     } else {
       const group = henchGroups[unit.typeName]
@@ -1441,11 +1515,20 @@ function buildPDFPayload(wb, wbData) {
         group.loadout_starts.push(group.advance_labels.length)
         group.advances.push(...wRows.map(w => w.stats))
         group.advance_labels.push(...wRows.map(w => w.label))
+        group.advance_labels_full.push(...wRows.map(w => w.labelFull))
+        group._protLines.push(protectionLine(eq))
       }
     }
     henchGroups[unit.typeName].count++
   }
-  Object.values(henchGroups).forEach(g => delete g._seenEqKeys)
+  // One "Protection: …" line per distinct loadout, in the order the loadouts
+  // appear on the card
+  Object.values(henchGroups).forEach(g => {
+    const protLines = [...new Set(g._protLines.filter(Boolean))]
+    g.special_sheet = [...protLines, ...g.special_sheet]
+    delete g._seenEqKeys
+    delete g._protLines
+  })
 
   // Reference page: skills, ranged properties, special rules, spells
   const allSkills = new Set()
@@ -1545,7 +1628,7 @@ function exportToCards() {
   if (btn) { btn.disabled = true; btn.textContent = 'Generating…' }
 
   try {
-    const doc = generateCardsPDF(buildPDFPayload(wb, wbData))
+    const doc = generateCardsPDF(buildPDFPayload(wb, wbData), { pencil: state.pencilCards })
     const url = doc.output('bloburl')
     window.open(url, '_blank')
   } catch (e) {
@@ -1565,7 +1648,7 @@ function exportToBigCards() {
   if (btn) { btn.disabled = true; btn.textContent = 'Generating…' }
 
   try {
-    const doc = generateBigCardsPDF(buildPDFPayload(wb, wbData))
+    const doc = generateBigCardsPDF(buildPDFPayload(wb, wbData), { pencil: state.pencilCards })
     const url = doc.output('bloburl')
     window.open(url, '_blank')
   } catch (e) {
@@ -1600,9 +1683,9 @@ function renderViewWarband() {
     const baseInj = parseInt(get('Injury'))   || 0
     const basePrc = parseInt(get('Piercing')) || 0
 
-    // cols: Unit(0) Mov(1) Run(2) Mel(3) Rgd(4) Def(5) Agi(6) Mrl(7) Atk(8) Wnd(9) Inj(10) Prc(11) Cost(12)
+    // cols: Unit(0) Mov(1) Mel(2) Rgd(3) Def(4) Agi(5) Mrl(6) Atk(7) Wnd(8) Inj(9) Prc(10) Cost(11)
     function equipRow(icon, name, cells) {
-      const cols = Array(13).fill('')
+      const cols = Array(12).fill('')
       cols[0] = `${icon} ${esc(name)}`
       Object.assign(cols, cells)
       return `<tr class="equip-row-view">${cols.map((v, i) =>
@@ -1610,24 +1693,35 @@ function renderViewWarband() {
       ).join('')}</tr>`
     }
 
+    // Shield and armour both only shift Defence, so they share one row showing
+    // the final value instead of two rows with misleading partial totals.
+    const armourDef = eq.armour ? armourDefBonus(eq.armour) : 0
+    let armourMerged = false
+
     for (const name of (eq.melee || [])) {
       const stats = getMeleeStats(name)
       if (!stats) continue
-      const resolvedKey = resolveAlias(name, 'Melee Weapons')
-      const isShieldItem = resolvedKey === 'Shield' || resolvedKey === 'Tower Shield'
+      const isShieldItem = isShieldName(name)
       const cells = {}
+      let label = name
+      let mergedHere = false
       if (isShieldItem) {
-        const m = (stats.Effect || '').match(/\+(\d+)\s*Def/)
-        if (m) cells[5] = Math.max(5, baseDef - parseInt(m[1]))
+        const totalDef = shieldDefBonus(name) + (armourMerged ? 0 : armourDef)
+        if (totalDef) cells[4] = Math.max(5, baseDef - totalDef)
+        if (eq.armour && !armourMerged) {
+          label = `${name} + ${eq.armour}`
+          armourMerged = true
+          mergedHere = true
+        }
       } else {
         const mel = parseInt(stats.Melee) || 0
         const inj = parseInt(stats.Injury) || 0
         const prc = parseInt(stats.Piercing) || 0
-        if (mel !== 0) cells[3] = Math.max(5, baseMel - mel)
-        if (inj !== 0) cells[10] = baseInj + inj
-        if (prc !== 0) cells[11] = basePrc + prc
+        if (mel !== 0) cells[2] = Math.max(5, baseMel - mel)
+        if (inj !== 0) cells[9] = baseInj + inj
+        if (prc !== 0) cells[10] = basePrc + prc
       }
-      rows.push(equipRow('⚔', name, cells))
+      rows.push(equipRow(mergedHere ? '🔰' : '⚔', label, cells))
     }
 
     for (const name of (eq.ranged || [])) {
@@ -1636,20 +1730,18 @@ function renderViewWarband() {
       const cells = {}
       const inj = parseInt(stats.Injury) || 0
       const prc = parseInt(stats.Piercing) || 0
-      if (inj !== 0) cells[10] = inj
-      if (prc !== 0) cells[11] = prc
+      if (inj !== 0) cells[9] = inj
+      if (prc !== 0) cells[10] = prc
       const label = stats.Range ? `${esc(name)} (${esc(stats.Range)})` : esc(name)
       const effect = stats.Effect ? `<div class="equip-row-effect">${esc(stats.Effect)}</div>` : ''
-      rows.push(`<tr class="equip-row-view">${Array(13).fill('').map((_, i) => {
+      rows.push(`<tr class="equip-row-view">${Array(12).fill('').map((_, i) => {
         if (i === 0) return `<td class="equip-row-name-cell">🏹 ${label}${effect}</td>`
         return `<td class="equip-row-stats-cell">${cells[i] ?? ''}</td>`
       }).join('')}</tr>`)
     }
 
-    if (eq.armour) {
-      const stats = getArmourStats(eq.armour)
-      const def = parseInt(stats?.Defence) || 0
-      rows.push(equipRow('🔰', eq.armour, def ? { 5: Math.max(5, baseDef - def) } : {}))
+    if (eq.armour && !armourMerged) {
+      rows.push(equipRow('🔰', eq.armour, armourDef ? { 4: Math.max(5, baseDef - armourDef) } : {}))
     }
 
     return rows.join('')
@@ -1692,11 +1784,8 @@ function renderViewWarband() {
             ${unit.notes ? esc(unit.notes) : ''}
           </div>` : ''}
         </td>
-        ${unitDef ? (() => {
-          const mov = parseInt(s('Move')) || 0
-          return `
+        ${unitDef ? `
             <td>${statVal(s('Move'))}"</td>
-            <td>${mov + 3}"</td>
             <td>${statVal(clampStat('Melee',   s('Melee')))}</td>
             <td>${statVal(clampStat('Ranged',  s('Ranged')))}</td>
             <td>${statVal(clampStat('Defence', s('Defence')))}</td>
@@ -1706,18 +1795,17 @@ function renderViewWarband() {
             <td>${statVal(s('Wounds'))}</td>
             <td>${statVal(s('Injury'))}</td>
             <td>${statVal(s('Piercing'))}</td>
-          `
-        })() : `<td colspan="11">—</td>`}
+          ` : `<td colspan="10">—</td>`}
         <td class="view-cost-cell">${cost}g</td>
       </tr>
       ${equipRows(eq, unitDef, unit)}
-      ${skillsHtml(unit, unitDef) ? `<tr class="equip-row-view skills-row-view"><td class="equip-row-name-cell" colspan="13">${skillsHtml(unit, unitDef)}</td></tr>` : ''}
+      ${skillsHtml(unit, unitDef) ? `<tr class="equip-row-view skills-row-view"><td class="equip-row-name-cell" colspan="12">${skillsHtml(unit, unitDef)}</td></tr>` : ''}
     `
   }
 
   const thead = `
     <thead><tr>
-      <th>Unit</th><th>Mov</th><th>Run</th><th>Mel</th><th>Rgd</th>
+      <th>Unit</th><th>Mov</th><th>Mel</th><th>Rgd</th>
       <th>Def</th><th>Agi</th><th>Mrl</th><th>Atk</th><th>Wnd</th><th>Inj</th><th>Prc</th><th>Cost</th>
     </tr></thead>
   `
@@ -1733,10 +1821,8 @@ function renderViewWarband() {
     const s = (stat) => getStat(unit, unitDef, stat)
 
     const statsHtml = unitDef ? (() => {
-      const mov = parseInt(s('Move')) || 0
       return [
         statChip('Mov', `${statVal(s('Move'))}"`),
-        statChip('Run', `${mov + 3}"`),
         statChip('Mel', statVal(s('Melee'))),
         statChip('Rgd', statVal(s('Ranged'))),
         statChip('Def', statVal(s('Defence'))),
@@ -1835,12 +1921,17 @@ function renderViewWarband() {
         <button class="btn btn-primary" data-action="export-pdf">📄 Export PDF</button>
         <button class="btn btn-outline" data-action="export-cards">🃏 Export Cards</button>
         <button class="btn btn-outline" data-action="export-big-cards">🃏 Export Big Cards</button>
+        <label class="unit-flag${state.pencilCards ? ' unit-flag--active' : ''}"
+          title="Adds an empty row under Base to pencil in current stats, and prints equipment modifiers in grey so they can be written over">
+          <input type="checkbox" ${state.pencilCards ? 'checked' : ''} data-action="toggle-pencil-cards" />
+          ✏️ Write-in
+        </label>
       </header>
 
       <div class="view-summary-bar">
         <div class="summary-item">
           <span class="summary-label">Units</span>
-          <span class="summary-value">${wb.units.length} / ${wbData?.['Max Units'] || '?'}</span>
+          <span class="summary-value">${warbandHeadcount(wb)} / ${wbData?.['Max Units'] || '?'}</span>
         </div>
         <div class="summary-item">
           <span class="summary-label">Spent</span>
@@ -2146,6 +2237,9 @@ document.addEventListener('change', e => {
     if (el.value) addExtraSkill(el.dataset.unitId, el.value)
   } else if (action === 'unit-custom-name') {
     updateUnitCustomName(el.dataset.unitId, el.value)
+  } else if (action === 'toggle-pencil-cards') {
+    state.pencilCards = el.checked
+    render()
   } else if (action === 'campaign-field') {
     updateCampaignField(el.dataset.field, el.value)
   } else if (action === 'neutral-hero-select') {

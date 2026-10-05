@@ -21,7 +21,7 @@
   },
   "Hunter": {
     "Type": "Hero",
-    "Move": "6",
+    "Move": "9",
     "Piercing": "3",
     "Injury": "0",
     "Melee": "12",
@@ -41,7 +41,7 @@
   },
   "Blight Prophet": {
     "Type": "Hero",
-    "Move": "6",
+    "Move": "9",
     "Piercing": "0",
     "Injury": "0",
     "Melee": "15",
@@ -61,7 +61,7 @@
   },
   "Bishop": {
     "Type": "Hero",
-    "Move": "6",
+    "Move": "9",
     "Piercing": "3",
     "Injury": "4",
     "Melee": "14",
@@ -81,7 +81,7 @@
   },
   "Shady Merchant": {
     "Type": "Hero",
-    "Move": "6",
+    "Move": "9",
     "Piercing": "3",
     "Injury": "0",
     "Melee": "14",
@@ -91,7 +91,7 @@
     "Agility": "10",
     "Attacks": "2",
     "Morale": "10",
-    "Skills": "Steal, Slippery, Run and Gun",
+    "Skills": "Steal, Slippery",
     "Neutral Support Cost": "70",
     "About": "A merchant of questionable morals who always seems to have exactly what you need... for a price.",
     "Species": "",
@@ -101,7 +101,7 @@
   },
   "Pit Fighter": {
     "Type": "Hero",
-    "Move": "6",
+    "Move": "9",
     "Piercing": "3",
     "Injury": "0",
     "Melee": "12",

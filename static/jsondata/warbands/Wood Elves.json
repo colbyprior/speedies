@@ -15,7 +15,7 @@
             "Name": "Commander",
             "Type": "Leader",
             "Type Cap": "1",
-            "Move": "7",
+            "Move": "10",
             "Piercing": "0",
             "Injury": "0",
             "Melee": "12",
@@ -34,7 +34,7 @@
             "Name": "Mage",
             "Type": "Hero",
             "Type Cap": "1",
-            "Move": "7",
+            "Move": "10",
             "Piercing": "0",
             "Injury": "0",
             "Melee": "13",
@@ -53,7 +53,7 @@
             "Name": "Honour Guard",
             "Type": "Hero",
             "Type Cap": "-",
-            "Move": "7",
+            "Move": "10",
             "Piercing": "0",
             "Injury": "0",
             "Melee": "12",
@@ -71,7 +71,7 @@
             "Name": "Ranger",
             "Type": "Hero",
             "Type Cap": "-",
-            "Move": "7",
+            "Move": "10",
             "Piercing": "0",
             "Injury": "0",
             "Melee": "13",
@@ -91,7 +91,7 @@
         {
             "Name": "Citizen",
             "Type Cap": "-",
-            "Move": "7",
+            "Move": "10",
             "Piercing": "0",
             "Injury": "0",
             "Melee": "13",
@@ -107,7 +107,7 @@
         {
             "Name": "Scout",
             "Type Cap": "2",
-            "Move": "7",
+            "Move": "10",
             "Piercing": "0",
             "Injury": "0",
             "Melee": "13",
@@ -125,7 +125,7 @@
         {
             "Name": "Woodland Creature",
             "Type Cap": "3",
-            "Move": "8",
+            "Move": "11",
             "Piercing": "0",
             "Injury": "0",
             "Melee": "14",
@@ -157,7 +157,7 @@
             "Cost": 175,
             "Skills": [
                 "Fear",
-                "Slow",
+                "Lumbering",
 				"Large",
 				"No Equipment"
             ]

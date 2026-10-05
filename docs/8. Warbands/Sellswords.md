@@ -13,18 +13,18 @@ sidebar_label: Sellswords
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| Captain | 6 | 12 | 12 | 17 | 8| 8 | 1 | 1 | 0 | 0 | [Leader](#leader) | 75 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Morale) |
-| Champion | 6 | 13 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 40 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
-| Sniper | 6 | 14 | 13 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 45 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
-| Knight | 8 | 13 | - | 17 | 10| 10 | 1 | 1 | 0 | 0 |  | 45 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
+| Captain | 9 | 12 | 12 | 17 | 8| 8 | 1 | 1 | 0 | 0 | [Leader](#leader) | 75 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Morale) |
+| Champion | 9 | 13 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 40 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
+| Sniper | 9 | 14 | 13 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 45 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
+| Knight | 11 | 13 | - | 17 | 10| 10 | 1 | 1 | 0 | 0 |  | 45 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
-| Infantry | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 30 | - |
-| Marksman | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 35 | - |
-| Man-at-Arms | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 2 | 2 |  | 35 | - |
-| Defender | 6 | 14 | - | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 35 | - |
+| Infantry | 9 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 30 | - |
+| Marksman | 9 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 35 | - |
+| Man-at-Arms | 9 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 2 | 2 |  | 35 | - |
+| Defender | 9 | 14 | - | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 35 | - |
 
 ## Skills 
 ### Leader

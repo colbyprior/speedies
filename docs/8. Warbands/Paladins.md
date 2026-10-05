@@ -13,18 +13,18 @@ An order of paladins and others that seek to advance a holy agenda.
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| Justicar | 6 | 13 | 13 | 16 | 8| 8 | 1 | 1 | 0 | 0 | [Leader](#leader), <br/>[Divine Magic](#divine-magic) | 95 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Morale) |
-| Paladin | 6 | 13 | 14 | 16 | 10| 10 | 1 | 1 | 0 | 0 |  | 50 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Morale) |
-| Cleric | 6 | 14 | 14 | 17 | 10| 10 | 1 | 1 | 0 | 0 | [Healer](#healer) | 50 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
-| Standard Bearer | 6 | 14 | 14 | 18 | 10| 8 | 1 | 1 | 0 | 0 | [Standard Bearer](#standard-bearer) | 35 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
+| Justicar | 9 | 13 | 13 | 16 | 8| 8 | 1 | 1 | 0 | 0 | [Leader](#leader), <br/>[Divine Magic](#divine-magic) | 95 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Morale) |
+| Paladin | 9 | 13 | 14 | 16 | 10| 10 | 1 | 1 | 0 | 0 |  | 50 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Morale) |
+| Cleric | 9 | 14 | 14 | 17 | 10| 10 | 1 | 1 | 0 | 0 | [Healer](#healer) | 50 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
+| Standard Bearer | 9 | 14 | 14 | 18 | 10| 8 | 1 | 1 | 0 | 0 | [Standard Bearer](#standard-bearer) | 35 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
-| Squire | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 30 | - |
-| Guardian | 6 | 14 | - | 16 | 14| 10 | 1 | 1 | 0 | 0 | [Guardian](#guardian) | 35 | - |
-| Monk | 7 | 14 | - | 18 | 8| 10 | 2 | 1 | 2 | 0 | [Ki Strike](#ki-strike), <br/>[No Equipment](#no-equipment) | 55 | - |
-| Cavalier | 8 | 13 | - | 17 | 10| 10 | 1 | 2 | 0 | 0 | [Mounted](#mounted) | 50 | 2 |
+| Squire | 9 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 30 | - |
+| Guardian | 9 | 14 | - | 16 | 14| 10 | 1 | 1 | 0 | 0 | [Guardian](#guardian) | 35 | - |
+| Monk | 10 | 14 | - | 18 | 8| 10 | 2 | 1 | 2 | 0 | [Ki Strike](#ki-strike), <br/>[No Equipment](#no-equipment) | 55 | - |
+| Cavalier | 11 | 13 | - | 17 | 10| 10 | 1 | 2 | 0 | 0 | [Mounted](#mounted) | 50 | 2 |
 
 ## Skills 
 ### Leader

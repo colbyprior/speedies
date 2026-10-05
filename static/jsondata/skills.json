@@ -102,7 +102,7 @@
   "Thief": { 
     "Name": "Thief", 
     "Type": "Agility", 
-    "Description": "This unit has Advantage on Morale Checks to pick up contested Treasure. It may also Run while carrying Treasure."
+    "Description": "This unit has Advantage on Morale Checks to pick up contested Treasure. It also ignores the Slowed penalty for carrying Treasure."
   },
   "Coup de Grace": { 
     "Name": "Coup de Grace", 
@@ -152,7 +152,7 @@
   "Sprint": { 
     "Name": "Sprint", 
     "Type": "Agility", 
-    "Description": "This unit's Run speed is +6\" rather than the usual +3\"."
+    "Description": "This unit has +3\" to its Move speed."
   },
   "Stand Firm": { 
     "Name": "Stand Firm", 
@@ -183,11 +183,6 @@
     "Name": "Sniper", 
     "Type": "Ranged", 
     "Description": "This unit gains +5\" range to all Ranged weapons."
-  },
-  "Run and Gun": { 
-    "Name": "Run and Gun", 
-    "Type": "Ranged", 
-    "Description": "This unit can make a Ranged Attack on its turn even if it had Ran during the Move Phase."
   },
   "Agile": { 
     "Name": "Agile", 
@@ -322,7 +317,7 @@
   "Undead": {
     "Name": "Undead",
     "Type": "Inherent",
-    "Description": "This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to the Blight."
+    "Description": "This unit may not be slowed. When Engaging, this unit has a bonus +3\" to its Move speed. If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to the Blight."
   },
    "Follower": {
     "Name": "Follower",
@@ -334,10 +329,10 @@
     "Type": "Inherent",
     "Description": "This unit cannot Promote, use ladders (except by making a full Climb Check), pick up Treasure, benefit from the 'Leader' skill or use equipment (but is not penalised for fighting Unarmed)."
   },
-   "Slow": {
-    "Name": "Slow",
+   "Lumbering": {
+    "Name": "Lumbering",
     "Type": "Inherent",
-    "Description": "This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move)."
+    "Description": "This unit may not be Slowed. When Engaging, this unit has a bonus +3\" to its Move speed."
   },
   "Standard Bearer": {
     "Name": "Standard Bearer",
@@ -397,7 +392,7 @@
   "Vanguard": {
     "Name": "Vanguard",
     "Type": "Agility",
-    "Description": "This unit may never pick up Treasure tokens. After unit deployment, but before any player takes their first turn, this unit may perform a Move (but not a Run). If multiple players have units with this skill, resolve it in turn order."
+    "Description": "This unit may never pick up Treasure tokens. After unit deployment, but before any player takes their first turn, this unit may perform a Move. If multiple players have units with this skill, resolve it in turn order."
   },
     "Madness": {
     "Name": "Madness",

@@ -13,8 +13,8 @@ Let me off this wild ride Mr. Bones
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| Necromancer | 6 | 14 | - | 18 | 10| 8 | 1 | 1 | 0 | 0 | [Leader](#leader), <br/>[Arcane Magic](#arcane-magic) | 65 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale) |
-| Blight Cultist | 6 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 | [Spread Blight (Major)](#spread-blight-major) | 45 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
+| Necromancer | 9 | 14 | - | 18 | 10| 8 | 1 | 1 | 0 | 0 | [Leader](#leader), <br/>[Arcane Magic](#arcane-magic) | 65 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Morale) |
+| Blight Cultist | 9 | 14 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 | [Spread Blight (Major)](#spread-blight-major) | 45 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Morale) |
 | Death Knight | 7 | 14 | 14 | 16 | 14| 12 | 1 | 2 | 0 | 0 | [Undead](#undead-1), <br/>[Fear](#fear) | 75 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
 | Reaper | 9 | 15 | - | - | 14| 12 | 2 | 1 | 0 | 0 | [Undead](#undead-1), <br/>[Fear](#fear) | 55 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility) |
 
@@ -42,7 +42,7 @@ If this unit Incapacitates or is Incapacitated by an enemy in Melee, that unit m
 ### Undead
 *Inherent*
 
-This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to the Blight.
+This unit may not be slowed. When Engaging, this unit has a bonus +3" to its Move speed. If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to the Blight.
 ### Fear
 *Morale*
 
