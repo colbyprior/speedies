@@ -102,7 +102,7 @@
   "Thief": { 
     "Name": "Thief", 
     "Type": "Agility", 
-    "Description": "This unit has Advantage on Morale Checks to pick up contested Treasure. It also ignores the -3\" Move penalty for carrying Treasure."
+    "Description": "This unit has Advantage on Morale Checks to pick up contested Treasure. It also ignores the Slowed penalty for carrying Treasure."
   },
   "Coup de Grace": { 
     "Name": "Coup de Grace", 
@@ -332,7 +332,7 @@
    "Lumbering": {
     "Name": "Lumbering",
     "Type": "Inherent",
-    "Description": "This unit may not be slowed. When Engaging, this unit has a bonus +3\" to its Move speed."
+    "Description": "This unit may not be Slowed. When Engaging, this unit has a bonus +3\" to its Move speed."
   },
   "Standard Bearer": {
     "Name": "Standard Bearer",

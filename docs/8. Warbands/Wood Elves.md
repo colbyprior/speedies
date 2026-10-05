@@ -61,7 +61,7 @@ This unit causes Fear.
 ### Lumbering
 *Inherent*
 
-This unit may not be slowed. When Engaging, this unit has a bonus +3" to its Move speed.
+This unit may not be Slowed. When Engaging, this unit has a bonus +3" to its Move speed.
 ### Large
 *Inherent*
 
