@@ -138,11 +138,9 @@ def create_card_content(name, agent_data, skills_db, card_width=3.5 * inch, card
     card_data.append(Spacer(1, 0.02 * inch))
 
     # Stats table
-    stats_header = ['Mov', 'Run', 'Mel', 'Rgd', 'Def', 'Agi', 'Mrl', 'Atk', 'Wnd', 'Prc', 'Inj']
-    run_value = int(agent_data['Move']) + 3
+    stats_header = ['Mov', 'Mel', 'Rgd', 'Def', 'Agi', 'Mrl', 'Atk', 'Wnd', 'Prc', 'Inj']
     stats_values = [
         agent_data['Move'],
-        run_value,
         agent_data['Melee'],
         agent_data['Ranged'],
         agent_data['Defence'],

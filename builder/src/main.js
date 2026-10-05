@@ -1330,8 +1330,6 @@ function buildUnitStats(unitDef, unit) {
     if (raw != null && raw !== '') stats[key] = clampStat(s, String(raw))
   }
   add('mov', 'Move')
-  const mov = parseInt(get('Move'))
-  if (!isNaN(mov)) stats.run = String(mov + 3)
   add('mel', 'Melee')
   add('rgd', 'Ranged')
   add('def', 'Defence')
@@ -1685,9 +1683,9 @@ function renderViewWarband() {
     const baseInj = parseInt(get('Injury'))   || 0
     const basePrc = parseInt(get('Piercing')) || 0
 
-    // cols: Unit(0) Mov(1) Run(2) Mel(3) Rgd(4) Def(5) Agi(6) Mrl(7) Atk(8) Wnd(9) Inj(10) Prc(11) Cost(12)
+    // cols: Unit(0) Mov(1) Mel(2) Rgd(3) Def(4) Agi(5) Mrl(6) Atk(7) Wnd(8) Inj(9) Prc(10) Cost(11)
     function equipRow(icon, name, cells) {
-      const cols = Array(13).fill('')
+      const cols = Array(12).fill('')
       cols[0] = `${icon} ${esc(name)}`
       Object.assign(cols, cells)
       return `<tr class="equip-row-view">${cols.map((v, i) =>
@@ -1709,7 +1707,7 @@ function renderViewWarband() {
       let mergedHere = false
       if (isShieldItem) {
         const totalDef = shieldDefBonus(name) + (armourMerged ? 0 : armourDef)
-        if (totalDef) cells[5] = Math.max(5, baseDef - totalDef)
+        if (totalDef) cells[4] = Math.max(5, baseDef - totalDef)
         if (eq.armour && !armourMerged) {
           label = `${name} + ${eq.armour}`
           armourMerged = true
@@ -1719,9 +1717,9 @@ function renderViewWarband() {
         const mel = parseInt(stats.Melee) || 0
         const inj = parseInt(stats.Injury) || 0
         const prc = parseInt(stats.Piercing) || 0
-        if (mel !== 0) cells[3] = Math.max(5, baseMel - mel)
-        if (inj !== 0) cells[10] = baseInj + inj
-        if (prc !== 0) cells[11] = basePrc + prc
+        if (mel !== 0) cells[2] = Math.max(5, baseMel - mel)
+        if (inj !== 0) cells[9] = baseInj + inj
+        if (prc !== 0) cells[10] = basePrc + prc
       }
       rows.push(equipRow(mergedHere ? '🔰' : '⚔', label, cells))
     }
@@ -1732,18 +1730,18 @@ function renderViewWarband() {
       const cells = {}
       const inj = parseInt(stats.Injury) || 0
       const prc = parseInt(stats.Piercing) || 0
-      if (inj !== 0) cells[10] = inj
-      if (prc !== 0) cells[11] = prc
+      if (inj !== 0) cells[9] = inj
+      if (prc !== 0) cells[10] = prc
       const label = stats.Range ? `${esc(name)} (${esc(stats.Range)})` : esc(name)
       const effect = stats.Effect ? `<div class="equip-row-effect">${esc(stats.Effect)}</div>` : ''
-      rows.push(`<tr class="equip-row-view">${Array(13).fill('').map((_, i) => {
+      rows.push(`<tr class="equip-row-view">${Array(12).fill('').map((_, i) => {
         if (i === 0) return `<td class="equip-row-name-cell">🏹 ${label}${effect}</td>`
         return `<td class="equip-row-stats-cell">${cells[i] ?? ''}</td>`
       }).join('')}</tr>`)
     }
 
     if (eq.armour && !armourMerged) {
-      rows.push(equipRow('🔰', eq.armour, armourDef ? { 5: Math.max(5, baseDef - armourDef) } : {}))
+      rows.push(equipRow('🔰', eq.armour, armourDef ? { 4: Math.max(5, baseDef - armourDef) } : {}))
     }
 
     return rows.join('')
@@ -1786,11 +1784,8 @@ function renderViewWarband() {
             ${unit.notes ? esc(unit.notes) : ''}
           </div>` : ''}
         </td>
-        ${unitDef ? (() => {
-          const mov = parseInt(s('Move')) || 0
-          return `
+        ${unitDef ? `
             <td>${statVal(s('Move'))}"</td>
-            <td>${mov + 3}"</td>
             <td>${statVal(clampStat('Melee',   s('Melee')))}</td>
             <td>${statVal(clampStat('Ranged',  s('Ranged')))}</td>
             <td>${statVal(clampStat('Defence', s('Defence')))}</td>
@@ -1800,18 +1795,17 @@ function renderViewWarband() {
             <td>${statVal(s('Wounds'))}</td>
             <td>${statVal(s('Injury'))}</td>
             <td>${statVal(s('Piercing'))}</td>
-          `
-        })() : `<td colspan="11">—</td>`}
+          ` : `<td colspan="10">—</td>`}
         <td class="view-cost-cell">${cost}g</td>
       </tr>
       ${equipRows(eq, unitDef, unit)}
-      ${skillsHtml(unit, unitDef) ? `<tr class="equip-row-view skills-row-view"><td class="equip-row-name-cell" colspan="13">${skillsHtml(unit, unitDef)}</td></tr>` : ''}
+      ${skillsHtml(unit, unitDef) ? `<tr class="equip-row-view skills-row-view"><td class="equip-row-name-cell" colspan="12">${skillsHtml(unit, unitDef)}</td></tr>` : ''}
     `
   }
 
   const thead = `
     <thead><tr>
-      <th>Unit</th><th>Mov</th><th>Run</th><th>Mel</th><th>Rgd</th>
+      <th>Unit</th><th>Mov</th><th>Mel</th><th>Rgd</th>
       <th>Def</th><th>Agi</th><th>Mrl</th><th>Atk</th><th>Wnd</th><th>Inj</th><th>Prc</th><th>Cost</th>
     </tr></thead>
   `
@@ -1827,10 +1821,8 @@ function renderViewWarband() {
     const s = (stat) => getStat(unit, unitDef, stat)
 
     const statsHtml = unitDef ? (() => {
-      const mov = parseInt(s('Move')) || 0
       return [
         statChip('Mov', `${statVal(s('Move'))}"`),
-        statChip('Run', `${mov + 3}"`),
         statChip('Mel', statVal(s('Melee'))),
         statChip('Rgd', statVal(s('Ranged'))),
         statChip('Def', statVal(s('Defence'))),

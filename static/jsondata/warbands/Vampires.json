@@ -98,7 +98,7 @@
         {
             "Name": "Thrall",
             "Type Cap": "-",
-            "Move": "6",
+            "Move": "9",
             "Piercing": "0",
             "Injury": "0",
             "Melee": "16",
@@ -134,7 +134,7 @@
         {
             "Name": "Dire Wolf",
             "Type Cap": "3",
-            "Move": "8",
+            "Move": "11",
             "Piercing": "0",
             "Injury": "2",
             "Melee": "10",
@@ -153,7 +153,7 @@
         {
             "Name": "Giant Bat",
             "Type Cap": "3",
-            "Move": "8",
+            "Move": "11",
             "Piercing": "0",
             "Injury": "0",
             "Melee": "16",

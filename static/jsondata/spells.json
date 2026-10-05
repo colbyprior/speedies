@@ -63,7 +63,7 @@
     "Name": "Root", 
     "School": "Life Magic",
     "Check": "11",
-    "Description": "Ongoing. Choose one unit within 20\". That unit cannot Engage, Move, or Run."
+    "Description": "Ongoing. Choose one unit within 20\". That unit cannot Engage or Move."
   },
    "Earthquake": {
     "Name": "Earthquake", 

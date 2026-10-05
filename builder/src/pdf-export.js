@@ -23,15 +23,15 @@ const CONTENT_W = PAGE_W - 2 * MARGIN_X  // 285 mm
 const CARD_GUTTER = 10 * PT
 const CARD_W      = (CONTENT_W - CARD_GUTTER) / 2
 
-// Card columns: 2.6fr label | 11×1fr stats | 4.95fr special  (total 18.55fr)
+// Card columns: 2.6fr label | 10×1fr stats | 4.95fr special  (total 17.55fr)
 // The label column is wide enough for combined rows like "Shield + Heavy Armour".
-const TOTAL_FR = 2.6 + 11 + 4.95
+const TOTAL_FR = 2.6 + 10 + 4.95
 const COL_L    = (2.6  / TOTAL_FR) * CARD_W
 const COL_S    = (1    / TOTAL_FR) * CARD_W
 const COL_SPEC = (4.95 / TOTAL_FR) * CARD_W
 
-const STAT_KEYS   = ['mov','run','mel','rgd','def','agi','mrl','atk','wnd','inj','prc']
-const STAT_LABELS = ['Mov','Run','Mel','Rgd','Def','Agi','Mrl','Atk','Wnd','Inj','Prc']
+const STAT_KEYS   = ['mov','mel','rgd','def','agi','mrl','atk','wnd','inj','prc']
+const STAT_LABELS = ['Mov','Mel','Rgd','Def','Agi','Mrl','Atk','Wnd','Inj','Prc']
 
 // Card row heights in mm (converted from pt)
 // Hero card: header / values / stat labels / base + 4 equipment rows
@@ -120,14 +120,14 @@ function heroCard(doc, x, y, hero = {}) {
   const sp     = hero.special_sheet  || hero.special || []
   const advLbl = hero.advance_labels || []
   const rh     = HERO_ROWS
-  const specX  = x + COL_L + 11 * COL_S
+  const specX  = x + COL_L + 10 * COL_S
   let ry = y
 
   // Row 1: Name / Type / Deathtouched / Blight / Special  (label headers)
   cell(doc, x,                   ry, COL_L + 3*COL_S, rh[0], BLUE, 'Name',         5.2, true)
-  cell(doc, x + COL_L + 3*COL_S, ry, 5*COL_S,         rh[0], BLUE, 'Type',         5.2, true)
-  cell(doc, x + COL_L + 8*COL_S, ry, 2*COL_S,         rh[0], BLUE, 'Deathtouched', 5.2, true)
-  cell(doc, x + COL_L +10*COL_S, ry, COL_S,           rh[0], BLUE, 'Blight',       5.2, true)
+  cell(doc, x + COL_L + 3*COL_S, ry, 4*COL_S,         rh[0], BLUE, 'Type',         5.2, true)
+  cell(doc, x + COL_L + 7*COL_S, ry, 2*COL_S,         rh[0], BLUE, 'Deathtouched', 5.2, true)
+  cell(doc, x + COL_L + 9*COL_S, ry, COL_S,           rh[0], BLUE, 'Blight',       5.2, true)
   cell(doc, specX,                ry, COL_SPEC,        rh[0], BLUE, 'Special',      5.2, true)
   ry += rh[0]
 
@@ -138,15 +138,15 @@ function heroCard(doc, x, y, hero = {}) {
 
   // Row 2: Name/Type/Deathtouched/Blight values
   cell(doc, x,                   ry, COL_L + 3*COL_S, rh[1], WHITE, hero.name         || '', 6.5, false)
-  cell(doc, x + COL_L + 3*COL_S, ry, 5*COL_S,         rh[1], WHITE, hero.type         || '', 6.5, false)
-  cell(doc, x + COL_L + 8*COL_S, ry, 2*COL_S,         rh[1], WHITE, hero.deathtouched || '', 6.5, false)
-  cell(doc, x + COL_L +10*COL_S, ry, COL_S,           rh[1], WHITE, hero.blight       || '', 6.5, false)
+  cell(doc, x + COL_L + 3*COL_S, ry, 4*COL_S,         rh[1], WHITE, hero.type         || '', 6.5, false)
+  cell(doc, x + COL_L + 7*COL_S, ry, 2*COL_S,         rh[1], WHITE, hero.deathtouched || '', 6.5, false)
+  cell(doc, x + COL_L + 9*COL_S, ry, COL_S,           rh[1], WHITE, hero.blight       || '', 6.5, false)
   ry += rh[1]
 
   // Row 3: stat header labels
   cell(doc, x, ry, COL_L, rh[2], WHITE, '', 5.2, false)
   let rx = x + COL_L
-  for (let i = 0; i < 11; i++) {
+  for (let i = 0; i < STAT_KEYS.length; i++) {
     cell(doc, rx, ry, COL_S, rh[2], BLUE, STAT_LABELS[i], 5.2, true, 'center')
     rx += COL_S
   }
@@ -155,7 +155,7 @@ function heroCard(doc, x, y, hero = {}) {
   // Row 4: Base stats
   cell(doc, x, ry, COL_L, rh[3], BLUE, 'Base', 5.2, true)
   rx = x + COL_L
-  for (let i = 0; i < 11; i++) {
+  for (let i = 0; i < STAT_KEYS.length; i++) {
     cell(doc, rx, ry, COL_S, rh[3], WHITE, bs[STAT_KEYS[i]] || '', 6.5, false, 'center')
     rx += COL_S
   }
@@ -166,7 +166,7 @@ function heroCard(doc, x, y, hero = {}) {
     const advData = adv[a] || {}
     cell(doc, x, ry, COL_L, rh[4 + a], WHITE, advLbl[a] || '', 5.2, false, 'left', 'middle', true)
     rx = x + COL_L
-    for (let i = 0; i < 11; i++) {
+    for (let i = 0; i < STAT_KEYS.length; i++) {
       cell(doc, rx, ry, COL_S, rh[4 + a], WHITE, advData[STAT_KEYS[i]] || '', 6.5, false, 'center')
       rx += COL_S
     }
@@ -180,29 +180,29 @@ function henchmanCard(doc, x, y, henchman = {}) {
   const sp     = henchman.special_sheet  || henchman.special || []
   const advLbl = henchman.advance_labels || []
   const rh     = HENCH_ROWS
-  const specX  = x + COL_L + 11 * COL_S
+  const specX  = x + COL_L + 10 * COL_S
   let ry = y
 
   // Row 1: Name / Type / Cap / Blight / Count  (label headers, PURPLE)
   cell(doc, x,                   ry, COL_L + 3*COL_S, rh[0], PURPLE, 'Name',   5.2, true)
-  cell(doc, x + COL_L + 3*COL_S, ry, 5*COL_S,         rh[0], PURPLE, 'Type',   5.2, true)
-  cell(doc, x + COL_L + 8*COL_S, ry, COL_S,           rh[0], PURPLE, 'Cap',    5.2, true)
-  cell(doc, x + COL_L + 9*COL_S, ry, 2*COL_S,         rh[0], PURPLE, 'Blight', 5.2, true)
+  cell(doc, x + COL_L + 3*COL_S, ry, 4*COL_S,         rh[0], PURPLE, 'Type',   5.2, true)
+  cell(doc, x + COL_L + 7*COL_S, ry, COL_S,           rh[0], PURPLE, 'Cap',    5.2, true)
+  cell(doc, x + COL_L + 8*COL_S, ry, 2*COL_S,         rh[0], PURPLE, 'Blight', 5.2, true)
   cell(doc, specX,                ry, COL_SPEC,        rh[0], PURPLE, 'Count',  5.2, true)
   ry += rh[0]
 
   // Row 2: values + count
   cell(doc, x,                   ry, COL_L + 3*COL_S, rh[1], WHITE, henchman.name   || '', 6.5, false)
-  cell(doc, x + COL_L + 3*COL_S, ry, 5*COL_S,         rh[1], WHITE, henchman.type   || '', 6.5, false)
-  cell(doc, x + COL_L + 8*COL_S, ry, COL_S,           rh[1], WHITE, henchman.cap    || '', 6.5, false)
-  cell(doc, x + COL_L + 9*COL_S, ry, 2*COL_S,         rh[1], WHITE, henchman.blight || '', 6.5, false)
+  cell(doc, x + COL_L + 3*COL_S, ry, 4*COL_S,         rh[1], WHITE, henchman.type   || '', 6.5, false)
+  cell(doc, x + COL_L + 7*COL_S, ry, COL_S,           rh[1], WHITE, henchman.cap    || '', 6.5, false)
+  cell(doc, x + COL_L + 8*COL_S, ry, 2*COL_S,         rh[1], WHITE, henchman.blight || '', 6.5, false)
   cell(doc, specX,                ry, COL_SPEC,        rh[1], WHITE, henchman.count  || '', 6.5, false)
   ry += rh[1]
 
   // Row 3: stat header labels + Special header label (PURPLE)
   cell(doc, x, ry, COL_L, rh[2], WHITE, '', 5.2, false)
   let rx = x + COL_L
-  for (let i = 0; i < 11; i++) {
+  for (let i = 0; i < STAT_KEYS.length; i++) {
     cell(doc, rx, ry, COL_S, rh[2], PURPLE, STAT_LABELS[i], 5.2, true, 'center')
     rx += COL_S
   }
@@ -217,7 +217,7 @@ function henchmanCard(doc, x, y, henchman = {}) {
   // Row 4: Base stats
   cell(doc, x, ry, COL_L, rh[3], PURPLE, 'Base', 5.2, true)
   rx = x + COL_L
-  for (let i = 0; i < 11; i++) {
+  for (let i = 0; i < STAT_KEYS.length; i++) {
     cell(doc, rx, ry, COL_S, rh[3], WHITE, bs[STAT_KEYS[i]] || '', 6.5, false, 'center')
     rx += COL_S
   }
@@ -228,7 +228,7 @@ function henchmanCard(doc, x, y, henchman = {}) {
     const advData = adv[a] || {}
     cell(doc, x, ry, COL_L, rh[4 + a], WHITE, advLbl[a] || '', 5.2, false, 'left', 'middle', true)
     rx = x + COL_L
-    for (let i = 0; i < 11; i++) {
+    for (let i = 0; i < STAT_KEYS.length; i++) {
       cell(doc, rx, ry, COL_S, rh[4 + a], WHITE, advData[STAT_KEYS[i]] || '', 6.5, false, 'center')
       rx += COL_S
     }
@@ -435,15 +435,13 @@ const CC_ML   = (210 - CC_COLS * CC_W) / 2   // 10.5mm left margin
 const CC_MT   = (297 - CC_ROWS * CC_H) / 2   // 16.5mm top margin
 const CC_PAD  = 2.5   // inner horizontal/vertical padding mm
 
-// Stat col width for 11-column stat rows (warband sheet)
-const CC_SC = CC_W / 11
+// Stat col width for 10-column stat rows (warband sheet)
+const CC_SC = CC_W / 10
 
 // Card stats: one 10-column grid shared by the base row and every equipment row,
 // so a column can be read straight down to compare base against modified values.
-// Same order as the warband sheet's STAT_KEYS, with one movement column instead
-// of two: it is labelled "Mov" but carries the `run` value (the old Move + 3),
-// since cards print run speed as the unit's only movement stat.
-const CC_STAT_KEYS   = ['run', 'mel', 'rgd', 'def', 'agi', 'mrl', 'atk', 'wnd', 'inj', 'prc']
+// Same order and columns as the warband sheet's STAT_KEYS.
+const CC_STAT_KEYS   = ['mov', 'mel', 'rgd', 'def', 'agi', 'mrl', 'atk', 'wnd', 'inj', 'prc']
 const CC_STAT_LABELS = ['Mov', 'Mel', 'Rgd', 'Def', 'Agi', 'Mrl', 'Atk', 'Wnd', 'Inj', 'Prc']
 const CC_STAT_COL    = CC_W / CC_STAT_KEYS.length   // 6.3mm
 
@@ -678,7 +676,7 @@ function ccText(doc, x, y, text, fontSize, bold, color) {
 
 function ccStatLabelRow(doc, x, y, h, color) {
   const bg = color || BLUE
-  for (let i = 0; i < 11; i++) {
+  for (let i = 0; i < STAT_KEYS.length; i++) {
     doc.setFillColor(bg[0], bg[1], bg[2])
     ccStroke(doc)
     doc.rect(x + i * CC_SC, y, CC_SC, h, 'FD')
@@ -690,7 +688,7 @@ function ccStatLabelRow(doc, x, y, h, color) {
 }
 
 function ccStatValueRow(doc, x, y, h, stats) {
-  for (let i = 0; i < 11; i++) {
+  for (let i = 0; i < STAT_KEYS.length; i++) {
     const val = stats[STAT_KEYS[i]] || ''
     doc.setFillColor(CC_FIELD[0], CC_FIELD[1], CC_FIELD[2])
     ccStroke(doc)
@@ -783,7 +781,7 @@ function ccWeaponRows(doc, x, cy, label, stats, headerColor) {
   cy += labelH
 
   // Stat columns
-  for (let i = 0; i < 11; i++) {
+  for (let i = 0; i < STAT_KEYS.length; i++) {
     const val = stats[STAT_KEYS[i]] || ''
     doc.setFillColor(CC_FIELD[0], CC_FIELD[1], CC_FIELD[2])
     ccStroke(doc)

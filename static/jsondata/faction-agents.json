@@ -2,7 +2,7 @@
   "Slygar the Master Assassin": {
     "Type": "Hero",
     "Faction": "Underworld",
-    "Move": "8",
+    "Move": "11",
     "Piercing": "3",
     "Injury": "0",
     "Melee": "12",
@@ -46,7 +46,7 @@
   "XYZ the Bounty Hunter": {
     "Type": "Hero",
     "Faction": "Underworld",
-    "Move": "6",
+    "Move": "9",
     "Piercing": "0",
     "Injury": "4",
     "Melee": "12",
@@ -68,7 +68,7 @@
   "Echo the Thief": {
     "Type": "Hero",
     "Faction": "Underworld",
-	"Move": "7",
+	"Move": "10",
 	"Piercing": "0",
 	"Injury": "0",
 	"Melee": "13",
@@ -90,7 +90,7 @@
   "Filippo the Pit Fighter": {
     "Type": "Hero",
     "Faction": "Special",
-    "Move": "6",
+    "Move": "9",
     "Piercing": "3",
     "Injury": "0",
     "Melee": "12",
@@ -112,7 +112,7 @@
   "Camfak the Blight Prophet": {
     "Type": "Hero",
     "Faction": "Chaos",
-    "Move": "6",
+    "Move": "9",
     "Piercing": "3",
     "Injury": "0",
     "Melee": "12",
@@ -134,7 +134,7 @@
   "Hirkel the Archbishop": {
     "Type": "Hero",
     "Faction": "Law",
-    "Move": "6",
+    "Move": "9",
     "Piercing": "0",
     "Injury": "4",
     "Melee": "13",
@@ -156,7 +156,7 @@
   "Ivaran the Rebel Captain": {
     "Type": "Hero",
     "Faction": "Chaos",
-	"Move": "7",
+	"Move": "10",
 	"Piercing": "0",
 	"Injury": "0",
 	"Melee": "9",
@@ -178,7 +178,7 @@
   "Ember the Shady Merchant": {
     "Type": "Hero",
     "Faction": "Underworld",
-    "Move": "6",
+    "Move": "9",
     "Piercing": "0",
     "Injury": "0",
     "Melee": "14",
@@ -200,7 +200,7 @@
   "XYZ the Sellsword": {
     "Type": "Hero",
     "Faction": "Law",
-    "Move": "8",
+    "Move": "11",
     "Piercing": "0",
     "Injury": "7",
     "Melee": "9",
@@ -222,7 +222,7 @@
   "XYZ the Grand Inquisitor": {
     "Type": "Hero",
     "Faction": "Law",
-    "Move": "6",
+    "Move": "9",
     "Piercing": "3",
     "Injury": "3",
     "Melee": "8",
@@ -244,7 +244,7 @@
   "Skagneal the Folk Hero": {
     "Type": "Hero",
     "Faction": "Law",
-    "Move": "5",
+    "Move": "8",
     "Piercing": "3",
 	"Injury": "0",
 	"Melee": "13",
@@ -266,7 +266,7 @@
   "Roland the Wandering Knight": {
     "Type": "Hero",
     "Faction": "Law",
-    "Move": "9",
+    "Move": "12",
     "Piercing": "0",
     "Injury": "3",
     "Melee": "6",
@@ -288,7 +288,7 @@
   "Kravix the Demon Lord": {
     "Type": "Hero",
     "Faction": "Chaos",
-	"Move": "6",
+	"Move": "9",
 	"Piercing": "4",
 	"Injury": "4",
 	"Melee": "12",
@@ -310,7 +310,7 @@
   "Acolyte the Necromancer": {
     "Type": "Hero",
     "Faction": "Underworld",
-    "Move": "6",
+    "Move": "9",
     "Piercing": "0",
     "Injury": "0",
     "Melee": "14",
@@ -332,7 +332,7 @@
   "XYZ the Berserker": {
     "Type": "Hero",
     "Faction": "Chaos",
-	"Move": "5",
+	"Move": "8",
 	"Piercing": "3",
 	"Injury": "3",
 	"Melee": "8",
@@ -354,7 +354,7 @@
   "Gang Member": {
     "Type": "Henchman",
     "Faction": "Underworld",
-    "Move": "8",
+    "Move": "11",
     "Piercing": "0",
     "Injury": "4",
     "Melee": "15",
@@ -375,7 +375,7 @@
   "City Guard": {
     "Type": "Henchman",
     "Faction": "Law",
-    "Move": "6",
+    "Move": "9",
     "Piercing": "0",
     "Injury": "0",
     "Melee": "12",
@@ -396,7 +396,7 @@
   "Blightchosen": {
     "Type": "Henchman",
     "Faction": "Chaos",
-    "Move": "6",
+    "Move": "9",
     "Piercing": "3",
     "Injury": "0",
     "Melee": "14",

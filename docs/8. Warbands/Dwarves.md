@@ -18,18 +18,18 @@ All units in this warband may use any Ranged weapon with a Shield.
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| Chieftain | 5 | 12 | 12 | 13 | 14| 6 | 1 | 1 | 0 | 0 | [Leader](#leader) | 90 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Morale) |
-| Builder | 5 | 13 | 13 | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Builder](#builder) | 70 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Defence,Morale) |
-| Hellion | 5 | 13 | - | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Berserker](#berserker), <br/>[Deathwish](#deathwish), <br/>[Fear](#fear) | 60 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility) |
-| Veteran | 5 | 13 | 14 | 14 | 14| 7 | 1 | 1 | 0 | 0 |  | 55 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
+| Chieftain | 8 | 12 | 12 | 13 | 14| 6 | 1 | 1 | 0 | 0 | [Leader](#leader) | 90 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Morale) |
+| Builder | 8 | 13 | 13 | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Builder](#builder) | 70 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Defence,Morale) |
+| Hellion | 8 | 13 | - | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Berserker](#berserker), <br/>[Deathwish](#deathwish), <br/>[Fear](#fear) | 60 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility) |
+| Veteran | 8 | 13 | 14 | 14 | 14| 7 | 1 | 1 | 0 | 0 |  | 55 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
-| Berserker | 5 | 13 | - | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Berserker](#berserker), <br/>[Deathwish](#deathwish), <br/>[Fear](#fear) | 55 | - |
-| Youngling | 5 | 15 | 15 | 14 | 14| 7 | 1 | 1 | 0 | 0 |  | 30 | - |
-| Miner | 5 | 13 | 14 | 14 | 14| 7 | 1 | 1 | 0 | 0 |  | 45 | - |
-| Runner | 5 | 13 | 14 | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Vanguard](#vanguard), <br/>[Apprentice Builder](#apprentice-builder) | 55 | 2 |
+| Berserker | 8 | 13 | - | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Berserker](#berserker), <br/>[Deathwish](#deathwish), <br/>[Fear](#fear) | 55 | - |
+| Youngling | 8 | 15 | 15 | 14 | 14| 7 | 1 | 1 | 0 | 0 |  | 30 | - |
+| Miner | 8 | 13 | 14 | 14 | 14| 7 | 1 | 1 | 0 | 0 |  | 45 | - |
+| Runner | 8 | 13 | 14 | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Vanguard](#vanguard), <br/>[Apprentice Builder](#apprentice-builder) | 55 | 2 |
 
 ## Skills 
 ### Leader
@@ -55,7 +55,7 @@ This unit causes Fear.
 ### Vanguard
 *Agility*
 
-This unit may never pick up Treasure tokens. After unit deployment, but before any player takes their first turn, this unit may perform a Move (but not a Run). If multiple players have units with this skill, resolve it in turn order.
+This unit may never pick up Treasure tokens. After unit deployment, but before any player takes their first turn, this unit may perform a Move. If multiple players have units with this skill, resolve it in turn order.
 ### Apprentice Builder
 *Inherent*
 

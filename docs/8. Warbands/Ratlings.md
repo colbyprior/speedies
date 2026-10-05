@@ -16,18 +16,18 @@ When a henchmen promotes they gain the ability to use any piece of equipment tha
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| Guildmaster | 8 | 12 | 12 | 18 | 6| 10 | 1 | 1 | 0 | 0 | [Leader](#leader) | 80 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale) |
-| Ratlock | 8 | 14 | - | 18 | 8| 13 | 1 | 1 | 0 | 0 | [Arcane Magic](#arcane-magic) | 55 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
-| Enforcer | 8 | 13 | 14 | 18 | 8| 13 | 1 | 1 | 0 | 0 |  | 55 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
-| Assassin | 8 | 14 | 14 | 18 | 6| 13 | 1 | 1 | 0 | 2 | [Vanguard](#vanguard) | 60 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
+| Guildmaster | 11 | 12 | 12 | 18 | 6| 10 | 1 | 1 | 0 | 0 | [Leader](#leader) | 80 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale) |
+| Ratlock | 11 | 14 | - | 18 | 8| 13 | 1 | 1 | 0 | 0 | [Arcane Magic](#arcane-magic) | 55 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Agility,Morale) |
+| Enforcer | 11 | 13 | 14 | 18 | 8| 13 | 1 | 1 | 0 | 0 |  | 55 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
+| Assassin | 11 | 14 | 14 | 18 | 6| 13 | 1 | 1 | 0 | 2 | [Vanguard](#vanguard) | 60 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
-| Underrat | 8 | 15 | 15 | 18 | 8| 16 | 1 | 1 | 0 | 0 |  | 30 | - |
-| Blight Host | 8 | 14 | - | - | 8| 16 | 1 | 1 | 0 | 0 | [Spread Blight (Minor)](#spread-blight-minor) | 40 | 6 |
-| Giant Rat | 8 | 15 | - | - | 6| 18 | 1 | 1 | 0 | 0 | [Animal](#animal) | 15 | 4 |
-| Rat Monstrosity | 8 | 13 | - | 12 | 8| 18 | 3 | 3 | 0 | 3 | [Cowardly](#cowardly), <br/>[Fear](#fear), <br/>[Large](#large), <br/>[Animal](#animal) | 205 | 1 |
+| Underrat | 11 | 15 | 15 | 18 | 8| 16 | 1 | 1 | 0 | 0 |  | 30 | - |
+| Blight Host | 11 | 14 | - | - | 8| 16 | 1 | 1 | 0 | 0 | [Spread Blight (Minor)](#spread-blight-minor) | 40 | 6 |
+| Giant Rat | 11 | 15 | - | - | 6| 18 | 1 | 1 | 0 | 0 | [Animal](#animal) | 15 | 4 |
+| Rat Monstrosity | 11 | 13 | - | 12 | 8| 18 | 3 | 3 | 0 | 3 | [Cowardly](#cowardly), <br/>[Fear](#fear), <br/>[Large](#large), <br/>[Animal](#animal) | 205 | 1 |
 
 ## Skills 
 ### Leader
@@ -41,7 +41,7 @@ This unit is capable of casting Arcane Magic. See the relevant spell list for a 
 ### Vanguard
 *Agility*
 
-This unit may never pick up Treasure tokens. After unit deployment, but before any player takes their first turn, this unit may perform a Move (but not a Run). If multiple players have units with this skill, resolve it in turn order.
+This unit may never pick up Treasure tokens. After unit deployment, but before any player takes their first turn, this unit may perform a Move. If multiple players have units with this skill, resolve it in turn order.
 ### Spread Blight (Minor)
 *Inherent*
 

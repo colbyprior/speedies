@@ -21,10 +21,10 @@ This team sucks... your blood!
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
-| Thrall | 6 | 16 | 16 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 20 | - |
+| Thrall | 9 | 16 | 16 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 20 | - |
 | Ghoul | 7 | 13 | - | 18 | 10| 12 | 2 | 1 | 2 | 0 | [Undead](#undead), <br/>[Fear](#fear), <br/>[No Equipment](#no-equipment) | 60 | - |
-| Dire Wolf | 8 | 10 | - | 18 | 10| 16 | 1 | 1 | 2 | 0 | [Ambush](#ambush), <br/>[Animal](#animal) | 35 | 3 |
-| Giant Bat | 8 | 16 | - | - | 8| 16 | 1 | 1 | 0 | 0 | [Flying](#flying), <br/>[Animal](#animal) | 15 | 3 |
+| Dire Wolf | 11 | 10 | - | 18 | 10| 16 | 1 | 1 | 2 | 0 | [Ambush](#ambush), <br/>[Animal](#animal) | 35 | 3 |
+| Giant Bat | 11 | 16 | - | - | 8| 16 | 1 | 1 | 0 | 0 | [Flying](#flying), <br/>[Animal](#animal) | 15 | 3 |
 
 ## Skills 
 ### Leader
@@ -34,7 +34,7 @@ Allied, non-animal units within 5" of this unit can use this unit's Morale stat 
 ### Undead
 *Inherent*
 
-This unit may not Run, but may Engage as normal (ie. up to 1.5x of base Move). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to the Blight.
+This unit may not be slowed. When Engaging, this unit has a bonus +3" to its Move speed. If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to the Blight.
 ### Fear
 *Morale*
 
