@@ -4,6 +4,7 @@ import helpers.warband_helper as warband_helper
 import helpers.reference_helper as reference_helper
 import helpers.faction_helper as faction_helper
 from neutral_hero_cards import generate_pdf
+import artifact_cards
 import generate_warbandsheet
 
 
@@ -52,9 +53,17 @@ def generate_neutral_heroes():
         f.write(out_data)
         f.close()
 
+def generate_artifacts():
+    with (open("docs/10. Reference/7. Artifacts.md", "w") as f):
+        out_data = faction_helper.generate_artifacts()
+        f.write(out_data)
+        f.close()
+
 
 generate_warbands()
 generate_reference_pages()
 generate_neutral_heroes()
+generate_artifacts()
 generate_pdf('static/img/neutral_heroes.pdf')
+artifact_cards.generate_pdf('static/img/artifacts.pdf')
 generate_warbandsheet.main()

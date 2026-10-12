@@ -524,6 +524,16 @@ const CC_STAR8 = (() => {
   return p
 })()
 
+// Five-pointed star for artifacts
+const CC_STAR5 = (() => {
+  const p = []
+  for (let i = 0; i < 10; i++) {
+    const a = -Math.PI / 2 + i * Math.PI / 5, r = i % 2 ? 0.19 : 0.5
+    p.push([0.5 + r * Math.cos(a), 0.5 + r * Math.sin(a)])
+  }
+  return p
+})()
+
 const CC_SIGILS = {
   // skull
   'Undead': {
@@ -584,6 +594,8 @@ const CC_SIGILS = {
     circles: [[0.34,0.36,0.115]],
     cut: [[[0.15,0.58],[0.21,0.58],[0.21,0.63],[0.15,0.63]]],
   },
+  // five-pointed star for artifacts
+  'Artifacts': { fill: CC_STAR5 },
 }
 
 function ccSigil(warbandType) {
@@ -1462,13 +1474,13 @@ function nhMetaStrip(doc, x, cy, label, value, bg) {
 }
 
 // A labelled strip under the stat grid, shrunk to fit on one line
-function nhInfoBar(doc, x, cy, text, bg) {
+function nhInfoBar(doc, x, cy, text, bg, fontSize = NH_BAR_FS) {
   doc.setFillColor(bg[0], bg[1], bg[2])
   setStroke(doc)
   doc.rect(x, cy, CC_W, NH_BAR_H, 'FD')
   doc.setTextColor(INK[0], INK[1], INK[2])
   const avail = CC_W - 2 * CC_PAD
-  let fs = NH_BAR_FS
+  let fs = fontSize
   doc.setFont('times', 'normal')
   doc.setFontSize(fs)
   while (fs > 3.5 && doc.getTextWidth(text) > avail) {
@@ -1753,6 +1765,100 @@ export function generateNeutralHeroCardsPDF(heroes) {
   ])
   ccPaginate(doc, drawFns)
   return doc
+}
+
+/**
+ * Generate artifact cards as a card-format PDF.
+ * Same 3x3 grid of 63x88mm cards on A4 portrait.
+ */
+export function generateArtifactCardsPDF(artifacts) {
+  const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' })
+  doc.setFont('times', 'normal')
+  const drawFns = (artifacts || []).flatMap(artifact => buildArtifactCardDrawFns(artifact))
+  ccPaginate(doc, drawFns)
+  return doc
+}
+
+function buildArtifactCardDrawFns(artifact) {
+  const pal   = palette([146, 109, 39])  // BRASS color for artifacts
+  const sigil = CC_SIGILS['Artifacts']
+  const meas  = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' })
+
+  const textW   = CC_W - 2 * CC_PAD
+  const bulletW = textW - NH_IND
+  const descW   = textW - 2
+
+  // Height of everything printed above the first block on the main card
+  const statsH = NH_HEAD_H + (artifact.meta_label ? NH_COST_H : 0) +
+                 (artifact.equipment ? NH_BAR_H : 0)
+
+  const firstAvail = CC_H - CC_PAD - statsH
+  const contAvail  = CC_H - NH_HEAD_H - 2 * CC_PAD
+
+  // Artifact font sizes - larger than neutral heroes since simpler content
+  const ARTIFACT_SIZES = [7.5, 7, 6.5, 6, 5.6, 5.2]
+
+  // Measure the card's text at `fs`, as a list of blocks that can be flowed
+  const layout = (fs) => {
+    const lh = fs * PT * 1.3
+    const wrap = (text, w, style = 'normal') => {
+      meas.setFont('times', style)
+      meas.setFontSize(fs)
+      return meas.splitTextToSize(String(text), w)
+    }
+
+    const blocks = []
+
+    // "Name: description" entries for special abilities and effects
+    if ((artifact.special || []).length) {
+      for (const line of artifact.special) {
+        const colon = String(line).indexOf(': ')
+        const h = colon === -1
+          ? wrap(line, textW).length * lh
+          : (1 + wrap(String(line).slice(colon + 2), descW).length) * lh
+        blocks.push({ h, draw: (doc, x, cy) => ccSpecialBlock(doc, x, cy, cy + h + 1, [line], fs) })
+      }
+    }
+
+    return blocks
+  }
+
+  // Largest size that keeps the artifact on one card, else the largest size outright
+  let blocks = layout(ARTIFACT_SIZES[0])
+  for (const fs of ARTIFACT_SIZES) {
+    const candidate = layout(fs)
+    const total = candidate.reduce((sum, b) => sum + b.h, 0)
+    if (total <= firstAvail) { blocks = candidate; break }
+  }
+
+  const pages = nhFlow(blocks, firstAvail, contAvail)
+
+  return pages.map((pageBlocks, idx) => (doc, x, y) => {
+    ccBorder(doc, x, y)
+    let cy
+    if (idx === 0) {
+      ccHeader(doc, x, y, artifact.name, [146, 109, 39], NH_HEAD_H, sigil)
+      cy = y + NH_HEAD_H
+      if (artifact.meta_label) {
+        cy = nhMetaStrip(doc, x, cy, artifact.meta_label, artifact.meta_value || '—', pal.head)
+      }
+      if (artifact.equipment) {
+        cy = nhInfoBar(doc, x, cy, `Equipment: ${artifact.equipment}`, pal.bar, 6.5)
+      }
+    } else {
+      ccHeader(doc, x, y, `${artifact.name} (cont.)`, [146, 109, 39], NH_HEAD_H, sigil)
+      cy = y + NH_HEAD_H + CC_PAD
+    }
+
+    for (const b of pageBlocks) cy = b.draw(doc, x, cy)
+
+    if (idx < pages.length - 1) {
+      doc.setFont('times', 'italic')
+      doc.setFontSize(4.5)
+      doc.setTextColor(INK[0], INK[1], INK[2])
+      doc.text('cont. >', x + CC_W - CC_PAD, y + CC_H - CC_PAD, { align: 'right', baseline: 'bottom' })
+    }
+  })
 }
 
 // ── CardScaleProxy ────────────────────────────────────────────────────────────

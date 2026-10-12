@@ -1,7 +1,7 @@
 import sys
 
 from helpers.global_data import (global_neutral_heroes, global_skills_data, global_ranged_weapons_data, global_aliases,
-                                 global_ranged_weapon_effects)
+                                 global_ranged_weapon_effects, global_artifacts_data)
 
 
 def generate_neutral_heroes():
@@ -123,5 +123,64 @@ def generate_neutral_heroes():
                     out_data += f"    {i}. {step}\n"
 
         out_data += "\n"
+
+    return out_data
+
+
+def generate_artifacts():
+    out_data = "---\n"
+    out_data += f"sidebar_label: Artifacts\n"
+    out_data += "---\n"
+    out_data += f"# Artifacts\n"
+    out_data += "\nArtifacts are powerful magical items that can be acquired during campaigns.\n\n"
+
+    # Group artifacts by category
+    categories = {}
+    for artifact_name, artifact in global_artifacts_data.items():
+        category = artifact.get('Category', 'Generic')
+        if category not in categories:
+            categories[category] = {}
+        categories[category][artifact_name] = artifact
+
+    # Sort artifacts alphabetically within each category
+    for category in categories:
+        categories[category] = dict(sorted(categories[category].items(), key=lambda x: x[0]))
+
+    # Generate output for each category
+    for category_name in sorted(categories.keys()):
+        if category_name != 'Generic':
+            out_data += f"## {category_name} Artifacts\n\n"
+
+        for artifact_name, artifact in categories[category_name].items():
+            out_data += f"## {artifact_name}\n"
+            out_data += f"*{artifact['Type']}*"
+            if artifact.get('Cursed'):
+                out_data += f" — **Cursed: Cannot unequip**"
+            out_data += "\n\n"
+
+            # About text
+            out_data += f"{artifact['About']}\n\n"
+
+            if artifact.get('Melee Weapon'):
+                out_data += f"**Weapon Type:** {artifact['Melee Weapon']}\n\n"
+
+            # Main description/effect
+            out_data += f"**Effect:** {artifact['Description']}\n\n"
+
+            # Additional special rules
+            if artifact.get('Special'):
+                out_data += f"**Special Rules:** {artifact['Special']}\n\n"
+
+            # Skills granted by the artifact
+            if artifact.get('Skills'):
+                skills_list = artifact['Skills'].split(", ")
+                for skill in skills_list:
+                    skill = skill.strip()
+                    if skill in global_skills_data:
+                        out_data += f"##### {skill}\n"
+                        out_data += global_skills_data[skill]["Description"]
+                        out_data += "\n"
+
+            out_data += "\n"
 
     return out_data
