@@ -8,7 +8,7 @@
     "Preamble": "RAT",
     "Magic Tables": ["Blight Magic"],
     "Special Rules": {
-        "Ratling Initiation": "When a henchmen promotes they gain the ability to use any piece of equipment that the other heroes can use."
+        "Ratling Initiation": "When a henchmen promotes they gain the ability to use any piece of equipment that other heroes can use."
     },
     "Heroes": [
         {
@@ -211,7 +211,7 @@
     "Equipment": {
         "Heroes": {
             "Aliases": ["Assassin", "Enforcer", "Ratlock", "Guildmaster"],
-            "Melee Weapons": ["Dagger / Club", "Hammer", "Sword / Axe", "Spear / Staff", "Glaive", "Flail", "Fighting Claws"],
+            "Melee Weapons": ["Dagger / Club", "Hammer", "Sword / Axe", "Spear / Staff", "Glaive", "Flail", "Fighting Claws", "Shield"],
             "Ranged Weapons": ["Throwing Stars", "Pistol"],
             "Armour": ["Light Armour"]
         },

@@ -64,6 +64,11 @@
     "Type": "Defence", 
     "Description": "If this unit is using a Shield, it gains one additional Attack in Melee."
   },
+ "Heroic": { 
+    "Name": "Heroic", 
+    "Type": "Defence", 
+    "Description": "If this unit would ever be Incapacitated by a Ranged Attack, it is Stunned instead."
+  },
   "Drag You Down": { 
     "Name": "Drag You Down", 
     "Type": "Melee", 
@@ -94,15 +99,10 @@
     "Type": "Morale", 
     "Description": "This unit's single target Spells have their range increased by 5\"."
   },
-  "Sneaky": { 
-    "Name": "Sneaky", 
-    "Type": "Agility", 
-    "Description": "This unit makes Out-of-Sight Rolls with Advantage."
-  },
   "Thief": { 
     "Name": "Thief", 
     "Type": "Agility", 
-    "Description": "This unit has Advantage on Morale Checks to pick up contested Treasure. It also ignores the Slowed penalty for carrying Treasure."
+    "Description": "This unit has Advantage on Morale Checks to pick up contested Treasure. It also cannot be Slowed."
   },
   "Coup de Grace": { 
     "Name": "Coup de Grace", 
@@ -152,12 +152,12 @@
   "Sprint": { 
     "Name": "Sprint", 
     "Type": "Agility", 
-    "Description": "This unit has +3\" to its Move speed."
+    "Description": "If this unit is not Slowed, it has +3\" to its Move speed."
   },
   "Stand Firm": { 
     "Name": "Stand Firm", 
     "Type": "Defence", 
-    "Description": "This unit cannot be Staggered and is immune to Fear."
+    "Description": "This unit cannot be Weakened and is immune to Fear."
   },
   "Guardian": { 
     "Name": "Guardian", 
@@ -272,7 +272,7 @@
   "Berserker": {
     "Name": "Berserker",
     "Type": "Inherent",
-    "Description": "At the end of the Engage Phase, if there is an enemy within Line-of-Sight and Engage range, this unit attempts to Engage the closest such unit."
+    "Description": "At the end of the Engage Phase, if there is an enemy within Line-of-Sight and Engage range and this unit has not already attempted to Engage, this unit attempts to Engage the closest such unit."
   },
   "Deathwish": {
     "Name": "Deathwish",
@@ -297,7 +297,7 @@
   "Pit Fighter": {
     "Name": "Pit Fighter",
     "Type": "Inherent",
-    "Description": "When recovering, this unit goes from Stunned straight to Staggered."
+    "Description": "When recovering, this unit goes from Stunned straight to Weakened."
   },
   "Raise Ally": {
     "Name": "Raise Ally",
@@ -317,7 +317,7 @@
   "Undead": {
     "Name": "Undead",
     "Type": "Inherent",
-    "Description": "This unit may not be slowed. When Engaging, this unit has a bonus +3\" to its Move speed. If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to the Blight."
+    "Description": "This unit may not have its Move reduced below its base Move. When Engaging, this unit has a bonus +3\" to its Move speed (which can be reduced). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to the Blight."
   },
    "Follower": {
     "Name": "Follower",
@@ -332,7 +332,7 @@
    "Lumbering": {
     "Name": "Lumbering",
     "Type": "Inherent",
-    "Description": "This unit may not be Slowed. When Engaging, this unit has a bonus +3\" to its Move speed."
+    "Description": "This unit may not have its Move reduced below its base Move. When Engaging, this unit has a bonus +3\" to its Move speed (which can be reduced)."
   },
   "Standard Bearer": {
     "Name": "Standard Bearer",
@@ -397,7 +397,7 @@
     "Madness": {
     "Name": "Madness",
     "Type": "Inherent",
-    "Description": "This unit makes all Morale Checks with Disadvantage."
+    "Description": "This unit makes all Morale Checks (except Rout Checks) with Disadvantage."
   },
   "Hunger": {
     "Name": "Hunger",
@@ -417,7 +417,7 @@
   "Steal": {
     "Name": "Steal",
     "Type": "Inherent",
-    "Description": "If this unit ends its Move within 1\" of an enemy carrying Treasure, it may make an Agility Check. On a success, it takes the Treasure from that unit."
+    "Description": "If this unit ends its Move within 5\" of an enemy carrying Treasure, it may make an Agility Check. On a success, it takes the Treasure from that unit."
   },
   "Slippery": {
     "Name": "Slippery",

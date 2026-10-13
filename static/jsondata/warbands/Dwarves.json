@@ -139,7 +139,7 @@
             "Agility": "14",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 45,
+            "Cost": 40,
             "Skills": []
         },
         {
@@ -155,7 +155,7 @@
             "Agility": "14",
             "Attacks": "1",
             "Morale": "7",
-            "Cost": 55,
+            "Cost": 50,
             "Skills": [
 			"Vanguard",
 			"Apprentice Builder"
@@ -227,13 +227,13 @@
             "Aliases": ["Chieftain", "Builder", "Hellion", "Berserker", "Runner", "Youngling"],
             "Melee Weapons": ["Dagger", "Sword / Axe", "Hammer", "Great Sword / Axe", "Great Hammer", "Shield"],
             "Ranged Weapons": ["Pistol"],
-            "Armour": ["Light Armour", "Heavy Armour", "Mithril Armour"]
+            "Armour": ["Light Armour", "Heavy Armour"]
         },
         "General Warriors": {
             "Aliases": ["Miner", "Veteran"],
             "Melee Weapons": ["Dagger", "Sword / Axe", "Hammer", "Great Sword / Axe", "Great Hammer", "Shield"],
             "Ranged Weapons": ["Crossbow", "Pistol", "Rifle", "Blunderbuss"],
-            "Armour": ["Light Armour", "Heavy Armour", "Mithril Armour"]
+            "Armour": ["Light Armour", "Heavy Armour"]
         }
     }
 }
