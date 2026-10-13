@@ -21,7 +21,7 @@ def generate_neutral_heroes():
         if hero.get('Position'):
             out_data += f" — _{hero['Position']}_"
         out_data += "\n\n"
-        out_data += f"*Cost:* {hero['Neutral Support Cost']}g\n\n"
+        out_data += f"*Cost:* {hero['Cost']}g\n\n"
         if hero.get("Opposed"):
             out_data += f"*Opposed by:* [{hero['Opposed']}](#{hero['Opposed'].lower().replace(' ', '-')})\n\n"
         out_data += f"{hero['About']}\n\n"

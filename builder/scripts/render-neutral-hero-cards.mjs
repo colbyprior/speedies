@@ -79,7 +79,7 @@ function buildProfile(name, hero) {
 function buildNeutralHero(name, hero) {
   return {
     ...buildProfile(name, hero),
-    badge: `${hero['Neutral Support Cost']}g`,
+    badge: `${hero['Cost']}g`,
     // Opposed Type heroes name their natural enemy; Solo Type heroes have none
     ...(hero.Opposed ? { meta_label: 'Opposed by', meta_value: hero.Opposed } : {}),
     spells:     (hero.Spells || []).map(spell => ({
