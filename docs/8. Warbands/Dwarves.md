@@ -4,11 +4,11 @@ sidebar_label: Dwarves
 # Dwarves
 These chonkers go bonkers.
 
-| Max Units      | 12              |
-| :------------- | :-------------- |
-| Complexity     | ★★☆             |
-| Rout Threshold | 6               |
-| Play Style     | Rough and Tough |
+| Max Units | 12 |
+| :---- | :---- |
+| Complexity | ★★☆ |
+| Rout Threshold | 6 |
+| Play Style | Rough and Tough |
 
 ## Special Rules
 ### Dwarf
@@ -19,7 +19,7 @@ All units in this warband may use any Ranged weapon with a Shield.
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
 | Chieftain | 8 | 12 | 12 | 13 | 14| 6 | 1 | 1 | 0 | 0 | [Leader](#leader) | 90 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Morale) |
-| Builder | 8 | 13 | 13 | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Builder](#builder) | 70 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Defence,Morale) |
+| Builder | 8 | 13 | 13 | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Place Ladder](#place-ladder), <br/>[Place Ballista](#place-ballista), <br/>[Place Barricade](#place-barricade) | 70 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Defence,Morale) |
 | Hellion | 8 | 13 | - | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Berserker](#berserker), <br/>[Deathwish](#deathwish), <br/>[Fear](#fear) | 60 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility) |
 | Veteran | 8 | 13 | 14 | 14 | 14| 7 | 1 | 1 | 0 | 0 |  | 55 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
 
@@ -28,26 +28,34 @@ All units in this warband may use any Ranged weapon with a Shield.
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | ---- |
 | Berserker | 8 | 13 | - | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Berserker](#berserker), <br/>[Deathwish](#deathwish), <br/>[Fear](#fear) | 55 | - |
 | Youngling | 8 | 15 | 15 | 14 | 14| 7 | 1 | 1 | 0 | 0 |  | 30 | - |
-| Miner | 8 | 13 | 14 | 14 | 14| 7 | 1 | 1 | 0 | 0 |  | 45 | - |
-| Runner | 8 | 13 | 14 | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Vanguard](#vanguard), <br/>[Apprentice Builder](#apprentice-builder) | 55 | 2 |
+| Miner | 8 | 13 | 14 | 14 | 14| 7 | 1 | 1 | 0 | 0 |  | 40 | - |
+| Runner | 8 | 13 | 14 | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Vanguard](#vanguard), <br/>[Place Ladder](#place-ladder) | 50 | 2 |
 
 ## Skills 
 ### Leader
 *Inherent*
 
 Allied, non-animal units within 5" of this unit can use this unit's Morale stat for Checks instead of their own.
-### Builder
+### Place Ladder
 *Inherent*
 
-This unit has the ability to place down three items, each once per game. This happens during the Cast Phase. If this unit does so, place the item within 1" of it. It cannot make a Ranged Attack this turn. One can be placed per turn and cannot be moved afterwards, unless noted otherwise. Ladder: This unit may place a 3" ladder down. Barricade: This unit may place a 1.5" high, 3" wide barricade down. It should block line of sight and not be too thick. Ballista: This unit may place a ballista down. Once per turn during the Ranged Phase, an ally (including this unit) adjacent to the ballista may fire it instead of making its usual Ranged Attack. The ballista has the stats of a Crossbow, but is always rolled with Advantage. During the Cast Phase, this unit may pack up the ballista if it is within 1" of it. If it does so, no other item can be placed down this turn. The ballista can then be placed down again in a future turn.
+Ability: This unit has the ability to place down a 3" ladder once per game. This happens during the Cast Phase. If this unit does so, place the ladder within 1" of it. This unit cannot make a Ranged Attack this turn, but this ability can be used while Engaged. The ladder cannot be moved afterwards.
+### Place Ballista
+*Inherent*
+
+Ability: This unit has the ability to place down a ballista once per game. This happens during the Cast Phase. If this unit does so, place the item within 1" of it. The unit cannot make a Ranged Attack this turn (including by using the ballista), but this ability can be used while Engaged. Once per turn during the Ranged Phase, an ally (including this unit) adjacent to the ballista may fire it instead of making its usual Ranged Attack. If it does so, that unit cannot make a Ranged Attack in the following turn. The ballista functions as a Crossbow, but its attacks are always rolled with Advantage. During the Cast Phase, this unit may pick up the ballista if it is within 1" of it. If it does so, no other ability can be used this turn. The ballista can then be placed down again in a future turn.
+### Place Barricade
+*Inherent*
+
+Ability: This unit has the ability to place down a 1.5" high, 3" wide, 1" thick barricade once per game. This happens during the Cast Phase. If this unit does so, place the item within 1" of it. This unit cannot make a Ranged Attack this turn, but this ability can be used while Engaged. The barricade cannot be moved afterwards.
 ### Berserker
 *Inherent*
 
-At the end of the Engage Phase, if there is an enemy within Line-of-Sight and Engage range, this unit attempts to Engage the closest such unit.
+At the end of the Engage Phase, if there is an enemy within Line-of-Sight and Engage range and this unit has not already attempted to Engage, this unit attempts to Engage the closest such unit.
 ### Deathwish
 *Inherent*
 
-This unit cannot equip Armour, Shields, or Ranged Weapons.
+This unit cannot equip or use Armour, Shields, or Ranged Weapons.
 ### Fear
 *Morale*
 
@@ -56,10 +64,6 @@ This unit causes Fear.
 *Agility*
 
 This unit may never pick up Treasure tokens. After unit deployment, but before any player takes their first turn, this unit may perform a Move. If multiple players have units with this skill, resolve it in turn order.
-### Apprentice Builder
-*Inherent*
-
-This unit has the ability to place down a 3" ladder once per game. This happens during the Cast Phase. If this unit does so, place the ladder within 1" of it. It cannot make a Ranged Attack this turn. The ladder cannot be moved afterwards.
 
 ## Equipment
 
@@ -83,7 +87,6 @@ Melee-Focused equipment for the unit types: Chieftain, Builder, Hellion, Berserk
 | ------ | --- | ---- |
 | Light Armour | 1 | 10 |
 | Heavy Armour | 2 | 20 |
-| Mithril Armour | 3 | 40 |
 
 ### General Warriors Equipment 
 General Warriors equipment for the unit types: Miner, Veteran
@@ -108,7 +111,6 @@ General Warriors equipment for the unit types: Miner, Veteran
 | ------ | --- | ---- |
 | Light Armour | 1 | 10 |
 | Heavy Armour | 2 | 20 |
-| Mithril Armour | 3 | 40 |
 
 ### Ranged Weapon Effects
 #### Long Reload 

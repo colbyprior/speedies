@@ -134,7 +134,7 @@ This weapon may be used with a Shield.
 | Bless Weapon | 7 | Ongoing. The caster gains Advantage on all Melee Checks. |
 | Divine Fervour | 11 | Reduce any Injury results against allies within 5" of the caster (including themselves) by 3 until the start of your next turn. |
 | Holy Smite | 14 | Make a Mishap Roll against all enemies within 3". Add +2 to the Check if the enemy is Undead. |
-| Heal | 5 | Any ally within 5" of the caster (including themselves) removes Dazed or Staggered and regains 1 Wound, up to their maximum. |
+| Heal | 5 | Any ally within 5" of the caster (including themselves) removes Dazed or Weakened and regains 1 Wound, up to their maximum. |
 
 
 ## Skill Table
