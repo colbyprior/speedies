@@ -8,10 +8,5 @@
         "Name": "Heavy Armour", 
         "Defence": "2",
         "Cost": "20"
-      },
-      "Mithril Armour": { 
-        "Name": "Mithril Armour", 
-        "Defence": "3",
-        "Cost": "40"
       }
 }

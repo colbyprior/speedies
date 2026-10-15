@@ -229,7 +229,7 @@
         },
         "Zealots": {
             "Aliases": ["Zealot"],
-            "Melee Weapons": ["Dagger / Club", "Hammer", "Sword / Axe", "Spear", "Torch", "Shield"],
+            "Melee Weapons": ["Dagger", "Hammer / Club", "Sword / Axe", "Spear", "Torch", "Shield"],
             "Ranged Weapons": ["Crossbow"],
             "Armour": ["Light Armour"]
         }

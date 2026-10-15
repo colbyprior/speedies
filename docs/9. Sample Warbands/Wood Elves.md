@@ -24,7 +24,7 @@ Total Cost: 229
 
 | Number of Units | Unit               | Melee Slot | Flex Slot | Unit Cost | Equipment Cost | Total Cost per Unit | Total Cost |
 | --------------- | ------------------ | ---------- | --------- | --------- | -------------- | ------------------- | ---------- |
-| 2               | Citizen            | Dagger     | Bow       | 45        | 712            | 57                  | 114        |
+| 2               | Citizen            | Dagger     | Bow       | 45        | 12             | 57                  | 114        |
 | 1               | Scout              | Sword      | Sword     | 60        | 10             | 70                  | 70         |
 | 3               | Woodland Creatures | -          | -         | 15        | 0              | 15                  | 45         |
 

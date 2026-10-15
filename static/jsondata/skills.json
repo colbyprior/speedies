@@ -15,7 +15,7 @@
     "Description": "At the end of your opponent's Move Phase, if this unit is not carrying a Treasure, it can be bribed to switch sides. If your opponent has a unit with Treasure within 2\" of this unit, your opponent can make this unit make a Morale Check. On a failure, this unit takes the Treasure and is now under your opponent's conrol for the remainder of the battle. If it was Engaged with an enemy unit, it is no longer Engaged with them. If this unit has a Treasure at the end of the battle, it is lost."
   },
   "Stupor": { 
-    "Name": "Stupor", 
+    "Name": "Stupor",
     "Type": "Inherent", 
     "Description": "When this unit attempts to Engage, make a Morale Check. On a failure, the Engage fails and the unit moves 5\" away from the target."
   },
@@ -64,6 +64,11 @@
     "Type": "Defence", 
     "Description": "If this unit is using a Shield, it gains one additional Attack in Melee."
   },
+ "Heroic": { 
+    "Name": "Heroic", 
+    "Type": "Defence", 
+    "Description": "If this unit would ever be Incapacitated by a Ranged Attack, it is Stunned instead."
+  },
   "Drag You Down": { 
     "Name": "Drag You Down", 
     "Type": "Melee", 
@@ -94,15 +99,10 @@
     "Type": "Morale", 
     "Description": "This unit's single target Spells have their range increased by 5\"."
   },
-  "Sneaky": { 
-    "Name": "Sneaky", 
-    "Type": "Agility", 
-    "Description": "This unit makes Out-of-Sight Rolls with Advantage."
-  },
   "Thief": { 
     "Name": "Thief", 
     "Type": "Agility", 
-    "Description": "This unit has Advantage on Morale Checks to pick up contested Treasure. It also ignores the Slowed penalty for carrying Treasure."
+    "Description": "This unit has Advantage on Morale Checks to pick up contested Treasure. It also cannot be Slowed."
   },
   "Coup de Grace": { 
     "Name": "Coup de Grace", 
@@ -152,12 +152,12 @@
   "Sprint": { 
     "Name": "Sprint", 
     "Type": "Agility", 
-    "Description": "This unit has +3\" to its Move speed."
+    "Description": "If this unit is not Slowed, it has +3\" to its Move speed."
   },
   "Stand Firm": { 
     "Name": "Stand Firm", 
     "Type": "Defence", 
-    "Description": "This unit cannot be Staggered and is immune to Fear."
+    "Description": "This unit cannot be Weakened and is immune to Fear."
   },
   "Guardian": { 
     "Name": "Guardian", 
@@ -259,25 +259,30 @@
     "Type": "Inherent",
     "Description": "When fighting Unarmed, targets roll their Defence Check with Disadvantage."
   },
-  "Builder": {
-    "Name": "Builder",
+  "Place Ballista": {
+    "Name": "Place Ballista",
     "Type": "Inherent",
-    "Description": "This unit has the ability to place down three items, each once per game. This happens during the Cast Phase. If this unit does so, place the item within 1\" of it. It cannot make a Ranged Attack this turn. One can be placed per turn and cannot be moved afterwards, unless noted otherwise. Ladder: This unit may place a 3\" ladder down. Barricade: This unit may place a 1.5\" high, 3\" wide barricade down. It should block line of sight and not be too thick. Ballista: This unit may place a ballista down. Once per turn during the Ranged Phase, an ally (including this unit) adjacent to the ballista may fire it instead of making its usual Ranged Attack. The ballista has the stats of a Crossbow, but is always rolled with Advantage. During the Cast Phase, this unit may pack up the ballista if it is within 1\" of it. If it does so, no other item can be placed down this turn. The ballista can then be placed down again in a future turn."
+    "Description": "Ability: This unit has the ability to place down a ballista once per game. This happens during the Cast Phase. If this unit does so, place the item within 1\" of it. The unit cannot make a Ranged Attack this turn (including by using the ballista), but this ability can be used while Engaged. Once per turn during the Ranged Phase, an ally (including this unit) adjacent to the ballista may fire it instead of making its usual Ranged Attack. If it does so, that unit cannot make a Ranged Attack in the following turn. The ballista functions as a Crossbow, but its attacks are always rolled with Advantage. During the Cast Phase, this unit may pick up the ballista if it is within 1\" of it. If it does so, no other ability can be used this turn. The ballista can then be placed down again in a future turn."
   },
-  "Apprentice Builder": {
-    "Name": "Apprentice Builder",
+  "Place Barricade": {
+    "Name": "Place Barricade",
     "Type": "Inherent",
-    "Description": "This unit has the ability to place down a 3\" ladder once per game. This happens during the Cast Phase. If this unit does so, place the ladder within 1\" of it. It cannot make a Ranged Attack this turn. The ladder cannot be moved afterwards."
+    "Description": "Ability: This unit has the ability to place down a 1.5\" high, 3\" wide, 1\" thick barricade once per game. This happens during the Cast Phase. If this unit does so, place the item within 1\" of it. This unit cannot make a Ranged Attack this turn, but this ability can be used while Engaged. The barricade cannot be moved afterwards."
+  },
+  "Place Ladder": {
+    "Name": "Place Ladder",
+    "Type": "Inherent",
+    "Description": "Ability: This unit has the ability to place down a 3\" ladder once per game. This happens during the Cast Phase. If this unit does so, place the ladder within 1\" of it. This unit cannot make a Ranged Attack this turn, but this ability can be used while Engaged. The ladder cannot be moved afterwards."
   },
   "Berserker": {
     "Name": "Berserker",
     "Type": "Inherent",
-    "Description": "At the end of the Engage Phase, if there is an enemy within Line-of-Sight and Engage range, this unit attempts to Engage the closest such unit."
+    "Description": "At the end of the Engage Phase, if there is an enemy within Line-of-Sight and Engage range and this unit has not already attempted to Engage, this unit attempts to Engage the closest such unit."
   },
   "Deathwish": {
     "Name": "Deathwish",
     "Type": "Inherent",
-    "Description": "This unit cannot equip Armour, Shields, or Ranged Weapons."
+    "Description": "This unit cannot equip or use Armour, Shields, or Ranged Weapons."
   },
   "Spread Blight (Major)": {
     "Name": "Spread Blight (Major)",
@@ -297,7 +302,7 @@
   "Pit Fighter": {
     "Name": "Pit Fighter",
     "Type": "Inherent",
-    "Description": "When recovering, this unit goes from Stunned straight to Staggered."
+    "Description": "When recovering, this unit goes from Stunned straight to Weakened."
   },
   "Raise Ally": {
     "Name": "Raise Ally",
@@ -317,7 +322,7 @@
   "Undead": {
     "Name": "Undead",
     "Type": "Inherent",
-    "Description": "This unit may not be slowed. When Engaging, this unit has a bonus +3\" to its Move speed. If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to the Blight."
+    "Description": "This unit may not have its Move reduced below its base Move. When Engaging, this unit has a bonus +3\" to its Move speed (which can be reduced). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to the Blight."
   },
    "Follower": {
     "Name": "Follower",
@@ -332,7 +337,7 @@
    "Lumbering": {
     "Name": "Lumbering",
     "Type": "Inherent",
-    "Description": "This unit may not be Slowed. When Engaging, this unit has a bonus +3\" to its Move speed."
+    "Description": "This unit may not have its Move reduced below its base Move. When Engaging, this unit has a bonus +3\" to its Move speed (which can be reduced)."
   },
   "Standard Bearer": {
     "Name": "Standard Bearer",
@@ -387,7 +392,7 @@
   "Mark Target": {
     "Name": "Mark Target",
     "Type": "Inherent",
-    "Description": "Once per Ranged Phase, instead of making a Ranged Attack, this unit may instead Mark an enemy unit within 10\" (and within line-of-sight) until the start of the next turn. A unit that is Marked can be targeted by Ranged Attacks even when the unit is Engaged, but cannot be Protected from such Ranged Attacks."
+    "Description": "Ability: Once per Cast Phase, this unit may instead Mark an enemy unit within 10\" (and within line-of-sight) until the start of the next turn. A unit that is Marked can be targeted by Ranged Attacks even when the unit is Engaged, but cannot be Protected from such Ranged Attacks. If this ability is used, this unit may not make a Ranged Attack this turn. This ability can be used while Engaged."
   },
   "Vanguard": {
     "Name": "Vanguard",
@@ -397,7 +402,7 @@
     "Madness": {
     "Name": "Madness",
     "Type": "Inherent",
-    "Description": "This unit makes all Morale Checks with Disadvantage."
+    "Description": "This unit makes all Morale Checks (except Rout Checks) with Disadvantage."
   },
   "Hunger": {
     "Name": "Hunger",
@@ -417,12 +422,12 @@
   "Steal": {
     "Name": "Steal",
     "Type": "Inherent",
-    "Description": "If this unit ends its Move within 1\" of an enemy carrying Treasure, it may make an Agility Check. On a success, it takes the Treasure from that unit."
+    "Description": "If this unit ends its Move within 5\" of an enemy carrying Treasure, it may make an Agility Check. On a success, it takes the Treasure from that unit."
   },
   "Slippery": {
     "Name": "Slippery",
     "Type": "Inherent",
-    "Description": "."
+    "Description": "The Shady Merchant will never Engage another unit and will always Move on his turn. All attacks against him are made with Disadvantage. He automatically disengages at the end of each melee phase, moving 1” directly away from units he is Engaged to."
   },
   "High Mage": {
     "Name": "High Mage",
