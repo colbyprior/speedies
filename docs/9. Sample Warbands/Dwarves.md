@@ -5,7 +5,7 @@ sidebar_position: 1
 
 Grand Total Cost: 500
 
-A balanced build. The Berserker and Chieftain's Pistol could be dropped in favour of a Miner with a Crossbow. It's also possible to stretch for a Blunderbuss for the existing Veteran.
+A balanced build. The Berserker and Chieftain's Pistol could be dropped in favour of a Miner with a Crossbow. It's also possible to stretch for a Blunderbuss for the Veteran.
 ## Heroes
 
 Total Cost: 275
@@ -23,6 +23,5 @@ Total Cost: 225
 | Number of Units | Unit      | Melee Slot | Flex Slot | Unit Cost | Equipment Cost | Total Cost per Unit | Total Cost |
 | --------------- | --------- | ---------- | --------- | --------- | -------------- | ------------------- | ---------- |
 | 1               | Berserker | Axe        | Axe       | 55        | 10             | 65                  | 65         |
-| 1               | Youngling | Axe        | Shield    | 30        | 10             | 40                  | 40         |
-| 1               | Miner     | Hammer     | Shield    | 45        | 10             | 55                  | 55         |
-| 1               | Runner    | Hammer     | Shield    | 55        | 10             | 65                  | 65         |
+| 2               | Miner     | Hammer     | Shield    | 40        | 10             | 50                  | 100        |
+| 1               | Runner    | Hammer     | Shield    | 50        | 10             | 60                  | 60         |
