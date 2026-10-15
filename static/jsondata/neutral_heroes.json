@@ -23,7 +23,7 @@
     "Event": [
       "Place the Vampire in a random building on the highest floor."
     ],
-    "Logic": [
+    "Behaviour": [
       "The Vampire Targets the nearest unit that is not Undead or an animal and performs Normal Actions.",
       "Where possible, the Vampire will prefer to make attempt diving charges and out of sight rolls."
     ],
@@ -33,13 +33,13 @@
   },
   "Hunter": {
     "Type": "Hero",
-    "Move": "9",
+    "Move": "8",
     "Piercing": "3",
     "Injury": "0",
     "Melee": "12",
     "Ranged": "12",
-    "Defence": "18",
-    "Wounds": "1",
+    "Defence": "14",
+    "Wounds": "2",
     "Agility": "10",
     "Attacks": "2",
     "Morale": "10",
@@ -55,7 +55,7 @@
     "Event": [
       "Place the Hunter in a random unoccupied building on the top floor."
     ],
-    "Logic": [
+    "Behaviour": [
       "The Hunter Targets the nearest unit carrying a Treasure, otherwise the nearest Undead or Blighted unit.",
       "The Hunter holds position and shoots, Moving only to regain Line-of-Sight to his Target."
     ],
@@ -65,14 +65,14 @@
   },
   "Blight Prophet": {
     "Type": "Hero",
-    "Move": "9",
+    "Move": "11",
     "Piercing": "0",
     "Injury": "0",
     "Melee": "15",
     "Ranged": "-",
     "Defence": "18",
     "Wounds": "2",
-    "Agility": "10",
+    "Agility": "8",
     "Attacks": "1",
     "Morale": "10",
     "Skills": "Gift of Blight",
@@ -87,12 +87,12 @@
     "Event": [
       "Place the Blight Prophet within 3\" of the Event chest."
     ],
-    "Logic": [
+    "Behaviour": [
       "The Blight Prophet casts Gift of Blight every turn, even if it would only catch allies.",
       "If the Blight Prophet is Incapacitated he automatically casts Gift of Blight."
     ],
     "Patronage": [
-      "Ensure three units contract the Blight from the Blight Prophet."
+      "Ensure three enemy units contract the Blight this battle."
     ]
   },
   "Inquisitor": {
@@ -103,7 +103,7 @@
     "Melee": "14",
     "Ranged": "-",
     "Defence": "12",
-    "Wounds": "1",
+    "Wounds": "2",
     "Agility": "10",
     "Attacks": "1",
     "Morale": "10",
@@ -119,8 +119,8 @@
     "Event": [
       "Place the Inquisitor on a random edge of the nearest building to the Event chest."
     ],
-    "Logic": [
-      "If the Inquisitor starts his turn next to a unit with the Blight, he will stay and cast Cure Blight.",
+    "Behaviour": [
+      "If the Inquisitor starts his turn within 5\" of a unit with the Blight, he will stay and cast Cure Blight.",
       "Otherwise, each turn the Inquisitor will move towards the nearest building and light it on fire."
     ],
     "Patronage": [
@@ -129,14 +129,14 @@
   },
   "Shady Merchant": {
     "Type": "Hero",
-    "Move": "9",
+    "Move": "10",
     "Piercing": "3",
     "Injury": "0",
     "Melee": "14",
     "Ranged": "14",
     "Defence": "18",
     "Wounds": "1",
-    "Agility": "10",
+    "Agility": "6",
     "Attacks": "2",
     "Morale": "10",
     "Skills": "Steal, Slippery",
@@ -146,11 +146,11 @@
     "Species": "",
     "Position": "Shady Merchant",
     "Melee Weapon": "Sword x2",
-    "Ranged Weapon": "Crossbow",
+    "Ranged Weapon": "",
     "Event": [
       "Place the Shady Merchant on the board edge nearest the Treasure token furthest from the Event chest."
     ],
-    "Logic": [
+    "Behaviour": [
       "Each turn the Shady Merchant Moves towards the nearest unit carrying Treasure and attempts to Steal it.",
       "If the Shady Merchant is carrying Treasure he instead Retreats, leaving the game once he reaches a board edge."
     ],
@@ -169,7 +169,7 @@
     "Wounds": "1",
     "Agility": "10",
     "Attacks": "2",
-    "Morale": "7",
+    "Morale": "10",
     "Skills": "Pit Fighter",
     "Cost": "80",
     "Neutral Support Cost": "80",
@@ -185,7 +185,7 @@
       "If you lose: If the unit is a hero, it’s now in the Pits! It will replace the current Pit Fighter as the Pit Fighter Neutral Hero until it can escape (see the 'Pit Fight' Scar Table entry for more information). The Pit Fighter is removed from the board with the Treasure."
 
     ],
-    "Logic": [
+    "Behaviour": [
     ],
     "Patronage": [
       "Defeat the Pit Fighter in combat a second time."
@@ -196,21 +196,21 @@
     "Move": "9",
     "Piercing": "0",
     "Injury": "0",
-    "Melee": "14",
-    "Ranged": "14",
-    "Defence": "14",
-    "Wounds": "1",
+    "Melee": "12",
+    "Ranged": "-",
+    "Defence": "18",
+    "Wounds": "2",
     "Agility": "10",
     "Attacks": "1",
     "Morale": "10",
-    "Skills": "Elf, High Mage",
+    "Skills": "High Mage",
     "Cost": "40",
     "Neutral Support Cost": "40",
     "Opposed": "Necromancer",
     "About": "An elven archmage who holds his ground and lets the weather do the killing.",
     "Species": "Elf",
     "Position": "High Mage",
-    "Melee Weapon": "Staff, Stoneskin (+4 Def, always active)",
+    "Melee Weapon": "Staff",
     "Ranged Weapon": "",
     "Spells": [
       {
@@ -247,23 +247,22 @@
       "Otherwise — Flood."
     ],
     "Event": [
-      "Place the High Mage in the centre of the map."
+      "Place the High Mage in the centre of a random board edge."
     ],
-    "Logic": [
-      "The High Mage will not move from his position.",
-      "During the Cast Phase the High Mage makes a Morale Check. If he passes, consult the Cast Priority on his Spells card."
+    "Behaviour": [
+      "During the Cast Phase the High Mage makes a Morale Check. If he passes, consult the Cast Priority on his Spells card.",
+      "Once per turn you may assist the High Mage in the cast phase within 5\" of him. This will give him advantage on his next spellcasting check."
     ],
     "Patronage": [
-      "Once per turn you may assist the High Mage with a Morale Check made within 2\" of him.",
-      "Assist him three times to gain Patronage."
+      "If the High Mage successfully casts 4 spells this game to gain Patronage."
     ]
   },
   "Necromancer": {
     "Type": "Hero",
-    "Move": "7",
-    "Piercing": "3",
-    "Injury": "3",
-    "Melee": "9",
+    "Move": "9",
+    "Piercing": "0",
+    "Injury": "0",
+    "Melee": "12",
     "Ranged": "-",
     "Defence": "18",
     "Wounds": "2",
@@ -277,7 +276,7 @@
     "About": "A grave-robber turned conjuror, dragging the city's dead back onto their feet.",
     "Species": "",
     "Position": "Necromancer",
-    "Melee Weapon": "Great Sword",
+    "Melee Weapon": "Staff",
     "Ranged Weapon": "",
     "Minions": [
       {
@@ -299,10 +298,10 @@
       }
     ],
     "Event": [
-      "Place the Necromancer in the building closest to the centre of the map, along with one Zombie."
+      "Place the Necromancer in the building closest to the centre of the map, along with one Zombie (this Zombie does not count towards the Patronage)."
     ],
-    "Logic": [
-      "The Necromancer Moves at half speed away from the nearest hostile unit.",
+    "Behaviour": [
+      "The Necromancer moves at full speed away from the nearest hostile unit.",
       "If any unit was Incapacitated since his last turn, the Necromancer summons a Zombie."
     ],
     "Patronage": [

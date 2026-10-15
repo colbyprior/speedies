@@ -448,16 +448,16 @@ export function generateWarbandPDF(data) {
 
 // ── Card-format PDF export ────────────────────────────────────────────────────
 //
-// Layout: 3×3 grid of 63×88mm poker-sized cards on A4 portrait.
+// Layout: 3×2 grid of 70×121mm Tarot-sized cards on A4 portrait.
 // Cut guides are drawn as thin dashed lines between cards.
 
-const CC_W    = 63    // card width mm
-const CC_H    = 88    // card height mm
+const CC_W    = 70    // card width mm (2.75")
+const CC_H    = 121   // card height mm (4.75")
 const CC_COLS = 3
-const CC_ROWS = 3
-const CC_ML   = (210 - CC_COLS * CC_W) / 2   // 10.5mm left margin
-const CC_MT   = (297 - CC_ROWS * CC_H) / 2   // 16.5mm top margin
-const CC_PAD  = 2.5   // inner horizontal/vertical padding mm
+const CC_ROWS = 2
+const CC_ML   = (210 - CC_COLS * CC_W) / 2   // left margin
+const CC_MT   = (297 - CC_ROWS * CC_H) / 2   // top margin
+const CC_PAD  = 3.5   // inner horizontal/vertical padding mm (increased for larger cards)
 
 // Stat col width for 10-column stat rows (warband sheet)
 const CC_SC = CC_W / 10
@@ -469,12 +469,11 @@ const CC_STAT_KEYS   = ['mov', 'mel', 'rgd', 'def', 'agi', 'mrl', 'atk', 'wnd', 
 const CC_STAT_LABELS = ['Mov', 'Mel', 'Rgd', 'Def', 'Agi', 'Mrl', 'Atk', 'Wnd', 'Inj', 'Prc']
 const CC_STAT_COL    = CC_W / CC_STAT_KEYS.length   // 6.3mm
 
-// Type sizes for the stat grid. Labels at 6pt leave ~1.9mm of slack in a column;
-// values at 8pt are the largest that sit comfortably in CC_VAL_H.
-const CC_LBL_FS = 6
-const CC_VAL_FS = 8
-const CC_LBL_H  = 3.4   // header / equipment-name bar
-const CC_VAL_H  = 4.4   // value row
+// Type sizes for the stat grid. Increased for Tarot-sized cards.
+const CC_LBL_FS = 7     // label font size (increased from 6)
+const CC_VAL_FS = 9.5   // value font size (increased from 8)
+const CC_LBL_H  = 4.2   // header / equipment-name bar (increased from 3.4)
+const CC_VAL_H  = 5.5   // value row (increased from 4.4)
 
 // ── Warband sigils ────────────────────────────────────────────────────────────
 //
@@ -666,7 +665,7 @@ function ccHeader(doc, x, y, text, accent, h = 8, sigil = null, badge = null) {
   let badgeW = 0
   if (badge) {
     doc.setFont('times', 'bold')
-    doc.setFontSize(7)
+    doc.setFontSize(9)  // increased from 7 for larger cards
     doc.setTextColor(BONE[0], BONE[1], BONE[2])
     doc.text(String(badge), x + CC_W - CC_PAD - sigilSz - 1.6, y + band / 2,
              { align: 'right', baseline: 'middle' })
@@ -674,7 +673,7 @@ function ccHeader(doc, x, y, text, accent, h = 8, sigil = null, badge = null) {
     avail -= badgeW
   }
 
-  const CS = 0.4
+  const CS = 0.5  // increased char spacing from 0.4
   doc.setFont('times', 'bold')
   doc.setTextColor(BONE[0], BONE[1], BONE[2])
   doc.setCharSpace(CS)
@@ -682,9 +681,9 @@ function ccHeader(doc, x, y, text, accent, h = 8, sigil = null, badge = null) {
   // Shrink rather than clip — the sigils leave a narrow slot for long names.
   // getTextWidth ignores char spacing, so add it back or the title runs long.
   const widthOf = t => doc.getTextWidth(t) + CS * Math.max(0, t.length - 1)
-  let fs = 8
+  let fs = 10  // increased from 8 for larger cards
   doc.setFontSize(fs)
-  while (fs > 5 && widthOf(label) > avail) {
+  while (fs > 6 && widthOf(label) > avail) {  // min size increased from 5 to 6
     fs = Math.round((fs - 0.2) * 10) / 10
     doc.setFontSize(fs)
   }
@@ -1375,19 +1374,19 @@ function renderSpellCards(data) {
 // a neutral hero actually needs in play: no Blight / Deathtouched boxes (those
 // are tracked on the campaign roster, not on a shared deck card) and no type
 // line under the name — "Hero: Vampire" only repeats the banner — in exchange for
-// the three blocks that drive the hero when it turns up: Event, Logic, Patronage.
+// the three blocks that drive the hero when it turns up: Event, Behaviour, Patronage.
 
 // Body text is set at the largest of these that keeps a hero on a single card;
 // anything that still won't fit flows onto a continuation card.
-const NH_SIZES   = [6, 5.6, 5.2, 4.8]
-const NH_HEAD_H  = 8                  // name banner
-const NH_COST_H  = 4.4                // hire-cost strip
-const NH_BAR_H   = 3.5                // section bar
-const NH_BAR_FS  = 4.5
-const NH_GAP     = 1.2                // breathing room between blocks
-const NH_IND     = 2.2                // text indent past a bullet marker
-const NH_STEP_IND = 2.6               // further indent past a step number
-const NH_CHIP_W  = 7.5                // roll-range chip on a spell table row
+const NH_SIZES   = [7.5, 7, 6.5, 6]  // font sizes for content (increased from [6, 5.6, 5.2, 4.8])
+const NH_HEAD_H  = 10                 // name banner (increased from 8)
+const NH_COST_H  = 5.5                // hire-cost strip (increased from 4.4)
+const NH_BAR_H   = 4.5                // section bar (increased from 3.5)
+const NH_BAR_FS  = 5.5                // section bar font size (increased from 4.5)
+const NH_GAP     = 1.8                // breathing room between blocks (increased from 1.2)
+const NH_IND     = 2.8                // text indent past a bullet marker (increased from 2.2)
+const NH_STEP_IND = 3.2               // further indent past a step number (increased from 2.6)
+const NH_CHIP_W  = 9                  // roll-range chip on a spell table row (increased from 7.5)
 
 // Tinted full-width bar introducing a block of card text
 function ccSectionBar(doc, x, cy, label, bg) {
@@ -1679,7 +1678,7 @@ function buildNeutralHeroCardDrawFns(hero) {
       }
     }
 
-    for (const [label, key] of [['Event', 'event'], ['Logic', 'logic'], ['Patronage', 'patronage']]) {
+    for (const [label, key] of [['Event', 'event'], ['Behaviour', 'behaviour'], ['Patronage', 'patronage']]) {
       const entries = (hero[key] || []).filter(Boolean)
       if (!entries.length) continue
       blocks.push(sectionBar(label))

@@ -108,7 +108,7 @@ def generate_neutral_heroes():
 
         # How the Hero arrives, how it behaves once it's there, and what the
         # warband has to do for it — the same three blocks printed on its card.
-        for section in ("Event", "Logic", "Patronage"):
+        for section in ("Event", "Behaviour", "Patronage"):
             points = hero.get(section) or []
             if not points:
                 continue

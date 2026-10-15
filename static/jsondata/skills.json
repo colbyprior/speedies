@@ -422,12 +422,7 @@
   "Slippery": {
     "Name": "Slippery",
     "Type": "Inherent",
-    "Description": "Enemy units have Disadvantage on Agility Checks made to Intercept this unit."
-  },
-  "Elf": {
-    "Name": "Elf",
-    "Type": "Inherent",
-    "Description": "Elves can Jump Across to a maximum distance of 6\", instead of the usual 3\"."
+    "Description": "."
   },
   "High Mage": {
     "Name": "High Mage",

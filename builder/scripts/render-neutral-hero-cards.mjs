@@ -89,7 +89,7 @@ function buildNeutralHero(name, hero) {
     })),
     cast_priority: hero['Cast Priority'] || [],
     event:      hero.Event     || [],
-    logic:      hero.Logic     || [],
+    behaviour:  hero.Behaviour || [],
     patronage:  hero.Patronage || [],
     // Summoned units are not hired, so their card names their summoner instead
     minions: (hero.Minions || []).map(minion => ({
