@@ -211,13 +211,13 @@
     "Equipment": {
         "Heroes": {
             "Aliases": ["Assassin", "Enforcer", "Ratlock", "Guildmaster"],
-            "Melee Weapons": ["Dagger / Club", "Hammer", "Sword / Axe", "Spear / Staff", "Glaive", "Flail", "Fighting Claws", "Shield"],
+            "Melee Weapons": ["Dagger", "Hammer / Club", "Sword / Axe", "Spear / Staff", "Glaive", "Flail", "Fighting Claws", "Shield"],
             "Ranged Weapons": ["Throwing Stars", "Pistol"],
             "Armour": ["Light Armour"]
         },
         "Rat Underlings": {
             "Aliases": ["Underrat", "Blight Host"],
-            "Melee Weapons": ["Dagger / Club", "Hammer", "Sword / Axe", "Spear", "Pike", "Shield"],
+            "Melee Weapons": ["Dagger", "Hammer / Club", "Sword / Axe", "Spear", "Pike", "Shield"],
             "Ranged Weapons": ["Sling"],
             "Armour": []
         }
