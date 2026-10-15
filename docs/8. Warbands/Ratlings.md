@@ -12,7 +12,7 @@ RAT
 
 ## Special Rules
 ### Ratling Initiation
-When a henchmen promotes they gain the ability to use any piece of equipment that the other heroes can use.
+When a henchmen promotes they gain the ability to use any piece of equipment that other heroes can use.
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
@@ -70,13 +70,14 @@ Heroes equipment for the unit types: Assassin, Enforcer, Ratlock, Guildmaster
 
 | Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
-| Dagger / Club | 0 | 0 | 0 |  | 2 | 1 |
-| Hammer | 0 | 4 | 0 |  | 5 | 1 |
+| Dagger | 0 | 0 | 0 |  | 2 | 1 |
+| Hammer / Club | 0 | 4 | 0 |  | 5 | 1 |
 | Sword / Axe | 0 | 0 | 3 |  | 5 | 1 |
 | Spear / Staff | 2 | 0 | 0 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
 | Glaive | 4 | 3 | 3 |  | 10 | 2 |
 | Flail | 4 | 7 | 0 |  | 10 | 2 |
 | Fighting Claws | 0 | 0 | 3 | +1 Attack. This unit makes Climb Checks with Advantage. | 20 | 2 |
+| Shield | 0 | 0 | 0 | +4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
 | Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |
 | ------------- | --- | --- | --- | ------ | ---- | ----- |
@@ -92,8 +93,8 @@ Rat Underlings equipment for the unit types: Underrat, Blight Host
 
 | Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
-| Dagger / Club | 0 | 0 | 0 |  | 2 | 1 |
-| Hammer | 0 | 4 | 0 |  | 5 | 1 |
+| Dagger | 0 | 0 | 0 |  | 2 | 1 |
+| Hammer / Club | 0 | 4 | 0 |  | 5 | 1 |
 | Sword / Axe | 0 | 0 | 3 |  | 5 | 1 |
 | Spear | 2 | 0 | 0 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
 | Pike | 6 | 3 | 0 |  | 10 | 2 |
@@ -121,7 +122,7 @@ Whenever a 1 is rolled during a Ranged Attack, the weapon misfires. Immediately 
 | ---- | ------ | ---- |
 | Blight Bolt | 12 | Cast Attack. Target one unit you can see within 10" and perform a Cast Attack against them. On a success, the target makes a Blight Check. |
 | Swarm of Rats | 15 | Cast Attack. Choose the closest enemy within 10". Make a Cast Attack against the target. If you succeed, make a Mishap Roll against all units within 1.5" of it. |
-| Sewer Filth | 12 | Basic. Target one unit you can see within 20". The target is Dazed. |
+| Sewer Filth | 13 | Basic. Target one unit you can see within 20". The target is Dazed. |
 | Pounce | 10 | The caster gains 2 Attacks and +3 Injury until the end of this turn. They may immediately make an Engage action, unless they are already Engaged. |
 | Rat Rage | 7 | Ongoing. Upon casting and at the start of each turn, any Giant Rats within 5" of the caster gain Fear for the round. |
 

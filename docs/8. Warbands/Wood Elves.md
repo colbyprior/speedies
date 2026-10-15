@@ -18,7 +18,7 @@ Elves can Jump Across to a maximum distance of 6", instead of the usual 3".
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
 | Commander | 10 | 12 | 12 | 16 | 5| 6 | 1 | 1 | 0 | 0 | [Leader](#leader) | 95 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Agility,Morale) |
 | Mage | 10 | 13 | - | 18 | 6| 7 | 1 | 1 | 0 | 0 | [Arcane Magic](#arcane-magic) | 70 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Agility,Morale) |
-| Honour Guard | 10 | 12 | 13 | 16 | 6| 7 | 1 | 1 | 0 | 0 |  | 80 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale) |
+| Honour Guard | 10 | 12 | 13 | 16 | 6| 7 | 1 | 1 | 0 | 0 |  | 75 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Agility,Morale) |
 | Ranger | 10 | 13 | 12 | 18 | 6| 7 | 1 | 1 | 0 | 0 | [Vanguard](#vanguard) | 75 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
 
 ## Henchmen
@@ -45,7 +45,7 @@ This unit may never pick up Treasure tokens. After unit deployment, but before a
 ### Mark Target
 *Inherent*
 
-Once per Ranged Phase, instead of making a Ranged Attack, this unit may instead Mark an enemy unit within 10" (and within line-of-sight) until the start of the next turn. A unit that is Marked can be targeted by Ranged Attacks even when the unit is Engaged, but cannot be Protected from such Ranged Attacks.
+Ability: Once per Cast Phase, this unit may instead Mark an enemy unit within 10" (and within line-of-sight) until the start of the next turn. A unit that is Marked can be targeted by Ranged Attacks even when the unit is Engaged, but cannot be Protected from such Ranged Attacks. If this ability is used, this unit may not make a Ranged Attack this turn. This ability can be used while Engaged.
 ### Follower
 *Inherent*
 
@@ -61,7 +61,7 @@ This unit causes Fear.
 ### Lumbering
 *Inherent*
 
-This unit may not be Slowed. When Engaging, this unit has a bonus +3" to its Move speed.
+This unit may not have its Move reduced below its base Move. When Engaging, this unit has a bonus +3" to its Move speed (which can be reduced).
 ### Large
 *Inherent*
 
@@ -81,7 +81,7 @@ Wood Elf equipment for the unit types: Commander, Mage, Honour Guard, Ranger, Ci
 | Dagger | 0 | 0 | 0 |  | 2 | 1 |
 | Spear / Staff | 2 | 0 | 0 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
 | Sword | 0 | 0 | 3 |  | 5 | 1 |
-| Glaive | 4 | 3 | 3 |  | 10 | 2 |
+| Glaive / Great Sword | 4 | 3 | 3 |  | 10 | 2 |
 | Shield | 0 | 0 | 0 | +4 Def. Cannot be used to attack. Cannot be equipped with a Ranged Weapon that is not 'Light' or without a Melee Weapon. | 5 | 1 |
 
 | Ranged Weapon | Rng | Inj | Prc | Special Rules | Cost | Slots |
@@ -104,9 +104,9 @@ This weapon may be used with a Shield.
 | Name | Difficulty | Description |
 | ---- | ------ | ---- |
 | Invisibility | 12 | Ongoing. Choose one ally within 5" (including themselves). This unit is treated as no longer existing for the purposes of targeting or blocking Movement, line-of-sight or picking up Treasure. If it is Engaged, it is no longer Engaged and moves 1". If this unit Engages, casts a Spell, or makes a Ranged attack, the spell ends. |
-| Control Earth | 8 (or higher) | Ongoing. Declare a point within 10". Place a solid platform measuring 2" by 2" by 3" at that point (in any orientation). The terrain must fit within the space. If this is cast on a unit, move that unit directly up to the top of the platform. They must make an immediate Agility Check, falling off of the platform on a fail. The difficulty of the Cast Check increases by 2 for every unit (enemy or ally) that would be moved onto the platform when it is created.  When the spell ends, the platform slowly recedes and units are placed directly down on the ground unharmed. |
+| Control Earth | 8+ | Ongoing. Declare a point within 10". Place a solid platform measuring 2" by 2" by 3" at that point (in any orientation). The terrain must fit within the space. If this is cast on a unit, move that unit directly up to the top of the platform. They must make an immediate Agility Check, falling off of the platform on a fail. The difficulty of the Cast Check increases by 2 for every unit (enemy or ally) that would be moved onto the platform when it is created.  When the spell ends, the platform slowly recedes and units are placed directly down on the ground unharmed. |
 | Root | 11 | Ongoing. Choose one unit within 20". That unit cannot Engage or Move. |
-| Earthquake | 13 | All units within 10" must make an Agility check or become Dazed. |
+| Earthquake | 11 | All units within 5" must pass an Agility Check or make a Mishap Roll. |
 | Magic Arrow | 12 | Basic. Cast Attack. Target one unit you can see within 30" and perform a Cast Attack. |
 
 

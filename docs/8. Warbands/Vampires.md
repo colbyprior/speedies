@@ -34,7 +34,7 @@ Allied, non-animal units within 5" of this unit can use this unit's Morale stat 
 ### Undead
 *Inherent*
 
-This unit may not be slowed. When Engaging, this unit has a bonus +3" to its Move speed. If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to the Blight.
+This unit may not have its Move reduced below its base Move. When Engaging, this unit has a bonus +3" to its Move speed (which can be reduced). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to the Blight.
 ### Fear
 *Morale*
 
@@ -81,8 +81,8 @@ Thralls equipment for the unit types: Thrall
 
 | Melee Weapon | Mel | Inj | Prc | Special Rules | Cost | Slots |
 | ------------ | --- | --- | --- | ------ | ---- | ----- |
-| Dagger / Club | 0 | 0 | 0 |  | 2 | 1 |
-| Hammer | 0 | 4 | 0 |  | 5 | 1 |
+| Dagger | 0 | 0 | 0 |  | 2 | 1 |
+| Hammer / Club | 0 | 4 | 0 |  | 5 | 1 |
 | Sword | 0 | 0 | 3 |  | 5 | 1 |
 | Spear | 2 | 0 | 0 | Cannot be dual-wielded, but may be used with a shield. | 5 | 1 |
 | Great Hammer | 4 | 7 | 0 |  | 10 | 2 |

@@ -432,12 +432,12 @@
   "High Mage": {
     "Name": "High Mage",
     "Type": "Spellcasting",
-    "Description": "The High Mage has the spells listed on his Spells card and must pass a Morale Check to Cast them. If a player has hired him, roll 2d20 and select one of the two results to determine the spell Cast. If he appeared through an Event, use his Cast Priority instead. These spells never affect the High Mage."
+    "Description": "The High Mage has the spells listed on his Spells card. The spells are all difficulty 10 for the High Mage. If a player has hired him, roll 2d20 and select one of the two results to determine the spell Cast. If he appeared through an Event, use his Cast Priority instead. These spells never affect the High Mage."
   },
   "Grave Harvest": {
     "Name": "Grave Harvest",
     "Type": "Inherent",
-    "Description": "If any unit was Incapacitated last turn this unit summons a Zombie, place it adjacent to this unit. A maximum of four Zombies can be active at once."
+    "Description": "Summons a Zombie, place it adjacent to this unit. A maximum of four Zombies can be active at once."
   },
   "Nightfall": {
     "Name": "Nightfall",

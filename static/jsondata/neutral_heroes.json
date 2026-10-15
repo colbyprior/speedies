@@ -11,7 +11,7 @@
     "Agility": "10",
     "Attacks": "2",
     "Morale": "10",
-    "Skills": "Undead, Fear, Nightfall",
+    "Skills": "Heroic, Undead, Fear, Nightfall",
     "Cost": "95",
     "Neutral Support Cost": "95",
     "Opposed": "Hunter",
@@ -43,7 +43,7 @@
     "Agility": "10",
     "Attacks": "2",
     "Morale": "10",
-    "Skills": "Spring Traps",
+    "Skills": "Heroic, Spring Traps",
     "Cost": "60",
     "Neutral Support Cost": "60",
     "Opposed": "Vampire",
@@ -75,7 +75,7 @@
     "Agility": "8",
     "Attacks": "1",
     "Morale": "10",
-    "Skills": "Gift of Blight",
+    "Skills": "Heroic, Gift of Blight",
     "Cost": "45",
     "Neutral Support Cost": "45",
     "Opposed": "Inquisitor",
@@ -107,7 +107,7 @@
     "Agility": "10",
     "Attacks": "1",
     "Morale": "10",
-    "Skills": "Cure Blight",
+    "Skills": "Heroic, Cure Blight",
     "Cost": "90",
     "Neutral Support Cost": "90",
     "Opposed": "Blight Prophet",
@@ -139,7 +139,7 @@
     "Agility": "6",
     "Attacks": "2",
     "Morale": "10",
-    "Skills": "Steal, Slippery",
+    "Skills": "Heroic, Steal, Slippery",
     "Cost": "70",
     "Neutral Support Cost": "70",
     "About": "A merchant of questionable morals who always seems to have exactly what you need... for a price.",
@@ -151,7 +151,7 @@
       "Place the Shady Merchant on the board edge nearest the Treasure token furthest from the Event chest."
     ],
     "Behaviour": [
-      "Each turn the Shady Merchant Moves towards the nearest unit carrying Treasure and attempts to Steal it.",
+      "Each turn the Shady Merchant Moves towards the nearest unit carrying Treasure (friend or foe) and stops to Steal it as soon as he is in range.",
       "If the Shady Merchant is carrying Treasure he instead Retreats, leaving the game once he reaches a board edge."
     ],
     "Patronage": [
@@ -170,7 +170,7 @@
     "Agility": "10",
     "Attacks": "2",
     "Morale": "10",
-    "Skills": "Pit Fighter",
+    "Skills": "Heroic, Pit Fighter",
     "Cost": "80",
     "Neutral Support Cost": "80",
     "About": "A veteran of the pits, hardened by countless brutal fights.",
@@ -179,7 +179,7 @@
     "Melee Weapon": "Sword x2",
     "Ranged Weapon": "",
     "Event": [
-      "Place the Pit Fighter next to the unit that triggered the event. They are now in a Pit Fight.",
+      "Place the Pit Fighter next to the unit that triggered the event. They are now in a Pit Fight, engaged with the Pit Fighter.",
       "No one else can target the Pit Fighter or triggering unit for any purpose, until either unit is Incapacitated, at which point the winner is declared.",
       "You may only align with the Pit Fighter if you defeat him in a Pit Fight.",
       "If you lose: If the unit is a hero, it’s now in the Pits! It will replace the current Pit Fighter as the Pit Fighter Neutral Hero until it can escape (see the 'Pit Fight' Scar Table entry for more information). The Pit Fighter is removed from the board with the Treasure."
@@ -203,7 +203,7 @@
     "Agility": "10",
     "Attacks": "1",
     "Morale": "10",
-    "Skills": "High Mage",
+    "Skills": "Heroic, High Mage",
     "Cost": "40",
     "Neutral Support Cost": "40",
     "Opposed": "Necromancer",
@@ -269,7 +269,7 @@
     "Agility": "10",
     "Attacks": "1",
     "Morale": "10",
-    "Skills": "Grave Harvest",
+    "Skills": "Heroic, Grave Harvest",
     "Cost": "55",
     "Neutral Support Cost": "55",
     "Opposed": "High Mage",
@@ -291,7 +291,7 @@
         "Agility": "16",
         "Attacks": "1",
         "Morale": "16",
-        "Skills": "Undead, Fear, No Equipment, Spread Blight (Minor)",
+        "Skills": "Heroic, Undead, Fear, No Equipment, Spread Blight (Minor)",
         "About": "Shambling dead, raised to shield the Necromancer.",
         "Melee Weapon": "",
         "Ranged Weapon": ""
@@ -302,7 +302,7 @@
     ],
     "Behaviour": [
       "The Necromancer moves at full speed away from the nearest hostile unit.",
-      "If any unit was Incapacitated since his last turn, the Necromancer summons a Zombie."
+      "The Necromancer summons a Zombie each turn."
     ],
     "Patronage": [
       "Ensure the Necromancer summons at least four Zombies this battle."
