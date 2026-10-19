@@ -11,93 +11,152 @@
     "Agility": "10",
     "Attacks": "2",
     "Morale": "10",
-    "Skills": "Undead, Fear, Hunger",
+    "Skills": "Heroic, Undead, Fear, Nightfall",
+    "Cost": "95",
     "Neutral Support Cost": "95",
-    "About": "A vampire stalking the streets of Blightmeer.",
+    "Opposed": "Hunter",
+    "About": "A vampire stalking the streets of Blightmeer, drawing the night in behind him.",
     "Species": "",
     "Position": "Vampire",
     "Melee Weapon": "Dual Swords",
-    "Ranged Weapon": ""
+    "Ranged Weapon": "",
+    "Event": [
+      "Place the Vampire in a random building on the highest floor."
+    ],
+    "Behaviour": [
+      "The Vampire Targets the nearest unit that is not Undead or an animal and performs Normal Actions.",
+      "Where possible, the Vampire will prefer to make attempt diving charges and out of sight rolls."
+    ],
+    "Patronage": [
+      "Ensure the Vampire Incapacitates two units in a single battle."
+    ]
   },
   "Hunter": {
     "Type": "Hero",
-    "Move": "9",
+    "Move": "8",
     "Piercing": "3",
     "Injury": "0",
     "Melee": "12",
     "Ranged": "12",
-    "Defence": "18",
-    "Wounds": "1",
+    "Defence": "14",
+    "Wounds": "2",
     "Agility": "10",
     "Attacks": "2",
     "Morale": "10",
-    "Skills": "",
+    "Skills": "Heroic, Spring Traps",
+    "Cost": "60",
     "Neutral Support Cost": "60",
-    "About": "A seasoned hunter for hire.",
+    "Opposed": "Vampire",
+    "About": "A trapper who rigged every chest in the district before anyone arrived.",
     "Species": "",
     "Position": "Hunter",
-    "Melee Weapon": "Dual Swords",
-    "Ranged Weapon": "Crossbow"
+    "Melee Weapon": "Sword, Torch",
+    "Ranged Weapon": "Crossbow",
+    "Event": [
+      "Place the Hunter in a random unoccupied building on the top floor."
+    ],
+    "Behaviour": [
+      "The Hunter Targets the nearest unit carrying a Treasure, otherwise the nearest Undead or Blighted unit.",
+      "The Hunter holds position and shoots, Moving only to regain Line-of-Sight to his Target."
+    ],
+    "Patronage": [
+      "Ensure the Hunter's traps move a Treasure or carrier five times."
+    ]
   },
   "Blight Prophet": {
     "Type": "Hero",
-    "Move": "9",
+    "Move": "11",
     "Piercing": "0",
     "Injury": "0",
     "Melee": "15",
     "Ranged": "-",
     "Defence": "18",
     "Wounds": "2",
-    "Agility": "10",
+    "Agility": "8",
     "Attacks": "1",
     "Morale": "10",
-    "Skills": "Gift of Blight",
+    "Skills": "Heroic, Gift of Blight",
+    "Cost": "45",
     "Neutral Support Cost": "45",
+    "Opposed": "Inquisitor",
     "About": "A herald of the Blight, spreading its gift to all who draw near.",
     "Species": "",
     "Position": "Blight Prophet",
     "Melee Weapon": "Dagger",
-    "Ranged Weapon": ""
+    "Ranged Weapon": "",
+    "Event": [
+      "Place the Blight Prophet within 3\" of the Event chest."
+    ],
+    "Behaviour": [
+      "The Blight Prophet casts Gift of Blight every turn, even if it would only catch allies.",
+      "If the Blight Prophet is Incapacitated he automatically casts Gift of Blight."
+    ],
+    "Patronage": [
+      "Ensure three enemy units contract the Blight this battle."
+    ]
   },
-  "Bishop": {
+  "Inquisitor": {
     "Type": "Hero",
     "Move": "9",
     "Piercing": "3",
-    "Injury": "4",
+    "Injury": "0",
     "Melee": "14",
     "Ranged": "-",
     "Defence": "12",
-    "Wounds": "1",
+    "Wounds": "2",
     "Agility": "10",
     "Attacks": "1",
     "Morale": "10",
-    "Skills": "Healer, Cure Blight",
+    "Skills": "Heroic, Cure Blight",
+    "Cost": "90",
     "Neutral Support Cost": "90",
+    "Opposed": "Blight Prophet",
     "About": "A holy warrior of the church, wielding divine power to heal allies and purge the Blight.",
     "Species": "",
-    "Position": "Bishop",
-    "Melee Weapon": "Divine Hammer, Shield, Heavy Armour",
-    "Ranged Weapon": ""
+    "Position": "Inquisitor",
+    "Melee Weapon": "Sword, Shield, Heavy Armour",
+    "Ranged Weapon": "",
+    "Event": [
+      "Place the Inquisitor on a random edge of the nearest building to the Event chest."
+    ],
+    "Behaviour": [
+      "If the Inquisitor starts his turn within 5\" of a unit with the Blight, he will stay and cast Cure Blight.",
+      "Otherwise, each turn the Inquisitor will move towards the nearest building and light it on fire."
+    ],
+    "Patronage": [
+      "Ensure the Inquisitor heals the Blight off one unit or burns three buildings."
+    ]
   },
   "Shady Merchant": {
     "Type": "Hero",
-    "Move": "9",
+    "Move": "10",
     "Piercing": "3",
     "Injury": "0",
     "Melee": "14",
     "Ranged": "14",
     "Defence": "18",
     "Wounds": "1",
-    "Agility": "10",
+    "Agility": "6",
     "Attacks": "2",
     "Morale": "10",
-    "Skills": "Steal, Slippery",
+    "Skills": "Heroic, Steal, Slippery",
+    "Cost": "70",
     "Neutral Support Cost": "70",
     "About": "A merchant of questionable morals who always seems to have exactly what you need... for a price.",
     "Species": "",
     "Position": "Shady Merchant",
     "Melee Weapon": "Sword x2",
-    "Ranged Weapon": "Crossbow"
+    "Ranged Weapon": "",
+    "Event": [
+      "Place the Shady Merchant on the board edge nearest the Treasure token furthest from the Event chest."
+    ],
+    "Behaviour": [
+      "Each turn the Shady Merchant Moves towards the nearest unit carrying Treasure (friend or foe) and stops to Steal it as soon as he is in range.",
+      "If the Shady Merchant is carrying Treasure he instead Retreats, leaving the game once he reaches a board edge."
+    ],
+    "Patronage": [
+      "Ensure the Shady Merchant leaves the board carrying a Treasure."
+    ]
   },
   "Pit Fighter": {
     "Type": "Hero",
@@ -110,13 +169,143 @@
     "Wounds": "1",
     "Agility": "10",
     "Attacks": "2",
-    "Morale": "7",
-    "Skills": "Pit Fighter",
+    "Morale": "10",
+    "Skills": "Heroic, Pit Fighter",
+    "Cost": "80",
     "Neutral Support Cost": "80",
     "About": "A veteran of the pits, hardened by countless brutal fights.",
     "Species": "",
     "Position": "Pit Fighter",
     "Melee Weapon": "Sword x2",
-    "Ranged Weapon": ""
+    "Ranged Weapon": "",
+    "Event": [
+      "Place the Pit Fighter next to the unit that triggered the event. They are now in a Pit Fight, engaged with the Pit Fighter.",
+      "No one else can target the Pit Fighter or triggering unit for any purpose, until either unit is Incapacitated, at which point the winner is declared.",
+      "You may only align with the Pit Fighter if you defeat him in a Pit Fight.",
+      "If you lose: If the unit is a hero, it’s now in the Pits! It will replace the current Pit Fighter as the Pit Fighter Neutral Hero until it can escape (see the 'Pit Fight' Scar Table entry for more information). The Pit Fighter is removed from the board with the Treasure."
+
+    ],
+    "Behaviour": [
+    ],
+    "Patronage": [
+      "Defeat the Pit Fighter in combat a second time."
+    ]
+  },
+  "High Mage": {
+    "Type": "Hero",
+    "Move": "9",
+    "Piercing": "0",
+    "Injury": "0",
+    "Melee": "12",
+    "Ranged": "-",
+    "Defence": "18",
+    "Wounds": "2",
+    "Agility": "10",
+    "Attacks": "1",
+    "Morale": "10",
+    "Skills": "Heroic, High Mage",
+    "Cost": "40",
+    "Neutral Support Cost": "40",
+    "Opposed": "Necromancer",
+    "About": "An elven archmage who holds his ground and lets the weather do the killing.",
+    "Species": "Elf",
+    "Position": "High Mage",
+    "Melee Weapon": "Staff",
+    "Ranged Weapon": "",
+    "Spells": [
+      {
+        "Roll": "1-4",
+        "Name": "Earthquake",
+        "Description": "All units within 5\" make an Agility Check or make a Mishap Roll."
+      },
+      {
+        "Roll": "5-8",
+        "Name": "Meteor",
+        "Description": "Choose a target unit within 15\" and Line-of-Sight. All units within 3\" of the target, including the target, must make a Mishap Roll."
+      },
+      {
+        "Roll": "9-12",
+        "Name": "Thunderstorm",
+        "Description": "All units carrying Treasure must make a Mishap Roll."
+      },
+      {
+        "Roll": "13-16",
+        "Name": "Hurricane",
+        "Description": "All units within 1\" of a ledge must make an Agility Check or fall."
+      },
+      {
+        "Roll": "17-20",
+        "Name": "Flood",
+        "Description": "Hits all units on the ground. Agility Check, with Disadvantage if wearing Armour, or make a Mishap Roll."
+      }
+    ],
+    "Cast Priority": [
+      "Enemies within 5\" — Earthquake.",
+      "The Necromancer or the enemy leader within 15\" and in Line-of-Sight — Meteor, targeting them.",
+      "Three or more Treasure held by enemies — Thunderstorm.",
+      "Three or more enemies within 1\" of a ledge — Hurricane.",
+      "Otherwise — Flood."
+    ],
+    "Event": [
+      "Place the High Mage in the centre of a random board edge."
+    ],
+    "Behaviour": [
+      "During the Cast Phase the High Mage makes a Morale Check. If he passes, consult the Cast Priority on his Spells card.",
+      "Once per turn you may assist the High Mage in the cast phase within 5\" of him. This will give him advantage on his next spellcasting check."
+    ],
+    "Patronage": [
+      "If the High Mage successfully casts 4 spells this game to gain Patronage."
+    ]
+  },
+  "Necromancer": {
+    "Type": "Hero",
+    "Move": "9",
+    "Piercing": "0",
+    "Injury": "0",
+    "Melee": "12",
+    "Ranged": "-",
+    "Defence": "18",
+    "Wounds": "2",
+    "Agility": "10",
+    "Attacks": "1",
+    "Morale": "10",
+    "Skills": "Heroic, Grave Harvest",
+    "Cost": "55",
+    "Neutral Support Cost": "55",
+    "Opposed": "High Mage",
+    "About": "A grave-robber turned conjuror, dragging the city's dead back onto their feet.",
+    "Species": "",
+    "Position": "Necromancer",
+    "Melee Weapon": "Staff",
+    "Ranged Weapon": "",
+    "Minions": [
+      {
+        "Name": "Zombie",
+        "Move": "6",
+        "Piercing": "0",
+        "Injury": "0",
+        "Melee": "13",
+        "Ranged": "-",
+        "Defence": "-",
+        "Wounds": "1",
+        "Agility": "16",
+        "Attacks": "1",
+        "Morale": "16",
+        "Skills": "Heroic, Undead, Fear, No Equipment, Spread Blight (Minor)",
+        "About": "Shambling dead, raised to shield the Necromancer.",
+        "Melee Weapon": "",
+        "Ranged Weapon": ""
+      }
+    ],
+    "Event": [
+      "Place the Necromancer in the building closest to the centre of the map, along with one Zombie (this Zombie does not count towards the Patronage)."
+    ],
+    "Behaviour": [
+      "The Necromancer moves at full speed away from the nearest hostile unit.",
+      "The Necromancer summons a Zombie each turn."
+    ],
+    "Patronage": [
+      "Ensure the Necromancer summons at least four Zombies this battle."
+    ]
   }
 }

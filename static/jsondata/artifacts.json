@@ -1,0 +1,68 @@
+{
+  "Wand of Fireball": {
+    "Type": "Artifact",
+    "Category": "Generic",
+    "Description": "Spell DC 10. Range 10\". AOE 3\" diameter mishap rolls.",
+    "About": "A powerful wand that unleashes explosive fireballs."
+  },
+  "Cloak of Elvenkind": {
+    "Type": "Artifact",
+    "Category": "Generic",
+    "Description": "Advantage on all Agi checks.",
+    "About": "An enchanted cloak that grants supernatural agility."
+  },
+  "Wand of Gust": {
+    "Type": "Artifact",
+    "Category": "Generic",
+    "Description": "Spell DC 10. Range 15\". AOE 3\". Units get pushed away from the caster 5\".",
+    "About": "A wand that conjures powerful gusts of wind to reposition foes."
+  },
+  "Boots of Haste": {
+    "Type": "Artifact",
+    "Category": "Generic",
+    "Description": "+2 Move",
+    "About": "Enchanted boots that greatly increase the wearer's speed."
+  },
+  "Mask of Madness": {
+    "Type": "Artifact",
+    "Category": "Generic",
+    "Description": "Berserker, Ambush, Fear",
+    "About": "A cursed mask that grants terrible powers at a steep price.",
+    "Skills": "Berserker, Ambush, Fear",
+    "Cursed": true
+  },
+  "Ethereal Robe": {
+    "Type": "Artifact",
+    "Category": "Generic",
+    "Description": "Gain the 'Ethereal' skill",
+    "About": "A ghostly robe that allows the wearer to phase through obstacles.",
+    "Skills": "Ethereal"
+  },
+  "Holy Relic": {
+    "Type": "Artifact",
+    "Category": "Generic",
+    "Description": "Opponent's Rout Threshold is lowered by 1.",
+    "About": "A sacred artifact that bolsters your warband's morale while breaking the enemy's will."
+  },
+  "Wand of Polymorph": {
+    "Type": "Artifact",
+    "Category": "Generic",
+    "Description": "Unit can Cast the following Spell: \"Polymorph. Difficulty 15. 15\". Ongoing. On a success, the target is turned into a Giant Rat, only retaining its current Wounds.\"",
+    "About": "A dangerous wand that can transform enemies into harmless creatures."
+  },
+  "Assassin Garb": {
+    "Type": "Artifact",
+    "Category": "Generic",
+    "Description": "Armour. +1 Def. Add +5 on Out-of-Sight Rolls. Cannot be used with a Shield.",
+    "About": "Dark clothing designed for stealth and protection.",
+    "Special": "Add +5 on Out-of-Sight Rolls. Cannot be used with a Shield."
+  },
+  "Giant Slayer": {
+    "Type": "Artifact",
+    "Category": "Generic",
+    "Description": "Great Sword (2 handed). You have Advantage on Melee rolls against units with more than 1 max Wounds.",
+    "About": "A legendary blade forged to fell the mightiest foes.",
+    "Melee Weapon": "Great Sword",
+    "Special": "Advantage on Melee rolls against units with more than 1 max Wounds."
+  }
+}

@@ -25,3 +25,6 @@ with (open(f"{path}/aliases.json") as f):
 
 with (open(f"{path}/neutral_heroes.json") as f):
     global_neutral_heroes = json5.load(f)
+
+with (open(f"{path}/artifacts.json") as f):
+    global_artifacts_data = json5.load(f)

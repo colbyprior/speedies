@@ -242,7 +242,17 @@ function goldRemaining(warband) {
 function loadState() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
-    return raw ? JSON.parse(raw) : []
+    const warbands = raw ? JSON.parse(raw) : []
+    // The 12-step Favour track was replaced by a single Patron flag —
+    // a maxed-out track becomes Patronage.
+    for (const wb of warbands) {
+      for (const nh of (wb.campaign?.neutralHeroes || []).filter(Boolean)) {
+        if (nh.progress == null) continue
+        if (nh.patron == null) nh.patron = nh.progress >= 12
+        delete nh.progress
+      }
+    }
+    return warbands
   } catch {
     return []
   }
@@ -515,17 +525,21 @@ function updateNeutralHeroName(idx, name) {
   mutateWarband(wb => {
     if (!wb.campaign) wb.campaign = {}
     if (!wb.campaign.neutralHeroes) wb.campaign.neutralHeroes = [{}, {}, {}]
-    wb.campaign.neutralHeroes[idx] = { ...wb.campaign.neutralHeroes[idx], name }
+    const nh = { ...wb.campaign.neutralHeroes[idx], name }
+    if (!name) nh.patron = false  // dropping the alignment drops the patronage
+    wb.campaign.neutralHeroes[idx] = nh
   })
 }
 
-function updateNeutralHeroProgress(idx, delta) {
+function setNeutralHeroPatron(idx, patron) {
   mutateWarband(wb => {
     if (!wb.campaign) wb.campaign = {}
     if (!wb.campaign.neutralHeroes) wb.campaign.neutralHeroes = [{}, {}, {}]
-    const nh = wb.campaign.neutralHeroes[idx] || {}
-    nh.progress = Math.max(0, Math.min(12, (nh.progress || 0) + delta))
-    wb.campaign.neutralHeroes[idx] = nh
+    // A warband can only ever have one Patron, so checking one clears the rest.
+    wb.campaign.neutralHeroes = wb.campaign.neutralHeroes.map((nh, i) => ({
+      ...nh,
+      patron: patron && i === idx,
+    }))
   })
 }
 
@@ -988,14 +1002,11 @@ function renderCampaignInfo(wb) {
               <option value="">— None —</option>
               ${heroNames.map(name => `<option value="${esc(name)}" ${nh.name === name ? 'selected' : ''}>${esc(name)}</option>`).join('')}
             </select>
-            <div class="campaign-nh-progress">
-              <button class="btn btn-xs btn-ghost" data-action="neutral-hero-progress" data-idx="${i}" data-delta="-1">−</button>
-              <div class="campaign-nh-pips">
-                ${Array.from({length: 12}, (_, j) => `<span class="nh-pip${j < (nh.progress || 0) ? ' nh-pip--filled' : ''}"></span>`).join('')}
-              </div>
-              <span class="campaign-nh-count">${nh.progress || 0}/12</span>
-              <button class="btn btn-xs btn-ghost" data-action="neutral-hero-progress" data-idx="${i}" data-delta="1">+</button>
-            </div>
+            <label class="campaign-nh-patron${nh.name ? '' : ' campaign-nh-patron--off'}">
+              <input type="checkbox" data-action="neutral-hero-patron" data-idx="${i}"
+                ${nh.patron ? 'checked' : ''} ${nh.name ? '' : 'disabled'} />
+              <span>Patron</span>
+            </label>
           </div>
         `).join('')}
       </div>
@@ -1589,7 +1600,7 @@ function buildPDFPayload(wb, wbData) {
     wins:              c.wins != null ? String(c.wins) : '',
     losses:            c.losses != null ? String(c.losses) : '',
     stored_equipment:  c.storedEquipment || '',
-    neutral_heroes:    nhSlots.map(nh => ({ name: nh.name || '', progress: nh.progress || 0 })),
+    neutral_heroes:    nhSlots.map(nh => ({ name: nh.name || '', patron: !!nh.patron })),
     heroes,
     henchmen: Object.values(henchGroups).map(h => ({ ...h, count: String(h.count) })),
     skills,
@@ -2169,10 +2180,6 @@ document.addEventListener('click', e => {
       toggleUnitFlag(el.dataset.unitId, el.dataset.flag)
       break
 
-    case 'neutral-hero-progress':
-      updateNeutralHeroProgress(parseInt(el.dataset.idx), parseInt(el.dataset.delta))
-      break
-
     case 'add-unit':
       addUnit(el.dataset.unitName, el.dataset.unitCat)
       break
@@ -2244,6 +2251,8 @@ document.addEventListener('change', e => {
     updateCampaignField(el.dataset.field, el.value)
   } else if (action === 'neutral-hero-select') {
     updateNeutralHeroName(parseInt(el.dataset.idx), el.value)
+  } else if (action === 'neutral-hero-patron') {
+    setNeutralHeroPatron(parseInt(el.dataset.idx), el.checked)
   } else if (action === 'import-warband') {
     const file = el.files?.[0]
     if (file) importWarband(file)

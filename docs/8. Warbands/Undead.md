@@ -42,7 +42,7 @@ If this unit Incapacitates or is Incapacitated by an enemy in Melee, that unit m
 ### Undead
 *Inherent*
 
-This unit may not be slowed. When Engaging, this unit has a bonus +3" to its Move speed. If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to the Blight.
+This unit may not have its Move reduced below its base Move. When Engaging, this unit has a bonus +3" to its Move speed (which can be reduced). If this unit would be Stunned, it is instead counted as Dazed. This unit is immune to the Blight.
 ### Fear
 *Morale*
 
