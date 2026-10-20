@@ -78,11 +78,14 @@ function buildProfile(name, hero) {
 }
 
 function buildNeutralHero(name, hero) {
+  // Opposed Type heroes name their natural enemy; Solo Type heroes have none,
+  // written either as a missing field or as "None"
+  const opposed = String(hero.Opposed || '').trim()
+  const hasOpposed = opposed && opposed.toLowerCase() !== 'none'
   return {
     ...buildProfile(name, hero),
     badge: `${hero['Cost']}g`,
-    // Opposed Type heroes name their natural enemy; Solo Type heroes have none
-    ...(hero.Opposed ? { meta_label: 'Opposed by', meta_value: hero.Opposed } : {}),
+    ...(hasOpposed ? { meta_label: 'Opposed by', meta_value: opposed } : {}),
     spells:     (hero.Spells || []).map(spell => ({
       roll:        spell.Roll,
       name:        spell.Name,
@@ -91,7 +94,12 @@ function buildNeutralHero(name, hero) {
     cast_priority: hero['Cast Priority'] || [],
     event:      hero.Event     || [],
     behaviour:  hero.Behaviour || [],
-    patronage:  hero.Patronage || [],
+    // Incapacitating the opposed hero always earns Patronage, so every Opposed
+    // Type card carries it without repeating it in the data
+    patronage:  [
+      ...(hero.Patronage || []),
+      ...(hasOpposed ? [`Incapacitate the ${opposed}.`] : []),
+    ],
     // Summoned units are not hired, so their card names their summoner instead
     minions: (hero.Minions || []).map(minion => ({
       ...buildProfile(minion.Name, minion),
