@@ -1,53 +1,42 @@
-// Condensed from "docs/6. Advanced Rules/1. Neutral Units.md" for the rules
-// helper card at the front of the neutral hero deck. Keep the two in step.
-// Each section's entries are plain text, or { text, steps } for ordered steps.
 {
   "Title": "Neutral Units",
+  "Copies": 2,
   "Sections": [
     {
       "Label": "Disposition",
       "Entries": [
-        "Hostile to each warband unless aligned.",
-        "Becomes Hostile to any warband that attacks it or targets it with a spell."
+        "Hostile to each warband unless Aligned; Neutral to warbands Aligned with them.",
+        "Attacked or targeted by a Spell: becomes Hostile to that warband, which becomes Unaligned. Not if an opponent hired it against you."
       ]
     },
     {
-      "Label": "Targeting",
+      "Label": "Aligning with a Neutral Hero",
       "Entries": [
-        "Target: the closest Hostile unit by distance, even out of Line-of-Sight.",
-        "Triggering Unit: picked up the Treasure that triggered the Event."
+        "Cast Phase, once per turn: a unit within 5\" makes a Morale Check. On a success you are Aligned, and it and its allies become Neutral to you.",
+        "Only if no warband is Aligned with it, you aren't Aligned with its opposing Hero, and you haven't been Aligned with it this game."
       ]
     },
     {
-      "Label": "Normal Actions",
+      "Label": "Turn",
       "Entries": [
         {
-          "text": "Each turn:",
+          "text": "Hero rules take precedence over these.",
           "steps": [
-            "Engage the Target if able. No Out-of-Sight Roll.",
-            "Else Move straight at it, avoiding Agility Checks unless they are the only way; then use the fewest.",
-            "Not Engaged: shoot the Target, else the closest Hostile unit in Line-of-Sight and range.",
-            "Engaged: resolve the Melee."
+            "Upkeep: Recover. Pick up Treasure only if stated. Morale Check for Ongoing Spells. Target: closest Hostile unit by distance reachable without Agility Checks, else the one needing fewest.",
+            "Engage: Engage the Target if able, unless Retreating. No Out-of-Sight Roll.",
+            "Move: Not Engaged, Move straight at the Target, avoiding Agility Checks unless they are the only way.",
+            "Cast: Use its Spells and Abilities on the Target.",
+            "Ranged: Not Engaged, shoot the Target, else the closest Hostile unit in Line-of-Sight and range.",
+            "Melee: Resolve the combat. Takes the Treasure of a unit it defeats."
           ]
         }
       ]
     },
     {
-      "Label": "Retreating",
-      "Entries": [
-        "Moves to the closest board edge. Still shoots if able."
-      ]
-    },
-    {
-      "Label": "Treasure",
-      "Entries": [
-        "Picks up Treasure even if contested. Takes it from units it defeats in Melee. Slowed; carries one."
-      ]
-    },
-    {
       "Label": "Other",
       "Entries": [
-        "Injuries as normal; Recovers at the start of the Neutral Turn.",
+        "Retreating: Moves to the closest board edge. Removed on reaching it.",
+        "Triggering Unit: Picked up the Treasure that triggered the Event.",
         "Intercepts Engages made against other Neutral Units."
       ]
     }

@@ -1758,6 +1758,27 @@ function buildNeutralHeroCardDrawFns(hero) {
       if (!entries.length) continue
       blocks.push(sectionBar(label))
       blocks.push(...nhEntryBlocks(entries, wrap, fs))
+      if (key === 'event' && hero.event_note) {
+        // A small italic reminder, a step below the body text, under the Event
+        const noteFs = Math.max(fs - 1, 5)
+        const noteLh = noteFs * PT * 1.3
+        meas.setFont('times', 'italic')
+        meas.setFontSize(noteFs)
+        const lines = meas.splitTextToSize(String(hero.event_note), textW)
+        blocks.push({
+          h: lines.length * noteLh,
+          draw: (doc, x, cy) => {
+            doc.setFont('times', 'italic')
+            doc.setFontSize(noteFs)
+            doc.setTextColor(INK[0], INK[1], INK[2])
+            for (const line of lines) {
+              doc.text(line, x + CC_PAD, cy + noteLh / 2, { baseline: 'middle' })
+              cy += noteLh
+            }
+            return cy
+          },
+        })
+      }
     }
 
     return blocks
@@ -1809,13 +1830,15 @@ function buildNeutralHeroCardDrawFns(hero) {
 /**
  * Generate the neutral hero deck as a card-format PDF.
  * Same 3x3 grid of 63x88mm cards on A4 portrait as the warband cards.
- * `rules` (optional) adds the common Neutral Unit rules as the first card.
+ * `rules` (optional) adds the common Neutral Unit rules at the front of the
+ * deck, printed `rules.copies` times (default 1).
  */
 export function generateNeutralHeroCardsPDF(heroes, rules = null) {
   const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' })
   doc.setFont('times', 'normal')
+  const rulesFns = rules ? buildRulesCardDrawFns(rules) : []
   const drawFns = [
-    ...(rules ? buildRulesCardDrawFns(rules) : []),
+    ...Array.from({ length: rules?.copies ?? 1 }, () => rulesFns).flat(),
     ...(heroes || []).flatMap(hero => [
     ...buildNeutralHeroCardDrawFns(hero),
     ...buildSpellTableCardDrawFns(hero),

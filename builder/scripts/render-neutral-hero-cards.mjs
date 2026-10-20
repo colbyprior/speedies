@@ -93,6 +93,11 @@ function buildNeutralHero(name, hero) {
     })),
     cast_priority: hero['Cast Priority'] || [],
     event:      hero.Event     || [],
+    // When drawn for an Event Token, Alignment can swap the card's Event for
+    // one from the Event Table
+    event_note: hasOpposed
+      ? `If both players are Aligned with the ${name} or ${opposed}, use their Event Table instead.`
+      : `If any player is Aligned with the ${name}, use its Event Table instead.`,
     behaviour:  hero.Behaviour || [],
     // Incapacitating the opposed hero always earns Patronage, so every Opposed
     // Type card carries it without repeating it in the data
@@ -116,6 +121,7 @@ const cards = Object.entries(heroes)
 // The common Neutral Unit rules lead the deck as a table-side helper card
 const rulesCard = {
   title:    unitRules.Title,
+  copies:   unitRules.Copies ?? 1,
   sections: (unitRules.Sections || []).map(section => ({
     label:   section.Label,
     entries: section.Entries || [],
