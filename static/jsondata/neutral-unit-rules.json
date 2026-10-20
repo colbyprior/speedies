@@ -1,0 +1,55 @@
+// Condensed from "docs/6. Advanced Rules/1. Neutral Units.md" for the rules
+// helper card at the front of the neutral hero deck. Keep the two in step.
+// Each section's entries are plain text, or { text, steps } for ordered steps.
+{
+  "Title": "Neutral Units",
+  "Sections": [
+    {
+      "Label": "Disposition",
+      "Entries": [
+        "Hostile to each warband unless aligned.",
+        "Becomes Hostile to any warband that attacks it or targets it with a spell."
+      ]
+    },
+    {
+      "Label": "Targeting",
+      "Entries": [
+        "Target: the closest Hostile unit by distance, even out of Line-of-Sight.",
+        "Triggering Unit: picked up the Treasure that triggered the Event."
+      ]
+    },
+    {
+      "Label": "Normal Actions",
+      "Entries": [
+        {
+          "text": "Each turn:",
+          "steps": [
+            "Engage the Target if able. No Out-of-Sight Roll.",
+            "Else Move straight at it, avoiding Agility Checks unless they are the only way; then use the fewest.",
+            "Not Engaged: shoot the Target, else the closest Hostile unit in Line-of-Sight and range.",
+            "Engaged: resolve the Melee."
+          ]
+        }
+      ]
+    },
+    {
+      "Label": "Retreating",
+      "Entries": [
+        "Moves to the closest board edge. Still shoots if able."
+      ]
+    },
+    {
+      "Label": "Treasure",
+      "Entries": [
+        "Picks up Treasure even if contested. Takes it from units it defeats in Melee. Slowed; carries one."
+      ]
+    },
+    {
+      "Label": "Other",
+      "Entries": [
+        "Injuries as normal; Recovers at the start of the Neutral Turn.",
+        "Intercepts Engages made against other Neutral Units."
+      ]
+    }
+  ]
+}

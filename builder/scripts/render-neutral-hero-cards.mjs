@@ -18,6 +18,7 @@ const skills        = read('skills.json')
 const rangedWeapons = read('ranged-weapons.json')
 const rangedEffects = read('ranged-weapon-effects.json')
 const aliases       = read('aliases.json')
+const unitRules     = read('neutral-unit-rules.json')
 
 const STAT_FIELDS = [
   ['mov', 'Move'], ['mel', 'Melee'], ['rgd', 'Ranged'], ['def', 'Defence'],
@@ -104,7 +105,16 @@ const cards = Object.entries(heroes)
   .sort(([a], [b]) => a.localeCompare(b))
   .map(([name, hero]) => buildNeutralHero(name, hero))
 
-const doc = generateNeutralHeroCardsPDF(cards)
+// The common Neutral Unit rules lead the deck as a table-side helper card
+const rulesCard = {
+  title:    unitRules.Title,
+  sections: (unitRules.Sections || []).map(section => ({
+    label:   section.Label,
+    entries: section.Entries || [],
+  })),
+}
+
+const doc = generateNeutralHeroCardsPDF(cards, rulesCard)
 
 fs.mkdirSync(path.dirname(out), { recursive: true })
 fs.writeFileSync(out, Buffer.from(doc.output('arraybuffer')))

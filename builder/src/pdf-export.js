@@ -1622,6 +1622,83 @@ function nhWeaponRow(doc, x, cy, label, stats, bg) {
   return cy + CC_VAL_H
 }
 
+// Bulleted entries, measured at `fs`. An entry may be plain text, or text
+// followed by ordered sub-steps.
+function nhEntryBlocks(entries, wrap, fs) {
+  const lh      = fs * PT * 1.3
+  const bulletW = CC_W - 2 * CC_PAD - NH_IND
+  const stepW   = bulletW - NH_STEP_IND
+  const blocks  = []
+  for (const entry of entries) {
+    const text  = typeof entry === 'string' ? entry : entry.text
+    const steps = typeof entry === 'string' ? [] : (entry.steps || [])
+    const lines = wrap(text, bulletW)
+    blocks.push({
+      h: lines.length * lh,
+      keep: steps.length > 0,   // never strand the intro from its first step
+      draw: (doc, x, cy) => ccBulletEntry(doc, x, cy, lines, fs),
+    })
+    steps.forEach((step, i) => {
+      const stepLines = wrap(step, stepW)
+      blocks.push({
+        h: stepLines.length * lh,
+        draw: (doc, x, cy) => ccStepEntry(doc, x, cy, i + 1, stepLines, fs),
+      })
+    })
+  }
+  return blocks
+}
+
+// The table-side summary of the common Neutral Unit rules, at the front of the
+// deck, set at the same sizes as the hero cards.
+const NH_RULES_SIZES = NH_SIZES
+
+function buildRulesCardDrawFns(rules) {
+  const pal   = palette(BRASS)
+  const sigil = CC_SIGILS[NH_SIGIL_KEY]
+  const meas  = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' })
+  const avail = CC_H - NH_HEAD_H - 2 * CC_PAD
+
+  const layout = (fs) => {
+    const wrap = (text, w) => {
+      meas.setFont('times', 'normal')
+      meas.setFontSize(fs)
+      return meas.splitTextToSize(String(text), w)
+    }
+    const blocks = []
+    for (const section of rules.sections || []) {
+      const lead = blocks.length === 0 ? 0 : NH_GAP
+      blocks.push({
+        h: lead + NH_BAR_H,
+        keep: true,
+        draw: (doc, x, cy) => ccSectionBar(doc, x, cy + lead, section.label, pal.head),
+      })
+      blocks.push(...nhEntryBlocks((section.entries || []).filter(Boolean), wrap, fs))
+    }
+    return blocks
+  }
+
+  let blocks = layout(NH_RULES_SIZES[0])
+  for (const fs of NH_RULES_SIZES) {
+    const candidate = layout(fs)
+    if (candidate.reduce((sum, b) => sum + b.h, 0) <= avail) { blocks = candidate; break }
+  }
+
+  const title = rules.title || 'Neutral Units'
+  return nhFlow(blocks, avail, avail).map((pageBlocks, idx, pages) => (doc, x, y) => {
+    ccBorder(doc, x, y)
+    ccHeader(doc, x, y, idx === 0 ? title : `${title} (cont.)`, BRASS, NH_HEAD_H, sigil)
+    let cy = y + NH_HEAD_H + CC_PAD
+    for (const b of pageBlocks) cy = b.draw(doc, x, cy)
+    if (idx < pages.length - 1) {
+      doc.setFont('times', 'italic')
+      doc.setFontSize(4.5)
+      doc.setTextColor(INK[0], INK[1], INK[2])
+      doc.text('cont. >', x + CC_W - CC_PAD, y + CC_H - CC_PAD, { align: 'right', baseline: 'bottom' })
+    }
+  })
+}
+
 // Returns an array of draw-functions: main card + any continuation cards.
 // Content is measured into fixed-height blocks first, then flowed across cards,
 // so a section bar never lands as the last thing on a card.
@@ -1631,8 +1708,6 @@ function buildNeutralHeroCardDrawFns(hero) {
   const meas  = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' })
 
   const textW   = CC_W - 2 * CC_PAD
-  const bulletW = textW - NH_IND
-  const stepW   = bulletW - NH_STEP_IND
   const descW   = textW - 2            // matches ccSpecialBlock's description indent
 
   // Height of everything printed above the first block on the main card
@@ -1682,24 +1757,7 @@ function buildNeutralHeroCardDrawFns(hero) {
       const entries = (hero[key] || []).filter(Boolean)
       if (!entries.length) continue
       blocks.push(sectionBar(label))
-      for (const entry of entries) {
-        // An entry may be plain text, or text followed by ordered sub-steps
-        const text  = typeof entry === 'string' ? entry : entry.text
-        const steps = typeof entry === 'string' ? [] : (entry.steps || [])
-        const lines = wrap(text, bulletW)
-        blocks.push({
-          h: lines.length * lh,
-          keep: steps.length > 0,   // never strand the intro from its first step
-          draw: (doc, x, cy) => ccBulletEntry(doc, x, cy, lines, fs),
-        })
-        steps.forEach((step, i) => {
-          const stepLines = wrap(step, stepW)
-          blocks.push({
-            h: stepLines.length * lh,
-            draw: (doc, x, cy) => ccStepEntry(doc, x, cy, i + 1, stepLines, fs),
-          })
-        })
-      }
+      blocks.push(...nhEntryBlocks(entries, wrap, fs))
     }
 
     return blocks
@@ -1751,17 +1809,21 @@ function buildNeutralHeroCardDrawFns(hero) {
 /**
  * Generate the neutral hero deck as a card-format PDF.
  * Same 3x3 grid of 63x88mm cards on A4 portrait as the warband cards.
+ * `rules` (optional) adds the common Neutral Unit rules as the first card.
  */
-export function generateNeutralHeroCardsPDF(heroes) {
+export function generateNeutralHeroCardsPDF(heroes, rules = null) {
   const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' })
   doc.setFont('times', 'normal')
-  const drawFns = (heroes || []).flatMap(hero => [
+  const drawFns = [
+    ...(rules ? buildRulesCardDrawFns(rules) : []),
+    ...(heroes || []).flatMap(hero => [
     ...buildNeutralHeroCardDrawFns(hero),
     ...buildSpellTableCardDrawFns(hero),
     // A summoned unit needs its own profile at the table, so it gets a card
     // built by the same layout as its summoner's
     ...(hero.minions || []).flatMap(minion => buildNeutralHeroCardDrawFns(minion)),
-  ])
+    ]),
+  ]
   ccPaginate(doc, drawFns)
   return doc
 }
