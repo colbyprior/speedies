@@ -957,7 +957,13 @@ function ccPaginate(doc, drawFns) {
 
 // ── Individual card renderers ─────────────────────────────────────────────────
 
-function renderWarbandCard(doc, x, y, data) {
+// Skills, special rules and spell text all share one size so they read alike.
+// `opts.textScale` enlarges just this text — the big cards set it on top of
+// their page scale, so the rules grow more than the frame around them.
+const CC_SKILL_FS = 7
+const skillFs = (opts = {}) => CC_SKILL_FS * (opts.textScale || 1)
+
+function renderWarbandCard(doc, x, y, data, opts = {}) {
   const wbPal = palette(SLATE)
   ccBorder(doc, x, y)
 
@@ -1083,7 +1089,7 @@ function renderWarbandCard(doc, x, y, data) {
       cy += 3.5
     }
     const lines = specRules.map(r => r.desc ? `${r.name}: ${r.desc}` : r.name)
-    ccSpecialBlock(doc, x, cy, maxY, lines, 5.5)
+    ccSpecialBlock(doc, x, cy, maxY, lines, skillFs(opts))
   }
 }
 
@@ -1193,12 +1199,14 @@ function buildUnitCardDrawFns(unit, isHero, opts = {}) {
   const name = unit.name || unit.type || '—'
   const specLines = (unit.special || []).filter(Boolean)
 
-  const SKILL_FS = 6.5
+  const SKILL_FS = skillFs(opts)
   const SKILL_LH = SKILL_FS * PT * 1.3
 
-  // Available height for skills on the main card
+  // Available height for skills on the main card, less a line for the 'cont. >'
+  // marker so the last skill line can't run into it
   const statsH   = statsBlockHeight(unit, isHero, opts)
-  const mainAvail = CC_H - CC_PAD - statsH - CC_PAD  // bottom pad + gap before skills
+  const CONT_H   = 4.5 * PT * 1.3
+  const mainAvail = CC_H - CC_PAD - statsH - CC_PAD - CONT_H  // bottom pad + gap before skills
 
   // Simulate ccSpecialBlock rendering to find accurate split points.
   // Must exactly mirror the pre-measure logic in ccSpecialBlock.
@@ -1287,14 +1295,14 @@ function buildUnitCardDrawFns(unit, isHero, opts = {}) {
   return drawFns
 }
 
-function renderSpellCards(data) {
+function renderSpellCards(data, opts = {}) {
   const sigil = ccSigil(data.warband_type)
   // Returns an array of draw-functions, one per card needed
   const drawFns = []
 
   // Match the unit cards' skill block so spell text reads at the same size
-  const NAME_FS   = 6.5
-  const DESC_FS   = 6.5
+  const NAME_FS   = skillFs(opts)
+  const DESC_FS   = skillFs(opts)
   const NAME_LH   = NAME_FS * PT * 1.3
   const DESC_LH   = DESC_FS * PT * 1.3
   const GAP       = 1.5
@@ -1986,7 +1994,7 @@ export function generateCardsPDF(data, opts = {}) {
   // Collect draw functions in order: warband → heroes → henchmen → spells
   const drawFns = []
 
-  drawFns.push((doc, x, y) => renderWarbandCard(doc, x, y, data))
+  drawFns.push((doc, x, y) => renderWarbandCard(doc, x, y, data, opts))
 
   for (const hero of (data.heroes || [])) {
     if (hero.type) drawFns.push(...buildUnitCardDrawFns(hero, true, opts))
@@ -1996,7 +2004,7 @@ export function generateCardsPDF(data, opts = {}) {
     if (hench.type) drawFns.push(...buildUnitCardDrawFns(hench, false, opts))
   }
 
-  drawFns.push(...renderSpellCards(data))
+  drawFns.push(...renderSpellCards(data, opts))
 
   ccPaginate(doc, drawFns)
 
@@ -2004,28 +2012,33 @@ export function generateCardsPDF(data, opts = {}) {
 }
 
 /**
- * Generate a big-card PDF (cards scaled ~1.5×) for printing and cutting.
- * 2×2 grid of 94.5×132mm cards on A4 portrait.
+ * Generate a big-card PDF for printing and cutting: a 2×2 grid on A4 portrait,
+ * with the cards scaled as large as the page allows (~1.2×, 84×145mm).
  */
 export function generateBigCardsPDF(data, opts = {}) {
-  opts = { ...opts, sigil: ccSigil(data.warband_type) }
-  const SCALE = 1.5
+  // Rules text gets a further 10% over the page scale — the reason to print big
+  opts = { ...opts, sigil: ccSigil(data.warband_type), textScale: 1.1 }
   const BIG_COLS = 2
   const BIG_ROWS = 2
-  const BIG_W = CC_W * SCALE   // 94.5mm
-  const BIG_H = CC_H * SCALE   // 132mm
-  const BIG_ML = (210 - BIG_COLS * BIG_W) / 2  // 10.5mm
-  const BIG_MT = (297 - BIG_ROWS * BIG_H) / 2  // 16.5mm
+  const BIG_MIN_MARGIN = 3.5  // mm kept clear at the page edge
+  // Derived from the card size, so a change to CC_W/CC_H can't push the grid
+  // off the page
+  const SCALE = Math.min((210 - 2 * BIG_MIN_MARGIN) / (BIG_COLS * CC_W),
+                         (297 - 2 * BIG_MIN_MARGIN) / (BIG_ROWS * CC_H))
+  const BIG_W = CC_W * SCALE
+  const BIG_H = CC_H * SCALE
+  const BIG_ML = (210 - BIG_COLS * BIG_W) / 2
+  const BIG_MT = (297 - BIG_ROWS * BIG_H) / 2
 
   const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' })
   doc.setFont('times', 'normal')
 
   // Collect same draw functions as regular cards
   const drawFns = []
-  drawFns.push((d, x, y) => renderWarbandCard(d, x, y, data))
+  drawFns.push((d, x, y) => renderWarbandCard(d, x, y, data, opts))
   for (const hero  of (data.heroes   || [])) { if (hero.type)  drawFns.push(...buildUnitCardDrawFns(hero, true, opts)) }
   for (const hench of (data.henchmen || [])) { if (hench.type) drawFns.push(...buildUnitCardDrawFns(hench, false, opts)) }
-  drawFns.push(...renderSpellCards(data))
+  drawFns.push(...renderSpellCards(data, opts))
 
   // Draw cut guides for big cards
   function bigCutGuides() {
