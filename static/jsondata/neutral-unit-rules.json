@@ -25,7 +25,7 @@
             "Upkeep: Recover. Pick up Treasure only if stated. Morale Check for Ongoing Spells. Target: closest Hostile unit by distance reachable without Agility Checks, else the one needing fewest.",
             "Engage: Engage the Target if able, unless Retreating. No Out-of-Sight Roll.",
             "Move: Not Engaged, Move straight at the Target, avoiding Agility Checks unless they are the only way.",
-            "Cast: Use its Spells and Abilities on the Target.",
+            "Cast: Use its Spells and Abilities on the Target, else the closest Hostile unit in Line-of-Sight and range",
             "Ranged: Not Engaged, shoot the Target, else the closest Hostile unit in Line-of-Sight and range.",
             "Melee: Resolve the combat. Takes the Treasure of a unit it defeats."
           ]
