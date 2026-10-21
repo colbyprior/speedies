@@ -417,7 +417,7 @@
   "Cure Blight": {
     "Name": "Cure Blight",
     "Type": "Inherent",
-    "Description": "Once per battle this unit can attempt the Cure Blight spell. Difficulty 10, range 10\". The target unit is cured of the Blight."
+    "Description": "Once per battle this unit can attempt the Cure Blight spell. Difficulty 10, range 10\". All units within range are cured of the Blight."
   },
   "Steal": {
     "Name": "Steal",
