@@ -1,0 +1,44 @@
+{
+  "Title": "Neutral Units",
+  "Copies": 2,
+  "Sections": [
+    {
+      "Label": "Disposition",
+      "Entries": [
+        "Hostile to each warband unless Aligned; Neutral to warbands Aligned with them.",
+        "Attacked or targeted by a Spell: becomes Hostile to that warband, which becomes Unaligned. Not if an opponent hired it against you."
+      ]
+    },
+    {
+      "Label": "Aligning with a Neutral Hero",
+      "Entries": [
+        "Cast Phase, once per turn: a unit within 5\" makes a Morale Check. On a success you are Aligned, and it and its allies become Neutral to you.",
+        "Only if no warband is Aligned with it, you aren't Aligned with its opposing Hero, and you haven't been Aligned with it this game."
+      ]
+    },
+    {
+      "Label": "Turn",
+      "Entries": [
+        {
+          "text": "Hero rules take precedence over these.",
+          "steps": [
+            "Upkeep: Recover. Pick up Treasure only if stated. Morale Check for Ongoing Spells. Target: closest Hostile unit by distance reachable without Agility Checks, else the one needing fewest.",
+            "Engage: Engage the Target if able, unless Retreating. No Out-of-Sight Roll.",
+            "Move: Not Engaged, Move straight at the Target, avoiding Agility Checks unless they are the only way.",
+            "Cast: Use its Spells and Abilities on the Target, else the closest Hostile unit in Line-of-Sight and range",
+            "Ranged: Not Engaged, shoot the Target, else the closest Hostile unit in Line-of-Sight and range.",
+            "Melee: Resolve the combat. Takes the Treasure of a unit it defeats."
+          ]
+        }
+      ]
+    },
+    {
+      "Label": "Other",
+      "Entries": [
+        "Retreating: Moves to the closest board edge. Removed on reaching it.",
+        "Triggering Unit: Picked up the Treasure that triggered the Event.",
+        "Intercepts Engages made against other Neutral Units."
+      ]
+    }
+  ]
+}

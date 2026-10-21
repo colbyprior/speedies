@@ -18,6 +18,7 @@ const skills        = read('skills.json')
 const rangedWeapons = read('ranged-weapons.json')
 const rangedEffects = read('ranged-weapon-effects.json')
 const aliases       = read('aliases.json')
+const unitRules     = read('neutral-unit-rules.json')
 
 const STAT_FIELDS = [
   ['mov', 'Move'], ['mel', 'Melee'], ['rgd', 'Ranged'], ['def', 'Defence'],
@@ -77,11 +78,14 @@ function buildProfile(name, hero) {
 }
 
 function buildNeutralHero(name, hero) {
+  // Opposed Type heroes name their natural enemy; Solo Type heroes have none,
+  // written either as a missing field or as "None"
+  const opposed = String(hero.Opposed || '').trim()
+  const hasOpposed = opposed && opposed.toLowerCase() !== 'none'
   return {
     ...buildProfile(name, hero),
     badge: `${hero['Cost']}g`,
-    // Opposed Type heroes name their natural enemy; Solo Type heroes have none
-    ...(hero.Opposed ? { meta_label: 'Opposed by', meta_value: hero.Opposed } : {}),
+    ...(hasOpposed ? { meta_label: 'Opposed by', meta_value: opposed } : {}),
     spells:     (hero.Spells || []).map(spell => ({
       roll:        spell.Roll,
       name:        spell.Name,
@@ -89,8 +93,18 @@ function buildNeutralHero(name, hero) {
     })),
     cast_priority: hero['Cast Priority'] || [],
     event:      hero.Event     || [],
+    // When drawn for an Event Token, Alignment can swap the card's Event for
+    // one from the Event Table
+    event_note: hasOpposed
+      ? `If both players are Aligned with the ${name} or ${opposed}, use their Event Table instead.`
+      : `If any player is Aligned with the ${name}, use its Event Table instead.`,
     behaviour:  hero.Behaviour || [],
-    patronage:  hero.Patronage || [],
+    // Incapacitating the opposed hero always earns Patronage, so every Opposed
+    // Type card carries it without repeating it in the data
+    patronage:  [
+      ...(hero.Patronage || []),
+      ...(hasOpposed ? [`Incapacitate the ${opposed}.`] : []),
+    ],
     // Summoned units are not hired, so their card names their summoner instead
     minions: (hero.Minions || []).map(minion => ({
       ...buildProfile(minion.Name, minion),
@@ -104,7 +118,17 @@ const cards = Object.entries(heroes)
   .sort(([a], [b]) => a.localeCompare(b))
   .map(([name, hero]) => buildNeutralHero(name, hero))
 
-const doc = generateNeutralHeroCardsPDF(cards)
+// The common Neutral Unit rules lead the deck as a table-side helper card
+const rulesCard = {
+  title:    unitRules.Title,
+  copies:   unitRules.Copies ?? 1,
+  sections: (unitRules.Sections || []).map(section => ({
+    label:   section.Label,
+    entries: section.Entries || [],
+  })),
+}
+
+const doc = generateNeutralHeroCardsPDF(cards, rulesCard)
 
 fs.mkdirSync(path.dirname(out), { recursive: true })
 fs.writeFileSync(out, Buffer.from(doc.output('arraybuffer')))

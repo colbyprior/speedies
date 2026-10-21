@@ -957,7 +957,13 @@ function ccPaginate(doc, drawFns) {
 
 // ── Individual card renderers ─────────────────────────────────────────────────
 
-function renderWarbandCard(doc, x, y, data) {
+// Skills, special rules and spell text all share one size so they read alike.
+// `opts.textScale` enlarges just this text — the big cards set it on top of
+// their page scale, so the rules grow more than the frame around them.
+const CC_SKILL_FS = 7
+const skillFs = (opts = {}) => CC_SKILL_FS * (opts.textScale || 1)
+
+function renderWarbandCard(doc, x, y, data, opts = {}) {
   const wbPal = palette(SLATE)
   ccBorder(doc, x, y)
 
@@ -1083,7 +1089,7 @@ function renderWarbandCard(doc, x, y, data) {
       cy += 3.5
     }
     const lines = specRules.map(r => r.desc ? `${r.name}: ${r.desc}` : r.name)
-    ccSpecialBlock(doc, x, cy, maxY, lines, 5.5)
+    ccSpecialBlock(doc, x, cy, maxY, lines, skillFs(opts))
   }
 }
 
@@ -1193,12 +1199,14 @@ function buildUnitCardDrawFns(unit, isHero, opts = {}) {
   const name = unit.name || unit.type || '—'
   const specLines = (unit.special || []).filter(Boolean)
 
-  const SKILL_FS = 6.5
+  const SKILL_FS = skillFs(opts)
   const SKILL_LH = SKILL_FS * PT * 1.3
 
-  // Available height for skills on the main card
+  // Available height for skills on the main card, less a line for the 'cont. >'
+  // marker so the last skill line can't run into it
   const statsH   = statsBlockHeight(unit, isHero, opts)
-  const mainAvail = CC_H - CC_PAD - statsH - CC_PAD  // bottom pad + gap before skills
+  const CONT_H   = 4.5 * PT * 1.3
+  const mainAvail = CC_H - CC_PAD - statsH - CC_PAD - CONT_H  // bottom pad + gap before skills
 
   // Simulate ccSpecialBlock rendering to find accurate split points.
   // Must exactly mirror the pre-measure logic in ccSpecialBlock.
@@ -1287,14 +1295,14 @@ function buildUnitCardDrawFns(unit, isHero, opts = {}) {
   return drawFns
 }
 
-function renderSpellCards(data) {
+function renderSpellCards(data, opts = {}) {
   const sigil = ccSigil(data.warband_type)
   // Returns an array of draw-functions, one per card needed
   const drawFns = []
 
   // Match the unit cards' skill block so spell text reads at the same size
-  const NAME_FS   = 6.5
-  const DESC_FS   = 6.5
+  const NAME_FS   = skillFs(opts)
+  const DESC_FS   = skillFs(opts)
   const NAME_LH   = NAME_FS * PT * 1.3
   const DESC_LH   = DESC_FS * PT * 1.3
   const GAP       = 1.5
@@ -1622,6 +1630,83 @@ function nhWeaponRow(doc, x, cy, label, stats, bg) {
   return cy + CC_VAL_H
 }
 
+// Bulleted entries, measured at `fs`. An entry may be plain text, or text
+// followed by ordered sub-steps.
+function nhEntryBlocks(entries, wrap, fs) {
+  const lh      = fs * PT * 1.3
+  const bulletW = CC_W - 2 * CC_PAD - NH_IND
+  const stepW   = bulletW - NH_STEP_IND
+  const blocks  = []
+  for (const entry of entries) {
+    const text  = typeof entry === 'string' ? entry : entry.text
+    const steps = typeof entry === 'string' ? [] : (entry.steps || [])
+    const lines = wrap(text, bulletW)
+    blocks.push({
+      h: lines.length * lh,
+      keep: steps.length > 0,   // never strand the intro from its first step
+      draw: (doc, x, cy) => ccBulletEntry(doc, x, cy, lines, fs),
+    })
+    steps.forEach((step, i) => {
+      const stepLines = wrap(step, stepW)
+      blocks.push({
+        h: stepLines.length * lh,
+        draw: (doc, x, cy) => ccStepEntry(doc, x, cy, i + 1, stepLines, fs),
+      })
+    })
+  }
+  return blocks
+}
+
+// The table-side summary of the common Neutral Unit rules, at the front of the
+// deck, set at the same sizes as the hero cards.
+const NH_RULES_SIZES = NH_SIZES
+
+function buildRulesCardDrawFns(rules) {
+  const pal   = palette(BRASS)
+  const sigil = CC_SIGILS[NH_SIGIL_KEY]
+  const meas  = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' })
+  const avail = CC_H - NH_HEAD_H - 2 * CC_PAD
+
+  const layout = (fs) => {
+    const wrap = (text, w) => {
+      meas.setFont('times', 'normal')
+      meas.setFontSize(fs)
+      return meas.splitTextToSize(String(text), w)
+    }
+    const blocks = []
+    for (const section of rules.sections || []) {
+      const lead = blocks.length === 0 ? 0 : NH_GAP
+      blocks.push({
+        h: lead + NH_BAR_H,
+        keep: true,
+        draw: (doc, x, cy) => ccSectionBar(doc, x, cy + lead, section.label, pal.head),
+      })
+      blocks.push(...nhEntryBlocks((section.entries || []).filter(Boolean), wrap, fs))
+    }
+    return blocks
+  }
+
+  let blocks = layout(NH_RULES_SIZES[0])
+  for (const fs of NH_RULES_SIZES) {
+    const candidate = layout(fs)
+    if (candidate.reduce((sum, b) => sum + b.h, 0) <= avail) { blocks = candidate; break }
+  }
+
+  const title = rules.title || 'Neutral Units'
+  return nhFlow(blocks, avail, avail).map((pageBlocks, idx, pages) => (doc, x, y) => {
+    ccBorder(doc, x, y)
+    ccHeader(doc, x, y, idx === 0 ? title : `${title} (cont.)`, BRASS, NH_HEAD_H, sigil)
+    let cy = y + NH_HEAD_H + CC_PAD
+    for (const b of pageBlocks) cy = b.draw(doc, x, cy)
+    if (idx < pages.length - 1) {
+      doc.setFont('times', 'italic')
+      doc.setFontSize(4.5)
+      doc.setTextColor(INK[0], INK[1], INK[2])
+      doc.text('cont. >', x + CC_W - CC_PAD, y + CC_H - CC_PAD, { align: 'right', baseline: 'bottom' })
+    }
+  })
+}
+
 // Returns an array of draw-functions: main card + any continuation cards.
 // Content is measured into fixed-height blocks first, then flowed across cards,
 // so a section bar never lands as the last thing on a card.
@@ -1631,8 +1716,6 @@ function buildNeutralHeroCardDrawFns(hero) {
   const meas  = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' })
 
   const textW   = CC_W - 2 * CC_PAD
-  const bulletW = textW - NH_IND
-  const stepW   = bulletW - NH_STEP_IND
   const descW   = textW - 2            // matches ccSpecialBlock's description indent
 
   // Height of everything printed above the first block on the main card
@@ -1682,22 +1765,26 @@ function buildNeutralHeroCardDrawFns(hero) {
       const entries = (hero[key] || []).filter(Boolean)
       if (!entries.length) continue
       blocks.push(sectionBar(label))
-      for (const entry of entries) {
-        // An entry may be plain text, or text followed by ordered sub-steps
-        const text  = typeof entry === 'string' ? entry : entry.text
-        const steps = typeof entry === 'string' ? [] : (entry.steps || [])
-        const lines = wrap(text, bulletW)
+      blocks.push(...nhEntryBlocks(entries, wrap, fs))
+      if (key === 'event' && hero.event_note) {
+        // A small italic reminder, a step below the body text, under the Event
+        const noteFs = Math.max(fs - 1, 5)
+        const noteLh = noteFs * PT * 1.3
+        meas.setFont('times', 'italic')
+        meas.setFontSize(noteFs)
+        const lines = meas.splitTextToSize(String(hero.event_note), textW)
         blocks.push({
-          h: lines.length * lh,
-          keep: steps.length > 0,   // never strand the intro from its first step
-          draw: (doc, x, cy) => ccBulletEntry(doc, x, cy, lines, fs),
-        })
-        steps.forEach((step, i) => {
-          const stepLines = wrap(step, stepW)
-          blocks.push({
-            h: stepLines.length * lh,
-            draw: (doc, x, cy) => ccStepEntry(doc, x, cy, i + 1, stepLines, fs),
-          })
+          h: lines.length * noteLh,
+          draw: (doc, x, cy) => {
+            doc.setFont('times', 'italic')
+            doc.setFontSize(noteFs)
+            doc.setTextColor(INK[0], INK[1], INK[2])
+            for (const line of lines) {
+              doc.text(line, x + CC_PAD, cy + noteLh / 2, { baseline: 'middle' })
+              cy += noteLh
+            }
+            return cy
+          },
         })
       }
     }
@@ -1751,17 +1838,23 @@ function buildNeutralHeroCardDrawFns(hero) {
 /**
  * Generate the neutral hero deck as a card-format PDF.
  * Same 3x3 grid of 63x88mm cards on A4 portrait as the warband cards.
+ * `rules` (optional) adds the common Neutral Unit rules at the front of the
+ * deck, printed `rules.copies` times (default 1).
  */
-export function generateNeutralHeroCardsPDF(heroes) {
+export function generateNeutralHeroCardsPDF(heroes, rules = null) {
   const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' })
   doc.setFont('times', 'normal')
-  const drawFns = (heroes || []).flatMap(hero => [
+  const rulesFns = rules ? buildRulesCardDrawFns(rules) : []
+  const drawFns = [
+    ...Array.from({ length: rules?.copies ?? 1 }, () => rulesFns).flat(),
+    ...(heroes || []).flatMap(hero => [
     ...buildNeutralHeroCardDrawFns(hero),
     ...buildSpellTableCardDrawFns(hero),
     // A summoned unit needs its own profile at the table, so it gets a card
     // built by the same layout as its summoner's
     ...(hero.minions || []).flatMap(minion => buildNeutralHeroCardDrawFns(minion)),
-  ])
+    ]),
+  ]
   ccPaginate(doc, drawFns)
   return doc
 }
@@ -1901,7 +1994,7 @@ export function generateCardsPDF(data, opts = {}) {
   // Collect draw functions in order: warband → heroes → henchmen → spells
   const drawFns = []
 
-  drawFns.push((doc, x, y) => renderWarbandCard(doc, x, y, data))
+  drawFns.push((doc, x, y) => renderWarbandCard(doc, x, y, data, opts))
 
   for (const hero of (data.heroes || [])) {
     if (hero.type) drawFns.push(...buildUnitCardDrawFns(hero, true, opts))
@@ -1911,7 +2004,7 @@ export function generateCardsPDF(data, opts = {}) {
     if (hench.type) drawFns.push(...buildUnitCardDrawFns(hench, false, opts))
   }
 
-  drawFns.push(...renderSpellCards(data))
+  drawFns.push(...renderSpellCards(data, opts))
 
   ccPaginate(doc, drawFns)
 
@@ -1919,28 +2012,33 @@ export function generateCardsPDF(data, opts = {}) {
 }
 
 /**
- * Generate a big-card PDF (cards scaled ~1.5×) for printing and cutting.
- * 2×2 grid of 94.5×132mm cards on A4 portrait.
+ * Generate a big-card PDF for printing and cutting: a 2×2 grid on A4 portrait,
+ * with the cards scaled as large as the page allows (~1.2×, 84×145mm).
  */
 export function generateBigCardsPDF(data, opts = {}) {
-  opts = { ...opts, sigil: ccSigil(data.warband_type) }
-  const SCALE = 1.5
+  // Rules text gets a further 10% over the page scale — the reason to print big
+  opts = { ...opts, sigil: ccSigil(data.warband_type), textScale: 1.1 }
   const BIG_COLS = 2
   const BIG_ROWS = 2
-  const BIG_W = CC_W * SCALE   // 94.5mm
-  const BIG_H = CC_H * SCALE   // 132mm
-  const BIG_ML = (210 - BIG_COLS * BIG_W) / 2  // 10.5mm
-  const BIG_MT = (297 - BIG_ROWS * BIG_H) / 2  // 16.5mm
+  const BIG_MIN_MARGIN = 3.5  // mm kept clear at the page edge
+  // Derived from the card size, so a change to CC_W/CC_H can't push the grid
+  // off the page
+  const SCALE = Math.min((210 - 2 * BIG_MIN_MARGIN) / (BIG_COLS * CC_W),
+                         (297 - 2 * BIG_MIN_MARGIN) / (BIG_ROWS * CC_H))
+  const BIG_W = CC_W * SCALE
+  const BIG_H = CC_H * SCALE
+  const BIG_ML = (210 - BIG_COLS * BIG_W) / 2
+  const BIG_MT = (297 - BIG_ROWS * BIG_H) / 2
 
   const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' })
   doc.setFont('times', 'normal')
 
   // Collect same draw functions as regular cards
   const drawFns = []
-  drawFns.push((d, x, y) => renderWarbandCard(d, x, y, data))
+  drawFns.push((d, x, y) => renderWarbandCard(d, x, y, data, opts))
   for (const hero  of (data.heroes   || [])) { if (hero.type)  drawFns.push(...buildUnitCardDrawFns(hero, true, opts)) }
   for (const hench of (data.henchmen || [])) { if (hench.type) drawFns.push(...buildUnitCardDrawFns(hench, false, opts)) }
-  drawFns.push(...renderSpellCards(data))
+  drawFns.push(...renderSpellCards(data, opts))
 
   // Draw cut guides for big cards
   function bigCutGuides() {

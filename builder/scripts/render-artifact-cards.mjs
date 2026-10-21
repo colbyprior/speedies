@@ -23,11 +23,6 @@ function buildArtifact(name, artifact) {
     special.push(`Effect: ${artifact.Description}`)
   }
 
-  // Add special rules if present
-  if (artifact.Special) {
-    special.push(`Special: ${artifact.Special}`)
-  }
-
   // Add skills with their full descriptions
   if (artifact.Skills) {
     for (const skillName of artifact.Skills.split(',').map(s => s.trim()).filter(Boolean)) {
@@ -36,17 +31,10 @@ function buildArtifact(name, artifact) {
     }
   }
 
-  // Add equipment info
-  let equipment = ''
-  if (artifact['Melee Weapon']) {
-    equipment = artifact['Melee Weapon']
-  }
-
   return {
     name,
     meta_label: artifact.Cursed ? 'Cursed' : null,
     meta_value: artifact.Cursed ? 'Cannot unequip' : null,
-    equipment: equipment,
     special,
   }
 }
