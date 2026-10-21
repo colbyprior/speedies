@@ -77,7 +77,7 @@
     "Morale": "10",
     "Skills": "Heroic, Gift of Blight",
     "Cost": "45",
-    "Neutral Support Cost": "45",
+    "Neutral Support Cost": "90",
     "Opposed": "Inquisitor",
     "About": "A herald of the Blight, spreading its gift to all who draw near.",
     "Species": "",
@@ -117,14 +117,15 @@
     "Melee Weapon": "Sword, Shield, Heavy Armour",
     "Ranged Weapon": "",
     "Event": [
-      "Place the Inquisitor on a random edge of the nearest building to the Event chest."
+      "Place the Inquisitor on a random edge of the nearest building to the Event chest. That building is on Fire."
     ],
     "Behaviour": [
-      "If the Inquisitor starts his turn within 5\" of a unit with the Blight, he will stay and cast Cure Blight.",
-      "Otherwise, each turn the Inquisitor will move towards the nearest building and light it on fire."
+      "Each turn, if the Inquisitor starts his turn within 10\" of a unit with the Blight and he has not cast Cure Blight this game, he won't move and will attempt to cast Cure Blight.",
+	  "Otherwise, if there is a hostile unit within Engage range that is not in a Burning Building, he will Engage them.",
+      "Otherwise, the Inquisitor will move towards the nearest building not on fire and light it on fire."
     ],
     "Patronage": [
-      "Ensure the Inquisitor heals the Blight off one unit or burns four buildings before he is Incapacitated."
+      "Ensure the Inquisitor heals the Blight off one unit or Incapacitates two units (including by Fire)."
     ]
   },
   "Shady Merchant": {
@@ -205,7 +206,7 @@
     "Morale": "10",
     "Skills": "Heroic, High Mage",
     "Cost": "40",
-    "Neutral Support Cost": "40",
+    "Neutral Support Cost": "80",
     "Opposed": "Necromancer",
     "About": "An elven archmage who holds his ground and lets the weather do the killing.",
     "Species": "Elf",
@@ -271,7 +272,7 @@
     "Morale": "10",
     "Skills": "Heroic, Grave Harvest",
     "Cost": "55",
-    "Neutral Support Cost": "55",
+    "Neutral Support Cost": "110",
     "Opposed": "High Mage",
     "About": "A grave-robber turned conjuror, dragging the city's dead back onto their feet.",
     "Species": "",
