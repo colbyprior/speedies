@@ -332,7 +332,7 @@
    "Animal": {
     "Name": "Animal",
     "Type": "Inherent",
-    "Description": "This unit cannot Promote, use ladders (except by making a full Climb Check), pick up Treasure, benefit from the 'Leader' skill or use equipment (but is not penalised for fighting Unarmed)."
+    "Description": "This unit cannot use ladders (except by making a full Climb Check), pick up Treasure, benefit from the 'Leader' skill or use equipment (but is not penalised for fighting Unarmed)."
   },
    "Lumbering": {
     "Name": "Lumbering",
