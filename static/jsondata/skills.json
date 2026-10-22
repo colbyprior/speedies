@@ -446,7 +446,7 @@
   },
   "Spring Traps": {
     "Name": "Spring Traps",
-    "Type": "Agility",
+    "Type": "Inherent",
     "Description": "While this unit is on the board every Treasure is trapped, including the Event chest. A unit makes an Agility Check to pick up a Treasure, and at the start of each turn it carries one. On a failure, determine a random direction and move 3\" — the Treasure on a pickup, which then fails, otherwise the carrier and its Treasure together. A unit moved off a ledge Falls. Incapacitate this unit to disarm the traps."
   }
 }
