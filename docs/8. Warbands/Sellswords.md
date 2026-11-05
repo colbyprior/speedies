@@ -16,7 +16,7 @@ sidebar_label: Sellswords
 | Captain | 9 | 12 | 12 | 17 | 8| 8 | 1 | 1 | 0 | 0 | [Leader](#leader) | 75 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Morale) |
 | Champion | 9 | 13 | 14 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 40 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
 | Sniper | 9 | 14 | 13 | 18 | 10| 10 | 1 | 1 | 0 | 0 |  | 45 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Agility) |
-| Knight | 11 | 13 | - | 17 | 10| 10 | 1 | 1 | 0 | 0 |  | 45 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
+| Knight | 9 | 13 | - | 17 | 10| 10 | 1 | 1 | 0 | 0 |  | 45 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Defence,Morale) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |

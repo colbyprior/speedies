@@ -107,7 +107,7 @@
   "Coup de Grace": { 
     "Name": "Coup de Grace", 
     "Type": "Agility", 
-    "Description": "This unit may target Dazed or Stunned enemies, even if a non-Stunned or Dazed enemy is Engaged with them."
+    "Description": "This unit may target Dazed or Stunned enemies, even if a non-Stunned or Dazed enemy is Engaged with them. In addition, this unit treats a Dazed unit as Stunned when making a Melee Attack against them."
   },
   "Defensive Stance": { 
     "Name": "Defensive Stance", 
@@ -307,7 +307,7 @@
   "Raise Ally": {
     "Name": "Raise Ally",
     "Type": "Inherent",
-    "Description": "This unit can cast the 'Raise Ally' spell: One allied unit that was Incapacitated after the end of your last turn immediately returns to the battle as a Zombie (use the same stats as the Undead warband Zombie). It no longer counts towards your Rout Threshold. Place the model within 5\" of the Caster. The model cannot be placed such that it is Engaged with an enemy."
+    "Description": "This unit can cast the 'Raise Ally' spell (Difficulty 9): One allied unit that was Incapacitated after the end of your last turn immediately returns to the battle as a Zombie (use the same stats as the Undead warband Zombie). It no longer counts towards your Rout Threshold. Place the model within 5\" of the Caster. The model cannot be placed such that it is Engaged with an enemy."
   },
   "Unholy Presence": {
     "Name": "Unholy Presence",
@@ -332,7 +332,7 @@
    "Animal": {
     "Name": "Animal",
     "Type": "Inherent",
-    "Description": "This unit cannot Promote, use ladders (except by making a full Climb Check), pick up Treasure, benefit from the 'Leader' skill or use equipment (but is not penalised for fighting Unarmed)."
+    "Description": "This unit cannot use ladders (except by making a full Climb Check), pick up Treasure, benefit from the 'Leader' skill or use equipment (but is not penalised for fighting Unarmed)."
   },
    "Lumbering": {
     "Name": "Lumbering",
@@ -446,7 +446,7 @@
   },
   "Spring Traps": {
     "Name": "Spring Traps",
-    "Type": "Agility",
+    "Type": "Inherent",
     "Description": "While this unit is on the board every Treasure is trapped, including the Event chest. A unit makes an Agility Check to pick up a Treasure, and at the start of each turn it carries one. On a failure, determine a random direction and move 3\" — the Treasure on a pickup, which then fails, otherwise the carrier and its Treasure together. A unit moved off a ledge Falls. Incapacitate this unit to disarm the traps."
   }
 }

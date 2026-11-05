@@ -33,28 +33,28 @@ def generate_warbands():
 
 
 def generate_reference_pages():
-    with (open("docs/10. Reference/1. Equipment List.md", "w") as f):
-        out_data = reference_helper.generate_equipment_page()
-        f.write(out_data)
-        f.close()
+    # with (open("docs/10. Reference/1. Equipment List.md", "w") as f):
+    #     out_data = reference_helper.generate_equipment_page()
+    #     f.write(out_data)
+    #     f.close()
     with (open("docs/10. Reference/2. Skill List.md", "w") as f):
         out_data = reference_helper.generate_skills_page()
         f.write(out_data)
         f.close()
-    with (open("docs/10. Reference/3. Spell List.md", "w") as f):
-        out_data = reference_helper.generate_spells_page()
-        f.write(out_data)
-        f.close()
+    # with (open("docs/10. Reference/3. Spell List.md", "w") as f):
+    #     out_data = reference_helper.generate_spells_page()
+    #     f.write(out_data)
+    #     f.close()
     return
 
 def generate_neutral_heroes():
-    with (open("docs/10. Reference/5. Neutral Heroes.md", "w") as f):
+    with (open("docs/10. Reference/5. Neutral Heroes List.md", "w") as f):
         out_data = faction_helper.generate_neutral_heroes()
         f.write(out_data)
         f.close()
 
 def generate_artifacts():
-    with (open("docs/10. Reference/7. Artifacts.md", "w") as f):
+    with (open("docs/10. Reference/7. Artifacts List.md", "w") as f):
         out_data = faction_helper.generate_artifacts()
         f.write(out_data)
         f.close()

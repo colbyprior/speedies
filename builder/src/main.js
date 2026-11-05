@@ -231,8 +231,24 @@ function calcTotalSpent(warband) {
   return unitCosts + slotCosts
 }
 
+// Pre-campaign, gold is the starting budget minus the roster's value. Once in
+// campaign mode the warband has a real treasury: it starts at zero, grows with
+// post-game income entered by the player, and shrinks with every purchase.
 function goldRemaining(warband) {
+  if (warband.campaignMode) return parseInt(warband.campaign?.goldReserve) || 0
   return STARTING_GOLD - calcTotalSpent(warband)
+}
+
+// Gold a swap actually costs. Pre-campaign the old item's value comes back to
+// the budget; in campaign mode nothing is refunded — gold spent is gone.
+function swapCost(warband, newCost, oldCost) {
+  return warband.campaignMode ? newCost : newCost - oldCost
+}
+
+function spendGold(warband, amount) {
+  if (!warband.campaignMode) return
+  if (!warband.campaign) warband.campaign = {}
+  warband.campaign.goldReserve = goldRemaining(warband) - amount
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -274,6 +290,7 @@ const state = {
   selectedType: null,
   mobileTab: 'hire',         // 'hire' | 'roster'
   pencilCards: false,        // card exports: blank write-in row + greyed modifiers
+  logOpen: false,            // warband log <details> survives re-renders
 }
 
 function currentWarband() {
@@ -286,6 +303,19 @@ function mutateWarband(fn) {
   fn(wb)
   persistState()
   render()
+}
+
+// The warband log travels with the warband JSON. Creation is always recorded;
+// after that only campaign-mode changes are, since pre-campaign building is
+// just drafting the starting roster.
+function addLog(wb, msg, { always = false } = {}) {
+  if (!always && !wb.campaignMode) return
+  if (!wb.log) wb.log = []
+  wb.log.push({ at: Date.now(), msg })
+}
+
+function unitLabel(u) {
+  return u.customName ? `${u.customName} (${u.typeName})` : u.typeName
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -301,6 +331,7 @@ function createWarband(typeName, name) {
     units: [],
     heroSlotsPurchased: 0,
   }
+  addLog(wb, `Warband created: ${wb.name} (${typeName})`, { always: true })
   state.savedWarbands.push(wb)
   state.currentId = wb.id
   state.view = 'builder'
@@ -324,7 +355,12 @@ function canAddUnit(warband, unitDef, category) {
   if (baseCost === 0 && count >= 1) return { ok: false, reason: 'Free units limited to one' }
   if (cap !== Infinity && count >= cap) return { ok: false, reason: 'At Cap' }
 
-  if (!warband.campaignMode && goldRemaining(warband) < baseCost) return { ok: false, reason: "Can't Afford" }
+  // Large units can't be taken at warband creation, only once the campaign has begun.
+  if (!warband.campaignMode && (unitDef.Skills || []).includes('Large')) {
+    return { ok: false, reason: 'Campaign Only' }
+  }
+
+  if (goldRemaining(warband) < baseCost) return { ok: false, reason: "Can't Afford" }
 
   return { ok: true }
 }
@@ -339,6 +375,8 @@ function addUnit(typeName, category) {
   if (!check.ok) return
 
   mutateWarband(wb => {
+    spendGold(wb, parseInt(unitDef.Cost) || 0)
+    addLog(wb, `Hired ${typeName} (${parseInt(unitDef.Cost) || 0}g)`)
     wb.units.push({
       id: uid(),
       typeName,
@@ -350,6 +388,8 @@ function addUnit(typeName, category) {
 
 function removeUnit(unitId) {
   mutateWarband(wb => {
+    const u = wb.units.find(u => u.id === unitId)
+    if (u) addLog(wb, `Removed ${unitLabel(u)}`)
     wb.units = wb.units.filter(u => u.id !== unitId)
   })
 }
@@ -365,8 +405,11 @@ function duplicateUnit(unitId) {
   const check = canAddUnit(wb, unitDef, unit.category)
   if (!check.ok) return
   const equipCost = calcUnitCost(unit, wbData) - (parseInt(unitDef.Cost) || 0)
-  if (!wb.campaignMode && goldRemaining(wb) < (parseInt(unitDef.Cost) || 0) + equipCost) return
+  const totalCost = (parseInt(unitDef.Cost) || 0) + equipCost
+  if (goldRemaining(wb) < totalCost) return
   mutateWarband(wb => {
+    spendGold(wb, totalCost)
+    addLog(wb, `Hired ${unit.typeName}, copying ${unitLabel(unit)}'s equipment (${totalCost}g)`)
     wb.units.push({
       id: uid(),
       typeName: unit.typeName,
@@ -396,13 +439,19 @@ function toggleEquip(unitId, itemName, category) {
     if (limits.armourMax === 0) return
     if (eq.armour === itemName) {
       mutateWarband(wb => {
+        addLog(wb, `${unitLabel(unit)}: removed ${itemName}`)
         wb.units.find(u => u.id === unitId).equipment.armour = null
       })
     } else {
       const cost = getEquipCost(itemName, 'armour')
       const oldCost = eq.armour ? getEquipCost(eq.armour, 'armour') : 0
-      if (!wb.campaignMode && goldRemaining(wb) < cost - oldCost) return
+      const charge = swapCost(wb, cost, oldCost)
+      if (goldRemaining(wb) < charge) return
       mutateWarband(wb => {
+        spendGold(wb, charge)
+        addLog(wb, eq.armour
+          ? `${unitLabel(unit)}: swapped ${eq.armour} for ${itemName} (${charge}g)`
+          : `${unitLabel(unit)}: bought ${itemName} (${charge}g)`)
         wb.units.find(u => u.id === unitId).equipment.armour = itemName
       })
     }
@@ -421,8 +470,11 @@ function toggleEquip(unitId, itemName, category) {
         return r === 'Shield' || r === 'Tower Shield'
       })
       if (!existingShield || existingShield === itemName) return
-      if (!wb.campaignMode && goldRemaining(wb) < getEquipCost(itemName, 'melee') - getEquipCost(existingShield, 'melee')) return
+      const charge = swapCost(wb, getEquipCost(itemName, 'melee'), getEquipCost(existingShield, 'melee'))
+      if (goldRemaining(wb) < charge) return
       mutateWarband(wb => {
+        spendGold(wb, charge)
+        addLog(wb, `${unitLabel(unit)}: swapped ${existingShield} for ${itemName} (${charge}g)`)
         const u = wb.units.find(u => u.id === unitId)
         u.equipment.melee = u.equipment.melee.filter(n => n !== existingShield)
         u.equipment.melee.push(itemName)
@@ -430,8 +482,10 @@ function toggleEquip(unitId, itemName, category) {
       return
     }
     if (isShield && (eq.ranged || []).some(r => !isLightRanged(r))) return
-    if (!wb.campaignMode && goldRemaining(wb) < getEquipCost(itemName, 'melee')) return
+    if (goldRemaining(wb) < getEquipCost(itemName, 'melee')) return
     mutateWarband(wb => {
+      spendGold(wb, getEquipCost(itemName, 'melee'))
+      addLog(wb, `${unitLabel(unit)}: bought ${itemName} (${getEquipCost(itemName, 'melee')}g)`)
       wb.units.find(u => u.id === unitId).equipment.melee.push(itemName)
     })
   } else if (category === 'ranged') {
@@ -439,8 +493,10 @@ function toggleEquip(unitId, itemName, category) {
     if (eq.ranged.includes(itemName)) return  // already equipped; use ✕ to remove
     if (eq.ranged.length >= limits.rangedMax) return
     if (hasShield(eq) && !isLightRanged(itemName)) return
-    if (!wb.campaignMode && goldRemaining(wb) < getEquipCost(itemName, 'ranged')) return
+    if (goldRemaining(wb) < getEquipCost(itemName, 'ranged')) return
     mutateWarband(wb => {
+      spendGold(wb, getEquipCost(itemName, 'ranged'))
+      addLog(wb, `${unitLabel(unit)}: bought ${itemName} (${getEquipCost(itemName, 'ranged')}g)`)
       wb.units.find(u => u.id === unitId).equipment.ranged.push(itemName)
     })
   }
@@ -452,6 +508,7 @@ function removeEquip(unitId, itemName, category) {
   mutateWarband(wb => {
     const u = wb.units.find(u => u.id === unitId)
     if (!u) return
+    addLog(wb, `${unitLabel(u)}: removed ${itemName}`)
     if (category === 'melee') {
       const idx = u.equipment.melee.indexOf(itemName)
       if (idx !== -1) u.equipment.melee.splice(idx, 1)
@@ -511,12 +568,35 @@ function importWarband(file) {
 // ─────────────────────────────────────────────────────────────
 
 function enableCampaignMode() {
-  mutateWarband(wb => { wb.campaignMode = true })
+  mutateWarband(wb => {
+    wb.campaignMode = true
+    if (!wb.campaign) wb.campaign = {}
+    wb.campaign.goldReserve = 0
+    addLog(wb, `Campaign started: warband value ${calcTotalSpent(wb)}g, gold reset to 0g`)
+  })
+}
+
+const CAMPAIGN_FIELD_LABELS = {
+  playerName: 'Player', wins: 'Wins', losses: 'Losses',
+  goldReserve: 'Gold', storedEquipment: 'Stored equipment',
 }
 
 function updateCampaignField(field, value) {
   mutateWarband(wb => {
     if (!wb.campaign) wb.campaign = {}
+    const label = CAMPAIGN_FIELD_LABELS[field] || field
+    if (field === 'goldReserve') {
+      const before = goldRemaining(wb)
+      const after = parseInt(value) || 0
+      const diff = after - before
+      if (diff !== 0) addLog(wb, `Gold ${before}g → ${after}g (${diff > 0 ? '+' : ''}${diff}g)`)
+    } else {
+      const isCount = field === 'wins' || field === 'losses'
+      const before = wb.campaign[field] ?? (isCount ? 0 : '')
+      if (String(before) !== String(value)) {
+        addLog(wb, isCount ? `${label}: ${before} → ${value}` : `${label}: ${before || '—'} → ${value || '—'}`)
+      }
+    }
     wb.campaign[field] = value
   })
 }
@@ -525,6 +605,10 @@ function updateNeutralHeroName(idx, name) {
   mutateWarband(wb => {
     if (!wb.campaign) wb.campaign = {}
     if (!wb.campaign.neutralHeroes) wb.campaign.neutralHeroes = [{}, {}, {}]
+    const prev = wb.campaign.neutralHeroes[idx]?.name
+    if (prev && name) addLog(wb, `Neutral hero alignment: ${prev} → ${name}`)
+    else if (name) addLog(wb, `Aligned with ${name}`)
+    else if (prev) addLog(wb, `No longer aligned with ${prev}`)
     const nh = { ...wb.campaign.neutralHeroes[idx], name }
     if (!name) nh.patron = false  // dropping the alignment drops the patronage
     wb.campaign.neutralHeroes[idx] = nh
@@ -535,6 +619,10 @@ function setNeutralHeroPatron(idx, patron) {
   mutateWarband(wb => {
     if (!wb.campaign) wb.campaign = {}
     if (!wb.campaign.neutralHeroes) wb.campaign.neutralHeroes = [{}, {}, {}]
+    const name = wb.campaign.neutralHeroes[idx]?.name
+    const oldPatron = wb.campaign.neutralHeroes.find((nh, i) => nh?.patron && i !== idx)?.name
+    if (name && patron) addLog(wb, oldPatron ? `Patron changed: ${oldPatron} → ${name}` : `${name} became Patron`)
+    else if (name) addLog(wb, `${name} is no longer Patron`)
     // A warband can only ever have one Patron, so checking one clears the rest.
     wb.campaign.neutralHeroes = wb.campaign.neutralHeroes.map((nh, i) => ({
       ...nh,
@@ -549,8 +637,12 @@ function updateUnitStat(unitId, stat, value) {
   const u = wb.units.find(u => u.id === unitId)
   if (!u) return
   if (!u.statOverrides) u.statOverrides = {}
+  const unitDef = findUnitDef(WARBANDS[wb.type], u.typeName, u.category)
+  const before = u.statOverrides[stat] ?? unitDef?.[stat]
   if (value === '') delete u.statOverrides[stat]
   else u.statOverrides[stat] = clampStat(stat, value)
+  const after = u.statOverrides[stat] ?? unitDef?.[stat]
+  if (String(before) !== String(after)) addLog(wb, `${unitLabel(u)}: ${stat} ${before} → ${after}`)
   persistState()
   // No render() — preserves input focus while typing
 }
@@ -570,6 +662,8 @@ function toggleUnitFlag(unitId, flag) {
   const u = wb.units.find(u => u.id === unitId)
   if (!u) return
   u[flag] = !u[flag]
+  const flagName = flag[0].toUpperCase() + flag.slice(1)
+  addLog(wb, `${unitLabel(u)}: ${u[flag] ? 'gained' : 'lost'} ${flagName}`)
   persistState()
   render()
 }
@@ -579,7 +673,9 @@ function updateUnitCustomName(unitId, name) {
   if (!wb) return
   const u = wb.units.find(u => u.id === unitId)
   if (!u) return
+  const before = unitLabel(u)
   u.customName = name.trim() || undefined
+  if (before !== unitLabel(u)) addLog(wb, `${before} renamed to ${u.customName || u.typeName}`)
   persistState()
 }
 
@@ -588,7 +684,9 @@ function addExtraSkill(unitId, skillName) {
     const u = wb.units.find(u => u.id === unitId)
     if (!u) return
     if (!u.extraSkills) u.extraSkills = []
-    if (!u.extraSkills.includes(skillName)) u.extraSkills.push(skillName)
+    if (u.extraSkills.includes(skillName)) return
+    u.extraSkills.push(skillName)
+    addLog(wb, `${unitLabel(u)}: learned ${skillName}`)
   })
 }
 
@@ -596,6 +694,7 @@ function removeExtraSkill(unitId, skillName) {
   mutateWarband(wb => {
     const u = wb.units.find(u => u.id === unitId)
     if (!u) return
+    addLog(wb, `${unitLabel(u)}: removed skill ${skillName}`)
     u.extraSkills = (u.extraSkills || []).filter(s => s !== skillName)
   })
 }
@@ -606,6 +705,7 @@ function promoteToHero(unitId) {
     if (!u || u.category !== 'henchman') return
     u.category = 'hero'
     u.promoted = true
+    addLog(wb, `${unitLabel(u)} promoted to Hero`)
     wb.promotedHeroSlots = (wb.promotedHeroSlots || 0) + 1
   })
 }
@@ -697,12 +797,13 @@ function renderHome() {
       <div class="saved-list">
         ${saved.map(wb => {
           const spent = calcTotalSpent(wb)
-          const rem = STARTING_GOLD - spent
+          const rem = goldRemaining(wb)
+          const goldText = wb.campaignMode ? `${rem}g gold · ${spent}g total` : `${rem}g left`
           return `
             <div class="saved-card">
               <div class="saved-card-info">
                 <div class="saved-card-name">${esc(wb.name)}</div>
-                <div class="saved-card-sub">${esc(wb.type)} · ${wb.units.length} units · ${rem}g left</div>
+                <div class="saved-card-sub">${esc(wb.type)} · ${wb.units.length} units · ${goldText}</div>
               </div>
               <div class="saved-card-actions">
                 <button class="btn btn-primary btn-sm" data-action="open-builder" data-id="${wb.id}">Edit</button>
@@ -823,7 +924,7 @@ function renderBuilder() {
 
   const wbData = WARBANDS[wb.type]
   const spent = calcTotalSpent(wb)
-  const rem = STARTING_GOLD - spent
+  const rem = goldRemaining(wb)
   const maxUnits = parseInt(wbData?.['Max Units']) || 15
   const unitCount = warbandHeadcount(wb)
   const overBudget = rem < 0
@@ -838,17 +939,16 @@ function renderBuilder() {
           <div class="builder-wb-type">${esc(wb.type)}${isCampaign ? ' <span class="campaign-badge">⚔ Campaign</span>' : ''}</div>
         </div>
         <div class="builder-stats-row">
+          <div class="stat-chip ${overBudget ? 'stat-chip--danger' : rem < 50 ? 'stat-chip--warn' : ''}">
+            <span class="stat-chip-label">Gold</span>
+            <span class="stat-chip-value">${rem}g</span>
+          </div>
           ${isCampaign ? `
-            <div class="stat-chip">
-              <span class="stat-chip-label">Total</span>
+            <div class="stat-chip" title="Total value of all units, equipment and hero slots">
+              <span class="stat-chip-label">Warband Value</span>
               <span class="stat-chip-value">${spent}g</span>
             </div>
-          ` : `
-            <div class="stat-chip ${overBudget ? 'stat-chip--danger' : rem < 50 ? 'stat-chip--warn' : ''}">
-              <span class="stat-chip-label">Gold</span>
-              <span class="stat-chip-value">${rem}g</span>
-            </div>
-          `}
+          ` : ''}
           <div class="stat-chip ${unitCount >= maxUnits ? 'stat-chip--danger' : ''}">
             <span class="stat-chip-label">Units</span>
             <span class="stat-chip-value">${unitCount}/${maxUnits}</span>
@@ -932,7 +1032,7 @@ function renderHirePanel(wb, wbData) {
   const heroSlots = getHeroSlots(wb)
   const heroesHired = heroCount(wb)
   const nextSlotCost = getNextHeroSlotCost(wb)
-  const canBuySlot = nextSlotCost !== null && (wb.campaignMode || goldRemaining(wb) >= nextSlotCost)
+  const canBuySlot = nextSlotCost !== null && goldRemaining(wb) >= nextSlotCost
 
   return `
     <div class="hire-inner">
@@ -984,7 +1084,7 @@ function renderCampaignInfo(wb) {
             data-action="campaign-field" data-field="losses" />
         </label>
         <label class="campaign-field">
-          <span class="campaign-field-label">Gold Reserve</span>
+          <span class="campaign-field-label" title="Add gold earned from games here; purchases are deducted automatically">Gold</span>
           <input class="campaign-field-input campaign-field-input--num" type="number" min="0" value="${c.goldReserve || 0}"
             data-action="campaign-field" data-field="goldReserve" />
         </label>
@@ -1010,7 +1110,25 @@ function renderCampaignInfo(wb) {
           </div>
         `).join('')}
       </div>
+      ${renderLog(wb)}
     </div>
+  `
+}
+
+function renderLog(wb) {
+  const entries = (wb.log || []).slice().reverse()
+  const fmt = t => new Date(t).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' })
+  return `
+    <details class="warband-log" data-action="toggle-log" ${state.logOpen ? 'open' : ''}>
+      <summary class="campaign-nh-title">Warband Log (${entries.length})</summary>
+      ${entries.length ? `
+        <ol class="warband-log-list">
+          ${entries.map(e => `
+            <li><span class="warband-log-time">${esc(fmt(e.at))}</span> ${esc(e.msg)}</li>
+          `).join('')}
+        </ol>
+      ` : '<div class="campaign-no-skills">No entries yet.</div>'}
+    </details>
   `
 }
 
@@ -1208,7 +1326,7 @@ function renderEquipModal(wb, wbData) {
     const isShieldItem = resolvedMelee === 'Shield' || resolvedMelee === 'Tower Shield'
     const shieldBlockedByShield = isShieldItem && hasShield(eq)
     const shieldBlockedByRanged = isShieldItem && (eq.ranged || []).some(r => !isLightRanged(r))
-    const canAdd = (meleeUsed + slots) <= limits.meleeMax && (wb.campaignMode || rem >= cost) && !shieldBlockedByShield && !shieldBlockedByRanged
+    const canAdd = (meleeUsed + slots) <= limits.meleeMax && rem >= cost && !shieldBlockedByShield && !shieldBlockedByRanged
     const disabled = !canAdd && count === 0
     const countLabel = count === 0 ? '' : count === 1 ? '✓' : `×${count}`
     const hint = canAdd && count > 0 ? 'Add another (dual wield)' : shieldBlockedByShield ? 'Already carrying a shield' : shieldBlockedByRanged ? 'Incompatible with non-light ranged weapon' : !canAdd ? 'No slots available' : ''
@@ -1237,7 +1355,7 @@ function renderEquipModal(wb, wbData) {
     const cost = stats ? (parseInt(stats.Cost) || 0) : 0
     const equipped = (eq.ranged || []).includes(displayName)
     const shieldBlocked = hasShield(eq) && !isLightRanged(displayName)
-    const canAdd = !equipped && (eq.ranged || []).length < limits.rangedMax && (wb.campaignMode || rem >= cost) && !shieldBlocked
+    const canAdd = !equipped && (eq.ranged || []).length < limits.rangedMax && rem >= cost && !shieldBlocked
     const disabled = !canAdd && !equipped
     const reason = !canAdd && !equipped ? (shieldBlocked ? 'Incompatible with shield' : limits.rangedMax === 0 ? 'No ranged slot' : "Can't afford") : ''
 
@@ -1263,7 +1381,7 @@ function renderEquipModal(wb, wbData) {
     const stats = getArmourStats(displayName)
     const cost = stats ? (parseInt(stats.Cost) || 0) : 0
     const equipped = eq.armour === displayName
-    const canAdd = !equipped && limits.armourMax > 0 && (wb.campaignMode || rem >= cost)
+    const canAdd = !equipped && limits.armourMax > 0 && rem >= cost
     const disabled = !canAdd && !equipped
     const reason = !canAdd && !equipped ? (limits.armourMax === 0 ? 'No armour slot' : "Can't afford") : ''
 
@@ -1593,7 +1711,7 @@ function buildPDFPayload(wb, wbData) {
     player_name:       c.playerName || '',
     warband_name:      wb.name,
     warband_type:      wb.type,
-    gold:              c.goldReserve != null ? String(c.goldReserve) : String(goldRemaining(wb)),
+    gold:              String(goldRemaining(wb)),
     rout_threshold:    String(wbData?.['Rout Threshold'] || ''),
     max_units:         String(wbData?.['Max Units'] || ''),
     hero_slots:        String(getHeroSlots(wb)),
@@ -1680,7 +1798,7 @@ function renderViewWarband() {
 
   const wbData = WARBANDS[wb.type]
   const spent = calcTotalSpent(wb)
-  const rem = STARTING_GOLD - spent
+  const rem = goldRemaining(wb)
 
   const sorted = sortUnits(wb.units, wbData)
   const heroes = sorted.filter(u => u.category === 'hero')
@@ -1945,11 +2063,11 @@ function renderViewWarband() {
           <span class="summary-value">${warbandHeadcount(wb)} / ${wbData?.['Max Units'] || '?'}</span>
         </div>
         <div class="summary-item">
-          <span class="summary-label">Spent</span>
-          <span class="summary-value">${spent}g / ${STARTING_GOLD}g</span>
+          <span class="summary-label">${wb.campaignMode ? 'Warband Value' : 'Spent'}</span>
+          <span class="summary-value">${wb.campaignMode ? `${spent}g` : `${spent}g / ${STARTING_GOLD}g`}</span>
         </div>
         <div class="summary-item">
-          <span class="summary-label">Remaining</span>
+          <span class="summary-label">${wb.campaignMode ? 'Gold' : 'Remaining'}</span>
           <span class="summary-value ${rem < 0 ? 'text-danger' : ''}">${rem}g</span>
         </div>
         <div class="summary-item">
@@ -2155,13 +2273,17 @@ document.addEventListener('click', e => {
       const wb = currentWarband()
       if (!wb) break
       const cost = getNextHeroSlotCost(wb)
-      if (cost === null || (!wb.campaignMode && goldRemaining(wb) < cost)) break
-      mutateWarband(wb => { wb.heroSlotsPurchased = (wb.heroSlotsPurchased || 0) + 1 })
+      if (cost === null || goldRemaining(wb) < cost) break
+      mutateWarband(wb => {
+        spendGold(wb, cost)
+        addLog(wb, `Bought a hero slot (${cost}g)`)
+        wb.heroSlotsPurchased = (wb.heroSlotsPurchased || 0) + 1
+      })
       break
     }
 
     case 'enable-campaign':
-      if (confirm('Switch to Campaign Mode?\n\nThis removes the gold budget limit and allows editing stats, adding skills, and promoting henchmen. This cannot be undone.')) {
+      if (confirm('Switch to Campaign Mode?\n\nYour gold is reset to 0 — earn gold from games and spend it on new units and equipment. Campaign mode also allows editing stats, adding skills, and promoting henchmen. This cannot be undone.')) {
         enableCampaignMode()
       }
       break
@@ -2230,6 +2352,11 @@ document.addEventListener('click', e => {
       break
   }
 })
+
+// 'toggle' doesn't bubble, so listen in the capture phase.
+document.addEventListener('toggle', e => {
+  if (e.target.dataset?.action === 'toggle-log') state.logOpen = e.target.open
+}, true)
 
 document.addEventListener('change', e => {
   const el = e.target
