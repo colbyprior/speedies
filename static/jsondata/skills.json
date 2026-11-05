@@ -307,7 +307,7 @@
   "Raise Ally": {
     "Name": "Raise Ally",
     "Type": "Inherent",
-    "Description": "This unit can cast the 'Raise Ally' spell: One allied unit that was Incapacitated after the end of your last turn immediately returns to the battle as a Zombie (use the same stats as the Undead warband Zombie). It no longer counts towards your Rout Threshold. Place the model within 5\" of the Caster. The model cannot be placed such that it is Engaged with an enemy."
+    "Description": "This unit can cast the 'Raise Ally' spell (Difficulty 9): One allied unit that was Incapacitated after the end of your last turn immediately returns to the battle as a Zombie (use the same stats as the Undead warband Zombie). It no longer counts towards your Rout Threshold. Place the model within 5\" of the Caster. The model cannot be placed such that it is Engaged with an enemy."
   },
   "Unholy Presence": {
     "Name": "Unholy Presence",
