@@ -107,7 +107,7 @@
   "Coup de Grace": { 
     "Name": "Coup de Grace", 
     "Type": "Agility", 
-    "Description": "This unit may target Dazed or Stunned enemies, even if a non-Stunned or Dazed enemy is Engaged with them."
+    "Description": "This unit may target Dazed or Stunned enemies, even if a non-Stunned or Dazed enemy is Engaged with them. In addition, this unit treats a Dazed unit as Stunned when making a Melee Attack against them."
   },
   "Defensive Stance": { 
     "Name": "Defensive Stance", 
