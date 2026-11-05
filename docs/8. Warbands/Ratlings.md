@@ -49,7 +49,7 @@ If this unit Incapacitates an enemy in Melee, that unit must make a Morale Check
 ### Animal
 *Inherent*
 
-This unit cannot Promote, use ladders (except by making a full Climb Check), pick up Treasure, benefit from the 'Leader' skill or use equipment (but is not penalised for fighting Unarmed).
+This unit cannot use ladders (except by making a full Climb Check), pick up Treasure, benefit from the 'Leader' skill or use equipment (but is not penalised for fighting Unarmed).
 ### Cowardly
 *Inherent*
 

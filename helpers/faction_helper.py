@@ -6,9 +6,9 @@ from helpers.global_data import (global_neutral_heroes, global_skills_data, glob
 
 def generate_neutral_heroes():
     out_data = "---\n"
-    out_data += f"sidebar_label: Neutral Heroes\n"
+    out_data += f"sidebar_label: Neutral Heroes List\n"
     out_data += "---\n"
-    out_data += f"# Neutral Heroes\n"
+    out_data += f"# Neutral Heroes List\n"
     out_data += "\nNeutral Heroes are special characters that can be hired by any warband for a cost.\n\n"
 
     sorted_heroes = dict(sorted(global_neutral_heroes.items(), key=lambda x: x[0]))
@@ -129,9 +129,9 @@ def generate_neutral_heroes():
 
 def generate_artifacts():
     out_data = "---\n"
-    out_data += f"sidebar_label: Artifacts\n"
+    out_data += f"sidebar_label: Artifacts List\n"
     out_data += "---\n"
-    out_data += f"# Artifacts\n"
+    out_data += f"# Artifacts List\n"
     out_data += "\nArtifacts are powerful magical items that can be acquired during campaigns.\n\n"
 
     for artifact_name, artifact in sorted(global_artifacts_data.items()):
