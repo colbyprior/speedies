@@ -12,7 +12,7 @@
     {
       "Label": "Aligning with a Neutral Hero",
       "Entries": [
-        "Cast Phase, once per turn: a unit within 5\" makes a Morale Check. On a success you are Aligned, and it and its allies become Neutral to you.",
+        "Cast Phase, once per turn: a unit within 5\" makes a Morale Check. On a success you are Aligned, and it and its allies become Neutral to you. Treasure can be donated for an automatic success.",
         "Only if no warband is Aligned with it, you aren't Aligned with its opposing Hero, and you haven't been Aligned with it this game."
       ]
     },
@@ -27,7 +27,7 @@
             "Move: Not Engaged, Move straight at the Target, avoiding Agility Checks unless they are the only way.",
             "Cast: Use its Spells and Abilities on the Target, else the closest Hostile unit in Line-of-Sight and range",
             "Ranged: Not Engaged, shoot the Target, else the closest Hostile unit in Line-of-Sight and range.",
-            "Melee: Resolve the combat. Takes the Treasure of a unit it defeats."
+            "Melee: Resolve the combat. Takes the Treasure of a unit it defeats. Split multiple attacks evenly across multiple units. Randomly decide targets."
           ]
         }
       ]

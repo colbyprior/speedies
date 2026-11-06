@@ -18,10 +18,10 @@ All units in this warband may use any Ranged weapon with a Shield.
 ## Heroes
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost | Cap | Skill Ups |
 | ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ------ | ---- | --- | --------- |
-| Chieftain | 8 | 12 | 12 | 13 | 14| 6 | 1 | 1 | 0 | 0 | [Leader](#leader) | 90 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Morale) |
-| Builder | 8 | 13 | 13 | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Place Ladder](#place-ladder), <br/>[Place Ballista](#place-ballista), <br/>[Place Barricade](#place-barricade) | 70 | 1 | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Defence,Morale) |
-| Hellion | 8 | 13 | - | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Berserker](#berserker), <br/>[Deathwish](#deathwish), <br/>[Fear](#fear) | 60 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility) |
-| Veteran | 8 | 13 | 14 | 14 | 14| 7 | 1 | 1 | 0 | 0 |  | 55 | - | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
+| Chieftain | 8 | 12 | 12 | 13 | 14| 6 | 1 | 1 | 0 | 0 | [Leader](#leader) | 90 | 1 | [\[Link\]](10.%20Reference/2.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Morale) |
+| Builder | 8 | 13 | 13 | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Place Ladder](#place-ladder), <br/>[Place Ballista](#place-ballista), <br/>[Place Barricade](#place-barricade) | 70 | 1 | [\[Link\]](10.%20Reference/2.%20Skill%20Search.md?filter=Ranged,Defence,Morale) |
+| Hellion | 8 | 13 | - | 14 | 14| 7 | 1 | 1 | 0 | 0 | [Berserker](#berserker), <br/>[Deathwish](#deathwish), <br/>[Fear](#fear) | 60 | - | [\[Link\]](10.%20Reference/2.%20Skill%20Search.md?filter=Melee,Defence,Agility) |
+| Veteran | 8 | 13 | 14 | 14 | 14| 7 | 1 | 1 | 0 | 0 |  | 55 | - | [\[Link\]](10.%20Reference/2.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
 
 ## Henchmen
 | Units | Mov | Mel | Rgd | Def | Agi | Mrl | Atk | Wnd | Inj | Prc | Skills | Cost |  Cap |
@@ -129,11 +129,11 @@ Select a point within line-of-sight. If it is within range, target ALL units wit
 ## Skill Table
 | Units | Mel | Rgd | Def | Agi | Mrl | Skills |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Chieftain | X | X | X |  | X | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Morale) |
-| Builder |  | X | X |  | X | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Ranged,Defence,Morale) |
-| Hellion | X |  | X | X |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence,Agility) |
-| Veteran | X | X | X |  |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
-| Berserker | X |  | X |  |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence) |
-| Youngling | X |  | X |  |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Defence) |
-| Miner | X | X | X |  |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
-| Runner |  |  | X | X |  | [\[Link\]](10.%20Reference/4.%20Skill%20Search.md?filter=Defence,Agility) |
+| Chieftain | X | X | X |  | X | [\[Link\]](10.%20Reference/2.%20Skill%20Search.md?filter=Melee,Ranged,Defence,Morale) |
+| Builder |  | X | X |  | X | [\[Link\]](10.%20Reference/2.%20Skill%20Search.md?filter=Ranged,Defence,Morale) |
+| Hellion | X |  | X | X |  | [\[Link\]](10.%20Reference/2.%20Skill%20Search.md?filter=Melee,Defence,Agility) |
+| Veteran | X | X | X |  |  | [\[Link\]](10.%20Reference/2.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
+| Berserker | X |  | X |  |  | [\[Link\]](10.%20Reference/2.%20Skill%20Search.md?filter=Melee,Defence) |
+| Youngling | X |  | X |  |  | [\[Link\]](10.%20Reference/2.%20Skill%20Search.md?filter=Melee,Defence) |
+| Miner | X | X | X |  |  | [\[Link\]](10.%20Reference/2.%20Skill%20Search.md?filter=Melee,Ranged,Defence) |
+| Runner |  |  | X | X |  | [\[Link\]](10.%20Reference/2.%20Skill%20Search.md?filter=Defence,Agility) |
