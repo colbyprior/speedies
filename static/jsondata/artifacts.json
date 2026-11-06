@@ -36,10 +36,14 @@
   },
   "Assassin Garb": {
     "Description": "Armour. +1 Def. Add +5 on Out-of-Sight Rolls. Cannot be used with a Shield.",
-    "About": "",
+    "About": ""
   },
   "Giant Slayer": {
     "Description": "Great Sword (2 handed). You have Advantage on Melee rolls against units with more than 1 max Wounds.",
-    "About": "",
+    "About": ""
+  },
+  "Wand of Teleportation": {
+    "Description": "This is an artifact that can be used once per game to move the unit holding the artifact during the upkeep phase up to 10” in any direction, regardless of obstacles or line of sight.",
+    "About": ""
   }
 }
